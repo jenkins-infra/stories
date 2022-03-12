@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
@@ -15,6 +16,11 @@ const IndexPage = () => {
                         title
                         date
                         tag_line
+                        image {
+                            childImageSharp {
+                                gatsbyImageData(layout: FIXED, width: 150)
+                            }
+                        }
                     }
                     slug
                 }
@@ -44,19 +50,24 @@ const IndexPage = () => {
                         <h2>Jenkins User Stories</h2>
                         {stories.edges.map(({node: story}) => (
                             <div key={story.slug} className="pb-2">
-                                <div>
-                                    <strong>
-                                        {story.frontmatter.title}
-                                    </strong>
-                                </div>
-                                <div>
-                                    <small>{story.frontmatter.date}</small>
-                                </div>
-                                <div>
-                                    {story.frontmatter.tag_line}
-                                </div>
-                                <div>
-                                    <Link to={`/user-story/${story.slug}`}>Read More »</Link>
+                                <div className="d-flex justify-content-right align-items-center">
+                                    {story.frontmatter.image && <div><GatsbyImage image={getImage(story.frontmatter.image)} alt="Logo" className="mr-3" /></div>}
+                                    <div>
+                                        <div>
+                                            <strong>
+                                                {story.frontmatter.title}
+                                            </strong>
+                                        </div>
+                                        <div>
+                                            <small>{story.frontmatter.date}</small>
+                                        </div>
+                                        <div>
+                                            {story.frontmatter.tag_line}
+                                        </div>
+                                        <div>
+                                            <Link to={`/user-story/${story.slug}`}>Read More »</Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ))}
