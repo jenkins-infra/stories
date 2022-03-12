@@ -103,18 +103,18 @@ async function makeReactLayout() {
     const nodeConversions = {
         'lineargradient': 'linearGradient',
         'gradienttransform': 'gradientTransform',
-    }
+    };
 
     const handleNode = (node, indent = 0) => {
         const prefix = ''.padStart(6 + indent);
 
         if (node.name) {
-            node.name = nodeConversions[node.name] || node.name
+            node.name = nodeConversions[node.name] || node.name;
         }
 
         if (node.attribs) {
-            delete node.attribs['xmlns:xlink']
-            delete node.attribs['xlink:href']
+            delete node.attribs['xmlns:xlink'];
+            delete node.attribs['xlink:href'];
         }
 
         if (node.name === 'link' && node.attribs && node.attribs.rel === 'stylesheet') {
@@ -146,7 +146,7 @@ async function makeReactLayout() {
             node.children.forEach(child => handleNode(child, indent + 2));
             jsxLines.push(`${prefix}</${node.name}>`);
         } else {
-            let tempAttrs = attrs;
+            const tempAttrs = attrs;
 
             if (!node.name) {
                 console.log(node);
