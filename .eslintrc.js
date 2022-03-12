@@ -4,6 +4,9 @@ module.exports = {
         'es6': true,
         'node': true
     },
+    globals: {
+        __PATH_PREFIX__: true,
+    },
     'extends': [
         'react-app',
         'eslint:recommended',

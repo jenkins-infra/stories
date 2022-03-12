@@ -12,12 +12,14 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "eslint": "^8.11.0",
+    "eslint-config-react-app": "^7.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "gatsby": "^4.9.3",
     "gatsby-plugin-image": "^2.9.1",

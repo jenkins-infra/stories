@@ -51,78 +51,80 @@ const fields = [
 
 const UserStory = ({data: {mdx: {body, slug, frontmatter: {title, sub_title, submitted_by, tag_line, ...frontmatter}}}}) => {
     const shortcodes = {
-        Testimonal({ idx }) {
+        Testimonal({idx}) { // eslint-disable-line
             return (
                 <Testimonal
                     from={frontmatter.quotes[idx].from}
                     image={frontmatter.quotes[idx].image}
-                >{frontmatter.quotes[idx].content}</Testimonal>
-            )
+                >
+                    {frontmatter.quotes[idx].content}
+                </Testimonal>
+            );
         }
-    }
+    };
     return (
-    <Layout title={title}>
-        <Seo title={title} pathname={`/user-story/${slug.replace(/\/+$/, '')}`}/>
-        <div className="jenkins_is_the_way">
+        <Layout title={title}>
+            <Seo title={title} pathname={`/user-story/${slug.replace(/\/+$/, '')}`}/>
+            <div className="jenkins_is_the_way">
 
-            <div className="row title-wrapper">
-                <div className="col title">
-                    <div className="container">
-                        <h2>{title}</h2>
+                <div className="row title-wrapper">
+                    <div className="col title">
+                        <div className="container">
+                            <h2>{title}</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="row">
-                <div className="col">
-                    <div className="container pb-2">
-                        <h1>{sub_title}</h1>
-                    </div>
+                <div className="row">
+                    <div className="col">
+                        <div className="container pb-2">
+                            <h1>{sub_title}</h1>
+                        </div>
 
-                    <div className="container pt-2 pb-2">
-                        <strong>
-                            Submitted By Jenkins User
-                            {' '}
-                            {submitted_by}
-                        </strong>
-                    </div>
-
-                    <div className="container pt-2 pb-2">
-                        {tag_line}
-                    </div>
-
-                    {fields.concat('image').some(field => frontmatter[field]) && (
                         <div className="container pt-2 pb-2">
-                            <div className="jumbotron">
-                                <div className="media">
-                                    {frontmatter.image && <GatsbyImage image={getImage(frontmatter.image)} alt="Logo" className="mr-3" height="300" width="300" />}
-                                    <div className="media-body">
-                                        {fields.filter(field => frontmatter[field]).map(field => (
-                                            <div key={field} className="pb-2">
-                                                <strong>
-                                                    {titles[field]}
-                                                    :
-                                                    {' '}
-                                                </strong>
-                                                {Array.isArray(frontmatter[field]) ? frontmatter[field].join(', ') : frontmatter[field]}
-                                            </div>
-                                        ))}
+                            <strong>
+                                Submitted By Jenkins User
+                                {' '}
+                                {submitted_by}
+                            </strong>
+                        </div>
+
+                        <div className="container pt-2 pb-2">
+                            {tag_line}
+                        </div>
+
+                        {fields.concat('image').some(field => frontmatter[field]) && (
+                            <div className="container pt-2 pb-2">
+                                <div className="jumbotron">
+                                    <div className="media">
+                                        {frontmatter.image && <GatsbyImage image={getImage(frontmatter.image)} alt="Logo" className="mr-3" height="300" width="300" />}
+                                        <div className="media-body">
+                                            {fields.filter(field => frontmatter[field]).map(field => (
+                                                <div key={field} className="pb-2">
+                                                    <strong>
+                                                        {titles[field]}
+                                                        :
+                                                        {' '}
+                                                    </strong>
+                                                    {Array.isArray(frontmatter[field]) ? frontmatter[field].join(', ') : frontmatter[field]}
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
 
-                    <div className="container pt-2 pb-2">
-                        <MDXProvider components={shortcodes} frontmatter={frontmatter}>
-                            <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
-                        </MDXProvider>
+                        <div className="container pt-2 pb-2">
+                            <MDXProvider components={shortcodes} frontmatter={frontmatter}>
+                                <MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer>
+                            </MDXProvider>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </Layout>
-)
+        </Layout>
+    );
 };
 
 UserStory.displayName = 'UserStory';
