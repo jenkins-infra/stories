@@ -3,8 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
 import Layout from '../layout';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 
 const titles = {
   organization: 'Organization',
@@ -24,10 +26,29 @@ const titles = {
   plugins: 'Custom Plugins',
   community_supports: 'Community Support'
 }
-function UserStory({data: {mdx: { body, slug, frontmatter: { title, sub_title, submitted_by, tag_line, image, ...frontmatter }}}}) {
+
+const fields = [
+  'organization',
+  'company',
+  'company_website',
+  'teams',
+  'team_members',
+  'project_website',
+  'project_funding',
+  'funded_by',
+  'summary',
+  'industries',
+  'programming_languages',
+  'platform',
+  'version_control_systems',
+  'buildTools',
+  'plugins',
+  'community_supports'
+]
+function UserStory({data: {mdx: { body, slug, frontmatter: { title, sub_title, submitted_by, tag_line, ...frontmatter }}}}) {
     return (
         <Layout title={title}>
-            <SEO title={title} pathname={`/user-story/${slug}`}/>
+            <Seo title={title} pathname={`/user-story/${slug.replace(/\/+$/, '')}`}/>
             <div className="jenkins_is_the_way">
 
               <div className="row title-wrapper">
@@ -52,38 +73,23 @@ function UserStory({data: {mdx: { body, slug, frontmatter: { title, sub_title, s
                     {tag_line}
                   </div>
 
-                  <div className="container pt-2 pb-2">
-                    <div className="jumbotron">
-                      <div className="media">
-                        <img src={image} className="mr-3" height="300" width="300" />
-                        <div className="media-body">{
-                          [
-                            'organization',
-                            'company',
-                            'company_website',
-                            'teams',
-                            'team_members',
-                            'project_website',
-                            'project_funding',
-                            'funded_by',
-                            'summary',
-                            'industries',
-                            'programming_languages',
-                            'platform',
-                            'version_control_systems',
-                            'buildTools',
-                            'plugins',
-                            'community_supports'
-                          ].map(field => {
-                            if (!frontmatter[field]) { return null; }
-                            return (
-                              <div className="pb-2"><strong>{titles[field]}:</strong>{Array.isArray(frontmatter[field]) ? frontmatter[field].join(", ") : frontmatter[field]}</div>
-                            )
-                          })
-                        }</div>
+                  {fields.concat('image').some(field => frontmatter[field]) && (
+                    <div className="container pt-2 pb-2">
+                      <div className="jumbotron">
+                        <div className="media">
+                          {frontmatter.image && <GatsbyImage image={getImage(frontmatter.image)}  className="mr-3" height="300" width="300" />}
+                          <div className="media-body">{
+                            fields.map(field => {
+                              if (!frontmatter[field]) { return null; }
+                              return (
+                                <div key={field} className="pb-2"><strong>{titles[field]}:</strong>{Array.isArray(frontmatter[field]) ? frontmatter[field].join(", ") : frontmatter[field]}</div>
+                              )
+                            })
+                          }</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
 
                   <div className="container pt-2 pb-2">
                     <MDXRenderer>{body}</MDXRenderer>
@@ -108,13 +114,18 @@ export const pageQuery = graphql`
     query UserStoryBySlug($id: String!) {
         mdx(id: {eq: $id}) {
             body
+            slug
             frontmatter {
                 build_tools
                 community_supports
                 company
                 company_website
                 date
-                image
+                image {
+                  childImageSharp {
+                    gatsbyImageData(layout: FIXED, width: 300)
+                  }
+                }
                 industries
                 latitude
                 location

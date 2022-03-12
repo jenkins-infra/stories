@@ -8,7 +8,7 @@ exports.onPreBootstrap = async () => {
 async function createUserStoryPages({graphql, createPage}) {
   const userStory = path.resolve('src/components/UserStory.jsx');
   const result = await graphql(`{
-      allFile(filter: {sourceInstanceName: {eq: "user-stories"}}) {
+      allFile(filter: {sourceInstanceName: {eq: "user-stories"}, childMdx: {}, extension: {eq: "mdx"}}) {
         edges {
           node {
             childMdx {
@@ -26,7 +26,7 @@ async function createUserStoryPages({graphql, createPage}) {
 
   result.data.allFile.edges.forEach(edge => {
     createPage({
-      path: `/user-story/${edge.node.childMdx.slug}/`,
+      path: `/user-story/${edge.node.childMdx.slug.replace(/\/+$/, '')}/`,
       component: userStory,
       context: {
         id: edge.node.childMdx.id

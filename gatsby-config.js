@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
+    "gatsby-remark-images",
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
@@ -25,10 +26,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        defaultLayouts: {
-          'user-stories': require.resolve("./src/layout.jsx"),
-          //default: require.resolve("./src/components/default-page-layout.js"),
-        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+            },
+          },
+        ],
       },
     },
     "gatsby-plugin-sharp",
