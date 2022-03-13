@@ -1,0 +1,70 @@
+---
+title: Jenkins is the way to productiveness
+date: '2021-09-06T16:10:02.000Z'
+post_name: to-productiveness
+sub_title: Keras + Docker + Tensorflow =< Jenkins
+submitted_by: Gajanand Singh
+tag_line: >-
+  Student accelerates accuracy of machine learning models with alerts that
+  automatically provide feedback so developers can identify lags and
+  course-correct in real-time.
+image: ./galgotias.jpg
+organization: Galgotias University
+industries:
+  - Machine Learning and DevOps Integration
+programming_languages:
+  - Python
+platforms:
+  - Docker or Kubernetes
+  - Linux
+version_control_systems:
+  - GitHub
+community_supports:
+  - Spoke with colleagues and peers
+quotes:
+  - from: Gajanand Singh, Student, Galgotias University
+    content: >-
+      "Jenkins is the best technology in my opinion. We used plugins like GitHub
+      , SMTP, and many more which makes my work easy and provides me with such
+      an automated environment that I can honestly say, “Jenkins, YOU ROCK!"
+    image: 1591085785383.jpeg
+---
+## Training a machine learning model to improve accuracy and metrics.
+
+**Background:** The most technical challenge for any new machine developer is to manually run the code, check the error and then increase the accuracy. By using Jenkins it reduces the manual part which is the most exciting part. It is not only running the code but taking the code from GitHub itself and setting up the environment using the docker container. Then it runs the Ml code, and if the accuracy of the model is less than 80% it will alert through an email — this reduces the developer workload. This alert system automatically provides feedback to developers so that they can easily detect where they are lagging and do the correction on time. This will not only reduce the error but also increase the accuracy of the model.
+
+**Goals:**  Increasing the accuracy of a Machine Learning model and alert when it fails to reach the desired accuracy.
+
+<Testimonal idx="0" />
+
+**Solution & Results:** First, I created a docker file in which I wrote all the dependencies required to run my ML model. Next, I wrote the CNN — convolutional neural network — code using Python programming language. I then created one GitHub repo where I stored all my codes. Then I installed Jenkins on Redhat and exposed the port to use Jenkins in my local browser. I installed all the plugins and created five jobs:
+
+1.  Pull the Github repo automatically when some developers push the repo to Github.
+
+2.  By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code and start training
+
+3.  Train our model and predict accuracy or metrics.
+
+4.  If metrics accuracy is less than 80% \\{Desired Accuracy}, then tweak the machine learning model architecture.
+
+5.  Retrain the model or notify that the best model is being created
+
+The key capabilities we relied on were:
+
+-   GitHub plugins: for downloading the repository from the given GitHub account into the workspace.
+
+-   SMTP and Email Extension Plugin, which is used to alert the developer when the accuracy of the model is less than 80%.
+
+-   Build trigger so that all my jobs run in the sequence the way I want.
+
+-   Jenkins shell to run my most of the command.
+
+-   Pos-build Actions and then Editable Email Notification so that the given message will sent via email.
+
+For this project, the results were:
+
+-   Machine learning model trained successfully
+
+-   The deployment rate was pretty good, better than when it was done manually
+
+-   Alert system worked properly, plugins made it easier to automate things

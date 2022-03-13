@@ -1,0 +1,63 @@
+---
+title: Jenkins is the way to automate and accelerate application deployment
+date: '2021-05-31T14:19:58.000Z'
+post_name: to-automate-and-accelerate-application-deployment
+sub_title: Foreign Resource System
+submitted_by: Mary Jane Buenaventura
+tag_line: Deployments reduced from from 30 mins to 4.4 seconds for this IT company.
+image: ./noun_Computer_3767284.png
+industries:
+  - Information Technology
+team_members:
+  - Sridhar Kapidi, Technical Manager
+  - Michelle Angela Fernandez, Senior Software Engineer
+  - Lester Corrales, Senior Software Engineer
+programming_languages:
+  - Java
+platforms:
+  - Linux
+  - Windows
+version_control_systems:
+  - GitLab
+build_tools:
+  - Maven
+community_supports:
+  - Jenkins.io websites & blogs
+  - Spoke with colleagues and peers
+quotes:
+  - from: Mary Jane Buenaventura, Solution Architect
+    content: >-
+      "Jenkins eased the build and deployment process of our project. The
+      current Jenkins solution feature we used is the easiest configuration and
+      it surely served the purpose."
+    image: Jenkins-logo.png
+location: Malaysia
+name: Mary Jane Buenaventura
+latitude: '3.139003'
+longitude: '101.686855'
+---
+## Jenkins freestyle project paves the way for ease of deployment.
+
+**Background:** I work at an IT solutions and services company in Kuala Lumpur. For my Jenkins user story, I thought I’d share a start-up project we created for a foreign resources application. We wanted to achieve a faster and more reliable deployment that provided more manageable product releases — an automated system that can pick up and build the code from our Maven repository and deploy it directly to our Tomcat servers. This was proving to be complex because we have a different Git repository for each module.
+
+**Goals:** End-to-end integration for a management process.
+
+<Testimonal idx="0" />
+
+**Solution & Results:** I configured a Jenkins freestyle project for our Foreign Resources application. Our application is composed of multiple REST services Java projects. Each project has its own corresponding Git repository URL.
+
+In each repository, there are at least two folders; one is a jar, and one is a war. In the Source Code Management tab, I selected Multiple SCMs and defined every Git repository URL that I have. I determined which branch to build and the sub-directory from that repository. By using the freestyle project, I was able to combine our multiple SCMs.
+
+In the Build Execution shell, I defined the command for maven to build, compile and package our projects. Once everything was ready, I copied it to the destination IP server. Then, I created a separate trigger for the build and deploy process.
+
+Jenkins eased the build and deployment process of our project. The current Jenkins solution feature we used is the most straightforward configuration and served the purpose. It gave us great results:
+
+-   builds are faster and more reliable
+
+-   quicker deployments: from 30 minutes to 4.4 seconds
+
+-   build and deploy configuration to a newly setup server is very convenient
+
+-   developers can build and deploy within their own dev environment
+
+-   concurrent builds help a lot on our productivity
