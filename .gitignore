@@ -4,3 +4,6 @@ public
 
 src/layout.css
 src/layout.jsx
+
+# Local Netlify folder
+.netlify

@@ -33,6 +33,17 @@ const MapPage = () => {
         }
     }`);
 
+    const isBrowser = typeof window !== 'undefined';
+
+    if (!isBrowser) {
+        return (
+            <Layout title={title}>
+                <Seo title={title} pathname="/" />
+                This page needs javascript
+            </Layout>
+        );
+    }
+
     const icon = new Icon({
         iconUrl: mapPin.publicURL,
         iconAnchor: [29, 59],
