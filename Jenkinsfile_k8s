@@ -1,0 +1,157 @@
+def recordDeployment(owner, repo, ref, status, environmentURL, environment = "preview", description = "Deploy to preview environment") {
+  withCredentials([usernamePassword(credentialsId: 'github-app-infra', usernameVariable: 'GITHUB_APP', passwordVariable: 'GH_TOKEN')]) {
+    def json = writeJSON(returnText: true, json: [
+        "ref": ref,
+        "environment": environment,
+        "description": description,
+        "required_contexts": [],
+        "auto_merge": false,
+        "auto_inactive": false,
+        "transient_environment": environment != "production",
+    ])
+    def id = readJSON(text: sh(script: "gh api repos/${owner}/${repo}/deployments  -X POST --input - << EOF\n${json}\nEOF", returnStdout: true).trim()).id
+    if (id == ''){
+      error('Unable to create deployment')
+    }
+    json = writeJSON(returnText: true, json: [
+        "state": status,
+        "environment": environment,
+        "description": description,
+        "log_url": "${BUILD_URL}console",
+        "environment_url": environmentURL,
+    ])
+    sh("gh api repos/${owner}/${repo}/deployments/${id}/statuses  -X POST --input - << EOF\n${json}\nEOF")
+  }
+}
+
+pipeline {
+  agent {
+    kubernetes {
+      yaml '''
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  labels:
+    jenkins: "agent"
+    job: "jenkins-is-the-way"
+spec:
+  tolerations:
+    - key: "os"
+      operator: "Equal"
+      value: "linux"
+      effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/os
+                operator: In
+                values:
+                  - linux
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    - name: "jnlp"
+      image: "jenkinsciinfra/builder:2.0.11@sha256:474cd3b4a5aa5b65befa3a0a84d92a725030eba0116a2cad1bbfb33a50a40b65"
+      resources:
+        limits: {}
+        requests:
+          memory: "4Gi"
+          cpu: "2"
+      '''
+    }
+  }
+
+  environment {
+    TZ = "UTC"
+    NODE_ENV = "production"
+    NETLIFY = "true"
+  }
+
+  options {
+    timeout(time: 60, unit: 'MINUTES')
+    ansiColor('xterm')
+    disableConcurrentBuilds(abortPrevious: true)
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
+  }
+
+  stages {
+    stage('Install Dependancies') {
+      steps {
+        sh 'NODE_ENV=development npm install'
+      }
+    }
+
+    stage('Build PR') {
+      when { changeRequest() }
+      steps {
+        sh 'npm run build'
+      }
+    }
+
+    stage('Build Production') {
+      when {
+        branch "master"
+      }
+      environment {
+        GATSBY_MATOMO_SITE_ID = "2"
+        GATSBY_MATOMO_SITE_URL = "https://jenkins-matomo.do.g4v.dev"
+      }
+      steps {
+        sh 'npm run build'
+      }
+    }
+
+    stage('Lint and Test') {
+      environment {
+        NODE_ENV = "development"
+      }
+      steps {
+        sh '''
+          npm run lint
+        '''
+      }
+    }
+
+    stage('Deploy to preview site') {
+      when {
+        changeRequest target: 'master'
+      }
+      environment {
+        NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
+      }
+      post {
+        success {
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'success', "https://jenkins-is-the-way.netlify.app")
+        }
+        failure {
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'failure', "https://jenkins-is-the-way.netlify.app")
+        }
+      }
+      steps {
+        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public')
+      }
+    }
+
+    stage('Deploy to preview site') {
+      when {
+        changeRequest target: 'master'
+      }
+      environment {
+        NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
+      }
+      post {
+        success {
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-jenkins-is-the-way.netlify.app")
+        }
+        failure {
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-jenkins-is-the-way.netlify.app")
+        }
+      }
+      steps {
+        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public')
+      }
+    }
+  }
+}

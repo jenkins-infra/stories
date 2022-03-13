@@ -1,26 +1,22 @@
 import * as React from 'react';
 import {useStaticQuery, graphql, Link} from 'gatsby';
-import {GatsbyImage, getImage} from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
 
 // markup
 const IndexPage = () => {
-    const title = 'Jenkins - User Story Library - All';
-    const {stories} = useStaticQuery(graphql`query MyQuery {
-        stories: allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    const title = 'Jenkins - User Story Library';
+    const {stories} = useStaticQuery(graphql`query FrontPageStories {
+        stories: allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 4) {
             edges {
                 node {
                     frontmatter {
                         title
                         date
                         tag_line
-                        image {
-                            childImageSharp {
-                                gatsbyImageData(layout: FIXED, width: 150)
-                            }
-                        }
+                        submitted_by
                     }
                     slug
                 }
@@ -31,50 +27,47 @@ const IndexPage = () => {
     return (
         <Layout title={title}>
             <Seo title={title} pathname="/" />
+
             <div className="container">
-                <div className="row body">
-                    <div className="col text-center">
-                        <h1>Jenkins Is The Way</h1>
+                <div className="row">
+                    <div className="col-4">
+                        <StaticImage src="../images/Jenkins-is-the-Way-768x911.png" width="768" height="911" alt="jenkins is the way logo" />
+                    </div>
+                    <div className="col-8">
+                        <div>
+                            <h1>Jenkins Is The Way</h1>
+                            <h2>Latest Jenkins User Stories</h2>
+                            {stories.edges.map(({node: story}) => (
+                                <div key={story.slug} className="pb-2">
+                                    <div><Link to={`/user-story/${story.slug}`}>{story.frontmatter.title}</Link></div>
+                                    Submitted by Jenkins User
+                                    {' '}
+                                    <strong>{story.frontmatter.submitted_by}</strong>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="pt-2">
+                            <Link className="btn btn-primary" to="/all">Read User Stories</Link>
+                        </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row pt-2">
                     <div className="col">
-                        <h2>Tell Your Story</h2>
-                        <p>&quot;Jenkins Is The Way&quot; is a global showcase of how developers and engineers are building, deploying, and automating great stuff with Jenkins.</p>
-                        <p>Share your story and we’ll send you a free Jenkins Is The Way T-Shirt.</p>
-                        <p>Our short form will capture details about your project’s goals and technical challenges, and the unique solutions you came up with using Jenkins.</p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col">
-                        <h2>Jenkins User Stories</h2>
-                        {stories.edges.map(({node: story}) => (
-                            <div key={story.slug} className="pb-2">
-                                <div className="d-flex justify-content-right align-items-center">
-                                    {story.frontmatter.image && <div><GatsbyImage image={getImage(story.frontmatter.image)} alt="Logo" className="mr-3" /></div>}
-                                    <div>
-                                        <div>
-                                            <strong>
-                                                {story.frontmatter.title}
-                                            </strong>
-                                        </div>
-                                        <div>
-                                            <small>{story.frontmatter.date}</small>
-                                        </div>
-                                        <div>
-                                            {story.frontmatter.tag_line}
-                                        </div>
-                                        <div>
-                                            <Link to={`/user-story/${story.slug}`}>Read More »</Link>
-                                        </div>
+                        <div className="jumbotron">
+                            <div className="row">
+                                <div className="col text-center">
+                                    <div className="pb-2">
+                                        <StaticImage src="../images/Screen-Shot-2021-11-18-at-10.18.48-AM.png" alt="screenshot of pins on a map" />
+                                    </div>
+                                    <div className="text-center pt-2">
+                                        <Link className="btn btn-primary" to="/map">Visit the map!</Link>
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </div>
-
         </Layout>
     );
 };

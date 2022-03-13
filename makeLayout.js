@@ -72,7 +72,6 @@ async function makeReactLayout() {
     $('head').append('<style>{`#grid-box { position: relative } `}</style>');
     $('head').append('<style>{`html { min-height:100%; position: relative; }`}</style>');
 
-    $('.nav-link[href="https://plugins.jenkins.io/"]').attr('href', '/');
     $('#grid-box').empty();
     $('#grid-box').append('{children}');
     if (process.env.NETLIFY) {
@@ -180,7 +179,7 @@ async function makeReactLayout() {
             results.data.icons.forEach(icon => {
                 icon.src = new URL(icon.src, manifestUrl).toString();
             });
-            results.data.start_url = 'https://plugins.jenkins.io';
+            results.data.start_url = 'https://plugins.jenkins.io'; // FIXME
             return JSON.stringify(results.data);
         });
 
