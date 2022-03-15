@@ -92,7 +92,7 @@ spec:
 
     stage('Build Production') {
       when {
-        branch "master"
+        branch "main"
       }
       environment {
         GATSBY_MATOMO_SITE_ID = "2"
@@ -116,7 +116,7 @@ spec:
 
     stage('Deploy') {
       when {
-        changeRequest target: 'master'
+        changeRequest target: 'main'
       }
       environment {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
@@ -136,7 +136,7 @@ spec:
 
     stage('Deploy to preview site') {
       when {
-        changeRequest target: 'master'
+        changeRequest target: 'main'
       }
       environment {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
