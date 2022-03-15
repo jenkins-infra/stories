@@ -123,10 +123,10 @@ spec:
       }
       post {
         success {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'success', "https://jenkins-is-the-way.netlify.app", "production")
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', env.GIT_COMMIT, 'success', "https://jenkins-is-the-way.netlify.app", "production")
         }
         failure {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'failure', "https://jenkins-is-the-way.netlify.app", "production")
+          recordDeployment('jenkins-infra', 'jenkins-is-the-way', env.GIT_COMMIT, 'failure', "https://jenkins-is-the-way.netlify.app", "production")
         }
       }
       steps {
