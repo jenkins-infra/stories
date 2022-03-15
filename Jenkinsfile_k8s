@@ -116,7 +116,7 @@ spec:
 
     stage('Deploy') {
       when {
-        changeRequest target: 'main'
+        branch "main"
       }
       environment {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
