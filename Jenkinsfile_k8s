@@ -130,7 +130,7 @@ spec:
         }
       }
       steps {
-        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-jenkins-is-the-way" --title "Deploy" -d ./public')
+        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-is-the-way" --title "Deploy" -d ./public')
       }
     }
 
@@ -150,7 +150,7 @@ spec:
         }
       }
       steps {
-        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public')
+        sh('/usr/local/bin/netlify-deploy --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public')
       }
     }
   }
