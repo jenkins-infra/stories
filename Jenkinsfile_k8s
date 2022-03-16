@@ -130,7 +130,7 @@ spec:
         }
       }
       steps {
-        sh('curl -qsL https://github.com/halkeye/netlify-golang-deploy/releases/download/v0.1.5/netlify-golang-deploy_0.1.5_Linux_x86_64.tar.gz | tar xvzf - netlify-golang-deploy; chmod +x netlify-golang-deploy')
+        sh('curl -qsL https://github.com/halkeye/netlify-golang-deploy/releases/download/v0.1.5/netlify-golang-deploy_0.1.5_Linux_x86_64.tar.gz | tar xvzf - netlify-golang-deploy; chmod +x netlify-golang-deploy; mv netlify-golang-deploy netlify-deploy')
         sh('./netlify-deploy --draft=false --siteName "jenkins-is-the-way" --title "Deploy" -d ./public')
       }
     }
@@ -151,7 +151,7 @@ spec:
         }
       }
       steps {
-        sh('curl -qsL https://github.com/halkeye/netlify-golang-deploy/releases/download/v0.1.5/netlify-golang-deploy_0.1.5_Linux_x86_64.tar.gz | tar xvzf - netlify-golang-deploy; chmod +x netlify-golang-deploy')
+        sh('curl -qsL https://github.com/halkeye/netlify-golang-deploy/releases/download/v0.1.5/netlify-golang-deploy_0.1.5_Linux_x86_64.tar.gz | tar xvzf - netlify-golang-deploy; chmod +x netlify-golang-deploy; mv netlify-golang-deploy netlify-deploy')
         sh('./netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public')
       }
     }
