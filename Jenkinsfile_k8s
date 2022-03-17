@@ -77,12 +77,6 @@ spec:
   }
 
   stages {
-    stage('Install Dependencies') {
-      steps {
-        sh 'NODE_ENV=development npm install'
-      }
-    }
-
     stage('Check for typos') {
       steps {
         sh '''
@@ -92,6 +86,12 @@ spec:
         '''
         recordIssues(tools: [checkStyle(id: 'typos', name: 'Typos', pattern: 'checkstyle.xml')])
 
+      }
+    }
+
+    stage('Install Dependencies') {
+      steps {
+        sh 'NODE_ENV=development npm install'
       }
     }
 
