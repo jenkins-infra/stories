@@ -4,7 +4,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs/promises');
 
-async function makeReactLayout() {
+async function makeReactLayout(siteUrl) {
     const headerUrl = process.env.HEADER_FILE || 'https://www.jenkins.io/template/index.html';
     const manifestUrl = new URL('/site.webmanifest', headerUrl).toString();
 
@@ -41,6 +41,11 @@ async function makeReactLayout() {
 
     const $ = cheerio.load(content, {decodeEntities: false});
     $('title').text('Title must not be empty');
+    $('nav .active.nav-item').removeClass('active'); // remove highlighted link
+    if (siteUrl) {
+        $(`.nav-item a[href*="${ siteUrl }"]`).parent('.nav-item').addClass('active');
+        $(`.nav-link[href*="${siteUrl}"]`).attr('href', '/');
+    }
     $('img, script').each(function () {
         const src = $(this).attr('src');
         if (!src) {return;}
@@ -69,7 +74,7 @@ async function makeReactLayout() {
     $('meta[content*="{{"]').remove();
     //
     // padd as per https://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site
-    $('head').append('<style>{`#grid-box { position: relative } `}</style>');
+    $('head').append('<style>{`#grid-box { position: relative; margin: 1rem auto 0; } `}</style>');
     $('head').append('<style>{`html { min-height:100%; position: relative; }`}</style>');
 
     $('#grid-box').empty();
@@ -179,7 +184,7 @@ async function makeReactLayout() {
             results.data.icons.forEach(icon => {
                 icon.src = new URL(icon.src, manifestUrl).toString();
             });
-            results.data.start_url = 'https://plugins.jenkins.io'; // FIXME
+            results.data.start_url = siteUrl || 'https://www.jenkins.io';
             return JSON.stringify(results.data);
         });
 

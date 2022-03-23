@@ -2,7 +2,7 @@ const {makeReactLayout, saveReactLayout} = require('./makeLayout');
 const path = require('path');
 
 exports.onPreBootstrap = async () => {
-    await makeReactLayout().then(saveReactLayout);
+    await makeReactLayout('https://stories.jenkins.io').then(saveReactLayout);
 };
 
 async function createUserStoryPages({graphql, createPage}) {
