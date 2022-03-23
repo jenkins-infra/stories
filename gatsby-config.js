@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: 'https://theway.jenkins.io',
+        siteUrl: 'https://stories.jenkins.io',
         description: 'Jenkins is the way',
         twitter: '@jenkinsci',
     },
@@ -11,8 +11,8 @@ module.exports = {
             resolve: 'gatsby-plugin-matomo',
             options: {
                 matomoUrl: 'jenkins-matomo.do.g4v.dev/',
-                siteId: 'YOUR_SITE_ID',
-                siteUrl: 'https://theway.jenkins.io'
+                siteId: '2',
+                siteUrl: 'https://stories.jenkins.io'
             }
         },
         'gatsby-plugin-react-helmet',
