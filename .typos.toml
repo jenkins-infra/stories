@@ -1,0 +1,10 @@
+[files]
+extend-exclude = ["package.json", "package-lock.json"]
+[default.extend-identifiers]
+"HashiCorp" = "HashiCorp"
+"HashiStack" = "HashiStack"
+"TietoEVRY" = "TietoEVRY"
+"UE4" = "UE4"
+
+[default.extend-words]
+"AKS" = "AKS"
