@@ -31,7 +31,7 @@ const IndexPage = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-4">
-                        <StaticImage src="../images/Jenkins-is-the-Way-768x911.png" width="768" height="911" alt="jenkins is the way logo" />
+                        <StaticImage src="../images/Jenkins-is-the-Way-768x911.png" width={768} height={911} alt="jenkins is the way logo" />
                     </div>
                     <div className="col-8">
                         <div>
