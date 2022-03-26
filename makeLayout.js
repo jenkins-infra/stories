@@ -102,6 +102,8 @@ async function makeReactLayout(siteUrl) {
         'gradienttransform': 'gradientTransform',
         'gradientunits': 'gradientUnits',
         'viewbox': 'viewBox',
+        'xlink:href': 'xlinkHref',
+        'xmlns:xlink': 'xmlnsXlink',
     };
 
     const nodeConversions = {
@@ -114,11 +116,6 @@ async function makeReactLayout(siteUrl) {
 
         if (node.name) {
             node.name = nodeConversions[node.name] || node.name;
-        }
-
-        if (node.attribs) {
-            delete node.attribs['xmlns:xlink'];
-            delete node.attribs['xlink:href'];
         }
 
         if (node.name === 'link' && node.attribs && node.attribs.rel === 'stylesheet') {
