@@ -1,15 +1,13 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:16.13.1'
-    }
-  }
-
   environment {
     NODE_ENV = "development"
     TZ = "UTC"
     NETLIFY = "true"
   }
+  agent {
+    label 'docker&&linux'
+  }
+
 
   options {
     timeout(time: 60, unit: 'MINUTES')
@@ -32,12 +30,24 @@ pipeline {
     }
 
     stage('Install Dependencies') {
+      agent {
+        docker {
+          image 'node:16.13.1'
+          reuseNode true
+        }
+      }
       steps {
         sh 'npm install'
       }
     }
 
     stage('Build Production') {
+      agent {
+        docker {
+          image 'node:16.13.1'
+          reuseNode true
+        }
+      }
       environment {
         NODE_ENV = "production"
       }
@@ -47,6 +57,12 @@ pipeline {
     }
 
     stage('Lint and Test') {
+      agent {
+        docker {
+          image 'node:16.13.1'
+          reuseNode true
+        }
+      }
       steps {
         sh '''
           npm run lint
