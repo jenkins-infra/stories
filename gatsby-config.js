@@ -5,12 +5,13 @@ module.exports = {
         twitter: '@jenkinsci',
     },
     plugins: [
+        'gatsby-plugin-netlify-cms',
         'gatsby-plugin-image',
         'gatsby-remark-images',
         {
             resolve: 'gatsby-plugin-matomo',
             options: {
-                matomoUrl: 'jenkins-matomo.do.g4v.dev/',
+                matomoUrl: 'jenkins-matomo.do.g4v.dev',
                 siteId: '2',
                 siteUrl: 'https://stories.jenkins.io'
             }
