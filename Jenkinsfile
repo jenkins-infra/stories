@@ -1,6 +1,7 @@
 pipeline {
   environment {
     NODE_ENV = "development"
+    HOME = "/tmp"
     TZ = "UTC"
     NETLIFY = "true"
   }
@@ -24,8 +25,11 @@ pipeline {
           curl -qsL https://github.com/halkeye/typos-json-to-checkstyle/releases/download/v0.1.1/typos-checkstyle-v0.1.1-x86_64 > typos-checkstyle && chmod 0755 typos-checkstyle
           ./typos --format json | ./typos-checkstyle - > checkstyle.xml || true
         '''
-        recordIssues(tools: [checkStyle(id: 'typos', name: 'Typos', pattern: 'checkstyle.xml')])
-
+      }
+      post {
+        always {
+          recordIssues(tools: [checkStyle(id: 'typos', name: 'Typos', pattern: 'checkstyle.xml')])
+        }
       }
     }
 
@@ -65,8 +69,13 @@ pipeline {
       }
       steps {
         sh '''
-          npm run lint
+          npx eslint --format checkstyle > eslint.json || true
         '''
+      }
+      post {
+        always {
+          recordIssues(tools: [esLint(pattern: 'eslint.json')])
+        }
       }
     }
   }
