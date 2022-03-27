@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  #name: git-gateway
   repo: jenkins-infra/jenkins-is-the-way
   branch: main
   #use_graphql: true
