@@ -1,9 +1,7 @@
 backend:
   name: github
-  #name: git-gateway
   repo: jenkins-infra/jenkins-is-the-way
   branch: main
-  #use_graphql: true
   site_domain: c6cddb7c-4189-46d1-8157-bd2354c6f87d
 
 publish_mode: editorial_workflow
@@ -14,7 +12,7 @@ collections:
   - name: user-story
     label: User Stories
     label_singular: User Story
-    extension: mdx
+    extension: yaml
     format: frontmatter
     folder: src/user-story
     path: '{{post_name}}/index'
@@ -43,30 +41,36 @@ collections:
       - label: Image
         name: image
         widget: image
-      - label: Organization
-        name: organization
-        widget: string
-      - label: Industries
-        name: industries
-        widget: list
-      - label: Programming Languages
-        name: programming_languages
-        widget: list
-      - label: Platforms
-        name: platforms
-        widget: list
-      - label: Version Control Systems
-        name: version_control_systems
-        widget: list
-      - label: Build Tools
-        name: build_tools
-        widget: list
-      - label: Community Supports
-        name: community_supports
-        widget: list
+      - label: Metadata
+        name: metadata
+        widget: "object"
+        collapsed: false
+        fields:
+        - label: Organization
+          name: organization
+          widget: string
+        - label: Industries
+          name: industries
+          widget: list
+        - label: Programming Languages
+          name: programming_languages
+          widget: list
+        - label: Platforms
+          name: platforms
+          widget: list
+        - label: Version Control Systems
+          name: version_control_systems
+          widget: list
+        - label: Build Tools
+          name: build_tools
+          widget: list
+        - label: Community Supports
+          name: community_supports
+          widget: list
       - label: Testimonals
         name: quotes
         widget: list
+        collapsed: true
         fields:
           - label: From
             name: from
@@ -77,24 +81,42 @@ collections:
           - label: Image
             name: image
             widget: image
-      - label: Author
-        name: name
-        widget: string
-      - label: Location
-        name: location
-        widget: string
-      - label: Latitude
-        name: latitude
-        widget: number
-        value_type: float
-        min: -90
-        max: 90
-      - label: Longitude
-        name: longitude
-        widget: number
-        value_type: float
-        min: -180
-        max: 180
+      - label: Map Data
+        name: map
+        widget: "object"
+        collapsed: true
+        fields:
+        - label: Author
+          name: name
+          widget: string
+        - label: Location
+          name: location
+          widget: string
+        - label: Latitude
+          name: latitude
+          widget: number
+          value_type: float
+          min: -90
+          max: 90
+        - label: Longitude
+          name: longitude
+          widget: number
+          value_type: float
+          min: -180
+          max: 180
       - label: Body
         name: body
-        widget: markdown
+        widget: "object"
+        collapsed: false
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Paragaphs
+          name: paragraphs
+          widget: list
+          allow_add: true
+          field:
+            label: Body
+            name: paragraph
+            widget: markdown
