@@ -50,13 +50,13 @@ body:
       of testing and helps optimize both development and production efficiency.
       Topline results included:"
     - >-
-      *   Ability to create an environment to complete required tasks 
+      *   Ability to create an environment to complete required tasks
 
       *   Automation of those tasks using Jenkins jobs
 
-      *   Accuracy of the model obtained by running these jobs 
+      *   Accuracy of the model obtained by running these jobs
 
-      *   Resource overhead was significantly reduced due to its serverless architecture 
+      *   Resource overhead was significantly reduced due to its serverless architecture
 
       *   Ability to monitor jobs and other things in Jenkins
 title: Jenkins is the way to accelerate production

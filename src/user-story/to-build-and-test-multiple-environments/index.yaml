@@ -38,15 +38,15 @@ body:
       an easy-to-maintain and reliable cloud development pipeline to allow for
       the constant building of production environment configurations.
     - "**Goals:** Automate cloud deployments."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Jenkins pipelines allowed us to automate our cloud development process and
       combine them all within one source of truth. We were able to build
       multiple environments at the same time which, eventually, allowed us to
       build, deploy and test without much manual intervention.
     - "The results are typical of many other successful Jenkins installations:"
     - |-
-      *   build times are 3x faster 
-      *   we can test our code as we build it 
+      *   build times are 3x faster
+      *   we can test our code as we build it
       *   we have the ability to have the status for each step in the pipeline
 title: Jenkins is the way to build and test multiple environments
 date: 2021-06-22T20:28:28.000Z

@@ -64,7 +64,7 @@ body:
     - "**Solution & Results:** To respond to our need for easy deployment, we
       containerized Jenkins, which was easy to achieve after basing our build in
       the official Jenkins image. We bundled the recommended plugins and
-      exemplar configuration with it (e.g., integrated with OpenLDAP for 
+      exemplar configuration with it (e.g., integrated with OpenLDAP for
       auth/auth)."
     - "To respond to our need for flexibility, we created reference pipelines
       for common languages and technologies and named that set: a cartridge.

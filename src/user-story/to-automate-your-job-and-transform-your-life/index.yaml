@@ -84,9 +84,9 @@ body:
     - >-
       *   maintenance task reduced from 16 hours on average to only 2 hours
 
-      *   users creation time reduced from 15 minutes to only 2 minutes 
+      *   users creation time reduced from 15 minutes to only 2 minutes
 
-      *   human error mistakes in maintenance and bounce activities reduced to zero 
+      *   human error mistakes in maintenance and bounce activities reduced to zero
 
       *   the creation of a well-tracked and controlled development cycle to our scripts
 title: Jenkins is the way to automate your job and transform your life

@@ -70,21 +70,21 @@ body:
     - "The key capabilities we relied on Jenkins for were:"
     - >-
       *   Portability to different OS and architectures: this makes it simple to
-      launch our test on those OS and platforms. 
+      launch our test on those OS and platforms.
 
-      *   Reusability of common pipeline steps across projects: our pipeline shared library saves us time. 
+      *   Reusability of common pipeline steps across projects: our pipeline shared library saves us time.
 
-      *   Extensibility on pipelines: we have an encapsulated process on pipeline steps, making it easier to use. 
+      *   Extensibility on pipelines: we have an encapsulated process on pipeline steps, making it easier to use.
 
       *   Pipeline definition as code: every project has its pipeline in its repo.
     - "Jenkins rocks because now we just build and test it. No hands! Simply
       push to GitHub and everything is magic. We also liked the results that it
       provides:"
     - |-
-      *   A common tool for executing builds, tests, and deploys 
-      *   Support for different OS and architectures out-of-the box 
+      *   A common tool for executing builds, tests, and deploys
+      *   Support for different OS and architectures out-of-the box
       *   Ability to scale up to 400 ephemeral Agents at the same time
-      *   Reporting with GitHub checks and GitHub comments 
+      *   Reporting with GitHub checks and GitHub comments
       *   Trigger builds with GitHub Comments
 title: Jenkins is the way to robot ‘em all
 date: 2020-06-17T05:06:25.000Z

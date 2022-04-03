@@ -55,9 +55,9 @@ body:
       the build is over. That part is awesome.
     - "Our top 5 results are as follows:"
     - |-
-      *   warnings identification is faster than ever 
-      *   build releases to teams is streamlined 
-      *   improved tracking of build versions 
+      *   warnings identification is faster than ever
+      *   build releases to teams is streamlined
+      *   improved tracking of build versions
       *   50x more productivity during release times
       *   automation of so many tasks made the lives of our developers easier
 title: Jenkins is the way to to automate anything in healthcare

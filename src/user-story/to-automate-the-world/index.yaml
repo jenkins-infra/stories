@@ -42,7 +42,7 @@ body:
       agents to get the following results:"
     - |-
       *   Time to deploy reduced from three hours to just 50 minutes
-      *   Overall, fewer mistakes and less human error 
+      *   Overall, fewer mistakes and less human error
       *   Just one step to a CD deployment
 title: Jenkins is the way to automate the world
 date: 2021-04-07T14:54:04.000Z

@@ -2,7 +2,7 @@
 metadata:
   title: An intern finds that you can integrate Jenkins with almost every
     technology and the ease of doing things will be much simpler.
-  organization: Juxta Solution Company, 
+  organization: Juxta Solution Company,
     [www.juxtasolutions.com](http://www.juxtasolutions.com)
   industries:
     - Information Technology
@@ -29,7 +29,7 @@ body:
       solutions for clients. Challenges like the Product team needing images to
       upload on AWS S3 bucket and needing the public URL of the image. This is
       done by the DevOps team at my company, which takes a lot of time and
-      distracts them.  So I have automated these tasks using Jenkins and bash
+      distracts them. So I have automated these tasks using Jenkins and bash
       scripting which has saved me as much as ten times the effort."
     - More regular tasks were automated like Running Mongo/MySQL queries,
       automating pipeline for the deployment of Containers, Pods, and Production
@@ -63,20 +63,20 @@ body:
       fetch the code from GitHub and deploy it to the production Servers on
       container/EC2 instances or Kubernetes.
     - "This complete pipeline solution can only be possible because of the
-      flexibility of Jenkins.  The whole project relies on:"
+      flexibility of Jenkins. The whole project relies on:"
     - >-
       *   **Flexibility:** Jenkins is really flexible with all types of
-      environments, be it containers, pods, or EC2 instances. 
+      environments, be it containers, pods, or EC2 instances.
 
-      *   **Speed:** We can directly use our prepared scripts (Python- Bash) which will be really helpful for us to take advantage to make things faster. 
+      *   **Speed:** We can directly use our prepared scripts (Python- Bash) which will be really helpful for us to take advantage to make things faster.
 
       *   **Plugins:** You can integrate Jenkins with almost every technology and the ease of doing things will be much simpler.
     - "The results are as follows:"
     - |-
-      *   One-click infrastructure 
-      *   Reduce human intervention 
-      *   Saves up to 50X of time 
-      *   Reduce manual errors 
+      *   One-click infrastructure
+      *   Reduce human intervention
+      *   Saves up to 50X of time
+      *   Reduce manual errors
       *   Ultimate ease of life
 title: Jenkins is the way to give all your work and headache away
 date: 2021-10-19T15:54:59.000Z

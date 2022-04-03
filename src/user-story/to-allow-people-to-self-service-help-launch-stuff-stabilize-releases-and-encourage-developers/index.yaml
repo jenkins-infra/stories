@@ -60,24 +60,24 @@ body:
     - >-
       *   ThinBackup - Really nice to have a small backup for disaster recovery.
       Remember there are 2 kinds of people: those who do backups and those who
-      will start doing backups. 
+      will start doing backups.
 
-      *   Blue Ocean - Since presenting results has never been so fancy. 
+      *   Blue Ocean - Since presenting results has never been so fancy.
 
-      *   Google OAuth Credentials Plugin - Since someone else already set the correct permissions 
+      *   Google OAuth Credentials Plugin - Since someone else already set the correct permissions
 
-      *   Jenkins Declarative Pipeline - Way easier to read 
+      *   Jenkins Declarative Pipeline - Way easier to read
 
       *   Slack Notification Plugin - Gotta get those errors in a good place
     - "Results were as follows:"
     - >-
-      *   Improved stability and consistency of releases. 
+      *   Improved stability and consistency of releases.
 
-      *   Improved build times due to multi-threaded builds on server machines. 
+      *   Improved build times due to multi-threaded builds on server machines.
 
-      *   The release cycle was shortened since we always had a tagged release ready in the morning. 
+      *   The release cycle was shortened since we always had a tagged release ready in the morning.
 
-      *   Improved developer confidence that their changes won't completely break the application. 
+      *   Improved developer confidence that their changes won't completely break the application.
 
       *   Improved self-servicing of automated tasks such as forcing updates and clearing cache for non-tech people.
 title: Jenkins is the way to allow people to self-service, help launch stuff,

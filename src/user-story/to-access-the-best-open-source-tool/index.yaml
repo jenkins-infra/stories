@@ -23,7 +23,7 @@ body:
   paragraphs:
     - "**Background:** I wanted to ensure a successful development of the
       continuous integration platform. I chose Jenkins because it is the best
-      tool for this.  My objective is to improve the quality of the source code
+      tool for this. My objective is to improve the quality of the source code
       and allow the managers to check the work of the developers."
     - "**Goals:** Checking the quality of the source code of the company's
       applications."
@@ -43,7 +43,7 @@ body:
     - "I was pleased with the results, which included:"
     - |-
       *   improved product quality
-      *   managers finally being able to understand the code 
+      *   managers finally being able to understand the code
       *   a fully-functional continuous integration platform
 title: Jenkins is the way to access the best open source tool
 date: 2021-12-20T17:42:08.000Z

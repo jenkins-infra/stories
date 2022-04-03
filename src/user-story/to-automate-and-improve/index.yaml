@@ -41,7 +41,7 @@ body:
       to change."
     - "**Goals:** Speedy creation of a speech dialog system for an in-vehicle
       infotainment system."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - When a recent customer asked the firm to create a unique speech dialog
       system, Andreas knew he would have to introduce automated releases in
       order to present proposed changes earlier and faster than was currently
@@ -64,9 +64,9 @@ body:
       utilities, configurations, and more. It is a real game-changer for us.\""
     - "**Results:**"
     - |-
-      *   faster feedback 
-      *   faster build time 
-      *   more tests in less time 
+      *   faster feedback
+      *   faster build time
+      *   more tests in less time
       *   reliable and fast releases
 title: Jenkins is the way to automate and improve
 date: 2020-09-01T16:18:14.000Z

@@ -24,7 +24,7 @@ metadata:
     - PHP
     - Python
     - |-
-      Go 
+      Go
       **Platform** : Docker
     - Kubernetes
     - Buildah

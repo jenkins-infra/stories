@@ -23,7 +23,7 @@ body:
       that translates system administration tasks into reusable definitions,
       otherwise known as \"cookbooks.\" The team is in the transition to
       becoming an Ansible engine, open-source software that doesn't rely on a
-      client-server model.  Ansible takes difficult tasks and turns them into
+      client-server model. Ansible takes difficult tasks and turns them into
       repeatable \"playbooks,\" simplifying matters greatly and speeding up
       production. \"We have 500+ cookbooks and will have as many or more Ansible
       playbooks,\" says Rieger. \"We use Jenkins to simplify our testing, build,
@@ -39,7 +39,7 @@ body:
       projects to be consistent in the way it is built, tested, and versioned,\"
       Rieger added. \"Jenkins handles running the static code analysis, testing,
       and git versioning.\" It also keeps the entire team aware of progress in
-      real-time.  \"Jenkins both emails and notifies via slack for successes and
+      real-time. \"Jenkins both emails and notifies via slack for successes and
       failures,\" says Rieger. \"So our team has insight into every build.\"
       Jenkins helps IBM manage many nodes on a large scale. \"We use Jenkins
       pipelines for each of our builds,\" adds Rieger. \"The plugin community

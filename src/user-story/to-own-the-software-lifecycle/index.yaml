@@ -72,7 +72,7 @@ body:
     - "And the results are long-lasting, including:"
     - |-
       *   reduced build times
-      *   promoting reliable insight artifacts 
+      *   promoting reliable insight artifacts
       *   faster deployments
       *   no confusion
 title: Jenkins is the way to own the software lifecycle

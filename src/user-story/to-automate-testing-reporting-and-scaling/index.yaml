@@ -8,12 +8,12 @@ map:
   longitude: "73.8567437"
 metadata:
   title: Using Jenkins, this AI-software company learned how to automate load
-    testing and functional testing as part of their continuous integration and 
+    testing and functional testing as part of their continuous integration and
     continuous delivery process.
   organization: Artificial intelligence software creation for industrial and
     manufacturing customers
   industries:
-    - Quality Engineering and Automation\*\* \*\*
+    - Quality Engineering and Automation
   programming_languages:
     - Java
     - Python
@@ -65,7 +65,7 @@ body:
 
       2.  Automated hooks via integration with SCM polling
 
-      3.  Remote node adding 
+      3.  Remote node adding
 
       4.  Post-Run steps for the reports
     - Jenkins has allowed us to efficiently ship and perform our audit cycle,
@@ -76,7 +76,7 @@ body:
     - |-
       *   increased running time and automated trigger
       *   reduced manual running and maintaining of artifacts
-      *   automated reporting and scaling via connections to a remote machine 
+      *   automated reporting and scaling via connections to a remote machine
       *   ability to provide faster feedback using Jenkins integration
 title: Jenkins is the way to automate testing, reporting and scaling
 date: 2020-07-07T15:36:30.000Z

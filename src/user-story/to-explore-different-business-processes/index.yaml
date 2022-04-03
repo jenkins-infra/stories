@@ -55,9 +55,9 @@ body:
     - "Results were impressive and included:"
     - >-
       *   improved product quality by increasing the number of automated tests
-      by 30% 
+      by 30%
 
-      *   shortened the build times by 50% 
+      *   shortened the build times by 50%
 
       *   faster release cycle (from weeks to hours)
 title: Jenkins is the way to explore different business processes

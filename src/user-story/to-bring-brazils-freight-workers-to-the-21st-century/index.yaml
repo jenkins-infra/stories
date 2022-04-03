@@ -35,7 +35,7 @@ body:
       in which clients from small to midsize freight companies can manage their
       entire operation with a single software solution. With our app, clients
       can control a fleet of trucks, manage their drivers and the trips that
-      they make, as well track their expenses. For that, we need to provide  an
+      they make, as well track their expenses. For that, we need to provide an
       error-free platform."
     - Our methodology is to only update or create microservices or our monoliths
       after the user acceptance phase. Since we have multiple development

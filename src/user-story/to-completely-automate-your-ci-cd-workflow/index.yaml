@@ -41,11 +41,11 @@ body:
       usually do, but for Windows Deployments. Jenkins Pipelines served us very
       well for defining different stages:"
     - |-
-      1.  Source Code Pull 
-      2.  Build 
-      3.  Package 
-      4.  Deploy 
-      5.  Pool Restart 
+      1.  Source Code Pull
+      2.  Build
+      3.  Package
+      4.  Deploy
+      5.  Pool Restart
       6.  Test
       7.  Notification
     - All of this occurs in a very organized and standardized way, which is easy
@@ -53,7 +53,7 @@ body:
     - "The Jenkins capabilities we relied on for this project included: Jenkins
       Pipelines, Jenkins Ansible Plugin, Git plugin, and MSBuild Plugin. One key
       feature we deployed was Jenkins Blue Ocean, since a main requirement was
-      the need for approvals between steps.  Blue Ocean was key to give a pretty
+      the need for approvals between steps. Blue Ocean was key to give a pretty
       decent user interface for project managers and product owners to review
       and approve any changes or deployments. Jenkins DSL Jobs Rules is also
       great since it makes it possible to parametrize every job and create jobs
@@ -62,13 +62,13 @@ body:
       capabilities, and is the perfect choice for an automation platform.
     - "With Jenkins:"
     - >-
-      *   deployments are now consistent and repeatable 
+      *   deployments are now consistent and repeatable
 
       *   deployment time decreased from weeks to 8 minutes
 
       *   replication across similar projects is easy
 
-      *   standardized deployments can be done under the same scheme within Linux and Windows environments 
+      *   standardized deployments can be done under the same scheme within Linux and Windows environments
 
       *   rollback strategy is now simple to execute
 title: Jenkins is the way  to completely automate your CI/CD workflow

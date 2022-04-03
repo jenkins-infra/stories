@@ -35,7 +35,6 @@ body:
   title: Finding solutions that adapt to new requirements, data types, and
     timelines requires Jenkins and 'outside the box' thinking.
   paragraphs:
-    - ""
     - "**Background:** This project addresses the need to rapidly create
       functional prototypes for advanced image and data processing pipelines in
       modern life science research laboratories. Research data are big,
@@ -83,10 +82,10 @@ body:
       Files"
     - "And here's what we got in return:"
     - |-
-      *   Timely and functional solutions to complex research problems 
-      *   Increased result provenance and reproducibility 
-      *   Increased collaboration and sharing 
-      *   Better communication with enterprise architects 
+      *   Timely and functional solutions to complex research problems
+      *   Increased result provenance and reproducibility
+      *   Increased collaboration and sharing
+      *   Better communication with enterprise architects
       *   Faster development cycle
 title: Jenkins is the way to rapid prototyping life science applications
 date: 2021-07-21T12:35:59.000Z

@@ -62,29 +62,29 @@ body:
     - "Here are the main plugins we used and relied on:"
     - >-
       *   Jenkins Job Config plugin - To restore accidentally deleted pipelines.
-      Saved my life once! 
+      Saved my life once!
 
-      *   BlueOcean - Even the non-tech stakeholders can easily visualize the pipelines and can understand the underlying technique. 
+      *   BlueOcean - Even the non-tech stakeholders can easily visualize the pipelines and can understand the underlying technique.
 
-      *   GitHub Integration - The webhooks provided the developers with the info that they needed to see right on the PRs. They didn't need to go to Jenkins. 
+      *   GitHub Integration - The webhooks provided the developers with the info that they needed to see right on the PRs. They didn't need to go to Jenkins.
 
-      *   Email extension plugin - To customize the emails sent to notify about the build status. 
+      *   Email extension plugin - To customize the emails sent to notify about the build status.
 
-      *   Folders plugin - Easy folder creation to organize the view according to the type of job. 
+      *   Folders plugin - Easy folder creation to organize the view according to the type of job.
 
-      *   LDAP plugin - To authenticate users. 
+      *   LDAP plugin - To authenticate users.
 
       *   Docker and Kubernetes integration - For quick deployment into different environments.
     - "Results seen:"
     - >-
       *   frictionless integration with version control, and notification to dev
-      teams. 
+      teams.
 
-      *   managing projects of different tech stacks was very easy. 
+      *   managing projects of different tech stacks was very easy.
 
-      *   super quick integration and deployment. 
+      *   super quick integration and deployment.
 
-      *   build times drastically reduced. And with less intervention. 
+      *   build times drastically reduced. And with less intervention.
 
       *   faster delivery cycles and improved code quality.
 title: Jenkins is the way to transform healthcare

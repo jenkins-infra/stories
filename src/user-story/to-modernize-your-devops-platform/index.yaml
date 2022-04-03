@@ -43,7 +43,7 @@ body:
     - The main challenge for us is to engage resources for the QA deployment
       which is very frequently happening during a development cycle. During this
       time, multiple infra resources are also running in parallel in off-hour,
-      which will cost unnecessarily. **Goals:** Trim down the effort for
+      which will cost unnecessarily. **Goals:** Trim down the effort for
       continuous QA deployments.
     - "**Solution & Results:** With the help of Jenkins, we automated all this
       so whenever the environment or deployment is needed one job can do
@@ -62,9 +62,9 @@ body:
       third-party tools."
     - "The results are typical of many other Jenkins installations:"
     - |-
-      *   Less administrative overhead 
-      *   Faster deployment reduces time up to 90% 
-      *   Empowering DevOps infrastructure to manage complex platform 
+      *   Less administrative overhead
+      *   Faster deployment reduces time up to 90%
+      *   Empowering DevOps infrastructure to manage complex platform
       *   One-time effort to build which can be re-used to save time
 title: Jenkins is the way to modernize your DevOps platform
 date: 2021-08-11T15:58:13.000Z

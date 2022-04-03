@@ -25,7 +25,7 @@ metadata:
   build_tools:
     - Maven
   team_members:
-    - Karthick K.,  Lead DevOps
+    - Karthick K., Lead DevOps
     - Arun Kumar, DevOps Engineer, Sushmitha Ganeshraja, DevOps Engineer
   community_supports:
     - Jenkins.io websites & blogs
@@ -47,13 +47,13 @@ body:
       below:"
     - >-
       1.  Always maintain code synchronization between two different
-      Git-repository managers. 
+      Git-repository managers.
 
-      2.  Track code changes in VCS 
+      2.  Track code changes in VCS
 
-      3.  Build and maintain artifacts, Deploythem in multiple environments 
+      3.  Build and maintain artifacts, Deploythem in multiple environments
 
-      4.  Execute scripts for configuration management, production validation, and code quality 
+      4.  Execute scripts for configuration management, production validation, and code quality
 
       5.  Trigger the Jenkins deployment based on Gerrit and Bitbucket actions
     - "**Goals:** Our goal was instant code deployment, validation, and report
@@ -84,28 +84,28 @@ body:
       of builds.
     - "We used the following Jenkins capabilities:"
     - |-
-      *   Gerrit Trigger 
-      *   Office 365 Connector 
-      *   Azure Artifact Manager plugin 
-      *   Bitbucket Pull request Builder Plugin 
-      *   GitHub plugin 
-      *   Docker Pipeline 
-      *   Email Extension 
-      *   Pipeline 
-      *   Role-based Authorization Strategy 
-      *   Ansible plugin 
-      *   SonarQube Scanner plugin 
-      *   PowerShell plugin 
-      *   Command Agent Launcher Plugin 
-      *   MongoDB Plugin 
+      *   Gerrit Trigger
+      *   Office 365 Connector
+      *   Azure Artifact Manager plugin
+      *   Bitbucket Pull request Builder Plugin
+      *   GitHub plugin
+      *   Docker Pipeline
+      *   Email Extension
+      *   Pipeline
+      *   Role-based Authorization Strategy
+      *   Ansible plugin
+      *   SonarQube Scanner plugin
+      *   PowerShell plugin
+      *   Command Agent Launcher Plugin
+      *   MongoDB Plugin
       *   AWS Related Plugins
     - Our results?
     - |-
       *   Instant and multiple deployments without error
-      *   Made our lives easy on the artifact management process 
-      *   Automated script execution for code quality and product validation 
-      *   Reduced the DevOps team workload 
-      *   Converted deployment time from multiple hours to minutes 
+      *   Made our lives easy on the artifact management process
+      *   Automated script execution for code quality and product validation
+      *   Reduced the DevOps team workload
+      *   Converted deployment time from multiple hours to minutes
       *   Getting Jenkins build results in Microsoft Teams
 title: Jenkins is the way to speed up the product development process
 date: 2021-04-21T14:50:12.000Z

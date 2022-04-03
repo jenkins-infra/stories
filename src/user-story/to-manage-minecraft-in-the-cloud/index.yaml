@@ -13,7 +13,7 @@ metadata:
   industries:
     - Personal project
   programming_languages:
-    - Groovy\*\* \*\*
+    - Groovy
   platforms:
     - ": Linux"
     - GCP
@@ -45,10 +45,10 @@ body:
       to log into Jenkins, so I set up webhooks with Discord and Slack and even
       created a little batch file so they can easily start it wherever they are
       at.
-    - To meet these challenges, I created a handful of pipelines to do the job: 
+    - "To meet these challenges, I created a handful of pipelines to do the job:
       one to start the instance, one to stop the instance, one to obtain the
       status of the server, and one to upgrade Minecraft. These pipelines use
-      shared methods and libraries and are primarily driven by gcloud commands.
+      shared methods and libraries and are primarily driven by gcloud commands."
     - All of the Jenkins Groovy code is stored in GitHub. There is obviously an
       option to store the code inside the pipeline itself, but I've been burned
       too much by systems failing or upgrades breaking things. Now that this is
@@ -60,23 +60,23 @@ body:
       *   Jenkins (latest version)
       *   Discord Notifier
       *   Email Extension Plugin
-      *   GitHub Plugin 
-      *   Various GCP Plugins 
-      *   Green Balls 
-      *   Pipeline 
-      *   Pipeline Utility Steps 
-      *   Role-based Authorization Strategy 
-      *   Simple Theme Plugin 
-      *   Slack Notification Plugin 
+      *   GitHub Plugin
+      *   Various GCP Plugins
+      *   Green Balls
+      *   Pipeline
+      *   Pipeline Utility Steps
+      *   Role-based Authorization Strategy
+      *   Simple Theme Plugin
+      *   Slack Notification Plugin
       *   Timestamper
     - "Jenkins is an amazing tool. I use it day-to-day where I work and also
       used it at previous jobs. I know its potential and ease of use especially
       when it comes to either building standalone jobs or multi-branch pipelines
-      utilizing Groovy.  I have yet to find a tool that can do what Jenkins can
+      utilizing Groovy. I have yet to find a tool that can do what Jenkins can
       do! And the results speak for themselves:"
     - |-
       *   cloud compute can stay offline when not in use
-      *   end-users can turn on without having to log into GCP or Jenkins 
+      *   end-users can turn on without having to log into GCP or Jenkins
       *   checks are in place for all the different scenarios
 title: Jenkins is the way to manage Minecraft in the cloud
 date: 2020-10-19T13:58:44.000Z

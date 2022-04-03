@@ -13,9 +13,10 @@ metadata:
     they were able to significantly reduce communication cycles and keep builds
     on track.
   organization: A leading provider of mobile performance and advertising technology.
+  project_website: ""
   programming_languages:
     - |-
-      Java 
+      Java
       **Platform** : Docker
     - Kubernetes
     - Linux
@@ -29,10 +30,9 @@ metadata:
 body:
   title: Getting reliable, in-time alerts in PagerDuty.
   paragraphs:
-    - \*\*Project Website:<https://plugins.jenkins.io/pagerduty/> \*\*
     - '**Background:** When delivering real-time ads in the marketplace,
       ensuring your developers were on call to respond to fixes as needed is a
-      critical component in any software situation. We found that our  developer
+      critical component in any software situation. We found that our developer
       alerts were being generated using a "mediator." This meant that builds
       that failed or yielded metrics that should have been triggering an alert
       were doing so by sending an email to the Network Operations Center. The
@@ -72,7 +72,7 @@ body:
       *   The ability to trigger incidents on various job statuses: Success,
       Failure, Aborted, Unstable, & Not Built
 
-      *   The ability to trigger  incidents based on number of consecutive build results
+      *   The ability to trigger incidents based on number of consecutive build results
 
       *   The ability to automatically resolve incidents when job is back to normal
 

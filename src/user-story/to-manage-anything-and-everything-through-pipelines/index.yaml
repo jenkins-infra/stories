@@ -12,7 +12,7 @@ metadata:
     software engineers. By integrating CloudBees Jenkins Enterprise, they got
     the flexibility, stability and reliability needed to support this sizable
     financial organization.
-  organization: European Financial Institution\*\*\* \*\*\*
+  organization: European Financial Institution
   programming_languages:
     - Java
     - Node.js

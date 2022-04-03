@@ -37,9 +37,9 @@ body:
     - "**Background:** Camunda is a global software company that offers a
       complete process automation tech stack with powerful execution engines for
       BPMN workflows and DMN decisions paired with essential modeling,
-      operations, and analytics applications.  While the Camunda Platform has
+      operations, and analytics applications. While the Camunda Platform has
       multiple teams and products, this project is specific to the Camunda
-      Platform.  In the past, we were using homemade templating based on Jenkins
+      Platform. In the past, we were using homemade templating based on Jenkins
       DSL Freestyle jobs which work in upstream/downstream style. We decided to
       take advantage of Jenkins to build a CI/CD that stood up to our unique
       requirements detailed below."
@@ -65,12 +65,12 @@ body:
       *   It's hard to onboard the new developers, because of the complexity of the old CI jobs. Developers didn't manage the CI jobs directly but with help from the Infrastructure team
     - "**Managing costs and build time:**"
     - >-
-      *   We run our CI jobs on Google Kubernetes Engine, using  autoscaling
-      with preemptible VM  instances (VM's  lifetime is for up to 24 hours 
-      only, which means Jenkins agents could disappear anytime, but it saves
-      about 80% of the costs)
+      *   We run our CI jobs on Google Kubernetes Engine, using autoscaling with
+      preemptible VM instances (VM's lifetime is for up to 24 hours only, which
+      means Jenkins agents could disappear anytime, but it saves about 80% of
+      the costs)
 
-      *   We also have some long-running jobs, such as E2E  tests and some slow databases that rely on retry mechanisms (to void run everything from the beginning)
+      *   We also have some long-running jobs, such as E2E tests and some slow databases that rely on retry mechanisms (to void run everything from the beginning)
 
       *   One of the biggest challenges was that Jenkins declarative syntax doesn't have a proper retry mechanism for stages within the pipeline (which is necessary to handle short-lived preemptible machines)!
     - "**Miscellaneous Items:**"
@@ -82,7 +82,7 @@ body:
 
       *   Pull request builds in the old style share the same Jenkins jobs (each PR triggers a build in the same job)
     - "**Goal:** Developer enablement and enhancing CI experience."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - "The following steps are what we did to address our varied requirements:"
     - "**Complex/advanced use case:**"
     - >-

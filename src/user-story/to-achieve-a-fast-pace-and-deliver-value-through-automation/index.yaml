@@ -28,20 +28,20 @@ body:
       a pleasant process. Our platform needs to be fast and reliable. For that,
       we decided to use pipelines to:"
     - |-
-      *   Automate the new environment 
-      *   Set user accounts 
+      *   Automate the new environment
+      *   Set user accounts
       *   Automatically communicate to our customers
       *   Accelerate the processes for new user/customer onboarding
     - "**Goals:** Create a chatbot platform."
     - "**Solution & Results:** The solution we came up with includes:"
     - >-
-      *   A repository 
+      *   A repository
 
       *   User accounts creation
 
       *   Deployment of 3 microservices
 
-      *   Customer-generated API keys 
+      *   Customer-generated API keys
 
       *   Customer notification of all the information they need to access and use the platform
     - We implemented this using lots of plugins that we were able to connect to
@@ -50,7 +50,7 @@ body:
       functionalities.
     - "Results using Jenkins included:"
     - |-
-      *   A faster process to onboard new customer 
+      *   A faster process to onboard new customer
       *   Low-cost process
       *   Easy-to-change workflows
       *   Operational efficiency

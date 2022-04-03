@@ -50,7 +50,7 @@ body:
       GitHub integration.
     - "The results were better than expected. We experienced:"
     - |-
-      *   a new release every week 
+      *   a new release every week
       *   better code quality, due to automatic checks
       *   much less frustration, since (nearly) no manual labor was required
 title: Jenkins is the way to write awesome code

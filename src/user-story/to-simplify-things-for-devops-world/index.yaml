@@ -60,7 +60,7 @@ body:
       *   Jira, Slack and email plugins to drive clear communication
     - However, the AWS EC2 plugin cannot be used for some of our legacy systems.
       For that, we use the Jenkins REST APIs to build auto-scaling for legacy
-      agents.  For automating usage restrictions between environments, we use
+      agents. For automating usage restrictions between environments, we use
       Jenkins Build User Details. And worth noting, since security for us is
       critical, by integrating Jenkins with our customized security tools, we
       have further enhanced the overall DevOps flow and made it more robust.

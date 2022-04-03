@@ -31,7 +31,7 @@ body:
   paragraphs:
     - "**Background:** Since there are more than 5,000 developers working on the
       same project simultaneously, the main challenge was to cope with the high
-      frequency of builds every minute.  We also had to tackle the resource
+      frequency of builds every minute. We also had to tackle the resource
       consumption on the Jenkins machine and the nodes: there are more than
       4,000 nodes running across five Jenkins controllers hosted on Kube."
     - "**Goals:** Making the rollout of our cellular platform software quick and
@@ -57,7 +57,7 @@ body:
     - >-
       *   Handles thousands of check ins from dev which speeds up merges
 
-      *   Build times are a lot faster with the new node mechanism 
+      *   Build times are a lot faster with the new node mechanism
 
       *   Much better results at the end of every quarter with continuous automated testing
 title: Jenkins is the way to to produce ultra-modern and sophisticated

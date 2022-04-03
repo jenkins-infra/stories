@@ -7,7 +7,7 @@ map:
   latitude: "53.926182"
   longitude: "27.4520951"
 metadata:
-  title: Using Jenkins helped the ISsoft technology team configure and manage  CI
+  title: Using Jenkins helped the ISsoft technology team configure and manage CI
     testing, making their working processes a whole lot better.
   version_control_systems:
     - Bitbucket Server
@@ -16,11 +16,11 @@ metadata:
 body:
   title: Increase product quality via automated testing and reporting.
   paragraphs:
-    - \*\*Organization:\*\*ISsoft, [https://issoft.by](http://www.issoft.by)
-    - \*\*\*Programming Language: \*\*\*Java, Groovy
+    - \*\**Organization:* \*\*ISsoft, [https://issoft.by](http://www.issoft.by)
+    - \*\**Programming Language:* \*\*Java, Groovy
     - "***Platform***\\*:\\* Windows"
-    - \*\*\*Community Support: \*\*\*Spoke with colleagues and peers, and
-      referred to Jenkins.io websites & blogs
+    - \*\**Community Support:* \*\*Spoke with colleagues and peers, and referred
+      to Jenkins.io websites & blogs
     - "**Background:** Founded in Minsk in 2004, ISsoft is one of the largest
       Belarusian developers of IT solutions for the US and Western Europe
       markets, with 9 out of 10 clients being well-known global companies.
@@ -49,7 +49,7 @@ body:
 
       *   automated-testing allows manual QA team to always stay a step ahead
 
-      *   error avoidance via newly-added preparation step prior to commencing automation tests 
+      *   error avoidance via newly-added preparation step prior to commencing automation tests
 
       *   more effective output via newly-added post step for reporting results and getting results immediately via email
 title: Jenkins is the way to make CI testing management easy and enjoyable

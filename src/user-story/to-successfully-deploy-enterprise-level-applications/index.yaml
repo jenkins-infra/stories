@@ -35,11 +35,11 @@ body:
     - "**Background:** Our IT team set out to develop a long-term deployment
       strategy for our CI/CD pipeline. Before Jenkins, it was very tricky to use
       Blue-Green deployment on dynamic content, which changes frequently.
-      Although they could swap the slots to use production or UAT,  the data
+      Although they could swap the slots to use production or UAT, the data
       synchronization and maintaining stateful content was very challenging."
     - "**Goals:** To develop and deploy a full stack application using Jenkins
       CI/CD pipeline."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Jenkins allows our teams to build applications across platforms
       continuously. The Azure pipeline includes the ability to create any
       application on any platform, including Windows, Linux, and Mac. However,
@@ -62,11 +62,15 @@ body:
       invokes the CI process when source code is pushed to a repository or
       branch.
 
-      *   Create an Azure DevOps Build Pipeline for Jenkins. 
 
-      *   Create a Personal Access Token for connecting Jenkins and Azure DevOps. Then set up a Jenkins Build Project. Test the Jenkins Build. Set up an Azure DevOps pipeline release. Trigger the release with a Post Build Action in Jenkins. 
+      *   Create an Azure DevOps Build Pipeline for Jenkins.
+
+
+      *   Create a Personal Access Token for connecting Jenkins and Azure DevOps. Then set up a Jenkins Build Project. Test the Jenkins Build. Set up an Azure DevOps pipeline release. Trigger the release with a Post Build Action in Jenkins.
+
 
       *   We have used the following plugins.
+
           *   Azure AD plugin allows the Jenkins server to support SSO for users based on Azure AD.
           *   Azure VM Agents plugin uses an Azure Resource Manager template to create Jenkins agents in Azure virtual machines.
           *   Azure Storage plugin uploads build artifacts to -- or downloads build dependencies from -- Azure Blob storage.

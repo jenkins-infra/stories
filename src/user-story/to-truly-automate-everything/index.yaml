@@ -36,13 +36,13 @@ metadata:
 body:
   title: "A lesson MlOps: integrating machine learning and DevOps with Jenkins."
   paragraphs:
-    - "**Background:** \\* The LinuxWorld India training program allows students
-      to work on live projects provided by the organization. In this way, they
-      get real exposure to the IT industry. LinuxWorld offers training in the
-      city of Jaipur, with a team of highly experienced and expert trainers. The
+    - "**Background:** *The LinuxWorld India training program allows students to
+      work on live projects provided by the organization. In this way, they get
+      real exposure to the IT industry. LinuxWorld offers training in the city
+      of Jaipur, with a team of highly experienced and expert trainers. The
       students can enroll in programs like DevOps, Docker, Splunk, Cloud
       Computing, Big Data Hadoop, RedHat certified programs, Python, Splunk,
-      python during their training program.\\*"
+      python during their training program.*"
     - The project for my training at Linux World was to automate machine
       learning using agile DevOps techniques. The problem statement was that
       whenever we run an ML model, CNN model, or DL model, it needs our

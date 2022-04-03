@@ -9,7 +9,7 @@ map:
 metadata:
   title: Family-owned company based in the Netherlands looks to Jenkins to speed
     development and expand pipelines.
-  organization: TOPIC,  [www.Topic.nl](http://www.topic.nl)
+  organization: TOPIC, [www.Topic.nl](http://www.topic.nl)
   industries:
     - Semiconductor
   programming_languages:
@@ -36,13 +36,13 @@ body:
       complete qualification process during the night. Manual steps are
       removed/solved to make this happen. This automated the process, with some
       parts executed in parallel and in different nodes. Both the release cycle
-      and  the visualization increased tremendously. All results are visible in
+      and the visualization increased tremendously. All results are visible in
       Jenkins, and everybody has access to those results. We use pipelines with
       Jenkins files in a Git repo. Also, Blue Ocean is rocking!"
     - Result?
     - |-
-      *   Release cycle from days to one night 
-      *   Quality improved by removing manual actions 
+      *   Release cycle from days to one night
+      *   Quality improved by removing manual actions
       *   Insanely better visibility
 title: Jenkins is the way to make life easy and fast
 date: 2021-08-04T15:33:14.000Z

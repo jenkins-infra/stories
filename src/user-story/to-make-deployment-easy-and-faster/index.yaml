@@ -29,7 +29,7 @@ body:
       RouterBoard for other customer's networks. We support all customers using
       fiber optic technology. To ensure an optimal process, we needed a robust
       CI/CD."
-    - "**Goals** :  Software deployment automation"
+    - "**Goals** : Software deployment automation"
     - "**Solution & Results:** We turned to Jenkins and GitHub Source Control
       Systems for our CI/CD tools. We leverage Jenkins for both our Voip plugins
       and Web Development."

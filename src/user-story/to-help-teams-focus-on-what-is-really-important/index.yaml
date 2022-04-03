@@ -30,7 +30,7 @@ body:
   paragraphs:
     - "**Background:** The company I work for provides platforms and services
       that are 100% digital, so the management of our solutions is more agile
-      and simple. We found that it's best  to have a single point of integration
+      and simple. We found that it's best to have a single point of integration
       and deployment for all teams, from developer to operations."
     - To have a standardized way to build and deploy applications, they need to
       be fully configurable as well as able to integrate with servers, code
@@ -48,7 +48,7 @@ body:
       building blocks – download artifacts, install, validation check, git
       tagging – as different procedures. So depending on the stage, whether it's
       development, testing, UAT, or production, you could use one set or
-      another. With this approach, we were able to  reuse a lot of the code.
+      another. With this approach, we were able to reuse a lot of the code.
     - "I worked with a shared library in one hand and with these great plug-ins
       in the other:"
     - |-

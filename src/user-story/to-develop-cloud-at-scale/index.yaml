@@ -54,13 +54,13 @@ body:
       making workspaces on virtual machines available, and email alerts.
     - "The results are typical of many other Jenkins installations:"
     - >-
-      *   Seamless CI/CD 
+      *   Seamless CI/CD
 
-      *   Development release cycles shortened to 4 hours from 3 days 
+      *   Development release cycles shortened to 4 hours from 3 days
 
-      *   Allowing controlled, safe, and consistent cloud environment control for non-technical teammates 
+      *   Allowing controlled, safe, and consistent cloud environment control for non-technical teammates
 
-      *   Fewer headaches for myself as DevOps 
+      *   Fewer headaches for myself as DevOps
 
       *   Getting VM's prepped with a click of a pipeline job
 title: Jenkins is the way to develop cloud at scale

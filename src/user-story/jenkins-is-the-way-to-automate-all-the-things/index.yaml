@@ -39,7 +39,7 @@ body:
       website that could deliver quality content to end users. We were hoping to
       create an automated way of backing up our databases, code, and any offline
       files."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Leveraging Jenkins, we created a database backup automation that allowed
       us to capture routine backups. From there, we had Jenkins store these
       backups in a cloud blob storage account with another provider in case of a

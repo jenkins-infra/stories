@@ -30,8 +30,8 @@ body:
       deploy faster and with autonomy on the on-premise infrastructure. Many
       challenges have had to be solved :"
     - |-
-      *   how to create this pipeline 
-      *   how to maintain it in a reliable way with tests 
+      *   how to create this pipeline
+      *   how to maintain it in a reliable way with tests
       *   how to convince every project team of its benefits
     - Moreover, unit and smoke tests have
     - become mandatory in order to help project teams maintain a minimum
@@ -41,7 +41,7 @@ body:
       library. This library is based on the abstract "Builder" which defines the
       contract of building an application, releasing it with version increment
       in order to promote it to different environments. Many "Builders" have
-      been created: Maven, Gradle, npm, INMI,  PHP and more are coming!'
+      been created: Maven, Gradle, npm, INMI, PHP and more are coming!'
     - Next, we define a "Deployer," which is in charge of deploying a version of
       an application on an environment. Due to the legacy infrastructure, this
       feature enables deploying on the on-prem infrastructure with dedicated VM
@@ -61,10 +61,10 @@ body:
       build and deployment.
     - "The key capabilities we employed were:"
     - >-
-      *    The Jenkins shared library: It is the key feature of this project. It
+      *   The Jenkins shared library: It is the key feature of this project. It
       enables the sharing of the same code for every project with ease and
       allows teams to concentrate their effort on the code of the application
-      with little worry about the pipeline. 
+      with little worry about the pipeline.
 
       *   One of the benefits of Jenkins is the "build with parameters" which has been heavily customized depending on the type of pipeline the project wants to run. It differs based on the git branch, type of technology and configuration written in the Jenkinsfile.
 

@@ -15,7 +15,7 @@ metadata:
   programming_languages:
     - PHP
     - |-
-      Bash 
+      Bash
       **Platform** : Docker or Kubernetes
     - Linux
   version_control_systems:
@@ -59,7 +59,7 @@ body:
       This migration to the cloud yielded great improvements, including:"
     - |-
       *   shorter testing cycles
-      *   builds follow a set process every time 
+      *   builds follow a set process every time
       *   build processes are consistently logged
 title: Jenkins is the way to simplify the cloud onboarding process
 date: 2020-05-12T02:26:23.000Z

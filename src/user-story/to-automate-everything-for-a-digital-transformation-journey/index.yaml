@@ -48,38 +48,38 @@ body:
       Below I will list out our solutions:"
     - >-
       1.  We have created a CI Pipeline with all the development and dependency
-      tools integrated by using Maven, Git, Nexus, and SonarQube. 
+      tools integrated by using Maven, Git, Nexus, and SonarQube.
 
-      2.  We have integrated our CD pipeline with UrbanCode for continuous deployment. 
+      2.  We have integrated our CD pipeline with UrbanCode for continuous deployment.
 
-      3.  We have integrated with Saucelabs and Selenium for our BDD scripts for automated testing. 
+      3.  We have integrated with Saucelabs and Selenium for our BDD scripts for automated testing.
 
-      4.  We have integrated with Veracode for our SAST scanning. 
+      4.  We have integrated with Veracode for our SAST scanning.
 
-      5.  Separate integration has been done with Splunk for a real-time log dashboard for debugging incidents. 
+      5.  Separate integration has been done with Splunk for a real-time log dashboard for debugging incidents.
 
-      6.  Performance testing has been automated with Jenkins integration with the Performance Center tool. 
+      6.  Performance testing has been automated with Jenkins integration with the Performance Center tool.
 
-      7.  Apart from integration, we have automated all our infrastructure with a pipeline running Ansible scripts. 
+      7.  Apart from integration, we have automated all our infrastructure with a pipeline running Ansible scripts.
 
       8.  We have managed all our Kubernetes clusters with a triggered pipeline to maintain the desired state.
     - "Here are the capabilities we relied on:"
     - >-
       *   Integrated Plugins and easy configuration has helped set up all the
-      Pipeline. 
+      Pipeline.
 
-      *   Parameterised Jenkins jobs were a great help to make the pipeline reusable. 
+      *   Parameterised Jenkins jobs were a great help to make the pipeline reusable.
 
       *   Scheduler features to run cron job were a real time-saver
     - "Our results were outstanding:"
     - >-
-      *   Nightly Build and Scheduler job has saved many man-hours 
+      *   Nightly Build and Scheduler job has saved many man-hours
 
-      *   Containerized deployment has resolved many environmental issues 
+      *   Containerized deployment has resolved many environmental issues
 
-      *   Continuous deployment has given continuous feedback for more bug-free releases 
+      *   Continuous deployment has given continuous feedback for more bug-free releases
 
-      *   Cloud-native plugins helped connect applications in the cloud 
+      *   Cloud-native plugins helped connect applications in the cloud
 
       *   Application SDLC has been more Agile than before
 title: Jenkins is the way to automate everything for a digital transformation journey

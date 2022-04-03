@@ -30,7 +30,7 @@ body:
       the beginning of the industrial revolution and the company specialized in
       industrial process machinery servicing. Today we imagine, build and
       integrate innovative textile systems for flooring qualities, home linen,
-      fashion fabrics, and technical textiles: from yarn to finished product. 
+      fashion fabrics, and technical textiles: from yarn to finished product.
       When it comes to developing and delivering software, our suite of unit
       tests was only run manually when a developer was up to it. That's a
       roadblock. Also just ensuring that builds succeeded for different
@@ -53,11 +53,11 @@ body:
     - "Here are the key components of this project:"
     - >-
       *   Support for fully custom Linux scripts to automate some very custom
-      steps in the build process. 
+      steps in the build process.
 
-      *   Support for source control systems out of the box, Mercurial in our case, but also older systems like SVN. 
+      *   Support for source control systems out of the box, Mercurial in our case, but also older systems like SVN.
 
-      *   Multi-branch projects: set up the build once and replicate it for every new branch in the project. I can't imagine doing this manually. Also, shared pipeline libraries make it easier to repeat the same build steps for similar projects, reducing the setup scripts to only that specific to the project. 
+      *   Multi-branch projects: set up the build once and replicate it for every new branch in the project. I can't imagine doing this manually. Also, shared pipeline libraries make it easier to repeat the same build steps for similar projects, reducing the setup scripts to only that specific to the project.
 
       *   Build monitor: an overview of all projects with an indication of what is working and what is not. We have a separate screen in the office that shows this permanently, making it visible to our team and colleagues from other departments so all can see how our process is going.
     - "The results were amazing:"

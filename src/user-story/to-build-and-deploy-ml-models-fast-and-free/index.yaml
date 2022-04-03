@@ -1,7 +1,7 @@
 ---
 metadata:
-  title: During an internship, this university student sought to  develop  ML
-    models with DevOps techniques (MLOps) for gamma ray classification.
+  title: During an internship, this university student sought to develop ML models
+    with DevOps techniques (MLOps) for gamma ray classification.
   organization: University of Granada
   team_members:
     - Alberto Guillén Perales
@@ -48,8 +48,8 @@ body:
     - |-
       *   Build times are very fast
       *   It's free
-      *   It can be executed on a Raspberry Pi 
-      *   It has very useful pipeline definition 
+      *   It can be executed on a Raspberry Pi
+      *   It has very useful pipeline definition
       *   It integrates well with GitHub
 title: Jenkins is the way to build and deploy ML models fast and free
 date: 2021-09-22T16:34:24.000Z

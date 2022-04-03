@@ -64,17 +64,17 @@ body:
     - "Plugins we used:"
     - >-
       *   Kubernetes Cloud Plugin - Dynamically create, use, and destroy Jenkins
-      workers. 
+      workers.
 
-      *   Jenkins Shared Libraries - Vary the implementation of the functionality being used in pipelines using git branches. parallel step. 
+      *   Jenkins Shared Libraries - Vary the implementation of the functionality being used in pipelines using git branches. parallel step.
 
-      *   Gitlab Plugins - The original one was bad, but there are newer multibranch options we are moving to. 
+      *   Gitlab Plugins - The original one was bad, but there are newer multibranch options we are moving to.
 
-      *   Junit Plugin - Reports. 
+      *   Junit Plugin - Reports.
 
-      *   Gatling Plugin - Reports. 
+      *   Gatling Plugin - Reports.
 
-      *   Selenium Plugin - Reports. 
+      *   Selenium Plugin - Reports.
 
       *   Sonar Plugin - Reports and build blocking.
     - Awesome results!
@@ -82,7 +82,7 @@ body:
       *   We shortened our service change release cycles from weekly to ad-hoc
       based on merges to master.
 
-      *   QA team managed pipelines and improved quality of our releases. 
+      *   QA team managed pipelines and improved quality of our releases.
 
       *   Automated customer instance provisioning.
 title: Jenkins is the way to achieve simple, effective, code-driven CI/CD and

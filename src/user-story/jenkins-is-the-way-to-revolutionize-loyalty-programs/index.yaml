@@ -30,7 +30,7 @@ body:
     solutions for loyalty program providers worldwide.
   paragraphs:
     - "**Background:** Software architect Gabriel Rosales, along with colleagues
-      Neo Wu and  Mort Zeng, work for a fintech company that is on a mission to
+      Neo Wu and Mort Zeng, work for a fintech company that is on a mission to
       help the best loyalty programs around the world thrive. How? By enabling
       their digital platforms to redeem points for products on their member's
       favorite online stores. The company provides white-label solutions to a
@@ -49,13 +49,13 @@ body:
       appropriate pipelines to achieve the following:"
     - >-
       1.  Increase our overall product quality by running automated testing for
-      each commit. (If someone breaks the build we get notified through Slack!) 
+      each commit. (If someone breaks the build we get notified through Slack!)
 
-      2.  Allow us to deploy as many times as we want (actually for every commit that gets green on our testing stage!) 
+      2.  Allow us to deploy as many times as we want (actually for every commit that gets green on our testing stage!)
 
       3.  Properly configure the required assets before building each white-label product.
 
-      4.  Automatically build the appropriate docker image. 
+      4.  Automatically build the appropriate docker image.
 
       5.  Automatically deploy the finished docker image to the appropriate k8s cluster.
     - For key capabilities, we used both Git and Slack integrations, Pipelines,

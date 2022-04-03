@@ -41,14 +41,14 @@ body:
     - "**Solution & Results:**"
     - Manual tests are converted into automated test programs using Selenium
       with Python using a Robot framework. We were then able to execute the
-      automated test using Jenkins.  We were also able to monitor the tests,
+      automated test using Jenkins. We were also able to monitor the tests,
       evaluate the test execution time, and create consolidated reports that
       highlighted improvements and issues found.
     - "It's been a great help to us as functional tests are now fully automated
       and executed. It's now possible to execute multiple runs of the tests and
       to run parallel tests in multiple machines. Overall, Jenkins allowed us:"
     - >-
-      *   seamless implementation of pipelines 
+      *   seamless implementation of pipelines
 
       *   consolidated reports are easier to prepare
 

@@ -50,7 +50,7 @@ body:
       example."
     - "**Goals:** Deploy a unified CI/CD system for multiple development teams,
       to boost Cloudologia's software development lifecycle."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - We use Jenkins in Docker to be able to run & set up Jenkins masters on any
       cloud VMs to provision it on the hosts as the container. We have several
       repositories per specific cases that are combined into sets of Ansible
@@ -66,7 +66,7 @@ body:
       changes and auditing easier. It also has a flexible template system, so
       creating many similarly configured jobs is really easy.
     - "The capabilities we used include: Jenkins-CLI, Jenkins in Docker,
-      Project-Based Matrix Authorization Strategy &  Active Directory Support,
+      Project-Based Matrix Authorization Strategy & Active Directory Support,
       Jenkins DSL, Jenkins SSH Slave Agents."
     - "Results we saw were the following:"
     - >-

@@ -53,9 +53,9 @@ body:
       about "better" ways to manage the system.
     - "The results are many, but here are the top three:"
     - >-
-      *   Build times are faster 
+      *   Build times are faster
 
-      *   De-duplication of Jenkins code via JTE, JSL, etc. 
+      *   De-duplication of Jenkins code via JTE, JSL, etc.
 
       *   Accountability via DSL to eliminate previous point-and-click defined jobs
 title: Jenkins is the way to deploy a truly functional and efficient system to

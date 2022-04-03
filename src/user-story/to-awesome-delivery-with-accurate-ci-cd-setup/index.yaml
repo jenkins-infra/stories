@@ -8,7 +8,7 @@ map:
   longitude: "88.36389500000001"
 metadata:
   title: Reduce the time spent per developer on each project by creating a modern
-    CI/CD  pipeline for over 100 telecommunication microservices.
+    CI/CD pipeline for over 100 telecommunication microservices.
   organization: Telstra Corporation, <https://www.telstra.com.au/>
   industries:
     - Telecommunications
@@ -66,10 +66,10 @@ body:
     - "The results are typical of so many Jenkins installations but impressive
       nonetheless. They include:"
     - |-
-      *   Improved build times 
-      *   Automated test cases 
-      *   Application build monitoring 
-      *   Cost-cutting 
+      *   Improved build times
+      *   Automated test cases
+      *   Application build monitoring
+      *   Cost-cutting
       *   High performance and delivery
 title: Jenkins is the way to awesome delivery with accurate CI/CD setup
 date: 2021-02-05T20:33:08.000Z

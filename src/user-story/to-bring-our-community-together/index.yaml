@@ -78,11 +78,11 @@ body:
       Charts."
     - "The results were phenomenal:"
     - >-
-      *   Shared build pipelines are consistent and evolve faster 
+      *   Shared build pipelines are consistent and evolve faster
 
-      *   Credential management has gotten much simpler & stricter 
+      *   Credential management has gotten much simpler & stricter
 
-      *   Jenkins-as-code has freed teams up to experiment more freely 
+      *   Jenkins-as-code has freed teams up to experiment more freely
 
       *   Teams are more self-empowered to provision and support their own builds
 title: Jenkins is the way to bring our community together

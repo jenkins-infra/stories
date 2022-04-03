@@ -42,8 +42,8 @@ body:
       than the maintenance of the pipe."
     - "After developing pipelines that we were satisfied with, we found that:"
     - |-
-      *   builds are 4x faster 
-      *   we are able to get constant checks of the baseline 
+      *   builds are 4x faster
+      *   we are able to get constant checks of the baseline
       *   we have the ability to have the status for each step in the pipeline
 title: Jenkins is the way to transform server build automation
 date: 2021-02-12T21:11:25.000Z

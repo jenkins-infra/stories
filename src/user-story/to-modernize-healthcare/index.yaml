@@ -76,10 +76,10 @@ body:
       all.\""
     - "Results included:"
     - |-
-      *   infinite parallel builds 
-      *   cost reduction (servers are only up for the required time) 
-      *   faster builds (bigger machines up for less time) 
-      *   stateless builds 
+      *   infinite parallel builds
+      *   cost reduction (servers are only up for the required time)
+      *   faster builds (bigger machines up for less time)
+      *   stateless builds
       *   IaC culture
 title: Jenkins is the way to modernize healthcare
 date: 2020-12-30T13:58:06.000Z

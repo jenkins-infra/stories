@@ -13,7 +13,7 @@ metadata:
     development initiatives.
   organization: |-
     Global defense technology company
-    **Industry:** \*\* \*\* Defense
+    **Industry:** Defense
   team_members:
     - Alon Ma-Yafit
     - Software Architect and Amit Dar
@@ -61,9 +61,9 @@ body:
       achieved our primary goal to build unified visibility across the entire
       organization, plus we experienced other benefits, including:"
     - |-
-      *   user engagement 
-      *   manager engagement 
-      *   faster delivery 
+      *   user engagement
+      *   manager engagement
+      *   faster delivery
       *   project confidence
 title: Jenkins is the way to build and deliver software
 date: 2020-06-09T14:09:24.000Z

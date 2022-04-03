@@ -73,10 +73,10 @@ body:
       and Repo, to name a few."
     - "**Results:**"
     - |-
-      *   Unified CI/CD process 
-      *   Improved product quality 
-      *   Much easier to find and fix issues 
-      *   Easier to manage 
+      *   Unified CI/CD process
+      *   Improved product quality
+      *   Much easier to find and fix issues
+      *   Easier to manage
       *   Easier to add new projects and teams
 title: Jenkins is the way to cast magic of continuous delivery
 date: 2020-09-15T16:53:07.000Z

@@ -100,21 +100,21 @@ body:
       have done this with any other CI/CD tool. Jenkins you rock!
     - "Here are some of the capabilities and plugins we used:"
     - |-
-      *   Scalability through utilizing Kubernetes 
-      *   Flexibility 
-      *   Jenkins API 
-      *   Jenkins Pipeline Plugin 
-      *   Jenkins Kubernetes Plugin 
-      *   Jenkins Docker Build Step Plugin 
-      *   Jenkins Docker Pipeline Plugin 
+      *   Scalability through utilizing Kubernetes
+      *   Flexibility
+      *   Jenkins API
+      *   Jenkins Pipeline Plugin
+      *   Jenkins Kubernetes Plugin
+      *   Jenkins Docker Build Step Plugin
+      *   Jenkins Docker Pipeline Plugin
       *   Jenkins Bitbucket Plugin
     - "Jenkins helps us in so many ways, including:"
     - >-
-      *   generally, increased number of builds for each project 
+      *   generally, increased number of builds for each project
 
       *   a higher degree of automated builds, due to easy integration and orchestration
 
-      *   increased motivation for projects to improve their CI/CD pipelines, because it works! 
+      *   increased motivation for projects to improve their CI/CD pipelines, because it works!
 
       *   nearly all departments are now practicing CI/CD in their projects
 

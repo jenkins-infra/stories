@@ -30,7 +30,7 @@ body:
   paragraphs:
     - "**Background:** When a large telecom company needed help enhancing their
       Jenkins pipeline, they turned to one of India's leading IT services
-      companies for support.  Using Jenkins, the team was tasked with building
+      companies for support. Using Jenkins, the team was tasked with building
       out their clients' open source and continuous integration services to
       include continuous deployment."
     - "**Goals:** Expand Jenkins CI pipeline to include CD."
@@ -44,8 +44,8 @@ body:
       We also continue to provide managed services for this international
       company. With the use of Jenkins, we discovered:"
     - |-
-      *   a fast way to deploy: 4 minutes maximum for microservices 
-      *   development cycles exceed expectations 
+      *   a fast way to deploy: 4 minutes maximum for microservices
+      *   development cycles exceed expectations
       *   improved product quality
 title: Jenkins is the way to create an awesome pipeline
 date: 2020-07-14T13:54:24.000Z

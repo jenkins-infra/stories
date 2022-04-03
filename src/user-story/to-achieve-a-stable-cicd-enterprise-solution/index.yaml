@@ -32,7 +32,7 @@ body:
       restricted, so the tech team was spending an inordinate amount of time
       trying to figure out what to use and how to execute necessary tasks. The
       security constraints imposed on them limited them significantly –
-      particularly when it came to the use of plugins.  Because of this, they
+      particularly when it came to the use of plugins. Because of this, they
       were forced to use extensive bash scripts to supplement the tools
       provided. Another huge challenge was the need to trial all possible
       solutions for each of the necessary steps to be confident they designed
@@ -42,13 +42,13 @@ body:
     - "**Solution & Results:** We used Jenkins to provide the orchestration
       needed for each build and deployment. With Jenkins, we were able to make
       the connection to Nexus repository, pull source code from BitBucket, and
-      create the BladeLogic packages.  Unfortunately, due to all of the internal
+      create the BladeLogic packages. Unfortunately, due to all of the internal
       security restrictions, we could only rely on basic Jenkins capabilities.
       Our team wanted to use Groovy scripts from the onset, but we ended up
       filling pre- and post-build steps, replacing several plugins with bash
       scripts (as the Jenkins agent is on RHEL)."
     - "Jenkins rocks because it provided the platform to automate our builds,
-      whereas previously,  all tasks were executed manually.  Since the
+      whereas previously, all tasks were executed manually. Since the
       implementation:"
     - >-
       *   builds are faster

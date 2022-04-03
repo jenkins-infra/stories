@@ -8,8 +8,8 @@ map:
   longitude: "-51.8851039"
 metadata:
   title: A Brazilian logistics problem easily solved by Jenkins and CI/CD,
-    speeding builds and shortening development cycles.
-  organization: "Sincrovia Soluções Tecnológicas,  <https://sincrovia.com.br/>
+    speeding builds and shortening development cycles\\.\\
+  organization: "Sincrovia Soluções Tecnológicas, <https://sincrovia.com.br/>
     **Industry:** Logistics**Programming Language:** Java, Node.js **Platform**
     : Android, iOS, Docker or Kubernetes, Linux**Version Control System:**
     GitHub**Build Tool:** Maven**Teammates:** Luís Felipe Costa, Software

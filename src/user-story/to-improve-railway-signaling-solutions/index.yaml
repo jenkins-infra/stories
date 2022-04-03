@@ -33,7 +33,7 @@ body:
       trunk branch to a Bitbucket Repository and Jenkins Pipeline."
     - Now every change is a node on a dedicated branch and merged after a
       reviewed pull request and successful Jenkins build.
-    - "We achieved superior  results with Jenkins Pipelines, including:"
+    - "We achieved superior results with Jenkins Pipelines, including:"
     - |-
       *   Fewer failed unit tests
       *   Improved code quality, by doing code reviews for every pull request

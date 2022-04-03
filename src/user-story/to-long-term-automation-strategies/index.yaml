@@ -7,7 +7,8 @@ map:
   latitude: "18.4654154"
   longitude: "73.785494"
 metadata:
-  title: Run pipelines and jobs whenever, wherever, with zero additional costs.
+  title: Amdocs found a way to save money and time, and unify two disparate teams,
+    with Jenkins.
   organization: Amdocs, <https://www.amdocs.com>
   industries:
     - Information Technology
@@ -22,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
 body:
-  title: null
+  title: Run pipelines and jobs whenever, wherever, with zero additional costs.
   paragraphs:
     - "**Background:** Back in 2019, I worked on a testing project where
       application development and maintenance were being done by one
@@ -51,9 +52,9 @@ body:
     - "For results we saw the following:"
     - >-
       1.  We can run pipelines Whenever needed, You don't have to be before your
-      PC. 
+      PC.
 
-      2.  Run jobs whenever needed. 
+      2.  Run jobs whenever needed.
 
       3.  Zero additional cost, PowerPlatform comes free with an Office365 License.
 title: Jenkins is the way to long term automation strategies

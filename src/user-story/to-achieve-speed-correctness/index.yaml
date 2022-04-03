@@ -28,11 +28,11 @@ body:
   title: Use of Jenkins for a college DevOps project inspires other students to
     embrace Jenkins, too.
   paragraphs:
-    - "**Background:** \\* \\* In my last year at Jawaharlal Nehru Engineering
-      College, I worked with fellow student Kamlesh Mugdiya on a DevOps project.
-      As we were designing the on-premise cloud, we focused on Nextcloud Tech
-      and the LAMP stack web application. In doing so, we needed to make the
-      right connections to set the flow of data."
+    - "**Background:** In my last year at Jawaharlal Nehru Engineering College,
+      I worked with fellow student Kamlesh Mugdiya on a DevOps project. As we
+      were designing the on-premise cloud, we focused on Nextcloud Tech and the
+      LAMP stack web application. In doing so, we needed to make the right
+      connections to set the flow of data."
     - The project size was increasing daily. Modularisation testing, in which we
       divided the cloud & code-editor into multiple models for development,
       started to become an issue. We also wanted our project to be fully
@@ -53,16 +53,16 @@ body:
       *   Jenkins Docker plugin: For creating Jenkins slave as a docker
       container, I use the Docker plugin -- it's the best plugin!
 
-      *   CoverPHP: to get the test coverall report by PHPUnit 
+      *   CoverPHP: to get the test coverall report by PHPUnit
 
-      *   Crap4J: We tried this plugin to eliminate some less usable methods. As students are also contributing towards improving the application, it was essential to include code review. 
+      *   Crap4J: We tried this plugin to eliminate some less usable methods. As students are also contributing towards improving the application, it was essential to include code review.
 
       *   GitHub using the Secure Shell Protocol (SSH): It's a lifesaver plugin!
     - "We got the results we were hoping for:"
     - |-
       *   Simplicity in the Agile Sprint
       *   Resolution time for merge conflicts shortened from 1 week to 2 days
-      *   As students, we got great exposure to DevOps and CI-CD 
+      *   As students, we got great exposure to DevOps and CI-CD
       *   Inspired interest in junior students to learn Jenkins
       *   Builds are categorized by the errors & debugged easily
 title: Jenkins is the way to achieve speed & correctness
@@ -76,4 +76,4 @@ quotes:
     image: ./quote.png
 image: mgm-u-logo-2048x1173.png
 tag_line: Education Management System
-submitted_by: r Shreyas Subhedar \
+submitted_by: Shreyas Subhedar

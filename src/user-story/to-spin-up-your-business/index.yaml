@@ -46,8 +46,8 @@ body:
       Build Wrapper plugin.
     - "What we achieved by using Jenkins:"
     - |-
-      *   Executing the task 80% faster 
-      *   Saving 60% in costs 
+      *   Executing the task 80% faster
+      *   Saving 60% in costs
       *   Easier to maintain
 title: Jenkins is the way to spin up your business!
 date: 2021-08-30T16:44:28.000Z

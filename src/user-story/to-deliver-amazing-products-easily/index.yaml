@@ -9,7 +9,7 @@ map:
 metadata:
   title: The most efficient way to deliver more complex and higher quality
     products is to incorporate Continuous Delivery across engineering teams.
-  organization: ARM  - making artificial intelligence and machine learning work
+  organization: ARM - making artificial intelligence and machine learning work
     better with IoT technology.
   industries:
     - Semiconductors
@@ -47,7 +47,7 @@ body:
     - "Senior Software Engineer Chaitanya Dwivedi outlined the two business
       problems that need to be solved simultaneously:"
     - |-
-      1.  the need to deliver more products of increasing complexity. 
+      1.  the need to deliver more products of increasing complexity.
       2.  the need to increase the quality of the products being delivered.
     - '"The traditional IP delivery approach involves creating and checking
       deliverables right before the delivery milestone," explained Dwivedi.
@@ -87,14 +87,14 @@ body:
       collection of plugins.\" Key capabilities and plugins included Pipeline as
       Code, Blue Ocean, Pipeline Utility Steps, Git, JUnit, Gerrit Trigger,
       Slack Notification, HTTP Request, HTML Publish, and SSH Agent."
-    - '"With Jenkins, we were not only able to standardize our process," said 
+    - '"With Jenkins, we were not only able to standardize our process," said
       Dwivedi, "we also reduced our development time and increased the
       confidence in our delivery process. Results included:'
     - |-
-      *   improved deliverable quality and consistency 
-      *   bug discovery shortened from weeks to days 
-      *   reduced high touch error-prone steps 
-      *   reduced milestone risks to projects 
+      *   improved deliverable quality and consistency
+      *   bug discovery shortened from weeks to days
+      *   reduced high touch error-prone steps
+      *   reduced milestone risks to projects
       *   standardized checks and reporting for products
 title: Jenkins is the way to deliver amazing products easily
 date: 2020-12-17T13:24:20.000Z

@@ -36,8 +36,8 @@ body:
       (PLM), so our application needed to be stellar, as well. It is a
       multi-container application and needs to be hosted on AWS Cloud FARGATE.
       Typically manual deployment takes around one full day, including all
-      configurations.  I used the Jenkins CI pipeline to host the application on
-      AWS cloud with ease and without manual intervention.  But AWS FARGATE has
+      configurations. I used the Jenkins CI pipeline to host the application on
+      AWS cloud with ease and without manual intervention. But AWS FARGATE has
       limitations to support multi-containers per tasks definitions, so the
       challenge was to update task definition and services every time for every
       code change in Bitbucket."
@@ -56,7 +56,7 @@ body:
     - "The results were just what I was hoping for:"
     - |-
       *   fast deployment
-      *   no manual intervention 
+      *   no manual intervention
       *   shorter build time
 title: Jenkins is the way to cook almost everything in DevOps world
 date: 2021-06-05T14:55:05.000Z

@@ -63,14 +63,10 @@ body:
       developers and I think it's a crucial part since developers know directly
       that their build has an error or not.
     - "The results were awesome:"
-    - >-
-      *   Cut off manual testing in the core functionality aspect of our
-      product 
-
-      *   Shortened testing time up to 3 hours 
-
-      *   Perform parallel tests simultaneously without requiring much effort 
-
+    - |-
+      *   Cut off manual testing in the core functionality aspect of our product
+      *   Shortened testing time up to 3 hours
+      *   Perform parallel tests simultaneously without requiring much effort
       *   Early tracking to catch a bug
 title: Jenkins is the way to remove manual efforts to perform testing
 date: 2021-11-03T16:31:32.000Z

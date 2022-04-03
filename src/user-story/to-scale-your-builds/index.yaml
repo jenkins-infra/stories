@@ -50,7 +50,7 @@ body:
       great results, including:"
     - |-
       *   quicker builds
-      *   better node management 
+      *   better node management
       *   pipelines
 title: Jenkins is the way to scale your builds
 date: 2020-06-19T04:51:29.000Z

@@ -47,14 +47,14 @@ body:
 
       *   **Duration** - We wanted testing to do more in less time, which was achieved using the Jenkins parallelization concept
 
-      *   **Confidence** - Last but not least, we were hoping to build confidence in using Jenkins for management, users, and other stakeholders\*\* \*\*
+      *   **Confidence** - Last but not least, we were hoping to build confidence in using Jenkins for management, users, and other stakeholders
     - "**Goals:** The main goal of this project was to test every new technology
-      package automatically overnight.  But we were also interested in:"
+      package automatically overnight. But we were also interested in:"
     - |-
-      *   time efficiency 
-      *   easy-to-trace build and debug code issues 
-      *   less effort and complexity 
-      *   easy-to-add test cases in one place 
+      *   time efficiency
+      *   easy-to-trace build and debug code issues
+      *   less effort and complexity
+      *   easy-to-add test cases in one place
       *   easy-to-manage project configurations
     - "**Solution & Results:** Using Jenkins, we build a parametrized project
       that can be used by variant teams. They specify the version of the
@@ -68,11 +68,11 @@ body:
       'teams.
     - "Out of all the great results we've seen, these are the top four:"
     - >-
-      *   Our build and testing time is reduced from 3 days to overnight 
+      *   Our build and testing time is reduced from 3 days to overnight
 
-      *   We achieved automated continuous integration of technology package testing 
+      *   We achieved automated continuous integration of technology package testing
 
-      *   We achieved parallel execution with the Jenkins Parallellization concept 
+      *   We achieved parallel execution with the Jenkins Parallellization concept
 
       *   We achieved stability between different releases
 title: Jenkins is the way to test software packages overnight

@@ -35,11 +35,11 @@ body:
   title: Easy testing of build improvements without disrupting the work of other
     developers.
   paragraphs:
-    - Program URL: <https://www.kplabs.pl/en/intuition-1/>
+    - "Program URL: <https://www.kplabs.pl/en/intuition-1/>"
     - "**Background:** KP Labs is a new space company based in Poland that
       supports deep space exploration with enhanced spacecraft autonomy and a
       focus on machine vision, machine learning, embedded systems and satellite
-      flight software.  Onboard computer (OBC) on CubeSat is one of the core
+      flight software. Onboard computer (OBC) on CubeSat is one of the core
       components directly responsible for mission success. Software running on
       OBC handles communication with the ground station and performs scheduled
       tasks, controls all experiments performed during a mission. In the case
@@ -58,7 +58,7 @@ body:
       especially when aggressive optimizations (like LTO) are used. With build
       pipelines reaching dozens of minutes, resources available to a CI platform
       can be a limiting factor to overall developer productivity. Efficient
-      usage of build agents  -- and the ability to easily add new ones when
+      usage of build agents -- and the ability to easily add new ones when
       necessary -- gives the developer shorter feedback times. This problem gets
       a bit more complicated as only several nodes have hardware components
       attached to them, so jobs have to "jump" between nodes.
@@ -111,11 +111,11 @@ body:
       often caused by pulling in an unwanted standard library function.
     - "We relied on the following to power our processes:"
     - >-
-      *   Jenkins Multibranch pipeline.  The Git controlled build process allows
+      *   Jenkins Multibranch pipeline. The Git controlled build process allows
       for customization and testing of changes on single feature-branch without
       disrupting other branches
 
-      *   Plots help with coverage and memory usage and makes anomalies easy to spot 
+      *   Plots help with coverage and memory usage and makes anomalies easy to spot
 
       *   Node labeling to control which nodes have hardware testing capabilities and to move loads between machines
 
@@ -125,9 +125,9 @@ body:
     - "Jenkins helped us achieve the following results:"
     - >-
       *   Very few missed hardware-related problems as each branch is tested on
-      hardware 
+      hardware
 
-      *   Easy access to up-to-date documentation and memory usage reports 
+      *   Easy access to up-to-date documentation and memory usage reports
 
       *   Reduced waiting for free executor by using more nodes
 title: Jenkins is the way to space

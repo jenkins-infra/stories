@@ -32,7 +32,7 @@ body:
       platforms with solutions that are full of AI-based features -- for
       example, real-time feedback and digital curriculum. Netex platform also
       offers personalized cloud platforms with virtual training, conferences,
-      and more.  A part of the development process is to make tools that manage
+      and more. A part of the development process is to make tools that manage
       talent detection in an easy way."
     - "**Goals:** There were several goals we sought to achieve with Jenkins. We
       had the need to increase the quality of the code that is being delivered,
@@ -41,7 +41,7 @@ body:
       maintaining and deploying in development environments."
     - "**Solution & Results:** We've been using Jenkins for several years,
       writing multiple pipelines in Groovy that are saved in GitLab with project
-      code. Multiple processes are standardized and able to be automated. 
+      code. Multiple processes are standardized and able to be automated.
       Jenkins executes the jobs and the team receives notifications via chat.
       This is useful because it saves us a lot of time. We have real-time
       information and we know the result of each process at the end of the
@@ -55,17 +55,17 @@ body:
       easy way.
     - Some things we really loved about this Jenkins project!
     - >-
-      *   Pipelines can be written in Groovy. 
+      *   Pipelines can be written in Groovy.
 
-      *   SSH Agents & Secret Credentials. 
+      *   SSH Agents & Secret Credentials.
 
-      *   Google Chat & Hangouts notifications are really useful for receiving real-time feedback. 
+      *   Google Chat & Hangouts notifications are really useful for receiving real-time feedback.
 
       *   The Gitlab plugin.
 
       *   Recovering Groovy configurations.
 
-      *   Access to project code. 
+      *   Access to project code.
 
       *   Webhooks, etc.
     - Our top four results!

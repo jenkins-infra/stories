@@ -61,7 +61,7 @@ body:
       teams.
     - "Overall, we saw the following results:"
     - |-
-      *   time efficiency 
+      *   time efficiency
       *   easy to trace the build issue and debug code issues
       *   less effort and effective time complexity
 title: Jenkins is the way to automate everything

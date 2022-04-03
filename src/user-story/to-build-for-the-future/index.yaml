@@ -19,10 +19,10 @@ body:
   title: Transition off an old, slow and manual build system to something built
     for the future.
   paragraphs:
-    - \*\*Organization:\*\*Development project for a healthcare company
-    - \*\*\*Programming Language: \*\*\*Java
-    - "***Platform***\\*:\\* Docker or Kubernetes, Linux\\* \\*"
-    - \*\*\*Community Support: \*\*\*Jenkins.io websites & blogs
+    - \*\**Organization:* \*\*Development project for a healthcare company
+    - \*\**Programming Language:* \*\*Java
+    - "***Platform***\\*:\\* Docker or Kubernetes, Linux"
+    - \*\**Community Support:* \*\*Jenkins.io websites & blogs
     - "**Background:** A healthcare company reached out to this IT group because
       they needed to have a faster way to build, test, and deploy applications,
       while automating as much of the testing and quality checks as possible.

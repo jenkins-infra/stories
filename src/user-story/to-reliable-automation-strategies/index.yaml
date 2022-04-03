@@ -106,7 +106,7 @@ body:
       resources such as WebApps, Storage accounts, Databricks, Azure Functions,
       etc.
 
-      *   Git integration and the ability to configure all pipeline jobs to pull the groovy scripts from SCM locations 
+      *   Git integration and the ability to configure all pipeline jobs to pull the groovy scripts from SCM locations
 
       *   The "Pipeline script from SCM" option, rather than having them hard-coded in each job
 
@@ -138,4 +138,4 @@ quotes:
     image: ./quote.png
 image: noun_Workflow_2284479.png
 tag_line: APT Service Delivery
-submitted_by: Adrian Gramada
+submitted_by: \ Adrian Gramada\

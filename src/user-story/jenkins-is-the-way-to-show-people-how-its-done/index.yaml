@@ -19,15 +19,17 @@ metadata:
     - Alvaro Almeida, Senior Software Developer
     - Andre Sousa, Professor
     - Filipe Costa, Technology Intern
+  programming_languages:
+    - ".NET Core **Platform** : Docker or Kubernetes"
+    - Windows**Version Control System:** GitLab**Build Tool:** NuGet
+    - Nexus
+    - Docker
+  community_supports:
+    - Spoke with colleagues and peers
+    - and relied on Jenkins.io websites & blogs
 body:
-  title: null
+  title: Automated testing pipeline for CI/CD.
   paragraphs:
-    - "**Programming Language: \\*\\* .NET Core **Platform** : Docker or
-      Kubernetes, Windows**Version Control System:\\*\\* GitLab**Build Tool:**
-      NuGet, Nexus, Docker"
-    - "**Community Support:** Spoke with colleagues and peers, and relied on
-      Jenkins.io websites & blogs"
-    - "# Automated testing pipeline for CI/CD."
     - "**Background:** When I joined as an intern for a company that offers a
       comprehensive digital platform for small and medium businesses, I was
       asked to build a prototype to help their dev team automate a testing
@@ -38,9 +40,9 @@ body:
     - "**Goals:** The goal of this project was to transition from Web API
       Deployments Via IIS to WEB API deployments using Docker and Nginx while
       automating the STLC for the backend of the applications."
-    - "**Solution & Results:** I designed  a pipeline prototype composed of
-      three freestyle jobs: ModelClasses, A Web API and a  .NET Core application
-      to Docker."
+    - "**Solution & Results:** I designed a pipeline prototype composed of three
+      freestyle jobs: ModelClasses, A Web API and a .NET Core application to
+      Docker."
     - The ModelClasses followed TDD practices, with a single addition method
       that would later be packaged and pushed to a remote artifact repository
       and pushed all the source code to GitLab. Following this, I built a very

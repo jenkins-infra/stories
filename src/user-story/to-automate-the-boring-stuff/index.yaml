@@ -40,7 +40,7 @@ body:
       create a new workflow for our developers, making the code faster and of
       higher quality than ever before.
     - "**Goals:** Automating all tests for better software quality."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - We chose to use Jenkins to automate the unit testing using PHP-unit. In
       doing so, our developers no longer need to do unit testing manually on
       their local machines. We also have incorporated Sonarqube scanning for

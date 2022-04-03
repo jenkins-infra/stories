@@ -32,7 +32,7 @@ body:
       students and universities around the globe."
     - "**Solution & Results:** We moved to Jenkins Pipelines and covered all
       three steps, specifically declarative pipelines which were easy to set up
-      and Blue Ocean made it easy to visualize. Having a  Stage View, the
+      and Blue Ocean made it easy to visualize. Having a Stage View, the
       failures were easier to debug."
     - We then proceeded to configure the projects for UAT and production. That
       meant running Apex tests, as well. Doing so added to the build time and we

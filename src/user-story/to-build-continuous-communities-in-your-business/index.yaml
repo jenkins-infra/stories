@@ -44,7 +44,7 @@ body:
       identify and respond to broken manual processes. We reduced our build
       times and release schedules! The results to date include:"
     - |-
-      *   reduced build times by 3x 
+      *   reduced build times by 3x
       *   better code review and collaboration processes
       *   faster release cadence
 title: Jenkins is the way to build continuous communities in your business

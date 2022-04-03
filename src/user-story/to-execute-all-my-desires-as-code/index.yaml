@@ -43,9 +43,9 @@ body:
       parameters, and calling the main template."
     - "We are very happy with the results:"
     - |-
-      *   Automated build, with no mouse clicks 
-      *   We now have a rich shared library  for all of the company to utilize 
-      *   Bypass firewall issue 
+      *   Automated build, with no mouse clicks
+      *   We now have a rich shared library for all of the company to utilize
+      *   Bypass firewall issue
       *   Starting the CI/CD process
 title: Jenkins is the way to execute all my desires, AS CODE!
 date: 2021-12-08T15:23:34.000Z

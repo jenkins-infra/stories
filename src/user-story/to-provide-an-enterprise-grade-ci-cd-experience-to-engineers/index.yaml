@@ -78,9 +78,9 @@ body:
       Pam-auth, Parameterized-scheduler, Role-strategy, Slack, and imestamper"
     - "Results included:"
     - >-
-      *   A consistent CI/CD tooling experience for all teams. 
+      *   A consistent CI/CD tooling experience for all teams.
 
-      *   A greater visualization, not only per pipeline but holistically across reporting units. 
+      *   A greater visualization, not only per pipeline but holistically across reporting units.
 
       *   Teams are substantially quicker to onboard engineers into the product, since the community within our business, but also the wider Jenkins community is vibrant
 title: Jenkins is the way to provide an enterprise-grade CI/CD experience to engineers

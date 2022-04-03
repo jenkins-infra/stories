@@ -53,7 +53,7 @@ body:
     - "Our results showed us how inefficient our process had been previously.
       Here are some general findings:"
     - |-
-      *   build times are 10x faster 
+      *   build times are 10x faster
       *   we have a shortened development cycle
       *   testing has shown that we have minimize defects before deployment
 title: Jenkins is the way to easy development

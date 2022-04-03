@@ -24,8 +24,8 @@ body:
       was successful without having to check or do it manually. Otherwise the
       results I saw were:"
     - |-
-      *   Less time maintaining the install packages semester to semester 
-      *   Everything was repeatable 
+      *   Less time maintaining the install packages semester to semester
+      *   Everything was repeatable
       *   No manual tasks required
 title: Jenkins is the way to manage your software
 date: 2021-09-02T14:09:38.000Z

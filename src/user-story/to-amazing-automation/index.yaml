@@ -9,6 +9,8 @@ map:
 metadata:
   title: Managing the integration, transformation and process automatization of
     semiconductor software development for a team of 100+ developers.
+  industries:
+    - Semiconductor
   programming_languages:
     - C/C++
     - Python
@@ -23,7 +25,6 @@ body:
   title: Create a roadmap to transform to continuous integration without manual
     interference.
   paragraphs:
-    - \*\*Industry: \*\* Semiconductor
     - "**Background:** At my employer, a leading semiconductor enterprise, I'm
       responsible for the integration and qualification of the common facilities
       department. That's over 100 developers. I also handle the transformation
@@ -49,8 +50,8 @@ body:
     - "As a software integrator, I am really happy with our results so far. They
       include:"
     - |-
-      *   faster integration - from days to hours 
-      *   less testing done by development teams 
+      *   faster integration - from days to hours
+      *   less testing done by development teams
       *   faster feedback to development teams
 title: Jenkins is the way to amazing automation
 date: 2021-02-08T20:42:15.000Z

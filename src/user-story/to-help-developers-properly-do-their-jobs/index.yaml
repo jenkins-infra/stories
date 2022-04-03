@@ -68,7 +68,6 @@ body:
     - For the Android build, we begin by opening a Docker image, building the
       app with Gradle, and launching unit tests. Similar to the iOs build, we
       then launch the quality, security, and deployment steps.
-    - ""
     - As for key capabilities, first and foremost is the shared libraries
       function! This is a very powerful tool to share and reuse the code. It's
       also very useful to separate the code of a specific project from code for
@@ -77,9 +76,9 @@ body:
     - "We also used the following Jenkins plugins:"
     - |-
       *   Xcode, to make ios builds
-      *   DSL 
+      *   DSL
       *   Bitbucket to build every pull request automatically
-      *   Checkmarx 
+      *   Checkmarx
       *   and so many more!
     - "I've written many libraries, and I've been working full-time on Jenkins
       for two years now. I've learned a lot: Jenkins is a powerful tool to
@@ -87,8 +86,8 @@ body:
     - "As for results:"
     - |-
       *   quality was dramatically improved
-      *   we standardized best practice processes for all developers to follow 
-      *   release cycles were reduced from 10 days to 1 hour 
+      *   we standardized best practice processes for all developers to follow
+      *   release cycles were reduced from 10 days to 1 hour
       *   the process is the same for all of the different projects
 title: Jenkins is the way to help developers properly do their jobs
 date: 2021-03-12T17:28:21.000Z

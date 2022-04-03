@@ -17,13 +17,13 @@ metadata:
 body:
   title: Building a better software delivery lifecycle for healthcare insurance.
   paragraphs:
-    - \*\*Organization:\*\*A regional division of a US-based health insurance
+    - \*\**Organization:* \*\*A regional division of a US-based health insurance
       provider
     - "***Team Members:*** James Dean, Manager; Dawn Cox, Team Lead; Louis
       Kinnick, DevOps Specialist; Peter Carenza, DevOps Specialist"
-    - "***Platform***\\*:\\* Windows\\* \\*"
-    - \*\*\*Programming Language: \*\*\*Java, C/C++, Node.js, COBOL, Groovy
-    - \*\*\*Community Support: \*\*\*Jenkins.io websites & blogs, Spoke with
+    - "***Platform***\\*:\\* Windows"
+    - \*\**Programming Language:* \*\*Java, C/C++, Node.js, COBOL, Groovy
+    - \*\**Community Support:* \*\*Jenkins.io websites & blogs, Spoke with
       colleagues and peers
     - "**Background:** Peter Carenza is part of a regional team of a well-known
       health insurer that included manager James Dean, team lead Dawn Cox, and
@@ -36,7 +36,7 @@ body:
       this healthcare insurer."
     - "**Solution & Results:** We replaced our RTC/Jazz build engines with their
       Jenkins counterparts, and proceeded to write Jenkins pipelines as
-      templates -- automation code for build, test, and deploy -- that allowed
+      templates -- automation code for build, test, and deploy -- that allowed
       users to customize details through the use of build properties."
     - We used Jenkins' wide array of plugins to incorporate new development
       tools for code security, code quality, inline troubleshooting, feedback

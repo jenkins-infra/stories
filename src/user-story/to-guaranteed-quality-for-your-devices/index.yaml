@@ -7,10 +7,10 @@ map:
   latitude: "48.991435"
   longitude: "1.809326"
 metadata:
-  title: \\This consumer electronics leader needed a way to increase the quality
-    of deployed IoT software internationally. \\
+  title: This consumer electronics leader needed a way to increase the quality of
+    deployed IoT software internationally.
   industries:
-    - IoT  industry and new technologies
+    - IoT industry and new technologies
   programming_languages:
     - Java
     - Node
@@ -62,10 +62,10 @@ body:
       more.
     - What results are we seeing?
     - |-
-      *   safer deployments 
-      *   on-demand deployments 
-      *   better reaction time 
-      *    production monitoring
+      *   safer deployments
+      *   on-demand deployments
+      *   better reaction time
+      *   production monitoring
 title: Jenkins is the way to guaranteed quality for your devices
 date: 2021-05-05T22:35:33.000Z
 post_name: to-guaranteed-quality-for-your-devices

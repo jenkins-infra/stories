@@ -39,32 +39,32 @@ body:
       I installed all the plugins and created five jobs:"
     - >-
       1.  Pull the Github repo automatically when some developers push the repo
-      to Github. 
+      to Github.
 
-      2.  By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code and start training 
+      2.  By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter install image container to deploy code and start training
 
-      3.  Train our model and predict accuracy or metrics. 
+      3.  Train our model and predict accuracy or metrics.
 
-      4.  If metrics accuracy is less than 80% {Desired Accuracy}, then tweak the machine learning model architecture. 
+      4.  If metrics accuracy is less than 80% {Desired Accuracy}, then tweak the machine learning model architecture.
 
       5.  Retrain the model or notify that the best model is being created
     - "The key capabilities we relied on were:"
     - >-
       *   GitHub plugins: for downloading the repository from the given GitHub
-      account into the workspace. 
+      account into the workspace.
 
-      *   SMTP and Email Extension Plugin, which is used to alert the developer when the accuracy of the model is less than 80%. 
+      *   SMTP and Email Extension Plugin, which is used to alert the developer when the accuracy of the model is less than 80%.
 
-      *   Build trigger so that all my jobs run in the sequence the way I want. 
+      *   Build trigger so that all my jobs run in the sequence the way I want.
 
       *   Jenkins shell to run my most of the command.
 
       *   Pos-build Actions and then Editable Email Notification so that the given message will sent via email.
     - "For this project, the results were:"
     - >-
-      *   Machine learning model trained successfully 
+      *   Machine learning model trained successfully
 
-      *   The deployment rate was pretty good, better than when it was done manually 
+      *   The deployment rate was pretty good, better than when it was done manually
 
       *   Alert system worked properly, plugins made it easier to automate things
 title: Jenkins is the way to productiveness

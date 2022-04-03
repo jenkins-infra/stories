@@ -51,13 +51,13 @@ body:
       use Jenkins for this project.
     - "The results we saw were exactly what we were looking for:"
     - >-
-      *   Regression testing was really painless 
+      *   Regression testing was really painless
 
-      *   Code quality was confirmed with ease 
+      *   Code quality was confirmed with ease
 
-      *   Test automation culture was proven to be worth the effort 
+      *   Test automation culture was proven to be worth the effort
 
-      *   Benefits of test automation were easily proven to junior testers not familiar with DevOps technologies 
+      *   Benefits of test automation were easily proven to junior testers not familiar with DevOps technologies
 
       *   Release cycles were shortened significantly due to shorter time spent to complete regression testing
 title: Jenkins is the way to transfer test automation culture to the next

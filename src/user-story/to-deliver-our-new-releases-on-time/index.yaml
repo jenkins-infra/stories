@@ -46,12 +46,12 @@ body:
       and stages we are at in our build process and easily identify where any
       issues are that need to be addressed."
     - "We can now build, test, and publish with Docker, integrating with Docker,
-      GitHub and GitLab specifically.  And the results that we're seeing are
+      GitHub and GitLab specifically. And the results that we're seeing are
       exactly as we expected:"
     - >-
-      *   builds are at least twice as fast 
+      *   builds are at least twice as fast
 
-      *   dev cycles have been shortened by a few days 
+      *   dev cycles have been shortened by a few days
 
       *   improved product quality as proven by the lower number of bugs submitted post-build and after each release
 title: Jenkins is the way to deliver our new releases on time!

@@ -152,12 +152,13 @@ body:
       maintaining a base level of standardization regarding how Jenkins is
       configured. The current DevOps tools team will also be able to better
       scale Jenkins across the enterprise.**"
+    - "*   **Jenkins - Masters and agents will run in containers on Kubernetes.
+      Here are some guidelines to follow:**"
+    - <!---->
     - >-
-      *   **Jenkins - Masters and agents will run in containers on Kubernetes.
-      Here are some guidelines to follow:**
-
-
-      *   *   Provide declarative pipelines as code in an Innersourcing hub for the technologies that are in use today, with the ability to expand to other technologies in use across the enterprise.
+      *   *   Provide declarative pipelines as code in an Innersourcing hub for
+      the technologies that are in use today, with the ability to expand to
+      other technologies in use across the enterprise.
           *   Reduce or eliminate the need to use Jenkins plugins by replacing them with function-based builder images. (Note: Some plugins may still be necessary.)
           *   Ensure any shared libs are open to the entire enterprise in favor of community-based reusable code, essentially crowd-sourcing the pipeline capabilities across the enterprise. (Shared libraries are excellent candidates for Innersourcing.)
           *   Discourage manual configuration and the use of customization plugins. Changes should be declared as source code via the config as code plugin.
@@ -166,24 +167,20 @@ body:
           *   Employ a base Jenkins master container to deploy Jenkins masters across the enterprise. This base master should be centrally managed or owned by a given team (we recommend that it be the DevOps tools team).
           *   Ensure the DevOps tools team manages base technology containers (e.g., Maven and NodeJS).
           *   Implement a solution to enable delivery teams to build and run their applications in local Docker containers on their machines. This is another systemic enterprise problem that we often encounter.
-
-      *   **Kubernetes - Here are some Kubernetes implementation guidelines to follow:**
-
-
+    - <!---->
+    - "*   **Kubernetes - Here are some Kubernetes implementation guidelines to
+      follow:**"
+    - <!---->
+    - >-
       *   Ensure Jenkins pipelines execute on containers in Kubernetes.
-
 
       *   Source control Kubernetes managed service configuration and deployment scripting for the Jenkins containers.
 
-
       *   Ensure each team has its own namespace in the Kubernetes cluster.
-
 
       *   Ensure Vault/Consul live in their own namespace in the cluster.
 
-
       *   Create a system namespace in the cluster for any shared resources.
-
 
       *   Built-in managed Kubernetes services (e.g., AKS, EKS, GKE, and OpenShift).
     - "**Results:** In the end, engineering teams will gain more autonomy and
@@ -208,9 +205,9 @@ body:
       *   Delivery Teams have a scalable solution that provides the build
       instances they need to run builds, automated tests, and deployments at any
       time. This scalable solution will also provide on-demand scaling for
-      Jenkins build agents. 
+      Jenkins build agents.
 
-      *   The base configuration of the Jenkins master will be controlled by a centralized tools team, standardizing the Jenkins master across the organization. Product teams will be able to provide updates via Innersource pull requests, giving them some autonomy over their Jenkins masters. As a result, delivery teams will have a more scalable Jenkins solution, a replicable process, and greater availability of Jenkins instances, as well as decrease the blast radius of downtime and outages of Jenkins due to distributed master nodes. 
+      *   The base configuration of the Jenkins master will be controlled by a centralized tools team, standardizing the Jenkins master across the organization. Product teams will be able to provide updates via Innersource pull requests, giving them some autonomy over their Jenkins masters. As a result, delivery teams will have a more scalable Jenkins solution, a replicable process, and greater availability of Jenkins instances, as well as decrease the blast radius of downtime and outages of Jenkins due to distributed master nodes.
 
       *   The centralized DevOps tools team is able to better scale Jenkins throughout the enterprise.
 title: Jenkins is the way to build a scalable CI/CD orchestration platform

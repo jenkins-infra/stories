@@ -61,11 +61,8 @@ body:
     - "Top results we experienced with Jenkins:"
     - |-
       *   Dev and operators share the same tool
-
-      *   Gap reduced between integration and production 
-
-      *   Self-healing stack 
-
+      *   Gap reduced between integration and production
+      *   Self-healing stack
       *   Jenkins can be used as a self-service portal for developers
 title: Jenkins is the way to drive your production
 date: 2021-12-04T15:18:31.000Z

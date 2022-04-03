@@ -65,8 +65,8 @@ body:
     - "So far, the development team is really liking the experience they're
       having with Jenkins. We're already seeing:"
     - |-
-      *   faster and more reliable releasing 
-      *   automated development release and regression testing 
+      *   faster and more reliable releasing
+      *   automated development release and regression testing
       *   improved release auditing
 title: Jenkins is the way to own the future
 date: 2021-01-24T18:45:22.000Z

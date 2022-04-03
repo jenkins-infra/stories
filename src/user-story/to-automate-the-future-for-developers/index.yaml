@@ -31,7 +31,7 @@ metadata:
 body:
   title: null
   paragraphs:
-    - "**Community Support:  J** enkins Users Google Group or IRC Chat,
+    - "**Community Support: J** enkins Users Google Group or IRC Chat,
       Jenkins.io websites & blogs, Spoke with colleagues and peers"
     - "# Automated workflow makes it a whole lot faster."
     - "**Background:** I belong to a cyber enthusiasts club that mainly focuses
@@ -49,16 +49,15 @@ body:
       stuff.
     - "In short, here's what I learned:"
     - >-
-      *   First, a developer must commit the code to the source code
-      repository. 
+      *   First, a developer must commit the code to the source code repository.
 
-      *   Meanwhile, the Jenkins server checks the repository at regular intervals for changes. 
+      *   Meanwhile, the Jenkins server checks the repository at regular intervals for changes.
 
-      *   As soon as a commit occurs, the Jenkins server detects the changes that have occurred in the source code repository. 
+      *   As soon as a commit occurs, the Jenkins server detects the changes that have occurred in the source code repository.
 
-      *   Jenkins will pull those changes and will start the preparation of a new build. 
+      *   Jenkins will pull those changes and will start the preparation of a new build.
 
-      *   If the build fails, the developer is notified. If successful, it deploys the test server. 
+      *   If the build fails, the developer is notified. If successful, it deploys the test server.
 
       *   The Jenkins pipeline can be configured for automating the builds.
     - "**Goals:** The main objective here was to fasten the web development

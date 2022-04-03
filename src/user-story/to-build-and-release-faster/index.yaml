@@ -51,9 +51,9 @@ body:
       Openshift plugin, and the Thin backup plugin.
     - "We were pleased to see the following results:"
     - >-
-      *   releases were 5x faster 
+      *   releases were 5x faster
 
-      *   automated error reporting and customization helped us save time with each release 
+      *   automated error reporting and customization helped us save time with each release
 
       *   ability to focus on important things because we were able to automate the boring stuff by almost 99%
 title: Jenkins is the way to build and release faster

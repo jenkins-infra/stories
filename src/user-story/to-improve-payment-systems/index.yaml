@@ -40,7 +40,7 @@ body:
       requests at night, and so on."
     - "**Goals:** The goal of this project was to test the performance of
       instant payments."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - We chose Gatling as the load testing tool and used Maven as the build
       tool. In the beginning, we ran these tests by hand but it was not
       sufficient, and since we wanted the tests to run after working hours, we
@@ -59,13 +59,13 @@ body:
     - "Key capabilities used include:"
     - >-
       *   Parameterized Scheduler -- a useful plugin if you need to run a
-      parametrized job on a particular schedule. 
+      parametrized job on a particular schedule.
 
-      *   Gatling plugin -- this plugin is also awesome because it displays the result of the test on the job's overview page.
+      *   Gatling plugin -- this plugin is also awesome because it displays the result of the test on the job's overview page.
     - "The results are typical of many other Jenkins installations:"
     - |-
       *   improved product quality was improved
-      *   test cycles were shortened 
+      *   test cycles were shortened
       *   test summaries are easily and automatically stored
 title: Jenkins is the way to improve payment systems
 date: 2021-04-01T15:03:55.000Z

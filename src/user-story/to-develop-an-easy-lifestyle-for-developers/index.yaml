@@ -39,7 +39,7 @@ body:
       share is an Automated Web Development Environment integrating Git/GitHub,
       Jenkins, and httpd Web Server in RHEL-8."
     - "**Goals:** Developing a DevOps adoption roadmap."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - I've learned a lot about Jenkins. It is one of the essential tools in
       DevOps. You can use it to integrate all DevOps stages with the help of
       plugins, and there are 1,000s of them. In particular, I've explored the

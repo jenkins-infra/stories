@@ -26,7 +26,7 @@ body:
       failures that we weren't aware of. **Goals:** Save developer time by
       creating a better CI/CD process. **Solution & Results:** Jenkins helped us
       to split our challenge into phases and separate jobs. We had jobs for new
-      releases and daily builds for CI/CD.  This way, the developer can do a
+      releases and daily builds for CI/CD. This way, the developer can do a
       better job, and work faster. By creating a job for each build in Jenkins,
       the whole process was simplified. It saved us a lot of time in the build
       process. It also helped us to detect some failures that we weren't aware

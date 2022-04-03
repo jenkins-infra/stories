@@ -39,7 +39,7 @@ body:
     - "Results using Jenkins included:"
     - |-
       *   Problem free releases
-      *   Less dependency on project team members 
+      *   Less dependency on project team members
       *   Faster releases
 title: Jenkins is the way to automate your build and releases for all products
   going forward

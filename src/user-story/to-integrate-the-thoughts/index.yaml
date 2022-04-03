@@ -39,7 +39,7 @@ body:
       environments."
     - "**Solution & Results:** Using Jenkins, integration between multiple
       environments was done with very manual intervention and set up. It was
-      done using a master pipeline and it runs smoothly, and saves me time and 
+      done using a master pipeline and it runs smoothly, and saves me time and
       effort."
     - I used Jenkins as an integration tool. First I installed slave agents on
       my target servers and connected all the required interfaces like
@@ -50,10 +50,10 @@ body:
       Allure reports and publish them on Confluence."
     - "The results are the true selling point! They include:"
     - |-
-      *   deployment efficiency with same day turnaround 
-      *   build is performed in couple of minutes 
-      *   user notifications sent automatically 
-      *   delivery alert triggered to Ops team 
+      *   deployment efficiency with same day turnaround
+      *   build is performed in couple of minutes
+      *   user notifications sent automatically
+      *   delivery alert triggered to Ops team
       *   runtime reports generated and sent effortlessly
 title: Jenkins is the way to integrate the thoughts
 date: 2021-07-03T20:21:43.000Z

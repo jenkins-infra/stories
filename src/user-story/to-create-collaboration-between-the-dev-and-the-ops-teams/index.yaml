@@ -37,7 +37,7 @@ body:
     - "**Background:** Building, testing, code scanning, and code delivery were
       all done manually for this bank before this digital agency stepped in.
       There was no automated way of doing all of these tasks, compounded with
-      the fact that different teams were involved to complete each piece. The
+      the fact that different teams were involved to complete each piece. The
       concern was that running these complex pieces manually can – and did –
       result in human errors like typos, wrong execution orders, etc. We knew we
       had to integrate everything on one platform and reduce the potential for
@@ -72,9 +72,9 @@ body:
 
       *   increased quantity of builds from an average of two per week to four or five a day
 
-      *   faster feedback to the dev/test team in the early stages of development 
+      *   faster feedback to the dev/test team in the early stages of development
 
-      *   improved product quality as a  result of early and frequent feedback
+      *   improved product quality as a result of early and frequent feedback
     - The client was really happy to see the changes in overall delivery speed
       along with quality after introducing Jenkins. After this implementation,
       there was more trust and confidence in introducing and suggesting the

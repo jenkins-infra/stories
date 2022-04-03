@@ -41,10 +41,10 @@ body:
       clients worldwide."
     - "**Solution & Results:** We needed a way to have executable tests in a
       easy-to-see-and-run process. Jobs are perfect for this, but we also needed
-      a long running group of tests to be deployed at certain times.  These
-      might need to use shared resources, like containers that run selenium.
-      Handling all of this could have been a nightmare, luckily with Jenkins it
-      has been pretty smooth."
+      a long running group of tests to be deployed at certain times. These might
+      need to use shared resources, like containers that run selenium. Handling
+      all of this could have been a nightmare, luckily with Jenkins it has been
+      pretty smooth."
     - One of the things that helped us with this was the ease of configuring
       jobs to be run one after another, or one initial job triggering other jobs
       that can run in parallel. In short, being able to configure in detail when
@@ -58,15 +58,15 @@ body:
       make this integration just the way we needed it, just with Curl.
     - The key capabilities we relied on were varied.
     - >-
-      *   Jenkins Groovy script support, which has been endlessly useful. 
+      *   Jenkins Groovy script support, which has been endlessly useful.
 
-      *   Maven Plugin, to make building maven projects easier. 
+      *   Maven Plugin, to make building maven projects easier.
 
-      *   Naginator Plugin, some jobs needed to be re-run in certain cases and this was pretty useful to easily achieve it. 
+      *   Naginator Plugin, some jobs needed to be re-run in certain cases and this was pretty useful to easily achieve it.
 
       *   Pipeline plugin to build handy pipelines.
 
-      *   Environment Injector plugin, to help us handle some job to job data. 
+      *   Environment Injector plugin, to help us handle some job to job data.
 
       *   And of course, Git plugin, to easily configure the repository stuff.
     - "We continue to be very happy with the results:"

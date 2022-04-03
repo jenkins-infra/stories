@@ -17,7 +17,7 @@ metadata:
 body:
   title: Securing the enterprise cloud with Jenkins.
   paragraphs:
-    - "**Background:** As a  developer dedicated to ensuring security &
+    - "**Background:** As a developer dedicated to ensuring security &
       compliance in the cloud, we needed to create a complete CI/CD pipeline
       that was ultra-secure and auditable during every stage of our development
       process. **Goals:** Build a security framework for IBM Cloud **Solution &

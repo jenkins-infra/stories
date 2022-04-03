@@ -38,8 +38,8 @@ body:
     - "We are integrating with a range of tools and Jenkins gives us the
       flexibility to communicate with them all easily:"
     - |-
-      *   Jira for our governance 
-      *   Bitbucket for source code management 
+      *   Jira for our governance
+      *   Bitbucket for source code management
       *   Google Cloud as our core platform
     - Although not tested under load as of yet, we do not envisage any
       scalability issues due to the deployment architecture of the Jenkins
@@ -48,9 +48,9 @@ body:
       and Kubernetes running on GKE with scalable worker node architecture.
     - "As for results, they included:"
     - |-
-      *   the ability to integrate with many platforms 
-      *   a single place for task automation 
-      *   audibility of tasks driven through log data for governance 
+      *   the ability to integrate with many platforms
+      *   a single place for task automation
+      *   audibility of tasks driven through log data for governance
       *   easy to measure metrics for future improvement targets
 title: Jenkins is the way to unify development experience across many platforms
 date: 2021-09-28T14:21:59.000Z

@@ -1,6 +1,6 @@
 ---
 metadata:
-  title: Data loss is a catalyst for revenue loss in media sales.  A monitoring
+  title: Data loss is a catalyst for revenue loss in media sales. A monitoring
     framework was needed to test data delivery daily
   organization: Xperi, <https://www.xperi.com/>
   industries:
@@ -45,8 +45,8 @@ body:
       daily basis.
     - "We are happy with the results:"
     - |-
-      *   Missing data issues are identified early. 
-      *   Issues with data quality are caught and highlighted 
+      *   Missing data issues are identified early.
+      *   Issues with data quality are caught and highlighted
       *   The need for manual intervention to check the reports is eliminated
 title: Jenkins is the way to freedom from boring tasks
 date: 2021-10-05T15:31:13.000Z

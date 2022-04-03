@@ -41,9 +41,9 @@ body:
     - >-
       1.  The ability to checkout reliably and then embed custom JUnit Reports
       and QualityGates Reports – not the one which Jenkins plugin provides –
-      like CPD, Inspection. 
+      like CPD, Inspection.
 
-      2.  To make sure that the CI builds run for all commits/tags to release branches. 
+      2.  To make sure that the CI builds run for all commits/tags to release branches.
 
       3.  Ensure error handling and reporting happen promptly.
     - "**Goals:** Implementing continuous integration and continuous testing for
@@ -86,7 +86,7 @@ body:
     - |-
       *   continuous testing of release branches
       *   faster feedback on the quality of code
-      *   improved quality of the product because of CI and CT 
+      *   improved quality of the product because of CI and CT
       *   10x faster integration of new QualityGates
 title: Jenkins is the way to continuously build, test and release your software
 date: 2021-06-03T14:01:36.000Z

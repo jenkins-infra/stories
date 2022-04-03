@@ -25,8 +25,8 @@ metadata:
     - Groovy
     - Terraform
     - |-
-      Ansible 
-      **Platform** : Android
+      Ansible
+      **Platform** : Android
     - iOS
     - Docker
     - Kubernetes
@@ -46,7 +46,7 @@ body:
     - "**Background:** Tymit is a financial software company with the mission to
       leverage the latest technology for credit card payments and offer a much
       better experience to the customer: one that is cheaper, more transparent,
-      flexible, and easily available anywhere when needed.  Core to its mission
+      flexible, and easily available anywhere when needed. Core to its mission
       is to make it possible for their customers to make payments in
       installments and provide payment simulations for full transparency."
     - With the need to be compliant, transparent, and secure -- and to

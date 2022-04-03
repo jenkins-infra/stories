@@ -52,16 +52,16 @@ body:
       the help of Jenkins.
     - "We relied on a handful of key Jenkins capabilities, including:"
     - |-
-      *   XL Deploy Plugin 
-      *   Gitlab plugin 
-      *   Pipeline plugin 
+      *   XL Deploy Plugin
+      *   Gitlab plugin
+      *   Pipeline plugin
       *   Sonarqube Scanner for Jenkins
     - "Here are our top 5 results:"
     - |-
-      *   Deployment times are 3X faster 
-      *   The release cycle is more streamlined and standardized 
-      *   Our operation team cost is reduced 
-      *   Failback or failover chances are slim with blue/green deployment 
+      *   Deployment times are 3X faster
+      *   The release cycle is more streamlined and standardized
+      *   Our operation team cost is reduced
+      *   Failback or failover chances are slim with blue/green deployment
       *   Automated CMS code and configuration backups to source control
 title: Jenkins is the way to a streamlined mortgage industry
 date: 2021-05-25T00:08:22.000Z

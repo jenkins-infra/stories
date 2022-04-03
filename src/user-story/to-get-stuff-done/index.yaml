@@ -19,7 +19,7 @@ metadata:
     - Kalin Dimtrov, Java Team Lead
   programming_languages:
     - |-
-      Java 
+      Java
       **Platform** : Linux
     - Windows
   version_control_systems:
@@ -47,8 +47,8 @@ body:
       product is something we can be proud of. Basically, it solved all our
       problems and fulfilled our dreams. Results we're experiencing include:"
     - |-
-      *   Simplified & streamlined deployment process 
-      *   Introduction of coding and development standards 
+      *   Simplified & streamlined deployment process
+      *   Introduction of coding and development standards
       *   Cut manual deployment efforts almost entirely
 title: Jenkins is the way to get stuff done
 date: 2020-05-07T02:40:50.000Z

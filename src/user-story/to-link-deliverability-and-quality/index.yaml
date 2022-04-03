@@ -52,15 +52,15 @@ body:
       build and deployment is really impressive and satisfying to see. It goes
       perfectly with ArgoCD, which we have chosen for the deployment part in the
       cube.
-    - What plugins did we use most? In alphabetical order, they are:  Amazon
+    - "What plugins did we use most? In alphabetical order, they are: Amazon
       EC2, AnsiColor, Ant Plugin, Build Pipeline Plugin, Build Timeout,
       Checkstyle Plug-in, Clover PHP plugin, Cobertura Plugin, Config File
       Provider, EC2 Fleet, Disable GitHub Multibranch Status Plugin, Email
-      Extension, External Monitor Job Type Plugin
+      Extension, External Monitor Job Type Plugin"
     - "We were very happy with the results, including:"
     - |-
       *   Improved product quality
-      *   Build times are 5X faster 
+      *   Build times are 5X faster
       *   Piloting and metrics facilities
 title: Jenkins is the way to link deliverability and quality
 date: 2021-06-27T19:30:54.000Z

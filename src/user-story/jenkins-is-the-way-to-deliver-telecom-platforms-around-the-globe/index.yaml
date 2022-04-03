@@ -38,13 +38,13 @@ body:
       environments to support various operating systems."
     - "**Goals:** State-of-the-art telecommunications management platform, with
       the use of agnostic hardware."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Jenkins allowed us to have a rigorous and reliable development process.
       The continuous delivery of the software process was designed and
       architectured in a very transparent manner. This allowed the
       identification of all the steps and components in a straightforward and
       effortless manner.
-    - That drove us  – the development team – to look into our Jenkins pipeline
+    - That drove us – the development team – to look into our Jenkins pipeline
       as a powerful support tool and one of our safeguards in our daily work.
       Jenkins was part of our conversation in our Agile retrospectives, or root
       cause analysis, to automate more and more of the process or pieces that we

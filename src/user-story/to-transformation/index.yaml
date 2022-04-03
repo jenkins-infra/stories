@@ -38,7 +38,7 @@ body:
       Navigating among multiple systems, meeting participants can lose time and
       focus from achieving consensus on patient treatments. We were looking for
       a solution that would help us build and deploy, with infrastructure and
-      testing  automation."
+      testing automation."
     - "**Goals:** We were looking to build an application that augments relevant
       medical data into a 360° record to support treatment decisions."
     - "**Solution & Results:** Once collected, data is curated and hosted on an
@@ -46,7 +46,7 @@ body:
       NAVIFY Tumor Board is now a cloud-based workflow product that securely
       integrates and displays relevant aggregated data into a single, holistic
       patient dashboard."
-    - "Jenkins  - and various plugins like Build Pipeline, Cobertura, Email
+    - "Jenkins - and various plugins like Build Pipeline, Cobertura, Email
       Extension, Performance, and NodeLabel Parameter - helped us facilitate and
       automate a system that now effectively provides:"
     - |-
@@ -58,7 +58,7 @@ body:
       *   send decisions to EMR
     - "Our results include:"
     - |-
-      *   customer satisfaction 
+      *   customer satisfaction
       *   more product usage
       *   continuous feedback
 title: Jenkins is the way to healthcare transformation

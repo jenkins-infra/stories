@@ -38,8 +38,8 @@ body:
       integrating new contributions was fully manual. This community was not
       used to automated builds and test processes, and the validation was not
       systematic. When I joined the foundation three years ago they thought
-      incorporating  Continuous Integration would be a one-year job. But I
-      warned that CI is a living animal and requires constant maintenance.
+      incorporating Continuous Integration would be a one-year job. But I warned
+      that CI is a living animal and requires constant maintenance.
     - "**Goals:** Improve the quality and the functionality of our source code
       base while constantly adding new features."
     - "**Solution & Results:** I set out to create a full open-source 4G/5G

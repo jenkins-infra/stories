@@ -9,7 +9,7 @@ map:
 metadata:
   title: Wipro engineers help Citibank ease into CI/CD to shorten development
     cycles and automate builds.
-  organization: \*\*Wipro, http://www.wipro.com " \*\* Citibank,<http://www.citibank.com>
+  organization: '**Wipro, http://www.wipro.com "** Citibank, <http://www.citibank.com>'
   industries:
     - Banking
   programming_languages:
@@ -22,7 +22,7 @@ metadata:
     - Maven
   team_members:
     - Jishu Deka
-    - Senior Engineer and  Kiran Chaudhry
+    - Senior Engineer and Kiran Chaudhry
     - Technical Engineer
     - Wipro
   community_supports:
@@ -39,7 +39,7 @@ body:
       at night was quite large, locating and fixing bugs was a real pain."
     - "**Goals:** Creating a data warehousing solution for business users to
       analyze data and report creation purposes."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Due to the issues highlighted above, Citibank adopted continuous
       integration (CI). As a result, every commit made to the source code in the
       repository was built. If the build result shows that there is a bug in the
@@ -50,8 +50,8 @@ body:
       orchestration of test cases.
     - What happened?
     - |-
-      *   Faster code fixes 
-      *   Development cycles shortened. 
+      *   Faster code fixes
+      *   Development cycles shortened.
       *   Automated and faster builds
 title: Jenkins is the way to automate builds and tests
 date: 2021-06-29T22:30:33.000Z

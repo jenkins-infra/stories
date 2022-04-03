@@ -51,7 +51,6 @@ body:
       transitioning to a single-click action for production."
     - "**Goals:** Automating long software development processes and
       transitioning to a single-click action for production."
-    - ""
     - "**Solution & Results:** To meet this needed a combination of Jenkins,
       Groovy Scripts, and Bash Scripts to automate our complete process as a
       Pipeline. We installed AWS Command Line Interface in our Jenkins server.
@@ -64,22 +63,22 @@ body:
       deploy the application on individual servers.
     - The final task is to create a pipeline job which will first trigger the
       deregister job and then trigger the deployment job followed by the
-      register job. We do the same for all servers. So we now have  four Jenkins
+      register job. We do the same for all servers. So we now have four Jenkins
       Jobs where the pipeline job will trigger all jobs as needed to automate
       the deployment on all five servers.
     - What did we learn?
     - >-
       *   Jenkins is extremely fast for your desired task. Wherever I have
       integrated Jenkins it performs all the triggering and options operating
-      very quickly. 
+      very quickly.
 
-      *   Jenkins is highly flexible and we can implement any plugins for any technology. There are an enormous number of plugins available in Jenkins which can be used to integrate Jenkins with nearly any technology out there. 
+      *   Jenkins is highly flexible and we can implement any plugins for any technology. There are an enormous number of plugins available in Jenkins which can be used to integrate Jenkins with nearly any technology out there.
 
       *   Jenkins is a highly available tool as you can implement a distributed Jenkins environment in your Infrastructure and build jobs as per your need.
     - "Results include:"
     - |-
-      *   A deployment process that is 5X faster 
-      *   No human error as things are automated with scripts 
+      *   A deployment process that is 5X faster
+      *   No human error as things are automated with scripts
       *   Single-click setup
 title: Jenkins is the way to save your valuable time
 date: 2021-04-05T14:45:32.000Z

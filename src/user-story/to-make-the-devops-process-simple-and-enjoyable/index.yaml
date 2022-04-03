@@ -50,15 +50,15 @@ body:
       possible by removing all manual efforts and saving employee hours. Using
       Jenkins, we can create new infrastructure automatically."
     - As for key capabilities, it feels limitless. The best thing about Jenkins
-      is that you can think of any problem and Jenkins already has a  plugin
+      is that you can think of any problem and Jenkins already has a plugin
       ready for that. We use multiple Jenkins plugins like GIT, Mail Watcher,
       Maven, and many more.
     - "The results are typical of many other Jenkins installations:"
     - |-
       *   build code faster and without any manual efforts
-      *   saved employee hours so that they can contribute to other things 
-      *   automate the stuff needed to perform on servers 
-      *   improved product quality 
+      *   saved employee hours so that they can contribute to other things
+      *   automate the stuff needed to perform on servers
+      *   improved product quality
       *   early tracking of bugs
 title: Jenkins is the way to make the DevOps process simple and enjoyable
 date: 2021-05-03T22:23:53.000Z

@@ -39,8 +39,8 @@ body:
       always had too many balls in the air with multiple projects happening
       simultaneously. These included virtualization tools like kernel-based
       virtual machines (**KVM** ) IKVM and Oracle's open source VirtualBox. The
-      interdependencies between  projects were applause-worthy. However, nearly
-      everything was managed via a cron job,  a time-based scheduler in a
+      interdependencies between projects were applause-worthy. However, nearly
+      everything was managed via a cron job, a time-based scheduler in a
       Unix-like computer operating system that would program jobs to run
       periodically at fixed times, dates, or intervals."
     - "**Goals:** Move everything to Jenkins instead of relying on cron jobs and
@@ -51,7 +51,7 @@ body:
       and we used the Jenkins plugin API or an http-based API instead of having
       to invoke a shell command."
     - "Then we had another challenge: moving all code to GitLab."
-    - To do so, our  developers commit code to GitLab which triggers Jenkins to
+    - To do so, our developers commit code to GitLab which triggers Jenkins to
       invoke a Jenkinsfile. We built the code on the container using Python/C++
       for the back-end and node.js on the front end, allowing us to push to
       Harbor, a private open source container image registry. Now we can pull
@@ -61,16 +61,25 @@ body:
     - "There were some basic steps we had to follow, including:"
     - |-
       *   How to convince developer use Jenkins:
+
           *   We created a Jenkinsfile for each project
           *   We deleted Makefile and cron job scripts
           *   We gave developers no choice
+
       *   How to notify users about build/test result:
+
           *   We used Slack and email
+
       *   How to integrate with GitLab:
+
           *   We used the Jenkins-GitLab-plugin
+
       *   How to integrate with container:
+
           *   Again, we used the Jenkins-GitLab-plugin
+
       *   How to monitor Jenkins:
+
           *   We rely on Prometheus in Grafana
     - "Now, everyone has a Jenkins account and everything can be visible on the
       Jenkins UI. It's like having a DevSecOps Hub. And we got excellent

@@ -69,42 +69,42 @@ body:
     - >-
       *   We built a common library of declarative pipeline scripts using groovy
       and integrated these to be triggered via chatbot integration with various
-      team channels where the bot could be invoked. 
+      team channels where the bot could be invoked.
 
-      *   We integrated their orchestrators like Apache Mesos, Kubernetes, and Amazon ECS with these Jenkins pipelines. 
+      *   We integrated their orchestrators like Apache Mesos, Kubernetes, and Amazon ECS with these Jenkins pipelines.
 
-      *   For artifact storage, Nexus and Private Docker registries were roped in. 
+      *   For artifact storage, Nexus and Private Docker registries were roped in.
 
       *   Telemetry and logging agents were integrated into the pipelines.
 
       *   Deployment and alerting were applied to the scripts for notifying the health of the application.
     - The deployment process turned out to be a great success and put all these
       moving parts together without Jenkins would have been unimaginable.
-    - "Here are  the capabilities we relied on most:"
+    - "Here are the capabilities we relied on most:"
     - "*Jenkins featured used:*"
     - |-
-      *   Declarative pipelines 
-      *   Multibranch 
+      *   Declarative pipelines
+      *   Multibranch
       *   Jenkins cluster
       *   Cron schedulers
-    - \*Plugins used: \*
+    - "*Plugins used:*"
     - |-
       *   Bitbucket Plugin
       *   Parametrised Build
       *   Maven & Gradle
-      *   Slack integration 
-      *   AWS CLI 
-      *   Kubernetes plugin 
-      *   Sonarqube & JaCoco 
-      *   Ansible plugins 
-      *   Selenium 
+      *   Slack integration
+      *   AWS CLI
+      *   Kubernetes plugin
+      *   Sonarqube & JaCoco
+      *   Ansible plugins
+      *   Selenium
       *   Nagios plugins
     - "Our top 5 results are as follows:"
     - |-
-      *   Ease of deployment and maintainability improved 4X 
-      *   Invoking deployments and rollbacks is effortless 
-      *   Release cycles have shortened from weeks to hours 
-      *   The mean time for delivery has reduced from 3 hours to 15 minutes 
+      *   Ease of deployment and maintainability improved 4X
+      *   Invoking deployments and rollbacks is effortless
+      *   Release cycles have shortened from weeks to hours
+      *   The mean time for delivery has reduced from 3 hours to 15 minutes
       *   Simultaneous deployments across 15 multi-cloud environments
 title: Jenkins is the way to build chat-bot driven declarative pipelines for
   continuous delivery

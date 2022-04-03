@@ -76,7 +76,6 @@ body:
       the time. Of course, I would be remiss in not pointing out that Jenkins
       Configuration-as-a-Code (JCasC) is already an excellent start to automate
       Jenkins with the simple file.
-    - ""
     - In general, we received a powerful, controllable CI/CD solution with a
       shared library as a single source of needed functionality. The solution is
       flexible in configuration and easy to use.

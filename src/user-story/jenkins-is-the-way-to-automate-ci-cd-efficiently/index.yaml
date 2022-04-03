@@ -37,8 +37,8 @@ body:
     - "**Goals:** Automate the whole CI/CD pipeline to quickly deploy the
       application to different environments like DEV/SIT/UAT/PROD."
     - "**Solution & Results:** We support a business-critical application that
-      would be  developed in sprints and needed to be available in UAT as soon
-      as possible for users to test. In order to facilitate the deployment, we
+      would be developed in sprints and needed to be available in UAT as soon as
+      possible for users to test. In order to facilitate the deployment, we
       created separate branches for DEV/SIT/UAT in GitHub. We set up Jenkins in
       an EC2 instance in AWS and configured the pipeline to trigger the same
       pipeline for different branches."
@@ -63,7 +63,7 @@ body:
 
       *   Securely storing the credentials of git, docker etc., in Jenkins.
     - We were able to implement DevSecOps (SAST scan, OSS vulnerability etc.) in
-      our Jenkins pipeline.  And now, we can build and deploy the application
+      our Jenkins pipeline. And now, we can build and deploy the application
       faster than before.
     - "The results? We now:"
     - >-

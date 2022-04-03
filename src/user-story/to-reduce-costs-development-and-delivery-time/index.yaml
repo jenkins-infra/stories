@@ -51,36 +51,36 @@ body:
     - "Solutions achieved via these steps:"
     - >-
       1.  Leveraged the Jenkins EC2 plugin and created AMIs of the required
-      platforms using AWS and configured them on Jenkins. 
+      platforms using AWS and configured them on Jenkins.
 
-      2.  Parallel launched EC2 nodes for each OS platform and ran Java, Ant, and Maven-based unit and automation tests across all platforms. 
+      2.  Parallel launched EC2 nodes for each OS platform and ran Java, Ant, and Maven-based unit and automation tests across all platforms.
 
-      3.  These nodes were dynamic, hence destroyed after use. This presented an opportunity to save costs. 
+      3.  These nodes were dynamic, hence destroyed after use. This presented an opportunity to save costs.
 
-      4.  Leveraged the Jenkins Docker plugin and Docker on nodes to run pipelines in a clean dockerized environment. Stability tests lasting up to 72 hours were also run. 
+      4.  Leveraged the Jenkins Docker plugin and Docker on nodes to run pipelines in a clean dockerized environment. Stability tests lasting up to 72 hours were also run.
 
       5.  Published all test results via Jenkins to Grafana and our in-house analytics tool for visualization.
     - "Jenkins Capabilities utilized:"
     - |-
-      *   Jenkins EC2 Plugin 
-      *   Docker plugin 
-      *   Pipeline 
-      *   Maven 
-      *   Ant 
-      *   SCM (Git, Subversion) 
-      *   Extensible Email Plugin 
-      *   Project Matrix Access Control 
-      *   Groovy Sandbox 
-      *   Multi job plugin 
-      *   Test result analysis 
-      *   Blue Ocean plugin 
-      *   Replay capabilities 
+      *   Jenkins EC2 Plugin
+      *   Docker plugin
+      *   Pipeline
+      *   Maven
+      *   Ant
+      *   SCM (Git, Subversion)
+      *   Extensible Email Plugin
+      *   Project Matrix Access Control
+      *   Groovy Sandbox
+      *   Multi job plugin
+      *   Test result analysis
+      *   Blue Ocean plugin
+      *   Replay capabilities
       *   Unit test reporting
     - "These are the results we received:"
     - >-
-      *   Unit test to regression testing time reduced from 3 days to 8 hours 
+      *   Unit test to regression testing time reduced from 3 days to 8 hours
 
-      *   Reduced requirement of on-premise static nodes from 10+ to dynamic cloud Jenkins nodes 
+      *   Reduced requirement of on-premise static nodes from 10+ to dynamic cloud Jenkins nodes
 
       *   Multi-OS certification achieved with 1 day compared to 5 days of manual effort
 title: Jenkins is the way to reduce costs, development, and delivery time

@@ -49,8 +49,8 @@ body:
       management of security credentials. Super flexibility of Jenkins made the
       difference. Here are the results thus far!
     - |-
-      *   We can build without buying and maintaining expensive hardware 
-      *   We have freed developer time from repetitive actions 
+      *   We can build without buying and maintaining expensive hardware
+      *   We have freed developer time from repetitive actions
       *   Our development release cycles have been shortened from days to hours
 title: Jenkins is the way to automate anything, anywhere
 date: 2021-08-21T16:27:42.000Z

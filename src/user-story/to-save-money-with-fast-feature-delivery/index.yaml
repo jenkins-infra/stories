@@ -42,7 +42,7 @@ body:
       one before migrating and then growing from that point onward. During this
       process, we learn a lot about plugins, Jenkins agents, and security. When
       we achieved that similar functionality, the second challenge was to get
-      the developer's acceptance.  This step was one of the longest because we
+      the developer's acceptance. This step was one of the longest because we
       needed to help the developers migrate their apps to containers. Still,
       before that, we start creating more sophisticated implementations and
       start thinking in zero downtime deployments.
@@ -52,16 +52,16 @@ body:
       savings.
     - "Key capabilities used:"
     - |-
-      *   Jenkins Git webhook plugins 
-      *   Blue Ocean for dashboard visualization improvement 
-      *   Jenkins implementation using helm charts 
+      *   Jenkins Git webhook plugins
+      *   Blue Ocean for dashboard visualization improvement
+      *   Jenkins implementation using helm charts
       *   Custom agents containers to apply our own build and test stack
     - "Excellent results:"
     - |-
-      *   fast recovery process from errors 
-      *   faster feature delivery 
-      *   10 times faster build and test process 
-      *   big automation possibilities 
+      *   fast recovery process from errors
+      *   faster feature delivery
+      *   10 times faster build and test process
+      *   big automation possibilities
       *   strong security at user and networking level
 title: Jenkins is the way to save money with fast feature delivery
 date: 2021-10-02T15:07:01.000Z

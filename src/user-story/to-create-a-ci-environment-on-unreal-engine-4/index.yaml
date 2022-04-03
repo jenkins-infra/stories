@@ -16,15 +16,15 @@ body:
   title: University student becomes a faithful follower of the Jenkins way.
   paragraphs:
     - "**Background:** I used Jenkins to automate my final project to finish my
-      graduate degree in Informatics.  This project was a videogame using
-      Jenkins as my automation tool to speed up the development with Unreal
-      Engine 4. Unreal Engine 4 provides a testing suite inside its Automation
-      Framework, but it's tedious to write a test, build the project, open the
-      editor, run the tests and see if they succeed or fail."
+      graduate degree in Informatics. This project was a videogame using Jenkins
+      as my automation tool to speed up the development with Unreal Engine 4.
+      Unreal Engine 4 provides a testing suite inside its Automation Framework,
+      but it's tedious to write a test, build the project, open the editor, run
+      the tests and see if they succeed or fail."
     - Having had a little experience with Continuous Integration (CI) using
       Travis, I wanted a tool that automated the process of change verification
       and approval that would also be capable of communicating with Unreal
-      Engine 4.  That's when I found Jenkins, a robust automation program that
+      Engine 4. That's when I found Jenkins, a robust automation program that
       suited the job.
     - "**Goals:** Creating a CI environment to help video game development"
     - "**Solution & Results:** Thanks to Jenkins, I was able to execute the
@@ -57,7 +57,7 @@ body:
       *   Groovy language support in the declarative pipeline. This allowed me to use a method capable of transforming JSON tests reports into JUnit reports.
     - "Using Jenkins yielded significant results, including:"
     - |-
-      *   Reduction of repetitive, boring, and cumbersome tasks 
+      *   Reduction of repetitive, boring, and cumbersome tasks
       *   Automation of the whole development process
       *   1000X increase in productivity
       *   Feedback and monitoring of my project all in one place

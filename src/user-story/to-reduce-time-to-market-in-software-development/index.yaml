@@ -46,16 +46,16 @@ body:
       cluster."
     - "Key capabilities include:"
     - |-
-      *   K8s Plugins for Jenkins dynamic workers 
-      *   Plugin for exposing monitoring endpoints such as a Prometheus plugin 
-      *   Bitbucket multibranch plugin for use or SCM 
+      *   K8s Plugins for Jenkins dynamic workers
+      *   Plugin for exposing monitoring endpoints such as a Prometheus plugin
+      *   Bitbucket multibranch plugin for use or SCM
       *   In addition, the best feature of Jenkins is the worldwide community
     - "We are happy with the results:"
     - |-
-      *   Dynamic workers 
-      *   Request values by pod type in k8s cluster 
-      *   Infrastructure as a code using helm chart official 
-      *   Zero downtime in business hours 
+      *   Dynamic workers
+      *   Request values by pod type in k8s cluster
+      *   Infrastructure as a code using helm chart official
+      *   Zero downtime in business hours
       *   Faster upgrades
 title: Jenkins is the way to reduce time to market in software development
 date: 2021-09-13T14:31:15.000Z

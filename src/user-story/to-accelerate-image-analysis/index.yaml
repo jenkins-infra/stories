@@ -24,11 +24,13 @@ body:
       technology consulting services to customers worldwide. We offer research
       and development, project management, documentation, technical
       infrastructure, studies, information systems, logistics, analysis,
-      diagnostics, and operational support.  For this particular client, we
+      diagnostics, and operational support. For this particular client, we
       needed continuous integration to deliver our product faster and integrate
       it into the company's main software. It is the first time we have ever
       used CI."
     - "**Goals:** To automatically segment and labelize life science images."
+    - '"Jenkins is a powerful tool with a fancy interface! It really accelerates
+      your integration."  Thomas Goigoux, Software Engineer, AKKA I\&S'
     - "**Solution & Results:** To faster integrate we used Jenkins CI instead of
       a programmed build-per-day. This solution allows us to gain an important
       amount of time. We build and test each time modifications are pushed on
@@ -38,9 +40,9 @@ body:
       program our results are probably typical for early Jenkins installations:"
     - >-
       *   automatized builds on every committed branch instead of one of all day
-      branches 
+      branches
 
-      *   cycles (Dev-Review-QA) are shortened from 1-2 days to few hours 
+      *   cycles (Dev-Review-QA) are shortened from 1-2 days to few hours
 
       *   the first step to CI in our company
 title: Jenkins is the way to accelerate image analysis
@@ -51,6 +53,6 @@ quotes:
     content: Jenkins is a powerful tool with a fancy interface! It really
       accelerates your integration.
     image: ./quote.png
-image: Akka_baseline_logo-RVB400px.png
+image: THOMAS.jpeg
 tag_line: AI-powered Image Segmentation and Labeling
 submitted_by: Thomas Goigoux

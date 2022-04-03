@@ -44,10 +44,10 @@ body:
       -- makes this solution rock. Jenkins performance was faster in this use
       case. Overall, we were very pleased with our results, which included:"
     - |-
-      *   automated testing 
-      *   faster execution 
-      *   more accurate test results 
-      *   logs as artifacts 
+      *   automated testing
+      *   faster execution
+      *   more accurate test results
+      *   logs as artifacts
       *   staged output
     - Currently, we're facing some challenges with the Kubernetes plugin in
       Jenkins, but will soon figure out a solution. Jenkins has accelerated my

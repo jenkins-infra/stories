@@ -12,21 +12,26 @@ const UserStoryPage = ({data: {userStory: page}, pageContext}) => {
     return (
         <Layout title={title}>
             <Seo title={title} pathname={`/user-story/${page.slug}`}/>
-            <div className="row">
-                <div className="col">
-                    {pageContext.previous && <Link to={`/user-story/${pageContext.previous.slug}`}>
-                        &lt;&lt;
-                        {' '}
-                        {truncate(pageContext.previous.title.replace(/^jenkins is the way to/i, ''), 40)}
-                    </Link>}
-                </div>
-                <div className="col text-right">
-                    {pageContext.next && <Link to={`/user-story/${pageContext.next.slug}`}>
-                        {truncate(pageContext.next.title.replace(/^jenkins is the way to/i, ''), 40)}
-                        {' '}
-                        &gt;&gt;
-                    </Link>}
-                </div>
+            <div className="navbar navbar-expand navbar-light bg-light">
+                <ul className="navbar-nav mr-auto w-100 d-flex justify-content-between">
+                    <li className="nav-item">
+                        {pageContext.previous && <Link className="nav-link" to={`/user-story/${pageContext.previous.slug}`}>
+                            &lt;&lt;
+                            {' '}
+                            {truncate(pageContext.previous.title.replace(/^jenkins is the way to/i, ''), 40)}
+                        </Link>}
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        {pageContext.next && <Link className="nav-link" to={`/user-story/${pageContext.next.slug}`}>
+                            {truncate(pageContext.next.title.replace(/^jenkins is the way to/i, ''), 40)}
+                            {' '}
+                            &gt;&gt;
+                        </Link>}
+                    </li>
+                </ul>
             </div>
             <UserStory {...page} />
         </Layout>

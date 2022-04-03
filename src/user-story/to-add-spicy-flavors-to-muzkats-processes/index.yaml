@@ -39,13 +39,13 @@ body:
     - "**Goals:** Simplify the build, test and deploy process to different
       stages and hosts, whether they are cloud-based, Virtual Private Server
       (VPS), or to the local server."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - It was quite a challenge to streamline and combine all the services to
       build an artifact to deploy. Because of our micro service-oriented and
       distributed architecture, the hardest part of rethinking our build, test
       and deploy process was to figure out how best to sync the deployment of
       all services. We also had to retest builds properly to go live or initiate
-      a rollback. \*\*\*\*
+      a rollback.\*\*\*\*
     - With Jenkins and some pipelines, it was relatively simple to create a
       local and distributed artifact of our application to quickly share and
       deploy across the team, locally and globally.\*\*\*\*
@@ -63,7 +63,7 @@ body:
     - "We're pleased with the results, including:"
     - >-
       *   a solution that is central, fast and easy to maintain: especially FOSS
-      build system & deploy every commit 
+      build system & deploy every commit
 
       *   a laser focus on features only, due to increased productivity
 

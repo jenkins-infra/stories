@@ -40,7 +40,7 @@ body:
     - "**Goals:** Our goal was unique. We were looking to create a digital
       experience allowing users to find spare parts for automobiles with the
       references of the garages for small and medium structures. However, we
-      were challenged by code reviews, integration methodology,  test-driven
+      were challenged by code reviews, integration methodology, test-driven
       development (TDD), and CI/CD platforms."
     - "**Solution & Results:**"
     - We started looking for a flexible solution that would allow us to

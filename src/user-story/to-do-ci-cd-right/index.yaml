@@ -74,10 +74,10 @@ body:
       users, Jenkins is a dream platform for IT professionals. With our new
       CI/CD platform, we were able to achieve our goals and more, including:"
     - |-
-      *   increased velocity 
-      *   predictable behavior 
-      *   reduced time to market 
-      *   increased release frequency 
+      *   increased velocity
+      *   predictable behavior
+      *   reduced time to market
+      *   increased release frequency
       *   reduced change failure rate
 title: Jenkins is the way to do CI/CD right
 date: 2020-04-09T23:19:21.000Z

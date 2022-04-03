@@ -10,7 +10,7 @@ metadata:
   title: IBM helped Vodafone transform telecom applications from on-premise to the
     IBM and shaved expenses off the budget by automating continuous integration
     and continuous delivery/deployment.
-  organization: IBM and\*\* \*\* Vodafone Ireland,<https://n.vodafone.ie/en.html>
+  organization: IBM andVodafone Ireland, <https://n.vodafone.ie/en.html>
   industries:
     - Telecom
   programming_languages:
@@ -82,11 +82,11 @@ body:
     - "The results we saw were very impressive:"
     - >-
       *   Faster time to build and deploy - Go to prod release from 15 days to 5
-      hours (prod/pre-prod/SIT env) 
+      hours (prod/pre-prod/SIT env)
 
-      *   Helped with our # 1 goal to migrate to AWS Cloud in last 2 quarters 
+      *   Helped with our # 1 goal to migrate to AWS Cloud in last 2 quarters
 
-      *   Wide adoption, more teams joining and using Jenkins 
+      *   Wide adoption, more teams joining and using Jenkins
 
       *   Helped deployment of official Vodafone Ireland portal
 title: Jenkins is the way to migrate telecom applications to the cloud

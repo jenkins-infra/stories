@@ -58,7 +58,7 @@ body:
       *   a way to restore Jenkins quickly after an accident
     - "[Get more details on Preply's use of Jenkins by reading the case
       study](https://jenkinsistheway.io/case-studies/jenkins-case-study-preply/\
-      ). >>"
+      ). >>"
 title: Jenkins is the way to make your configuration as a code possible
 date: 2020-06-23T01:46:35.000Z
 post_name: to-make-your-configuration-as-a-code-possible

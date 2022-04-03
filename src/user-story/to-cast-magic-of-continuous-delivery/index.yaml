@@ -26,11 +26,13 @@ metadata:
     - Python
     - Vue.js
   platforms:
-    - : Android
+    - ": Android"
     - iOS
     - Linux
   version_control_systems:
     - Gitlab
+  build_tools:
+    - Python
   community_supports:
     - Relied on Jenkins.io websites & blogs
     - networking at Jenkins event
@@ -39,7 +41,6 @@ body:
   title: Improving the velocity of end-to-end software delivery with a high
     availability CD platform.
   paragraphs:
-    - "**Build Tool:** Python"
     - "**Background:** JD.com is one of the top 5 internet companies in China.
       We have more than 400 million users. Every two weeks, we deliver a new
       version of a mobile app to our end-users. Since it is a very complicated
@@ -79,7 +80,7 @@ body:
       *   one platform supports thousands of applications with multiple
       technical stacks
 
-      *   reduced release cycles from one hour to 10 minutes 
+      *   reduced release cycles from one hour to 10 minutes
 
       *   high availability of continuous delivery platform
 title: Jenkins is the way to cast magic of continuous delivery

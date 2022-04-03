@@ -55,7 +55,7 @@ body:
 
       *   **Autonomous:** To avoid silos of knowledge in this process, team members must be empowered to become proctors.
 
-      *   **Auditable:** All proctor and candidate details (emails and IPs) are stored.  Timing for deploying, simulation and destroying is tracked.
+      *   **Auditable:** All proctor and candidate details (emails and IPs) are stored. Timing for deploying, simulation and destroying is tracked.
 
       *   **Organized:** The required information for the candidate (questions and resources) and proctor (answers and follow-up questions) must align with corporate branding and digital look & feel.
     - '**Solution & Results:** We are able to support an "Interview-as-Code"
@@ -88,7 +88,7 @@ body:
       troubleshooting and DevOps concepts.
     - "There are two scopes for troubleshooting:"
     - |-
-      *   labs applications that are not able to start up 
+      *   labs applications that are not able to start up
       *   labs with failed pipeline builds
     - "The key Jenkins capabilities utilized were: Jenkins Docker official
       image, Jenkins Configuration-as-Code, Kubernetes plugin, and parameterized
@@ -105,7 +105,7 @@ body:
 
       *   Time to destroy all required resources in AWS is now less than 2 minutes
 
-      *   A particular Jenkins troubleshooting lab can be built and pushed in matter of 1-2 minutes
+      *   A particular Jenkins troubleshooting lab can be built and pushed in matter of 1-2 minutes
 title: Jenkins is the way to run technical simulations for developer/engineer
   interviews
 date: 2021-02-15T17:25:36.000Z

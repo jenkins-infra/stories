@@ -48,7 +48,7 @@ body:
       testing for global clients and supports agency offices worldwide."
     - "**Goals:** Simplify a fintech customer's processing of financial
       transactions through credit card payments."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - "\"Our approach to task management is considered through a web
       interface,\" said Lara, \"where we can configure anything, support it with
       a large number of tasks, and their diversity, that is, simplify jobs and
@@ -62,7 +62,7 @@ body:
       a docker-image, where this task will run after sending changes to the
       repository. As a result, the ready pipeline will be in the BlueOcean
       interface in Jenkins.
-    - \*\*Capabilities used: \*\*
+    - "**Capabilities used:**"
     - |-
       *   Jenkins job builder
       *   DSL plugin
@@ -70,9 +70,9 @@ body:
       *   Gitlab & Gitlab CI
     - "**Results:**"
     - >-
-      *   build times are 6X faster 
+      *   build times are 6X faster
 
-      *   improved product quality is 3X simpler and quicker 
+      *   improved product quality is 3X simpler and quicker
 
       *   the processes of continuous integration are built as comfortably as possible
 title: Jenkins is the way to fintech excellence

@@ -25,22 +25,22 @@ body:
     the butler."
   paragraphs:
     - '**Background:** Someone, long ago, copied a Capistrano script to move
-      WordPress stuff around.  That was how we handled "deployment" at my
-      company when I arrived. It worked sometimes, but when it broke, no one
-      really knew how to fix it.'
-    - Let's face it:  not all developers are admins. Not all admins are
-      developers.  Fortunately for my colleagues at the company, I've been
-      bloody everything. I needed a solution that was as simple and frictionless
-      as possible.
-    - "**Goals:** Push-to-deploy!  No more manual awfulness!"
+      WordPress stuff around. That was how we handled "deployment" at my company
+      when I arrived. It worked sometimes, but when it broke, no one really knew
+      how to fix it.'
+    - "Let's face it: not all developers are admins. Not all admins are
+      developers. Fortunately for my colleagues at the company, I've been bloody
+      everything. I needed a solution that was as simple and frictionless as
+      possible."
+    - "**Goals:** Push-to-deploy! No more manual awfulness!"
     - "\"Without Jenkins, I could have probably made due with \\`bash\\` and
       \\`cron\\` in the background of things. But with Jenkins, everything was
       faster and better than that ever could've been.\"  John Crafton, Sr.
       Software Architect"
-    - '**Solution & Results:** Initially, I faced an uphill struggle:  not much
+    - '**Solution & Results:** Initially, I faced an uphill struggle: not much
       stock was put in the "process" at my company in those days. Things
-      improved pretty quickly, fortunately, once I could demonstrate  just how
-      easy  I could make things on the team with Jenkins in place.'
+      improved pretty quickly, fortunately, once I could demonstrate just how
+      easy I could make things on the team with Jenkins in place.'
     - Jenkins declarative pipelines and Blue Ocean saved the day in my case. The
       ability to write a standardized Jenkinsfile, minimally customized (but in
       an "company-standardized" way), along with the slick and accessible
@@ -66,7 +66,7 @@ body:
     - >-
       *   "Push to deploy rocks!" say all the cool kids at my company
 
-      *   Far fewer broken things hitting production servers 
+      *   Far fewer broken things hitting production servers
 
       *   Local dev "solved" because you can always PtD to dev
 

@@ -11,7 +11,7 @@ metadata:
     organization. That's when they decided to move Jenkins to the cloud and
     shift it to a Kubernetes cluster. Now their builds are 10X faster. And they
     are experiencing no performance bottlenecks.
-  organization: Development project for a UK-based logistics company
+  organization: Development project for a UK-based logistics company
   programming_languages:
     - Java
     - PHP

@@ -41,15 +41,15 @@ body:
     - >-
       *   Training/Single Point of Contact: We wanted one place to create builds
       and deploy those builds to servers. This requires training people and
-      Jenkins had amazing community support. 
+      Jenkins had amazing community support.
 
-      *   Security: Since Jenkins has been used for years by a team of varying sizes, the security of our build pipeline was of utmost importance. We did not want to deal with software that is not maintained/updated regularly. This is a serious concern since forking the software and fixing it takes time. 
+      *   Security: Since Jenkins has been used for years by a team of varying sizes, the security of our build pipeline was of utmost importance. We did not want to deal with software that is not maintained/updated regularly. This is a serious concern since forking the software and fixing it takes time.
 
-      *   Cost: Jenkins was open-source and completely free for us. The only cost that we bear right now is our hardware costs to run Jenkins. 
+      *   Cost: Jenkins was open-source and completely free for us. The only cost that we bear right now is our hardware costs to run Jenkins.
 
-      *   Integration with Infrastructure: Integration with Github/Bitbucket Server is of primary importance to us. 
+      *   Integration with Infrastructure: Integration with Github/Bitbucket Server is of primary importance to us.
 
-      *   Programming Language Support: Node.js support is great with Jenkins and we could freely do a lot of things. Maintain multiple node.js versions, publish different packages through Jenkins builds. 
+      *   Programming Language Support: Node.js support is great with Jenkins and we could freely do a lot of things. Maintain multiple node.js versions, publish different packages through Jenkins builds.
 
       *   Hiring Talent: This is of utmost importance for our business. Jenkins is one of the most widely used CI/CD.
     - "**Goals:** Enable A/B Testing on any platform/hardware"
@@ -74,9 +74,9 @@ body:
       around builds.
     - Results? They couldn't be better.
     - >-
-      *   Zero sprint effort to release features 
+      *   Zero sprint effort to release features
 
-      *   Manual shipping 2-3 times a day transformed to shipping more than 100 times in a day 
+      *   Manual shipping 2-3 times a day transformed to shipping more than 100 times in a day
 
       *   Time to fix bugs reduced by 5x
 title: Jenkins is the way to enable teams to ship software swiftly

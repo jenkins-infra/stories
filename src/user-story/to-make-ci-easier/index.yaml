@@ -34,7 +34,7 @@ body:
       innovative marketing and technology solutions. We provide services for all
       phases of the consumer life cycle , helping brands keep customers longer,
       increase the recurrence of interactions with them, and generate greater
-      benefits.  In achieving this, our main challenge was to develop a common
+      benefits. In achieving this, our main challenge was to develop a common
       Jenkins job that can be used by all of our departments. Each department
       has its own development process, so we need to be flexible to be able to
       cover all of them."
@@ -49,9 +49,9 @@ body:
       Git Plugin, Shell Blocks and HTTP Request Plugins.
     - "As for results, take a look:"
     - >-
-      *   Up to 200 apps deployments per day 
+      *   Up to 200 apps deployments per day
 
-      *   Serverless apps package time reduced from several hours to less than one 
+      *   Serverless apps package time reduced from several hours to less than one
 
       *   Multiple hours if work saved with etl processes migration to Jenkins
 title: Jenkins is the way to make CI easier

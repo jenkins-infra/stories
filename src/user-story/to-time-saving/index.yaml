@@ -54,9 +54,9 @@ body:
       were Multi-Branch Pipelines, Declarative Pipelines, and RBAC."
     - "The results are typical of many other Jenkins installations:"
     - >-
-      *   Our development release cycle is 10x faster 
+      *   Our development release cycle is 10x faster
 
-      *   Generally, all deployments have been shortened from 1 day to 10 minutes 
+      *   Generally, all deployments have been shortened from 1 day to 10 minutes
 
       *   When we have a new service and pipeline, we can easily duplicate and create a new one by using an older one as a standard
 title: Jenkins is the way to time-saving

@@ -62,11 +62,11 @@ body:
       hence reducing the workload for the DevOps team.
     - "The results included:"
     - >-
-      *   Faster deployment with easy management for the developers 
+      *   Faster deployment with easy management for the developers
 
-      *   The same pipeline could be used for multiple environments like dev, test, and prod 
+      *   The same pipeline could be used for multiple environments like dev, test, and prod
 
-      *   The respective team could trigger their deployments with RBAC without the DevOps team having to interfere 
+      *   The respective team could trigger their deployments with RBAC without the DevOps team having to interfere
 
       *   Release cycles shortened from 2 weeks to every day
 title: Jenkins is the way to make electric vehicle charging possible through cloud

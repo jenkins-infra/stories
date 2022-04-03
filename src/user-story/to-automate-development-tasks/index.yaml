@@ -53,7 +53,7 @@ body:
       including:"
     - |-
       *   shorter build times
-      *   faster deployments 
+      *   faster deployments
       *   ease of maintenance
 title: Jenkins is the way to automate development tasks
 date: 2021-03-20T18:27:11.000Z

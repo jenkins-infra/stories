@@ -24,7 +24,7 @@ body:
       of Security Testing (SAST) and Dynamic Application Security Testing (DAST)
       after each software component change."
     - "**Goals:** Deliver secure software to network elements."
-    - \*\*Solution & Results: \*\*
+    - "**Solution & Results:**"
     - Jenkins was used to integrate and automate Static Application Security
       Testing and Dynamic Application Security Testing tools. When there is a
       change in any component that is a part of our software, Jenkins
@@ -35,8 +35,8 @@ body:
       build.
     - "We were thrilled with the results, which have included:"
     - |-
-      *   Improved product security 
-      *   Shortened development release cycles  
+      *   Improved product security
+      *   Shortened development release cycles
       *   Elimination of the need for the team to perform manual work
 title: Jenkins is the way to secure your software
 date: 2021-11-08T16:14:32.000Z

@@ -34,7 +34,7 @@ body:
       tools."
     - We created a pipeline that will allow any code changes to the VCS software
       system and let it run by itself. Any developer who has done code changes
-      and wants to see how the build will look can create a pull request.  The
+      and wants to see how the build will look can create a pull request. The
       pull request will be open through the Jenkins-pipeline, which will be a
       trigger to GitHub Payload to respond.
     - There was no plugin available to perform this kind of stuff, so we did
@@ -48,7 +48,7 @@ body:
     - |-
       *   Heroku-like review feature created
       *   Solving the issue to act as per pull requests
-      *   Build logs and deployment of  URL exposed features to GitHub
+      *   Build logs and deployment of URL exposed features to GitHub
 title: Jenkins is the way to create temporary review application via full automation
 date: 2021-12-26T18:19:12.000Z
 post_name: to-create-temporary-review-application-via-full-automation

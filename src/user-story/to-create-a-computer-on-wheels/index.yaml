@@ -40,7 +40,7 @@ body:
     - "**Solution & Results:** The solution I built was just a test case I made
       to dive into everything Jenkins. It was a Python Script to implement basic
       Jenkins features without any external libraries. I started by
-      investigating Jenkins API and  HTTP Protocols and HTTP RFCs. My next step
+      investigating Jenkins API and HTTP Protocols and HTTP RFCs. My next step
       was to learn Curl Commands from which I made my starter project. It has
       two scripts: the first having all the functions and the second one with
       UnitTest Cases for each function in the first file."

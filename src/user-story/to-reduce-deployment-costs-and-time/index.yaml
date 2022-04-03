@@ -33,7 +33,7 @@ body:
     with Jenkins-based automation.
   paragraphs:
     - '**Background:** Information technology reduces the human intervention in
-      many of the tasks and  reduces human errors, ultimately improving the
+      many of the tasks and reduces human errors, ultimately improving the
       lifecycle of software development by using an automated building, testing,
       and deploying approach. Before DevOps, there used to be a "blame game"
       between the dev and ops team for not releasing the specific feature in the
@@ -49,13 +49,13 @@ body:
       continuous integration and continuous delivery."
     - "**Solution & Results:** Here are the steps to my solution:"
     - >-
-      1.  Code is built and tested locally using Nebula 
+      1.  Code is built and tested locally using Nebula
 
-      2.  Changes are committed to a central git repository 
+      2.  Changes are committed to a central git repository
 
-      3.  A Jenkins job executes Nebula, which builds, tests, and packages the application for deployment 
+      3.  A Jenkins job executes Nebula, which builds, tests, and packages the application for deployment
 
-      4.  Builds are "baked" into Amazon Machine Images 
+      4.  Builds are "baked" into Amazon Machine Images
 
       5.  Spinnaker pipelines are used to deploy and promote the code change.
     - There were so many key capabilities I relied on.
@@ -72,11 +72,11 @@ body:
     - Let me tell you about the results now.
     - >-
       *   Build: Nebula enables them to easily build the application
-      automatically. 
+      automatically.
 
-      *   Integrate: Once the code is built and tested locally using Nebula, it is ready to be pushed and for continuous integration and continuous deployment. The code is pushed to the central git repository and once the change is committed, a Jenkins job is triggered. It'll pull the code and continuous integration takes place. 
+      *   Integrate: Once the code is built and tested locally using Nebula, it is ready to be pushed and for continuous integration and continuous deployment. The code is pushed to the central git repository and once the change is committed, a Jenkins job is triggered. It'll pull the code and continuous integration takes place.
 
-      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and to generate AMIs, they created the "Bakery" that enables the AMI creation globally. When the Jenkin job is complete successfully, then Jenkins triggers the Spinnaker pipeline. 
+      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and to generate AMIs, they created the "Bakery" that enables the AMI creation globally. When the Jenkin job is complete successfully, then Jenkins triggers the Spinnaker pipeline.
 
       *   Deploy: Once the bake is complete, Spinnaker makes the built AMI available for deployments to thousands of instances. Successful bake triggers the next stage of the Spinnaker pipeline and deploys to the test environment. Automated tests will be exercised and after these teams use customized deployment strategies like red/black, canary, or multi-region deployments.
 title: Jenkins is the way to reduce deployment costs and time

@@ -53,11 +53,11 @@ body:
       found Allure to be an excellent tool for analyzing test runs.
     - "The four most significant results are as follows:"
     - >-
-      *   we saved money 
+      *   we saved money
 
-      *   we set up Jenkins to be suitable for non-experience team members, using a large set of plugins  
+      *   we set up Jenkins to be suitable for non-experience team members, using a large set of plugins
 
-      *   we created jobs for each potential customer with custom scripts for configuration 
+      *   we created jobs for each potential customer with custom scripts for configuration
 
       *   we configured pipelines for all kinds of testing
 title: Jenkins is the way to make your work comfortable

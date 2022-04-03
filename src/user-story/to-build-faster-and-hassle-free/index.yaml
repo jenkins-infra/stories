@@ -57,8 +57,8 @@ body:
       plugin let us build and test in our cloud environment.
     - "We are very pleased with the results, which include:"
     - |-
-      *   Build and upload cycles reduced 
-      *   Documentation automatically updated 
+      *   Build and upload cycles reduced
+      *   Documentation automatically updated
       *   Developer frustration reduced!
 title: Jenkins is the way to build faster and hassle-free
 date: 2021-10-10T15:39:23.000Z

@@ -49,22 +49,22 @@ body:
       up the infrastructure utilizing Terraform and Jenkins to orchestrate.
     - "Here are the tools I used most:"
     - |-
-      *   Jenkins (latest version) 
-      *   Discord Notifier 
-      *   Email Extension Plugin 
-      *   GitHub Plugin 
-      *   Various GCP Plugins 
-      *   Green Balls 
-      *   Pipeline 
-      *   Pipeline Utility Steps 
-      *   Role-based Authorization Strategy 
-      *   Simple Theme Plugin 
-      *   Slack Notification Plugin 
+      *   Jenkins (latest version)
+      *   Discord Notifier
+      *   Email Extension Plugin
+      *   GitHub Plugin
+      *   Various GCP Plugins
+      *   Green Balls
+      *   Pipeline
+      *   Pipeline Utility Steps
+      *   Role-based Authorization Strategy
+      *   Simple Theme Plugin
+      *   Slack Notification Plugin
       *   Timestamper
     - "Results:"
     - |-
-      *   Cloud compute can stay offline when not in use 
-      *   End-users can turn on without having to log into GCP or Jenkins 
+      *   Cloud compute can stay offline when not in use
+      *   End-users can turn on without having to log into GCP or Jenkins
       *   Checks are in place for all the different scenarios
 title: Jenkins is the way to be a better gamer
 date: 2021-10-25T16:10:21.000Z
