@@ -1,0 +1,90 @@
+---
+map:
+  location: Spain
+  industries:
+    - Education
+  name: Javier Méndez Veira
+  latitude: "43.3555238"
+  longitude: "-8.255737600000002"
+metadata:
+  title: Improving the development of learning technologies, applications, and
+    service-based-solutions to deliver digital learning in companies and
+    academic institutions.
+  organization: Netex Learning, <https://www.netexlearning.com>
+  industries:
+    - Education and training
+  programming_languages:
+    - PHP
+    - Angular
+  platforms:
+    - ": Docker or Kubernetes"
+  version_control_systems:
+    - GitLab
+  build_tools:
+    - Docker
+  community_supports:
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
+body:
+  title: Creating complex workflows in an easy way.
+  paragraphs:
+    - "**Background:** Netex Learning focuses on creating smart content
+      platforms with solutions that are full of AI-based features -- for
+      example, real-time feedback and digital curriculum. Netex platform also
+      offers personalized cloud platforms with virtual training, conferences,
+      and more.  A part of the development process is to make tools that manage
+      talent detection in an easy way."
+    - "**Goals:** There were several goals we sought to achieve with Jenkins. We
+      had the need to increase the quality of the code that is being delivered,
+      and the need to automate different tests (functional, e2e, etc.) There was
+      also the need to automate Docker image generation and do the same for jobs
+      maintaining and deploying in development environments."
+    - "**Solution & Results:** We've been using Jenkins for several years,
+      writing multiple pipelines in Groovy that are saved in GitLab with project
+      code. Multiple processes are standardized and able to be automated. 
+      Jenkins executes the jobs and the team receives notifications via chat.
+      This is useful because it saves us a lot of time. We have real-time
+      information and we know the result of each process at the end of the
+      execution."
+    - Additionally, we can generate Docker images and automatically upload them
+      to the Docker repository without the team having to know the necessary
+      credentials. We also can automate some cron jobs to maintain healthy
+      development environments and deploy either automatically or manually with
+      environment variables parameters for tests of future releases. In short,
+      the most important thing is that we can create complex workflows in an
+      easy way.
+    - Some things we really loved about this Jenkins project!
+    - >-
+      *   Pipelines can be written in Groovy. 
+
+      *   SSH Agents & Secret Credentials. 
+
+      *   Google Chat & Hangouts notifications are really useful for receiving real-time feedback. 
+
+      *   The Gitlab plugin.
+
+      *   Recovering Groovy configurations.
+
+      *   Access to project code. 
+
+      *   Webhooks, etc.
+    - Our top four results!
+    - >-
+      1.  Build times are 2x faster with Docker images and Jenkins. And
+      deployments are easy!
+
+      2.  Standardized QA checks and reporting via chat.
+
+      3.  Jenkins helps us automate custom tests. We haven't needed to extra spend time executing them from our laptops.
+
+      4.  We have reduced time spent on maintenance work by automating some processes to be executed on the development machines.
+title: Jenkins is the way to understand and simplify your software workflows
+date: 2021-03-07T16:07:35.000Z
+post_name: to-understand-and-simplify-your-software-workflows-2
+quotes:
+  - from: Javier Méndez Veira, Tech Lead, Netex Learning
+    content: Thanks to Jenkins, I've automated many workflows and saved so much time.
+    image: ./quote.png
+image: q68kAUxu_400x400.png
+tag_line: "Talentcloud: Talent management in an e-learning Environment"
+submitted_by: Javier Méndez Veira

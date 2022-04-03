@@ -1,0 +1,92 @@
+---
+map:
+  location: India
+  industries:
+    - Financial Services
+  name: Kuldeep Sharma
+  latitude: "31.41875989999999"
+  longitude: "76.6427152"
+metadata:
+  title: Automating manual development activities with Jenkins.
+  organization: International digital agency serving a large roster of global clients
+  industries:
+    - Retail Banking
+  programming_languages:
+    - Java
+    - Node.js
+    - Swift
+    - Kotlin
+  platforms:
+    - ": Android"
+    - iOS
+    - Mac
+    - Windows
+  version_control_systems:
+    - BitBucket Server
+    - GitHub
+  build_tools:
+    - Gradle
+    - Fastlane
+  community_supports:
+    - Jenkins Users Google Group or IRC Chat
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
+body:
+  title: Building DevOps confidence by automating existing processes.
+  paragraphs:
+    - "**Background:** Building, testing, code scanning, and code delivery were
+      all done manually for this bank before this digital agency stepped in.
+      There was no automated way of doing all of these tasks, compounded with
+      the fact that different teams were involved to complete each piece. The
+      concern was that running these complex pieces manually can – and did –
+      result in human errors like typos, wrong execution orders, etc. We knew we
+      had to integrate everything on one platform and reduce the potential for
+      error."
+    - "**Goals:** For this client, we were looking to enhance the banking
+      experience for their customers."
+    - "**Solution & Results:** Introducing Jenkins as a CI/CD platform helped us
+      to integrate and automate all executions. Starting from the code commit to
+      the final artifact, everything is now automated. We have integrated
+      Jenkins with the app center to store the final apps (both Android and iOS)
+      and can now simply send confirmation to internal teams that the new
+      version is uploaded to the center."
+    - After this implementation, all teams are happy and can now focus on what
+      they are supposed to do. We are continuously seeing the improvements in
+      the Jenkins ecosystem. For example, the Azure Key Vault integration with
+      Jenkins is going to help us in secret management while we start migrating
+      our stuff to the cloud in the future.
+    - "For this project we focused on:"
+    - >-
+      *   Build automation
+
+      *   Testing and code scanning
+
+      *   Integration with functional automation framework
+
+      *   Integration with artifact manager to store build artifacts automatically
+
+      *   Visualization of build and release trends
+    - "Using Jenkins yielded many great results, including:"
+    - >-
+      *   reduced error rate with automation
+
+      *   increased quantity of builds from an average of two per week to four or five a day
+
+      *   faster feedback to the dev/test team in the early stages of development 
+
+      *   improved product quality as a  result of early and frequent feedback
+    - The client was really happy to see the changes in overall delivery speed
+      along with quality after introducing Jenkins. After this implementation,
+      there was more trust and confidence in introducing and suggesting the
+      changes for automation in existing processes.
+title: Jenkins is the way to create collaboration between the Dev and the Ops teams
+date: 2020-10-15T14:06:36.000Z
+post_name: to-create-collaboration-between-the-dev-and-the-ops-teams
+quotes:
+  - from: Kuldeep Sharma, DevOps Lead
+    content: The client was really happy to see the changes in overall delivery
+      speed along with quality after introducing Jenkins.
+    image: ./quote.png
+image: noun_collaboration_2323215-768x768.png
+tag_line: Avoiding Human Error
+submitted_by: Kuldeep Sharma

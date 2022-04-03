@@ -1,0 +1,67 @@
+---
+map:
+  location: Spain
+  industries:
+    - Digital Products
+  name: Guillermo Zarzuelo
+  latitude: "41.652251"
+  longitude: "-4.724532099999999"
+metadata:
+  title: Challenged to develop a common job that can be used by all of our
+    departments, this European marketing team chose Jenkins.
+  organization: Experience marketing agency in Spain
+  industries:
+    - Digital products
+  programming_languages:
+    - Node.js
+    - PHP
+    - Python
+  platforms:
+    - ": Docker or Kubernetes"
+    - Linux
+  version_control_systems:
+    - Bitbucket Server
+  build_tools:
+    - Docker
+  community_supports:
+    - Jenkins Users Google Group or IRC Chat
+    - Jenkins.io websites & blogs
+body:
+  title: Bringing our clients closer to their clients with Jenkins and CI.
+  paragraphs:
+    - "**Background:** As a marketing agency, with a presence in Spain and Peru,
+      we help our clients to interact with their clients, offering them
+      innovative marketing and technology solutions. We provide services for all
+      phases of the consumer life cycle , helping brands keep customers longer,
+      increase the recurrence of interactions with them, and generate greater
+      benefits.  In achieving this, our main challenge was to develop a common
+      Jenkins job that can be used by all of our departments. Each department
+      has its own development process, so we need to be flexible to be able to
+      cover all of them."
+    - "**Goals:** Simplify deployments."
+    - "**Solution & Results:** Jenkins is our continuous integration core. Our
+      jobs are fully code-managed by using Jenkins pipelines. Our Jobs go from
+      deployments based on Docker to Asterisk Dialplan deployments or serverless
+      app deployments based on AWS S3 + cloudfront. We also have a Cron service
+      based on Jenkins, each department has its own pipelines repository and we
+      listen to their webhooks in order to update changes or create new Jobs."
+    - Key capabilities used? Our Jobs usually are based on Pipeline, Webhooks,
+      Git Plugin, Shell Blocks and HTTP Request Plugins.
+    - "As for results, take a look:"
+    - >-
+      *   Up to 200 apps deployments per day 
+
+      *   Serverless apps package time reduced from several hours to less than one 
+
+      *   Multiple hours if work saved with etl processes migration to Jenkins
+title: Jenkins is the way to make CI easier
+date: 2021-07-28T15:11:53.000Z
+post_name: to-make-ci-easier
+quotes:
+  - from: Guillermo Zarzuelo, SRE Manager
+    content: Jenkins allows us to be able to reduce our CI and deployment times and
+      offer our jobs as services to our company.
+    image: ./quote.png
+image: noun_Mobile-seo_3616925.png
+tag_line: Helping Clients Help Clients with CI/CD
+submitted_by: Guillermo Zarzuelo

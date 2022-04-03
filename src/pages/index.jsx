@@ -9,15 +9,13 @@ import Seo from '../components/Seo';
 const IndexPage = () => {
     const title = 'Jenkins - User Story Library';
     const {stories} = useStaticQuery(graphql`query FrontPageStories {
-        stories: allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 4) {
+        stories: allUserStory(sort: {fields: date, order: DESC}, limit: 4) {
             edges {
                 node {
-                    frontmatter {
-                        title
-                        date
-                        tag_line
-                        submitted_by
-                    }
+                    title
+                    date
+                    tag_line
+                    submitted_by
                     slug
                 }
             }
@@ -39,10 +37,10 @@ const IndexPage = () => {
                             <h2>Latest Jenkins User Stories</h2>
                             {stories.edges.map(({node: story}) => (
                                 <div key={story.slug} className="pb-2">
-                                    <div><Link to={`/user-story/${story.slug}`}>{story.frontmatter.title}</Link></div>
+                                    <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
                                     Submitted by Jenkins User
                                     {' '}
-                                    <strong>{story.frontmatter.submitted_by}</strong>
+                                    <strong>{story.submitted_by}</strong>
                                 </div>
                             ))}
                         </div>

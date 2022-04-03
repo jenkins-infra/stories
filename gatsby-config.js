@@ -5,9 +5,12 @@ module.exports = {
         twitter: '@jenkinsci',
     },
     plugins: [
-        'gatsby-plugin-netlify-cms',
-        'gatsby-plugin-image',
-        'gatsby-remark-images',
+        {
+            resolve: 'gatsby-plugin-netlify-cms',
+            options: {
+                modulePath: require.resolve('./src/cms/netlify.jsx')
+            }
+        },
         {
             resolve: 'gatsby-plugin-matomo',
             options: {
@@ -24,20 +27,24 @@ module.exports = {
                 'icon': 'src/images/icon.png'
             }
         },
+        'gatsby-plugin-image',
+        'gatsby-plugin-sharp',
         {
-            resolve: 'gatsby-plugin-mdx',
+            resolve: 'gatsby-transformer-remark',
             options: {
-                gatsbyRemarkPlugins: [
+                plugins: [
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            maxWidth: 768,
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
+                            maxWidth: 590,
                         },
                     },
                 ],
-            },
+            }
         },
-        'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-source-filesystem',
@@ -62,6 +69,12 @@ module.exports = {
                 'path': './src/user-story/'
             },
             __key: 'user-stories'
-        }
+        },
+        {
+            resolve: 'gatsby-plugin-extract-schema',
+            options: {
+                dest: `${__dirname}/schema.graphql`,
+            },
+        },
     ]
 };

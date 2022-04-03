@@ -1,0 +1,67 @@
+---
+metadata:
+  title: A Cloud Development Manager in Wales helps a US-based full-service
+    digital consultancy consolidate its development and hosting automation
+    globally.
+  organization: Appnovation, <https://www.appnovation.com/>
+  industries:
+    - Pharma and Life Science
+  programming_languages:
+    - Go
+    - Groovy
+  platforms:
+    - ": Docker or Kubernetes"
+    - Mac OS
+    - Google Cloud
+  version_control_systems:
+    - Bitbucket Server
+  build_tools:
+    - Docker
+    - Packer
+  community_supports:
+    - Jenkins Users Google Group or IRC Chat
+    - Networking at Jenkins event
+body:
+  title: Creating a self-service portal allows developers at a digital agency to
+    automate services in just a few clicks.
+  paragraphs:
+    - "**Background:** As a global full-service digital consultancy, we were
+      looking to improve the developer and end-to-end life cycle of our website
+      development and hosting platforms, driving a request portal with Jenkins
+      as the backend automation between all platforms and toolsets"
+    - "**Goals:** To unify development and hosting automation across the
+      company."
+    - "**Solution & Results:** Using Jenkins as the automation engine we have
+      been able to create a self-service portal, allowing developers to request
+      GKE clusters in any region around the world and then deploy their
+      application to it with a few clicks."
+    - "We are integrating with a range of tools and Jenkins gives us the
+      flexibility to communicate with them all easily:"
+    - |-
+      *   Jira for our governance 
+      *   Bitbucket for source code management 
+      *   Google Cloud as our core platform
+    - Although not tested under load as of yet, we do not envisage any
+      scalability issues due to the deployment architecture of the Jenkins
+      engine and the compute nodes. The key capabilities we relied on were
+      varied and included integrations between the Atlassian toolsets, Slack,
+      and Kubernetes running on GKE with scalable worker node architecture.
+    - "As for results, they included:"
+    - |-
+      *   the ability to integrate with many platforms 
+      *   a single place for task automation 
+      *   audibility of tasks driven through log data for governance 
+      *   easy to measure metrics for future improvement targets
+title: Jenkins is the way to unify development experience across many platforms
+date: 2021-09-28T14:21:59.000Z
+post_name: to-unify-development-experience-across-many-platforms
+quotes:
+  - from: Jason Einon, Cloud Development Manager, Appnovation
+    content: Jenkins rocks because of the number of available plugins and the
+      community support. I have been using Jenkins daily for over 5 years and
+      cannot see another tool on the market that would provide this level of
+      functionality and flexibility.
+    image: ./quote.png
+image: Appnovation_Technologies_Inc__Appnovation_Awarded_Six_Communicat.jpg
+tag_line: Internal self-service portal
+submitted_by: Jason Einon

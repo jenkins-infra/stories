@@ -9,17 +9,15 @@ import Seo from '../components/Seo';
 const AllPage = () => {
     const title = 'Jenkins - User Story Library - All';
     const {stories} = useStaticQuery(graphql`query AllStories {
-        stories: allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+        stories: allUserStory(sort: {fields: date, order: DESC}) {
             edges {
                 node {
-                    frontmatter {
-                        title
-                        date
-                        tag_line
-                        image {
-                            childImageSharp {
-                                gatsbyImageData(layout: FIXED, width: 150)
-                            }
+                    title
+                    date
+                    tag_line
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(layout: FIXED, width: 150)
                         }
                     }
                     slug
@@ -51,18 +49,18 @@ const AllPage = () => {
                         {stories.edges.map(({node: story}) => (
                             <div key={story.slug} className="pb-2">
                                 <div className="d-flex justify-content-right align-items-center">
-                                    {story.frontmatter.image && <div><GatsbyImage image={getImage(story.frontmatter.image)} alt="Logo" className="mr-3" /></div>}
+                                    {story.image && <div><GatsbyImage image={getImage(story.image)} alt="Logo" className="mr-3" /></div>}
                                     <div>
                                         <div>
                                             <strong>
-                                                {story.frontmatter.title}
+                                                {story.title}
                                             </strong>
                                         </div>
                                         <div>
-                                            <small>{story.frontmatter.date}</small>
+                                            <small>{story.date}</small>
                                         </div>
                                         <div>
-                                            {story.frontmatter.tag_line}
+                                            {story.tag_line}
                                         </div>
                                         <div>
                                             <Link to={`/user-story/${story.slug}`}>Read More »</Link>

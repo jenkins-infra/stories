@@ -1,0 +1,67 @@
+---
+map:
+  location: India
+  industries:
+    - Testing
+  name: Gaurav Talreja
+  latitude: "18.5204303"
+  longitude: "73.8567437"
+metadata:
+  title: Moving from manual testing to automated testing provided faster
+    executions, staged output, and improved test results.
+  organization: Open source technologies for the enterprise
+  industries:
+    - Software Testing
+  programming_languages:
+    - Python
+  platforms:
+    - ": Docker or Kubernetes"
+    - Linux
+  version_control_systems:
+    - GitHub
+    - GitLab
+  build_tools:
+    - Manual
+  community_supports:
+    - Jenkins Users Google Group or IRC Chat
+    - Jenkins.io websites & blogs
+body:
+  title: Automating the testing process results in better results.
+  paragraphs:
+    - "**Background:** The challenge for this project is basic: our testing was
+      manual and slower than what was needed. We knew we had to make testing
+      faster and automated. After researching Jenkins and getting to know the
+      community, we conducted a test of Jenkins."
+    - "**Goals:** Testing automation."
+    - "**Solution & Results:** We used Jenkins to run a test suite in an
+      automated fashion, with keeping Ansible and Kubernetes pods in the
+      picture. Ansible runs a different phase of testing. For example, we tested
+      the initialization git-clones and key-setup which included provisioning
+      instances, preparation, testing, and then teardown. Kubernetes pods act as
+      a Jenkins agent to run those tests. We were able to overcame this
+      challenge with Jenkins."
+    - "The pipeline feature and rich plugin sets -- I used the Kubernetes plugin
+      -- makes this solution rock. Jenkins performance was faster in this use
+      case. Overall, we were very pleased with our results, which included:"
+    - |-
+      *   automated testing 
+      *   faster execution 
+      *   more accurate test results 
+      *   logs as artifacts 
+      *   staged output
+    - Currently, we're facing some challenges with the Kubernetes plugin in
+      Jenkins, but will soon figure out a solution. Jenkins has accelerated my
+      automated testing, with a collection of artifacts to understand the test
+      execution.
+    - Thank you so much Jenkins Community for what your help and support. Kudos
+      to you guys!
+title: Jenkins is the way to rapid development and testing
+date: 2020-10-05T13:25:00.000Z
+post_name: to-rapid-development-and-testing
+quotes:
+  - from: Gaurav Talreja, Associate Quality Engineer
+    content: Thank you so much, Jenkins community, for what you do. Kudos to you guys!
+    image: ./quote.png
+image: noun_testing_3404930-768x768.png
+tag_line: Automated Testing
+submitted_by: Gaurav Talreja

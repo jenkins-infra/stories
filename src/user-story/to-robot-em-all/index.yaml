@@ -1,0 +1,99 @@
+---
+map:
+  location: Spain
+  industries:
+    - Software Development
+  name: Ivan Fernandez
+  latitude: "37.2596578"
+  longitude: "-6.516975299999999"
+metadata:
+  title: For the search division of a leading open source community, Jenkins was
+    the obvious choice to standardize its pipelines across all of their software
+    projects.
+  organization: |-
+    Open source technology company
+    **Industry:** Software
+  team_members:
+    - Victor Martinez
+    - Software Engineer and Ivan Fernandez
+    - Software Engineer
+  programming_languages:
+    - Java
+    - Node.js
+    - PHP
+    - Python
+    - Ruby
+    - Go
+    - |-
+      JavaScript
+      **Platform** : Docker or Kubernetes
+    - Linux
+    - MacOS
+    - Windows
+  version_control_systems:
+    - GitHub
+  build_tools:
+    - Maven
+    - Mage
+    - Make
+    - Yarn
+    - Lerna
+  community_supports:
+    - Jenkins Users Google Group
+    - IRC Chat
+    - Jenkins.io websites & blogs
+    - networking at Jenkins event
+    - and spoke with colleagues and peers
+body:
+  title: Building unified visibility across entire ecosystems.
+  paragraphs:
+    - "**Background: Tasked with creating software that provides unified
+      visibility across entire ecosystems, the technology division of an
+      open-source community knew they needed to develop a common platform for
+      all projects, including logs, metrics, and APM data. That, coupled with
+      the need to support different operating systems, programming languages and
+      architectures proved quite challenging for this team.**"
+    - "**Goals:** To standardize pipelines across all projects."
+    - "**Solution & Results:** First, we created a system that provided the
+      ability to grab log metrics and APM data from user applications and
+      environments at runtime, store it in our search database, and provide the
+      ability to analyze that data with Kibana and ML. By standardizing the
+      pipeline, we created a shared library that allows us to reuse common code
+      across all of our projects. What's great about this is that other software
+      teams are reusing this development for their projects as well."
+    - To tackle our second challenge – different architectures – we used
+      Jenkins. Because it supports any architecture with Java 8 support, it was
+      easy to add Linux/Windows Agents in Google Cloud, Mac Agents on
+      MacStadium, and ARMv8 Agents. Now we can test on four architectures and
+      more than 20 different OS versions and types, with more to come in the
+      future.
+    - "The key capabilities we relied on Jenkins for were:"
+    - >-
+      *   Portability to different OS and architectures: this makes it simple to
+      launch our test on those OS and platforms. 
+
+      *   Reusability of common pipeline steps across projects: our pipeline shared library saves us time. 
+
+      *   Extensibility on pipelines: we have an encapsulated process on pipeline steps, making it easier to use. 
+
+      *   Pipeline definition as code: every project has its pipeline in its repo.
+    - "Jenkins rocks because now we just build and test it. No hands! Simply
+      push to GitHub and everything is magic. We also liked the results that it
+      provides:"
+    - |-
+      *   A common tool for executing builds, tests, and deploys 
+      *   Support for different OS and architectures out-of-the box 
+      *   Ability to scale up to 400 ephemeral Agents at the same time
+      *   Reporting with GitHub checks and GitHub comments 
+      *   Trigger builds with GitHub Comments
+title: Jenkins is the way to robot ‘em all
+date: 2020-06-17T05:06:25.000Z
+post_name: to-robot-em-all
+quotes:
+  - from: Ivan Fernandez, Software Engineer
+    content: Jenkins rocks because now we just build and test it. No hands! Simply
+      push to GitHub and everything is magic.
+    image: ./quote.png
+image: elastic-search-300x300.png
+tag_line: Elastic Observability
+submitted_by: Ivan Fernandez

@@ -1,0 +1,67 @@
+---
+map:
+  location: Indonesia
+  industries:
+    - Defense Technology
+  name: Ferdila Rahmi
+  latitude: "-6.9174639"
+  longitude: "107.6191228"
+metadata:
+  title: Indonesian electricity tech leader finds that Jenkins and DevOps provide
+    smarter automation and happier developers.
+  organization: PT Len Industri, <https://www.len.co.id/>
+  industries:
+    - Defence Electronics
+  programming_languages:
+    - Java
+  platforms:
+    - ": Linux"
+  version_control_systems:
+    - Subversion
+  build_tools:
+    - Gradle
+  community_supports:
+    - Networking at Jenkins event
+    - Spoke with colleagues and peers
+body:
+  title: Making more agile deliverables through Jenkins integration.
+  paragraphs:
+    - "**Background:** PT Len Industri is engaged in the Indonesian electronics
+      industry. The technology that Len has developed has a strategic role in
+      improving the welfare of society which is channeled through renewable
+      energy products. LEN also continues to actively support Indonesia by
+      providing products in the fields of defense, transportation, and ICT."
+    - "**Goals:** The primary goal of this program is to build a robust
+      integration system -- air, surface, subsurface, land -- to support
+      situational awareness and tactical actions. We were looking to make more
+      agile deliverables that are easier to manage and maintain. Secondary goals
+      were to work  better as a team, improve continuous delivery schedules,
+      easily merge with new features, and accommodate changing schedules and
+      requirements."
+    - "**Solution & Results:** Working as a team, we need a code integrator to
+      deploy and test. We also have continuous delivery schedules and factory
+      acceptance tests with users for each release period. We maintain every
+      released product installed and rebuild new features to be set up for the
+      next delivery. Sometimes it's challenging when versioning must be released
+      because user's schedules and requirements are constantly changing. But
+      with Jenkins and other DevOps tools -- like automatic code integration and
+      continuous delivery -- we have found a better balance and happier
+      developers."
+    - "Results that come to mind include:"
+    - |-
+      *   controlled pipeline release cycles and faster development 
+      *   improved product and code quality with SonarQube 
+      *   well-integrated with other DevOps tools and automation
+      *   extensible 
+      *   open source
+title: Jenkins is the way to kill 'em with agile
+date: 2021-04-11T19:30:50.000Z
+post_name: to-kill-em-with-agile
+quotes:
+  - from: Ferdila Rahmi, Software Engineer, PT Len Industri
+    content: Jenkins finishes all unclear pipelines, and helps the team focus on
+      development through a quality process and happy code.
+    image: ./quote.png
+image: pt-len.jpg
+tag_line: Command Control System and Tactical Datalink
+submitted_by: Ferdila Rahmi

@@ -1,0 +1,72 @@
+---
+map:
+  location: Germany
+  industries:
+    - E-commerce & Retail
+  name: Leandro Martins
+  latitude: "48.7904472"
+  longitude: "11.4978895"
+metadata:
+  title: When these technology consultants sought to reduce infrastructure costs
+    and speed up time to delivery for an online retailer, they turned to
+    Jenkins.
+  organization: Technology consultancy supporting an international home
+    improvement and gardening online retailer
+  industries:
+    - E-commerce & Retail
+  team_members:
+    - Bruno Padilha
+    - SRE and Leandro Martins
+    - DevOps Engineer
+  programming_languages:
+    - PHP
+  platforms:
+    - ": Docker or Kubernetes"
+    - Linux
+    - MacOS
+  version_control_systems:
+    - GitHub
+  build_tools:
+    - Composer
+  community_supports:
+    - Jenkins.io websites & blogs
+body:
+  title: Reducing infrastructure costs and accelerating pipeline delivery by
+    nearly half.
+  paragraphs:
+    - "**Background:** This development and engineering team was tasked with
+      enhancing the Continuous Deployment solution for the Brazilian division of
+      an international online retailer. For this, they sought to create a unique
+      pipeline to support all stages. Their primary challenge in doing so was
+      the need to use conditionals."
+    - "**Goals:** Reduce costs with infrastructure by using dynamic agents for
+      the Continuous Deployment process."
+    - "**Solution & Results:** To achieve our goals, we introduced a Jenkins
+      Declarative Pipeline using EC2 Dynamic Instances combined with Blue Ocean.
+      We were able to spin up agents just when needed, which was vital for this
+      endeavor."
+    - Using a multi-branch project and the right conditionals on Pipeline, we
+      discovered that we could reduce the build times by up to 60%. We also were
+      able to reduce costs by using spot instances by up to 40%. The new
+      pipeline provided the capability to build and deploy the artifact to our
+      specific environment.
+    - "Jenkins rocks because it is a customizable, robust solution, and it
+      yielded great results:"
+    - >-
+      *   reduced the pipeline time by 50% including the deployment process
+
+      *   reduced resource costs by 40%
+
+      *   provided pipeline visualization – using Blue Ocean –  which was helpful for developers
+title: Jenkins is the way to save money
+date: 2020-07-28T15:32:03.000Z
+post_name: to-save-money
+quotes:
+  - from: Leandro Martins, DevOps Engineer
+    content: Jenkins rocks because it is a customizable robust solution that helped
+      us reduce pipeline time by 50% – including deployment – and resource costs
+      by 40%.
+    image: ./quote.png
+image: noun_online-shopping_1845728-300x300.png
+tag_line: Jenkins and Amazon EC2 Dynamic Agents
+submitted_by: Leandro Martins

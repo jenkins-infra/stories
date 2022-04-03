@@ -15,17 +15,17 @@ const MapPage = () => {
         mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
             publicURL
         }
-        stories: allMdx(
-            sort: {fields: frontmatter___date, order: DESC}
-            filter: {frontmatter: {longitude: {ne: null}, location: {ne: null}, latitude: {ne: null}}}
+        stories: allUserStory(
+            sort: {fields: date, order: DESC}
+            filter: {map: {latitude: {ne: null}, location: {ne: null}, longitude: {ne: null}}}
         ) {
             edges {
                 node {
-                    frontmatter {
+                    map {
                         name
-                        industries
                         latitude
                         longitude
+                        industries
                     }
                     slug
                 }
@@ -69,14 +69,14 @@ const MapPage = () => {
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             />
-                            {stories.edges.filter(({node: story}) => story.frontmatter.latitude || story.frontmatter.longitude).map(({node: story}) => (
-                                <Marker key={story.slug} position={[story.frontmatter.latitude, story.frontmatter.longitude]} icon={icon}>
+                            {stories.edges.filter(({node: story}) => story.map.latitude || story.map.longitude).map(({node: story}) => (
+                                <Marker key={story.slug} position={[story.map.latitude, story.map.longitude]} icon={icon}>
                                     <Popup>
                                         <table className="table">
                                             <tbody>
                                                 <tr style={{border: '0px hidden', padding: '5px'}}>
                                                     <td style={{border: '0px hidden'}} colSpan="2">
-                                                        <h4>{story.frontmatter.name}</h4>
+                                                        <h4>{story.map.name}</h4>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -86,9 +86,9 @@ const MapPage = () => {
                                                         </center>
                                                     </td>
                                                     <td style={{border: '0px hidden', padding: '5px'}}>
-                                                        <dt>{story.frontmatter.name}</dt>
-                                                        <dt>{story.frontmatter.location}</dt>
-                                                        <dt>{story.frontmatter.industries.join(', ')}</dt>
+                                                        <dt>{story.map.name}</dt>
+                                                        <dt>{story.map.location}</dt>
+                                                        <dt>{story.map.industries.join(', ')}</dt>
                                                         <dt><Link to={`/user-story/${story.slug}`}>Read user story</Link></dt>
                                                     </td>
                                                 </tr>

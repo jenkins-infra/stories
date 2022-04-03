@@ -1,0 +1,59 @@
+---
+metadata:
+  title: The development team of a Bulgarian bank team created a simple way to use
+    pipelines for CI/CD with the help of Jenkins.
+  industries:
+    - Banking
+  programming_languages:
+    - Java
+    - jBase
+  platforms:
+    - ": Linux"
+  version_control_systems:
+    - Bitbucket Server
+  build_tools:
+    - Maven
+  team_members:
+    - Kalin Dimitrov, Java Team Lead
+    - Emil Vulkov, Senior System Administrator
+  community_supports:
+    - Spoke with colleagues and peers
+body:
+  title: Finance company overcomes development challenges with a new
+    Jenkins-inspired CI/CD.
+  paragraphs:
+    - "**Background:** We needed a CI platform that would enable faster building
+      and automatic deployment to our dev environments. The tools for this
+      finance company are heavily restricted, so the tech team was spending an
+      inordinate amount of time trying to figure out what to use and how to
+      execute necessary tasks. The security constraints imposed on them limited
+      them significantly – particularly when it came to the use of plugins."
+    - Because of this, they were forced to use extensive bash scripts to
+      supplement the tools provided. Another huge challenge was the need to
+      trial all possible solutions for each of the necessary steps to be
+      confident they designed things correctly. Finally, they had to figure out
+      how to incorporate BladeLogic into the CI/CD picture.
+    - "**Goals:** Implement CI/CD to our development process."
+    - "**Solution & Results:** We used Jenkins to provide the orchestration
+      needed for each build and deployment. With Jenkins, we were able to make
+      the connection to Nexus repository, pull source code from BitBucket, and
+      create the BladeLogic packages.  Unfortunately, due to all of the internal
+      security restrictions, we could only rely on basic Jenkins capabilities.
+      Our team wanted to use Groovy scripts from the onset, but we ended up
+      filling pre- and post-build steps, replacing several plugins with bash
+      scripts (as the Jenkins agent is on RHEL)."
+    - "With Jenkins, we had great results, including:"
+    - |-
+      *   A simple-to-use pipeline for CI/CD 
+      *   Automation of deployment 
+      *   Faster development process
+title: Jenkins is the way to build projects
+date: 2021-12-22T17:48:19.000Z
+post_name: to-build-projects
+quotes:
+  - from: Lyubomir Stanev, Team Lead for T24 Core Development
+    content: You rock because you made our life easier.
+    image: ./quote.png
+image: noun_Online-Banking_1907436.png
+tag_line: CAF Project (CI/CD Implementation)
+submitted_by: Lyubomir Stanev

@@ -1,0 +1,40 @@
+---
+metadata:
+  title: The sysadmin in higher education was seeking a less time-consuming
+    solution to maintaining install packages year after year.
+  organization: A community college in Iowa
+  industries:
+    - Education Information Technology
+  programming_languages:
+    - Batch
+    - Powershell
+  platforms:
+    - ": Windows"
+body:
+  title: Using Jenkins to help automate tasks with the SysAdmin environment.
+  paragraphs:
+    - "**Background:** Making certain that the software packages we deploy on
+      our systems remains stable is challenging. And downloading the software
+      from 30+ projects is time consuming. I work in education, but anyone in
+      any industry could have similar results."
+    - "**Goals:** Keeping deployed software packages up to date."
+    - "**Solution & Results:** I wrote a pipeline that will download the
+      software installers from vendor websites and copy them out to our network
+      for deployment. The biggest thing was being able to see if my deployment
+      was successful without having to check or do it manually. Otherwise the
+      results I saw were:"
+    - |-
+      *   Less time maintaining the install packages semester to semester 
+      *   Everything was repeatable 
+      *   No manual tasks required
+title: Jenkins is the way to manage your software
+date: 2021-09-02T14:09:38.000Z
+post_name: to-manage-your-software
+quotes:
+  - from: Scott Meyer, Sr. Systems Analyst
+    content: It gave me a framework to work out and stage my end goal, and made the
+      process repeatable.
+    image: ./quote.png
+image: noun_Monitor_1944924.png
+tag_line: System Administration Made Easy
+submitted_by: Scott Meyer

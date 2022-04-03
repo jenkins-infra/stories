@@ -1,0 +1,56 @@
+---
+map:
+  location: Netherlands
+  industries:
+    - Semiconductors
+  name: Mitchell Slotboom
+  latitude: "52.13537729999999"
+  longitude: "5.033362500000001"
+metadata:
+  title: Family-owned company based in the Netherlands looks to Jenkins to speed
+    development and expand pipelines.
+  organization: TOPIC,  [www.Topic.nl](http://www.topic.nl)
+  industries:
+    - Semiconductor
+  programming_languages:
+    - Python
+  platforms:
+    - ": Linux"
+  version_control_systems:
+    - Bitbucket Server
+  build_tools:
+    - Make
+  community_supports:
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
+body:
+  title: Better visibility and bigger, badder pipelines.
+  paragraphs:
+    - "**Background:** TOPIC develops digital hardware, FPGA and software for
+      customers. From board design, low-level driver development to application
+      development for desktop, web and mobile. We support as a consultant, but
+      also provide in-house projects and healthcare solutions. Unfortunately,
+      pipeline limitations slowed us down."
+    - "**Goals:** Create a large pipeline to automate the qualification process."
+    - "**Solution & Results:** Using JENKINS pipelines enabled us to execute our
+      complete qualification process during the night. Manual steps are
+      removed/solved to make this happen. This automated the process, with some
+      parts executed in parallel and in different nodes. Both the release cycle
+      and  the visualization increased tremendously. All results are visible in
+      Jenkins, and everybody has access to those results. We use pipelines with
+      Jenkins files in a Git repo. Also, Blue Ocean is rocking!"
+    - Result?
+    - |-
+      *   Release cycle from days to one night 
+      *   Quality improved by removing manual actions 
+      *   Insanely better visibility
+title: Jenkins is the way to make life easy and fast
+date: 2021-08-04T15:33:14.000Z
+post_name: to-make-life-easy-and-fast
+quotes:
+  - from: Mitchell Slotboom, DevOps Engineer, TOPIC
+    content: Jenkins has the ability to create amazing pipelines!
+    image: ./quote.png
+image: topic-squarelogo-1439841967720.png
+tag_line: Qualification Pipeline
+submitted_by: Mitchell Slotboom
