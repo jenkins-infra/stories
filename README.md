@@ -1,6 +1,6 @@
-# Jenkins Is the way
+# Jenkins User Stories
 
-AKA Jenkins User Stories
+Previously known as Jenkins is the way
 
 ## Deployment
 
