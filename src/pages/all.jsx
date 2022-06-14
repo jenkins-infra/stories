@@ -13,7 +13,7 @@ const AllPage = () => {
             edges {
                 node {
                     title
-                    date
+                    date(formatString: "dddd DD MMMM YYYY")
                     tag_line
                     image {
                         childImageSharp {
