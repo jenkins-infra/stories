@@ -49,12 +49,14 @@ const AllPage = () => {
                         {stories.edges.map(({node: story}) => (
                             <div key={story.slug} className="pb-2">
                                 <div className="d-flex justify-content-right align-items-center">
-                                    {story.image && <div><GatsbyImage image={getImage(story.image)} alt="Logo" className="mr-3" /></div>}
+                                    {story.image && <div><Link to={`/user-story/${story.slug}`}><GatsbyImage image={getImage(story.image)} alt="Logo" className="mr-3" /></Link></div>}
                                     <div>
                                         <div>
-                                            <strong>
-                                                {story.title}
-                                            </strong>
+                                            <Link to={`/user-story/${story.slug}`}>
+                                                <strong>
+                                                    {story.title}
+                                                </strong>
+                                            </Link>
                                         </div>
                                         <div>
                                             <small>{story.date}</small>
