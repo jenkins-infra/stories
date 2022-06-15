@@ -76,5 +76,6 @@ module.exports = {
                 dest: `${__dirname}/schema.graphql`,
             },
         },
+        'gatsby-plugin-netlify'
     ]
 };
