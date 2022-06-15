@@ -6,7 +6,7 @@ exports.onPreBootstrap = async () => {
     await makeReactLayout('https://stories.jenkins.io').then(saveReactLayout);
 };
 
-async function createUserStoryPages({graphql, createPage}) {
+async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
     const result = await graphql(`{
       stories: allUserStory {
@@ -33,6 +33,14 @@ async function createUserStoryPages({graphql, createPage}) {
     }
 
     result.data.stories.edges.forEach(edge => {
+        if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
+            // just in case handle any urls that previously had jenkins-is-the-way in the url
+            createRedirect({
+                fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
+                toPath: `/user-story/${edge.node.slug}/`,
+                isPermanent: true,
+            });
+        }
         createPage({
             path: `/user-story/${edge.node.slug}/`,
             component: userStory,
@@ -45,8 +53,8 @@ async function createUserStoryPages({graphql, createPage}) {
     });
 }
 
-exports.createPages = async ({graphql, actions: {createPage}}) => {
-    await createUserStoryPages({graphql, createPage});
+exports.createPages = async ({graphql, actions: {createPage, createRedirect}}) => {
+    await createUserStoryPages({graphql, createPage, createRedirect});
 };
 
 exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
