@@ -123,10 +123,10 @@ spec:
       }
       post {
         success {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', env.GIT_COMMIT, 'success', "https://jenkins-is-the-way.netlify.app", "production")
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'success', "https://jenkins-is-the-way.netlify.app", "production")
         }
         failure {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', env.GIT_COMMIT, 'failure', "https://jenkins-is-the-way.netlify.app", "production")
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'failure', "https://jenkins-is-the-way.netlify.app", "production")
         }
       }
       steps {
@@ -144,10 +144,10 @@ spec:
       }
       post {
         success {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-jenkins-is-the-way.netlify.app")
+          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
         }
         failure {
-          recordDeployment('jenkins-infra', 'jenkins-is-the-way', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-jenkins-is-the-way.netlify.app")
+          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
         }
       }
       steps {
