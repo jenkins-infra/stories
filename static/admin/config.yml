@@ -1,11 +1,13 @@
 backend:
-  #name: github
-  name: git-gateway
-  repo: jenkins-infra/stores
+  name: github
+  repo: jenkins-infra/stories
   branch: main
-  site_domain: c6cddb7c-4189-46d1-8157-bd2354c6f87d
+  use_graphql: true
+  site_domain: stories.jenkins.io
 
+display_url: https://stories.jenkins.io
 publish_mode: editorial_workflow
+
 media_folder: "static/media"
 public_folder: "/media"
 
