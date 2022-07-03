@@ -22,7 +22,7 @@ metadata:
     - PowerApps App Builder
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Run pipelines and jobs whenever, wherever, with zero additional costs.
   paragraphs:
     - "**Background:** Back in 2019, I worked on a testing project where

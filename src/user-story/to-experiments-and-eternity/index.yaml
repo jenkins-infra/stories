@@ -33,7 +33,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: A unified CI/CD system for DevOps-as-a-service developers
   paragraphs:
     - "**Background:** Backed by VC funding, Cloudologia is a cloud consulting

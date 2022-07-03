@@ -26,7 +26,7 @@ metadata:
     - Webpack
   community_supports:
     - Jenkins.io websites & blogs. Spoke with colleagues and peers.
-body:
+body_content:
   title: When every alternative had limits, Jenkins provided a cost effective way
     to achieve limitless parallel builds.
   paragraphs:

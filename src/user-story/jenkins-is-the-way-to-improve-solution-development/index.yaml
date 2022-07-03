@@ -25,7 +25,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: A Jenkins-based tool receives pipeline alerts and, in turn, determines
     who to notify.
   paragraphs:

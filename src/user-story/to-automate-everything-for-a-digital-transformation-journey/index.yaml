@@ -23,7 +23,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: With Jenkins, continuous deployment enables continuous feedback for more
     bug-free releases.
   paragraphs:

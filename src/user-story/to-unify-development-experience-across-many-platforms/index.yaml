@@ -21,7 +21,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Networking at Jenkins event
-body:
+body_content:
   title: Creating a self-service portal allows developers at a digital agency to
     automate services in just a few clicks.
   paragraphs:

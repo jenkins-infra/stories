@@ -33,7 +33,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Creating new pipelines from those in use, the dev cycle at this fashion
     e-commerce site is now 10 times faster.
   paragraphs:

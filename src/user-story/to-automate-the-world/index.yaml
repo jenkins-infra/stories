@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Deploying timetables, station, and local stop info, and track services in
     realtime using CI/CD & Jenkins.
   paragraphs:

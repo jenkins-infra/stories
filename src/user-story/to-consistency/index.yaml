@@ -28,7 +28,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Developing a consistent, near-effortless build process for multiple teams.
   paragraphs:
     - "**Background: This company provides expertise and technology in support

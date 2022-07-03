@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: High quality, controlled, and clearly-visible code is shipped to
     production and released 30% faster.
   paragraphs:

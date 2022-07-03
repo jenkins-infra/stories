@@ -19,7 +19,7 @@ metadata:
     - Go
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Mornings in the office were much easier with improved stability, release
     consistency, and a shorter release cycle.
   paragraphs:

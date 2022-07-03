@@ -26,7 +26,7 @@ metadata:
     - Groovy
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: DevOps in the Netherlands finds that everything is possible in Jenkins
     with plugins and a pipeline library.
   paragraphs:

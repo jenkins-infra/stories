@@ -14,7 +14,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Keeping up with the pace of integrations with a smarter build and release
     process.
   paragraphs:

@@ -22,7 +22,7 @@ metadata:
   build_tools:
     - gCloud
     - Jenkins
-body:
+body_content:
   title: Building the kids a self-serve Minecraft setup using Jenkins.
   paragraphs:
     - "**Background:** I wanted to provide my kids a way to play Minecraft in

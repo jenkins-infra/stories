@@ -17,7 +17,7 @@ metadata:
     - MacOS
   build_tools:
     - Gradle
-body:
+body_content:
   title: IoT monitoring company turns to Jenkins to secure their software in the
     cloud.
   paragraphs:

@@ -28,7 +28,7 @@ metadata:
   build_tools:
     - Gradle
     - Maven
-body:
+body_content:
   title: null
   paragraphs:
     - "**Community Support: J** enkins Users Google Group or IRC Chat,

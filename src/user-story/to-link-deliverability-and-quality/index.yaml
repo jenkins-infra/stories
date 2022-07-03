@@ -30,7 +30,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Drastically reduce build times and benefit from non-regression testing
     done in your application.
   paragraphs:

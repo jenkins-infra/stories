@@ -19,7 +19,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Jenkins pipelines help improve railway signaling performance and empower
     developers with better DevOps processes.
   paragraphs:

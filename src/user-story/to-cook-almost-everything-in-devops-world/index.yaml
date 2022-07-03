@@ -29,7 +29,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Fast deployment and shorter build times on AWS Cloud FARGATE containers.
   paragraphs:
     - "**Background:** My company is a leader in product lifecycle management

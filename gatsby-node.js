@@ -75,9 +75,9 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
                     type: 'UserStory',
                 },
             };
-            const paragraphs = obj.body.paragraphs;
+            const paragraphs = obj.body_content.paragraphs;
 
-            yamlNode.body.paragraphs = paragraphs.map((_, idx) => createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`));
+            yamlNode.body_content.paragraphs = paragraphs.map((_, idx) => createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`));
             yamlNode.internal.contentDigest = createContentDigest(yamlNode);
 
             createNode(yamlNode);
@@ -85,7 +85,7 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
 
             for (let i = 0; i < paragraphs.length; i++) {
                 const markdownNode = {
-                    id: yamlNode.body.paragraphs[i],
+                    id: yamlNode.body_content.paragraphs[i],
                     frontmatter: {},
                     excerpt: '',
                     rawMarkdownBody: paragraphs[i],
@@ -125,7 +125,7 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
           version_control_systems: [String]
         }
 
-        type UserStoryBody @dontinfer {
+        type UserStoryBody_content @dontinfer {
           title: String
           paragraphs: [MarkdownRemark] @link
         }

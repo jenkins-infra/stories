@@ -28,7 +28,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Creating a multi-tenant platform with a smooth CI/CD experience.
   paragraphs:
     - "**Background:** Our services are developed with multi-tenancy in mind,

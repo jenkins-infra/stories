@@ -14,7 +14,7 @@ metadata:
     Docker or Kubernetes, Linux, MacOS**Version Control System:** GitHub,
     GitLab**Build Tool:** Ant, Rake**Community Support:** Spoke with colleagues
     and peers"
-body:
+body_content:
   title: Relying on Jenkins to keep projects consistent in the way they're built,
     tested, and versioned.
   paragraphs:

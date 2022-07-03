@@ -19,6 +19,7 @@ collections:
     format: frontmatter
     folder: src/user-story
     path: '{{post_name}}/index'
+    slug: 'index'
     media_folder: ''
     public_folder: ''
     create: true
@@ -108,7 +109,7 @@ collections:
           min: -180
           max: 180
       - label: Body
-        name: body
+        name: body_content
         widget: "object"
         collapsed: false
         fields:

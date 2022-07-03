@@ -31,7 +31,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
-body:
+body_content:
   title: Building a large CI platform to support app development.
   paragraphs:
     - "**Background: This technology company offers a note-taking app that

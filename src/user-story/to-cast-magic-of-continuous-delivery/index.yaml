@@ -37,7 +37,7 @@ metadata:
     - Relied on Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
-body:
+body_content:
   title: Improving the velocity of end-to-end software delivery with a high
     availability CD platform.
   paragraphs:

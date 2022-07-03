@@ -30,7 +30,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Enabling continuous integration and testing for a 100 gigabyte repo.
   paragraphs:
     - "**Background:** The company I work for focuses on digital industry

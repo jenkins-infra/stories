@@ -25,7 +25,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Proactive developer solves integration problem with Jenkins.
   paragraphs:
     - "**Background:** Working for an international network and communication

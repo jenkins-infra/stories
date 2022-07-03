@@ -31,7 +31,7 @@ metadata:
     - Ninja
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Easy testing of build improvements without disrupting the work of other
     developers.
   paragraphs:

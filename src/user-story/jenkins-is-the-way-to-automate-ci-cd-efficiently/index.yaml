@@ -26,7 +26,7 @@ metadata:
     - npm
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Accelerating user acceptance testing and deployment with Jenkins.
   paragraphs:
     - "**Background:** I work as a DevOps consultant for a large enterprise

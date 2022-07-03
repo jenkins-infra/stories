@@ -22,7 +22,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Building and maintaining dozens of microservices in a continuous
     deployment fashion with ease.
   paragraphs:

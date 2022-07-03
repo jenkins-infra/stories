@@ -21,7 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: For iterative mobile app development and testing, the Jenkins Diawi
     plugin did the trick.
   paragraphs:

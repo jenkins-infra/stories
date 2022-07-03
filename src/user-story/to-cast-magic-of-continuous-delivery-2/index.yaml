@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-body:
+body_content:
   title: Improving product quality via a unified CI/CD process for DevOps.
   paragraphs:
     - "Version Control: GitHub"

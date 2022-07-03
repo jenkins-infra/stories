@@ -31,7 +31,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Automating the entire CI/CD infrastructure shortened release cycles from
     weeks to hours.
   paragraphs:

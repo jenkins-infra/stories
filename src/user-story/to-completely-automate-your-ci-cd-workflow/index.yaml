@@ -23,7 +23,7 @@ metadata:
     - Scripting
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Windows? Linux? Jenkins automation platform serves both.
   paragraphs:
     - "**Background:** For my particular client, Autoweb, the main challenge was

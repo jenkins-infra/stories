@@ -26,7 +26,7 @@ metadata:
     - Senior DevOps Engineer
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Software delivery acceleration with an end-to-end CI/CD pipeline using
     Jenkins
   paragraphs:

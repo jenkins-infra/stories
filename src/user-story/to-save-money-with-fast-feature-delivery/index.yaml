@@ -19,7 +19,7 @@ metadata:
     - Yotepresto
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Changing a legacy system to one that provides continuous integration with
     the help of Jenkins.
   paragraphs:

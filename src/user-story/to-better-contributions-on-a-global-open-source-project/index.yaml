@@ -25,7 +25,7 @@ metadata:
     - Ninja
     - Docker
     - Podman
-body:
+body_content:
   title: Jenkins fuels a fully systematic and automated process that is quite
     transparent for the developers.
   paragraphs:

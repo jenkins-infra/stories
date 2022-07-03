@@ -21,7 +21,7 @@ metadata:
     - Windows
   build_tools:
     - Maven
-body:
+body_content:
   title: A Jenkins plugin designed with the network administrator in mind.
   paragraphs:
     - "**Background:** Integrating SSH to do traceroute network diagnostics

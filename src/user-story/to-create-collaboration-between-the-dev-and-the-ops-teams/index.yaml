@@ -31,7 +31,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Building DevOps confidence by automating existing processes.
   paragraphs:
     - "**Background:** Building, testing, code scanning, and code delivery were

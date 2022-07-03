@@ -26,7 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: From monolith to modern in event-driven consumer banking.
   paragraphs:
     - "**Background:** Our work environment was a giant monolith built on

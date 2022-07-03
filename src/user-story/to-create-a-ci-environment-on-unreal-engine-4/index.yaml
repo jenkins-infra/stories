@@ -12,7 +12,7 @@ metadata:
     - GitHub
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: University student becomes a faithful follower of the Jenkins way.
   paragraphs:
     - "**Background:** I used Jenkins to automate my final project to finish my

@@ -14,7 +14,7 @@ metadata:
     : Android, iOS, Docker or Kubernetes, Linux**Version Control System:**
     GitHub**Build Tool:** Maven**Teammates:** Luís Felipe Costa, Software
     Engineer and Guimarães Teixeira, CEO, Sincrovia Soluções Tecnológicas"
-body:
+body_content:
   title: Jenkins mapped out trucking logistics, plus management of drivers, travel
     itineraries, and expenses.
   paragraphs:

@@ -19,7 +19,7 @@ metadata:
     - Jenkins
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: As soon as a Docker container is launched, it automatically starts and
     executes Jenkins jobs.
   paragraphs:

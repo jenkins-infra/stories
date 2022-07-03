@@ -10,7 +10,7 @@ metadata:
     - Powershell
   platforms:
     - ": Windows"
-body:
+body_content:
   title: Using Jenkins to help automate tasks with the SysAdmin environment.
   paragraphs:
     - "**Background:** Making certain that the software packages we deploy on

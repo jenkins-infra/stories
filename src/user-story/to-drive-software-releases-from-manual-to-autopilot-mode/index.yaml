@@ -27,7 +27,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Automation allows product owner to execute more tests faster, and to
     analyze/mitigate failures in no time.
   paragraphs:

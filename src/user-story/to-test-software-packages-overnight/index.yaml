@@ -24,7 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Parallel execution helped reduce build and testing time from 3 days to
     overnight.
   paragraphs:

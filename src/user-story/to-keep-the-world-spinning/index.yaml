@@ -13,7 +13,7 @@ metadata:
     Storage**Programming Language:** Python **Platform** : Linux**Version
     Control System:** GitHub**Build Tool:** Scripting**Community Support:**
     Jenkins.io websites & blogs"
-body:
+body_content:
   title: Jenkins & CI/CD keeping project information and code safe while in a
     private dev environment.
   paragraphs:

@@ -21,7 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Rock solid CI/CD built on an old legacy system.
   paragraphs:
     - "**Background:** The CI/CD of the company was hard to maintain and used

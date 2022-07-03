@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-body:
+body_content:
   title: Improving CI/CD to help transform how a car feels, responds and learns.
   paragraphs:
     - "**Background:** As a global industry leader in creating unique, moving

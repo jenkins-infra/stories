@@ -38,7 +38,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Minimizing delivery cycle times by speeding up CI/CD.
   paragraphs:
     - "**Background:** Avoris Travel is a unique travel tour operator serving

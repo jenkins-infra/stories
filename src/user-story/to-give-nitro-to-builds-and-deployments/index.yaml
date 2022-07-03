@@ -28,7 +28,7 @@ metadata:
     - Maven
   community_supports:
     - Tapped into Jenkins.io websites & blogs
-body:
+body_content:
   title: Increasing build frequency while reducing manual effort by 95%.
   paragraphs:
     - "**Background:** Githin Joseph's client is a global provider of IT

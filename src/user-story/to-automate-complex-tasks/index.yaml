@@ -21,7 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Jenkins with the right plugins for utilities or integrations with other
     applications makes our lives way easier.
   paragraphs:

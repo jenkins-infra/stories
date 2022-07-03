@@ -20,7 +20,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: The configuration of pipeline-as-code with Jenkins reduced upgrades from
     2 days to 2 hours.
   paragraphs:

@@ -24,7 +24,7 @@ metadata:
   build_tools:
     - Ant
     - Makefile
-body:
+body_content:
   title: Building and managing multiple environments at the same time with the
     flexibility of Jenkins' build logic.
   paragraphs:

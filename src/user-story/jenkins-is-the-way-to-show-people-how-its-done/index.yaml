@@ -27,7 +27,7 @@ metadata:
   community_supports:
     - Spoke with colleagues and peers
     - and relied on Jenkins.io websites & blogs
-body:
+body_content:
   title: Automated testing pipeline for CI/CD.
   paragraphs:
     - "**Background:** When I joined as an intern for a company that offers a

@@ -26,7 +26,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Bringing our clients closer to their clients with Jenkins and CI.
   paragraphs:
     - "**Background:** As a marketing agency, with a presence in Spain and Peru,

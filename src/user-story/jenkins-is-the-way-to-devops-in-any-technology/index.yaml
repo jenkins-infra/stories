@@ -44,7 +44,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Building a DevOps platform to serve ongoing client needs.
   paragraphs:
     - "**Background:** I provide IT services for a multinational company that
