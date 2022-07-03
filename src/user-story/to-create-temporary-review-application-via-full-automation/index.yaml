@@ -22,7 +22,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and peers
-body:
+body_content:
   title: The creation of a Heroku-like review process with the help of Jenkins.
   paragraphs:
     - "**Background:** We needed to solve a Ruby review application. One in

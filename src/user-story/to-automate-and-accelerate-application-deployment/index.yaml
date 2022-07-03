@@ -26,7 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Jenkins freestyle project paves the way for ease of deployment.
   paragraphs:
     - "**Background:** I work at an IT solutions and services company in Kuala

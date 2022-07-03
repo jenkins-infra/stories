@@ -14,7 +14,7 @@ metadata:
     - ": Linux"
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Using Jenkins to automate operational tasks so that non-technical people
     could work without the need for developers' input.
   paragraphs:

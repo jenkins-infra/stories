@@ -6,19 +6,25 @@ import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import remark from 'remark';
-import remarkHtml from 'remark-html'
+import remarkHtml from 'remark-html';
 
 import UserStory from '../components/UserStory';
 
 const UserStoryPreview = ({entry, widgetsFor, getAsset}) => {
     const data = entry.toJS().data;
-    const paragraphs = widgetsFor('body').getIn(['data', 'paragraphs'])
-    console.log('data', paragraphs.get(0));
-    for (let i = 0; i < data.body.paragraphs.length; i++) {
-        data.body.paragraphs[i] = {
+    const paragraphs = widgetsFor('body_content').getIn(['data', 'paragraphs']);
+    for (let i = 0; i < data.body_content.paragraphs.length; i++) {
+        data.body_content.paragraphs[i] = {
             html: remark().use(remarkHtml).processSync(paragraphs.get(i)).toString(),
-        }
+        };
     }
+    data.quotes = data.quotes.map(function(quote, idx) {
+        const quoteData = entry.getIn(['data', 'quotes', idx]).toJS();
+        return {
+            ...quote,
+            image: getAsset(quoteData.image).url,
+        }
+    });
 
     const props = {
         ...data,
@@ -26,7 +32,7 @@ const UserStoryPreview = ({entry, widgetsFor, getAsset}) => {
     };
     console.log('props', props);
     return (
-        <Layout title={"foo"}>
+        <Layout title={'foo'}>
             <UserStory {...props} />
         </Layout>
     );

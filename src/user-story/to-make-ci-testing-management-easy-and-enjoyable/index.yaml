@@ -13,7 +13,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
-body:
+body_content:
   title: Increase product quality via automated testing and reporting.
   paragraphs:
     - \*\**Organization:* \*\*ISsoft, [https://issoft.by](http://www.issoft.by)

@@ -15,7 +15,7 @@ metadata:
     - Python
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Developers return to Jenkins for improved data pipeline transparency,
     shorter release cycles and troubleshooting that's 10X faster.
   paragraphs:

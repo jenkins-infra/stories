@@ -33,7 +33,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Building 100+ microservices with a common UI, before independently
     testing and deploying each.
   paragraphs:

@@ -14,7 +14,7 @@ metadata:
     - Maven
     - npm
     - MSBuild
-body:
+body_content:
   title: Building a better software delivery lifecycle for healthcare insurance.
   paragraphs:
     - \*\**Organization:* \*\*A regional division of a US-based health insurance

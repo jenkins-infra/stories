@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Reducing time needed for code fixes helps developers work more
     efficiently when bugs are present and then spend more time innovating.
   paragraphs:

@@ -20,7 +20,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: A DevOps student discovers how to simplify manual tasks for her employer
     by automating with Jenkins.
   paragraphs:

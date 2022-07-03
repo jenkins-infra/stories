@@ -25,7 +25,7 @@ metadata:
     - Git
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Automating MLOps accuracy training using Jenkins and a "Containerization
     within a container" concept.
   paragraphs:

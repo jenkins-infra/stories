@@ -20,7 +20,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: eMobility comes with faster deployment and easier management for the
     developers
   paragraphs:

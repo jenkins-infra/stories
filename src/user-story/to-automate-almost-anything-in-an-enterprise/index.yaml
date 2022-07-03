@@ -36,7 +36,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Zero downtime and rolling updates bring confidence to CI/CD in the
     property & casualty claim space.
   paragraphs:

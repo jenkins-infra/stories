@@ -29,7 +29,7 @@ metadata:
   community_supports:
     - Relied on Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and pee
-body:
+body_content:
   title: Adding more flexibility and power into snapshot and release builds.
   paragraphs:
     - "**Background:** Donald Morton was hired by Graylog in early 2020 and was

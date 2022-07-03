@@ -15,7 +15,7 @@ metadata:
     - Packer
     - Docker
     - PIP
-body:
+body_content:
   title: Jenkins' rich plugin architecture supports an enhanced CI/CD and
     development ease.
   paragraphs:

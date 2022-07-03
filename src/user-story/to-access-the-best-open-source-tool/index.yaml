@@ -18,7 +18,7 @@ metadata:
     - Thomas Daget/Database administrator/Vetoquinol
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: A CI platform to improve quality and control fueled by Jenkins.
   paragraphs:
     - "**Background:** I wanted to ensure a successful development of the

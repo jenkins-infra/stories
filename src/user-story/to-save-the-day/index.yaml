@@ -26,7 +26,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Introduce a secret engine under the hood to allow developers to create
     without limitations.
   paragraphs:

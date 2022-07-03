@@ -24,7 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: WinCC OA project continues integration with Jenkins and WinCC OA Test
     Framework.
   paragraphs:

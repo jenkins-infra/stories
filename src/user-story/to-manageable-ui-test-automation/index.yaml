@@ -27,7 +27,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Better quality QA-as-a-Service is reliant on Jenkins and the Jenkins
     community.
   paragraphs:

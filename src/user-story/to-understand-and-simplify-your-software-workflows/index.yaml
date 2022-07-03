@@ -22,7 +22,7 @@ metadata:
     - CMake
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Once set up, Jenkins is like a butler, saving the developers from
     endlessly repeating manual tests.
   paragraphs:

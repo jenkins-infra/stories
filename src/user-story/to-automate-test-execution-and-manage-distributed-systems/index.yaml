@@ -27,7 +27,7 @@ metadata:
     - Custom Tools
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Multimedia telephony application server supported with powerful CI/CD.
   paragraphs:
     - "**Background:** To support a carrier-class application server for voice

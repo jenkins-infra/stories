@@ -22,7 +22,7 @@ metadata:
     - Azure DevOps
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Turning developers into collaborators with automation and CI/CD.
   paragraphs:
     - "**Background:** This solutions architect set out to implement a smarter

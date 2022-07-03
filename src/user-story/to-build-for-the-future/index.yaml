@@ -15,7 +15,7 @@ metadata:
   build_tools:
     - Ant
     - Maven
-body:
+body_content:
   title: Transition off an old, slow and manual build system to something built
     for the future.
   paragraphs:

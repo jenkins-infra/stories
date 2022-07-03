@@ -15,7 +15,7 @@ metadata:
     - Ant
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Giving Salesforce a boost with Jenkins Pipelines.
   paragraphs:
     - "**Background:** The main challenge was to incorporate -- and have in one

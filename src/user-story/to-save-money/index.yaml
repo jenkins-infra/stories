@@ -30,7 +30,7 @@ metadata:
     - Composer
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Reducing infrastructure costs and accelerating pipeline delivery by
     nearly half.
   paragraphs:

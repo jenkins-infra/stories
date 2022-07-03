@@ -34,7 +34,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Jenkins bridged the gap between the Dev and Operations team.
   paragraphs:
     - "**Background:** We're a large, global organization, but in one segment --

@@ -25,7 +25,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Becoming an engineer on the heels of a Jenkins test-bed.
   paragraphs:
     - "**Background:** An engineering student built a CI solution using Jenkins

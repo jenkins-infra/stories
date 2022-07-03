@@ -25,7 +25,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Automating the testing process results in better results.
   paragraphs:
     - "**Background:** The challenge for this project is basic: our testing was

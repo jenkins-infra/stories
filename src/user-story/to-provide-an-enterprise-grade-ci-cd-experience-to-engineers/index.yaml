@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Centralizing Jenkins allows domain teams to focus on delivering more
     value to healthcare customers.
   paragraphs:

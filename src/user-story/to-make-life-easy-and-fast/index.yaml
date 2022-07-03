@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Better visibility and bigger, badder pipelines.
   paragraphs:
     - "**Background:** TOPIC develops digital hardware, FPGA and software for

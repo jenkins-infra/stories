@@ -32,7 +32,7 @@ metadata:
     - sbt
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Increasing quality and ensuring IoT software passes all tests pre-deployment.
   paragraphs:
     - "**Background:** As a QA lead at this multinational company, we needed an

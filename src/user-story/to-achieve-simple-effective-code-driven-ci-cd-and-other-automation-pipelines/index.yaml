@@ -27,7 +27,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Launching Jenkins in Kubernetes allowed for worker agents to be launched
     as pods with the exact containers needed to complete different stages of
     pipelines.

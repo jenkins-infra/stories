@@ -30,7 +30,7 @@ metadata:
     - IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Migrating to the cloud without a hitch, and with great results.
   paragraphs:
     - "**Background:** Working on a UK government project involved dealing with

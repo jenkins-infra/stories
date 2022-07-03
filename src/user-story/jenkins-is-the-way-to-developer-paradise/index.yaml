@@ -20,7 +20,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: "'Push-to-deploy' really rocks for this team, now enamoured of Jenkins,
     the butler."
   paragraphs:

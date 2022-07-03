@@ -34,7 +34,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: If there was ever life support for engineers, it would be Jenkins for us.
   paragraphs:
     - "**Background:** There were many challenges to this transformation."

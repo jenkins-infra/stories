@@ -24,7 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-body:
+body_content:
   title: Building, testing, and deploying a Jenkins pipeline for a leading
     telecommunications company.
   paragraphs:

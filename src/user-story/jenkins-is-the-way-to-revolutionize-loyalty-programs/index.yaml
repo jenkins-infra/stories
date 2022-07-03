@@ -25,7 +25,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-body:
+body_content:
   title: Building a CI/CD platform to support the development of white-label
     solutions for loyalty program providers worldwide.
   paragraphs:

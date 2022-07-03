@@ -34,7 +34,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Bringing better EV charging stations to North America, Europe and Australia.
   paragraphs:
     - "**Background:** Our process for deploying software has always been

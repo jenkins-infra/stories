@@ -98,7 +98,7 @@ export const pageQuery = graphql`
                 version_control_systems
                 team_members
             }
-            body {
+            body_content {
                 title
                 paragraphs {
                     html

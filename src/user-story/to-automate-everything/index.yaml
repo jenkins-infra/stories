@@ -28,7 +28,7 @@ metadata:
     - GitLab
   build_tools:
     - Jenkins
-body:
+body_content:
   title: Reducing DevOps problem tickets by over 90% by using Jenkins.
   paragraphs:
     - "**Background:** At Electronic Health Solutions, we like to say that we

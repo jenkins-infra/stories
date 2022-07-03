@@ -25,7 +25,7 @@ metadata:
   community_supports:
     - Relied on Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Building a DevOps platform with near infinite scaling capacity.
   paragraphs:
     - "**Background:** We started using Jenkins standalone, and it worked

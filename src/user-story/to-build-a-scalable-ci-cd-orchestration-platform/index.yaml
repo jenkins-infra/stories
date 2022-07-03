@@ -34,7 +34,7 @@ metadata:
     - Liatrio
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: How enterprises can leverage containers to create a stable and scalable
     CI/CD environment.
   paragraphs:

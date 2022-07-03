@@ -31,7 +31,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: Automating the boring stuff made releases 5X faster.
   paragraphs:
     - "**Background:** Our software developers' main challenge is the slowdown

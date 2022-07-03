@@ -15,7 +15,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Security, automation and software acceleration with Jenkins.
   paragraphs:
     - "**Background:** My company needed to improve our DevOps environment. As

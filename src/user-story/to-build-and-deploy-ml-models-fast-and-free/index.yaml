@@ -22,7 +22,7 @@ metadata:
     - Poetry
   community_supports:
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Intern tackles ML-Ops with the support of Jenkins.
   paragraphs:
     - "**Background:** My challenge during my internship and final university

@@ -17,7 +17,7 @@ metadata:
     - |-
       : Linux
       Version Control System:\*\* GitLab **Build Tool:** Maven
-body:
+body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:
     - \*\**Organization:* \*\*Virtusa, IT consultant for a UK-based

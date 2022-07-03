@@ -26,7 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Automating image deployment with Jenkins at LinuxWorld.
   paragraphs:
     - "**Background:** *The LinuxWorld India training program allows students to

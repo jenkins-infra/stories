@@ -25,7 +25,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
-body:
+body_content:
   title: Faster builds and fewer errors with CI/CD automation.
   paragraphs:
     - "**Background:** The tools for this finance company are heavily

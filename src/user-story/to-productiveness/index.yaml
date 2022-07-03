@@ -15,7 +15,7 @@ metadata:
     - GitHub
   community_supports:
     - Spoke with colleagues and peers
-body:
+body_content:
   title: Training a machine learning model to improve accuracy and metrics.
   paragraphs:
     - "**Background:** The most technical challenge for any new machine

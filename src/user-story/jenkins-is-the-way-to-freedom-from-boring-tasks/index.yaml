@@ -14,7 +14,7 @@ metadata:
     - GitHub
   build_tools:
     - Maven
-body:
+body_content:
   title: Automatic monitoring of data input to improve the quality of advertising
     reports.
   paragraphs:

@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-body:
+body_content:
   title: Automate load and functional testing throughout the entire CI/CD process.
   paragraphs:
     - "**Background:** When your company creates AI infused industrial

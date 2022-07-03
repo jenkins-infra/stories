@@ -28,7 +28,7 @@ metadata:
   team_members:
     - Daniel Majano
     - DevOps Engineer
-body:
+body_content:
   title: K8s Plugins for Jenkins dynamic workers lead to zero downtime in business
     hours.
   paragraphs:

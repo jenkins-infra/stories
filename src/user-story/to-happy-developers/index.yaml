@@ -19,7 +19,7 @@ metadata:
       Linux
       Version Control System:\*\* Bitbucket Server **Build Tool:** Make
     - CMake
-body:
+body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:
     - \*\**Organization:* \*\*IAM Robotics, <https://www.iamrobotics.com/>

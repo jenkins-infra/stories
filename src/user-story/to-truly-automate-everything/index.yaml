@@ -33,7 +33,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-body:
+body_content:
   title: "A lesson MlOps: integrating machine learning and DevOps with Jenkins."
   paragraphs:
     - "**Background:** *The LinuxWorld India training program allows students to

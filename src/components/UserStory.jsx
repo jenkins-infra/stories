@@ -44,7 +44,7 @@ const fields = [
 ];
 
 
-const UserStory = ({image, title, submitted_by, tag_line, quotes, metadata, body}) => {
+const UserStory = ({image, title, submitted_by, tag_line, quotes, metadata, body_content}) => {
     return (
         <div className={styles.userstory}>
 
@@ -97,8 +97,8 @@ const UserStory = ({image, title, submitted_by, tag_line, quotes, metadata, body
                     )}
 
                     <div className="container pt-2 pb-2">
-                        <h3>{body.title}</h3>
-                        {body.paragraphs && body.paragraphs.reduce((content, p, idx) => {
+                        <h3>{body_content.title}</h3>
+                        {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
                             content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
                             if (idx !== 0 && (idx % 3) === 0) {
                                 const quoteIdx = idx/3-1;
@@ -136,7 +136,7 @@ UserStory.propTypes = {
         from: PropTypes.string.isRequired,
         content: PropTypes.string.isRequired
     })),
-    body: PropTypes.shape({
+    body_content: PropTypes.shape({
         title: PropTypes.string.isRequired,
         paragraphs: PropTypes.arrayOf(PropTypes.shape({
             html: PropTypes.string.isRequired

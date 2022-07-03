@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-body:
+body_content:
   title: One-day deployments with builds taking only minutes, Jenkins makes auto
     R\&D easy.
   paragraphs:

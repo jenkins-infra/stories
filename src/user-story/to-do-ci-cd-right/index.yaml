@@ -32,7 +32,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-body:
+body_content:
   title: Standardizing CI/CD for the development team of a leading automotive
     organization.
   paragraphs:

@@ -22,7 +22,7 @@ metadata:
     - GitHub
   build_tools:
     - Gradle
-body:
+body_content:
   title: Speeding warning notifications and improving release time productivity by
     50X.
   paragraphs:
