@@ -4,6 +4,7 @@ backend:
   branch: main
   use_graphql: true
   site_domain: stories.jenkins.io
+  open_authoring: true
 
 display_url: https://stories.jenkins.io
 publish_mode: editorial_workflow
