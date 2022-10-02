@@ -5,7 +5,7 @@ submitted_by: Jim Klimov
 date: 2022-10-02T19:59.309+02:00
 tag_line: Jenkins is the way to build multi-platform NUT, and
   jenkinsfile-dynamatrix is the way to find what can be built today
-image: https://www.jenkins.io/images/logos/nut/jenkins-nut-small-256px.png
+image: jenkins-nut-large-squared.png
 metadata:
   organization: The Network UPS Tools Project (NUT)
   industries:
@@ -39,16 +39,17 @@ body_content:
   title: Jenkins is the way to build multi-platform NUT, and
     jenkinsfile-dynamatrix is the way to find what can be built today
   paragraphs:
-    - The Network UPS Tools project will soon be a quarter of a century old and,
-      being the first open multi-vendor power hardware monitoring solution for
-      UPS, ePDU, Solar and such, it became the de facto standard in this area
-      (de jure with RFC 9271 recently published). Over the years it was embedded
-      in all sorts of server and desktop operating systems, from embedded to
-      mainframe and NAS, and built with a wide array of toolkits and third-party
-      dependencies. As evolution marches on, warnings are eradicated and
-      features are added, the codebase is still expected to run on any platform
-      released over the past couple of decades. If the machines and their OSes
-      still run, modern NUT should too.
+    - The [Network UPS Tools](https://networkupstools.org)
+      [project](https://networkupstools.org) will soon be a quarter of a century
+      old and, being the first open multi-vendor power hardware monitoring
+      solution for UPS, ePDU, Solar and such, it became the de facto standard in
+      this area (de jure with RFC 9271 recently published). Over the years it
+      was embedded in all sorts of server and desktop operating systems, from
+      embedded to mainframe and NAS, and built with a wide array of toolkits and
+      third-party dependencies. As evolution marches on, warnings are eradicated
+      and features are added, the codebase is still expected to run on any
+      platform released over the past couple of decades. If the machines and
+      their OSes still run, modern NUT should too.
     - With one of my first goals as an active community member and eventually
       project maintainer, I set out to address the hundreds of compiler warnings
       emitted by different implementations and versions of toolkits during
@@ -65,25 +66,27 @@ body_content:
       revisions, Make or Shell implementations, Autotools versions... and some
       fixes for one platform caused bugs for another. So to keep NUT working
       everywhere its iterations had to be regularly built everywhere.
-    - "Eventually the reign of Travis CI ended, and NUT got VMs for a CI farm
-      sponsored by Fosshost to proceed with the multi-platform testing. Using a
-      custom Jenkins instance to take care of the project's codebase builds and
-      make use of numerous operating systems in other VMs (as SSH Build Agents),
-      as well as build agents contributed by community (e.g. Swarm agents), was
-      a natural choice: by that time work had started on the
-      https://github.com/networkupstools/jenkins-dynamatrix project. It is a
-      Jenkins shared library which constructs a huge Map of parallel stages
-      similar to a standard matrix build."
-    - However in this case, build agents are expected to report capabilities
-      with their labels -- such as which platform they run and what versions and
-      implementations of toolkits are available to test with, and whether
-      "everything" can be built or just certain profiles (not all OS
+    - "Eventually the reign of free Travis CI ended, and NUT got VMs for a CI
+      farm sponsored by Fosshost to proceed with the multi-platform testing.
+      Using a custom Jenkins instance to take care of the project's codebase
+      builds and make use of numerous operating systems in other VMs (as SSH
+      Build Agents), as well as build agents contributed by community (e.g.
+      Swarm agents), was a natural choice: by that time work had started on the
+      [https://github.com/networkupstools/jenkins-dynamatrix](https://github.co\
+      m/networkupstools/jenkins-dynamatrix) project. It is a Jenkins shared
+      library which constructs a huge Map of parallel stages similar to a
+      standard matrix build."
+    - However in this case, it is not the matrix definition fully dictating what
+      should be built, but rather the build agents are expected to report
+      capabilities with their labels -- such as which platform they run and what
+      versions and implementations of toolkits are available to test with, and
+      whether "everything" can be built or just certain profiles (not all OS
       distributions offer all of the dependencies that NUT can build against).
-      The library also helps determine which C/C++ revisions can be built
-      according to GCC or CLANG version installed. Whenever a build starts, the
-      NUT Jenkinsfile (consumer of jenkins-dynamatrix library) can evaluate what
-      it can build today -- based on currently known population of build agents,
-      and so constructs the matrix for testing.
+      The library also helps determine which C or C++ language revisions can be
+      built according to GCC or CLANG version installed. Whenever a build
+      starts, the NUT Jenkinsfile (consumer of jenkins-dynamatrix library) can
+      evaluate what it can build today -- based on currently known population of
+      build agents, and so constructs the matrix for testing.
     - This arrangement allows NUT to be built on a multitude of platforms such
       that common free CI platforms do not offer. It is possible to find ways to
       build FOSS on recent Linux, MacOS and Windows, and sometimes even on
@@ -114,5 +117,5 @@ body_content:
       querying Jenkins server status via IRC servers, lockable-resources plugin
       for many itches scratched here and there, and pipeline-groovy-lib-plugin
       for easier use of test library versions along with test pipeline branches.
-      And very many lessons learned :)
+      And very many lessons learned and friends made :)
 ---
