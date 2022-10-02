@@ -110,7 +110,10 @@ body_content:
       PRs were open. Largest beasts included the dual-citizenship with
       libusb-0.1 and libusb-1.x support (queued for 5 years) and revival of NUT
       for Windows effort (queued for 9 years), confidently merged without
-      introducing warnings and regressions.
+      introducing warnings and regressions. The overwhelming majority of these
+      builds happen on the custom "NUT CI" farm with Jenkins driving them. A few
+      scenarios run on CircleCI and Appveyor to take advantage of some free FOSS
+      builds on MacOS and Windows respectively.
     - Of notable interactions with the Jenkins community, this and related
       efforts led to improvements in the git-client-plugin to extend the use of
       reference repositories, instant-messaging-plugin and ircbot-plugin for
