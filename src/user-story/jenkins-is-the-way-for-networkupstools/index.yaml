@@ -69,7 +69,8 @@ body_content:
       everywhere its iterations had to be regularly built everywhere.
     - |-
       Eventually the reign of free Travis CI ended, and NUT got VMs for a CI
-      farm sponsored by Fosshost to proceed with the multi-platform testing.
+      farm sponsored by [Fosshost.org](https://fosshost.org/) to proceed with
+      the multi-platform testing.
       Using a custom Jenkins instance to take care of the project's codebase
       builds and make use of numerous operating systems in other VMs (as SSH
       Build Agents), as well as build agents contributed by community (e.g.
