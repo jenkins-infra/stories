@@ -27,6 +27,9 @@ const MapPage = () => {
                         longitude
                         industries
                     }
+                    metadata {
+                        industries
+                    }
                     slug
                 }
             }
@@ -88,7 +91,7 @@ const MapPage = () => {
                                                     <td style={{border: '0px hidden', padding: '5px'}}>
                                                         <dt>{story.map.name}</dt>
                                                         <dt>{story.map.location}</dt>
-                                                        <dt>{story.map.industries.join(', ')}</dt>
+                                                        <dt>{(story.map.industries || story.metadata.industries).join(', ')}</dt>
                                                         <dt><Link to={`/user-story/${story.slug}`}>Read user story</Link></dt>
                                                     </td>
                                                 </tr>
