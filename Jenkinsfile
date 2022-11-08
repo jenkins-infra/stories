@@ -1,20 +1,20 @@
 pipeline {
-  environment {
-    NODE_ENV = "development"
-    HOME = "/tmp"
-    TZ = "UTC"
-    NETLIFY = "true"
-  }
-  agent {
-    label 'docker&&linux'
-  }
-
-
   options {
     timeout(time: 60, unit: 'MINUTES')
     ansiColor('xterm')
     disableConcurrentBuilds(abortPrevious: true)
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
+  }
+
+  agent {
+    label 'node'
+  }
+
+  environment {
+    // NODE_ENV = "${infra.isTrusted() || infra.isInfra() ? 'production' : 'development'}"
+    NODE_ENV = 'production'
+    TZ = "UTC"
+    NETLIFY = "true"
   }
 
   stages {
@@ -34,49 +34,58 @@ pipeline {
     }
 
     stage('Install Dependencies') {
-      agent {
-        docker {
-          image 'node:16.13.1'
-          reuseNode true
-        }
+      environment {
+        NODE_ENV = 'development'
       }
       steps {
         sh 'npm install'
       }
     }
 
-    stage('Build Production') {
-      agent {
-        docker {
-          image 'node:16.13.1'
-          reuseNode true
-        }
-      }
-      environment {
-        NODE_ENV = "production"
-      }
+    stage('Build PR') {
+      when { changeRequest() }
       steps {
         sh 'npm run build'
       }
     }
-
-    stage('Lint and Test') {
-      agent {
-        docker {
-          image 'node:16.13.1'
-          reuseNode true
-        }
-      }
-      steps {
-        sh '''
-          npx eslint --format checkstyle > eslint.json
-        '''
-      }
-      post {
-        always {
-          recordIssues(tools: [esLint(pattern: 'eslint.json')])
-        }
-      }
-    }
   }
 }
+
+
+
+
+  //   stage('Build Production') {
+  //     agent {
+  //       docker {
+  //         image 'node:16.13.1'
+  //         reuseNode true
+  //       }
+  //     }
+  //     environment {
+  //       NODE_ENV = "production"
+  //     }
+  //     steps {
+  //       sh 'npm run build'
+  //     }
+  //   }
+
+  //   stage('Lint and Test') {
+  //     agent {
+  //       docker {
+  //         image 'node:16.13.1'
+  //         reuseNode true
+  //       }
+  //     }
+  //     steps {
+  //       sh '''
+  //         npx eslint --format checkstyle > eslint.json
+  //       '''
+  //     }
+  //     post {
+  //       always {
+  //         recordIssues(tools: [esLint(pattern: 'eslint.json')])
+  //       }
+  //     }
+  //   }
+  // }
+// }
