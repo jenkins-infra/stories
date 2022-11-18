@@ -15,6 +15,7 @@ pipeline {
     NODE_ENV = 'production'
     TZ = "UTC"
     NETLIFY = "true"
+    GATSBY_CPU_COUNT = "2" // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
   }
 
   stages {
