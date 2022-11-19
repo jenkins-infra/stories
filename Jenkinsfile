@@ -11,7 +11,6 @@ pipeline {
   }
 
   environment {
-    // NODE_ENV = "${infra.isTrusted() || infra.isInfra() ? 'production' : 'development'}"
     NODE_ENV = 'production'
     TZ = "UTC"
     NETLIFY = "true"
