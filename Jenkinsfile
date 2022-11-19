@@ -15,7 +15,9 @@ pipeline {
     NODE_ENV = 'production'
     TZ = "UTC"
     NETLIFY = "true"
-    GATSBY_CPU_COUNT = "2" // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
+    // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
+    // https://github.com/dduportal/jenkins-infra/blob/bbd56ba9f31f9134c875634abd47769ebee9adcb/hieradata/clients/azure.ci.jenkins.io.yaml#L171
+    GATSBY_CPU_COUNT = "4"
   }
 
   stages {
