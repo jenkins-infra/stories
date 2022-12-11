@@ -44,5 +44,8 @@
     "remark-html": "^13.0.1",
     "truncate": "^3.0.0",
     "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.2.3"
   }
 }

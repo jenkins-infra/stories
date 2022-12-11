@@ -10,7 +10,7 @@ import UserStory from '../components/UserStory';
 const UserStoryPage = ({data: {userStory: page}, pageContext}) => {
     const title = page.title;
     return (
-        <Layout title={title}>
+        <Layout title={title} sourcePath={`src/user-story/${page.parent.relativePath}`}>
             <Seo title={title} pathname={`/user-story/${page.slug}`}/>
             <div className="navbar navbar-expand navbar-light bg-light">
                 <ul className="navbar-nav mr-auto w-100 d-flex justify-content-between">
@@ -61,6 +61,11 @@ export default UserStoryPage;
 export const pageQuery = graphql`
     query UserStoryBySlug($id: String!) {
         userStory(id: {eq: $id}) {
+            parent {
+                ... on File {
+                    relativePath
+                }
+            }
             slug
             date
             post_name

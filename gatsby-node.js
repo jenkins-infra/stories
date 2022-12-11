@@ -1,10 +1,5 @@
-const {makeReactLayout, saveReactLayout} = require('./makeLayout');
 const YAML = require('yaml');
 const path = require('path');
-
-exports.onPreBootstrap = async () => {
-    await makeReactLayout('https://stories.jenkins.io').then(saveReactLayout);
-};
 
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');

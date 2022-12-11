@@ -3,8 +3,17 @@ module.exports = {
         siteUrl: 'https://stories.jenkins.io',
         description: 'Jenkins is the way',
         twitter: '@jenkinsci',
+        githubRepo: 'jenkins-infra/stories',
     },
     plugins: [
+        {
+            resolve: '@jenkinsci/gatsby-plugin-jenkins-layout',
+            options: {
+                siteUrl: 'https://stories.jenkins.io',
+                headerUrl: 'https://deploy-preview-5668--jenkins-io-site-pr.netlify.app/template/index.html',
+                githubBranch: 'main'
+            },
+        },
         {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {
