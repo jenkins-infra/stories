@@ -22,7 +22,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-matomo',
             options: {
-                matomoUrl: 'jenkins-matomo.do.g4v.dev',
+                matomoUrl: 'https://jenkins-matomo.do.g4v.dev',
                 siteId: '2',
                 siteUrl: 'https://stories.jenkins.io'
             }
