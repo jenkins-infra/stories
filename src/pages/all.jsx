@@ -40,7 +40,7 @@ const AllPage = () => {
                         <h2>Tell Your Story</h2>
                         <p>&quot;Jenkins Is The Way&quot; is a global showcase of how developers and engineers are building, deploying, and automating great stuff with Jenkins.</p>
                         <p>Share your story and we'll send you a free Jenkins Is The Way T-shirt.</p>
-                        <p><Link to={{ pathname: 'https://stories.jenkins.io/admin/#/collections/user-story' }} target="_blank">Share the story of your project's goals, technical challenges, and the unique solutions you encountered with Jenkins.</Link></p>
+                        <p><a href="/admin/#/collections/user-story" target="_blank">Share the story of your project's goals, technical challenges, and the unique solutions you encountered with Jenkins.</a></p>
                     </div>
                 </div>
                 <div className="row">
