@@ -10,7 +10,11 @@ module.exports = {
             resolve: '@jenkinsci/gatsby-plugin-jenkins-layout',
             options: {
                 siteUrl: 'https://stories.jenkins.io',
-                githubBranch: 'main'
+                githubBranch: 'main',
+                manifest: {
+                    name: 'Jenkins - User Stories Library',
+                    short_name: 'stories',
+                }
             },
         },
         {
