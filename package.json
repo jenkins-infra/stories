@@ -42,7 +42,7 @@
     "react-leaflet": "^3.2.5",
     "remark-html": "^13.0.1",
     "truncate": "^3.0.0",
-    "yaml": "^1.10.2"
+    "yaml": "^2.0.0"
   },
   "devDependencies": {
     "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.5.0"
