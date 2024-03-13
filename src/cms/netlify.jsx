@@ -44,6 +44,6 @@ UserStoryPreview.propTypes = {
     getAsset: PropTypes.func.isRequired,
 };
 
-CMS.registerPreviewTemplate('user-story', UserStoryPreview);
+CMS.registerPreviewTemplate('jenkins-is-the-way', UserStoryPreview);
 
 // CMS.registerRemarkPlugin(shortcodes);

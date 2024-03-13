@@ -10,12 +10,12 @@ import UserStory from '../components/UserStory';
 const UserStoryPage = ({data: {userStory: page}, pageContext}) => {
     const title = page.title;
     return (
-        <Layout title={title} sourcePath={`src/user-story/${page.parent.relativePath}`}>
-            <Seo title={title} pathname={`/user-story/${page.slug}`}/>
+        <Layout title={title} sourcePath={`src/jenkins-is-the-way/${page.parent.relativePath}`}>
+            <Seo title={title} pathname={`/jenkins-is-the-way/${page.slug}`}/>
             <div className="navbar navbar-expand navbar-light bg-light">
                 <ul className="navbar-nav mr-auto w-100 d-flex justify-content-between">
                     <li className="nav-item">
-                        {pageContext.previous && <Link className="nav-link" to={`/user-story/${pageContext.previous.slug}`}>
+                        {pageContext.previous && <Link className="nav-link" to={`/jenkins-is-the-way/${pageContext.previous.slug}`}>
                             &lt;&lt;
                             {' '}
                             {truncate(pageContext.previous.title.replace(/^jenkins is the way to/i, ''), 40)}
@@ -25,7 +25,7 @@ const UserStoryPage = ({data: {userStory: page}, pageContext}) => {
                         <Link to="/" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                        {pageContext.next && <Link className="nav-link" to={`/user-story/${pageContext.next.slug}`}>
+                        {pageContext.next && <Link className="nav-link" to={`/jenkins-is-the-way/${pageContext.next.slug}`}>
                             {truncate(pageContext.next.title.replace(/^jenkins is the way to/i, ''), 40)}
                             {' '}
                             &gt;&gt;

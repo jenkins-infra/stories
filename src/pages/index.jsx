@@ -37,7 +37,7 @@ const IndexPage = () => {
                             <h2>Latest Jenkins User Stories</h2>
                             {stories.edges.map(({node: story}) => (
                                 <div key={story.slug} className="pb-2">
-                                    <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
+                                    <div><Link to={`/jenkins-is-the-way/${story.slug}`}>{story.title}</Link></div>
                                     Submitted by Jenkins User
                                     {' '}
                                     <strong>{story.submitted_by}</strong>

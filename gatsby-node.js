@@ -31,13 +31,13 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
             // just in case handle any urls that previously had jenkins-is-the-way in the url
             createRedirect({
-                fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
-                toPath: `/user-story/${edge.node.slug}/`,
+                fromPath: `/jenkins-is-the-way/jenkins-is-the-way-${edge.node.slug}/`,
+                toPath: `/jenkins-is-the-way/${edge.node.slug}/`,
                 isPermanent: true,
             });
         }
         createPage({
-            path: `/user-story/${edge.node.slug}/`,
+            path: `/jenkins-is-the-way/${edge.node.slug}/`,
             component: userStory,
             context: {
                 id: edge.node.id,
