@@ -92,7 +92,7 @@ const MapPage = () => {
                                                         <dt>{story.map.name}</dt>
                                                         <dt>{story.map.location}</dt>
                                                         <dt>{(story.map.industries || story.metadata.industries || []).join(', ')}</dt>
-                                                        <dt><Link to={`/user-story/${story.slug}`}>Read user story</Link></dt>
+                                                        <dt><Link to={`/jenkins-is-the-way/${story.slug}`}>Read user story</Link></dt>
                                                     </td>
                                                 </tr>
                                             </tbody>
