@@ -39,7 +39,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-immutable-proptypes": "^2.2.0",
-    "react-leaflet": "^3.2.5",
+    "react-leaflet": "^4.0.0",
     "remark-html": "^13.0.1",
     "truncate": "^3.0.0",
     "yaml": "^1.10.2"
