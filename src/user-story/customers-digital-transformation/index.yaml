@@ -9,13 +9,20 @@ metadata:
   organization: Alauda, [alauda.io](https://www.alauda.io/)
   industries:
     - DevOps
+  programming_langauges:
+    -
+  platforms:
+    -
   version_control_systems:
     - GitHub
+  build_tools:
+    -
   community_supports:
     - Yes
+quotes: []
 map:
   name: Yuzhi Peng
-  location: Beijing
+  location: Beijing, China
   latitude: 39.9042
   longitude: 116.4074
 body_content:
