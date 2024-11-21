@@ -28,29 +28,26 @@ map:
 body_content:
   title: Facilitating Customers' Digital Transformation Based on Jenkins
   paragraphs:
-    - In today's business world where the digital wave is surging, Alauda
+    - |-
+      In today's business world where the digital wave is surging, Alauda
       Company has always been oriented towards customers' needs and actively
       explored innovative methods to create more value for them. Among these,
       Jenkins has become a crucial basic platform for us to achieve this goal.
       By adding plugins, we have endowed Jenkins with more powerful
       capabilities, providing strong support for customers' digital
       transformation journey and significantly enhancing user satisfaction.
-    - >-
-      ## Facilitating Customers' Digital Transformation
-
+    - |-
+      Facilitating Customers' Digital Transformation
 
       In the case of a financial services customer, we utilized Jenkins plugins to realize the automated testing and deployment of the financial trading system. The real-time and accuracy requirements of financial trading are extremely high, and any slight error could lead to huge losses. Through our solution, whenever the system is updated, the Jenkins plugins will simulate various complex trading scenarios for rigorous testing to ensure the stability and accuracy of the system. Meanwhile, the rapid automated deployment capability enables new features to be launched in a timely manner, meeting the rapidly changing demands of the financial market and helping the customer gain an edge in the digital financial services field.
-    - >-
-      ## Enhancing User Satisfaction
-
+    - |-
+      Enhancing User Satisfaction
 
       By providing customers with powerful functions based on Jenkins plugins, we have significantly enhanced user satisfaction. During the digital transformation process, customers have deeply felt the improvement in efficiency and the reduction in risks. They no longer need to worry about cumbersome manual operations, frequent errors, and long waiting times.
 
-
       Customers have been full of praise for our solution. Their businesses have flourished after digital transformation, and the user satisfaction has reached an unprecedented level.
-    - >-
-      ## Summary
-
+    - |-
+      Summary
 
       In conclusion, by adding plugins on the basis of Jenkins, Alauda Company has unearthed more potential value for customers, effectively promoted the process of customers' digital transformation, and simultaneously won high satisfaction and trust from customers, laying a solid foundation for future cooperation and development.
 ---
