@@ -1,7 +1,7 @@
 ---
 title: Facilitating Customers' Digital Transformation Based on Jenkins
 post_name: customers-digital-transformation
-submitted_by: Yuzhi Peng
+submitted_by: Zhipeng Yu
 date: 2024-11-21T10:28.846-05:00
 tag_line: "Alauda: The AI-Ready Cloud Native Solution"
 image: alauda.png
@@ -10,18 +10,23 @@ metadata:
   industries:
     - DevOps
   programming_langauges:
-    -
+    - Java
   platforms:
-    -
+    - Linux
+    - Docker
+    - Kubernetes
   version_control_systems:
     - GitHub
+    - GitLab
   build_tools:
-    -
+    - Make
+    - Gradle
+    - Maven
   community_supports:
     - Yes
 quotes: []
 map:
-  name: Yuzhi Peng
+  name: Zhipeng Yu
   location: Beijing, China
   latitude: 39.9042
   longitude: 116.4074
