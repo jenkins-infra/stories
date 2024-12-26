@@ -34,6 +34,9 @@ const UserStoryPage = ({data: {userStory: page}, pageContext}) => {
                 </ul>
             </div>
             <UserStory {...page} />
+            <div className="authored-by">
+                <strong>Authored by:</strong> {page.authored_by}
+            </div>
         </Layout>
     );
 };
