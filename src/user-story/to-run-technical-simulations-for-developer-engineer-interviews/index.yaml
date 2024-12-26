@@ -1,9 +1,7 @@
----
 map:
   location: Spain
   industries:
     - DevOps & Human Resources
-  name: Carlos Rodriguez Lopez
   latitude: "37.3890924"
   longitude: "-5.9844589"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by: Carlos Rodriguez Lopez - Carlos Rodriguez Lopez
 body_content:
   title: Creating a Technical Simulation platform for interviewing support
     engineer candidates worldwide
@@ -49,15 +48,23 @@ body_content:
       *   **Remote:** Technical-simulation-as-code will help us search for --
       and interview -- the best talent, no matter where they reside.
 
-      *   **Secure:** Restricting the inbound traffic (SSH and HTTP) to the interview nodes by the proctor and candidate IPs. Candidate IP does not access the proctor's resources.
+      *   **Secure:** Restricting the inbound traffic (SSH and HTTP) to the
+      interview nodes by the proctor and candidate IPs. Candidate IP does not
+      access the proctor's resources.
 
-      *   **Resource constraining:** The cloud objects are created on-demand and then destroyed after the scheduled time for the simulation for cost savings.
+      *   **Resource constraining:** The cloud objects are created on-demand and
+      then destroyed after the scheduled time for the simulation for cost
+      savings.
 
-      *   **Autonomous:** To avoid silos of knowledge in this process, team members must be empowered to become proctors.
+      *   **Autonomous:** To avoid silos of knowledge in this process, team
+      members must be empowered to become proctors.
 
-      *   **Auditable:** All proctor and candidate details (emails and IPs) are stored. Timing for deploying, simulation and destroying is tracked.
+      *   **Auditable:** All proctor and candidate details (emails and IPs) are
+      stored. Timing for deploying, simulation and destroying is tracked.
 
-      *   **Organized:** The required information for the candidate (questions and resources) and proctor (answers and follow-up questions) must align with corporate branding and digital look & feel.
+      *   **Organized:** The required information for the candidate (questions
+      and resources) and proctor (answers and follow-up questions) must align
+      with corporate branding and digital look & feel.
     - '**Solution & Results:** We are able to support an "Interview-as-Code"
       model consisting of two modules, both orchestrated via Jenkinsfiles:
       Deployer and Lab Book.'
@@ -69,11 +76,14 @@ body_content:
       *   Creating all the required cloud resources: Virtual Machines, Security
       Groups, Primary Keys.
 
-      *   Publishing documentation and resources into websites for the candidates (questions and resources) and proctor (answers and follow-up questions). Proctor also has access to the candidate website.
+      *   Publishing documentation and resources into websites for the
+      candidates (questions and resources) and proctor (answers and follow-up
+      questions). Proctor also has access to the candidate website.
 
       *   Packaging and uploading the book of labs to the master node.
 
-      *   Notifying the proctor that the environment "build up" process has finished, including URL for the candidate and proctor websites.
+      *   Notifying the proctor that the environment "build up" process has
+      finished, including URL for the candidate and proctor websites.
 
       *   Destroying the environment, once the technical simulation is finished.
 
@@ -103,9 +113,11 @@ body_content:
     - >-
       *   Time to create all required resources in AWS is now less than 1 minute
 
-      *   Time to destroy all required resources in AWS is now less than 2 minutes
+      *   Time to destroy all required resources in AWS is now less than 2
+      minutes
 
-      *   A particular Jenkins troubleshooting lab can be built and pushed in matter of 1-2 minutes
+      *   A particular Jenkins troubleshooting lab can be built and pushed in
+      matter of 1-2 minutes
 title: Jenkins is the way to run technical simulations for developer/engineer
   interviews
 date: 2021-02-15T17:25:36.000Z
@@ -117,4 +129,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-02-15-at-12.30.07-PM.png
 tag_line: Support an Interview-As-Code Model
-submitted_by: Carlos Rodriguez Lopez

@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Information Technology
-  name: Abhineet Saxena
   latitude: "26.9124336"
   longitude: "75.7872709"
 metadata:
@@ -29,6 +27,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Abhineet Saxena - Abhineet Saxena
 body_content:
   title: Saving time by automating a cumbersome deployment process across five
     cloud servers.
@@ -72,9 +71,14 @@ body_content:
       integrated Jenkins it performs all the triggering and options operating
       very quickly.
 
-      *   Jenkins is highly flexible and we can implement any plugins for any technology. There are an enormous number of plugins available in Jenkins which can be used to integrate Jenkins with nearly any technology out there.
+      *   Jenkins is highly flexible and we can implement any plugins for any
+      technology. There are an enormous number of plugins available in Jenkins
+      which can be used to integrate Jenkins with nearly any technology out
+      there.
 
-      *   Jenkins is a highly available tool as you can implement a distributed Jenkins environment in your Infrastructure and build jobs as per your need.
+      *   Jenkins is a highly available tool as you can implement a distributed
+      Jenkins environment in your Infrastructure and build jobs as per your
+      need.
     - "Results include:"
     - |-
       *   A deployment process that is 5X faster
@@ -91,4 +95,3 @@ quotes:
     image: ./quote.png
 image: noun_ECG_3114167.png
 tag_line: Automating Large Workflows With Single-click Deployment
-submitted_by: Abhineet Saxena

@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Network Communications
-  name: Vijay Sundar V
   latitude: "12.9158691"
   longitude: "80.17338339999999"
 metadata:
@@ -25,6 +23,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Vijay Sundar V - Vijay Sundar V
 body_content:
   title: Proactive developer solves integration problem with Jenkins.
   paragraphs:
@@ -85,4 +84,3 @@ quotes:
     image: ./quote.png
 image: noun_visible_1551071.png
 tag_line: Building Network Insight Artifacts
-submitted_by: Vijay Sundar V

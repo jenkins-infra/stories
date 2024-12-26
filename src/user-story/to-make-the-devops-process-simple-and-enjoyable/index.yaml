@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Automotive
-  name: Akshit Singhal
   latitude: "28.9844618"
   longitude: "77.7064137"
 metadata:
@@ -34,6 +32,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Akshit Singhal - Akshit Singhal
 body_content:
   title: Bringing better EV charging stations to North America, Europe and Australia.
   paragraphs:
@@ -71,4 +70,3 @@ quotes:
     image: ./quote.png
 image: noun_Electric-Car_2972764.png
 tag_line: Electric Vehicle Charging Station
-submitted_by: Akshit Singhal

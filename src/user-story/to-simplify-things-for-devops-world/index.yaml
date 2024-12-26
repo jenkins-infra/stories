@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Software Developement
-  name: Prudviraj Pentakota
   latitude: "17.385044"
   longitude: "78.486671"
 metadata:
@@ -28,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Prudviraj Pentakota - Prudviraj Pentakota
 body_content:
   title: High quality, controlled, and clearly-visible code is shipped to
     production and released 30% faster.
@@ -53,7 +52,8 @@ body_content:
 
       *   Amazon Web Services (AWS) EC2 plugin for auto-scaling
 
-      *   Maven, Nexus, Sonar, Pipelines, and Docker plugins to manage our build and releases
+      *   Maven, Nexus, Sonar, Pipelines, and Docker plugins to manage our build
+      and releases
 
       *   Dashboard plugins for listing build status with coverage information
 
@@ -85,4 +85,3 @@ quotes:
     image: ./quote.png
 image: noun_customer-service_542409-300x300.png
 tag_line: Improving the DevOps Practice
-submitted_by: Prudviraj Pentakota

@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Financial Services - Mortgage
-  name: Arman Chand
   latitude: "26.8466937"
   longitude: "80.94616599999999"
 metadata:
@@ -25,6 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Arman Chand - Arman Chand
 body_content:
   title: Bring mortgage borrowers and lenders together in an easy and effortless way.
   paragraphs:
@@ -74,4 +73,3 @@ quotes:
     image: ./quote.png
 image: noun_Laptop_726524.png
 tag_line: Loan Application Automation
-submitted_by: Arman Chand

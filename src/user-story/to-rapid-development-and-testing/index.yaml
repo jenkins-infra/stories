@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Testing
-  name: Gaurav Talreja
   latitude: "18.5204303"
   longitude: "73.8567437"
 metadata:
@@ -25,6 +23,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Gaurav Talreja - Gaurav Talreja
 body_content:
   title: Automating the testing process results in better results.
   paragraphs:
@@ -64,4 +63,3 @@ quotes:
     image: ./quote.png
 image: noun_testing_3404930-768x768.png
 tag_line: Automated Testing
-submitted_by: Gaurav Talreja

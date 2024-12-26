@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Information Technology
-  name: Erana Chandran
   latitude: "13.0826802"
   longitude: "80.2707184"
 metadata:
@@ -30,6 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Erana Chandran - Erana Chandran
 body_content:
   title: An innovator in cloud management solutions looked to rule out manual
     deployment errors by implementing CI/CD with Jenkins.
@@ -53,7 +52,8 @@ body_content:
 
       3.  Build and maintain artifacts, Deploythem in multiple environments
 
-      4.  Execute scripts for configuration management, production validation, and code quality
+      4.  Execute scripts for configuration management, production validation,
+      and code quality
 
       5.  Trigger the Jenkins deployment based on Gerrit and Bitbucket actions
     - "**Goals:** Our goal was instant code deployment, validation, and report
@@ -117,4 +117,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer-Cloud_346045.png
 tag_line: AI-powered Continuous Cloud Governance
-submitted_by: Erana Chandran

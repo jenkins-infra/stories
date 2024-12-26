@@ -1,9 +1,7 @@
----
 map:
   location: California, USA
   industries:
     - Financial Services
-  name: Vlad Silverman
   latitude: "37.4418834"
   longitude: "-122.1430194"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by: Vlad Silverman - Vlad Silverman
 body_content:
   title: Automating the entire CI/CD infrastructure shortened release cycles from
     weeks to hours.
@@ -70,4 +69,3 @@ quotes:
     image: ./quote.png
 image: noun_FinTech_3047805.png
 tag_line: CI/CD Automation for FinTech & Insurance Software Development
-submitted_by: Vlad Silverman

@@ -1,9 +1,7 @@
----
 map:
   location: Bulgaria
   industries:
     - Financial Services
-  name: Emil Vulkov
   latitude: "42.6977082"
   longitude: "23.3218675"
 metadata:
@@ -25,6 +23,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
+  authored_by: Emil Vulkov - Emil Vulkov
 body_content:
   title: Faster builds and fewer errors with CI/CD automation.
   paragraphs:
@@ -57,7 +56,8 @@ body_content:
 
       *   deployment is automated and fast => happier banks
 
-      *   our BitBucket and Nexus libraries are managed and maintained with fewer errors
+      *   our BitBucket and Nexus libraries are managed and maintained with
+      fewer errors
 title: Jenkins is the way to achieve a stable CI/CD enterprise solution
 date: 2020-07-16T13:41:58.000Z
 post_name: to-achieve-a-stable-cicd-enterprise-solution
@@ -68,4 +68,3 @@ quotes:
     image: ./quote.png
 image: noun_Bank_67972-300x300.png
 tag_line: TIME Center CI/CD solution
-submitted_by: Emil Vulkov

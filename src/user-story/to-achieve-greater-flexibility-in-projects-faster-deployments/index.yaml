@@ -1,4 +1,3 @@
----
 metadata:
   title: DevOps developer shares his lessons learned using Jenkins to enhance
     their testing environment for his mobile and gaming app company.
@@ -21,6 +20,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Aman Makwana
 body_content:
   title: For iterative mobile app development and testing, the Jenkins Diawi
     plugin did the trick.
@@ -59,7 +59,8 @@ body_content:
     - >-
       1.  Upload the iOS or Android application.
 
-      2.  Send the link to your testers, clients, friends or even use it yourself.
+      2.  Send the link to your testers, clients, friends or even use it
+      yourself.
 
       3.  Open the link in the browser on the device and click on install.
     - It works for iOS and Android.
@@ -87,4 +88,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer-Plugged_568056.png
 tag_line: Android CI/CD Final
-submitted_by: Aman Makwana

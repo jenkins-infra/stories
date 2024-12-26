@@ -44,7 +44,7 @@ const fields = [
 ];
 
 
-const UserStory = ({image, title, submitted_by, tag_line, quotes, metadata, body_content}) => {
+const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_content}) => {
     return (
         <div className={styles.userstory}>
 
@@ -66,7 +66,7 @@ const UserStory = ({image, title, submitted_by, tag_line, quotes, metadata, body
                         <strong>
                             Submitted By Jenkins User
                             {' '}
-                            {submitted_by}
+                            {authored_by}
                         </strong>
                     </div>
 
@@ -125,7 +125,7 @@ UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
     // children: PropTypes.node.isRequired,
     title: PropTypes.string.isRequired,
-    submitted_by: PropTypes.string.isRequired,
+    authored_by: PropTypes.string.isRequired,
     tag_line: PropTypes.string.isRequired,
     image: PropTypes.object,
     metadata: PropTypes.shape({

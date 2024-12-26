@@ -1,9 +1,7 @@
----
 map:
   location: Illinois, USA
   industries:
     - Gaming
-  name: Richard Staehler III
   latitude: "42.21324990000001"
   longitude: "-88.24768499999999"
 metadata:
@@ -22,6 +20,7 @@ metadata:
   build_tools:
     - gCloud
     - Jenkins
+  authored_by: Richard Staehler III - Richard Staehler III
 body_content:
   title: Building the kids a self-serve Minecraft setup using Jenkins.
   paragraphs:
@@ -87,4 +86,3 @@ quotes:
     image: ./quote.png
 image: noun_Zombie_1394634-300x300.png
 tag_line: Managing Minecraft with Jenkins
-submitted_by: Richard Staehler III

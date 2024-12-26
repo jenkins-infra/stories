@@ -1,4 +1,3 @@
----
 metadata:
   title: When your software supports electronic signaling solutions for railways
     in Romania, this team turns to Jenkins for stability and innovation.
@@ -19,6 +18,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Ciprian Mihaila
 body_content:
   title: Jenkins pipelines help improve railway signaling performance and empower
     developers with better DevOps processes.
@@ -50,4 +50,3 @@ quotes:
     image: ./quote.png
 image: noun_AI_3565001.png
 tag_line: Human Interface for Railway Traffic
-submitted_by: Ciprian Mihaila

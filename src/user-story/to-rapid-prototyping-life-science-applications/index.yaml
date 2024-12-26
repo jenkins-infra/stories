@@ -1,9 +1,7 @@
----
 map:
   location: Massachusetts, USA
   industries:
     - Medical Research
-  name: Ioannis K. Moutsatsos
   latitude: "42.4153925"
   longitude: "-71.1564729"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by: Ioannis K. Moutsatsos - Ioannis Moutsatsos
 body_content:
   title: Finding solutions that adapt to new requirements, data types, and
     timelines requires Jenkins and 'outside the box' thinking.
@@ -100,4 +99,3 @@ quotes:
     image: ./quote.png
 image: novartis-logo.jpg
 tag_line: Life Sciences Continuous Integration
-submitted_by: Ioannis Moutsatsos

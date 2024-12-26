@@ -1,4 +1,3 @@
----
 metadata:
   title: A consistent CI/CD tooling experience for all teams allows a
     market-leading healthcare software provider to enable clinicians to provide
@@ -23,6 +22,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Ben Selby
 body_content:
   title: Centralizing Jenkins allows domain teams to focus on delivering more
     value to healthcare customers.
@@ -80,9 +80,12 @@ body_content:
     - >-
       *   A consistent CI/CD tooling experience for all teams.
 
-      *   A greater visualization, not only per pipeline but holistically across reporting units.
+      *   A greater visualization, not only per pipeline but holistically across
+      reporting units.
 
-      *   Teams are substantially quicker to onboard engineers into the product, since the community within our business, but also the wider Jenkins community is vibrant
+      *   Teams are substantially quicker to onboard engineers into the product,
+      since the community within our business, but also the wider Jenkins
+      community is vibrant
 title: Jenkins is the way to provide an enterprise-grade CI/CD experience to engineers
 date: 2021-09-05T15:59:07.000Z
 post_name: to-provide-an-enterprise-grade-ci-cd-experience-to-engineers
@@ -96,4 +99,3 @@ quotes:
     image: ./quote.png
 image: noun_ECG_2424906.png
 tag_line: Centralized Infrastructure
-submitted_by: Ben Selby

@@ -1,9 +1,7 @@
----
 map:
   location: North Carolina, USA
   industries:
     - Infrastructure
-  name: Alec Rieger
   latitude: "36.0974515"
   longitude: "-79.26933919999999"
 metadata:
@@ -14,6 +12,7 @@ metadata:
     Docker or Kubernetes, Linux, MacOS**Version Control System:** GitHub,
     GitLab**Build Tool:** Ant, Rake**Community Support:** Spoke with colleagues
     and peers"
+  authored_by: Alec Rieger - Alec Rieger
 body_content:
   title: Relying on Jenkins to keep projects consistent in the way they're built,
     tested, and versioned.
@@ -60,4 +59,3 @@ quotes:
     image: ./quote.png
 image: ibm-logo-vector-download-300x300.jpg
 tag_line: IBM + AOHCS + Jenkins
-submitted_by: Alec Rieger

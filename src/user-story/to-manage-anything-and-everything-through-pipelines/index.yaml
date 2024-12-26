@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Financial Services
-  name: Nitish Chandu Oggu
   latitude: "16.3066525"
   longitude: "80.4365402"
 metadata:
@@ -32,6 +30,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - and spoke with colleagues and peers
+  authored_by: Nitish Chandu Oggu - Nitish Chandu Oggu
 body_content:
   title: Managing a wide range of banking products with an enterprise-ready pipeline.
   paragraphs:
@@ -63,9 +62,12 @@ body_content:
       *   Users get the flexibility to create a wide range of agents without
       additional infrastructure costs or maintenance headaches.
 
-      *   The platform became more and more stable, resulting in improving build performance.
+      *   The platform became more and more stable, resulting in improving build
+      performance.
 
-      *   Since the Jenkins platform is used "as a service," users aren't worried about the masters, agents, and configurations. They can now focus on their development, which makes project deliverables much quicker.
+      *   Since the Jenkins platform is used "as a service," users aren't
+      worried about the masters, agents, and configurations. They can now focus
+      on their development, which makes project deliverables much quicker.
 title: Jenkins is the way to manage anything and everything through pipelines
 date: 2020-05-19T01:47:12.000Z
 post_name: to-manage-anything-and-everything-through-pipelines
@@ -76,4 +78,3 @@ quotes:
     image: ./quote.png
 image: Bank-1024x1024.png
 tag_line: How To Implement CI-CD As A Service
-submitted_by: Nitish Chandu Oggu

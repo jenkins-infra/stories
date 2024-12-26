@@ -1,9 +1,7 @@
----
 map:
   location: France
   industries:
     - Software Development
-  name: Thibaut Le Levier
   latitude: "47.218371"
   longitude: "-1.553621"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+  authored_by: Thibaut Le Levier - Thibaut Le Levier
 body_content:
   title: Building a large CI platform to support app development.
   paragraphs:
@@ -61,4 +60,3 @@ quotes:
     image: ./quote.png
 image: Notes-300x300.png
 tag_line: Note Taking App
-submitted_by: Thibaut Le Levier

@@ -1,4 +1,3 @@
----
 metadata:
   title: Data loss is a catalyst for revenue loss in media sales. A monitoring
     framework was needed to test data delivery daily
@@ -14,6 +13,7 @@ metadata:
     - GitHub
   build_tools:
     - Maven
+  authored_by: Amit Sharma
 body_content:
   title: Automatic monitoring of data input to improve the quality of advertising
     reports.
@@ -60,4 +60,3 @@ quotes:
     image: ./quote.png
 image: xperi.png
 tag_line: Xperi's AMA Platform
-submitted_by: Amit Sharma

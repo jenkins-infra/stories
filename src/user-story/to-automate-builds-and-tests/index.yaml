@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Financial Services
-  name: Jayant Sikarwar
   latitude: "23.1764665"
   longitude: "75.7885163"
 metadata:
@@ -28,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Jayant Sikarwar - Jayant Sikarwar
 body_content:
   title: Reducing time needed for code fixes helps developers work more
     efficiently when bugs are present and then spend more time innovating.
@@ -62,4 +61,3 @@ quotes:
     image: ./quote.png
 image: 1493738369-4564.jpg
 tag_line: Citibank EAP
-submitted_by: Jayant Sikarwar

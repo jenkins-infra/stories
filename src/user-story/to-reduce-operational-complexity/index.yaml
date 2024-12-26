@@ -1,4 +1,3 @@
----
 metadata:
   title: Eliminating operational errors while improving automation and allowing
     non-technical teammates to have greater autonomy.
@@ -14,6 +13,7 @@ metadata:
     - ": Linux"
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Roger Firpo
 body_content:
   title: Using Jenkins to automate operational tasks so that non-technical people
     could work without the need for developers' input.
@@ -48,4 +48,3 @@ quotes:
     image: ./quote.png
 image: noun_database_2698554.png
 tag_line: Operations Automation
-submitted_by: Roger Firpo

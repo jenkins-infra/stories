@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Healthcare
-  name: Vishal VR Gowda
   latitude: "13.3378762"
   longitude: "77.117325"
 metadata:
@@ -22,6 +20,7 @@ metadata:
     - GitHub
   build_tools:
     - Gradle
+  authored_by: Vishal VR Gowda - Vishal VR Gowda
 body_content:
   title: Speeding warning notifications and improving release time productivity by
     50X.
@@ -71,4 +70,3 @@ quotes:
     image: ./quote.png
 image: noun_DNA_3236084.png
 tag_line: Simpliflying DNA Sequencing Analysis Through Streamlined DevOps
-submitted_by: Vishal VR Gowda

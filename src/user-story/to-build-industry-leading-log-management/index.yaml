@@ -1,9 +1,7 @@
----
 map:
   location: Arkansas, USA
   industries:
     - Software Development
-  name: Donald Morton
   latitude: "36.3728538"
   longitude: "-94.2088172"
 metadata:
@@ -29,6 +27,7 @@ metadata:
   community_supports:
     - Relied on Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and pee
+  authored_by: Donald Morton - Donald Morton
 body_content:
   title: Adding more flexibility and power into snapshot and release builds.
   paragraphs:
@@ -45,9 +44,12 @@ body_content:
       1.  Update Jenkins to the latest version so we can take advantage of the
       latest features.
 
-      2.  Use infrastructure-as-code as much as possible. Eliminate manual configuration. We should be able to destroy the VM and recreate it the same as it was before.
+      2.  Use infrastructure-as-code as much as possible. Eliminate manual
+      configuration. We should be able to destroy the VM and recreate it the
+      same as it was before.
 
-      3.  Rewrite the jobs as declarative pipelines so that we can start to simplify and improve our complex builds.
+      3.  Rewrite the jobs as declarative pipelines so that we can start to
+      simplify and improve our complex builds.
     - "**Solution & Results:** We started out writing a Terraform module to spin
       up infrastructure and an Ansible playbook for installing software on the
       machines. Jenkins itself runs off of a Docker image. The configuration of
@@ -75,7 +77,8 @@ body_content:
     - >-
       *   Maintainability of job improved through infrastructure-as-code
 
-      *   Upgrade time went from never upgraded at all to upgrades within minutes
+      *   Upgrade time went from never upgraded at all to upgrades within
+      minutes
 
       *   Observability of builds increased through Blue Ocean UI
     - "***Want the full story, visit Donald Morton's[Graylog Case
@@ -92,4 +95,3 @@ quotes:
     image: ./quote.png
 image: graylog-logo.png
 tag_line: Building a Flexible and Modern DevOps Platform
-submitted_by: Donald Morton

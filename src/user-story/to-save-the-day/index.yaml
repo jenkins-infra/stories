@@ -1,9 +1,7 @@
----
 map:
   location: California, USA
   industries:
     - Information Technology
-  name: Eric Courville
   latitude: "38.6857367"
   longitude: "-121.082167"
 metadata:
@@ -26,6 +24,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Eric Courville - Eric Courville
 body_content:
   title: Introduce a secret engine under the hood to allow developers to create
     without limitations.
@@ -60,7 +59,8 @@ body_content:
 
       *   resources could be built immediately, or once approval had occurred
 
-      *   the project timeline was pulled in by months due to the flexible processes that were created
+      *   the project timeline was pulled in by months due to the flexible
+      processes that were created
 title: Jenkins is the way to save the day
 date: 2021-05-07T22:40:58.000Z
 post_name: to-save-the-day
@@ -71,4 +71,3 @@ quotes:
     image: ./quote.png
 image: noun_Business-Consulting_2752963.png
 tag_line: Automation Enabler
-submitted_by: Eric Courville

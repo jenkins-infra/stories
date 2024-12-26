@@ -15,7 +15,7 @@ const IndexPage = () => {
                     title
                     date
                     tag_line
-                    submitted_by
+                    authored_by
                     slug
                 }
             }
@@ -40,7 +40,7 @@ const IndexPage = () => {
                                     <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
                                     Submitted by Jenkins User
                                     {' '}
-                                    <strong>{story.submitted_by}</strong>
+                                    <strong>{story.authored_by}</strong>
                                 </div>
                             ))}
                         </div>

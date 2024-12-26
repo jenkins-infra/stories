@@ -1,9 +1,7 @@
----
 map:
   location: Netherlands
   industries:
     - Semiconductors
-  name: Mitchell Slotboom
   latitude: "52.13537729999999"
   longitude: "5.033362500000001"
 metadata:
@@ -23,6 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Mitchell Slotboom - Mitchell Slotboom
 body_content:
   title: Better visibility and bigger, badder pipelines.
   paragraphs:
@@ -53,4 +52,3 @@ quotes:
     image: ./quote.png
 image: topic-squarelogo-1439841967720.png
 tag_line: Qualification Pipeline
-submitted_by: Mitchell Slotboom

@@ -1,9 +1,7 @@
----
 map:
   location: France
   industries:
     - Automotive
-  name: Cyril TAVIAN
   latitude: "49.025453"
   longitude: "3.026478"
 metadata:
@@ -28,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Cyril TAVIAN - Cyril Tavian
 body_content:
   title: In the fast-paced world of e-commerce, integration of new features are
     cut from 24 hours to just a half-day.
@@ -70,7 +69,9 @@ body_content:
 
       *   better management of pull requests after the code review
 
-      *   simplified validation circuit, the deployment of the deliverable is now possible in one day instead of three on all of our environments (integration, validation, and production)
+      *   simplified validation circuit, the deployment of the deliverable is
+      now possible in one day instead of three on all of our environments
+      (integration, validation, and production)
 title: Jenkins is the way to revolutionize the integration of new technologies
 date: 2020-11-23T14:40:37.000Z
 post_name: to-revolutionize-the-integration-of-new-technologies
@@ -82,4 +83,3 @@ quotes:
 image: noun_Car-Diagnostic_2600088-768x768.png
 tag_line: Providing Desktop and Mobile E-commerce Solutions for Automobile and
   Retail Sectors
-submitted_by: Cyril Tavian

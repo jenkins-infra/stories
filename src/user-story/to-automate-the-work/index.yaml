@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Technology
-  name: Vilsi Jain
   latitude: "26.012373"
   longitude: "76.3560109"
 metadata:
@@ -26,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Vilsi Jain - Vilsi Jain
 body_content:
   title: Automating image deployment with Jenkins at LinuxWorld.
   paragraphs:
@@ -75,4 +74,3 @@ quotes:
     image: ./quote.png
 image: 1_2ygK0klHWoYoqX_MKicA1g.jpeg
 tag_line: Automation of Web Page Deployment
-submitted_by: Vilsi Jain

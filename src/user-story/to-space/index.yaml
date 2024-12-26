@@ -1,9 +1,7 @@
----
 map:
   location: Poland
   industries:
     - Aerospace
-  name: Maciej Nowak
   latitude: "50.29449229999999"
   longitude: "18.6713802"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Ninja
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Maciej Nowak - Maciej Nowak
 body_content:
   title: Easy testing of build improvements without disrupting the work of other
     developers.
@@ -82,9 +81,11 @@ body_content:
 
       *   Documentation generation
 
-      *   End-to-end testing on the emulated platform (can be disrupted by high CPU load)
+      *   End-to-end testing on the emulated platform (can be disrupted by high
+      CPU load)
 
-      *   End-to-end testing on the hardware platform (can be disrupted by high CPU load)
+      *   End-to-end testing on the hardware platform (can be disrupted by high
+      CPU load)
     - Each of these steps is defined as a stage allowing us to track the
       progress of each build and measure how long it took. Based on timing
       information, we can adapt our 'Jenkinsfile' to spread the load between
@@ -115,9 +116,11 @@ body_content:
       for customization and testing of changes on single feature-branch without
       disrupting other branches
 
-      *   Plots help with coverage and memory usage and makes anomalies easy to spot
+      *   Plots help with coverage and memory usage and makes anomalies easy to
+      spot
 
-      *   Node labeling to control which nodes have hardware testing capabilities and to move loads between machines
+      *   Node labeling to control which nodes have hardware testing
+      capabilities and to move loads between machines
 
       *   Warnings plugins
 
@@ -140,4 +143,3 @@ quotes:
     image: ./quote.png
 image: kp.png
 tag_line: Intuition-1 Onboard Computer Software
-submitted_by: Maciej Nowak

@@ -1,9 +1,8 @@
----
 title: Jenkins is the way to build multi-platform NUT
 post_name: jenkins-is-the-way-for-networkupstools
-submitted_by: Jim Klimov
 date: 2022-10-02T19:59:30.309+02:00
-tag_line: Jenkins is the way to build multi-platform NUT, and jenkinsfile-dynamatrix is the way to find what can be built today
+tag_line: Jenkins is the way to build multi-platform NUT, and
+  jenkinsfile-dynamatrix is the way to find what can be built today
 image: jenkins-nut-large-squared.png
 metadata:
   organization: The Network UPS Tools Project (NUT)
@@ -28,9 +27,9 @@ metadata:
     - GCC/CLANG
   community_supports:
     - Yes
+  authored_by: Jim Klimov - Jim Klimov
 quotes: []
 map:
-  name: Jim Klimov
   location: Prague, CZ
   latitude: "50.0755"
   longitude: "14.4378"
@@ -38,17 +37,28 @@ body_content:
   title: Jenkins is the way to build multi-platform NUT, and
     jenkinsfile-dynamatrix is the way to find what can be built today
   paragraphs:
-    - |-
+    - >-
       The [Network UPS Tools](https://networkupstools.org)
-      [project](https://github.com/networkupstools/nut) will soon be a quarter of a century
+
+      [project](https://github.com/networkupstools/nut) will soon be a quarter
+      of a century
+
       old and, being the first open multi-vendor power hardware monitoring
+
       solution for UPS, ePDU, Solar and such, it became the de facto standard in
+
       this area (de jure with RFC 9271 recently published). Over the years it
+
       was embedded in all sorts of server and desktop operating systems, from
+
       embedded to mainframe and NAS, and built with a wide array of toolkits and
+
       third-party dependencies. As evolution marches on, warnings are eradicated
+
       and features are added, the codebase is still expected to run on any
+
       platform released over the past couple of decades. If the machines and
+
       their OSes still run, modern NUT should too.
     - |-
       With one of my first goals as an active community member and eventually
@@ -81,17 +91,28 @@ body_content:
       project. It is a Jenkins shared
       library which constructs a huge Map of parallel stages similar to a
       standard matrix build.
-    - |-
-      However in this case, it is not the static matrix definition fully dictating
+    - >-
+      However in this case, it is not the static matrix definition fully
+      dictating
+
       what should be built, but rather the build agents are expected to report
+
       capabilities with their labels -- such as which platform they run and what
+
       versions and implementations of toolkits are available to test with, and
+
       whether "everything" can be built or just certain profiles (not all OS
+
       distributions offer all of the dependencies that NUT can build against).
+
       The library also helps determine which C or C++ language revisions can be
+
       built according to GCC or CLANG version installed. Whenever a build
+
       starts, the NUT Jenkinsfile (consumer of jenkins-dynamatrix library) can
+
       evaluate what it can build today -- based on currently known population of
+
       build agents, and so constructs the matrix for testing.
     - |-
       A sibling [https://github.com/networkupstools/jenkins-swarm-nutci](https://github.com/networkupstools/jenkins-swarm-nutci)

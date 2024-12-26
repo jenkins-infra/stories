@@ -1,9 +1,7 @@
----
 map:
   location: Israel
   industries:
     - Education
-  name: Alex Kondrashov
   latitude: "31.9730015"
   longitude: "34.7925013"
 metadata:
@@ -27,6 +25,7 @@ metadata:
     - Robert, DevOps
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Alex Kondrashov - Alex Kondrashov
 body_content:
   title: Proactive developer solves integration problem with Jenkins.
   paragraphs:
@@ -71,4 +70,3 @@ quotes:
     image: ./quote.png
 image: center_for_educational_technology.png
 tag_line: Hook Automation
-submitted_by: Alex Kondrashov

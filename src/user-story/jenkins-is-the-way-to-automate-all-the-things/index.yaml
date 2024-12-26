@@ -1,9 +1,7 @@
----
 map:
   location: Florida, USA
   industries:
     - Technology
-  name: Christopher Duffy
   latitude: "27.8661364"
   longitude: "-82.32648089999999"
 metadata:
@@ -25,6 +23,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Christopher Duffy - Christopher Duffy
 body_content:
   title: A DevOps aficionado turns to Jenkins to automate all deployments and
     backups of the application and databases.
@@ -76,4 +75,3 @@ quotes:
     image: ./quote.png
 image: noun_Blog_2389123.png
 tag_line: Building, Deploying, and Automating Everything
-submitted_by: Christopher Duffy

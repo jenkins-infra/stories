@@ -1,9 +1,7 @@
----
 map:
   location: Denmark
   industries:
     - Insurance
-  name: Jon Brohauge
   latitude: "55.7957329"
   longitude: "12.1592079"
 metadata:
@@ -31,6 +29,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by: Jon Brohauge - Jon Brohauge
 body_content:
   title: Insurance engineers automate their build process with a
     highly-configurable Jenkins platform.
@@ -46,7 +45,8 @@ body_content:
       grave, i.e., from git-commit to deployable docker image stored in our
       private Docker repository.
 
-      *   To empower any developer to order a Jenkins runtime and have it in a working state within minutes.
+      *   To empower any developer to order a Jenkins runtime and have it in a
+      working state within minutes.
     - "**Solution & Results:**"
     - By combining the power of Jenkins, Docker, AWS, Java, and a sprinkle of
       Groovy, the team managed to create a fully automated process. Now any
@@ -83,4 +83,3 @@ quotes:
     image: ./quote.png
 image: topdanmark.png
 tag_line: Migrating from tightly coupled release processes to CI/CD
-submitted_by: Jon Brohauge

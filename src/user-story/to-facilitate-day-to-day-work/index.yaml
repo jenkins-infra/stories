@@ -1,9 +1,7 @@
----
 map:
   location: France
   industries:
     - Research
-  name: Anti Asko
   latitude: "46.2447613"
   longitude: "6.0231707"
 metadata:
@@ -26,6 +24,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+  authored_by: Anti Asko - Anti Asko
 body_content:
   title: Accelerating high-quality application delivery and reducing overhead by
     automating dev processes.
@@ -55,9 +54,12 @@ body_content:
       we are able to make sure no failures are faced while it deploys a
       provision dockerized instance.
 
-      *   We merged every branch trigger on dev as an integration build on dev branch. It automatically deploys a dev instance of our applications (with the help of Ansible software) to make sure everything works as expected.
+      *   We merged every branch trigger on dev as an integration build on dev
+      branch. It automatically deploys a dev instance of our applications (with
+      the help of Ansible software) to make sure everything works as expected.
 
-      *   We automated a release process with a series of Jenkins jobs that builds the applications and deploys them to the appropriate servers.
+      *   We automated a release process with a series of Jenkins jobs that
+      builds the applications and deploys them to the appropriate servers.
     - "By adding Jenkins into development, we significantly lowered our delivery
       time and removed overhead from the process. The integration with Gitlab
       and Artifactory was also a huge help in this endeavor. Since we could now
@@ -82,4 +84,3 @@ quotes:
     image: ./quote.png
 image: Asko_Cern-300x300.jpg
 tag_line: Automating Dev Processes with Jenkins
-submitted_by: Anti Asko

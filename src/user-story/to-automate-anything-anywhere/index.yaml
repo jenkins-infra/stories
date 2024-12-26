@@ -1,4 +1,3 @@
----
 metadata:
   title: With the threat of having to abandon Jenkins, this IT consultancy
     embraced it and can now build and deploy faster and without investing in
@@ -18,6 +17,7 @@ metadata:
     - Xcode
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Giacomo Gorgellino
 body_content:
   title: Rather than abandon Jenkins, this Italian IT consultancy opted to improve
     with Jenkins.
@@ -61,4 +61,3 @@ quotes:
     image: ./quote.png
 image: noun_jenkins_3451804.png
 tag_line: Building an IOS App in the Cloud
-submitted_by: Giacomo Gorgellino

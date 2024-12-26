@@ -1,9 +1,7 @@
----
 map:
   location: Texas, USA
   industries:
     - Semiconductors
-  name: Chaitanya Dwivedi
   latitude: "30.267153"
   longitude: "-97.7430608"
 metadata:
@@ -32,6 +30,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - and spoke with colleagues and peers
+  authored_by: Chaitanya Dwivedi - Chaitanya Dwivedi
 body_content:
   title: Reducing developer frustration with an automated solution that works with
     a variety of circumstances and operating systems.
@@ -107,4 +106,3 @@ quotes:
     image: ./quote.png
 image: 9jdJldY9_400x400.jpg
 tag_line: Continuous Delivery for Hardware IP
-submitted_by: Chaitanya Dwivedi

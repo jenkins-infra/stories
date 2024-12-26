@@ -1,9 +1,7 @@
----
 map:
   location: Spain
   industries:
     - Financial Services
-  name: Francisco De Lucas
   latitude: "40.4167754"
   longitude: "-3.7037902"
 metadata:
@@ -40,6 +38,7 @@ metadata:
     - Yam
   community_supports:
     - Relied on Jenkins.io websites & blogs and spoke with colleagues and peers
+  authored_by: Francisco De Lucas - Francisco De Lucas
 body_content:
   title: Enabling secure, transparent financial transactions with a powerful CI/CD.
   paragraphs:
@@ -96,4 +95,3 @@ quotes:
     image: ./quote.png
 image: zprvgl7erzquy50vv7bd.png
 tag_line: Agile, Adaptable CI/CD in the Financial Industry
-submitted_by: Francisco De Lucas

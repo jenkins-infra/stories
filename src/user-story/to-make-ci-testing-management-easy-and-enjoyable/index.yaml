@@ -1,9 +1,7 @@
----
 map:
   location: Belarus
   industries:
     - E-commerce & Retail
-  name: Konstantin Starovoytov
   latitude: "53.926182"
   longitude: "27.4520951"
 metadata:
@@ -13,6 +11,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
+  authored_by: Konstantin Starovoytov - Konstantin Starovoytov
 body_content:
   title: Increase product quality via automated testing and reporting.
   paragraphs:
@@ -49,9 +48,11 @@ body_content:
 
       *   automated-testing allows manual QA team to always stay a step ahead
 
-      *   error avoidance via newly-added preparation step prior to commencing automation tests
+      *   error avoidance via newly-added preparation step prior to commencing
+      automation tests
 
-      *   more effective output via newly-added post step for reporting results and getting results immediately via email
+      *   more effective output via newly-added post step for reporting results
+      and getting results immediately via email
 title: Jenkins is the way to make CI testing management easy and enjoyable
 date: 2020-08-12T09:20:25.000Z
 post_name: to-make-ci-testing-management-easy-and-enjoyable
@@ -63,4 +64,3 @@ quotes:
     image: ./quote.png
 image: issoft_logo_dark-blue@1x.png
 tag_line: Automating Testing and Reporting for Online Retailer
-submitted_by: Konstantin Starovoytov

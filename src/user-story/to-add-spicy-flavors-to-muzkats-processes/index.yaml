@@ -1,9 +1,7 @@
----
 map:
   location: Germany
   industries:
     - Advertising & Marketing
-  name: Erik Woitschig
   latitude: "52.5020327"
   longitude: "13.4315013"
 metadata:
@@ -26,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
+  authored_by: Erik Woitschig - Erik Woitschig
 body_content:
   title: Simplified CI/CD processes for a team with different system
     configurations allows for sharper focus on deliverables.
@@ -78,4 +77,3 @@ quotes:
     image: ./quote.png
 image: muzkat.png
 tag_line: Simplifying Build, Test and Deploy at a 3-person Creative Start-up
-submitted_by: Erik Woitschig

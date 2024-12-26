@@ -1,9 +1,7 @@
----
 map:
   location: Germany
   industries:
     - Business Process Modeling (BPM)
-  name: Ahmed AbouZaid
   latitude: "52.52000659999999"
   longitude: "13.404954"
 metadata:
@@ -30,6 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Ahmed AbouZaid - Ahmed AbouZaid
 body_content:
   title: Jenkins plugins and shared libraries give more autonomy, better
     visibility, and effective way to develop and maintain CI pipelines.
@@ -60,9 +59,13 @@ body_content:
       however it's first release was in 2012! So it's a bit old now and hard to
       learn by every developer
 
-      *   The old jobs used many technologies and required advanced knowledge in many different areas like Jenkins DSL, Groovy, OOP (which means it needs the whole team to be experts in those topics)
+      *   The old jobs used many technologies and required advanced knowledge in
+      many different areas like Jenkins DSL, Groovy, OOP (which means it needs
+      the whole team to be experts in those topics)
 
-      *   It's hard to onboard the new developers, because of the complexity of the old CI jobs. Developers didn't manage the CI jobs directly but with help from the Infrastructure team
+      *   It's hard to onboard the new developers, because of the complexity of
+      the old CI jobs. Developers didn't manage the CI jobs directly but with
+      help from the Infrastructure team
     - "**Managing costs and build time:**"
     - >-
       *   We run our CI jobs on Google Kubernetes Engine, using autoscaling with
@@ -70,9 +73,13 @@ body_content:
       means Jenkins agents could disappear anytime, but it saves about 80% of
       the costs)
 
-      *   We also have some long-running jobs, such as E2E tests and some slow databases that rely on retry mechanisms (to void run everything from the beginning)
+      *   We also have some long-running jobs, such as E2E tests and some slow
+      databases that rely on retry mechanisms (to void run everything from the
+      beginning)
 
-      *   One of the biggest challenges was that Jenkins declarative syntax doesn't have a proper retry mechanism for stages within the pipeline (which is necessary to handle short-lived preemptible machines)!
+      *   One of the biggest challenges was that Jenkins declarative syntax
+      doesn't have a proper retry mechanism for stages within the pipeline
+      (which is necessary to handle short-lived preemptible machines)!
     - "**Miscellaneous Items:**"
     - >-
       *   There is no complete visualization of the CI jobs in the
@@ -80,7 +87,8 @@ body_content:
 
       *   It's hard to know how much time is spent in CI jobs end-to-end
 
-      *   Pull request builds in the old style share the same Jenkins jobs (each PR triggers a build in the same job)
+      *   Pull request builds in the old style share the same Jenkins jobs (each
+      PR triggers a build in the same job)
     - "**Goal:** Developer enablement and enhancing CI experience."
     - "**Solution & Results:**"
     - "The following steps are what we did to address our varied requirements:"
@@ -92,7 +100,8 @@ body_content:
 
       *   Group the 400 jobs into 5 groups (Jenkinsfiles)
 
-      *   Added extra functionalities using Jenkins shared libraries (noticeably "conditional retry" for stages within declarative pipelines)
+      *   Added extra functionalities using Jenkins shared libraries (noticeably
+      "conditional retry" for stages within declarative pipelines)
 
       *   Used DSL jobs only for seed jobs (to automate loading Jenkinsfiles)
     - "**Super high learning curve:**"
@@ -100,15 +109,20 @@ body_content:
       *   Using Jenkins's "Declarative Snippet Generator," the developers could
       easily develop and maintain the CI pipeline
 
-      *   Jenkins shared libraries provided an abstraction layer for complex cases and reusable code, making it easier to onboard more new developers from the team
+      *   Jenkins shared libraries provided an abstraction layer for complex
+      cases and reusable code, making it easier to onboard more new developers
+      from the team
 
-      *   The developers who participated in the project were able to onboard the rest of the team quickly without any help from DevOps engineers
+      *   The developers who participated in the project were able to onboard
+      the rest of the team quickly without any help from DevOps engineers
     - "**Managing costs and build time:**"
     - >-
       *   Using Jenkins shared libraries, we developed our custom steps for code
       reuse and to manage costs effectively
 
-      *   One of the interesting custom steps was "conditional retry" which handles stage failure within the pipeline so no need to rerun the whole pipeline again but only the failed stage
+      *   One of the interesting custom steps was "conditional retry" which
+      handles stage failure within the pipeline so no need to rerun the whole
+      pipeline again but only the failed stage
     - "**Miscellaneous Items:**"
     - >-
       *   Jenkins Blue Ocean UI provided a much better experience to overview
@@ -119,13 +133,16 @@ body_content:
     - >-
       *   Jenkins declarative pipelines - Better and unified syntax
 
-      *   Jenkins shared libraries - Ability to extend Jenkins to fit unique use cases
+      *   Jenkins shared libraries - Ability to extend Jenkins to fit unique use
+      cases
 
       *   Jenkins Blue Ocean UI - Better visualization of the pipelines
 
-      *   Jenkins Configuration as Code - Provided a proper way to configure Jenkins easily
+      *   Jenkins Configuration as Code - Provided a proper way to configure
+      Jenkins easily
 
-      *   Jenkins Kubernetes plugin - Make use of Kubernetes as infrastructure for Jenkins
+      *   Jenkins Kubernetes plugin - Make use of Kubernetes as infrastructure
+      for Jenkins
     - "Here is the final result of one of the Jenkins files:"
     - <https://github.com/camunda/camunda-bpm-platform/blob/master/Jenkinsfile>
     - "More importantly, here were the results experienced by the team:"
@@ -133,11 +150,14 @@ body_content:
       *   More autonomy: the developers are able to make changes by themselves
       with no need for help from external teams (developer ennoblement)
 
-      *   A much better/clear overview of CI pipelines: the developers have a central place to see all details about their changes/PRs
+      *   A much better/clear overview of CI pipelines: the developers have a
+      central place to see all details about their changes/PRs
 
-      *   A unified way to develop and maintain CI pipelines effectively, even for the new team members, because of using the declarative syntax
+      *   A unified way to develop and maintain CI pipelines effectively, even
+      for the new team members, because of using the declarative syntax
 
-      *   A colossal knowledge gain about topics that helps it to perform better, like Kubernetes and infrastructure as code
+      *   A colossal knowledge gain about topics that helps it to perform
+      better, like Kubernetes and infrastructure as code
 title: Jenkins is the way to build CI/CD that fits advanced and unique use cases
 date: 2021-08-19T13:04:06.000Z
 post_name: to-build-ci-cd-that-fits-advanced-and-unique-use-cases
@@ -149,4 +169,3 @@ quotes:
     image: ./quote.png
 image: camunda-2048x2048.png
 tag_line: Advanced Declarative Pipelines for Workflow and Decision Automation Platform
-submitted_by: Ahmed AbouZaid

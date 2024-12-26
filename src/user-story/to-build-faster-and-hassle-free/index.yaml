@@ -1,4 +1,3 @@
----
 metadata:
   title: Manual testing led to longer build and upload cycles, security that could
     be improved, and frustrated developers. Automating testing was the way to
@@ -18,6 +17,7 @@ metadata:
     - Tox
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Brendan Elmes
 body_content:
   title: An international bank sees quicker development, improved security, and
     fewer errors thanks to Jenkins.
@@ -69,4 +69,3 @@ quotes:
     image: ./quote.png
 image: noun_banking_3439531.png
 tag_line: Quicker Development and Publishing of Conda Packages
-submitted_by: Brendan Elmes

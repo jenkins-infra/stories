@@ -1,4 +1,3 @@
----
 metadata:
   title: Taiwanese developers use Jenkins in Fraud detection assignments because
     it's easy to deploy and maintain, provides observability and transparency,
@@ -15,6 +14,7 @@ metadata:
     - Python
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Liwei Yang
 body_content:
   title: Developers return to Jenkins for improved data pipeline transparency,
     shorter release cycles and troubleshooting that's 10X faster.
@@ -45,17 +45,26 @@ body_content:
       thousands of businesses, and released fast. So I trust Jenkins is a robust
       tool for doing the critical things. Just execute it and enjoy.
 
-      2.  Observability and transparency. Jenkins' UI is very simple. I can see the status of a job easily and clearly. I can even customize the sheet to filter and organize different types of jobs. If something goes wrong, I can follow the UI by clicking the red light, and find the log of the red stage.
+      2.  Observability and transparency. Jenkins' UI is very simple. I can see
+      the status of a job easily and clearly. I can even customize the sheet to
+      filter and organize different types of jobs. If something goes wrong, I
+      can follow the UI by clicking the red light, and find the log of the red
+      stage.
 
-      3.  Extendibility. Jenkins has a powerful plugin system. It makes Jenkins stronger and with that, there are more possibilities. I can always find features I want in the plugins market.
+      3.  Extendibility. Jenkins has a powerful plugin system. It makes Jenkins
+      stronger and with that, there are more possibilities. I can always find
+      features I want in the plugins market.
     - "Speaking of capabilities:"
     - >-
       1.  UI Design. Jenkins UI is very, very, very simple, clear, and easy to
       use and understand.
 
-      2.  Run condition and conditional build. Data Pipelines are very complex. According to the result, I have to choose different build stages.
+      2.  Run condition and conditional build. Data Pipelines are very complex.
+      According to the result, I have to choose different build stages.
 
-      3.  Parameterized Scheduler and parameterized trigger. Rerun a data pipeline is very common. Parameterized trigger lets me easily rerun a pipeline with a customized parameter.
+      3.  Parameterized Scheduler and parameterized trigger. Rerun a data
+      pipeline is very common. Parameterized trigger lets me easily rerun a
+      pipeline with a customized parameter.
     - "Actually, it is not the first time I use Jenkins to manage data
       pipelines. And the results are always excellent. For this use case, we
       saw:"
@@ -63,7 +72,8 @@ body_content:
       *   Improved data pipelines transparency and observability as proven by my
       team lead
 
-      *   The development release cycle of a new pipeline shortened from 1 week to 1 day
+      *   The development release cycle of a new pipeline shortened from 1 week
+      to 1 day
 
       *   10X speed improvement of troubleshooting
 title: Jenkins is the way to MLOps
@@ -75,4 +85,3 @@ quotes:
     image: ./quote.png
 image: at.png
 tag_line: Fraud Detection Automation Framework
-submitted_by: Liwei Yang

@@ -1,9 +1,7 @@
----
 map:
   location: Canada
   industries:
     - Software Development
-  name: Jason Shaw
   latitude: "44.05918700000001"
   longitude: "-79.46125599999999"
 metadata:
@@ -26,6 +24,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Jason Shaw - Jason Shaw
 body_content:
   title: Jenkins helps deliver a more consistent, timely, and reliable product
     every sprint.
@@ -53,7 +52,8 @@ body_content:
 
       *   dev cycles have been shortened by a few days
 
-      *   improved product quality as proven by the lower number of bugs submitted post-build and after each release
+      *   improved product quality as proven by the lower number of bugs
+      submitted post-build and after each release
 title: Jenkins is the way to deliver our new releases on time!
 date: 2021-05-15T23:37:49.000Z
 post_name: to-deliver-our-new-releases-on-time
@@ -64,4 +64,3 @@ quotes:
     image: ./quote.png
 image: noun_AI_3565001-300x300.png
 tag_line: Deploying New Versions of Software
-submitted_by: Jason Shaw

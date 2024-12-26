@@ -1,4 +1,3 @@
----
 metadata:
   title: Just under 4 years old, Brix is one of the fastest-growing mid-sized
     companies in Israel. Now their software development process is just as fast
@@ -23,6 +22,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Avishai Malka
 body_content:
   title: A Jerusalem-based FinTech software house automates builds -- with no
     mouse clicks.
@@ -57,4 +57,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-12-06-at-10.30.52-AM.png
 tag_line: "Brix Software: Auto Deployer"
-submitted_by: Avishai Malka

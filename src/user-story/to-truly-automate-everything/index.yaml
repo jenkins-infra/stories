@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Information Technology
-  name: V Roshan Kumar Patro
   latitude: "19.3149618"
   longitude: "84.7940911"
 metadata:
@@ -33,6 +31,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: V Roshan Kumar Patro - V Roshan Kumar Patro
 body_content:
   title: "A lesson MlOps: integrating machine learning and DevOps with Jenkins."
   paragraphs:
@@ -105,4 +104,3 @@ quotes:
     image: ./quote.png
 image: 1_2ygK0klHWoYoqX_MKicA1g.jpeg
 tag_line: Automating Ml Models with Jenkins
-submitted_by: V Roshan Kumar Patro

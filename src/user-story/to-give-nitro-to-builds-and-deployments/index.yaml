@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Travel
-  name: Githin Joseph
   latitude: "10.1926394"
   longitude: "76.3869289"
 metadata:
@@ -28,6 +26,7 @@ metadata:
     - Maven
   community_supports:
     - Tapped into Jenkins.io websites & blogs
+  authored_by: Githin Joseph - Githin Joseph
 body_content:
   title: Increasing build frequency while reducing manual effort by 95%.
   paragraphs:
@@ -57,9 +56,11 @@ body_content:
     - >-
       *   We used the Jenkins pipeline to create a deployment pipeline
 
-      *   We used editable email to send notifications to teams at different stages of deployment
+      *   We used editable email to send notifications to teams at different
+      stages of deployment
 
-      *   We used remote SSH to handle different operations on our servers, including starting servers, stopping servers, copying new files, etc.
+      *   We used remote SSH to handle different operations on our servers,
+      including starting servers, stopping servers, copying new files, etc.
     - "We now have an excellent dashboard to track build and deployment
       activities. Jenkins helped us achieve the following results:"
     - |-
@@ -77,4 +78,3 @@ quotes:
     image: ./quote.png
 image: Travel-300x300.png
 tag_line: Automating build and deployment processes in airline passenger services
-submitted_by: Githin Joseph

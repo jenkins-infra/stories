@@ -1,9 +1,7 @@
----
 map:
   location: Indonesia
   industries:
     - Engineering
-  name: Mohammad Hanif
   latitude: "-7.919016900000001"
   longitude: "110.3785438"
 metadata:
@@ -28,6 +26,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Mohammad Hanif - Mohammad Hanif
 body_content:
   title: Software build & deploy automation allows for new feature development
     without distraction.
@@ -66,4 +65,3 @@ quotes:
     image: ./quote.png
 image: noun_ecommerce_3185946.png
 tag_line: Digital Transformation for eCommerce Clients in Indonesia
-submitted_by: Mohammad Hanif

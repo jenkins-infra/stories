@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Semiconductors
-  name: Mallanna Biradar
   latitude: "12.9715987"
   longitude: "77.5945626"
 metadata:
@@ -24,6 +22,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Mallanna Biradar - Mallanna Biradar
 body_content:
   title: Parallel execution helped reduce build and testing time from 3 days to
     overnight.
@@ -41,13 +40,17 @@ body_content:
       *   **Performance** - Overnight results were expected from Continuous
       Integration setup using Jenkins
 
-      *   **Reliability** - Results should be reliable enough to take further decisions on the package being tested
+      *   **Reliability** - Results should be reliable enough to take further
+      decisions on the package being tested
 
-      *   **Stability** - Execution status should be stable between different runs
+      *   **Stability** - Execution status should be stable between different
+      runs
 
-      *   **Duration** - We wanted testing to do more in less time, which was achieved using the Jenkins parallelization concept
+      *   **Duration** - We wanted testing to do more in less time, which was
+      achieved using the Jenkins parallelization concept
 
-      *   **Confidence** - Last but not least, we were hoping to build confidence in using Jenkins for management, users, and other stakeholders
+      *   **Confidence** - Last but not least, we were hoping to build
+      confidence in using Jenkins for management, users, and other stakeholders
     - "**Goals:** The main goal of this project was to test every new technology
       package automatically overnight. But we were also interested in:"
     - |-
@@ -70,9 +73,11 @@ body_content:
     - >-
       *   Our build and testing time is reduced from 3 days to overnight
 
-      *   We achieved automated continuous integration of technology package testing
+      *   We achieved automated continuous integration of technology package
+      testing
 
-      *   We achieved parallel execution with the Jenkins Parallellization concept
+      *   We achieved parallel execution with the Jenkins Parallellization
+      concept
 
       *   We achieved stability between different releases
 title: Jenkins is the way to test software packages overnight
@@ -89,4 +94,3 @@ quotes:
     image: ./quote.png
 image: noun_Configuration-File_1907178-300x300.png
 tag_line: Technology Package Testing with Jenkins
-submitted_by: Mallanna Biradar

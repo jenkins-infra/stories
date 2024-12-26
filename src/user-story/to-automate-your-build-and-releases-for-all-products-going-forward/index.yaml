@@ -1,4 +1,3 @@
----
 metadata:
   title: Software development team accelerates build and releases processes with
     Jenkins.
@@ -14,6 +13,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Ganesh Mulik
 body_content:
   title: Keeping up with the pace of integrations with a smarter build and release
     process.
@@ -53,4 +53,3 @@ quotes:
     image: ./quote.png
 image: noun_automation-testing_3538848.png
 tag_line: Manufacturing Integration Development
-submitted_by: Ganesh Mulik

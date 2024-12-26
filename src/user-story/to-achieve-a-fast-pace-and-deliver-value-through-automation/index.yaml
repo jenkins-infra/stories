@@ -1,4 +1,3 @@
----
 metadata:
   title: For this leading customer automation platform in Latin America,
     automation was the key to DevOps success.
@@ -19,6 +18,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Alexandre Mioranza
 body_content:
   title: Automating – and accelerating – application builds, delivery and
     infrastructure to deliver value.
@@ -43,7 +43,8 @@ body_content:
 
       *   Customer-generated API keys
 
-      *   Customer notification of all the information they need to access and use the platform
+      *   Customer notification of all the information they need to access and
+      use the platform
     - We implemented this using lots of plugins that we were able to connect to
       our other systems. We built very flexible pipelines using Jenkins, and we
       developed groovy functions to encapsulate business logic and many other
@@ -65,4 +66,3 @@ quotes:
     image: ./quote.png
 image: noun_Digital-Agency_1275969.png
 tag_line: Zenvia Conversational Cloud
-submitted_by: Alexandre Mioranza

@@ -1,4 +1,3 @@
----
 metadata:
   title: The development team of a Bulgarian bank team created a simple way to use
     pipelines for CI/CD with the help of Jenkins.
@@ -18,6 +17,7 @@ metadata:
     - Emil Vulkov, Senior System Administrator
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Lyubomir Stanev
 body_content:
   title: Finance company overcomes development challenges with a new
     Jenkins-inspired CI/CD.
@@ -56,4 +56,3 @@ quotes:
     image: ./quote.png
 image: noun_Online-Banking_1907436.png
 tag_line: CAF Project (CI/CD Implementation)
-submitted_by: Lyubomir Stanev

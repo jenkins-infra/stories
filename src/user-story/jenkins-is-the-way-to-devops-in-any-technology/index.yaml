@@ -1,9 +1,7 @@
----
 map:
   location: Spain
   industries:
     - Cloud Computing
-  name: Jorge Hidalgo
   latitude: "36.721261"
   longitude: "-4.4212655"
 metadata:
@@ -44,6 +42,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by: Jorge Hidalgo - Jorge Hidalgo
 body_content:
   title: Building a DevOps platform to serve ongoing client needs.
   paragraphs:
@@ -89,4 +88,3 @@ quotes:
     image: ./quote.png
 image: noun_quantum-computing_2619347.png
 tag_line: Technology for the Future
-submitted_by: Jorge Hidalgo

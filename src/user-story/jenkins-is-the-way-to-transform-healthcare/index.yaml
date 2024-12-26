@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Healthcare
-  name: Ashutosh Pattanaik
   latitude: "18.5577446"
   longitude: "73.9124674"
 metadata:
@@ -34,6 +32,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Ashutosh Pattanaik - Ashutosh Pattanaik
 body_content:
   title: Jenkins bridged the gap between the Dev and Operations team.
   paragraphs:
@@ -64,17 +63,23 @@ body_content:
       *   Jenkins Job Config plugin - To restore accidentally deleted pipelines.
       Saved my life once!
 
-      *   BlueOcean - Even the non-tech stakeholders can easily visualize the pipelines and can understand the underlying technique.
+      *   BlueOcean - Even the non-tech stakeholders can easily visualize the
+      pipelines and can understand the underlying technique.
 
-      *   GitHub Integration - The webhooks provided the developers with the info that they needed to see right on the PRs. They didn't need to go to Jenkins.
+      *   GitHub Integration - The webhooks provided the developers with the
+      info that they needed to see right on the PRs. They didn't need to go to
+      Jenkins.
 
-      *   Email extension plugin - To customize the emails sent to notify about the build status.
+      *   Email extension plugin - To customize the emails sent to notify about
+      the build status.
 
-      *   Folders plugin - Easy folder creation to organize the view according to the type of job.
+      *   Folders plugin - Easy folder creation to organize the view according
+      to the type of job.
 
       *   LDAP plugin - To authenticate users.
 
-      *   Docker and Kubernetes integration - For quick deployment into different environments.
+      *   Docker and Kubernetes integration - For quick deployment into
+      different environments.
     - "Results seen:"
     - >-
       *   frictionless integration with version control, and notification to dev
@@ -98,4 +103,3 @@ quotes:
     image: ./quote.png
 image: noun_diagnosis_2592165.png
 tag_line: DevOps Transformation
-submitted_by: Ashutosh Pattanaik

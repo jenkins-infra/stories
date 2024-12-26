@@ -1,9 +1,7 @@
----
 map:
   location: China
   industries:
     - E-commerce & Retail
-  name: Xuefeng Shi
   latitude: "39.921469"
   longitude: "116.443107"
 metadata:
@@ -37,6 +35,7 @@ metadata:
     - Relied on Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+  authored_by: Xuefeng Shi - Xuefeng Shi
 body_content:
   title: Improving the velocity of end-to-end software delivery with a high
     availability CD platform.
@@ -94,4 +93,3 @@ quotes:
     image: ./quote.png
 image: Shi_JDcom-300x300.jpg
 tag_line: Improve the Velocity of Software Delivery
-submitted_by: Xuefeng Shi

@@ -1,9 +1,7 @@
----
 map:
   location: France
   industries:
     - Digital Technology Provider
-  name: Aidan Moriarty
   latitude: "43.42519"
   longitude: "6.76837"
 metadata:
@@ -31,6 +29,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Aidan Moriarty - Aidan Moriarty
 body_content:
   title: Deploying timetables, station, and local stop info, and track services in
     realtime using CI/CD & Jenkins.
@@ -84,7 +83,8 @@ body_content:
 
       *   Jenkins-as-code has freed teams up to experiment more freely
 
-      *   Teams are more self-empowered to provision and support their own builds
+      *   Teams are more self-empowered to provision and support their own
+      builds
 title: Jenkins is the way to bring our community together
 date: 2021-04-15T22:24:46.000Z
 post_name: to-bring-our-community-together
@@ -97,4 +97,3 @@ quotes:
     image: ./quote.png
 image: dell-logo-1.jpg
 tag_line: "NEBULA: New Build Infrastructure for All"
-submitted_by: Aidan Moriarty

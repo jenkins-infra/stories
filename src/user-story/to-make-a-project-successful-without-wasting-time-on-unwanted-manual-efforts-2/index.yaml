@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Telecomunications
-  name: Brijnandan Singh Chauhan
   latitude: "30.3738609"
   longitude: "78.4324809"
 metadata:
@@ -35,6 +33,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Brijnandan Singh Chauhan - Brijnandan Singh Chauhan
 body_content:
   title: Build and deployment cycles slashed by 75% for a large telecom company
   paragraphs:
@@ -84,9 +83,11 @@ body_content:
     - >-
       *   feedback is received 15 times faster
 
-      *   build and deployment cycle has been reduced from 100 hours to just 24 hours
+      *   build and deployment cycle has been reduced from 100 hours to just 24
+      hours
 
-      *   deployment scripting was reduced by the availability of different plugins
+      *   deployment scripting was reduced by the availability of different
+      plugins
 
       *   significant time was saved with plugin integrations
 title: Jenkins is the way to make a project successful without wasting time on
@@ -101,4 +102,3 @@ quotes:
     image: ./quote.png
 image: noun_efficiency_2754532-768x768.png
 tag_line: Microservices Automation for Telecom Project
-submitted_by: Brijnandan Singh Chauhan

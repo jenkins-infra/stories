@@ -1,9 +1,7 @@
----
 map:
   location: Chattanooga, Tennessee, USA
   industries:
     - Healthcare
-  name: Peter Carenza
   latitude: "35.0456297"
   longitude: "-85.3096802"
 metadata:
@@ -14,6 +12,7 @@ metadata:
     - Maven
     - npm
     - MSBuild
+  authored_by: Peter Carenza - Peter Carenza
 body_content:
   title: Building a better software delivery lifecycle for healthcare insurance.
   paragraphs:
@@ -63,13 +62,17 @@ body_content:
     - >-
       *   shortened release cycles from months to days.
 
-      *   reduced our service call frequency by half with the use of Build Failure Analysis
+      *   reduced our service call frequency by half with the use of Build
+      Failure Analysis
 
-      *   widespread patch testing has been automated, reducing the need to have a rep from every development team on a patch validation
+      *   widespread patch testing has been automated, reducing the need to have
+      a rep from every development team on a patch validation
 
-      *   by incorporating an open-source Jenkins solution over Jazz build engine, we saved thousands of dollars on licenses
+      *   by incorporating an open-source Jenkins solution over Jazz build
+      engine, we saved thousands of dollars on licenses
 
-      *   nearly elimination of custom build scripts in favor of standardized wide scope solutions
+      *   nearly elimination of custom build scripts in favor of standardized
+      wide scope solutions
 title: Jenkins is the way to take the pressure off your dev teams
 date: 2020-08-07T19:02:49.000Z
 post_name: to-take-the-pressure-off-your-dev-teams
@@ -81,4 +84,3 @@ quotes:
     image: ./quote.png
 image: noun_diagnosis_2590488-300x300.png
 tag_line: Accelerating and Enhancing Customer Care
-submitted_by: Peter Carenza

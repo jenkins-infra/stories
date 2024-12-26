@@ -1,4 +1,3 @@
----
 metadata:
   title: This France-based open software community gets a CI lift with a Jenkins
     assist.
@@ -25,6 +24,7 @@ metadata:
     - Ninja
     - Docker
     - Podman
+  authored_by: Raphaël Defosseux
 body_content:
   title: Jenkins fuels a fully systematic and automated process that is quite
     transparent for the developers.
@@ -75,7 +75,8 @@ body_content:
 
       *   Easier (still not that easy) work for the integrators
 
-      *   A fully systematic and automated process that is quite transparent for the developers
+      *   A fully systematic and automated process that is quite transparent for
+      the developers
 
       *   In the end, better quality overall!
 title: Jenkins is the way to better contributions on a global open-source project!
@@ -87,4 +88,3 @@ quotes:
     image: ./quote.png
 image: bUT6aWx__400x400.jpg
 tag_line: Open-source 4G/5G Wireless Software Stack
-submitted_by: Raphaël Defosseux

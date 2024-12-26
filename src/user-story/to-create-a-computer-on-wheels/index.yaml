@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Education
-  name: Garima Singh
   latitude: "29.9617848"
   longitude: "77.5569265"
 metadata:
@@ -25,6 +23,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Garima Singh - Garima Singh
 body_content:
   title: Becoming an engineer on the heels of a Jenkins test-bed.
   paragraphs:
@@ -68,4 +67,3 @@ quotes:
     image: ./quote.png
 image: noun_bank-300x300.png
 tag_line: Building An Engineering Portfolio
-submitted_by: Garima Singh

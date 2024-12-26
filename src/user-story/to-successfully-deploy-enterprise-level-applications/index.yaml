@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Financial Services
-  name: Debobrata Bose
   latitude: "13.0218597"
   longitude: "77.5671423"
 metadata:
@@ -28,6 +26,7 @@ metadata:
     - Govind, Software Engineer
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Debobrata Bose - Debobrata Bose
 body_content:
   title: IT services for an international bank requires the support of a dynamic
     CI/CD pipeline
@@ -66,7 +65,10 @@ body_content:
       *   Create an Azure DevOps Build Pipeline for Jenkins.
 
 
-      *   Create a Personal Access Token for connecting Jenkins and Azure DevOps. Then set up a Jenkins Build Project. Test the Jenkins Build. Set up an Azure DevOps pipeline release. Trigger the release with a Post Build Action in Jenkins.
+      *   Create a Personal Access Token for connecting Jenkins and Azure
+      DevOps. Then set up a Jenkins Build Project. Test the Jenkins Build. Set
+      up an Azure DevOps pipeline release. Trigger the release with a Post Build
+      Action in Jenkins.
 
 
       *   We have used the following plugins.
@@ -96,4 +98,3 @@ quotes:
     image: ./quote.png
 image: noun_Online-Banking_1569337.png
 tag_line: Jenkins + Azure = Robust CI/CD
-submitted_by: Debobrata Bose

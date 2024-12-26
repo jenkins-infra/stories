@@ -1,9 +1,7 @@
----
 map:
   location: Israel
   industries:
     - Internet of Things (IoT)
-  name: Oleg Tikhonov
   latitude: "32.015833"
   longitude: "34.787384"
 metadata:
@@ -28,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
+  authored_by: Oleg Tikhonov - Oleg Tikhonov
 body_content:
   title: Improving product quality via a unified CI/CD process for DevOps.
   paragraphs:
@@ -89,4 +88,3 @@ quotes:
     image: ./quote.png
 image: noun_semiconductor_3436110-300x300.png
 tag_line: Unifying international teams with a shared CI/CD process
-submitted_by: Oleg Tikhonov

@@ -1,9 +1,7 @@
----
 map:
   location: Virginia, USA
   industries:
     - Financial Services
-  name: Eric Chapman
   latitude: "36.70983349999999"
   longitude: "-81.9773482"
 metadata:
@@ -34,6 +32,7 @@ metadata:
     - Liatrio
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Eric Chapman - Eric Chapman
 body_content:
   title: How enterprises can leverage containers to create a stable and scalable
     CI/CD environment.
@@ -107,17 +106,25 @@ body_content:
     - >-
       *   Teams are already familiar with creating and editing Jenkinsfiles.
 
-      *   Recipients of the Jenkins master (a business unit, DevOps enablement team, or delivery team) understand and accept the responsibility of maintaining a Jenkins master.
+      *   Recipients of the Jenkins master (a business unit, DevOps enablement
+      team, or delivery team) understand and accept the responsibility of
+      maintaining a Jenkins master.
 
-      *   Teams will have limited ability to manage the master - plugins and configuration changes will be handled via InnerSource.
+      *   Teams will have limited ability to manage the master - plugins and
+      configuration changes will be handled via InnerSource.
 
-      *   The Jenkins configuration as code plugin will be leveraged to configure the master.
+      *   The Jenkins configuration as code plugin will be leveraged to
+      configure the master.
 
-      *   All Jenkins logs will be persisted in a logging system such as ElkStack.
+      *   All Jenkins logs will be persisted in a logging system such as
+      ElkStack.
 
-      *   Pipeline executions aren't memory intensive. Example: a Jenkins system based on Kubernetes can't support automation runs that require more than 4GB of memory.
+      *   Pipeline executions aren't memory intensive. Example: a Jenkins system
+      based on Kubernetes can't support automation runs that require more than
+      4GB of memory.
 
-      *   A managed Kubernetes, already in place, will host the client implementation
+      *   A managed Kubernetes, already in place, will host the client
+      implementation
     - "**Recommendations:**"
     - >-
       *   The implementation strategy depends on the abilities and maturity of
@@ -128,15 +135,37 @@ body_content:
       less dependent on a centralized team, then Jenkins masters can be managed
       at the business unit or team levels.
 
-      *   All Jenkins masters should start with the same base image - the base masters will grow via InnerSourcing, and changes should be persisted only via pull request to the master branch.
+      *   All Jenkins masters should start with the same base image - the base
+      masters will grow via InnerSourcing, and changes should be persisted only
+      via pull request to the master branch.
 
-      *   Ephemeral environments exacerbate the challenge with secrets. As a result, an API-based key and secret management solution should be required to avoid exposing secrets in code. Organizations can leverage Hashicorp Vault to store all of the secrets for the cluster and the namespaces within the cluster.
+      *   Ephemeral environments exacerbate the challenge with secrets. As a
+      result, an API-based key and secret management solution should be required
+      to avoid exposing secrets in code. Organizations can leverage Hashicorp
+      Vault to store all of the secrets for the cluster and the namespaces
+      within the cluster.
 
-      *   If teams are not ready to manage their own Jenkins master, then a default template Jenkinsfile should be provided for the team, thus enabling them to learn, experiment, and migrate their product at their own pace without delivery disruptions. Liatrio's approach to team enablement is the Dojo-based "teach a team to fish" approach, which fosters organizational transformation and a new way of working on a Delivery Teams existing product and backlog.
+      *   If teams are not ready to manage their own Jenkins master, then a
+      default template Jenkinsfile should be provided for the team, thus
+      enabling them to learn, experiment, and migrate their product at their own
+      pace without delivery disruptions. Liatrio's approach to team enablement
+      is the Dojo-based "teach a team to fish" approach, which fosters
+      organizational transformation and a new way of working on a Delivery Teams
+      existing product and backlog.
 
-      *   We strongly suggest defining your Kubernetes infrastructure as well as your Jenkins infrastructure as code. Defining all the components in your Jenkins infrastructure as code helps to facilitate configuration changes and upgrades all of the Jenkins master as the number of Jenkins instances in your infrastructure grows. To manage this infrastructure as code, we recommend using Terraform. The key benefit of using Terraform is that the state of your managed infrastructure along with all of the Jenkins instances for each team is saved and can be compared before rolling out new changes. This allows for easier configuration changes and updates to Jenkins when rolling out updates.
+      *   We strongly suggest defining your Kubernetes infrastructure as well as
+      your Jenkins infrastructure as code. Defining all the components in your
+      Jenkins infrastructure as code helps to facilitate configuration changes
+      and upgrades all of the Jenkins master as the number of Jenkins instances
+      in your infrastructure grows. To manage this infrastructure as code, we
+      recommend using Terraform. The key benefit of using Terraform is that the
+      state of your managed infrastructure along with all of the Jenkins
+      instances for each team is saved and can be compared before rolling out
+      new changes. This allows for easier configuration changes and updates to
+      Jenkins when rolling out updates.
 
-      *   An enterprise should consider using ephemeral Jenkins masters in the following two scenarios:
+      *   An enterprise should consider using ephemeral Jenkins masters in the
+      following two scenarios:
     - >-
       1.  **Scenario One -** Start with a centralized solution and then
       organically scale out to multiple masters. DevOps is usually centralized
@@ -144,7 +173,8 @@ body_content:
       their own. The initial centralized system should be configured via
       automation to ensure a smooth transition to the ephemeral Jenkins masters.
 
-      2.  **Scenario Two -** With an implementation vehicle in place such as a Dojo, delivery teams can learn how to administer their own master.
+      2.  **Scenario Two -** With an implementation vehicle in place such as a
+      Dojo, delivery teams can learn how to administer their own master.
     - "**Implementation Details/Approach - We recommend implementing ephemeral
       Jenkins masters/agents for each product/business unit using Kubernetes.
       Engineering teams will have more autonomy and control over how Jenkins
@@ -174,7 +204,8 @@ body_content:
     - >-
       *   Ensure Jenkins pipelines execute on containers in Kubernetes.
 
-      *   Source control Kubernetes managed service configuration and deployment scripting for the Jenkins containers.
+      *   Source control Kubernetes managed service configuration and deployment
+      scripting for the Jenkins containers.
 
       *   Ensure each team has its own namespace in the Kubernetes cluster.
 
@@ -182,7 +213,8 @@ body_content:
 
       *   Create a system namespace in the cluster for any shared resources.
 
-      *   Built-in managed Kubernetes services (e.g., AKS, EKS, GKE, and OpenShift).
+      *   Built-in managed Kubernetes services (e.g., AKS, EKS, GKE, and
+      OpenShift).
     - "**Results:** In the end, engineering teams will gain more autonomy and
       control over how their Jenkins instances are configured today in terms of
       plugins and availability. Teams will be able to make decisions about
@@ -207,9 +239,17 @@ body_content:
       time. This scalable solution will also provide on-demand scaling for
       Jenkins build agents.
 
-      *   The base configuration of the Jenkins master will be controlled by a centralized tools team, standardizing the Jenkins master across the organization. Product teams will be able to provide updates via Innersource pull requests, giving them some autonomy over their Jenkins masters. As a result, delivery teams will have a more scalable Jenkins solution, a replicable process, and greater availability of Jenkins instances, as well as decrease the blast radius of downtime and outages of Jenkins due to distributed master nodes.
+      *   The base configuration of the Jenkins master will be controlled by a
+      centralized tools team, standardizing the Jenkins master across the
+      organization. Product teams will be able to provide updates via
+      Innersource pull requests, giving them some autonomy over their Jenkins
+      masters. As a result, delivery teams will have a more scalable Jenkins
+      solution, a replicable process, and greater availability of Jenkins
+      instances, as well as decrease the blast radius of downtime and outages of
+      Jenkins due to distributed master nodes.
 
-      *   The centralized DevOps tools team is able to better scale Jenkins throughout the enterprise.
+      *   The centralized DevOps tools team is able to better scale Jenkins
+      throughout the enterprise.
 title: Jenkins is the way to build a scalable CI/CD orchestration platform
 date: 2021-07-12T21:45:45.000Z
 post_name: to-build-a-scalable-ci-cd-orchestration-platform
@@ -222,4 +262,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-07-12-at-6.00.32-PM.png
 tag_line: Implementing Ephemeral Jenkins with Kubernetes
-submitted_by: Eric Chapman

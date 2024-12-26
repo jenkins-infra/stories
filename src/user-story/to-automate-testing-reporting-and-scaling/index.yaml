@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Artificial Intelligence (AI)
-  name: Anand Bhagwat
   latitude: "18.5204303"
   longitude: "73.8567437"
 metadata:
@@ -28,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
+  authored_by: Anand Bhagwat - Anand Bhagwat
 body_content:
   title: Automate load and functional testing throughout the entire CI/CD process.
   paragraphs:
@@ -87,4 +86,3 @@ quotes:
     image: ./quote.png
 image: noun_AI-KNOWLEDGE_1869999-300x300.png
 tag_line: Automation of LoadRunner Functional Testing With Jenkins
-submitted_by: Anand Bhagwat

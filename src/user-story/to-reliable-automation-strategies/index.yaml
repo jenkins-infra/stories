@@ -1,4 +1,3 @@
----
 metadata:
   title: Migration to the cloud of a software-as-a-service solution with the help
     of Jenkins.
@@ -20,6 +19,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: \ Adrian Gramada\
 body_content:
   title: A SaaS platform to support collaborative assessment, planning and
     tracking solutions for support workers and their service users.
@@ -63,7 +63,8 @@ body_content:
 
       5.  Sonarqube as the code quality check tool
 
-      6.  Sonatype Nexus as the repository of all the artifacts (the Java-based microservices as well as Angular components)
+      6.  Sonatype Nexus as the repository of all the artifacts (the Java-based
+      microservices as well as Angular components)
 
       7.  Spinnaker as the continuous delivery platform
     - "**Goals:** Infrastructure to support our software solution: APT."
@@ -106,26 +107,33 @@ body_content:
       resources such as WebApps, Storage accounts, Databricks, Azure Functions,
       etc.
 
-      *   Git integration and the ability to configure all pipeline jobs to pull the groovy scripts from SCM locations
+      *   Git integration and the ability to configure all pipeline jobs to pull
+      the groovy scripts from SCM locations
 
-      *   The "Pipeline script from SCM" option, rather than having them hard-coded in each job
+      *   The "Pipeline script from SCM" option, rather than having them
+      hard-coded in each job
 
-      *   The integrated management of Java, Maven, Sonarqube, Git, Powershell, and Docker
+      *   The integrated management of Java, Maven, Sonarqube, Git, Powershell,
+      and Docker
 
       *   The seamless integration with Sonatype Nexus
 
       *   Credentials management
 
-      *   Jenkins plugins such as Azure App Service Plugin, Azure Container Service Plugin, Azure Function Plugin, Docker Pipeline, and many more
+      *   Jenkins plugins such as Azure App Service Plugin, Azure Container
+      Service Plugin, Azure Function Plugin, Docker Pipeline, and many more
     - "We had fantastic results, including:"
     - >-
       *   500+ builds within a day on development and test environments.
 
       *   Complete control of rollback strategy and related processes.
 
-      *   Automation of other admin tasks. Company website deployment whenever new changes are required, local docker registry purge, and SSL certificate monitoring tool implemented with a bash script and a declarative pipeline.
+      *   Automation of other admin tasks. Company website deployment whenever
+      new changes are required, local docker registry purge, and SSL certificate
+      monitoring tool implemented with a bash script and a declarative pipeline.
 
-      *   Automation of all Angular/Node.js-based front-end applications into Azure - as a WebApp component.
+      *   Automation of all Angular/Node.js-based front-end applications into
+      Azure - as a WebApp component.
 
       *   Automation of Java-based artifacts into Azure DataBricks.
 title: Jenkins is the way to reliable automation strategies
@@ -138,4 +146,3 @@ quotes:
     image: ./quote.png
 image: noun_Workflow_2284479.png
 tag_line: APT Service Delivery
-submitted_by: \ Adrian Gramada\

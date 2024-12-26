@@ -1,9 +1,7 @@
----
 map:
   location: Belgium
   industries:
     - DevOps & Machine Learning
-  name: Koen Poppe
   latitude: ""
   longitude: ""
 metadata:
@@ -22,6 +20,7 @@ metadata:
     - CMake
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Koen Poppe - Koen Poppe
 body_content:
   title: Once set up, Jenkins is like a butler, saving the developers from
     endlessly repeating manual tests.
@@ -55,21 +54,32 @@ body_content:
       *   Support for fully custom Linux scripts to automate some very custom
       steps in the build process.
 
-      *   Support for source control systems out of the box, Mercurial in our case, but also older systems like SVN.
+      *   Support for source control systems out of the box, Mercurial in our
+      case, but also older systems like SVN.
 
-      *   Multi-branch projects: set up the build once and replicate it for every new branch in the project. I can't imagine doing this manually. Also, shared pipeline libraries make it easier to repeat the same build steps for similar projects, reducing the setup scripts to only that specific to the project.
+      *   Multi-branch projects: set up the build once and replicate it for
+      every new branch in the project. I can't imagine doing this manually.
+      Also, shared pipeline libraries make it easier to repeat the same build
+      steps for similar projects, reducing the setup scripts to only that
+      specific to the project.
 
-      *   Build monitor: an overview of all projects with an indication of what is working and what is not. We have a separate screen in the office that shows this permanently, making it visible to our team and colleagues from other departments so all can see how our process is going.
+      *   Build monitor: an overview of all projects with an indication of what
+      is working and what is not. We have a separate screen in the office that
+      shows this permanently, making it visible to our team and colleagues from
+      other departments so all can see how our process is going.
     - "The results were amazing:"
     - >-
       *   Tests are run automated for all branches, ensuring regressions are
       detected early.
 
-      *   Products are built for all configurations without the need for a developer to do the setup.
+      *   Products are built for all configurations without the need for a
+      developer to do the setup.
 
-      *   Precious developer's time is kept for developing, not for endlessly repeating tests manually.
+      *   Precious developer's time is kept for developing, not for endlessly
+      repeating tests manually.
 
-      *   The build monitor screen is shown in the office, making it extra visible how the health of the software is.
+      *   The build monitor screen is shown in the office, making it extra
+      visible how the health of the software is.
 title: Jenkins is the way to automate everything repetitive, cumbersome, or laborious
 date: 2021-03-07T15:35:35.000Z
 post_name: to-understand-and-simplify-your-software-workflows
@@ -80,4 +90,3 @@ quotes:
     image: ./quote.png
 image: noun_Butler_130896.png
 tag_line: Safeguarding Quality Using Jenkins
-submitted_by: Koen Poppe

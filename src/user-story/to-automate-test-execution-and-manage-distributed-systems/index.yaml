@@ -1,9 +1,7 @@
----
 map:
   location: Hungary
   industries:
     - Telecomunications
-  name: Gábor Barna
   latitude: "47.497912"
   longitude: "19.040235"
 metadata:
@@ -27,6 +25,7 @@ metadata:
     - Custom Tools
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Gábor Barna - Gábor Barna
 body_content:
   title: Multimedia telephony application server supported with powerful CI/CD.
   paragraphs:
@@ -69,4 +68,3 @@ quotes:
     image: ./quote.png
 image: noun_Download_3466871.png
 tag_line: Job-As-Code Building Blocks
-submitted_by: Gábor Barna

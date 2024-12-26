@@ -1,9 +1,7 @@
----
 map:
   location: India
   industries:
     - Product Lifecycle Management (PLM)
-  name: Nilesh Attarde
   latitude: "18.5204303"
   longitude: "73.8567437"
 metadata:
@@ -29,6 +27,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Nilesh Attarde - Nilesh Attarde
 body_content:
   title: Fast deployment and shorter build times on AWS Cloud FARGATE containers.
   paragraphs:
@@ -69,4 +68,3 @@ quotes:
     image: ./quote.png
 image: noun_Monitor_3487887-1.png
 tag_line: Supporting a Product Lifecycle Management Application
-submitted_by: Nilesh Attarde

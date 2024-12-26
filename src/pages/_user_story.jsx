@@ -69,7 +69,7 @@ export const pageQuery = graphql`
             slug
             date
             post_name
-            submitted_by
+            authored_by
             tag_line
             title
             image {

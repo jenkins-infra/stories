@@ -1,9 +1,7 @@
----
 map:
   location: Germany
   industries:
     - E-commerce & Retail
-  name: Leandro Martins
   latitude: "48.7904472"
   longitude: "11.4978895"
 metadata:
@@ -30,6 +28,7 @@ metadata:
     - Composer
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Leandro Martins - Leandro Martins
 body_content:
   title: Reducing infrastructure costs and accelerating pipeline delivery by
     nearly half.
@@ -57,7 +56,8 @@ body_content:
 
       *   reduced resource costs by 40%
 
-      *   provided pipeline visualization – using Blue Ocean – which was helpful for developers
+      *   provided pipeline visualization – using Blue Ocean – which was helpful
+      for developers
 title: Jenkins is the way to save money
 date: 2020-07-28T15:32:03.000Z
 post_name: to-save-money
@@ -69,4 +69,3 @@ quotes:
     image: ./quote.png
 image: noun_online-shopping_1845728-300x300.png
 tag_line: Jenkins and Amazon EC2 Dynamic Agents
-submitted_by: Leandro Martins

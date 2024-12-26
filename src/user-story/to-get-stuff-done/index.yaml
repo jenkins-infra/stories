@@ -1,9 +1,7 @@
----
 map:
   location: Sofia, Bulgaria
   industries:
     - Financial Services
-  name: Kalin Dimitrov
   latitude: "42.66410909999999"
   longitude: "23.2885213"
 metadata:
@@ -29,6 +27,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
+  authored_by: Kalin Dimitrov - Kalin Dimitrov
 body_content:
   title: Accelerating core software development.
   paragraphs:
@@ -59,4 +58,3 @@ quotes:
     image: ./quote.png
 image: noun_Internet-Banking_1719610-300x300.png
 tag_line: Time to CI/CD​
-submitted_by: Kalin Dimitrov
