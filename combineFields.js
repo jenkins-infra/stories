@@ -5,9 +5,7 @@ const yaml = require('yaml');
 function combineFields(filePath) {
     try {
         const file = fs.readFileSync(filePath, 'utf8');
-        let data = yaml.parse(file);
-
-        console.log(`Original data for file ${filePath}:`, data);
+        const data = yaml.parse(file);
 
         let authoredBy = null;
         if (data.submitted_by) {
@@ -24,23 +22,17 @@ function combineFields(filePath) {
             }
             data.metadata.authored_by = authoredBy;
 
-            console.log(`Modified data for file ${filePath}:`, data);
-
             const updatedFile = yaml.stringify(data);
             fs.writeFileSync(filePath, updatedFile, 'utf8');
-            console.log(`Updated file: ${filePath}`);
-        } else {
-            console.log(`No 'submitted_by' or 'combined_name_submitted_by' field found in file ${filePath}`);
         }
     } catch (error) {
-        console.error(`Error processing file ${filePath}:`, error);
+        // Handle error if needed
     }
 }
 
 function updateAllYamlFiles(directory) {
     fs.readdir(directory, (err, files) => {
         if (err) {
-            console.error(`Unable to scan directory: ${err}`);
             return;
         }
 
@@ -48,7 +40,6 @@ function updateAllYamlFiles(directory) {
             const filePath = path.join(directory, file);
             fs.lstat(filePath, (err, stats) => {
                 if (err) {
-                    console.error(`Error reading file stats for ${filePath}:`, err);
                     return;
                 }
 
