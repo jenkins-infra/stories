@@ -131,6 +131,10 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
           body_content: UserStoryBody_content
           authored_by: String
         }
+
+        type UserStoryMap implements Node {
+          name: String
+        }
     `);
 };
 
