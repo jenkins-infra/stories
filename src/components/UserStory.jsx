@@ -123,9 +123,8 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
 
 UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
-    // children: PropTypes.node.isRequired,
     title: PropTypes.string.isRequired,
-    authored_by: PropTypes.string.isRequired,
+    authored_by: PropTypes.string.isRequired, // Updated field
     tag_line: PropTypes.string.isRequired,
     image: PropTypes.object,
     metadata: PropTypes.shape({

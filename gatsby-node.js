@@ -29,6 +29,7 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
 
     result.data.stories.edges.forEach(edge => {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
+            // just in case handle any urls that previously had jenkins-is-the-way in the url
             createRedirect({
                 fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
                 toPath: `/user-story/${edge.node.slug}/`,
@@ -59,6 +60,19 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const content = await loadNodeContent(node);
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
+
+            // Consolidate fields into authored_by
+            if (obj.name && obj.submitted_by) {
+                obj.authored_by = `${obj.name}, ${obj.submitted_by}`;
+                delete obj.name;
+                delete obj.submitted_by;
+            } else if (obj.name) {
+                obj.authored_by = obj.name;
+                delete obj.name;
+            } else if (obj.submitted_by) {
+                obj.authored_by = obj.submitted_by;
+                delete obj.submitted_by;
+            }
 
             const yamlNode = {
                 ...obj,
@@ -130,10 +144,6 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
           metadata: UserStoryMetadata
           body_content: UserStoryBody_content
           authored_by: String
-        }
-
-        type UserStoryMap implements Node {
-          name: String
         }
     `);
 };
