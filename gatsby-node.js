@@ -61,17 +61,26 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
 
-            // Consolidate fields into authored_by
-            if (obj.name && obj.submitted_by) {
-                obj.authored_by = `${obj.name}, ${obj.submitted_by}`;
-                delete obj.name;
-                delete obj.submitted_by;
-            } else if (obj.name) {
-                obj.authored_by = obj.name;
-                delete obj.name;
-            } else if (obj.submitted_by) {
-                obj.authored_by = obj.submitted_by;
-                delete obj.submitted_by;
+            // Consolidate fields into authored_by and remove duplicates
+            if (obj.map) {
+                const {name, submitted_by, authored_by} = obj.map;
+
+                if (name && submitted_by) {
+                    obj.map.authored_by = `${name}, ${submitted_by}`;
+                } else if (name) {
+                    obj.map.authored_by = name;
+                } else if (submitted_by) {
+                    obj.map.authored_by = submitted_by;
+                }
+
+                // Remove duplicates in authored_by
+                if (authored_by) {
+                    const uniqueNames = new Set(authored_by.split(', ').map(name => name.trim()));
+                    obj.map.authored_by = Array.from(uniqueNames).join(', ');
+                }
+
+                delete obj.map.name;
+                delete obj.map.submitted_by;
             }
 
             const yamlNode = {
@@ -136,6 +145,14 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
         type UserStoryBody_content @dontinfer {
           title: String
           paragraphs: [MarkdownRemark] @link
+        }
+
+        type UserStoryMap {
+          location: String
+          industries: [String]
+          authored_by: String
+          latitude: String
+          longitude: String
         }
 
         type UserStory implements Node {
