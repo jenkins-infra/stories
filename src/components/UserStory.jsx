@@ -4,7 +4,6 @@ import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
 import * as styles from './UserStory.module.css';
 
-
 const titles = {
     build_tools: 'Build Tools',
     community_supports: 'Community Support',
@@ -43,11 +42,9 @@ const fields = [
     'community_supports'
 ];
 
-
 const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_content}) => {
     return (
         <div className={styles.userstory}>
-
             <div className={`row ${styles.titlewrapper}`}>
                 <div className={`col ${styles.title}`}>
                     <div className="container">
@@ -62,13 +59,13 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
                         <h1>{tag_line}</h1>
                     </div>
 
-                    <div className="container pt-2 pb-2">
-                        <strong>
-                            Submitted By Jenkins User
-                            {' '}
-                            {authored_by}
-                        </strong>
-                    </div>
+                    {authored_by && (
+                        <div className="container pt-2 pb-2">
+                            <strong>
+                                Submitted By: {authored_by}
+                            </strong>
+                        </div>
+                    )}
 
                     <div className="container pt-2 pb-2">
                         {metadata.title}
@@ -83,11 +80,8 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
                                         {fields.filter(field => metadata[field]).map(field => (
                                             <div key={field} className="pb-2">
                                                 <strong>
-                                                    {titles[field]}
-                                                    :
-                                                    {' '}
-                                                </strong>
-                                                {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
+                                                    {titles[field]}:
+                                                </strong> {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
                                             </div>
                                         ))}
                                     </div>
@@ -101,7 +95,7 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
                         {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
                             content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
                             if (idx !== 0 && (idx % 3) === 0) {
-                                const quoteIdx = idx/3-1;
+                                const quoteIdx = idx / 3 - 1;
                                 if (quotes[quoteIdx]) {
                                     content.push(<Testimonal
                                         key={`quote_${quoteIdx}`}
