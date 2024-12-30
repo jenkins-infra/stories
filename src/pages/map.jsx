@@ -7,7 +7,6 @@ import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
-
 // markup
 const MapPage = () => {
     const title = 'Jenkins - User Story Library - Map';
@@ -22,7 +21,7 @@ const MapPage = () => {
             edges {
                 node {
                     map {
-                        name
+                        authored_by
                         latitude
                         longitude
                         industries
@@ -79,7 +78,7 @@ const MapPage = () => {
                                             <tbody>
                                                 <tr style={{border: '0px hidden', padding: '5px'}}>
                                                     <td style={{border: '0px hidden'}} colSpan="2">
-                                                        <h4>{story.map.name}</h4>
+                                                        <h4>{story.map.authored_by}</h4>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -89,7 +88,7 @@ const MapPage = () => {
                                                         </center>
                                                     </td>
                                                     <td style={{border: '0px hidden', padding: '5px'}}>
-                                                        <dt>{story.map.name}</dt>
+                                                        <dt>{story.map.authored_by}</dt>
                                                         <dt>{story.map.location}</dt>
                                                         <dt>{(story.map.industries || story.metadata.industries || []).join(', ')}</dt>
                                                         <dt><Link to={`/user-story/${story.slug}`}>Read user story</Link></dt>
@@ -109,4 +108,3 @@ const MapPage = () => {
 };
 
 export default MapPage;
-
