@@ -4,22 +4,22 @@ const path = require('path');
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
     const result = await graphql(`{
-      stories: allUserStory {
-        edges {
-          node {
-            id
-            slug
-          }
-          next {
-            title
-            slug
-          }
-          previous {
-            title
-            slug
-          }
+        stories: allUserStory {
+            edges {
+                node {
+                    id
+                    slug
+                }
+                next {
+                    title
+                    slug
+                }
+                previous {
+                    title
+                    slug
+                }
+            }
         }
-      }
     }`);
 
     if (result.errors) {
@@ -41,8 +41,8 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
             component: userStory,
             context: {
                 id: edge.node.id,
-                next: edge.next,
-                previous: edge.previous,
+                next: edge.next ? {title: edge.next.title, slug: edge.next.slug} : null,
+                previous: edge.previous ? {title: edge.previous.title, slug: edge.previous.slug} : null,
             }
         });
     });
@@ -61,34 +61,25 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
 
-            // Move fields from map to metadata
+            // Move fields from map to metadata and remove redundant fields
             if (obj.map) {
                 if (!obj.metadata) {
                     obj.metadata = {};
                 }
 
-                const mapFields = ['name', 'submitted_by', 'authored_by', 'location', 'industries', 'latitude', 'longitude'];
+                const mapFields = ['authored_by', 'location', 'industries', 'latitude', 'longitude'];
                 mapFields.forEach(field => {
                     if (obj.map[field]) {
                         obj.metadata[field] = obj.map[field];
                         delete obj.map[field]; // Clean up the map object
                     }
                 });
+            }
 
-                // Consolidate authored_by field if necessary
-                if (obj.metadata.name && obj.metadata.submitted_by) {
-                    obj.metadata.authored_by = `${obj.metadata.name}, ${obj.metadata.submitted_by}`;
-                } else if (obj.metadata.name) {
-                    obj.metadata.authored_by = obj.metadata.name;
-                } else if (obj.metadata.submitted_by) {
-                    obj.metadata.authored_by = obj.metadata.submitted_by;
-                }
-
-                // Remove duplicates in authored_by
-                if (obj.metadata.authored_by) {
-                    const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
-                    obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
-                }
+            // Ensure authored_by field is correctly set
+            if (obj.metadata.authored_by) {
+                const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
+                obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
             }
 
             const yamlNode = {
@@ -134,29 +125,29 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
 exports.createSchemaCustomization = ({actions: {createTypes}}) => {
     createTypes(`
         type UserStoryMetadata {
-          build_tools: [String]
-          community_supports: [String]
-          company: String
-          company_website: String
-          industries: [String]
-          organization: String
-          platforms: [String]
-          plugins: [String]
-          programming_languages: [String]
-          project_funding: String
-          project_website: String
-          summary: String
-          team_members: [String]
-          version_control_systems: [String]
-          authored_by: String
-          location: String
-          latitude: String
-          longitude: String
+            build_tools: [String]
+            community_supports: [String]
+            company: String
+            company_website: String
+            industries: [String]
+            organization: String
+            platforms: [String]
+            plugins: [String]
+            programming_languages: [String]
+            project_funding: String
+            project_website: String
+            summary: String
+            team_members: [String]
+            version_control_systems: [String]
+            authored_by: String
+            location: String
+            latitude: String
+            longitude: String
         }
 
         type UserStoryBody_content @dontinfer {
-          title: String
-          paragraphs: [MarkdownRemark] @link
+            title: String
+            paragraphs: [MarkdownRemark] @link
         }
 
         type UserStoryMap {
@@ -173,6 +164,8 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
             metadata: UserStoryMetadata
             body_content: UserStoryBody_content
             map: UserStoryMap
+            next: UserStory
+            previous: UserStory
         }
     `);
 };

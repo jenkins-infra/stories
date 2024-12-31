@@ -72,7 +72,7 @@ const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) =
                     {metadata.authored_by && (
                         <div className="container pt-2 pb-2">
                             <strong>
-                                Submitted By: {metadata.authored_by}
+                                Authored By: {metadata.authored_by}
                             </strong>
                         </div>
                     )}

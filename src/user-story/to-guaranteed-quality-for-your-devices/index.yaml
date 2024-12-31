@@ -30,7 +30,7 @@ metadata:
     - sbt
   community_supports:
     - Spoke with colleagues and peers
-  authored_by: François Mockers - François Mockers
+  authored_by: François Mockers
 body_content:
   title: Increasing quality and ensuring IoT software passes all tests pre-deployment.
   paragraphs:

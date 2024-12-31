@@ -21,7 +21,7 @@ metadata:
     - Scripting
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Oscar Palacios - Oscar Palacios
+  authored_by:
 body_content:
   title: Windows? Linux? Jenkins automation platform serves both.
   paragraphs:

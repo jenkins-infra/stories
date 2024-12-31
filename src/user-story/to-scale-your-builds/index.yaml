@@ -29,7 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
-  authored_by: Thibaut Le Levier - Thibaut Le Levier
+  authored_by: Thibaut Le Levier
 body_content:
   title: Building a large CI platform to support app development.
   paragraphs:

@@ -35,7 +35,7 @@ metadata:
     - Relied on Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
-  authored_by: Xuefeng Shi - Xuefeng Shi
+  authored_by:
 body_content:
   title: Improving the velocity of end-to-end software delivery with a high
     availability CD platform.

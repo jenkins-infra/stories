@@ -31,7 +31,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
-  authored_by: Ashish Kumar Das - Ashish Kumar Das
+  authored_by: Ashish Kumar Das
 body_content:
   title: Building 100+ microservices with a common UI, before independently
     testing and deploying each.

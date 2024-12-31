@@ -20,7 +20,7 @@ metadata:
     - CMake
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Koen Poppe - Koen Poppe
+  authored_by: Koen Poppe
 body_content:
   title: Once set up, Jenkins is like a butler, saving the developers from
     endlessly repeating manual tests.

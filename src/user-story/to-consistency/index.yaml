@@ -26,7 +26,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Shauna Wright - Shauna Wright
+  authored_by:
 body_content:
   title: Developing a consistent, near-effortless build process for multiple teams.
   paragraphs:

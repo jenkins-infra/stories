@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-  authored_by: Canux Cheng - Canux Cheng
+  authored_by: Canux Cheng
 body_content:
   title: Creating a flexible CI/CD chain to meet the development needs in the
     field of cybersecurity.

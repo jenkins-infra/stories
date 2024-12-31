@@ -24,7 +24,7 @@ metadata:
     - npm
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Bibek Sutradhar - Bibek Sutradhar
+  authored_by: Bibek Sutradhar
 body_content:
   title: Accelerating user acceptance testing and deployment with Jenkins.
   paragraphs:

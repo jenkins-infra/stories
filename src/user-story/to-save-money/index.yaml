@@ -28,7 +28,7 @@ metadata:
     - Composer
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Leandro Martins - Leandro Martins
+  authored_by: Leandro Martins
 body_content:
   title: Reducing infrastructure costs and accelerating pipeline delivery by
     nearly half.

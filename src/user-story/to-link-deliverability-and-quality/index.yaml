@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and peers
-  authored_by: Gabriel Poret - Gabriel Poret
+  authored_by: Gabriel Poret
 body_content:
   title: Drastically reduce build times and benefit from non-regression testing
     done in your application.

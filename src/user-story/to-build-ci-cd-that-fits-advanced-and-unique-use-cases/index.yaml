@@ -28,7 +28,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-  authored_by: Ahmed AbouZaid - Ahmed AbouZaid
+  authored_by: Ahmed AbouZaid
 body_content:
   title: Jenkins plugins and shared libraries give more autonomy, better
     visibility, and effective way to develop and maintain CI pipelines.

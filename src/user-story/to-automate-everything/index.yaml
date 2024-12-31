@@ -26,7 +26,7 @@ metadata:
     - GitLab
   build_tools:
     - Jenkins
-  authored_by: Yazeed AL-Smadi - Yazeed AL-Smadi
+  authored_by: Yazeed AL-Smadi
 body_content:
   title: Reducing DevOps problem tickets by over 90% by using Jenkins.
   paragraphs:

@@ -15,7 +15,7 @@ metadata:
     - |-
       : Linux
       Version Control System:\*\* GitLab **Build Tool:** Maven
-  authored_by: Ajit Gunge - Ajit Gunge
+  authored_by: Ajit Gunge
 body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:

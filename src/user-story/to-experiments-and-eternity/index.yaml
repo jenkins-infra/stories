@@ -31,7 +31,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
-  authored_by: Eugene Starchenko - Eugene Starchenko
+  authored_by: Eugene Starchenko
 body_content:
   title: A unified CI/CD system for DevOps-as-a-service developers
   paragraphs:

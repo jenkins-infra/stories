@@ -22,7 +22,7 @@ metadata:
     - npm
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Eduardo Mandry - Eduardo Mandry
+  authored_by: Eduardo Mandry
 body_content:
   title: Great plugins and a shared library are the making of a super flexible
     CI/CD platform.

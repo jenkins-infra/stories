@@ -11,7 +11,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
-  authored_by: Konstantin Starovoytov - Konstantin Starovoytov
+  authored_by: Konstantin Starovoytov
 body_content:
   title: Increase product quality via automated testing and reporting.
   paragraphs:

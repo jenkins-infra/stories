@@ -29,7 +29,7 @@ metadata:
     - Ninja
   community_supports:
     - Jenkins.io websites & blogs
-  authored_by: Maciej Nowak - Maciej Nowak
+  authored_by: Maciej Nowak
 body_content:
   title: Easy testing of build improvements without disrupting the work of other
     developers.

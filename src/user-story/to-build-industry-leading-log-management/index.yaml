@@ -27,7 +27,7 @@ metadata:
   community_supports:
     - Relied on Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and pee
-  authored_by: Donald Morton - Donald Morton
+  authored_by:
 body_content:
   title: Adding more flexibility and power into snapshot and release builds.
   paragraphs:

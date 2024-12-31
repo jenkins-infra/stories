@@ -23,7 +23,7 @@ metadata:
     - Bitbucket Server
   build_tools:
     - Maven
-  authored_by: Emil Vulkov - Emil Vulkov
+  authored_by: Emil Vulkov
 body_content:
   title: Faster builds and fewer errors with CI/CD automation.
   paragraphs:

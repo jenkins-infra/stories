@@ -60,7 +60,6 @@ UserStoryPage.propTypes = {
 
 export default UserStoryPage;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
     query UserStoryBySlug($id: String!) {
         userStory(id: {eq: $id}) {

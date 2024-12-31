@@ -20,7 +20,7 @@ metadata:
   build_tools:
     - gCloud
     - Jenkins
-  authored_by: Richard Staehler III - Richard Staehler III
+  authored_by: Richard Staehler III
 body_content:
   title: Building the kids a self-serve Minecraft setup using Jenkins.
   paragraphs:

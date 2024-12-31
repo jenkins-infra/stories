@@ -21,7 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
-  authored_by: Sebastien Sirtoli - Sebastien Sirtoli
+  authored_by: Sebastien Sirtoli
 body_content:
   title: Deploying timetables, station, and local stop info, and track services in
     realtime using CI/CD & Jenkins.

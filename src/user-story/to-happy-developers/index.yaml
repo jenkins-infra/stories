@@ -17,7 +17,7 @@ metadata:
       Linux
       Version Control System:\*\* Bitbucket Server **Build Tool:** Make
     - CMake
-  authored_by: Alan Waite - Alan Waite
+  authored_by: Alan Waite
 body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:

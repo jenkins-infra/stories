@@ -25,7 +25,7 @@ metadata:
   community_supports:
     - Spoke with colleagues and peers
     - and relied on Jenkins.io websites & blogs
-  authored_by: Filipe Costa - Filipe Costa
+  authored_by: Filipe Costa
 body_content:
   title: Automated testing pipeline for CI/CD.
   paragraphs:

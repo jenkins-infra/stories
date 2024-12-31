@@ -13,7 +13,7 @@ metadata:
   build_tools:
     - Ant
     - Maven
-  authored_by: Gregory Jacobs - Gregory Jacobs
+  authored_by: Gregory Jacobs
 body_content:
   title: Transition off an old, slow and manual build system to something built
     for the future.

@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
-  authored_by: Gabriel Rosales - Gabriel Rosales
+  authored_by: Gabriel Rosales
 body_content:
   title: Building a CI/CD platform to support the development of white-label
     solutions for loyalty program providers worldwide.

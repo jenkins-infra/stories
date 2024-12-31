@@ -23,7 +23,7 @@ metadata:
     - Git
   community_supports:
     - Spoke with colleagues and peers
-  authored_by: Abhinav Dubey - Abhinav Dubey
+  authored_by: Abhinav Dubey
 body_content:
   title: Automating MLOps accuracy training using Jenkins and a "Containerization
     within a container" concept.

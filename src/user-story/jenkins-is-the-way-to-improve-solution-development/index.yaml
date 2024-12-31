@@ -23,7 +23,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
-  authored_by: Anthony Alberto Alcala Beltran - Anthony Alberto Alcala Beltran
+  authored_by: Anthony Alberto Alcala Beltran
 body_content:
   title: A Jenkins-based tool receives pipeline alerts and, in turn, determines
     who to notify.

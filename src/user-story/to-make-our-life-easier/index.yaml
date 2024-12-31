@@ -29,7 +29,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
-  authored_by: Oleh Moskovych - Oleh Moskovych
+  authored_by: Oleh Moskovych
 body_content:
   title: A Jenkins/Kubernetes CI/CD makes life a whole lot easier for everyone in
     the DevOps toolchain.

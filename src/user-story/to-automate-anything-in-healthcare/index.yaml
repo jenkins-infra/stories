@@ -20,7 +20,7 @@ metadata:
     - GitHub
   build_tools:
     - Gradle
-  authored_by: Vishal VR Gowda - Vishal VR Gowda
+  authored_by: Vishal VR Gowda
 body_content:
   title: Speeding warning notifications and improving release time productivity by
     50X.

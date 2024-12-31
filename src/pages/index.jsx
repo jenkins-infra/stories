@@ -43,7 +43,7 @@ const IndexPage = () => {
                                     <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
                                     {story.metadata.authored_by && (
                                         <div>
-                                            Submitted by <strong>{story.metadata.authored_by}</strong>
+                                            Authored By <strong>{story.metadata.authored_by}</strong>
                                         </div>
                                     )}
                                 </div>
