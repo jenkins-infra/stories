@@ -1,39 +1,42 @@
 import * as React from 'react';
-import {useStaticQuery, graphql, Link} from 'gatsby';
-import {StaticImage} from 'gatsby-plugin-image';
-import {Icon} from 'leaflet';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
 // markup
 const MapPage = () => {
     const title = 'Jenkins - User Story Library - Map';
-    const {stories, mapPin} = useStaticQuery(graphql`query MapPageQueries {
-        mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
-            publicURL
-        }
-        stories: allUserStory(
-            sort: {fields: date, order: DESC}
-            filter: {map: {latitude: {ne: null}, location: {ne: null}, longitude: {ne: null}}}
-        ) {
-            edges {
-                node {
-                    map {
-                        authored_by
-                        latitude
-                        longitude
-                        industries
+    const { stories, mapPin } = useStaticQuery(graphql`
+        query MapPageQueries {
+            mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
+                publicURL
+            }
+            stories: allUserStory(
+                sort: {fields: date, order: DESC}
+                filter: {map: {latitude: {ne: null}, location: {ne: null}, longitude: {ne: null}}}
+            ) {
+                edges {
+                    node {
+                        map {
+                            authored_by
+                            location
+                            latitude
+                            longitude
+                            industries
+                        }
+                        metadata {
+                            industries
+                        }
+                        slug
                     }
-                    metadata {
-                        industries
-                    }
-                    slug
                 }
             }
         }
-    }`);
+    `);
 
     const isBrowser = typeof window !== 'undefined';
 
@@ -41,7 +44,7 @@ const MapPage = () => {
         return (
             <Layout title={title}>
                 <Seo title={title} pathname="/" />
-                This page needs javascript
+                This page needs JavaScript
             </Layout>
         );
     }

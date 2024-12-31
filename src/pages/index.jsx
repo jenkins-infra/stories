@@ -1,26 +1,29 @@
 import * as React from 'react';
-import {useStaticQuery, graphql, Link} from 'gatsby';
-import {StaticImage} from 'gatsby-plugin-image';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../layout';
 import Seo from '../components/Seo';
-
 
 // markup
 const IndexPage = () => {
     const title = 'Jenkins - User Story Library';
-    const {stories} = useStaticQuery(graphql`query FrontPageStories {
-        stories: allUserStory(sort: {fields: date, order: DESC}, limit: 4) {
-            edges {
-                node {
-                    title
-                    date
-                    tag_line
-                    authored_by
-                    slug
+    const { stories } = useStaticQuery(graphql`
+        query FrontPageStories {
+            stories: allUserStory(sort: {fields: date, order: DESC}, limit: 4) {
+                edges {
+                    node {
+                        title
+                        date
+                        tag_line
+                        slug
+                        metadata {
+                            authored_by
+                        }
+                    }
                 }
             }
         }
-    }`);
+    `);
 
     return (
         <Layout title={title}>
@@ -35,12 +38,14 @@ const IndexPage = () => {
                         <div>
                             <h1>Jenkins Is The Way</h1>
                             <h2>Latest Jenkins User Stories</h2>
-                            {stories.edges.map(({node: story}) => (
+                            {stories.edges.map(({ node: story }) => (
                                 <div key={story.slug} className="pb-2">
                                     <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
-                                    Submitted by Jenkins User
-                                    {' '}
-                                    <strong>{story.authored_by}</strong>
+                                    {story.metadata.authored_by && (
+                                        <div>
+                                            Submitted by <strong>{story.metadata.authored_by}</strong>
+                                        </div>
+                                    )}
                                 </div>
                             ))}
                         </div>

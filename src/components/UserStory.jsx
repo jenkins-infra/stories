@@ -4,6 +4,7 @@ import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
 import * as styles from './UserStory.module.css';
 
+// Titles for metadata fields
 const titles = {
     build_tools: 'Build Tools',
     community_supports: 'Community Support',
@@ -21,8 +22,13 @@ const titles = {
     team_members: 'Team Members',
     teams: 'Team',
     version_control_systems: 'Version Control System',
+    location: 'Location',
+    latitude: 'Latitude',
+    longitude: 'Longitude',
+    authored_by: 'Authored By'
 };
 
+// List of metadata fields to display
 const fields = [
     'organization',
     'company',
@@ -39,10 +45,14 @@ const fields = [
     'version_control_systems',
     'build_tools',
     'plugins',
-    'community_supports'
+    'community_supports',
+    'location',
+    'latitude',
+    'longitude',
+    'authored_by'
 ];
 
-const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_content}) => {
+const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) => {
     return (
         <div className={styles.userstory}>
             <div className={`row ${styles.titlewrapper}`}>
@@ -59,10 +69,10 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
                         <h1>{tag_line}</h1>
                     </div>
 
-                    {authored_by && (
+                    {metadata.authored_by && (
                         <div className="container pt-2 pb-2">
                             <strong>
-                                Submitted By: {authored_by}
+                                Submitted By: {metadata.authored_by}
                             </strong>
                         </div>
                     )}
@@ -93,7 +103,7 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
                     <div className="container pt-2 pb-2">
                         <h3>{body_content.title}</h3>
                         {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
-                            content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
+                            content.push(<div key={idx} dangerouslySetInnerHTML={{ __html: p.html }} />);
                             if (idx !== 0 && (idx % 3) === 0) {
                                 const quoteIdx = idx / 3 - 1;
                                 if (quotes[quoteIdx]) {
@@ -118,12 +128,12 @@ const UserStory = ({image, title, authored_by, tag_line, quotes, metadata, body_
 UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
     title: PropTypes.string.isRequired,
-    authored_by: PropTypes.string.isRequired, // Updated field
     tag_line: PropTypes.string.isRequired,
     image: PropTypes.object,
     metadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
-    }),
+        authored_by: PropTypes.string
+    }).isRequired,
     quotes: PropTypes.arrayOf(PropTypes.shape({
         image: PropTypes.object,
         from: PropTypes.string.isRequired,
@@ -133,8 +143,13 @@ UserStory.propTypes = {
         title: PropTypes.string.isRequired,
         paragraphs: PropTypes.arrayOf(PropTypes.shape({
             html: PropTypes.string.isRequired
-        }))
-    })
+        })).isRequired
+    }).isRequired
+};
+
+UserStory.defaultProps = {
+    image: null,
+    quotes: []
 };
 
 export default UserStory;

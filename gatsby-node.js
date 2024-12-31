@@ -29,7 +29,7 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
 
     result.data.stories.edges.forEach(edge => {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
-            // just in case handle any urls that previously had jenkins-is-the-way in the url
+            // Handle any URLs that previously had jenkins-is-the-way in the URL
             createRedirect({
                 fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
                 toPath: `/user-story/${edge.node.slug}/`,
@@ -61,26 +61,34 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
 
-            // Consolidate fields into authored_by and remove duplicates
+            // Move fields from map to metadata
             if (obj.map) {
-                const {name, submitted_by, authored_by} = obj.map;
+                if (!obj.metadata) {
+                    obj.metadata = {};
+                }
 
-                if (name && submitted_by) {
-                    obj.map.authored_by = `${name}, ${submitted_by}`;
-                } else if (name) {
-                    obj.map.authored_by = name;
-                } else if (submitted_by) {
-                    obj.map.authored_by = submitted_by;
+                const mapFields = ['name', 'submitted_by', 'authored_by', 'location', 'industries', 'latitude', 'longitude'];
+                mapFields.forEach(field => {
+                    if (obj.map[field]) {
+                        obj.metadata[field] = obj.map[field];
+                        delete obj.map[field]; // Clean up the map object
+                    }
+                });
+
+                // Consolidate authored_by field if necessary
+                if (obj.metadata.name && obj.metadata.submitted_by) {
+                    obj.metadata.authored_by = `${obj.metadata.name}, ${obj.metadata.submitted_by}`;
+                } else if (obj.metadata.name) {
+                    obj.metadata.authored_by = obj.metadata.name;
+                } else if (obj.metadata.submitted_by) {
+                    obj.metadata.authored_by = obj.metadata.submitted_by;
                 }
 
                 // Remove duplicates in authored_by
-                if (authored_by) {
-                    const uniqueNames = new Set(authored_by.split(', ').map(name => name.trim()));
-                    obj.map.authored_by = Array.from(uniqueNames).join(', ');
+                if (obj.metadata.authored_by) {
+                    const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
+                    obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
                 }
-
-                delete obj.map.name;
-                delete obj.map.submitted_by;
             }
 
             const yamlNode = {
@@ -140,6 +148,10 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
           summary: String
           team_members: [String]
           version_control_systems: [String]
+          authored_by: String
+          location: String
+          latitude: String
+          longitude: String
         }
 
         type UserStoryBody_content @dontinfer {
@@ -148,19 +160,19 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
         }
 
         type UserStoryMap {
-          location: String
-          industries: [String]
-          authored_by: String
-          latitude: String
-          longitude: String
+            location: String
+            industries: [String]
+            authored_by: String
+            latitude: String
+            longitude: String
         }
 
         type UserStory implements Node {
-          id: ID!
-          slug: String!
-          metadata: UserStoryMetadata
-          body_content: UserStoryBody_content
-          authored_by: String
+            id: ID!
+            slug: String!
+            metadata: UserStoryMetadata
+            body_content: UserStoryBody_content
+            map: UserStoryMap
         }
     `);
 };
