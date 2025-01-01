@@ -4,23 +4,23 @@ const path = require('path');
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
     const result = await graphql(`{
-        stories: allUserStory {
-            edges {
-                node {
-                    id
-                    slug
-                }
-                next {
-                    title
-                    slug
-                }
-                previous {
-                    title
-                    slug
-                }
-            }
+    stories: allUserStory {
+      edges {
+        node {
+          id
+          slug
         }
-    }`);
+        next {
+          title
+          slug
+        }
+        previous {
+          title
+          slug
+        }
+      }
+    }
+  }`);
 
     if (result.errors) {
         console.error(result.errors);
@@ -29,7 +29,6 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
 
     result.data.stories.edges.forEach(edge => {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
-            // Handle any URLs that previously had jenkins-is-the-way in the URL
             createRedirect({
                 fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
                 toPath: `/user-story/${edge.node.slug}/`,
@@ -43,7 +42,7 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
                 id: edge.node.id,
                 next: edge.next ? {title: edge.next.title, slug: edge.next.slug} : null,
                 previous: edge.previous ? {title: edge.previous.title, slug: edge.previous.slug} : null,
-            }
+            },
         });
     });
 }
@@ -61,7 +60,6 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
 
-            // Move fields from map to metadata and remove redundant fields
             if (obj.map) {
                 if (!obj.metadata) {
                     obj.metadata = {};
@@ -71,12 +69,11 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
                 mapFields.forEach(field => {
                     if (obj.map[field]) {
                         obj.metadata[field] = obj.map[field];
-                        delete obj.map[field]; // Clean up the map object
+                        delete obj.map[field];
                     }
                 });
             }
 
-            // Ensure authored_by field is correctly set
             if (obj.metadata.authored_by) {
                 const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
                 obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
@@ -124,50 +121,50 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
 
 exports.createSchemaCustomization = ({actions: {createTypes}}) => {
     createTypes(`
-        type UserStoryMetadata {
-            build_tools: [String]
-            community_supports: [String]
-            company: String
-            company_website: String
-            industries: [String]
-            organization: String
-            platforms: [String]
-            plugins: [String]
-            programming_languages: [String]
-            project_funding: String
-            project_website: String
-            summary: String
-            team_members: [String]
-            version_control_systems: [String]
-            authored_by: String
-            location: String
-            latitude: String
-            longitude: String
-        }
+    type UserStoryMetadata {
+      build_tools: [String]
+      community_supports: [String]
+      company: String
+      company_website: String
+      industries: [String]
+      organization: String
+      platforms: [String]
+      plugins: [String]
+      programming_languages: [String]
+      project_funding: String
+      project_website: String
+      summary: String
+      team_members: [String]
+      version_control_systems: [String]
+      authored_by: String
+      location: String
+      latitude: String
+      longitude: String
+    }
 
-        type UserStoryBody_content @dontinfer {
-            title: String
-            paragraphs: [MarkdownRemark] @link
-        }
+    type UserStoryBody_content @dontinfer {
+      title: String
+      paragraphs: [MarkdownRemark] @link
+    }
 
-        type UserStoryMap {
-            location: String
-            industries: [String]
-            authored_by: String
-            latitude: String
-            longitude: String
-        }
+    type UserStoryMap {
+      location: String
+      industries: [String]
+      authored_by: String
+      latitude: String
+      longitude: String
+    }
 
-        type UserStory implements Node {
-            id: ID!
-            slug: String!
-            metadata: UserStoryMetadata
-            body_content: UserStoryBody_content
-            map: UserStoryMap
-            next: UserStory
-            previous: UserStory
-        }
-    `);
+    type UserStory implements Node {
+      id: ID!
+      slug: String!
+      metadata: UserStoryMetadata
+      body_content: UserStoryBody_content
+      map: UserStoryMap
+      next: UserStory
+      previous: UserStory
+    }
+  `);
 };
 
 exports.onCreateWebpackConfig = ({stage, loaders, actions}) => {
