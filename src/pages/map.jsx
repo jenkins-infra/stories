@@ -22,7 +22,6 @@ const MapPage = () => {
           edges {
               node {
                   map {
-                      authored_by
                       latitude
                       longitude
                       industries

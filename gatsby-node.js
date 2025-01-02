@@ -65,14 +65,6 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
                 if (!obj.metadata) {
                     obj.metadata = {};
                 }
-
-                const mapFields = ['authored_by'];
-                mapFields.forEach(field => {
-                    if (obj.map[field]) {
-                        obj.metadata[field] = obj.map[field];
-                        delete obj.map[field];
-                    }
-                });
             }
 
             if (obj.metadata.authored_by) {
@@ -143,10 +135,6 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
         type UserStoryBody_content @dontinfer {
           title: String
           paragraphs: [MarkdownRemark] @link
-        }
-
-        type UserStoryMap {
-          authored_by: String
         }
 
   `);
