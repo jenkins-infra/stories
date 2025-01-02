@@ -137,34 +137,9 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
       summary: String
       team_members: [String]
       version_control_systems: [String]
-      authored_by: String
-      location: String
-      latitude: String
-      longitude: String
     }
 
-    type UserStoryBody_content @dontinfer {
-      title: String
-      paragraphs: [MarkdownRemark] @link
-    }
 
-    type UserStoryMap {
-      location: String
-      industries: [String]
-      authored_by: String
-      latitude: String
-      longitude: String
-    }
-
-    type UserStory implements Node {
-      id: ID!
-      slug: String!
-      metadata: UserStoryMetadata
-      body_content: UserStoryBody_content
-      map: UserStoryMap
-      next: UserStory
-      previous: UserStory
-    }
   `);
 };
 
