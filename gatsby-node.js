@@ -4,23 +4,23 @@ const path = require('path');
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
     const result = await graphql(`{
-    stories: allUserStory {
-      edges {
-        node {
-          id
-          slug
-        }
-        next {
-          title
-          slug
-        }
-        previous {
-          title
-          slug
+      stories: allUserStory {
+        edges {
+          node {
+            id
+            slug
+          }
+          next {
+            title
+            slug
+          }
+          previous {
+            title
+            slug
+          }
         }
       }
-    }
-  }`);
+    }`);
 
     if (result.errors) {
         console.error(result.errors);
@@ -41,9 +41,9 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
             component: userStory,
             context: {
                 id: edge.node.id,
-                next: edge.next ? {title: edge.next.title, slug: edge.next.slug} : null,
-                previous: edge.previous ? {title: edge.previous.title, slug: edge.previous.slug} : null,
-            },
+                next: edge.next,
+                previous: edge.previous,
+            }
         });
     });
 }
@@ -66,7 +66,7 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
                     obj.metadata = {};
                 }
 
-                const mapFields = ['authored_by', 'location', 'industries', 'latitude', 'longitude'];
+                const mapFields = ['authored_by'];
                 mapFields.forEach(field => {
                     if (obj.map[field]) {
                         obj.metadata[field] = obj.map[field];
@@ -122,23 +122,32 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
 
 exports.createSchemaCustomization = ({actions: {createTypes}}) => {
     createTypes(`
-    type UserStoryMetadata {
-      build_tools: [String]
-      community_supports: [String]
-      company: String
-      company_website: String
-      industries: [String]
-      organization: String
-      platforms: [String]
-      plugins: [String]
-      programming_languages: [String]
-      project_funding: String
-      project_website: String
-      summary: String
-      team_members: [String]
-      version_control_systems: [String]
-    }
+        type UserStoryMetadata {
+          build_tools: [String]
+          community_supports: [String]
+          company: String
+          company_website: String
+          industries: [String]
+          organization: String
+          platforms: [String]
+          plugins: [String]
+          programming_languages: [String]
+          project_funding: String
+          project_website: String
+          summary: String
+          team_members: [String]
+          version_control_systems: [String]
+          authored_by: String
+        }
 
+        type UserStoryBody_content @dontinfer {
+          title: String
+          paragraphs: [MarkdownRemark] @link
+        }
+
+        type UserStoryMap {
+          authored_by: String
+        }
 
   `);
 };

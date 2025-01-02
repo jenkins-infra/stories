@@ -22,9 +22,6 @@ const titles = {
   team_members: 'Team Members',
   teams: 'Team',
   version_control_systems: 'Version Control System',
-  location: 'Location',
-  latitude: 'Latitude',
-  longitude: 'Longitude',
   authored_by: 'Authored By'
 };
 
@@ -45,9 +42,6 @@ const fields = [
   'build_tools',
   'plugins',
   'community_supports',
-  'location',
-  'latitude',
-  'longitude',
   'authored_by'
 ];
 
@@ -55,100 +49,103 @@ const fields = [
 const UserStory = ({image, title, tag_line, quotes, metadata, body_content}) => {
   return (
     <div className={styles.userstory}>
-      <div className={`row ${styles.titlewrapper}`}>
-        <div className={`col ${styles.title}`}>
-          <div className="container">
-            <h2>{title}</h2>
-          </div>
-        </div>
-      </div>
 
-      <div className="row">
-        <div className="col">
-          <div className="container pb-2">
-            <h1>{tag_line}</h1>
-          </div>
-
-          {metadata.authored_by && (
-            <div className="container pt-2 pb-2">
-              <strong>
-                Authored By: {metadata.authored_by}
-              </strong>
-            </div>
-          )}
-
-          <div className="container pt-2 pb-2">
-            {metadata.title}
-          </div>
-
-          {fields.some(field => metadata[field]) && (
-            <div className="container pt-2 pb-2">
-              <div className="jumbotron">
-                <div className="media">
-                  {image && <ImageWrapper image={image} alt="Logo" className="mr-3" height="300" width="300" />}
-                  <div className="media-body">
-                    {fields.filter(field => metadata[field]).map(field => (
-                      <div key={field} className="pb-2">
-                        <strong>
-                          {titles[field]}
-                          :
-                          {' '}
-                        </strong>
-                        {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
-                      </div>
-                    ))}
-                  </div>
+        <div className={`row ${styles.titlewrapper}`}>
+            <div className={`col ${styles.title}`}>
+                <div className="container">
+                    <h2>{title}</h2>
                 </div>
-              </div>
             </div>
-          )}
-
-          <div className="container pt-2 pb-2">
-            <h3>{body_content.title}</h3>
-            {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
-              content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
-              if (idx !== 0 && (idx % 3) === 0) {
-                const quoteIdx = idx / 3 - 1;
-                if (quotes[quoteIdx]) {
-                  content.push(<Testimonal
-                    key={`quote_${quoteIdx}`}
-                    from={quotes[quoteIdx].from}
-                    image={quotes[quoteIdx].image}>
-                    {quotes[quoteIdx].content}
-                  </Testimonal>
-                  );
-                }
-              }
-              return content;
-            }, [])}
-          </div>
         </div>
-      </div>
-    </div>
-  );
+
+        <div className="row">
+                <div className="col">
+                    <div className="container pb-2">
+                        <h1>{tag_line}</h1>
+                    </div>
+
+                {metadata.authored_by && (
+                    <div className="container pt-2 pb-2">
+                      <strong>
+                          Authored By: 
+                          {' '}
+                          {metadata.authored_by}
+                      </strong>
+                    </div>
+                )}
+
+                    <div className="container pt-2 pb-2">
+                        {metadata.title}
+                    </div>
+
+                    {fields.some(field => metadata[field]) && (
+                        <div className="container pt-2 pb-2">
+                            <div className="jumbotron">
+                                <div className="media">
+                                    {image && <ImageWrapper image={image} alt="Logo" className="mr-3" height="300" width="300" />}
+                                    <div className="media-body">
+                                        {fields.filter(field => metadata[field]).map(field => (
+                                            <div key={field} className="pb-2">
+                                                <strong>
+                                                    {titles[field]}
+                                                    :
+                                                    {' '}
+                                                </strong>
+                                                {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="container pt-2 pb-2">
+                        <h3>{body_content.title}</h3>
+                        {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
+                            content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
+                            if (idx !== 0 && (idx % 3) === 0) {
+                                const quoteIdx = idx/3-1;
+                                if (quotes[quoteIdx]) {
+                                    content.push(<Testimonal
+                                        key={`quote_${quoteIdx}`}
+                                        from={quotes[quoteIdx].from}
+                                        image={quotes[quoteIdx].image}>
+                                        {quotes[quoteIdx].content}
+                                    </Testimonal>
+                                    );
+                                }
+                            }
+                            return content;
+                        }, [])}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
-  // children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  tag_line: PropTypes.string.isRequired,
-  image: PropTypes.object,
-  metadata: PropTypes.shape({
+    // children: PropTypes.node.isRequired,
     title: PropTypes.string.isRequired,
-    authored_by: PropTypes.string
-  }).isRequired,
-  quotes: PropTypes.arrayOf(PropTypes.shape({
+    tag_line: PropTypes.string.isRequired,
     image: PropTypes.object,
-    from: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired
-  })),
-  body_content: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    paragraphs: PropTypes.arrayOf(PropTypes.shape({
-      html: PropTypes.string.isRequired
-    })).isRequired
-  }).isRequired
+    metadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        authored_by: PropTypes.string
+    }).isRequired,
+    quotes: PropTypes.arrayOf(PropTypes.shape({
+        image: PropTypes.object,
+        from: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired
+    })),
+    body_content: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        paragraphs: PropTypes.arrayOf(PropTypes.shape({
+            html: PropTypes.string.isRequired
+        })).isRequired
+    }).isRequired
 };
 
 export default UserStory;
