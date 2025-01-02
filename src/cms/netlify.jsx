@@ -10,20 +10,23 @@ import remarkHtml from 'remark-html';
 
 import UserStory from '../components/UserStory';
 
-const UserStoryPreview = ({entry, widgetsFor, getAsset}) => {
+const UserStoryPreview = ({ entry, widgetsFor, getAsset }) => {
     const data = entry.toJS().data;
     const paragraphs = widgetsFor('body_content').getIn(['data', 'paragraphs']);
     for (let i = 0; i < data.body_content.paragraphs.length; i++) {
         data.body_content.paragraphs[i] = {
-            html: remark().use(remarkHtml).processSync(paragraphs.get(i)).toString(),
+            html: remark()
+                .use(remarkHtml)
+                .processSync(paragraphs.get(i))
+                .toString(),
         };
     }
-    data.quotes = data.quotes.map(function(quote, idx) {
+    data.quotes = data.quotes.map(function (quote, idx) {
         const quoteData = entry.getIn(['data', 'quotes', idx]).toJS();
         return {
             ...quote,
             image: getAsset(quoteData.image).url,
-        }
+        };
     });
 
     const props = {
