@@ -29,6 +29,7 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
 
     result.data.stories.edges.forEach(edge => {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
+            // just in case handle any urls that previously had jenkins-is-the-way in the url
             createRedirect({
                 fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
                 toPath: `/user-story/${edge.node.slug}/`,

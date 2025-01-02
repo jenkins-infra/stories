@@ -4,10 +4,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
+
 // markup
 const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
-  const { stories } = useStaticQuery(graphql`
+  const {stories} = useStaticQuery(graphql`
     query FrontPageStories {
       stories: allUserStory(sort: {fields: date, order: DESC}, limit: 4) {
         edges {
@@ -38,7 +39,7 @@ const IndexPage = () => {
             <div>
               <h1>Jenkins Is The Way</h1>
               <h2>Latest Jenkins User Stories</h2>
-              {stories.edges.map(({ node: story }) => (
+              {stories.edges.map(({node: story}) => (
                 <div key={story.slug} className="pb-2">
                   <div><Link to={`/user-story/${story.slug}`}>{story.title}</Link></div>
                   {story.metadata.authored_by && (

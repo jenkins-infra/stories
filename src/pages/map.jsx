@@ -7,17 +7,18 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 
+
 // markup
 const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
-  const { stories, mapPin } = useStaticQuery(graphql`
+  const {stories, mapPin} = useStaticQuery(graphql`
     query MapPageQueries {
       mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
         publicURL
       }
       stories: allUserStory(
-        sort: { fields: date, order: DESC }
-        filter: { map: { latitude: { ne: null }, location: { ne: null }, longitude: { ne: null } } }
+        sort: {fields: date, order: DESC}
+        filter: {map: {latitude: {ne: null}, location: {ne: null}, longitude: {ne: null}}}
       ) {
         edges {
           node {
@@ -68,29 +69,29 @@ const MapPage = () => {
           </div>
         </div>
         <div className="row body">
-          <div className="col" style={{ height: '800px' }}>
-            <MapContainer center={[43.5890452, 0]} zoom={2} style={{ height: '100vh', width: '100wh' }}>
+          <div className="col" style={{height: '800px'}}>
+            <MapContainer center={[43.5890452, 0]} zoom={2} style={{height: '100vh', width: '100wh'}}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
-              {stories.edges.filter(({ node: story }) => story.map.latitude || story.map.longitude).map(({ node: story }) => (
+              {stories.edges.filter(({node: story}) => story.map.latitude || story.map.longitude).map(({node: story}) => (
                 <Marker key={story.slug} position={[story.map.latitude, story.map.longitude]} icon={icon}>
                   <Popup>
                     <table className="table">
                       <tbody>
-                        <tr style={{ border: '0px hidden', padding: '5px' }}>
-                          <td style={{ border: '0px hidden' }} colSpan="2">
+                        <tr style={{border: '0px hidden', padding: '5px'}}>
+                          <td style={{border: '0px hidden'}} colSpan="2">
                             <h4>{story.map.authored_by}</h4>
                           </td>
                         </tr>
                         <tr>
-                          <td style={{ border: '0px hidden' }} width="150">
+                          <td style={{border: '0px hidden'}} width="150">
                             <center>
                               <StaticImage src="../images/jenkins_map_pin-180x180-1.png" alt="map pin" />
                             </center>
                           </td>
-                          <td style={{ border: '0px hidden', padding: '5px' }}>
+                          <td style={{border: '0px hidden', padding: '5px'}}>
                             <dt>{story.map.authored_by}</dt>
                             <dt>{story.map.location}</dt>
                             <dt>{(story.map.industries || story.metadata.industries || []).join(', ')}</dt>

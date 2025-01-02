@@ -4,7 +4,7 @@ import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
 import * as styles from './UserStory.module.css';
 
-// Titles for metadata fields
+
 const titles = {
   build_tools: 'Build Tools',
   community_supports: 'Community Support',
@@ -28,7 +28,6 @@ const titles = {
   authored_by: 'Authored By'
 };
 
-// List of metadata fields to display
 const fields = [
   'organization',
   'company',
@@ -52,7 +51,8 @@ const fields = [
   'authored_by'
 ];
 
-const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) => {
+
+const UserStory = ({image, title, tag_line, quotes, metadata, body_content}) => {
   return (
     <div className={styles.userstory}>
       <div className={`row ${styles.titlewrapper}`}>
@@ -90,8 +90,11 @@ const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) =
                     {fields.filter(field => metadata[field]).map(field => (
                       <div key={field} className="pb-2">
                         <strong>
-                          {titles[field]}:
-                        </strong> {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
+                          {titles[field]}
+                          :
+                          {' '}
+                        </strong>
+                        {Array.isArray(metadata[field]) ? metadata[field].join(', ') : metadata[field]}
                       </div>
                     ))}
                   </div>
@@ -103,7 +106,7 @@ const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) =
           <div className="container pt-2 pb-2">
             <h3>{body_content.title}</h3>
             {body_content.paragraphs && body_content.paragraphs.reduce((content, p, idx) => {
-              content.push(<div key={idx} dangerouslySetInnerHTML={{ __html: p.html }} />);
+              content.push(<div key={idx} dangerouslySetInnerHTML={{__html: p.html}} />);
               if (idx !== 0 && (idx % 3) === 0) {
                 const quoteIdx = idx / 3 - 1;
                 if (quotes[quoteIdx]) {
@@ -127,6 +130,7 @@ const UserStory = ({ image, title, tag_line, quotes, metadata, body_content }) =
 
 UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
+  // children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   tag_line: PropTypes.string.isRequired,
   image: PropTypes.object,
@@ -145,11 +149,6 @@ UserStory.propTypes = {
       html: PropTypes.string.isRequired
     })).isRequired
   }).isRequired
-};
-
-UserStory.defaultProps = {
-  image: null,
-  quotes: []
 };
 
 export default UserStory;
