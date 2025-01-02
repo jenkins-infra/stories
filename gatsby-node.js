@@ -1,9 +1,9 @@
 const YAML = require('yaml');
 const path = require('path');
 
-async function createUserStoryPages({graphql, createPage, createRedirect}) {
-    const userStory = path.resolve('src/pages/_user_story.jsx');
-    const result = await graphql(`{
+async function createUserStoryPages({ graphql, createPage, createRedirect }) {
+  const userStory = path.resolve('src/pages/_user_story.jsx');
+  const result = await graphql(`{
     stories: allUserStory {
       edges {
         node {
@@ -22,105 +22,105 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
     }
   }`);
 
-    if (result.errors) {
-        console.error(result.errors);
-        throw result.errors;
-    }
+  if (result.errors) {
+    console.error(result.errors);
+    throw result.errors;
+  }
 
-    result.data.stories.edges.forEach(edge => {
-        if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
-            createRedirect({
-                fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
-                toPath: `/user-story/${edge.node.slug}/`,
-                isPermanent: true,
-            });
-        }
-        createPage({
-            path: `/user-story/${edge.node.slug}/`,
-            component: userStory,
-            context: {
-                id: edge.node.id,
-                next: edge.next ? {title: edge.next.title, slug: edge.next.slug} : null,
-                previous: edge.previous ? {title: edge.previous.title, slug: edge.previous.slug} : null,
-            },
-        });
+  result.data.stories.edges.forEach(edge => {
+    if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
+      createRedirect({
+        fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
+        toPath: `/user-story/${edge.node.slug}/`,
+        isPermanent: true,
+      });
+    }
+    createPage({
+      path: `/user-story/${edge.node.slug}/`,
+      component: userStory,
+      context: {
+        id: edge.node.id,
+        next: edge.next ? { title: edge.next.title, slug: edge.next.slug } : null,
+        previous: edge.previous ? { title: edge.previous.title, slug: edge.previous.slug } : null,
+      },
     });
+  });
 }
 
-exports.createPages = async ({graphql, actions: {createPage, createRedirect}}) => {
-    await createUserStoryPages({graphql, createPage, createRedirect});
+exports.createPages = async ({ graphql, actions: { createPage, createRedirect } }) => {
+  await createUserStoryPages({ graphql, createPage, createRedirect });
 };
 
-exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
-    const {createNode, createParentChildLink} = actions;
+exports.onCreateNode = async ({ node, actions, loadNodeContent, createNodeId, createContentDigest }) => {
+  const { createNode, createParentChildLink } = actions;
 
-    if (node.internal.type === 'File') {
-        if (node.base === 'index.yaml') {
-            const content = await loadNodeContent(node);
-            const obj = YAML.parse(content);
-            obj.slug = path.basename(node.dir);
+  if (node.internal.type === 'File') {
+    if (node.base === 'index.yaml') {
+      const content = await loadNodeContent(node);
+      const obj = YAML.parse(content);
+      obj.slug = path.basename(node.dir);
 
-            if (obj.map) {
-                if (!obj.metadata) {
-                    obj.metadata = {};
-                }
-
-                const mapFields = ['authored_by', 'location', 'industries', 'latitude', 'longitude'];
-                mapFields.forEach(field => {
-                    if (obj.map[field]) {
-                        obj.metadata[field] = obj.map[field];
-                        delete obj.map[field];
-                    }
-                });
-            }
-
-            if (obj.metadata.authored_by) {
-                const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
-                obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
-            }
-
-            const yamlNode = {
-                ...obj,
-                id: createNodeId(`${obj.slug} >>> UserStory`),
-                children: [],
-                parent: node.id,
-                internal: {
-                    type: 'UserStory',
-                },
-            };
-            const paragraphs = obj.body_content.paragraphs;
-
-            yamlNode.body_content.paragraphs = paragraphs.map((_, idx) => createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`));
-            yamlNode.internal.contentDigest = createContentDigest(yamlNode);
-
-            createNode(yamlNode);
-            createParentChildLink({parent: node, child: yamlNode});
-
-            for (let i = 0; i < paragraphs.length; i++) {
-                const markdownNode = {
-                    id: yamlNode.body_content.paragraphs[i],
-                    frontmatter: {},
-                    excerpt: '',
-                    rawMarkdownBody: paragraphs[i],
-                    fileAbsolutePath: node.absolutePath,
-                    children: [],
-                    parent: yamlNode.id,
-                    internal: {
-                        content: paragraphs[i],
-                        type: 'MarkdownRemark',
-                    },
-                };
-                markdownNode.internal.contentDigest = createContentDigest(markdownNode);
-                createNode(markdownNode);
-                createParentChildLink({parent: yamlNode, child: markdownNode});
-                createParentChildLink({parent: node, child: markdownNode});
-            }
+      if (obj.map) {
+        if (!obj.metadata) {
+          obj.metadata = {};
         }
+
+        const mapFields = ['authored_by', 'location', 'industries', 'latitude', 'longitude'];
+        mapFields.forEach(field => {
+          if (obj.map[field]) {
+            obj.metadata[field] = obj.map[field];
+            delete obj.map[field];
+          }
+        });
+      }
+
+      if (obj.metadata.authored_by) {
+        const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
+        obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
+      }
+
+      const yamlNode = {
+        ...obj,
+        id: createNodeId(`${obj.slug} >>> UserStory`),
+        children: [],
+        parent: node.id,
+        internal: {
+          type: 'UserStory',
+        },
+      };
+      const paragraphs = obj.body_content.paragraphs;
+
+      yamlNode.body_content.paragraphs = paragraphs.map((_, idx) => createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`));
+      yamlNode.internal.contentDigest = createContentDigest(yamlNode);
+
+      createNode(yamlNode);
+      createParentChildLink({ parent: node, child: yamlNode });
+
+      for (let i = 0; i < paragraphs.length; i++) {
+        const markdownNode = {
+          id: yamlNode.body_content.paragraphs[i],
+          frontmatter: {},
+          excerpt: '',
+          rawMarkdownBody: paragraphs[i],
+          fileAbsolutePath: node.absolutePath,
+          children: [],
+          parent: yamlNode.id,
+          internal: {
+            content: paragraphs[i],
+            type: 'MarkdownRemark',
+          },
+        };
+        markdownNode.internal.contentDigest = createContentDigest(markdownNode);
+        createNode(markdownNode);
+        createParentChildLink({ parent: yamlNode, child: markdownNode });
+        createParentChildLink({ parent: node, child: markdownNode });
+      }
     }
+  }
 };
 
-exports.createSchemaCustomization = ({actions: {createTypes}}) => {
-    createTypes(`
+exports.createSchemaCustomization = ({ actions: { createTypes } }) => {
+  createTypes(`
     type UserStoryMetadata {
       build_tools: [String]
       community_supports: [String]
@@ -167,17 +167,17 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
   `);
 };
 
-exports.onCreateWebpackConfig = ({stage, loaders, actions}) => {
-    if (stage === 'build-html') {
-        actions.setWebpackConfig({
-            module: {
-                rules: [
-                    {
-                        test: /leaflet/,
-                        use: loaders.null(),
-                    },
-                ],
-            },
-        });
-    }
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /leaflet/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
 };
