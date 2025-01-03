@@ -1,3 +1,4 @@
+---
 metadata:
   title: Manual testing led to longer build and upload cycles, security that could
     be improved, and frustrated developers. Automating testing was the way to

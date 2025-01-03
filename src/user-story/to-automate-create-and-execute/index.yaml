@@ -1,3 +1,4 @@
+---
 metadata:
   title: Automate Jenkins inside a docker container with the help of Dockerfile
     and then create and execute different Jenkins jobs running inside a
