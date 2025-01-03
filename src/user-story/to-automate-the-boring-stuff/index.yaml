@@ -3,7 +3,6 @@ map:
   location: Malaysia
   industries:
     - DevOps as a Service
-  name: Mohamad Farhan bin Zainudin
   latitude: "3.053886000000001"
   longitude: "101.6702413"
 metadata:
@@ -26,6 +25,7 @@ metadata:
     - Senior DevOps Engineer
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Mohamad Farhan bin Zainudin
 body_content:
   title: Software delivery acceleration with an end-to-end CI/CD pipeline using
     Jenkins
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: noun_acceptance_2743142.png
 tag_line: Automating Unit Testing, Security Scanning and UAT
-submitted_by: Mohamad Farhan bin Zainudin

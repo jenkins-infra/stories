@@ -3,7 +3,6 @@ map:
   location: Malaysia
   industries:
     - Information Technology
-  name: Mary Jane Buenaventura
   latitude: "3.139003"
   longitude: "101.686855"
 metadata:
@@ -26,6 +25,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Mary Jane Buenaventura
 body_content:
   title: Jenkins freestyle project paves the way for ease of deployment.
   paragraphs:
@@ -59,7 +59,8 @@ body_content:
 
       *   quicker deployments: from 30 minutes to 4.4 seconds
 
-      *   build and deploy configuration to a newly setup server is very convenient
+      *   build and deploy configuration to a newly setup server is very
+      convenient
 
       *   developers can build and deploy within their own dev environment
 
@@ -75,4 +76,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer_3767284.png
 tag_line: Foreign Resource System
-submitted_by: Mary Jane Buenaventura

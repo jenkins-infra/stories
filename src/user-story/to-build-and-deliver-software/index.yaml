@@ -3,7 +3,6 @@ map:
   location: Israel
   industries:
     - Defense Technology
-  name: Amit Dar
   latitude: "32.068424"
   longitude: "34.824785"
 metadata:
@@ -35,6 +34,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Amit Dar
 body_content:
   title: Providing visibility, flexibility, and stability for a global defense
     technology organization.
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: Global-Defense-Technology-Company-300x300.png
 tag_line: C4isr
-submitted_by: Amit Dar

@@ -3,7 +3,6 @@ map:
   location: Belgium
   industries:
     - Transport
-  name: Sebastien Sirtoli
   latitude: "50.5606"
   longitude: "4.1724"
 metadata:
@@ -23,6 +22,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Sebastien Sirtoli
 body_content:
   title: Deploying timetables, station, and local stop info, and track services in
     realtime using CI/CD & Jenkins.
@@ -55,4 +55,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer-Map_3283753.png
 tag_line: Pipe Inception
-submitted_by: Sebastien Sirtoli

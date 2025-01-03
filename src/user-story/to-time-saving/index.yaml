@@ -33,6 +33,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Ali Can Kustemur
 body_content:
   title: Creating new pipelines from those in use, the dev cycle at this fashion
     e-commerce site is now 10 times faster.
@@ -56,9 +57,11 @@ body_content:
     - >-
       *   Our development release cycle is 10x faster
 
-      *   Generally, all deployments have been shortened from 1 day to 10 minutes
+      *   Generally, all deployments have been shortened from 1 day to 10
+      minutes
 
-      *   When we have a new service and pipeline, we can easily duplicate and create a new one by using an older one as a standard
+      *   When we have a new service and pipeline, we can easily duplicate and
+      create a new one by using an older one as a standard
 title: Jenkins is the way to time-saving
 date: 2021-10-17T15:46:02.000Z
 post_name: to-time-saving
@@ -71,4 +74,3 @@ quotes:
     image: ./quote.png
 image: modanisalogotype_4x.png
 tag_line: Modanisa's New Fashion Journey
-submitted_by: Ali Can Kustemur

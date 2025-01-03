@@ -3,7 +3,6 @@ map:
   location: Chile
   industries:
     - Financial Services
-  name: Eduardo Mandry
   latitude: "-33.4488897"
   longitude: "-70.6692655"
 metadata:
@@ -24,6 +23,7 @@ metadata:
     - npm
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Eduardo Mandry
 body_content:
   title: Great plugins and a shared library are the making of a super flexible
     CI/CD platform.
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: noun_FinTech_1233393.png
 tag_line: One Pipeline To Build 'Em All
-submitted_by: Eduardo Mandry

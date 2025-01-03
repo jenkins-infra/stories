@@ -61,6 +61,17 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
             const obj = YAML.parse(content);
             obj.slug = path.basename(node.dir);
 
+            if (obj.map) {
+                if (!obj.metadata) {
+                    obj.metadata = {};
+                }
+            }
+
+            if (obj.metadata.authored_by) {
+                const uniqueNames = new Set(obj.metadata.authored_by.split(', ').map(name => name.trim()));
+                obj.metadata.authored_by = Array.from(uniqueNames).join(', ');
+            }
+
             const yamlNode = {
                 ...obj,
                 id: createNodeId(`${obj.slug} >>> UserStory`),
@@ -118,6 +129,7 @@ exports.createSchemaCustomization = ({actions: {createTypes}}) => {
           summary: String
           team_members: [String]
           version_control_systems: [String]
+          authored_by: String
         }
 
         type UserStoryBody_content @dontinfer {

@@ -3,7 +3,6 @@ map:
   location: France
   industries:
     - Internet of Things (IoT)
-  name: François Mockers
   latitude: "48.991435"
   longitude: "1.809326"
 metadata:
@@ -32,6 +31,7 @@ metadata:
     - sbt
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: François Mockers
 body_content:
   title: Increasing quality and ensuring IoT software passes all tests pre-deployment.
   paragraphs:
@@ -76,4 +76,3 @@ quotes:
     image: ./quote.png
 image: noun_IoT_2297886.png
 tag_line: IoT Cloud
-submitted_by: François Mockers

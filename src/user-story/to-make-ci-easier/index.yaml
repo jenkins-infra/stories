@@ -3,7 +3,6 @@ map:
   location: Spain
   industries:
     - Digital Products
-  name: Guillermo Zarzuelo
   latitude: "41.652251"
   longitude: "-4.724532099999999"
 metadata:
@@ -26,6 +25,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Guillermo Zarzuelo
 body_content:
   title: Bringing our clients closer to their clients with Jenkins and CI.
   paragraphs:
@@ -51,7 +51,8 @@ body_content:
     - >-
       *   Up to 200 apps deployments per day
 
-      *   Serverless apps package time reduced from several hours to less than one
+      *   Serverless apps package time reduced from several hours to less than
+      one
 
       *   Multiple hours if work saved with etl processes migration to Jenkins
 title: Jenkins is the way to make CI easier
@@ -64,4 +65,3 @@ quotes:
     image: ./quote.png
 image: noun_Mobile-seo_3616925.png
 tag_line: Helping Clients Help Clients with CI/CD
-submitted_by: Guillermo Zarzuelo

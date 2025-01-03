@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - DevOps & Machine Learning
-  name: Abhinav Dubey
   latitude: "26.7605545"
   longitude: "83.3731675"
 metadata:
@@ -25,6 +24,7 @@ metadata:
     - Git
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Abhinav Dubey
 body_content:
   title: Automating MLOps accuracy training using Jenkins and a "Containerization
     within a container" concept.
@@ -79,7 +79,8 @@ body_content:
 
       *   model training becomes easier
 
-      *   a more efficient method that allows me to better use my system resources
+      *   a more efficient method that allows me to better use my system
+      resources
 title: Jenkins is the way to achieve accuracy
 date: 2020-11-09T16:01:56.000Z
 post_name: to-achieve-accuracy
@@ -91,4 +92,3 @@ quotes:
     image: ./quote.png
 image: noun_accuracy-of-statistics_3061222-768x768.png
 tag_line: Automating Machine Learning Training Model
-submitted_by: Abhinav Dubey

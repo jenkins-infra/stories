@@ -19,6 +19,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Mustafa Azzam
 body_content:
   title: Jenkins automates software deployment processes for a leading telecom company
   paragraphs:
@@ -47,4 +48,3 @@ quotes:
     image: ./quote.png
 image: Paltel_new_logo.png
 tag_line: Next Generation IT Solutions
-submitted_by: Mustafa Azzam

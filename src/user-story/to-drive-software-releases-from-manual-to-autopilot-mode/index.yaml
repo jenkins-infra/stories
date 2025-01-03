@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Education
-  name: Surendra Reddy
   latitude: "12.9842136"
   longitude: "77.5970997"
 metadata:
@@ -27,6 +26,7 @@ metadata:
     - Maven
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Surendra Reddy
 body_content:
   title: Automation allows product owner to execute more tests faster, and to
     analyze/mitigate failures in no time.
@@ -52,7 +52,8 @@ body_content:
 
       *   consolidated reports are easier to prepare
 
-      *   ability to capture test logs takes no time and allows us to quickly analyze and mitigate the failures
+      *   ability to capture test logs takes no time and allows us to quickly
+      analyze and mitigate the failures
 title: Jenkins is the way to drive software releases from manual to autopilot mode
 date: 2021-04-09T15:28:02.000Z
 post_name: to-drive-software-releases-from-manual-to-autopilot-mode
@@ -62,4 +63,3 @@ quotes:
     image: ./quote.png
 image: noun_Library_928717.png
 tag_line: Knowledge Sharing Learn2020
-submitted_by: Surendra Reddy

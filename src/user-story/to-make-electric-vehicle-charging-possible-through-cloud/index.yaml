@@ -20,6 +20,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Avinash Upadhyaya
 body_content:
   title: eMobility comes with faster deployment and easier management for the
     developers
@@ -64,9 +65,11 @@ body_content:
     - >-
       *   Faster deployment with easy management for the developers
 
-      *   The same pipeline could be used for multiple environments like dev, test, and prod
+      *   The same pipeline could be used for multiple environments like dev,
+      test, and prod
 
-      *   The respective team could trigger their deployments with RBAC without the DevOps team having to interfere
+      *   The respective team could trigger their deployments with RBAC without
+      the DevOps team having to interfere
 
       *   Release cycles shortened from 2 weeks to every day
 title: Jenkins is the way to make electric vehicle charging possible through cloud
@@ -80,4 +83,3 @@ quotes:
     image: ./quote.png
 image: uh0oxubivwifdtx2iwum.png
 tag_line: Charging Management System (CMS) for Electric Vehicles
-submitted_by: Avinash Upadhyaya

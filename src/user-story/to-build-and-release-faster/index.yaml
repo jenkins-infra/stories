@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Technology
-  name: Buvanesh Kumar
   latitude: "11.1085242"
   longitude: "77.3410656"
 metadata:
@@ -31,6 +30,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Buvanesh Kumar
 body_content:
   title: Automating the boring stuff made releases 5X faster.
   paragraphs:
@@ -53,9 +53,11 @@ body_content:
     - >-
       *   releases were 5x faster
 
-      *   automated error reporting and customization helped us save time with each release
+      *   automated error reporting and customization helped us save time with
+      each release
 
-      *   ability to focus on important things because we were able to automate the boring stuff by almost 99%
+      *   ability to focus on important things because we were able to automate
+      the boring stuff by almost 99%
 title: Jenkins is the way to build and release faster
 date: 2021-01-11T18:27:21.000Z
 post_name: to-build-and-release-faster
@@ -65,4 +67,3 @@ quotes:
     image: ./quote.png
 image: redhat.jpg
 tag_line: Release Engineering with Jenkins
-submitted_by: Buvanesh Kumar

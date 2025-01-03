@@ -3,7 +3,6 @@ map:
   location: Israel
   industries:
     - Advertising & Marketing
-  name: Alexander Leibzon
   latitude: "32.084041"
   longitude: "34.887762"
 metadata:
@@ -27,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Alexander Leibzon
 body_content:
   title: Getting reliable, in-time alerts in PagerDuty.
   paragraphs:
@@ -72,9 +72,11 @@ body_content:
       *   The ability to trigger incidents on various job statuses: Success,
       Failure, Aborted, Unstable, & Not Built
 
-      *   The ability to trigger incidents based on number of consecutive build results
+      *   The ability to trigger incidents based on number of consecutive build
+      results
 
-      *   The ability to automatically resolve incidents when job is back to normal
+      *   The ability to automatically resolve incidents when job is back to
+      normal
 
       *   Being pipeline compatible
 title: Jenkins is the way to automate NOC operations
@@ -87,4 +89,3 @@ quotes:
     image: ./quote.png
 image: noun_process_1125183-300x300.png
 tag_line: Reliable Network Operations Center with Jenkins in the AdTech Industry
-submitted_by: Alexander Leibzon

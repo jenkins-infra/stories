@@ -3,7 +3,6 @@ map:
   location: Brazil
   industries:
     - Logistics
-  name: Luís Felipe Teixeira
   latitude: "-23.4209995"
   longitude: "-51.9330558"
 metadata:
@@ -28,6 +27,7 @@ metadata:
     - Sincrovia
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Luís Felipe Teixeira
 body_content:
   title: Automation is the ticket for an app that manages logistics.
   paragraphs:
@@ -76,4 +76,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-04-28-at-11.24.43-AM.png
 tag_line: Pioneering Big Data & AI
-submitted_by: Luís Felipe Teixeira

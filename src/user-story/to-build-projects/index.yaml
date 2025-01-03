@@ -18,6 +18,7 @@ metadata:
     - Emil Vulkov, Senior System Administrator
   community_supports:
     - Spoke with colleagues and peers
+  authored_by:
 body_content:
   title: Finance company overcomes development challenges with a new
     Jenkins-inspired CI/CD.
@@ -56,4 +57,3 @@ quotes:
     image: ./quote.png
 image: noun_Online-Banking_1907436.png
 tag_line: CAF Project (CI/CD Implementation)
-submitted_by: Lyubomir Stanev

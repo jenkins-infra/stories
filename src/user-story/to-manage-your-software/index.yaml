@@ -10,6 +10,7 @@ metadata:
     - Powershell
   platforms:
     - ": Windows"
+  authored_by: Scott Meyer
 body_content:
   title: Using Jenkins to help automate tasks with the SysAdmin environment.
   paragraphs:
@@ -37,4 +38,3 @@ quotes:
     image: ./quote.png
 image: noun_Monitor_1944924.png
 tag_line: System Administration Made Easy
-submitted_by: Scott Meyer

@@ -21,6 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Membré Guillaume
 body_content:
   title: Rock solid CI/CD built on an old legacy system.
   paragraphs:
@@ -66,13 +67,20 @@ body_content:
       allows teams to concentrate their effort on the code of the application
       with little worry about the pipeline.
 
-      *   One of the benefits of Jenkins is the "build with parameters" which has been heavily customized depending on the type of pipeline the project wants to run. It differs based on the git branch, type of technology and configuration written in the Jenkinsfile.
+      *   One of the benefits of Jenkins is the "build with parameters" which
+      has been heavily customized depending on the type of pipeline the project
+      wants to run. It differs based on the git branch, type of technology and
+      configuration written in the Jenkinsfile.
 
-      *   Groovy scripts are also very easy to handle for java people but pipeline tests can also be time consuming.
+      *   Groovy scripts are also very easy to handle for java people but
+      pipeline tests can also be time consuming.
 
-      *   Around 60 DSL instructions have been added to help projects to use the pipeline and 100 groovy classes have been written for the pipeline.
+      *   Around 60 DSL instructions have been added to help projects to use the
+      pipeline and 100 groovy classes have been written for the pipeline.
 
-      *   The Docker plugin is the most used in this pipeline as every single script or external program is run in Docker containers with custom images dedicated to different tech.
+      *   The Docker plugin is the most used in this pipeline as every single
+      script or external program is run in Docker containers with custom images
+      dedicated to different tech.
     - "The development started 4 years ago with the very first version of the
       scripted pipeline and it has been rock solid since. Results included:"
     - |-
@@ -89,4 +97,3 @@ quotes:
     image: ./quote.png
 image: noun_edit_3477760.png
 tag_line: CI/CD at Scale
-submitted_by: Membré Guillaume

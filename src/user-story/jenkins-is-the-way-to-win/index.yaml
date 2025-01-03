@@ -3,7 +3,6 @@ map:
   location: Ohio, USA
   industries:
     - Financial Services
-  name: Thomas Haver
   latitude: "39.9611755"
   longitude: "-82.99879419999991"
 metadata:
@@ -26,6 +25,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Thomas Haver
 body_content:
   title: From monolith to modern in event-driven consumer banking.
   paragraphs:
@@ -66,4 +66,3 @@ quotes:
     image: ./quote.png
 image: noun_Online-Banking_1907436.png
 tag_line: GENM
-submitted_by: Thomas Haver

@@ -16,6 +16,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Mickael Roger
 body_content:
   title: The way to help developers and operators work together better is to have
     them share the same tools.
@@ -74,4 +75,3 @@ quotes:
     image: ./quote.png
 image: noun_edit_3477760.png
 tag_line: Managing Production Events With Jenkins
-submitted_by: Mickael Roger

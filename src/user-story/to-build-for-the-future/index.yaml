@@ -3,7 +3,6 @@ map:
   location: Wisconsin, USA
   industries:
     - Healthcare
-  name: Gregory Jacobs
   latitude: "44.4488805"
   longitude: "-88.0603806"
 metadata:
@@ -15,6 +14,7 @@ metadata:
   build_tools:
     - Ant
     - Maven
+  authored_by: Gregory Jacobs
 body_content:
   title: Transition off an old, slow and manual build system to something built
     for the future.
@@ -63,4 +63,3 @@ quotes:
     image: ./quote.png
 image: noun_Monitor_2883656-300x300.png
 tag_line: Digital Transformation in the Healthcare Industry
-submitted_by: Gregory Jacobs

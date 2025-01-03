@@ -3,7 +3,6 @@ map:
   location: United Arab Emirates
   industries:
     - Media & Entertainment
-  name: Prasanjit Singh
   latitude: "25.2048493"
   longitude: "55.2707828"
 metadata:
@@ -36,6 +35,7 @@ metadata:
     - Saman Batool, DevOps Engineer
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Prasanjit Singh
 body_content:
   title: Using Jenkins & CI/CD to bring better entertainment choices to MENA.
   paragraphs:
@@ -71,13 +71,16 @@ body_content:
       and integrated these to be triggered via chatbot integration with various
       team channels where the bot could be invoked.
 
-      *   We integrated their orchestrators like Apache Mesos, Kubernetes, and Amazon ECS with these Jenkins pipelines.
+      *   We integrated their orchestrators like Apache Mesos, Kubernetes, and
+      Amazon ECS with these Jenkins pipelines.
 
-      *   For artifact storage, Nexus and Private Docker registries were roped in.
+      *   For artifact storage, Nexus and Private Docker registries were roped
+      in.
 
       *   Telemetry and logging agents were integrated into the pipelines.
 
-      *   Deployment and alerting were applied to the scripts for notifying the health of the application.
+      *   Deployment and alerting were applied to the scripts for notifying the
+      health of the application.
     - The deployment process turned out to be a great success and put all these
       moving parts together without Jenkins would have been unimaginable.
     - "Here are the capabilities we relied on most:"
@@ -118,4 +121,3 @@ quotes:
     image: ./quote.png
 image: 21184311214365.png
 tag_line: Declarative Pipelines With Chat Bots
-submitted_by: Prasanjit Singh

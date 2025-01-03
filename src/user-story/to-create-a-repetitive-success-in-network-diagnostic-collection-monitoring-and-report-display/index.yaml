@@ -21,6 +21,7 @@ metadata:
     - Windows
   build_tools:
     - Maven
+  authored_by: Jason Wee
 body_content:
   title: A Jenkins plugin designed with the network administrator in mind.
   paragraphs:
@@ -70,7 +71,8 @@ body_content:
 
       *   Display MTR report visually for every data collection
 
-      *   Instantly get visual representations of bi-directional data collections and data display
+      *   Instantly get visual representations of bi-directional data
+      collections and data display
 
       *   Ability to show host and its location
 
@@ -87,4 +89,3 @@ quotes:
     image: ./quote.png
 image: 00000150-63ef-6f1f-7b86-c142a61dfe4b.jpg
 tag_line: JWMS-MTR-Plugin
-submitted_by: Jason Wee

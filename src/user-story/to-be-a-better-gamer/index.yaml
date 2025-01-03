@@ -16,6 +16,7 @@ metadata:
     - gCloud
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Ganesh Yallamelli
 body_content:
   title: Father helps kids get their game on easily, with Jenkins.
   paragraphs:
@@ -76,4 +77,3 @@ quotes:
     image: ./quote.png
 image: noun_Dog_1394679.png
 tag_line: Managing Online Gaming
-submitted_by: Ganesh Yallamelli

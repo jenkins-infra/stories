@@ -3,7 +3,6 @@ map:
   location: Ukraine
   industries:
     - Consulting
-  name: Eugene Starchenko
   latitude: "50.45314740000001"
   longitude: "30.5179502"
 metadata:
@@ -33,6 +32,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Eugene Starchenko
 body_content:
   title: A unified CI/CD system for DevOps-as-a-service developers
   paragraphs:
@@ -76,7 +76,8 @@ body_content:
 
       *   Jenkins backups auto-restore on any VM failure or service interruption
 
-      *   Onboarding for Deployment & Build release cycles was shortened from one week to 1 day
+      *   Onboarding for Deployment & Build release cycles was shortened from
+      one week to 1 day
 
       *   The system is now managed and supported only by 2 engineers
 title: Jenkins is the way to experiments & eternity
@@ -88,4 +89,3 @@ quotes:
     image: ./quote.png
 image: noun_development_1959082-768x768.png
 tag_line: Onboarding A Consulting Group's Development Team
-submitted_by: Eugene Starchenko

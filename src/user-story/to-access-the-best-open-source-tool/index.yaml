@@ -18,6 +18,7 @@ metadata:
     - Thomas Daget/Database administrator/Vetoquinol
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Antoine Pritzy
 body_content:
   title: A CI platform to improve quality and control fueled by Jenkins.
   paragraphs:
@@ -37,9 +38,11 @@ body_content:
       *   Warnings Next Generations is a very good plugin for visualizing
       warnings or errors in code for differents languages
 
-      *   Perfpublisher provides beautiful graphics for the strength of an application
+      *   Perfpublisher provides beautiful graphics for the strength of an
+      application
 
-      *   Publish HTML report provides a good web interface for tools which need it
+      *   Publish HTML report provides a good web interface for tools which need
+      it
     - "I was pleased with the results, which included:"
     - |-
       *   improved product quality
@@ -55,4 +58,3 @@ quotes:
     image: ./quote.png
 image: noun_edit_3477760.png
 tag_line: Continuous Integration Platform
-submitted_by: Antoine Pritzy

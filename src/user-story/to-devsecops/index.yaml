@@ -3,7 +3,6 @@ map:
   location: China
   industries:
     - Network Security
-  name: Canux Cheng
   latitude: "31.259822"
   longitude: "121.525727"
 metadata:
@@ -30,6 +29,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Canux Cheng
 body_content:
   title: Creating a flexible CI/CD chain to meet the development needs in the
     field of cybersecurity.
@@ -87,7 +87,8 @@ body_content:
     - >-
       *   everything is triggered automatically
 
-      *   every developer/QA knows exactly what is happening with their code, and in real time
+      *   every developer/QA knows exactly what is happening with their code,
+      and in real time
 
       *   integration with GitLab makes code management easier
 
@@ -104,4 +105,3 @@ quotes:
     image: ./quote.png
 image: noun_cybersecurity-website-protection_2689814-300x300.png
 tag_line: Cybersecurity CI/CD
-submitted_by: Canux Cheng

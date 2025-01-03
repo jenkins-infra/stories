@@ -3,7 +3,6 @@ map:
   location: Israel
   industries:
     - Advertising & Marketing
-  name: Tidhar Klein Orbach
   latitude: "31.9730015"
   longitude: "34.7925012"
 metadata:
@@ -22,6 +21,7 @@ metadata:
     - Gradle
   community_supports:
     - Jenkins.io websites and blogs. Spoke with colleagues and peers
+  authored_by: Tidhar Klein Orbach
 body_content:
   title: Reducing developer frustration with an automated solution that works with
     a variety of circumstances and operating systems.
@@ -47,11 +47,13 @@ body_content:
     - >-
       1.  Is today a deployment day? -- We don't deploy on holidays :)
 
-      2.  Is today's version valid? -- Validate the version using canary testing which is implemented in another Jenkins flow
+      2.  Is today's version valid? -- Validate the version using canary testing
+      which is implemented in another Jenkins flow
 
       3.  Data center verification -- Deploy on a single data center and verify
 
-      4.  New version for all -- Deploy on the rest of the data centers (6 out of 7) in parallel
+      4.  New version for all -- Deploy on the rest of the data centers (6 out
+      of 7) in parallel
     - "The deployment procedure on a single data center goes like this:"
     - |-
       1.  Get the list of servers to be deployed
@@ -85,9 +87,11 @@ body_content:
     - >-
       *   a deployment flow with high reliability
 
-      *   it's easier to maintain and extend it with Jenkins Pipelines and Groovy
+      *   it's easier to maintain and extend it with Jenkins Pipelines and
+      Groovy
 
-      *   we're able to deploy higher amount of servers in the same or even less time, due to the Jenkins Pipeline flow
+      *   we're able to deploy higher amount of servers in the same or even less
+      time, due to the Jenkins Pipeline flow
 title: Jenkins is the way to make better recommendations
 date: 2020-12-27T13:51:13.000Z
 post_name: to-make-better-recommendations
@@ -98,4 +102,3 @@ quotes:
 image: 5f2Utw-U_400x400.jpg
 tag_line: "Continuous Delivery for Hardware IPHigh Scale Service Deployment:
   Taboola's Recommended Flow"
-submitted_by: Tidhar Klein Orbach

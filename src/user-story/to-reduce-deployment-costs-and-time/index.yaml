@@ -28,6 +28,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Manthan Choudhury
 body_content:
   title: Reducing human error and improving the software development lifecycle
     with Jenkins-based automation.
@@ -53,7 +54,8 @@ body_content:
 
       2.  Changes are committed to a central git repository
 
-      3.  A Jenkins job executes Nebula, which builds, tests, and packages the application for deployment
+      3.  A Jenkins job executes Nebula, which builds, tests, and packages the
+      application for deployment
 
       4.  Builds are "baked" into Amazon Machine Images
 
@@ -74,11 +76,23 @@ body_content:
       *   Build: Nebula enables them to easily build the application
       automatically.
 
-      *   Integrate: Once the code is built and tested locally using Nebula, it is ready to be pushed and for continuous integration and continuous deployment. The code is pushed to the central git repository and once the change is committed, a Jenkins job is triggered. It'll pull the code and continuous integration takes place.
+      *   Integrate: Once the code is built and tested locally using Nebula, it
+      is ready to be pushed and for continuous integration and continuous
+      deployment. The code is pushed to the central git repository and once the
+      change is committed, a Jenkins job is triggered. It'll pull the code and
+      continuous integration takes place.
 
-      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and to generate AMIs, they created the "Bakery" that enables the AMI creation globally. When the Jenkin job is complete successfully, then Jenkins triggers the Spinnaker pipeline.
+      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and
+      to generate AMIs, they created the "Bakery" that enables the AMI creation
+      globally. When the Jenkin job is complete successfully, then Jenkins
+      triggers the Spinnaker pipeline.
 
-      *   Deploy: Once the bake is complete, Spinnaker makes the built AMI available for deployments to thousands of instances. Successful bake triggers the next stage of the Spinnaker pipeline and deploys to the test environment. Automated tests will be exercised and after these teams use customized deployment strategies like red/black, canary, or multi-region deployments.
+      *   Deploy: Once the bake is complete, Spinnaker makes the built AMI
+      available for deployments to thousands of instances. Successful bake
+      triggers the next stage of the Spinnaker pipeline and deploys to the test
+      environment. Automated tests will be exercised and after these teams use
+      customized deployment strategies like red/black, canary, or multi-region
+      deployments.
 title: Jenkins is the way to reduce deployment costs and time
 date: 2021-09-18T14:42:55.000Z
 post_name: to-reduce-deployment-costs-and-time
@@ -91,4 +105,3 @@ quotes:
     image: ./quote.png
 image: PCOE.jpeg
 tag_line: Video Streaming Android App for a Startup
-submitted_by: Manthan Choudhury

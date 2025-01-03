@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Financial Services
-  name: Kuldeep Sharma
   latitude: "31.41875989999999"
   longitude: "76.6427152"
 metadata:
@@ -31,6 +30,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Kuldeep Sharma
 body_content:
   title: Building DevOps confidence by automating existing processes.
   paragraphs:
@@ -63,16 +63,19 @@ body_content:
 
       *   Integration with functional automation framework
 
-      *   Integration with artifact manager to store build artifacts automatically
+      *   Integration with artifact manager to store build artifacts
+      automatically
 
       *   Visualization of build and release trends
     - "Using Jenkins yielded many great results, including:"
     - >-
       *   reduced error rate with automation
 
-      *   increased quantity of builds from an average of two per week to four or five a day
+      *   increased quantity of builds from an average of two per week to four
+      or five a day
 
-      *   faster feedback to the dev/test team in the early stages of development
+      *   faster feedback to the dev/test team in the early stages of
+      development
 
       *   improved product quality as a result of early and frequent feedback
     - The client was really happy to see the changes in overall delivery speed
@@ -89,4 +92,3 @@ quotes:
     image: ./quote.png
 image: noun_collaboration_2323215-768x768.png
 tag_line: Avoiding Human Error
-submitted_by: Kuldeep Sharma

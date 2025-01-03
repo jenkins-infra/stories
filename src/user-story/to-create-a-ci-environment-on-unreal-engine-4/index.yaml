@@ -12,6 +12,7 @@ metadata:
     - GitHub
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Alberto Mikulan
 body_content:
   title: University student becomes a faithful follower of the Jenkins way.
   paragraphs:
@@ -44,17 +45,23 @@ body_content:
       *   BlueOcean to create a Jenkins project really fast. It's simple and
       straightforward to use.
 
-      *   JUnit plugin to be able to generate Tests reports in the build results page.
+      *   JUnit plugin to be able to generate Tests reports in the build results
+      page.
 
-      *   Cobertura plugin to be able to generate code coverage reports and show graphs of the different builds coverage.
+      *   Cobertura plugin to be able to generate code coverage reports and show
+      graphs of the different builds coverage.
 
       *   Git Client plugin to control the local git repository.
 
       *   GitHub API plugin to control the remote git repository in GitHub.
 
-      *   Pipeline API creates a pipeline as code and has its configuration stored in the same repository as the project. This allows the ability to have a nice configuration management of the automated pipeline.
+      *   Pipeline API creates a pipeline as code and has its configuration
+      stored in the same repository as the project. This allows the ability to
+      have a nice configuration management of the automated pipeline.
 
-      *   Groovy language support in the declarative pipeline. This allowed me to use a method capable of transforming JSON tests reports into JUnit reports.
+      *   Groovy language support in the declarative pipeline. This allowed me
+      to use a method capable of transforming JSON tests reports into JUnit
+      reports.
     - "Using Jenkins yielded significant results, including:"
     - |-
       *   Reduction of repetitive, boring, and cumbersome tasks
@@ -73,4 +80,3 @@ quotes:
     image: ./quote.png
 image: noun_elearning_630943.png
 tag_line: "ProjectR: Video Game Based on UE4"
-submitted_by: Alberto Mikulan

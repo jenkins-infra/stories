@@ -3,7 +3,6 @@ map:
   location: Portugal
   industries:
     - Information Technology
-  name: Filipe Costa
   latitude: "41.3664104"
   longitude: "-8.1971968"
 metadata:
@@ -27,6 +26,7 @@ metadata:
   community_supports:
     - Spoke with colleagues and peers
     - and relied on Jenkins.io websites & blogs
+  authored_by: Filipe Costa
 body_content:
   title: Automated testing pipeline for CI/CD.
   paragraphs:
@@ -83,4 +83,3 @@ quotes:
     image: ./quote.png
 image: noun_developer_1018327-300x300.png
 tag_line: Proof of concept pipeline
-submitted_by: Filipe Costa

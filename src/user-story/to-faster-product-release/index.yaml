@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Information Technology
-  name: Swaraj Dutta
   latitude: "12.9715987"
   longitude: "77.5945627"
 metadata:
@@ -14,6 +13,7 @@ metadata:
     **Platform** : Docker or Kubernetes, Linux, MacOS**Version Control System:**
     GitHub, GitLab**Build Tool:** Ant, Maven**Community Support:** Jenkins.io
     websites & blogs, Spoke with colleagues and peers"
+  authored_by: Swaraj Dutta
 body_content:
   title: Securing the enterprise cloud with Jenkins.
   paragraphs:
@@ -42,4 +42,3 @@ quotes:
     image: ./quote.png
 image: ibm-logo-vector-download.jpg
 tag_line: IBM Cloud
-submitted_by: Swaraj Dutta

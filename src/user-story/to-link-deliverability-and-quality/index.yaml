@@ -3,7 +3,6 @@ map:
   location: France
   industries:
     - Energy
-  name: Gabriel Poret
   latitude: "44.769478"
   longitude: "-0.311523"
 metadata:
@@ -30,6 +29,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and peers
+  authored_by: Gabriel Poret
 body_content:
   title: Drastically reduce build times and benefit from non-regression testing
     done in your application.
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: Logo_Consoneo_sans_baseline_petit.png
 tag_line: Consoneo CI // Bluspark CI/CD
-submitted_by: Gabriel Poret

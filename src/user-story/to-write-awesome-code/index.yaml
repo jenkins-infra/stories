@@ -3,7 +3,6 @@ map:
   location: Germany
   industries:
     - Binary Translation
-  name: Johannes Mayer
   latitude: "48.1351253"
   longitude: "11.5819806"
 metadata:
@@ -27,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Johannes Mayer
 body_content:
   title: Reducing developer frustration with an automated solution that works with
     a variety of circumstances and operating systems.
@@ -62,4 +62,3 @@ quotes:
     image: ./quote.png
 image: noun_decode_2311447-768x768.png
 tag_line: Versatile Binary Translation for New Hardware Systems
-submitted_by: Johannes Mayer

@@ -3,7 +3,6 @@ map:
   location: Canada
   industries:
     - Artificial Intelligence (AI)
-  name: Joseph Tole
   latitude: "43.379898"
   longitude: "-79.78732289999999"
 metadata:
@@ -28,6 +27,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Joseph Tole
 body_content:
   title: Helping health insurers modernize with the help of AI & Jenkins.
   paragraphs:
@@ -57,7 +57,8 @@ body_content:
 
       *   De-duplication of Jenkins code via JTE, JSL, etc.
 
-      *   Accountability via DSL to eliminate previous point-and-click defined jobs
+      *   Accountability via DSL to eliminate previous point-and-click defined
+      jobs
 title: Jenkins is the way to deploy a truly functional and efficient system to
   manage build pipelines
 date: 2021-08-02T15:24:39.000Z
@@ -69,4 +70,3 @@ quotes:
     image: ./quote.png
 image: noun_Laptop_4000626.png
 tag_line: Improving Health Care
-submitted_by: Joseph Tole

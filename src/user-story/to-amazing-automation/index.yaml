@@ -3,7 +3,6 @@ map:
   location: Netherlands
   industries:
     - Semiconductors
-  name: Mitchell Locktree
   latitude: "52.1319071"
   longitude: "5.0171019"
 metadata:
@@ -21,6 +20,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Mitchell Locktree
 body_content:
   title: Create a roadmap to transform to continuous integration without manual
     interference.
@@ -63,4 +63,3 @@ quotes:
     image: ./quote.png
 image: noun_IC-Chip_3405060-300x300.png
 tag_line: One-button Integration in Software Facilities for a Semiconductor Leader
-submitted_by: Mitchell Locktree

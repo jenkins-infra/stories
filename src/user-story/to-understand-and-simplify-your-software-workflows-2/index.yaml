@@ -3,7 +3,6 @@ map:
   location: Spain
   industries:
     - Education
-  name: Javier Méndez Veira
   latitude: "43.3555238"
   longitude: "-8.255737600000002"
 metadata:
@@ -25,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Javier Méndez Veira
 body_content:
   title: Creating complex workflows in an easy way.
   paragraphs:
@@ -59,7 +59,8 @@ body_content:
 
       *   SSH Agents & Secret Credentials.
 
-      *   Google Chat & Hangouts notifications are really useful for receiving real-time feedback.
+      *   Google Chat & Hangouts notifications are really useful for receiving
+      real-time feedback.
 
       *   The Gitlab plugin.
 
@@ -75,9 +76,11 @@ body_content:
 
       2.  Standardized QA checks and reporting via chat.
 
-      3.  Jenkins helps us automate custom tests. We haven't needed to extra spend time executing them from our laptops.
+      3.  Jenkins helps us automate custom tests. We haven't needed to extra
+      spend time executing them from our laptops.
 
-      4.  We have reduced time spent on maintenance work by automating some processes to be executed on the development machines.
+      4.  We have reduced time spent on maintenance work by automating some
+      processes to be executed on the development machines.
 title: Jenkins is the way to understand and simplify your software workflows
 date: 2021-03-07T16:07:35.000Z
 post_name: to-understand-and-simplify-your-software-workflows-2
@@ -87,4 +90,3 @@ quotes:
     image: ./quote.png
 image: q68kAUxu_400x400.png
 tag_line: "Talentcloud: Talent management in an e-learning Environment"
-submitted_by: Javier Méndez Veira

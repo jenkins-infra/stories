@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Information Technology
-  name: Omprakash Paliwal
   latitude: "26.2389469"
   longitude: "73.02430939999999"
 metadata:
@@ -30,6 +29,7 @@ metadata:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
     - Spoke with colleagues and peers
+  authored_by:
 body_content:
   title: Enabling continuous integration and testing for a 100 gigabyte repo.
   paragraphs:
@@ -43,7 +43,8 @@ body_content:
       and QualityGates Reports – not the one which Jenkins plugin provides –
       like CPD, Inspection.
 
-      2.  To make sure that the CI builds run for all commits/tags to release branches.
+      2.  To make sure that the CI builds run for all commits/tags to release
+      branches.
 
       3.  Ensure error handling and reporting happen promptly.
     - "**Goals:** Implementing continuous integration and continuous testing for
@@ -98,4 +99,3 @@ quotes:
     image: ./quote.png
 image: noun_database_2698554.png
 tag_line: CI with Multigig-sized Repo with Jenkins
-submitted_by: Omprakash Paliwal

@@ -3,7 +3,6 @@ map:
   location: Spain
   industries:
     - Software Development
-  name: Ivan Fernandez
   latitude: "37.2596578"
   longitude: "-6.516975299999999"
 metadata:
@@ -44,6 +43,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+  authored_by: Ivan Fernandez
 body_content:
   title: Building unified visibility across entire ecosystems.
   paragraphs:
@@ -72,11 +72,14 @@ body_content:
       *   Portability to different OS and architectures: this makes it simple to
       launch our test on those OS and platforms.
 
-      *   Reusability of common pipeline steps across projects: our pipeline shared library saves us time.
+      *   Reusability of common pipeline steps across projects: our pipeline
+      shared library saves us time.
 
-      *   Extensibility on pipelines: we have an encapsulated process on pipeline steps, making it easier to use.
+      *   Extensibility on pipelines: we have an encapsulated process on
+      pipeline steps, making it easier to use.
 
-      *   Pipeline definition as code: every project has its pipeline in its repo.
+      *   Pipeline definition as code: every project has its pipeline in its
+      repo.
     - "Jenkins rocks because now we just build and test it. No hands! Simply
       push to GitHub and everything is magic. We also liked the results that it
       provides:"
@@ -96,4 +99,3 @@ quotes:
     image: ./quote.png
 image: elastic-search-300x300.png
 tag_line: Elastic Observability
-submitted_by: Ivan Fernandez

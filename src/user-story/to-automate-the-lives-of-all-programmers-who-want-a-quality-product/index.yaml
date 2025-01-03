@@ -3,7 +3,6 @@ map:
   location: Brazil
   industries:
     - Logistics
-  name: Diogo Alves de Almeida
   latitude: "-23.4412149"
   longitude: "-51.8851039"
 metadata:
@@ -14,6 +13,7 @@ metadata:
     : Android, iOS, Docker or Kubernetes, Linux**Version Control System:**
     GitHub**Build Tool:** Maven**Teammates:** Luís Felipe Costa, Software
     Engineer and Guimarães Teixeira, CEO, Sincrovia Soluções Tecnológicas"
+  authored_by: Diogo Alves de Almeida
 body_content:
   title: Jenkins mapped out trucking logistics, plus management of drivers, travel
     itineraries, and expenses.
@@ -53,4 +53,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-04-28-at-11.24.43-AM.png
 tag_line: Sincrovia fleet management system
-submitted_by: Diogo Alves de Almeida

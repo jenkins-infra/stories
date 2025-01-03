@@ -29,6 +29,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Felipe Martinelli
 body_content:
   title: Helping new tech startups shorten the path between application and audience.
   paragraphs:
@@ -63,4 +64,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-12-06-at-10.40.46-AM.png
 tag_line: "Dopster: Business Dynamism"
-submitted_by: Felipe Martinelli

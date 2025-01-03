@@ -3,7 +3,6 @@ map:
   location: Spain
   industries:
     - Consulting
-  name: Julio Valls
   latitude: "39.4699075"
   longitude: "-0.3762881"
 metadata:
@@ -27,6 +26,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Julio Valls
 body_content:
   title: Better quality QA-as-a-Service is reliant on Jenkins and the Jenkins
     community.
@@ -62,7 +62,8 @@ body_content:
 
       *   Maven Plugin, to make building maven projects easier.
 
-      *   Naginator Plugin, some jobs needed to be re-run in certain cases and this was pretty useful to easily achieve it.
+      *   Naginator Plugin, some jobs needed to be re-run in certain cases and
+      this was pretty useful to easily achieve it.
 
       *   Pipeline plugin to build handy pipelines.
 
@@ -75,7 +76,8 @@ body_content:
 
       *   Automate the execution of many jobs to minimize human interaction.
 
-      *   Optimize the build to test time and reporting of results to stakeholders.
+      *   Optimize the build to test time and reporting of results to
+      stakeholders.
 title: Jenkins is the way to manageable UI test automation
 date: 2021-07-10T21:38:01.000Z
 post_name: to-manageable-ui-test-automation
@@ -87,4 +89,3 @@ quotes:
     image: ./quote.png
 image: noun_option_2829174.png
 tag_line: Test Automation Orchestration Engine
-submitted_by: Julio Valls

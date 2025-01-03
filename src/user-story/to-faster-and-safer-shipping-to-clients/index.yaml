@@ -3,7 +3,6 @@ map:
   location: Colombia
   industries:
     - Software Developement
-  name: Jorge Uztariz
   latitude: "4.619519299999999"
   longitude: "-74.17200989999999"
 metadata:
@@ -32,6 +31,7 @@ metadata:
     - Orlenis Nieres / DevOps Analyst, Consis Internacional
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Jorge Uztariz
 body_content:
   title: Less time and more safety when shipping artifacts to the customer, with
     no worries about database backups.
@@ -70,20 +70,25 @@ body_content:
       *   For telegram notifications we use plugin "Build Notifications" at
       <https://plugins.jenkins.io/build-notifications>
 
-      *   For email notifications we use plugin "Mailer" at <https://plugins.jenkins.io/mailer>
+      *   For email notifications we use plugin "Mailer" at
+      <https://plugins.jenkins.io/mailer>
 
-      *   For the bitbucket oauth integration we use plugin "Bitbucket OAuth" at <https://plugins.jenkins.io/bitbucket-oauth>
+      *   For the bitbucket oauth integration we use plugin "Bitbucket OAuth" at
+      <https://plugins.jenkins.io/bitbucket-oauth>
 
-      *   For the trigger variable we use plugin "Parameterized Trigger" at <https://plugins.jenkins.io/parameterized-trigger>
+      *   For the trigger variable we use plugin "Parameterized Trigger" at
+      <https://plugins.jenkins.io/parameterized-trigger>
 
-      *   For the bitbucket integration we use plugin "Bitbucket" at <https://plugins.jenkins.io/bitbucket/>
+      *   For the bitbucket integration we use plugin "Bitbucket" at
+      <https://plugins.jenkins.io/bitbucket/>
     - "We are very happy with the results:"
     - >-
       *   compilation time reduced from 1 hour to 20 minutes
 
       *   safety when shipping artifacts to the customer
 
-      *   development environment update time reduced from over 1 hour to 25 minutes
+      *   development environment update time reduced from over 1 hour to 25
+      minutes
 
       *   no worries about database backups
 title: Jenkins is the way to faster and safer shipping to clients
@@ -96,4 +101,3 @@ quotes:
     image: ./quote.png
 image: A36pIhjZ_400x400.png
 tag_line: Automate and Send Artifacts
-submitted_by: Jorge Uztariz

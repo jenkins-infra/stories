@@ -3,7 +3,6 @@ map:
   location: Jordan
   industries:
     - Healthcare
-  name: Yazeed AL-Smadi
   latitude: "31.9539494"
   longitude: "35.910635"
 metadata:
@@ -28,6 +27,7 @@ metadata:
     - GitLab
   build_tools:
     - Jenkins
+  authored_by: Yazeed AL-Smadi
 body_content:
   title: Reducing DevOps problem tickets by over 90% by using Jenkins.
   paragraphs:
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: 1_6.jpg
 tag_line: EHS Automation Project
-submitted_by: Yazeed AL-Smadi

@@ -3,7 +3,6 @@ map:
   location: France
   industries:
     - Information Technology
-  name: Alexis Couvreur
   latitude: "43.58041799999999"
   longitude: "7.125102"
 metadata:
@@ -32,6 +31,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Alexis Couvreur
 body_content:
   title: Doubling the speed of performance for digital sports software with a high
     performing CI/CD.
@@ -57,23 +57,36 @@ body_content:
       the charge to the K8S cluster. But the pipeline was slow. It was slow
       because there were all blank sheets in this environment.
 
-      *   Second, we needed our product to have semantic versioning (SemVer) distributed to clients.
+      *   Second, we needed our product to have semantic versioning (SemVer)
+      distributed to clients.
 
-      *   Third, as one of the project's products is embedded software, we needed to build it for multiple OS: Windows, Mac, Linux.
+      *   Third, as one of the project's products is embedded software, we
+      needed to build it for multiple OS: Windows, Mac, Linux.
 
-      *   Finally, we needed to deliver the software to our client with just a simple click. They had given us an FTP server for the release. This process is a bit laborious.
+      *   Finally, we needed to deliver the software to our client with just a
+      simple click. They had given us an FTP server for the release. This
+      process is a bit laborious.
     - "The Jenkins capabilities we relied on included:"
     - >-
       *   The Jenkins-Kubernetes plugin to spin up k8s pod agents with our
       needed tools leveraging the Jenkins main instance load.
 
-      *   Jenkins's credentials capabilities help us interact freely with many SCM providers (auto-commit and tag for SemVer).
+      *   Jenkins's credentials capabilities help us interact freely with many
+      SCM providers (auto-commit and tag for SemVer).
 
-      *   The Declarative pipeline, which made it easy to read and understand, conditional execution with "when" is strong and useful. The same goes for post-stage conditions "successful" and "unsuccessful." We used it mainly to store our Cypress recording only if the stage failed. We wouldn't need test recordings if they all passed.
+      *   The Declarative pipeline, which made it easy to read and understand,
+      conditional execution with "when" is strong and useful. The same goes for
+      post-stage conditions "successful" and "unsuccessful." We used it mainly
+      to store our Cypress recording only if the stage failed. We wouldn't need
+      test recordings if they all passed.
 
-      *   The artifact storage capabilities make it easy to share the executables internally to test really fast. Our PO has a link to our 'latest' artifact so he could keep up with our software without asking us to provide it to him.
+      *   The artifact storage capabilities make it easy to share the
+      executables internally to test really fast. Our PO has a link to our
+      'latest' artifact so he could keep up with our software without asking us
+      to provide it to him.
 
-      *   The credentials make it easy to integrate software licenses needed for the build.
+      *   The credentials make it easy to integrate software licenses needed for
+      the build.
     - CI/CD Solutions such as Jenkins have no equivalent on-premise. We need
       complete control of where the data resides. The most crucial feature of
       Jenkins is DSL. With Jenkins, you can control everything you do. This has
@@ -87,7 +100,8 @@ body_content:
 
       *   builds which are more stable using k8s capabilities as agents
 
-      *   automated releases cycles and shortened turnaround times from 2 days to 2 hours
+      *   automated releases cycles and shortened turnaround times from 2 days
+      to 2 hours
 
       *   automated semantic versioning based on commit messages
 title: Jenkins is the way to build robust and specific pipelines
@@ -100,4 +114,3 @@ quotes:
     image: ./quote.png
 image: noun_online-game_2065652.png
 tag_line: New Tournament Software with Jenkins
-submitted_by: Alexis Couvreur

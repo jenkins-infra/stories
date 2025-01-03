@@ -3,7 +3,6 @@ map:
   location: Oklahoma, USA
   industries:
     - Energy
-  name: James Wasson
   latitude: "35.4675602"
   longitude: "-97.5164276"
 metadata:
@@ -22,6 +21,7 @@ metadata:
     - Azure DevOps
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: James Wasson
 body_content:
   title: Turning developers into collaborators with automation and CI/CD.
   paragraphs:
@@ -57,4 +57,3 @@ quotes:
     image: ./quote.png
 image: noun_Fuel_1401151-300x300.png
 tag_line: Collaboration Services
-submitted_by: James Wasson

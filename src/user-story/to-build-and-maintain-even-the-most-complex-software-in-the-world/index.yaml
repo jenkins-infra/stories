@@ -3,7 +3,6 @@ map:
   location: Greece
   industries:
     - Government
-  name: Theodore Chaikalis
   latitude: "40.5885408"
   longitude: "23.0279289"
 metadata:
@@ -25,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Theodore Chaikalis
 body_content:
   title: How enterprises can leverage containers to create a stable and scalable
     CI/CD environment.
@@ -46,13 +46,26 @@ body_content:
       1.  I created a build job for each Git repo that is triggered on push
       events at the dev branch.
 
-      2.  But the dev branch is locked. In order for somebody's code to be accepted in the dev branch, they need to follow a specific process: Create a Merge Request. The creation of a Merge Request triggers a particular job in Jenkins called "merger." It merges the MR source branch locally into the MR target branch, builds the project, runs static code unit tests, runs sonar analysis, and -- if ALL these steps pass -- it then accepts the merge and pushes the code to the target branch. This triggers the build of step A.
+      2.  But the dev branch is locked. In order for somebody's code to be
+      accepted in the dev branch, they need to follow a specific process: Create
+      a Merge Request. The creation of a Merge Request triggers a particular job
+      in Jenkins called "merger." It merges the MR source branch locally into
+      the MR target branch, builds the project, runs static code unit tests,
+      runs sonar analysis, and -- if ALL these steps pass -- it then accepts the
+      merge and pushes the code to the target branch. This triggers the build of
+      step A.
 
-      3.  At the end of each build, all jar artifacts are pushed to our enterprise artifactory repo, and all war artifacts are transferred via SFTP to a specific folder in the Jenkins server.
+      3.  At the end of each build, all jar artifacts are pushed to our
+      enterprise artifactory repo, and all war artifacts are transferred via
+      SFTP to a specific folder in the Jenkins server.
 
-      4.  A special job called module-deployer reads the war files produced in step C and deploys them in selected dev/staging application servers. All these tasks are performed through parameterized jobs.
+      4.  A special job called module-deployer reads the war files produced in
+      step C and deploys them in selected dev/staging application servers. All
+      these tasks are performed through parameterized jobs.
 
-      5.  Special QA jobs are triggered by timers every night and run SONAR analyses for all projects of our codebase. In this way, we can have a fresh overview of the weak quality points of our software every morning.
+      5.  Special QA jobs are triggered by timers every night and run SONAR
+      analyses for all projects of our codebase. In this way, we can have a
+      fresh overview of the weak quality points of our software every morning.
     - "Here are the capabilities I relied on most with Jenkins:"
     - |-
       *   Build trigger for Gitlab integration
@@ -79,4 +92,3 @@ quotes:
     image: ./quote.png
 image: noun_government-funding_3989919.png
 tag_line: Social Security Product
-submitted_by: Theodore Chaikalis

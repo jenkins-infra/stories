@@ -22,6 +22,7 @@ metadata:
     - Poetry
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Manuel Jesús Núñez Ruiz
 body_content:
   title: Intern tackles ML-Ops with the support of Jenkins.
   paragraphs:
@@ -61,4 +62,3 @@ quotes:
     image: ./quote.png
 image: noun_Laptop_3280209.png
 tag_line: Final University Project
-submitted_by: Manuel Jesús Núñez Ruiz

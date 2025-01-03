@@ -3,7 +3,6 @@ map:
   location: United Kingdom
   industries:
     - E-commerce & Retail
-  name: John Pope
   latitude: "52.370878"
   longitude: "-1.265032"
 metadata:
@@ -15,6 +14,7 @@ metadata:
     Docker or Kubernetes**Version Control System:** GitHub**Build Tool:**
     Maven**Community Support:** Jenkins.io websites & blogs, Spoke with
     colleagues and peers"
+  authored_by: John Pope
 body_content:
   title: The flexibility for Jenkins was -- and is -- critical to a large
     established retail organization.
@@ -25,7 +25,10 @@ body_content:
       deployment. Moving to an automation-first principle, we wanted a pipeline
       that fit this need.
 
-      2.  Bespoke needs: As a heavily bespoke internal/on-prem environment, with a number of 3rd party applications and integrated systems, we needed a development pipeline that provided the flexibility to 'fit' around these requirements as these are not going away anytime soon.
+      2.  Bespoke needs: As a heavily bespoke internal/on-prem environment, with
+      a number of 3rd party applications and integrated systems, we needed a
+      development pipeline that provided the flexibility to 'fit' around these
+      requirements as these are not going away anytime soon.
 
       3.  Minimize the learning curve: Yes, let's t-shape, but do it smart!
 
@@ -42,11 +45,23 @@ body_content:
       there was no need for any tremendous upskilling -- meaning developers
       could keep on developing as they had been!
 
-      *   **Bespoke Needs:** We found that the Jenkins pipeline provided ease of integration with other services like AWS, ServiceNow, CheckMarx, MS. Teams/Slack, to name but a few, either using open source plugins or some custom groovy/bash script. Using this aspect of Jenkins meant we could achieve this need.
+      *   **Bespoke Needs:** We found that the Jenkins pipeline provided ease of
+      integration with other services like AWS, ServiceNow, CheckMarx, MS.
+      Teams/Slack, to name but a few, either using open source plugins or some
+      custom groovy/bash script. Using this aspect of Jenkins meant we could
+      achieve this need.
 
-      *   **Keep the learning curve to a minimum:** A few of us already had some Jenkins exposure in previous roles; using Jenkins meant that we were keeping a narrower tech scope than, say, if we were to use a managed service like that provided by AWS/Azure, thus minimizing any learning curve required for this. Plus, learnings are always shared.
+      *   **Keep the learning curve to a minimum:** A few of us already had some
+      Jenkins exposure in previous roles; using Jenkins meant that we were
+      keeping a narrower tech scope than, say, if we were to use a managed
+      service like that provided by AWS/Azure, thus minimizing any learning
+      curve required for this. Plus, learnings are always shared.
 
-      *   **Future proofing (well, as best as possible!):** We were moving toward a microservices architecture. Jenkins already had a proven history in this tech. Once again, this was a really easy argument to win. Using Jenkins in/with K8s opens up a whole world of functionality and future-proofing for many years.
+      *   **Future proofing (well, as best as possible!):** We were moving
+      toward a microservices architecture. Jenkins already had a proven history
+      in this tech. Once again, this was a really easy argument to win. Using
+      Jenkins in/with K8s opens up a whole world of functionality and
+      future-proofing for many years.
 
       *   **Go faster:** With Jenkins? YES, OF COURSE, GO FASTER!!
     - "We used the following capabilities:"
@@ -75,4 +90,3 @@ quotes:
     image: ./quote.png
 image: sainsburys-logo.jpeg
 tag_line: Faster Integration Delivery
-submitted_by: John Pope

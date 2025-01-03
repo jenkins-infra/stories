@@ -3,7 +3,6 @@ map:
   location: Germany
   industries:
     - Software Development
-  name: Mark Baumann
   latitude: "49.19888599999999"
   longitude: "8.1185622"
 metadata:
@@ -28,6 +27,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+  authored_by: Mark Baumann
 body_content:
   title: A CI solution that caters to the complex problems that project teams face
     each day.
@@ -112,9 +112,11 @@ body_content:
     - >-
       *   generally, increased number of builds for each project
 
-      *   a higher degree of automated builds, due to easy integration and orchestration
+      *   a higher degree of automated builds, due to easy integration and
+      orchestration
 
-      *   increased motivation for projects to improve their CI/CD pipelines, because it works!
+      *   increased motivation for projects to improve their CI/CD pipelines,
+      because it works!
 
       *   nearly all departments are now practicing CI/CD in their projects
 
@@ -129,4 +131,3 @@ quotes:
     image: ./quote.png
 image: Mark-Baumann-150x150.jpeg
 tag_line: Enterprise-wide CI/CD
-submitted_by: Mark Baumann

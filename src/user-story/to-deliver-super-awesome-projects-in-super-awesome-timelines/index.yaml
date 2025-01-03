@@ -17,6 +17,7 @@ metadata:
     - MacOS
   build_tools:
     - Gradle
+  authored_by: Daniel Abbruzzese
 body_content:
   title: IoT monitoring company turns to Jenkins to secure their software in the
     cloud.
@@ -51,9 +52,15 @@ body_content:
       private repositories, which we can then use for deploying into our
       different environments.
 
-      *   The integration of Jenkins into Github with Jenkinsfiles was also a big plus as it allowed the developers to quickly set up CI for a new project without knowing how to navigate the Jenkins UI and work in the Groovy DSL, which we are accustomed to. This has dramatically improved how quickly we can set up projects and the speed of deployment.
+      *   The integration of Jenkins into Github with Jenkinsfiles was also a
+      big plus as it allowed the developers to quickly set up CI for a new
+      project without knowing how to navigate the Jenkins UI and work in the
+      Groovy DSL, which we are accustomed to. This has dramatically improved how
+      quickly we can set up projects and the speed of deployment.
 
-      *   The AWS plugin, which provides the 'withAWS' function in Jenkinsfile, has made key management and access management insanely easy and allows us to control through AWS IAM policies.
+      *   The AWS plugin, which provides the 'withAWS' function in Jenkinsfile,
+      has made key management and access management insanely easy and allows us
+      to control through AWS IAM policies.
     - The code testing and build process has been a significant bonus to the
       development team, and we are now looking to further the deployment with
       automated tagging in our repository with Jenkins.
@@ -72,4 +79,3 @@ quotes:
     image: ./quote.png
 image: noun_IoT_3915938.png
 tag_line: Typhoon Engine
-submitted_by: Daniel Abbruzzese

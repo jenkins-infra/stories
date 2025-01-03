@@ -21,6 +21,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Networking at Jenkins event
+  authored_by: Jason Einon
 body_content:
   title: Creating a self-service portal allows developers at a digital agency to
     automate services in just a few clicks.
@@ -64,4 +65,3 @@ quotes:
     image: ./quote.png
 image: Appnovation_Technologies_Inc__Appnovation_Awarded_Six_Communicat.jpg
 tag_line: Internal self-service portal
-submitted_by: Jason Einon

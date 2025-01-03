@@ -7,23 +7,21 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
-import {useStaticQuery, graphql} from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-function Seo({description, lang, meta, title}) {
-    const {site} = useStaticQuery(
-        graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            twitter
-          }
+function Seo({ description, lang, meta, title }) {
+    const { site } = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                    description
+                    twitter
+                }
+            }
         }
-      }
-    `
-    );
+    `);
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
@@ -71,7 +69,7 @@ function Seo({description, lang, meta, title}) {
                 {
                     name: 'google-site-verification',
                     content: 'xPL4ZfWh-TZ8CQjhBCBbV6CGiImabBuxuDP1PJHz_vc',
-                }
+                },
             ].concat(meta)}
         />
     );

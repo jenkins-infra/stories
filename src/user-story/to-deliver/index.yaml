@@ -3,7 +3,6 @@ map:
   location: Lithuania
   industries:
     - Telecomunications
-  name: Tomas Valentukevicius
   latitude: "54.6871555"
   longitude: "25.2796514"
 metadata:
@@ -28,6 +27,7 @@ metadata:
     - Maven
   community_supports:
     - Spoke with colleagues and peers
+  authored_by: Tomas Valentukevicius
 body_content:
   title: Creating a multi-tenant platform with a smooth CI/CD experience.
   paragraphs:
@@ -61,4 +61,3 @@ quotes:
     image: ./quote.png
 image: noun_deliverable_1173485.png
 tag_line: Building a Better Microservices Platform
-submitted_by: Tomas Valentukevicius

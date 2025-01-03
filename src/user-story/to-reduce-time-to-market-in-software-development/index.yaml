@@ -28,6 +28,7 @@ metadata:
   team_members:
     - Daniel Majano
     - DevOps Engineer
+  authored_by: Irvin Bonilla
 body_content:
   title: K8s Plugins for Jenkins dynamic workers lead to zero downtime in business
     hours.
@@ -67,4 +68,3 @@ quotes:
     image: ./quote.png
 image: 1597222877885.jpeg
 tag_line: CI/CD Cross-platform for Development Software
-submitted_by: Irvin Bonilla

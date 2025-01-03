@@ -27,6 +27,7 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Joshua Zangari
 body_content:
   title: Launching Jenkins in Kubernetes allowed for worker agents to be launched
     as pods with the exact containers needed to complete different stages of
@@ -66,9 +67,11 @@ body_content:
       *   Kubernetes Cloud Plugin - Dynamically create, use, and destroy Jenkins
       workers.
 
-      *   Jenkins Shared Libraries - Vary the implementation of the functionality being used in pipelines using git branches. parallel step.
+      *   Jenkins Shared Libraries - Vary the implementation of the
+      functionality being used in pipelines using git branches. parallel step.
 
-      *   Gitlab Plugins - The original one was bad, but there are newer multibranch options we are moving to.
+      *   Gitlab Plugins - The original one was bad, but there are newer
+      multibranch options we are moving to.
 
       *   Junit Plugin - Reports.
 
@@ -97,4 +100,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-08-25-at-10.25.38-AM.png
 tag_line: Moogsoft Observability Cloud
-submitted_by: Joshua Zangari

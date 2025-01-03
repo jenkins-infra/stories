@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Software Developement
-  name: Bhargav Murarisetty
   latitude: "18.4654154"
   longitude: "73.785494"
 metadata:
@@ -22,6 +21,7 @@ metadata:
     - PowerApps App Builder
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Bhargav Murarisetty
 body_content:
   title: Run pipelines and jobs whenever, wherever, with zero additional costs.
   paragraphs:
@@ -44,11 +44,19 @@ body_content:
       choose the Jenkins server, pipeline, environment, and job. By this, we
       completed the front-end design of our app in Microsoft PowerApps.
 
-      *   Phase 2: Connect the app with on-premise Jenkins. Once the UI buttons are complete, we added an API flow from Microsoft PowerAutomate. Microsoft PowerAutomate connects to our on-premise machine using Microsoft Power Platform on-premise data gateway, which securely creates a connection between our desktop machine and power platform.
+      *   Phase 2: Connect the app with on-premise Jenkins. Once the UI buttons
+      are complete, we added an API flow from Microsoft PowerAutomate. Microsoft
+      PowerAutomate connects to our on-premise machine using Microsoft Power
+      Platform on-premise data gateway, which securely creates a connection
+      between our desktop machine and power platform.
 
-      *   Phase 3: We wrote different PowerShell scripts with curl commands to run Jenkins Remote API.
+      *   Phase 3: We wrote different PowerShell scripts with curl commands to
+      run Jenkins Remote API.
 
-      *   Phase 4: Upon connecting all the solutions, we are able to run pipelines from the mobile app by selecting by server, environment, and job. PowerApps sends data to PowerAutomate, which in turn triggers the PowerShell script using Data Gateway.
+      *   Phase 4: Upon connecting all the solutions, we are able to run
+      pipelines from the mobile app by selecting by server, environment, and
+      job. PowerApps sends data to PowerAutomate, which in turn triggers the
+      PowerShell script using Data Gateway.
     - "For results we saw the following:"
     - >-
       1.  We can run pipelines Whenever needed, You don't have to be before your
@@ -56,7 +64,8 @@ body_content:
 
       2.  Run jobs whenever needed.
 
-      3.  Zero additional cost, PowerPlatform comes free with an Office365 License.
+      3.  Zero additional cost, PowerPlatform comes free with an Office365
+      License.
 title: Jenkins is the way to long term automation strategies
 date: 2021-06-24T20:36:35.000Z
 post_name: to-long-term-automation-strategies
@@ -69,4 +78,3 @@ quotes:
     image: ./quote.png
 image: amdocs.png
 tag_line: Run On-Premise Jenkins Pipelines From Mobile App
-submitted_by: Bhargav Murarisetty

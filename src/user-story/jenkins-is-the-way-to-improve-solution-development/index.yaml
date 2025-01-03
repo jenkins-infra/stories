@@ -3,7 +3,6 @@ map:
   location: Peru
   industries:
     - Information Technology
-  name: Anthony Alberto Alcala Beltran
   latitude: "-12.0463731"
   longitude: "-77.042754"
 metadata:
@@ -25,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Anthony Alberto Alcala Beltran
 body_content:
   title: A Jenkins-based tool receives pipeline alerts and, in turn, determines
     who to notify.
@@ -62,7 +62,8 @@ body_content:
     - >-
       *   deploy and destroy cloud infrastructure in minutes
 
-      *   help developers to test their code in an environment really similar to production
+      *   help developers to test their code in an environment really similar to
+      production
 
       *   automate the process to deploy the code between multiple environment
 title: Jenkins is the way to improve solution development
@@ -75,4 +76,3 @@ quotes:
     image: ./quote.png
 image: noun_Alert_2805730.png
 tag_line: Alert Management
-submitted_by: Anthony Alberto Alcala Beltran

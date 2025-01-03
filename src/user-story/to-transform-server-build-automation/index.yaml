@@ -3,7 +3,6 @@ map:
   location: Colorado, USA
   industries:
     - Information Technology
-  name: Jon Wright
   latitude: "39.3722121"
   longitude: "-104.8560902"
 metadata:
@@ -24,6 +23,7 @@ metadata:
   build_tools:
     - Ant
     - Makefile
+  authored_by: Jon Wright
 body_content:
   title: Building and managing multiple environments at the same time with the
     flexibility of Jenkins' build logic.
@@ -55,4 +55,3 @@ quotes:
     image: ./quote.png
 image: noun_Server_3717839.png
 tag_line: Terraform Pipeline
-submitted_by: Jon Wright

@@ -3,7 +3,6 @@ map:
   location: Netherlands
   industries:
     - Consulting
-  name: Marco de Krijger
   latitude: "51.62870969999999"
   longitude: "4.9382385"
 metadata:
@@ -26,6 +25,7 @@ metadata:
     - Groovy
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Marco de Krijger
 body_content:
   title: DevOps in the Netherlands finds that everything is possible in Jenkins
     with plugins and a pipeline library.
@@ -99,4 +99,3 @@ quotes:
     image: ./quote.png
 image: noun_wish_3168775.png
 tag_line: Enterprise-scaled Java Application
-submitted_by: Marco de Krijger

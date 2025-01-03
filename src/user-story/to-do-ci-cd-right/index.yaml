@@ -3,7 +3,6 @@ map:
   location: Texas, USA
   industries:
     - Automotive
-  name: Akhil Pradhan
   latitude: "33.0198431"
   longitude: "-96.6988856"
 metadata:
@@ -32,6 +31,7 @@ metadata:
   community_supports:
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Akhil Pradhan
 body_content:
   title: Standardizing CI/CD for the development team of a leading automotive
     organization.
@@ -90,4 +90,3 @@ quotes:
     image: ./quote.png
 image: noun_car-transmitter_293799-300x300.png
 tag_line: DevOps Platform in the Automotive Industry
-submitted_by: Akhil Pradhan

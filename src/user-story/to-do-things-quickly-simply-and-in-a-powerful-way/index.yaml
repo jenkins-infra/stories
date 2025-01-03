@@ -3,7 +3,6 @@ map:
   location: Portugal
   industries:
     - Travel
-  name: Alejandro Alvarez Vazquez
   latitude: "39.5762112"
   longitude: "2.6456729"
 metadata:
@@ -38,6 +37,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event
+  authored_by: Alejandro Alvarez Vazquez
 body_content:
   title: Minimizing delivery cycle times by speeding up CI/CD.
   paragraphs:
@@ -84,9 +84,11 @@ body_content:
       *   for small applications, we reduced the average build times from 45
       seconds to just 8 seconds
 
-      *   for larger legacy apps, build times of more than 10-15 minutes were shaved by 7-8 minutes
+      *   for larger legacy apps, build times of more than 10-15 minutes were
+      shaved by 7-8 minutes
 
-      *   depending on the size of the base image, we've reduced the final image generation time by 10-30 seconds
+      *   depending on the size of the base image, we've reduced the final image
+      generation time by 10-30 seconds
     - "### [Read the full case study to learn
       more.](https://jenkinsistheway.io/case-studies/jenkins-case-study-avoris-\
       travel/)"
@@ -101,4 +103,3 @@ quotes:
     image: ./quote.png
 image: code-768x785.png
 tag_line: Speeding up CI/CD with shared volumes and more!​
-submitted_by: Alejandro Alvarez Vazquez

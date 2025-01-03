@@ -15,6 +15,7 @@ metadata:
     - Ant
   community_supports:
     - Jenkins.io websites & blogs
+  authored_by: Elena Condurachi
 body_content:
   title: Giving Salesforce a boost with Jenkins Pipelines.
   paragraphs:
@@ -51,7 +52,8 @@ body_content:
     - >-
       *   Shorter build times
 
-      *   Release times which also decreased from more than half a day to around 2 hours
+      *   Release times which also decreased from more than half a day to around
+      2 hours
 
       *   A better, more comprehensive feedback for the development team
 title: Jenkins is the way to fully grasp the benefits of CI/CD
@@ -65,4 +67,3 @@ quotes:
     image: ./quote.png
 image: noun_Monitor_1944924.png
 tag_line: Educational Ecosystem and Jenkins
-submitted_by: Elena Condurachi

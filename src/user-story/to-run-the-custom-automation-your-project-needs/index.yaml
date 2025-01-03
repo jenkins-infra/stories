@@ -15,6 +15,7 @@ metadata:
     - Packer
     - Docker
     - PIP
+  authored_by: Eriks Zelenka
 body_content:
   title: Jenkins' rich plugin architecture supports an enhanced CI/CD and
     development ease.
@@ -50,7 +51,8 @@ body_content:
 
       *   Simplify configuration and updates via IaC and GitOps
 
-      *   Experience faster delivery by sharing code between multiple teams thanks to Jenkins JCasC and IaC
+      *   Experience faster delivery by sharing code between multiple teams
+      thanks to Jenkins JCasC and IaC
 title: Jenkins is the way to run the custom automation your project needs
 date: 2021-09-24T18:17:52.000Z
 post_name: to-run-the-custom-automation-your-project-needs
@@ -62,4 +64,3 @@ quotes:
     image: ./quote.png
 image: noun_online-shopping_488396.png
 tag_line: Integrated Retail Product Systems
-submitted_by: Eriks Zelenka

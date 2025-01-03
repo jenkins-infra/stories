@@ -3,7 +3,6 @@ map:
   location: Belarus
   industries:
     - Legal
-  name: Kanstantsin Harbachou
   latitude: "52.4313388"
   longitude: "30.99367"
 metadata:
@@ -25,6 +24,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Kanstantsin Harbachou
 body_content:
   title: Framework experimentation led a legal startup to choose Jenkins.
   paragraphs:
@@ -55,9 +55,11 @@ body_content:
     - >-
       *   we saved money
 
-      *   we set up Jenkins to be suitable for non-experience team members, using a large set of plugins
+      *   we set up Jenkins to be suitable for non-experience team members,
+      using a large set of plugins
 
-      *   we created jobs for each potential customer with custom scripts for configuration
+      *   we created jobs for each potential customer with custom scripts for
+      configuration
 
       *   we configured pipelines for all kinds of testing
 title: Jenkins is the way to make your work comfortable
@@ -70,4 +72,3 @@ quotes:
     image: ./quote.png
 image: noun_Document-Management_2019473-768x768.png
 tag_line: Document Generation Service
-submitted_by: Kanstantsin Harbachou

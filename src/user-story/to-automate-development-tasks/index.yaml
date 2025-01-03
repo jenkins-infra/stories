@@ -3,7 +3,6 @@ map:
   location: Illinois, USA
   industries:
     - Manufacturing
-  name: Bilal Bailey
   latitude: "41.4914236"
   longitude: "-87.6744891"
 metadata:
@@ -22,6 +21,7 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
+  authored_by: Bilal Bailey
 body_content:
   title: Jenkins pipeline and robust community support helps streamline
     application deployment.
@@ -65,4 +65,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer_2787331.png
 tag_line: Automating MuleSoft Job Creation and Deployment
-submitted_by: Bilal Bailey

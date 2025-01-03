@@ -3,7 +3,6 @@ map:
   location: United Kingdom
   industries:
     - Logistics
-  name: Gaurav Agarwal
   latitude: "51.55818799999999"
   longitude: "0.06976349999999999"
 metadata:
@@ -25,6 +24,7 @@ metadata:
   community_supports:
     - Relied on Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
+  authored_by: Gaurav Agarwal
 body_content:
   title: Building a DevOps platform with near infinite scaling capacity.
   paragraphs:
@@ -72,4 +72,3 @@ quotes:
     image: ./quote.png
 image: Agarawal-300x300.png
 tag_line: Building a Scalable DevOps Platform
-submitted_by: Gaurav Agarwal
