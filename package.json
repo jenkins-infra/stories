@@ -23,7 +23,7 @@
     "gatsby": "^4.10.3",
     "gatsby-plugin-extract-schema": "^0.2.1",
     "gatsby-plugin-image": "^2.10.1",
-    "gatsby-plugin-matomo": "^0.16.0",
+    "gatsby-plugin-matomo": "^0.17.0",
     "gatsby-plugin-netlify": "^5.0.0",
     "gatsby-plugin-netlify-cms": "^6.17.0",
     "gatsby-plugin-react-helmet": "^5.10.0",
