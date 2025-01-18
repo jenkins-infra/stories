@@ -1,24 +1,28 @@
 .userstory {
-    margin-top: 5px;
-    hyphens: manual;
+  margin-top: 5px;
+  hyphens: manual;
 }
 
 .userstory .titlewrapper {
-    width: 100%;
-    background-color: #F1F5F5;
-    margin: auto;
-    line-height: 25.2px;
-    border-bottom: 1px solid rgb(74, 74, 74);
+  width: 100%;
+  background-color: #f1f5f5;
+  margin: auto;
+  line-height: 25.2px;
+  border-bottom: 1px solid rgb(74, 74, 74);
 }
 
 .userstory .title {
-    width: 100%;
-    background-color: #F1F5F5;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    padding: 2% 0% 2% 0%;
-    color: #DB5E35;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  background-color: #f1f5f5;
+  transition:
+    background 0.3s,
+    border 0.3s,
+    border-radius 0.3s,
+    box-shadow 0.3s;
+  padding: 2% 0% 2% 0%;
+  color: #db5e35;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .speechBubbleWrapper {
