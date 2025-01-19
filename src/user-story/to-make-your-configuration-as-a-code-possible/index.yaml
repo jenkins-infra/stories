@@ -3,7 +3,6 @@ map:
   location: Ukraine
   industries:
     - Education
-  name: Amet Umerov
   latitude: "48.379433"
   longitude: "31.16558"
 metadata:
@@ -61,6 +60,7 @@ body_content:
       ). >>"
 title: Jenkins is the way to make your configuration as a code possible
 date: 2020-06-23T01:46:35.000Z
+author: Amet Umerov, DevOps Engineer, Preply
 post_name: to-make-your-configuration-as-a-code-possible
 quotes:
   - from: Amet Umerov, DevOps Engineer, Preply
@@ -70,4 +70,3 @@ quotes:
     image: ./quote.png
 image: preply.png
 tag_line: Building Jenkins as a Code
-submitted_by: Amet Umerov

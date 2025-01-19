@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - DevOps & Machine Learning
-  name: Abhinav Dubey
   latitude: "26.7605545"
   longitude: "83.3731675"
 metadata:
@@ -82,6 +81,7 @@ body_content:
       *   a more efficient method that allows me to better use my system resources
 title: Jenkins is the way to achieve accuracy
 date: 2020-11-09T16:01:56.000Z
+authored_by: Abhinav Dubey
 post_name: to-achieve-accuracy
 quotes:
   - from: Abhinav Dubey, MLOps & DevOps Intern
@@ -91,4 +91,3 @@ quotes:
     image: ./quote.png
 image: noun_accuracy-of-statistics_3061222-768x768.png
 tag_line: Automating Machine Learning Training Model
-submitted_by: Abhinav Dubey

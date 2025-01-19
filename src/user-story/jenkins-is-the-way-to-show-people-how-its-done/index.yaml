@@ -3,7 +3,6 @@ map:
   location: Portugal
   industries:
     - Information Technology
-  name: Filipe Costa
   latitude: "41.3664104"
   longitude: "-8.1971968"
 metadata:
@@ -75,6 +74,7 @@ body_content:
       *   faster-than-ever backend development
 title: Jenkins is the way to show people how it's done!
 date: 2020-08-04T18:10:51.000Z
+authored_by: Filipe Costa
 post_name: jenkins-is-the-way-to-show-people-how-its-done
 quotes:
   - from: Filipe Costa, Technology Intern
@@ -83,4 +83,3 @@ quotes:
     image: ./quote.png
 image: noun_developer_1018327-300x300.png
 tag_line: Proof of concept pipeline
-submitted_by: Filipe Costa

@@ -21,9 +21,41 @@ const titles = {
   team_members: 'Team Members',
   teams: 'Team',
   version_control_systems: 'Version Control System',
+  build_tools: 'Build Tools',
+  community_supports: 'Community Support',
+  company: 'Company',
+  company_website: 'Company Website',
+  funded_by: 'Funded By',
+  industries: 'Industries',
+  organization: 'Organization',
+  platforms: 'Platform',
+  plugins: 'Custom Plugins',
+  programming_languages: 'Programming Languages',
+  project_funding: 'Project Funding',
+  project_website: 'Project Website',
+  summary: 'Summary',
+  team_members: 'Team Members',
+  teams: 'Team',
+  version_control_systems: 'Version Control System',
 };
 
 const fields = [
+  'organization',
+  'company',
+  'company_website',
+  'teams',
+  'team_members',
+  'project_website',
+  'project_funding',
+  'funded_by',
+  'summary',
+  'industries',
+  'programming_languages',
+  'platforms',
+  'version_control_systems',
+  'build_tools',
+  'plugins',
+  'community_supports',
   'organization',
   'company',
   'company_website',
@@ -45,7 +77,7 @@ const fields = [
 const UserStory = ({
   image,
   title,
-  submitted_by,
+  authored_by,
   tag_line,
   quotes,
   metadata,
@@ -68,7 +100,7 @@ const UserStory = ({
           </div>
 
           <div className="container pt-2 pb-2">
-            <strong>Submitted By Jenkins User {submitted_by}</strong>
+            <strong>Authored By Jenkins User {authored_by}</strong>
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>
@@ -110,7 +142,9 @@ const UserStory = ({
                 content.push(
                   <div
                     key={idx}
-                    dangerouslySetInnerHTML={{ __html: p.html }}
+                    dangerouslySetInnerHTML={{
+                      __html: p.html,
+                    }}
                   />,
                 );
                 if (idx !== 0 && idx % 3 === 0) {
@@ -140,7 +174,7 @@ UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
   // children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  submitted_by: PropTypes.string.isRequired,
+  authored_by: PropTypes.string.isRequired,
   tag_line: PropTypes.string.isRequired,
   image: PropTypes.object,
   metadata: PropTypes.shape({

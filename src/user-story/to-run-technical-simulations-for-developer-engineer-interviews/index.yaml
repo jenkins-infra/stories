@@ -3,7 +3,6 @@ map:
   location: Spain
   industries:
     - DevOps & Human Resources
-  name: Carlos Rodriguez Lopez
   latitude: "37.3890924"
   longitude: "-5.9844589"
 metadata:
@@ -109,6 +108,7 @@ body_content:
 title: Jenkins is the way to run technical simulations for developer/engineer
   interviews
 date: 2021-02-15T17:25:36.000Z
+authored_by: Carlos Rodriguez Lopez, Lead Support Engineer, CloudBees
 post_name: to-run-technical-simulations-for-developer-engineer-interviews
 quotes:
   - from: Carlos Rodriguez Lopez, Lead Support Engineer, CloudBees
@@ -117,4 +117,3 @@ quotes:
     image: ./quote.png
 image: Screen-Shot-2021-02-15-at-12.30.07-PM.png
 tag_line: Support an Interview-As-Code Model
-submitted_by: Carlos Rodriguez Lopez

@@ -3,7 +3,6 @@ map:
   location: Texas, USA
   industries:
     - Semiconductors
-  name: Chaitanya Dwivedi
   latitude: "30.267153"
   longitude: "-97.7430608"
 metadata:
@@ -98,6 +97,7 @@ body_content:
       *   standardized checks and reporting for products
 title: Jenkins is the way to deliver amazing products easily
 date: 2020-12-17T13:24:20.000Z
+authored_by: Chaitanya Dwivedi, Senior Software Engineer, ARM
 post_name: to-deliver-amazing-products-easily
 quotes:
   - from: Chaitanya Dwivedi, Senior Software Engineer, ARM
@@ -107,4 +107,3 @@ quotes:
     image: ./quote.png
 image: 9jdJldY9_400x400.jpg
 tag_line: Continuous Delivery for Hardware IP
-submitted_by: Chaitanya Dwivedi
