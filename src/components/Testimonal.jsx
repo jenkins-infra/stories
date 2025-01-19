@@ -23,7 +23,15 @@ const Testimonal = ({ from, image, children }) => {
             />
           </div>
         )}
-        <div className="mr-2 ml-2">{from}</div>
+          <div className={`${styles.from} mr-2 ml-2 p-2`}>
+            <span className={styles.name}>
+              {from.split(",")[0]} 
+            </span>
+            <br />
+            <span className={styles.title}>
+              {from.split(",").slice(1).join(",").trim()} 
+            </span>
+          </div>
       </div>
     </div>
   );
