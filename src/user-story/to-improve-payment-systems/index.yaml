@@ -3,7 +3,6 @@ map:
   location: Hungary
   industries:
     - Financial Services
-  name: Adam Szatyin
   latitude: "47.5002356"
   longitude: "19.1000054"
 metadata:
@@ -69,6 +68,7 @@ body_content:
       *   test summaries are easily and automatically stored
 title: Jenkins is the way to improve payment systems
 date: 2021-04-01T15:03:55.000Z
+authored_by: Adam Szatyin
 post_name: to-improve-payment-systems
 quotes:
   - from: Adam Szatyin, Software Developer, Banking Industry
@@ -77,4 +77,3 @@ quotes:
     image: ./quote.png
 image: noun_ATM_3276327.png
 tag_line: Test Instant Payment Performance
-submitted_by: Adam Szatyin

@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Automotive
-  name: Gyan Gupta
   latitude: "12.9715987"
   longitude: "77.5945627"
 metadata:
@@ -57,6 +56,7 @@ body_content:
       *   runtime reports generated and sent effortlessly
 title: Jenkins is the way to integrate the thoughts
 date: 2021-07-03T20:21:43.000Z
+authored_by: Gyan Gupta
 post_name: to-integrate-the-thoughts
 quotes:
   - from: Gyan Gupta, Principal Consultant, Automotive Research & Development
@@ -65,4 +65,3 @@ quotes:
     image: ./quote.png
 image: noun_Car-Diagnostic_2600088.png
 tag_line: Continuous Delivery with Jenkins Pipelines
-submitted_by: Gyan Gupta

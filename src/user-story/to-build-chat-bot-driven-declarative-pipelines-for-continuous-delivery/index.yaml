@@ -3,7 +3,6 @@ map:
   location: United Arab Emirates
   industries:
     - Media & Entertainment
-  name: Prasanjit Singh
   latitude: "25.2048493"
   longitude: "55.2707828"
 metadata:
@@ -109,6 +108,7 @@ body_content:
 title: Jenkins is the way to build chat-bot driven declarative pipelines for
   continuous delivery
 date: 2021-04-14T14:40:07.000Z
+authored_by: Prasanjit Singh
 post_name: to-build-chat-bot-driven-declarative-pipelines-for-continuous-delivery
 quotes:
   - from: Prasanjit Singh, Engineering Manager - Cloud & DevOps, STARZPLAY
@@ -118,4 +118,3 @@ quotes:
     image: ./quote.png
 image: 21184311214365.png
 tag_line: Declarative Pipelines With Chat Bots
-submitted_by: Prasanjit Singh

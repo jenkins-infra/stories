@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Healthcare
-  name: Ashutosh Pattanaik
   latitude: "18.5577446"
   longitude: "73.9124674"
 metadata:
@@ -89,6 +88,7 @@ body_content:
       *   faster delivery cycles and improved code quality.
 title: Jenkins is the way to transform healthcare
 date: 2021-06-13T20:05:52.000Z
+authored_by: Ashutosh Pattanaik
 post_name: jenkins-is-the-way-to-transform-healthcare
 quotes:
   - from: Ashutosh Pattanaik, Build & Release Engineer
@@ -98,4 +98,3 @@ quotes:
     image: ./quote.png
 image: noun_diagnosis_2592165.png
 tag_line: DevOps Transformation
-submitted_by: Ashutosh Pattanaik

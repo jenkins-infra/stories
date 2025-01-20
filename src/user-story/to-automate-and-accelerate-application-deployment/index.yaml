@@ -3,7 +3,6 @@ map:
   location: Malaysia
   industries:
     - Information Technology
-  name: Mary Jane Buenaventura
   latitude: "3.139003"
   longitude: "101.686855"
 metadata:
@@ -75,4 +74,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer_3767284.png
 tag_line: Foreign Resource System
-submitted_by: Mary Jane Buenaventura

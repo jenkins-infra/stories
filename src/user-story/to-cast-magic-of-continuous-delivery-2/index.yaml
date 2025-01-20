@@ -3,7 +3,6 @@ map:
   location: Israel
   industries:
     - Internet of Things (IoT)
-  name: Oleg Tikhonov
   latitude: "32.015833"
   longitude: "34.787384"
 metadata:
@@ -80,6 +79,7 @@ body_content:
       *   Easier to add new projects and teams
 title: Jenkins is the way to cast magic of continuous delivery
 date: 2020-09-15T16:53:07.000Z
+authored_by: Oleg Tikhonov, DevOps & Infrastructure Architect
 post_name: to-cast-magic-of-continuous-delivery-2
 quotes:
   - from: Oleg Tikhonov, DevOps & Infrastructure Architect
@@ -89,4 +89,3 @@ quotes:
     image: ./quote.png
 image: noun_semiconductor_3436110-300x300.png
 tag_line: Unifying international teams with a shared CI/CD process
-submitted_by: Oleg Tikhonov

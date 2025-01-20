@@ -3,7 +3,6 @@ map:
   location: Canada
   industries:
     - Software Development
-  name: Jason Shaw
   latitude: "44.05918700000001"
   longitude: "-79.46125599999999"
 metadata:
@@ -56,6 +55,7 @@ body_content:
       *   improved product quality as proven by the lower number of bugs submitted post-build and after each release
 title: Jenkins is the way to deliver our new releases on time!
 date: 2021-05-15T23:37:49.000Z
+authored_by: Jason Shaw
 post_name: to-deliver-our-new-releases-on-time
 quotes:
   - from: Jason Shaw, Senior Technical Account Manager
@@ -64,4 +64,3 @@ quotes:
     image: ./quote.png
 image: noun_AI_3565001-300x300.png
 tag_line: Deploying New Versions of Software
-submitted_by: Jason Shaw
