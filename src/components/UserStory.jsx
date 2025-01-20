@@ -45,7 +45,7 @@ const fields = [
 const UserStory = ({
   image,
   title,
-  submitted_by,
+  authored_by,
   tag_line,
   quotes,
   metadata,
@@ -68,7 +68,7 @@ const UserStory = ({
           </div>
 
           <div className="container pt-2 pb-2">
-            <strong>Submitted By Jenkins User {submitted_by}</strong>
+            <strong>Authored By Jenkins User {authored_by}</strong>
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>
@@ -110,7 +110,9 @@ const UserStory = ({
                 content.push(
                   <div
                     key={idx}
-                    dangerouslySetInnerHTML={{ __html: p.html }}
+                    dangerouslySetInnerHTML={{
+                      __html: p.html,
+                    }}
                   />,
                 );
                 if (idx !== 0 && idx % 3 === 0) {
@@ -147,7 +149,7 @@ UserStory.displayName = 'UserStory';
 UserStory.propTypes = {
   // children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  submitted_by: PropTypes.string.isRequired,
+  authored_by: PropTypes.string.isRequired,
   tag_line: PropTypes.string.isRequired,
   image: PropTypes.object,
   metadata: PropTypes.shape({

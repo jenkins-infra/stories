@@ -28,7 +28,6 @@ const MapPage = () => {
         edges {
           node {
             map {
-              name
               latitude
               longitude
               industries
@@ -100,13 +99,26 @@ const MapPage = () => {
                     <Popup>
                       <table className="table">
                         <tbody>
-                          <tr style={{ border: '0px hidden', padding: '5px' }}>
-                            <td style={{ border: '0px hidden' }} colSpan="2">
-                              <h4>{story.map.name}</h4>
-                            </td>
+                          <tr
+                            style={{
+                              border: '0px hidden',
+                              padding: '5px',
+                            }}
+                          >
+                            <td
+                              style={{
+                                border: '0px hidden',
+                              }}
+                              colSpan="2"
+                            ></td>
                           </tr>
                           <tr>
-                            <td style={{ border: '0px hidden' }} width="150">
+                            <td
+                              style={{
+                                border: '0px hidden',
+                              }}
+                              width="150"
+                            >
                               <center>
                                 <StaticImage
                                   src="../images/jenkins_map_pin-180x180-1.png"
@@ -115,9 +127,11 @@ const MapPage = () => {
                               </center>
                             </td>
                             <td
-                              style={{ border: '0px hidden', padding: '5px' }}
+                              style={{
+                                border: '0px hidden',
+                                padding: '5px',
+                              }}
                             >
-                              <dt>{story.map.name}</dt>
                               <dt>{story.map.location}</dt>
                               <dt>
                                 {(
