@@ -7,7 +7,7 @@ import * as styles from './Testimonal.module.css';
 
 const Testimonal = ({ from, image, children }) => {
   return (
-    <div className={`${styles.root} pb-2`}>
+    <div className={`${styles.root} pb-3`}>
       <blockquote>{children}</blockquote>
       <div
         className={`${styles.attribution} d-flex justify-content-center align-items-center`}
@@ -23,7 +23,7 @@ const Testimonal = ({ from, image, children }) => {
             />
           </div>
         )}
-          <div className={`${styles.from} mr-2 ml-2 p-2`}>
+          <div className={`${styles.from} mr-2 ml-2 px-4 py-2`}>
             <span className={styles.name}>
               {from.split(",")[0]} 
             </span>
