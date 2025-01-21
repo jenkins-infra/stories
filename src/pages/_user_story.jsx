@@ -2,7 +2,6 @@ import { graphql, Link } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import truncate from 'truncate';
-
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStory from '../components/UserStory';
@@ -91,7 +90,7 @@ export const pageQuery = graphql`
       slug
       date
       post_name
-      submitted_by
+      authored_by
       tag_line
       title
       image {

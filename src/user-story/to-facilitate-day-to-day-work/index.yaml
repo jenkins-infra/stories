@@ -3,7 +3,6 @@ map:
   location: France
   industries:
     - Research
-  name: Anti Asko
   latitude: "46.2447613"
   longitude: "6.0231707"
 metadata:
@@ -74,6 +73,7 @@ body_content:
       *   faster delivery of hotfixes
 title: Jenkins is the way to facilitate day-to-day work
 date: 2020-04-23T16:09:41.000Z
+authored_by: Anti Asko, Software Engineer, CERN
 post_name: to-facilitate-day-to-day-work
 quotes:
   - from: Anti Asko, Software Engineer, CERN
@@ -82,4 +82,3 @@ quotes:
     image: ./quote.png
 image: Asko_Cern-300x300.jpg
 tag_line: Automating Dev Processes with Jenkins
-submitted_by: Anti Asko
