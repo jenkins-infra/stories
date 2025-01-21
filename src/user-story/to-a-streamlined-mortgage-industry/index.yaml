@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Financial Services - Mortgage
-  name: Arman Chand
   latitude: "26.8466937"
   longitude: "80.94616599999999"
 metadata:
@@ -65,6 +64,7 @@ body_content:
       *   Automated CMS code and configuration backups to source control
 title: Jenkins is the way to a streamlined mortgage industry
 date: 2021-05-25T00:08:22.000Z
+authored_by: Arman Chand, Software Engineer
 post_name: to-a-streamlined-mortgage-industry
 quotes:
   - from: Arman Chand, Software Engineer
@@ -74,4 +74,3 @@ quotes:
     image: ./quote.png
 image: noun_Laptop_726524.png
 tag_line: Loan Application Automation
-submitted_by: Arman Chand

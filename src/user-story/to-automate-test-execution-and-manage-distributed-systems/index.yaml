@@ -3,7 +3,6 @@ map:
   location: Hungary
   industries:
     - Telecomunications
-  name: Gábor Barna
   latitude: "47.497912"
   longitude: "19.040235"
 metadata:
@@ -59,6 +58,7 @@ body_content:
       *   shared knowledge within the organization
 title: Jenkins is the way to automate test execution and manage distributed systems
 date: 2021-03-16T18:13:18.000Z
+authored_by: Gábor Barna
 post_name: to-automate-test-execution-and-manage-distributed-systems
 quotes:
   - from: Gábor Barna, Scrum Master
@@ -69,4 +69,3 @@ quotes:
     image: ./quote.png
 image: noun_Download_3466871.png
 tag_line: Job-As-Code Building Blocks
-submitted_by: Gábor Barna

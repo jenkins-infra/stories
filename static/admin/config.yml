@@ -31,8 +31,8 @@ collections:
       - label: Post Name (slug)
         name: post_name
         widget: string
-      - label: Submitted By
-        name: submitted_by
+      - label: Authored By
+        name: authored_by
         widget: string
       - label: Publish Date
         name: date
