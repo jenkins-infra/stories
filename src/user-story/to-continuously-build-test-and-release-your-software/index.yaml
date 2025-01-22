@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Information Technology
-  name: Omprakash Paliwal
   latitude: "26.2389469"
   longitude: "73.02430939999999"
 metadata:
@@ -90,6 +89,7 @@ body_content:
       *   10x faster integration of new QualityGates
 title: Jenkins is the way to continuously build, test and release your software
 date: 2021-06-03T14:01:36.000Z
+authored_by: Omprakash Paliwal, Sr. DevOps Engineer
 post_name: to-continuously-build-test-and-release-your-software
 quotes:
   - from: Omprakash Paliwal, Sr. DevOps Engineer
@@ -98,4 +98,3 @@ quotes:
     image: ./quote.png
 image: noun_database_2698554.png
 tag_line: CI with Multigig-sized Repo with Jenkins
-submitted_by: Omprakash Paliwal

@@ -3,7 +3,6 @@ map:
   location: Germany
   industries:
     - Software Development
-  name: Mark Baumann
   latitude: "49.19888599999999"
   longitude: "8.1185622"
 metadata:
@@ -121,6 +120,7 @@ body_content:
       *   ability to measure general project improvements through metrics
 title: Jenkins is the way to tackle any challenge
 date: 2020-10-12T13:38:11.000Z
+authored_by: Mark Baumann
 post_name: to-tackle-any-challenge
 quotes:
   - from: Mark Baumann, DevOps Engineer, ITK-Engineering GmbH
@@ -129,4 +129,3 @@ quotes:
     image: ./quote.png
 image: Mark-Baumann-150x150.jpeg
 tag_line: Enterprise-wide CI/CD
-submitted_by: Mark Baumann

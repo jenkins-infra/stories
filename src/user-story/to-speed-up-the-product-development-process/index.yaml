@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Information Technology
-  name: Erana Chandran
   latitude: "13.0826802"
   longitude: "80.2707184"
 metadata:
@@ -109,6 +108,7 @@ body_content:
       *   Getting Jenkins build results in Microsoft Teams
 title: Jenkins is the way to speed up the product development process
 date: 2021-04-21T14:50:12.000Z
+authored_by: Erana Chandran, DevOps Engineer in Information Technology
 post_name: to-speed-up-the-product-development-process
 quotes:
   - from: Erana Chandran, DevOps Engineer in Information Technology
@@ -117,4 +117,3 @@ quotes:
     image: ./quote.png
 image: noun_Computer-Cloud_346045.png
 tag_line: AI-powered Continuous Cloud Governance
-submitted_by: Erana Chandran

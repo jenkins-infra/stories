@@ -3,7 +3,6 @@ map:
   location: India
   industries:
     - Engineering
-  name: Manasi Jha
   latitude: "22.190196"
   longitude: "84.5798623"
 metadata:
@@ -84,6 +83,7 @@ body_content:
       *   Faster feedback to the developer about the progress/ errors
 title: Jenkins is the way to automate the future for developers
 date: 2021-03-03T15:28:19.000Z
+authored_by: Manasi Jha
 post_name: to-automate-the-future-for-developers
 quotes:
   - from: Manasi Jha, Software Development Student
@@ -92,4 +92,3 @@ quotes:
     image: ./quote.png
 image: noun_web-development_1878472.png
 tag_line: Continuous Integration Makes It So Easy
-submitted_by: Manasi Jha

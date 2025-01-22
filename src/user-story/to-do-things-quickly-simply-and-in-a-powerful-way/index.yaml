@@ -3,7 +3,6 @@ map:
   location: Portugal
   industries:
     - Travel
-  name: Alejandro Alvarez Vazquez
   latitude: "39.5762112"
   longitude: "2.6456729"
 metadata:
@@ -92,6 +91,7 @@ body_content:
       travel/)"
 title: Jenkins is the way to do things quickly, simply and in a powerful way
 date: 2020-05-26T23:09:24.000Z
+authored_by: Gabriel Ramis, Operation-Infrastructure and Communications Director
 post_name: to-do-things-quickly-simply-and-in-a-powerful-way
 quotes:
   - from: Alejandro Alvarez Vazquez, Sysadmin, Avoris Travel
@@ -101,4 +101,3 @@ quotes:
     image: ./quote.png
 image: code-768x785.png
 tag_line: Speeding up CI/CD with shared volumes and more!​
-submitted_by: Alejandro Alvarez Vazquez
