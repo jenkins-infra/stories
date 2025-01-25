@@ -49,12 +49,12 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
           style={{
             color: 'white',
             textDecoration: 'none',
-            transition: 'all 0.3s ease',
+            transition: 'all ease',
             transform: 'scale(1)',
             backgroundColor: '#495057'
           }}
           onMouseEnter={(e) => {
-            e.target.style.transform = 'scale(1.1)';
+            e.target.style.transform = 'scale(1.05)';
             e.target.style.backgroundColor = '#495057';
           }}
           onMouseLeave={(e) => {

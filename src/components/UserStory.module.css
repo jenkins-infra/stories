@@ -26,13 +26,6 @@
   border-radius: 4px;
 }
 
-.mediaImage {
-  flex: 0 0 300px;
-  margin-right: 2rem;
-  max-width: 300px;
-  height: auto;
-}
-
 .speechBubbleWrapper {
   display: flex;
   justify-content: center;
@@ -60,6 +53,13 @@
   border-style: solid;
   border-color: #f1f5f5 transparent transparent transparent;
   bottom: -20px;
+}
+
+.mediaImage {
+  flex: 0 0 300px;
+  margin-right: 2rem;
+  max-width: 300px;
+  height: auto;
 }
 
 @media (max-width: 768px) {
