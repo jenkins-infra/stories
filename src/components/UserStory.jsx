@@ -119,13 +119,20 @@ const UserStory = ({
                   const quoteIdx = idx / 3 - 1;
                   if (quotes[quoteIdx]) {
                     content.push(
-                      <Testimonal
-                        key={`quote_${quoteIdx}`}
-                        from={quotes[quoteIdx].from}
-                        image={quotes[quoteIdx].image}
+                      <div
+                        key={`quote_container_${quoteIdx}`}
+                        className={styles.speechBubbleWrapper}
                       >
-                        {quotes[quoteIdx].content}
-                      </Testimonal>,
+                        <Testimonal
+                          key={`quote_${quoteIdx}`}
+                          from={quotes[quoteIdx].from}
+                          image={quotes[quoteIdx].image}
+                        >
+                          <div className={styles.speechBubble}>
+                            {quotes[quoteIdx].content}
+                          </div>
+                        </Testimonal>
+                      </div>,
                     );
                   }
                 }
