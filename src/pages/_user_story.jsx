@@ -14,46 +14,84 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
       sourcePath={`src/user-story/${page.parent.relativePath}`}
     >
       <Seo title={title} pathname={`/user-story/${page.slug}`} />
-      <div className="navbar navbar-expand navbar-light bg-light">
-        <ul className="navbar-nav mr-auto w-100 d-flex justify-content-between">
-          <li className="nav-item">
-            {pageContext.previous && (
-              <Link
-                className="nav-link"
-                to={`/user-story/${pageContext.previous.slug}`}
-              >
-                &lt;&lt;{' '}
-                {truncate(
-                  pageContext.previous.title.replace(
-                    /^jenkins is the way to/i,
-                    '',
-                  ),
-                  40,
-                )}
-              </Link>
-            )}
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            {pageContext.next && (
-              <Link
-                className="nav-link"
-                to={`/user-story/${pageContext.next.slug}`}
-              >
-                {truncate(
-                  pageContext.next.title.replace(/^jenkins is the way to/i, ''),
-                  40,
-                )}{' '}
-                &gt;&gt;
-              </Link>
-            )}
-          </li>
-        </ul>
-      </div>
+  <div className="navbar navbar-expand navbar-light bg-light">
+    <ul className="navbar-nav w-100 d-flex justify-content-between align-items-center">
+      <li className="nav-item">
+        {pageContext.previous && (
+          <Link
+            className="nav-link text-start d-flex align-items-center"
+            style={{
+              textDecoration: 'none',
+            }}
+            to={`/user-story/${pageContext.previous.slug}`}
+          >
+            <span style={{
+              backgroundColor: '#e2e8f0',
+              padding: '0.25rem 0.5rem',
+              borderRadius: '0.25rem',
+              marginLeft: '0.5rem',
+              flex: 1,
+            }}><span>⟵</span>
+              {truncate(
+                pageContext.previous.title.replace(
+                  /^jenkins is the way to/i, '',
+                ),
+                40,
+              )}
+            </span>
+          </Link>
+        )}
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/"
+          className="nav-link btn btn-secondary px-4"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            transition: 'all 0.3s ease',
+            transform: 'scale(1)',
+            backgroundColor: '#495057'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'scale(1.1)';
+            e.target.style.backgroundColor = '#495057';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'scale(1)';
+            e.target.style.color = 'white';
+          }}
+        >
+          Home
+        </Link>
+      </li>
+      <li className="nav-item">
+        {pageContext.next && (
+          <Link
+            className="nav-link text-start d-flex align-items-center"
+            style={{
+              textDecoration: 'none',
+            }}
+            to={`/user-story/${pageContext.next.slug}`}
+          >
+            <span style={{
+              backgroundColor: '#e2e8f0',
+              padding: '0.25rem 0.5rem',
+              borderRadius: '0.25rem',
+              marginRight: '0.5rem',
+              flex: 1,
+            }}>
+              {truncate(
+                pageContext.next.title.replace(/^jenkins is the way to/i, ''),
+                40,
+              )}
+              <span>⟶</span>
+            </span>
+          </Link>
+        )}
+      </li>
+    </ul>
+  </div>
       <UserStory {...page} />
     </Layout>
   );
