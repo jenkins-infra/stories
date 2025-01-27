@@ -58,7 +58,6 @@
 .mediaImage {
   flex: 0 0 300px;
   margin-right: 2rem;
-  max-width: 300px;
   height: auto;
 }
 

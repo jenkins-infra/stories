@@ -89,7 +89,7 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                   }}
                 >
                   {truncate(
-                    pageContext.previous.title.replace(
+                    pageContext.next.title.replace(
                       /^jenkins is the way to/i,
                       '',
                     ),
