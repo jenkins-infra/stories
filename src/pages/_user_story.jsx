@@ -14,7 +14,7 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
       sourcePath={`src/user-story/${page.parent.relativePath}`}
     >
       <Seo title={title} pathname={`/user-story/${page.slug}`} />
-      <div className="navbar navbar-expand navbar-light bg-light">
+      <div className="navbar navbar-expand  bg-light">
         <ul className="navbar-nav w-100 d-flex justify-content-between align-items-center">
           <li className="nav-item">
             {pageContext.previous && (
@@ -26,16 +26,23 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                 <span
                   style={{
                     backgroundColor: '#e2e8f0',
-                    padding: '0.25rem 0.5rem',
+                    padding: '0.1rem 0.5rem',
                     borderRadius: '0.25rem',
                     marginLeft: '0.5rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '0.5rem',
+                    paddingBottom: '4px',
+                    lineHeight : '2'
                   }}
                 >
-                  <span>⟵</span>
+                  <span
+                  style={{
+                    display: 'flex',
+                    alighItems: 'center',
+                    jstifyContent: 'center',
+                  }}>⟵</span>
                   <span>
                     {truncate(
                       pageContext.previous.title.replace(
@@ -79,13 +86,15 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                 <span
                   style={{
                     backgroundColor: '#e2e8f0',
-                    padding: '0.25rem 0.5rem',
+                    padding: '0.1rem 0.5rem',
                     borderRadius: '0.25rem',
                     marginRight: '0.5rem',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '0.5rem',
+                    paddingBottom: '5px',
+                    lineHeight : '2'
                   }}
                 >
                   {truncate(
@@ -95,7 +104,12 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                     ),
                     40,
                   )}
-                  <span>⟶</span>
+                   <span
+                  style={{
+                    display: 'flex',
+                    alighItems: 'center',
+                    jstifyContent: 'center',
+                  }}>⟶</span>
                 </span>
               </Link>
             )}
