@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Icon } from 'leaflet';
@@ -6,8 +6,8 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import './MapPage.css';
 
-// markup
 const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
   const { stories, mapPin } = useStaticQuery(graphql`
@@ -31,6 +31,7 @@ const MapPage = () => {
               latitude
               longitude
               industries
+              location
             }
             metadata {
               industries
@@ -62,10 +63,9 @@ const MapPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
-
       <div className="container">
-        <div className="row body">
-          <div className="col text-center">
+        <div className="row text-center">
+          <div className="col">
             <h1>Jenkins Is The Way</h1>
             <h2>Latest Jenkins User Stories</h2>
             <h3>
@@ -74,84 +74,59 @@ const MapPage = () => {
             </h3>
           </div>
         </div>
-        <div className="row body">
-          <div className="col" style={{ height: '800px' }}>
+        <div className="row map-container">
+          <div className="col">
             <MapContainer
               center={[43.5890452, 0]}
               zoom={2}
-              style={{ height: '100vh', width: '100wh' }}
+              className="leaflet-map"
             >
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
-              {stories.edges
-                .filter(
-                  ({ node: story }) =>
-                    story.map.latitude || story.map.longitude,
-                )
-                .map(({ node: story }) => (
-                  <Marker
-                    key={story.slug}
-                    position={[story.map.latitude, story.map.longitude]}
-                    icon={icon}
-                  >
-                    <Popup>
-                      <table className="table">
-                        <tbody>
-                          <tr
-                            style={{
-                              border: '0px hidden',
-                              padding: '5px',
-                            }}
-                          >
-                            <td
-                              style={{
-                                border: '0px hidden',
-                              }}
-                              colSpan="2"
-                            ></td>
-                          </tr>
-                          <tr>
-                            <td
-                              style={{
-                                border: '0px hidden',
-                              }}
-                              width="150"
-                            >
-                              <center>
-                                <StaticImage
-                                  src="../images/jenkins_map_pin-180x180-1.png"
-                                  alt="map pin"
-                                />
-                              </center>
-                            </td>
-                            <td
-                              style={{
-                                border: '0px hidden',
-                                padding: '5px',
-                              }}
-                            >
-                              <dt>{story.map.location}</dt>
-                              <dt>
-                                {(
-                                  story.map.industries ||
-                                  story.metadata.industries ||
-                                  []
-                                ).join(', ')}
-                              </dt>
-                              <dt>
-                                <Link to={`/user-story/${story.slug}`}>
-                                  Read user story
-                                </Link>
-                              </dt>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </Popup>
-                  </Marker>
-                ))}
+              {stories.edges.map(({ node: story }) => (
+                <Marker
+                  key={story.slug}
+                  position={[story.map.latitude, story.map.longitude]}
+                  icon={icon}
+                >
+                  <Popup>
+                    <table className="table">
+                      <tbody>
+                        <tr>
+                          <td colSpan="2"></td>
+                        </tr>
+                        <tr>
+                          <td width="150">
+                            <center>
+                              <StaticImage
+                                src="../images/jenkins_map_pin-180x180-1.png"
+                                alt="map pin"
+                              />
+                            </center>
+                          </td>
+                          <td>
+                            <dt>{story.map.location}</dt>
+                            <dt>
+                              {(
+                                story.map.industries ||
+                                story.metadata.industries ||
+                                []
+                              ).join(', ')}
+                            </dt>
+                            <dt>
+                              <Link to={`/user-story/${story.slug}`}>
+                                Read user story
+                              </Link>
+                            </dt>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </Popup>
+                </Marker>
+              ))}
             </MapContainer>
           </div>
         </div>
