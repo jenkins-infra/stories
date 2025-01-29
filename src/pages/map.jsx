@@ -108,7 +108,7 @@ const MapPage = () => {
                             </center>
                           </td>
                           <td>
-                              <dt>{story.map.authored_by}</dt>
+                            <dt>{story.map.authored_by}</dt>
                             <dt>{story.map.location}</dt>
                             <dt>
                               {(
