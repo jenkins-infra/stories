@@ -33,16 +33,19 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '0.5rem',
-                    paddingBottom: '4px',
-                    lineHeight : '2'
+                    paddingBottom: '5px',
+                    lineHeight: '2',
                   }}
                 >
                   <span
-                  style={{
-                    display: 'flex',
-                    alighItems: 'center',
-                    jstifyContent: 'center',
-                  }}>⟵</span>
+                    style={{
+                      display: 'flex',
+                      alighItems: 'center',
+                      jstifyContent: 'center',
+                    }}
+                  >
+                    ⟵
+                  </span>
                   <span>
                     {truncate(
                       pageContext.previous.title.replace(
@@ -94,7 +97,7 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                     justifyContent: 'center',
                     gap: '0.5rem',
                     paddingBottom: '5px',
-                    lineHeight : '2'
+                    lineHeight: '2',
                   }}
                 >
                   {truncate(
@@ -104,12 +107,15 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
                     ),
                     40,
                   )}
-                   <span
-                  style={{
-                    display: 'flex',
-                    alighItems: 'center',
-                    jstifyContent: 'center',
-                  }}>⟶</span>
+                  <span
+                    style={{
+                      display: 'flex',
+                      alighItems: 'center',
+                      jstifyContent: 'center',
+                    }}
+                  >
+                    ⟶
+                  </span>
                 </span>
               </Link>
             )}
