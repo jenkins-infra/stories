@@ -30,6 +30,7 @@ metadata:
     - Yes
 quotes: []
 map:
+  authored_by: Konstantin Averkiev
   location: Prague, CZ
   latitude: "50.0755"
   longitude: "14.4378"
