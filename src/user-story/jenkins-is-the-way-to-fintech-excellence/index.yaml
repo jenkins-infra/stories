@@ -1,16 +1,12 @@
----
 map:
   authored_by: Lara Evdokimova
   location: Russia
   industries:
     - Financial Services
-  latitude: "55.755826"
-  longitude: "37.6173"
+  geojson: '{"type":"Point","coordinates":[37.6173,55.755826]}'
 metadata:
-  title: After integrating Jenkins, this FinTech's financial transaction product
-    quality is improved and 3X simpler.
-  organization: Global product development, digital platform engineering, and
-    digital and product design agency.
+  title: After integrating Jenkins, this FinTech's financial transaction product quality is improved and 3X simpler.
+  organization: Global product development, digital platform engineering, and digital and product design agency.
   industries:
     - Fintech
   programming_languages:
@@ -18,7 +14,7 @@ metadata:
     - C#
     - Golang
   platforms:
-    - ": Android"
+    - ': Android'
     - Docker or Kubernetes
     - Linux
     - MacOS
@@ -36,44 +32,24 @@ metadata:
     - Networking at Jenkins event
     - Spoke with colleagues and peers
 body_content:
-  title: Simplifying card payments requires simplifying every task that makes a
-    financial transaction successful.
+  title: Simplifying card payments requires simplifying every task that makes a financial transaction successful.
   paragraphs:
-    - "**Background:** As a part of a software development and design agency,
-      with clients in nearly every industry, you constantly assess best
-      practices to help businesses transform to meet new market expectations.
-      The same is true when peering inward and looking at your own organization
-      and processes. Lara Evdokimova, a Senior QA and Test Engineer based in
-      Russia, had the opportunity to do just that as she approaches build
-      testing for global clients and supports agency offices worldwide."
-    - "**Goals:** Simplify a fintech customer's processing of financial
-      transactions through credit card payments."
-    - "**Solution & Results:**"
-    - "\"Our approach to task management is considered through a web
-      interface,\" said Lara, \"where we can configure anything, support it with
-      a large number of tasks, and their diversity, that is, simplify jobs and
-      speed up the tickets' creation.\""
-    - 'Lara and her global team relied on Jenkins. "Our Jenkins has jobs:
-      task-generator seed-job and a pipeline-type task named testpipeline-build.
-      In the test pipeline, I will collect a Docker image, which will then be
-      uploaded to the local Docker registry. The image file will be taken from
-      another project."'
-    - To run this task automatically, Lara then adds a webhook in a project with
-      a docker-image, where this task will run after sending changes to the
-      repository. As a result, the ready pipeline will be in the BlueOcean
-      interface in Jenkins.
-    - "**Capabilities used:**"
+    - '**Background:** As a part of a software development and design agency, with clients in nearly every industry, you constantly assess best practices to help businesses transform to meet new market expectations. The same is true when peering inward and looking at your own organization and processes. Lara Evdokimova, a Senior QA and Test Engineer based in Russia, had the opportunity to do just that as she approaches build testing for global clients and supports agency offices worldwide.'
+    - '**Goals:** Simplify a fintech customer''s processing of financial transactions through credit card payments.'
+    - '**Solution & Results:**'
+    - '"Our approach to task management is considered through a web interface," said Lara, "where we can configure anything, support it with a large number of tasks, and their diversity, that is, simplify jobs and speed up the tickets'' creation."'
+    - 'Lara and her global team relied on Jenkins. "Our Jenkins has jobs: task-generator seed-job and a pipeline-type task named testpipeline-build. In the test pipeline, I will collect a Docker image, which will then be uploaded to the local Docker registry. The image file will be taken from another project."'
+    - To run this task automatically, Lara then adds a webhook in a project with a docker-image, where this task will run after sending changes to the repository. As a result, the ready pipeline will be in the BlueOcean interface in Jenkins.
+    - '**Capabilities used:**'
     - |-
       *   Jenkins job builder
       *   DSL plugin
       *   Jenkins pipeline
       *   Gitlab & Gitlab CI
-    - "**Results:**"
-    - >-
+    - '**Results:**'
+    - |-
       *   build times are 6X faster
-
       *   improved product quality is 3X simpler and quicker
-
       *   the processes of continuous integration are built as comfortably as possible
 title: Jenkins is the way to fintech excellence
 date: 2020-09-21T21:33:40.000Z
@@ -81,9 +57,7 @@ authored_by: Lara Evdokimova
 post_name: jenkins-is-the-way-to-fintech-excellence
 quotes:
   - from: Lara Evdokimova, Senior QA & Test Engineer
-    content: Due to flexibility and functionality, I can use different approaches.
-      That allows me to manage tasks as simply, usefully, and conveniently as
-      possible, based on the infrastructure's requirements.
+    content: Due to flexibility and functionality, I can use different approaches. That allows me to manage tasks as simply, usefully, and conveniently as possible, based on the infrastructure's requirements.
     image: ./quote.png
 image: noun_payment_942498-768x768.png
 tag_line: Financial Transactions Simplified With Faster Build Cycles

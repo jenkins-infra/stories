@@ -1,22 +1,18 @@
----
 map:
   authored_by: Aurelien Dorey
   location: France
   industries:
     - Energy
-  latitude: "44.769478"
-  longitude: "-0.311523"
+  geojson: '{"type":"Point","coordinates":[-0.311523,44.769478]}'
 metadata:
-  title: The division of French energy leader Consoneo that focuses on subsidy and
-    facility management needed to transition to a CICD solution that improved
-    product quality and provided faster build times.
+  title: The division of French energy leader Consoneo that focuses on subsidy and facility management needed to transition to a CICD solution that improved product quality and provided faster build times.
   organization: Consoneo, [www.consoneo.com](http://www.consoneo.com)
   industries:
     - Consumer energy
   programming_languages:
     - PHP
   platforms:
-    - ": Docker or Kubernetes"
+    - ': Docker or Kubernetes'
     - Linux
   version_control_systems:
     - GitHub
@@ -31,33 +27,15 @@ metadata:
     - Jenkins Users Google Group or IRC Chat
     - Spoke with colleagues and peers
 body_content:
-  title: Drastically reduce build times and benefit from non-regression testing
-    done in your application.
+  title: Drastically reduce build times and benefit from non-regression testing done in your application.
   paragraphs:
-    - "**Background:** The business of energy certificates is very complex. We
-      have to address more than 200 energy-saving operations and, for each one,
-      manage an infinite number of application parameters varying the purpose of
-      the subsidy."
-    - "**Goals:** Optimize and maximize efforts in energy saving subsidy and
-      facility management."
-    - "**Solution & Results:** To solve our problem, we have a lot of unit and
-      functional testing. The execution of all of these tests takes on a local
-      development machine between 8 am and 3 pm."
-    - With Jenkins and the use of spot instances on AWS, we have been able to
-      reduce the build time drastically. Without Jenkins, we wouldn't be able to
-      benefit from all of the non-regression testing work in our application.
-    - In 2020, we initiated a brand new project and, starting from a codebase
-      without any technical debt, we set up a fully Kubernetized project. In our
-      stack, Jenkins fits perfectly into our CI/CD process. The automation of
-      build and deployment is really impressive and satisfying to see. It goes
-      perfectly with ArgoCD, which we have chosen for the deployment part in the
-      cube.
-    - "What plugins did we use most? In alphabetical order, they are: Amazon
-      EC2, AnsiColor, Ant Plugin, Build Pipeline Plugin, Build Timeout,
-      Checkstyle Plug-in, Clover PHP plugin, Cobertura Plugin, Config File
-      Provider, EC2 Fleet, Disable GitHub Multibranch Status Plugin, Email
-      Extension, External Monitor Job Type Plugin"
-    - "We were very happy with the results, including:"
+    - '**Background:** The business of energy certificates is very complex. We have to address more than 200 energy-saving operations and, for each one, manage an infinite number of application parameters varying the purpose of the subsidy.'
+    - '**Goals:** Optimize and maximize efforts in energy saving subsidy and facility management.'
+    - '**Solution & Results:** To solve our problem, we have a lot of unit and functional testing. The execution of all of these tests takes on a local development machine between 8 am and 3 pm.'
+    - With Jenkins and the use of spot instances on AWS, we have been able to reduce the build time drastically. Without Jenkins, we wouldn't be able to benefit from all of the non-regression testing work in our application.
+    - In 2020, we initiated a brand new project and, starting from a codebase without any technical debt, we set up a fully Kubernetized project. In our stack, Jenkins fits perfectly into our CI/CD process. The automation of build and deployment is really impressive and satisfying to see. It goes perfectly with ArgoCD, which we have chosen for the deployment part in the cube.
+    - 'What plugins did we use most? In alphabetical order, they are: Amazon EC2, AnsiColor, Ant Plugin, Build Pipeline Plugin, Build Timeout, Checkstyle Plug-in, Clover PHP plugin, Cobertura Plugin, Config File Provider, EC2 Fleet, Disable GitHub Multibranch Status Plugin, Email Extension, External Monitor Job Type Plugin'
+    - 'We were very happy with the results, including:'
     - |-
       *   Improved product quality
       *   Build times are 5X faster
@@ -68,10 +46,7 @@ authored_by: Aurelien Dorey
 post_name: to-link-deliverability-and-quality
 quotes:
   - from: Gabriel Poret, Chief Technology Officer, Consoneo
-    content: Jenkins -- in the image of its logo -- is for me the guarantee of a
-      continuous integration of successful developments. Its diversity in terms
-      of plugins and its age in the IT ecosystem make it "a must" in continuous
-      integration tools.
+    content: Jenkins -- in the image of its logo -- is for me the guarantee of a continuous integration of successful developments. Its diversity in terms of plugins and its age in the IT ecosystem make it "a must" in continuous integration tools.
     image: ./quote.png
 image: Logo_Consoneo_sans_baseline_petit.png
 tag_line: Consoneo CI // Bluspark CI/CD

@@ -1,20 +1,17 @@
----
 map:
   authored_by: Thomas Haver
   location: Ohio, USA
   industries:
     - Financial Services
-  latitude: "39.9611755"
-  longitude: "-82.99879419999991"
+  geojson: '{"type":"Point","coordinates":[-82.9987941999999,39.9611755]}'
 metadata:
-  title: Consumer bank modernized their legacy system to event-driven architecture
-    with help from Jenkins pipelines and plugins.
+  title: Consumer bank modernized their legacy system to event-driven architecture with help from Jenkins pipelines and plugins.
   industries:
     - Finance
   programming_languages:
     - Java
   platforms:
-    - ": Android"
+    - ': Android'
     - iOS
     - Docker or Kubernetes
     - MacOS
@@ -29,29 +26,12 @@ metadata:
 body_content:
   title: From monolith to modern in event-driven consumer banking.
   paragraphs:
-    - "**Background:** Our work environment was a giant monolith built on
-      Corillian Voyager, a software platform combined with a set of applications
-      for Internet banking, electronic bill presentment and payment, targeted
-      marketing, data aggregation, web content management and online customer
-      relationship management. In order to modernize and switch to event-driven
-      architecture, we had to pull Voyager apart bit by bit."
-    - "**Goal:** New architecture."
-    - "**Solution & Results:** We used Jenkins for test automation to confirm
-      changes to the current stack and ensure that the nextgen stack would not
-      hurt functionality. The plugins we relied on most were the Pipelines and
-      the Cucumber reports."
-    - Cucumber is a test automation tool following the principles of Behavioural
-      Driven Design and living documentation. Specifications are written in a
-      concise human readable form and executed in continuous integration. It
-      allows Jenkins to publish the results as html reports hosted by the
-      Jenkins build server. To get it to work, you must be using the JUnit
-      runner and generating a json report. The plugin converts the json report
-      into an overview html linking to separate feature file HTML with stats and
-      results.
-    - Jenkins made it easier to scale our work and handle parallelization
-      without headaches. We all became Certified Jenkins Engineers in the
-      process.
-    - "Our results showed improvements in:"
+    - '**Background:** Our work environment was a giant monolith built on Corillian Voyager, a software platform combined with a set of applications for Internet banking, electronic bill presentment and payment, targeted marketing, data aggregation, web content management and online customer relationship management. In order to modernize and switch to event-driven architecture, we had to pull Voyager apart bit by bit.'
+    - '**Goal:** New architecture.'
+    - '**Solution & Results:** We used Jenkins for test automation to confirm changes to the current stack and ensure that the nextgen stack would not hurt functionality. The plugins we relied on most were the Pipelines and the Cucumber reports.'
+    - Cucumber is a test automation tool following the principles of Behavioural Driven Design and living documentation. Specifications are written in a concise human readable form and executed in continuous integration. It allows Jenkins to publish the results as html reports hosted by the Jenkins build server. To get it to work, you must be using the JUnit runner and generating a json report. The plugin converts the json report into an overview html linking to separate feature file HTML with stats and results.
+    - Jenkins made it easier to scale our work and handle parallelization without headaches. We all became Certified Jenkins Engineers in the process.
+    - 'Our results showed improvements in:'
     - |-
       *   visibility
       *   scaling
@@ -62,8 +42,7 @@ authored_by: Thomas Haver
 post_name: jenkins-is-the-way-to-win
 quotes:
   - from: Thomas Haver, Automation Architect, Banking Industry
-    content: Jenkins made it easier to scale our work and handle parallelization
-      without headaches. We all became CJE in the process.
+    content: Jenkins made it easier to scale our work and handle parallelization without headaches. We all became CJE in the process.
     image: ./quote.png
 image: noun_Online-Banking_1907436.png
 tag_line: GENM

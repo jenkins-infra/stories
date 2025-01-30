@@ -1,20 +1,17 @@
----
 map:
   authored_by: Sérgio Martins
   location: Portugal
   industries:
     - Fashion
-  latitude: "40.5170209"
-  longitude: "-8.498208"
+  geojson: '{"type":"Point","coordinates":[-8.498208,40.5170209]}'
 metadata:
-  title: Jenkins was a "surprising game-changer" for this fashion company's DevOps
-    pipelines and processes.
+  title: Jenkins was a "surprising game-changer" for this fashion company's DevOps pipelines and processes.
   industries:
     - Fashion
   programming_languages:
     - Java
   platforms:
-    - ": Docker or Kubernetes"
+    - ': Docker or Kubernetes'
   version_control_systems:
     - Bitbucket Server
   build_tools:
@@ -23,39 +20,13 @@ metadata:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
 body_content:
-  title: Building and maintaining dozens of microservices in a continuous
-    deployment fashion with ease.
+  title: Building and maintaining dozens of microservices in a continuous deployment fashion with ease.
   paragraphs:
-    - "**Background:** We needed to have a strategy in place that allowed us to
-      decouple and scale our CI/CD pipelines for the solution we were developing
-      because it consisted of several microservices. This was critical because
-      the pipelines were independent of each other and their external resources.
-      We didn't want them to be flaky while integrating with our current source
-      code repository. So, we decided to use Jenkins and take advantage of its
-      master/agent architecture in a cluster orchestrated by Kubernetes."
-    - "**Goals:** Managing luxury fashion shipments at scale."
-    - "**Solution & Results:** To accomplish our goals, we used Jenkins
-      integration with Kubernetes, our cluster orchestrator. Taking advantage of
-      its architecture, we could quickly deploy new nodes as pods during runtime
-      to isolate each pipeline, making it focused, fast, and reliable. We also
-      had a set of flaky end-to-end tests in our suite that we were looking to
-      stabilize. After migrating to Jenkins, that improved tremendously, mainly
-      because our testing could now be executed in an isolated pod in a separate
-      Kubernetes namespace, using the required resources dynamically."
-    - "The key capabilities we relied on were the Kubernetes and Docker plugins.
-      We also relied heavily on the current portability, documentation, and
-      support we found within the considerable Jenkins community. Cool side
-      note: as it is such a portable solution, even Jenkins runs on the
-      Kubernetes pod. We didn't even need to purchase new virtual machines in
-      the cloud. That means resource (€€€) efficiency!"
-    - "Long story short, we managed to accomplish our goals using Jenkins, which
-      was surprisingly a game-changer for us. Because we're using Jenkins CI/CD
-      infrastructure, everything is infrastructure-as-code. Now, we can share
-      multiple libraries to support our pipelines-as-code across several
-      microservices. Using Jenkins, we could take our CI/CD pipelines and
-      processes to a whole new level. We're now building and maintaining dozens
-      of microservices in a continuous deployment fashion with ease. And we're
-      experiencing great results:"
+    - '**Background:** We needed to have a strategy in place that allowed us to decouple and scale our CI/CD pipelines for the solution we were developing because it consisted of several microservices. This was critical because the pipelines were independent of each other and their external resources. We didn''t want them to be flaky while integrating with our current source code repository. So, we decided to use Jenkins and take advantage of its master/agent architecture in a cluster orchestrated by Kubernetes.'
+    - '**Goals:** Managing luxury fashion shipments at scale.'
+    - '**Solution & Results:** To accomplish our goals, we used Jenkins integration with Kubernetes, our cluster orchestrator. Taking advantage of its architecture, we could quickly deploy new nodes as pods during runtime to isolate each pipeline, making it focused, fast, and reliable. We also had a set of flaky end-to-end tests in our suite that we were looking to stabilize. After migrating to Jenkins, that improved tremendously, mainly because our testing could now be executed in an isolated pod in a separate Kubernetes namespace, using the required resources dynamically.'
+    - 'The key capabilities we relied on were the Kubernetes and Docker plugins. We also relied heavily on the current portability, documentation, and support we found within the considerable Jenkins community. Cool side note: as it is such a portable solution, even Jenkins runs on the Kubernetes pod. We didn''t even need to purchase new virtual machines in the cloud. That means resource (€€€) efficiency!'
+    - 'Long story short, we managed to accomplish our goals using Jenkins, which was surprisingly a game-changer for us. Because we''re using Jenkins CI/CD infrastructure, everything is infrastructure-as-code. Now, we can share multiple libraries to support our pipelines-as-code across several microservices. Using Jenkins, we could take our CI/CD pipelines and processes to a whole new level. We''re now building and maintaining dozens of microservices in a continuous deployment fashion with ease. And we''re experiencing great results:'
     - |-
       *   Deployments are now performed 10x times faster at a larger scale
       *   End-to-end tests are currently around 4 to 6x times faster
@@ -67,9 +38,7 @@ authored_by: Sérgio Martins
 post_name: to-scale-your-ci-cd-pipelines
 quotes:
   - from: Sérgio Martins, Test Automation Engineer
-    content: Using Jenkins, we were able to take our CI/CD pipelines and processes
-      to a whole new level. We're now building and maintaining dozens of
-      microservices in a continuous deployment fashion with ease.
+    content: Using Jenkins, we were able to take our CI/CD pipelines and processes to a whole new level. We're now building and maintaining dozens of microservices in a continuous deployment fashion with ease.
     image: ./quote.png
 image: noun_online-shopping_2292549.png
 tag_line: Shipments At Scale

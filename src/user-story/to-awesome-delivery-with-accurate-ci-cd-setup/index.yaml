@@ -1,14 +1,11 @@
----
 map:
   authored_by: Ashish Kumar Das
   location: India
   industries:
     - Telecomunications
-  latitude: "22.572646"
-  longitude: "88.36389500000001"
+  geojson: '{"type":"Point","coordinates":[88.36389500000001,22.572646]}'
 metadata:
-  title: Reduce the time spent per developer on each project by creating a modern
-    CI/CD pipeline for over 100 telecommunication microservices.
+  title: Reduce the time spent per developer on each project by creating a modern CI/CD pipeline for over 100 telecommunication microservices.
   organization: Telstra Corporation, <https://www.telstra.com.au/>
   industries:
     - Telecommunications
@@ -19,7 +16,7 @@ metadata:
     - Python
     - Ruby
   platforms:
-    - ": Docker or Kubernetes"
+    - ': Docker or Kubernetes'
     - Linux
   version_control_systems:
     - Bitbucket Server
@@ -34,37 +31,15 @@ metadata:
     - Networking at Jenkins event
     - Spoke with colleagues and peers
 body_content:
-  title: Building 100+ microservices with a common UI, before independently
-    testing and deploying each.
+  title: Building 100+ microservices with a common UI, before independently testing and deploying each.
   paragraphs:
-    - "**Background:** This project, supported by telecommunications giant
-      AT\\&T, required us to have more than 100 microservices deployed
-      independently. The challenge was to set up a CI/CD pipeline and integrate
-      all the plugins in order to reduce the time spent on the project for our
-      team of developers. We wanted to manage the build cycle of all individual
-      microservices by giving them a common UI. But we also needed to see the
-      status of each microservice separately."
-    - "**Goals:** The goal of this project was to provide world-class features
-      for the Unified Communication domain. This includes features like Voice,
-      Video, and a VoIP calling feature with reach Webex capability. We also
-      needed to manage multiple users using admin logins."
-    - "**Solution & Results:** Jenkins provided the best solution as per our
-      actual need. Jenkins comes with an easy setup and very user-friendly
-      documentation, which helped us hit the ground running. We started with POC
-      and quickly took it to production for all our deployments. We were able to
-      manage all our microservices using Jenkins UI."
-    - Jenkins not only made setting up our instance of CI/CD really easy, but it
-      also helped us to visualize the error and failures using its logs. Jenkins
-      lets us track the deployment process and keep the DevOps team in the loop
-      as to when additional support will be needed.
-    - We relied on plugins such as Relic which helped us to create an autonomous
-      email tool for build failure. It was very helpful, as it lets us track the
-      deployment process and keep the DevOps team in the loop as to when
-      additional support will be needed.
-    - Our project can be seen at
-      <https://www.businessdirect.att.com/portal/index.jsp>.
-    - "The results are typical of so many Jenkins installations but impressive
-      nonetheless. They include:"
+    - '**Background:** This project, supported by telecommunications giant AT\&T, required us to have more than 100 microservices deployed independently. The challenge was to set up a CI/CD pipeline and integrate all the plugins in order to reduce the time spent on the project for our team of developers. We wanted to manage the build cycle of all individual microservices by giving them a common UI. But we also needed to see the status of each microservice separately.'
+    - '**Goals:** The goal of this project was to provide world-class features for the Unified Communication domain. This includes features like Voice, Video, and a VoIP calling feature with reach Webex capability. We also needed to manage multiple users using admin logins.'
+    - '**Solution & Results:** Jenkins provided the best solution as per our actual need. Jenkins comes with an easy setup and very user-friendly documentation, which helped us hit the ground running. We started with POC and quickly took it to production for all our deployments. We were able to manage all our microservices using Jenkins UI.'
+    - Jenkins not only made setting up our instance of CI/CD really easy, but it also helped us to visualize the error and failures using its logs. Jenkins lets us track the deployment process and keep the DevOps team in the loop as to when additional support will be needed.
+    - We relied on plugins such as Relic which helped us to create an autonomous email tool for build failure. It was very helpful, as it lets us track the deployment process and keep the DevOps team in the loop as to when additional support will be needed.
+    - Our project can be seen at <https://www.businessdirect.att.com/portal/index.jsp>.
+    - 'The results are typical of so many Jenkins installations but impressive nonetheless. They include:'
     - |-
       *   Improved build times
       *   Automated test cases
@@ -77,9 +52,7 @@ authored_by: Ashish Kumar Das
 post_name: to-awesome-delivery-with-accurate-ci-cd-setup
 quotes:
   - from: Ashish Kumar Das, Senior Software Specialist, Telstra Corporation
-    content: All the features of Jenkins -- including Plugins setup, centralize UI
-      dashboard to monitor jobs, and an easy way of creating jobs through the
-      dashboard -- makes it the Number One CI/CD tool in the industry.
+    content: All the features of Jenkins -- including Plugins setup, centralize UI dashboard to monitor jobs, and an easy way of creating jobs through the dashboard -- makes it the Number One CI/CD tool in the industry.
     image: ./quote.png
 image: telstra_logo_0.png
 tag_line: Providing World-class Features for AT\&T's Unified Communication Domain

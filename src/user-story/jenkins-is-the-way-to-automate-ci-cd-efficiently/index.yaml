@@ -1,14 +1,11 @@
----
 map:
   authored_by: Bibek Sutradhar
   location: India
   industries:
     - Consulting
-  latitude: "22.572646"
-  longitude: "88.36389500000001"
+  geojson: '{"type":"Point","coordinates":[88.36389500000001,22.572646]}'
 metadata:
-  title: This DevOps consultant set out to streamline and automate DevOps
-    processes from development through production, with a Jenkins assist.
+  title: This DevOps consultant set out to streamline and automate DevOps processes from development through production, with a Jenkins assist.
   industries:
     - Information Technology
     - Cloud & Storage
@@ -16,7 +13,7 @@ metadata:
     - Java
     - angular js
   platforms:
-    - ": Docker or Kubernetes"
+    - ': Docker or Kubernetes'
     - Linux
   version_control_systems:
     - Bitbucket Server
@@ -29,46 +26,21 @@ metadata:
 body_content:
   title: Accelerating user acceptance testing and deployment with Jenkins.
   paragraphs:
-    - "**Background:** I work as a DevOps consultant for a large enterprise
-      software development company. We have parallel development and deployment
-      of different sprints of software development. For that, we needed to
-      develop, deploy, and test across multiple environments in parallel,
-      faster."
-    - "**Goals:** Automate the whole CI/CD pipeline to quickly deploy the
-      application to different environments like DEV/SIT/UAT/PROD."
-    - "**Solution & Results:** We support a business-critical application that
-      would be developed in sprints and needed to be available in UAT as soon as
-      possible for users to test. In order to facilitate the deployment, we
-      created separate branches for DEV/SIT/UAT in GitHub. We set up Jenkins in
-      an EC2 instance in AWS and configured the pipeline to trigger the same
-      pipeline for different branches."
-    - Once the code is deployed in DEV and tested, the same image is then taken
-      and deployed to SIT for integration testing in local environments. Once
-      that is approved by the testing team, UAT deployment happens through
-      Jenkins and is available to users immediately.
-    - The speed of UAT has really helped the whole team to work cohesively and
-      provide the application to customers in very little time. This has
-      increased team productivity as deploying the application after every
-      change is easy and very smooth.
-    - "We are using the Jenkins pipeline for deploying our application into
-      Docker containers. We are using the following plugins and key features of
-      Jenkins:"
-    - >-
-      *   Maven/NPM build for the applications. Using custom agents to build the
-      source code.
-
+    - '**Background:** I work as a DevOps consultant for a large enterprise software development company. We have parallel development and deployment of different sprints of software development. For that, we needed to develop, deploy, and test across multiple environments in parallel, faster.'
+    - '**Goals:** Automate the whole CI/CD pipeline to quickly deploy the application to different environments like DEV/SIT/UAT/PROD.'
+    - '**Solution & Results:** We support a business-critical application that would be developed in sprints and needed to be available in UAT as soon as possible for users to test. In order to facilitate the deployment, we created separate branches for DEV/SIT/UAT in GitHub. We set up Jenkins in an EC2 instance in AWS and configured the pipeline to trigger the same pipeline for different branches.'
+    - Once the code is deployed in DEV and tested, the same image is then taken and deployed to SIT for integration testing in local environments. Once that is approved by the testing team, UAT deployment happens through Jenkins and is available to users immediately.
+    - The speed of UAT has really helped the whole team to work cohesively and provide the application to customers in very little time. This has increased team productivity as deploying the application after every change is easy and very smooth.
+    - 'We are using the Jenkins pipeline for deploying our application into Docker containers. We are using the following plugins and key features of Jenkins:'
+    - |-
+      *   Maven/NPM build for the applications. Using custom agents to build the source code.
       *   Integrating Docker plugin to deploy the application in docker swarm clusters.
-
       *   Leveraging the git branch feature to automatically build and deploy any branch to Docker.
-
       *   Securely storing the credentials of git, docker etc., in Jenkins.
-    - We were able to implement DevSecOps (SAST scan, OSS vulnerability etc.) in
-      our Jenkins pipeline. And now, we can build and deploy the application
-      faster than before.
-    - "The results? We now:"
-    - >-
+    - We were able to implement DevSecOps (SAST scan, OSS vulnerability etc.) in our Jenkins pipeline. And now, we can build and deploy the application faster than before.
+    - 'The results? We now:'
+    - |-
       *   deliver the product to our customers very fast
-
       *   receive appreciation from clients for smooth delivery and, hence, more projects are coming in
 title: Jenkins is the way to automate CI/CD efficiently
 date: 2021-04-25T14:26:26.000Z
@@ -76,8 +48,7 @@ authored_by: Bibek Sutradhar
 post_name: jenkins-is-the-way-to-automate-ci-cd-efficiently
 quotes:
   - from: Bibek Sutradhar, AWS Application Architect/DevOps Consultant
-    content: Jenkins helped us to deliver our software faster than before. We were
-      able to provide a secure and safe software to our client.
+    content: Jenkins helped us to deliver our software faster than before. We were able to provide a secure and safe software to our client.
     image: ./quote.png
 image: noun_Technology_1608171.png
 tag_line: Containers and Pipelines

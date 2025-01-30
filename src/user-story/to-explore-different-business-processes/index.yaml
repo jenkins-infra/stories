@@ -1,14 +1,11 @@
----
 map:
   authored_by: Vlad Silverman
   location: California, USA
   industries:
     - Financial Services
-  latitude: "37.4418834"
-  longitude: "-122.1430194"
+  geojson: '{"type":"Point","coordinates":[-122.1430194,37.4418834]}'
 metadata:
-  title: Embracing continuous integration and delivery increased auto-testing by
-    30% and shortened build times by 50%.
+  title: Embracing continuous integration and delivery increased auto-testing by 30% and shortened build times by 50%.
   industries:
     - Fintech
     - Insurance
@@ -16,7 +13,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - ': Docker or Kubernetes'
     - Linux
     - MacOS
   version_control_systems:
@@ -32,33 +29,16 @@ metadata:
     - Networking at Jenkins event
     - Spoke with colleagues and peers
 body_content:
-  title: Automating the entire CI/CD infrastructure shortened release cycles from
-    weeks to hours.
+  title: Automating the entire CI/CD infrastructure shortened release cycles from weeks to hours.
   paragraphs:
-    - "**Background:** For Fintech and Insurance clients, there are many
-      software development challenges, but the most significant issues are the
-      time it takes to build, the need to improve product quality through
-      testing, and the holdup that testing may cause, which can delay releases.
-      We needed an automated infrastructure process when it comes to continuous
-      integration and delivery. And we needed to get software into a production
-      environment with speed, safety, and reliability."
-    - "**Goals:** Use Jenkins to improve the build, test, and deployment
-      processes."
-    - "**Solution & Results:** We settled on Jenkins to help remove some of the
-      manual hurdles in our automated process for the entire CI/CD
-      infrastructure, including installing Jenkins plugins, creating users,
-      their roles and credentials, and dynamic customization of pipelines to
-      customer's platforms."
-    - Jenkins has a number of key capabilities that we found helpful, not the
-      least of which are declarative pipelines, extensions through a wide
-      variety of plugins, and of course, Docker support.
-    - "Results were impressive and included:"
-    - >-
-      *   improved product quality by increasing the number of automated tests
-      by 30%
-
+    - '**Background:** For Fintech and Insurance clients, there are many software development challenges, but the most significant issues are the time it takes to build, the need to improve product quality through testing, and the holdup that testing may cause, which can delay releases. We needed an automated infrastructure process when it comes to continuous integration and delivery. And we needed to get software into a production environment with speed, safety, and reliability.'
+    - '**Goals:** Use Jenkins to improve the build, test, and deployment processes.'
+    - '**Solution & Results:** We settled on Jenkins to help remove some of the manual hurdles in our automated process for the entire CI/CD infrastructure, including installing Jenkins plugins, creating users, their roles and credentials, and dynamic customization of pipelines to customer''s platforms.'
+    - Jenkins has a number of key capabilities that we found helpful, not the least of which are declarative pipelines, extensions through a wide variety of plugins, and of course, Docker support.
+    - 'Results were impressive and included:'
+    - |-
+      *   improved product quality by increasing the number of automated tests by 30%
       *   shortened the build times by 50%
-
       *   faster release cycle (from weeks to hours)
 title: Jenkins is the way to explore different business processes
 date: 2021-01-16T18:36:47.000Z
@@ -66,8 +46,7 @@ authored_by: Vlad Silverman
 post_name: to-explore-different-business-processes
 quotes:
   - from: Vlad Silverman, DevOps Engineer
-    content: Jenkins rocks with very detailed documentation, extensive sample
-      codebase, and good support from Jenkins experts.
+    content: Jenkins rocks with very detailed documentation, extensive sample codebase, and good support from Jenkins experts.
     image: ./quote.png
 image: noun_FinTech_3047805.png
 tag_line: CI/CD Automation for FinTech & Insurance Software Development

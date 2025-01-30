@@ -1,15 +1,11 @@
----
 map:
   authored_by: Kalin Dimitrov
   location: Sofia, Bulgaria
   industries:
     - Financial Services
-  latitude: "42.66410909999999"
-  longitude: "23.2885213"
+  geojson: '{"type":"Point","coordinates":[23.2885213,42.66410909999999]}'
 metadata:
-  title: This Bulgarian bank wanted a secure, agile platform to service the entire
-    company. Their goal was to accelerate core software development and they did
-    so with Jenkins.
+  title: This Bulgarian bank wanted a secure, agile platform to service the entire company. Their goal was to accelerate core software development and they did so with Jenkins.
   organization: Multi-bank insurer based in Bulgaria
   industries:
     - Banking
@@ -32,20 +28,10 @@ metadata:
 body_content:
   title: Accelerating core software development.
   paragraphs:
-    - "**Background: A solid and secure technology platform is a critical
-      foundation for any bank. But for this development team, there was a need
-      to enable rapid innovation while simultaneously reducing manual
-      intervention. They needed a complete CI/CD solution for fast, agile, and
-      simplified development as well as a more streamlined deployment process
-      for the entire company.**"
-    - "**Goals: To accelerate core software development.**"
-    - "**Solution & Results:** We implemented a sturdy solution using Jenkins,
-      BitBucket and Maven. And we wrote a number of custom scripts to enable our
-      solution. Based on the nature of our products, we had to get creative, as
-      most of the solutions out there weren't really a good fit."
-    - "After a lot of brainstorming, scripting, coding and diagramming, the end
-      product is something we can be proud of. Basically, it solved all our
-      problems and fulfilled our dreams. Results we're experiencing include:"
+    - '**Background: A solid and secure technology platform is a critical foundation for any bank. But for this development team, there was a need to enable rapid innovation while simultaneously reducing manual intervention. They needed a complete CI/CD solution for fast, agile, and simplified development as well as a more streamlined deployment process for the entire company.**'
+    - '**Goals: To accelerate core software development.**'
+    - '**Solution & Results:** We implemented a sturdy solution using Jenkins, BitBucket and Maven. And we wrote a number of custom scripts to enable our solution. Based on the nature of our products, we had to get creative, as most of the solutions out there weren''t really a good fit.'
+    - 'After a lot of brainstorming, scripting, coding and diagramming, the end product is something we can be proud of. Basically, it solved all our problems and fulfilled our dreams. Results we''re experiencing include:'
     - |-
       *   Simplified & streamlined deployment process
       *   Introduction of coding and development standards

@@ -1,14 +1,11 @@
----
 map:
   authored_by: Thibaut Le Levier
   location: France
   industries:
     - Software Development
-  latitude: "47.218371"
-  longitude: "-1.553621"
+  geojson: '{"type":"Point","coordinates":[-1.553621,47.218371]}'
 metadata:
-  title: When it was time to build a large CI platform to support rapid app
-    development, the engineers at this software company turned to Jenkins.
+  title: When it was time to build a large CI platform to support rapid app development, the engineers at this software company turned to Jenkins.
   organization: |-
     Global note taking app solution, based in France.
     **Industry:** Software Apps
@@ -34,20 +31,10 @@ metadata:
 body_content:
   title: Building a large CI platform to support app development.
   paragraphs:
-    - "**Background: This technology company offers a note-taking app that
-      understands any handwritten content. It is deployed in hundreds of
-      millions of touch screens globally; in mobile devices, vehicles,
-      interactive whiteboards, etc. For that, this tech team needed a large
-      continuous integration platform to support its large user base, multiple
-      translations, and to accelerate feature releases at scale.**"
-    - "**Goals:** Build a large CI platform to support note-taking applications
-      and character recognition."
-    - "**Solution & Results:** To create our CI platform, we relied on several
-      Jenkins instances, many build nodes, and top-of-the-line hardware. The
-      Jenkins capabilities deployed included node managements, many plugins, and
-      pipeline jobs."
-    - "Jenkins helps us to manage many nodes at a large scale. It also yielded
-      great results, including:"
+    - '**Background: This technology company offers a note-taking app that understands any handwritten content. It is deployed in hundreds of millions of touch screens globally; in mobile devices, vehicles, interactive whiteboards, etc. For that, this tech team needed a large continuous integration platform to support its large user base, multiple translations, and to accelerate feature releases at scale.**'
+    - '**Goals:** Build a large CI platform to support note-taking applications and character recognition.'
+    - '**Solution & Results:** To create our CI platform, we relied on several Jenkins instances, many build nodes, and top-of-the-line hardware. The Jenkins capabilities deployed included node managements, many plugins, and pipeline jobs.'
+    - 'Jenkins helps us to manage many nodes at a large scale. It also yielded great results, including:'
     - |-
       *   quicker builds
       *   better node management

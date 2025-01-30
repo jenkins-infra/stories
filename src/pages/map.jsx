@@ -17,21 +17,15 @@ const MapPage = () => {
       }
       stories: allUserStory(
         sort: { fields: date, order: DESC }
-        filter: {
-          map: {
-            latitude: { ne: null }
-            location: { ne: null }
-            longitude: { ne: null }
-          }
-        }
+        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
         edges {
           node {
             map {
               authored_by
-              latitude
-              longitude
+              geojson
               industries
+              location
             }
             metadata {
               industries
@@ -87,73 +81,75 @@ const MapPage = () => {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
               {stories.edges
-                .filter(
-                  ({ node: story }) =>
-                    story.map.latitude || story.map.longitude,
-                )
-                .map(({ node: story }) => (
-                  <Marker
-                    key={story.slug}
-                    position={[story.map.latitude, story.map.longitude]}
-                    icon={icon}
-                  >
-                    <Popup>
-                      <table className="table">
-                        <tbody>
-                          <tr
-                            style={{
-                              border: '0px hidden',
-                              padding: '5px',
-                            }}
-                          >
-                            <td
-                              style={{
-                                border: '0px hidden',
-                              }}
-                              colSpan="2"
-                            ></td>
-                          </tr>
-                          <tr>
-                            <td
-                              style={{
-                                border: '0px hidden',
-                              }}
-                              width="150"
-                            >
-                              <center>
-                                <StaticImage
-                                  src="../images/jenkins_map_pin-180x180-1.png"
-                                  alt="map pin"
-                                />
-                              </center>
-                            </td>
-                            <td
+                .filter(({ node: story }) => story.map.geojson)
+                .map(({ node: story }) => {
+                  const geojson = JSON.parse(story.map.geojson);
+                  const [longitude, latitude] = geojson.coordinates;
+
+                  return (
+                    <Marker
+                      key={story.slug}
+                      position={[latitude, longitude]}
+                      icon={icon}
+                    >
+                      <Popup>
+                        <table className="table">
+                          <tbody>
+                            <tr
                               style={{
                                 border: '0px hidden',
                                 padding: '5px',
                               }}
                             >
-                              <dt>{story.map.authored_by}</dt>
-                              <dt>{story.map.location}</dt>
-                              <dt>
-                                {(
-                                  story.map.industries ||
-                                  story.metadata.industries ||
-                                  []
-                                ).join(', ')}
-                              </dt>
-                              <dt>
-                                <Link to={`/user-story/${story.slug}`}>
-                                  Read user story
-                                </Link>
-                              </dt>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </Popup>
-                  </Marker>
-                ))}
+                              <td
+                                style={{
+                                  border: '0px hidden',
+                                }}
+                                colSpan="2"
+                              ></td>
+                            </tr>
+                            <tr>
+                              <td
+                                style={{
+                                  border: '0px hidden',
+                                }}
+                                width="150"
+                              >
+                                <center>
+                                  <StaticImage
+                                    src="../images/jenkins_map_pin-180x180-1.png"
+                                    alt="map pin"
+                                  />
+                                </center>
+                              </td>
+                              <td
+                                style={{
+                                  border: '0px hidden',
+                                  padding: '5px',
+                                }}
+                              >
+                                <dt>{story.map.authored_by}</dt>
+                                <dt>{story.map.location}</dt>
+                                <dt>
+                                  {(
+                                    story.map.industries ||
+                                    story.metadata.industries ||
+                                    []
+                                  ).join(', ')}
+                                </dt>
+                                <dt>
+                                  <Link to={`/user-story/${story.slug}`}>
+                                    Read user story
+                                  </Link>
+                                </dt>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </Popup>
+                    </Marker>
+                  );
+                })}
             </MapContainer>
           </div>
         </div>

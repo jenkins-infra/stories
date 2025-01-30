@@ -1,21 +1,18 @@
----
 map:
   authored_by: Tidhar Klein Orbach
   location: Israel
   industries:
     - Advertising & Marketing
-  latitude: "31.9730015"
-  longitude: "34.7925012"
+  geojson: '{"type":"Point","coordinates":[34.7925012,31.9730015]}'
 metadata:
-  title: When a recommendation engine has to respond to hundreds of thousands of
-    requests per second, there is no room for development downtime.
+  title: When a recommendation engine has to respond to hundreds of thousands of requests per second, there is no room for development downtime.
   organization: Taboola, [www.taboola.com](http://www.taboola.com)
   industries:
     - Continuous Delivery
   programming_languages:
     - Groovy
   platforms:
-    - ": Linux"
+    - ': Linux'
   version_control_systems:
     - BitBucket Server
   build_tools:
@@ -23,36 +20,18 @@ metadata:
   community_supports:
     - Jenkins.io websites and blogs. Spoke with colleagues and peers
 body_content:
-  title: Reducing developer frustration with an automated solution that works with
-    a variety of circumstances and operating systems.
+  title: Reducing developer frustration with an automated solution that works with a variety of circumstances and operating systems.
   paragraphs:
-    - "**Background:** Taboola's recommendation engine responds to hundreds of
-      thousands of requests per second. The service has to be fast – so fast
-      that its p95 should be below 500 milliseconds per request. Which means we
-      can't have any downtime at all, or even afford slower responses."
-    - In addition, it's critical to prevent the installation of a faulty
-      version. A faulty version could lead to downtime or degraded performance,
-      which can directly result in a loss of revenue. For this reason, we have
-      multiple testing gateways during development -- to help prevent a bad
-      version. However, based on our experience, sometimes when the software
-      meets production, unexpected and often bad things can happen. We need to
-      be ready to prevent that. Another important requirement is to deploy
-      during office hours, when most of the engineers will be available to
-      assist should something go wrong.
-    - "**Goals:** To deploy a highly sophisticated Java service, one that is
-      very actively developed on a daily basis, to thousands of servers in
-      multiple data centers around the world."
-    - "**Solution & Results:** To meet the objectives, we designed a flow for
-      the deployment. The following are the flow stages at high level:"
-    - >-
+    - '**Background:** Taboola''s recommendation engine responds to hundreds of thousands of requests per second. The service has to be fast – so fast that its p95 should be below 500 milliseconds per request. Which means we can''t have any downtime at all, or even afford slower responses.'
+    - In addition, it's critical to prevent the installation of a faulty version. A faulty version could lead to downtime or degraded performance, which can directly result in a loss of revenue. For this reason, we have multiple testing gateways during development -- to help prevent a bad version. However, based on our experience, sometimes when the software meets production, unexpected and often bad things can happen. We need to be ready to prevent that. Another important requirement is to deploy during office hours, when most of the engineers will be available to assist should something go wrong.
+    - '**Goals:** To deploy a highly sophisticated Java service, one that is very actively developed on a daily basis, to thousands of servers in multiple data centers around the world.'
+    - '**Solution & Results:** To meet the objectives, we designed a flow for the deployment. The following are the flow stages at high level:'
+    - |-
       1.  Is today a deployment day? -- We don't deploy on holidays :)
-
       2.  Is today's version valid? -- Validate the version using canary testing which is implemented in another Jenkins flow
-
       3.  Data center verification -- Deploy on a single data center and verify
-
       4.  New version for all -- Deploy on the rest of the data centers (6 out of 7) in parallel
-    - "The deployment procedure on a single data center goes like this:"
+    - 'The deployment procedure on a single data center goes like this:'
     - |-
       1.  Get the list of servers to be deployed
 
@@ -72,21 +51,12 @@ body_content:
       5.  Wait for a minute for the next server batch
 
       6.  Repeat until no servers are left
-    - "For reference, the flow is detailed at:
-      <https://engineering.taboola.com/high-scale-service-deployment/>"
-    - All of the logic is implemented with Jenkins Pipelines and Groovy support.
-      We created a large shared libs repository with our deployment flow
-      infrastructure. It made the process easy to maintain, extend and
-      generalize to other services as well. As for Jenkins Plugins, we use
-      different plugins during the flow run to report metrics and alert. For
-      example, we integrated the Pager Duty Plugin to trigger an alert in case
-      of a failure. The alert is triggered and resolved automatically by code.
-    - "All in all, we saw great results, including:"
-    - >-
+    - 'For reference, the flow is detailed at: <https://engineering.taboola.com/high-scale-service-deployment/>'
+    - All of the logic is implemented with Jenkins Pipelines and Groovy support. We created a large shared libs repository with our deployment flow infrastructure. It made the process easy to maintain, extend and generalize to other services as well. As for Jenkins Plugins, we use different plugins during the flow run to report metrics and alert. For example, we integrated the Pager Duty Plugin to trigger an alert in case of a failure. The alert is triggered and resolved automatically by code.
+    - 'All in all, we saw great results, including:'
+    - |-
       *   a deployment flow with high reliability
-
       *   it's easier to maintain and extend it with Jenkins Pipelines and Groovy
-
       *   we're able to deploy higher amount of servers in the same or even less time, due to the Jenkins Pipeline flow
 title: Jenkins is the way to make better recommendations
 date: 2020-12-27T13:51:13.000Z
@@ -97,5 +67,4 @@ quotes:
     content: Jenkins pipelines made the implementation of a very complex flow easy.
     image: ./quote.png
 image: 5f2Utw-U_400x400.jpg
-tag_line: "Continuous Delivery for Hardware IPHigh Scale Service Deployment:
-  Taboola's Recommended Flow"
+tag_line: 'Continuous Delivery for Hardware IPHigh Scale Service Deployment: Taboola''s Recommended Flow'

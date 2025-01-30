@@ -1,24 +1,19 @@
----
 map:
   authored_by: Adam Szatyin
   location: Hungary
   industries:
     - Financial Services
-  latitude: "47.5002356"
-  longitude: "19.1000054"
+  geojson: '{"type":"Point","coordinates":[19.1000054,47.5002356]}'
 metadata:
-  title: For one of Hungary's most prominent banks, the instant payment process
-    needed to be well tested before rollout. This Budapest-based software
-    developer chose Jenkins to help automate and improve the testing program.
-  organization: One of Hungary's leading financial service providers, focusing on
-    banking and insurance.
+  title: For one of Hungary's most prominent banks, the instant payment process needed to be well tested before rollout. This Budapest-based software developer chose Jenkins to help automate and improve the testing program.
+  organization: One of Hungary's leading financial service providers, focusing on banking and insurance.
   industries:
     - Bank/Financial
   programming_languages:
     - Java
     - Scala
   platforms:
-    - ": Linux"
+    - ': Linux'
   version_control_systems:
     - Bitbucket Server
   build_tools:
@@ -26,43 +21,18 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
 body_content:
-  title: For instant payments, this financial firm turned to Jenkins for automated
-    testing -- and more of it.
+  title: For instant payments, this financial firm turned to Jenkins for automated testing -- and more of it.
   paragraphs:
-    - "**Background:** The Hungarian National Bank made a proposal to implement
-      instant payment solutions in Hungary and launched it in March 2020. The
-      purpose was to make payments available between Hungarian payment accounts
-      within seconds, on a 24/7/365 basis. In our bank, we had already
-      implemented this functionality by the end of 2019, but we needed a
-      solution to test it. There were strict acceptance criteria that our
-      solution should be able to handle a certain number of requests during
-      working hours, another amount of requests during the evening, even fewer
-      requests at night, and so on."
-    - "**Goals:** The goal of this project was to test the performance of
-      instant payments."
-    - "**Solution & Results:**"
-    - We chose Gatling as the load testing tool and used Maven as the build
-      tool. In the beginning, we ran these tests by hand but it was not
-      sufficient, and since we wanted the tests to run after working hours, we
-      needed an automated way. The other aspect is that we wanted to save test
-      summary reports and it was difficult if every developer ran tests on his
-      or her own machine.
-    - We also needed to run these daily performance tests more frequently and in
-      a distributed way. Determining that the jobs should be parametrized, we
-      located the Parameterized Scheduler in the Jenkins Plugins index, with
-      which we can schedule and run these tests for months. Hat-tip to the
-      awesome community of Jenkins for that suggestion. We have eight Jenkins
-      slaves, so the test distribution was easy with this setup. With the
-      Jenkins Gatling plugin, every test summary was shown on the job's page, so
-      our non-technical coworkers can easily view the latest results, as well as
-      the previous reports and previous builds summary.
-    - "Key capabilities used include:"
-    - >-
-      *   Parameterized Scheduler -- a useful plugin if you need to run a
-      parametrized job on a particular schedule.
-
+    - '**Background:** The Hungarian National Bank made a proposal to implement instant payment solutions in Hungary and launched it in March 2020. The purpose was to make payments available between Hungarian payment accounts within seconds, on a 24/7/365 basis. In our bank, we had already implemented this functionality by the end of 2019, but we needed a solution to test it. There were strict acceptance criteria that our solution should be able to handle a certain number of requests during working hours, another amount of requests during the evening, even fewer requests at night, and so on.'
+    - '**Goals:** The goal of this project was to test the performance of instant payments.'
+    - '**Solution & Results:**'
+    - We chose Gatling as the load testing tool and used Maven as the build tool. In the beginning, we ran these tests by hand but it was not sufficient, and since we wanted the tests to run after working hours, we needed an automated way. The other aspect is that we wanted to save test summary reports and it was difficult if every developer ran tests on his or her own machine.
+    - We also needed to run these daily performance tests more frequently and in a distributed way. Determining that the jobs should be parametrized, we located the Parameterized Scheduler in the Jenkins Plugins index, with which we can schedule and run these tests for months. Hat-tip to the awesome community of Jenkins for that suggestion. We have eight Jenkins slaves, so the test distribution was easy with this setup. With the Jenkins Gatling plugin, every test summary was shown on the job's page, so our non-technical coworkers can easily view the latest results, as well as the previous reports and previous builds summary.
+    - 'Key capabilities used include:'
+    - |-
+      *   Parameterized Scheduler -- a useful plugin if you need to run a parametrized job on a particular schedule.
       *   Gatling plugin -- this plugin is also awesome because it displays the result of the test on the job's overview page.
-    - "The results are typical of many other Jenkins installations:"
+    - 'The results are typical of many other Jenkins installations:'
     - |-
       *   improved product quality was improved
       *   test cycles were shortened
@@ -73,8 +43,7 @@ authored_by: Adam Szatyin
 post_name: to-improve-payment-systems
 quotes:
   - from: Adam Szatyin, Software Developer, Banking Industry
-    content: I think this project would not have been possible without automation
-      and Jenkins was the perfect fit.
+    content: I think this project would not have been possible without automation and Jenkins was the perfect fit.
     image: ./quote.png
 image: noun_ATM_3276327.png
 tag_line: Test Instant Payment Performance

@@ -1,21 +1,18 @@
----
 map:
   authored_by: Pablo Del Giudice
   location: Argentina
   industries:
     - Financial Services
-  latitude: "-34.6036844"
-  longitude: "-58.3815591"
+  geojson: '{"type":"Point","coordinates":[-58.3815591,-34.6036844]}'
 metadata:
-  title: This developer was focused on transforming DevOps architecture for a
-    leading Argentinian bank.
+  title: This developer was focused on transforming DevOps architecture for a leading Argentinian bank.
   industries:
     - Financial
   programming_languages:
     - Java
     - Angular
   platforms:
-    - ": Android"
+    - ': Android'
     - Docker or Kubernetes
     - Linux
     - Windows
@@ -31,42 +28,14 @@ metadata:
 body_content:
   title: Leaving legacy IT thinking behind with an innovative CI/CD.
   paragraphs:
-    - "**Background:** We were challenged in many ways, but, first and foremost,
-      we needed to change the old IT mindset within our bank's architecture.
-      That meant revisiting the vendors and support tools we had used in the
-      past to focus on accelerating product delivery. We also wanted to improve
-      quality on SDLC due to adding testing and quality gates on the pipelines
-      that assure products are ready to upload to the running platform. Our
-      biggest challenge was to demonstrate the power of \"automation\" to plant
-      the seed so that we could begin to fix and improve other business
-      processes by using DevOps."
-    - "**Goals:** Prove to IT teams that we can: improve quality and provide
-      shorter Dev cycles; accelerate and improve product deployment, delivery,
-      and pollination; and embrace innovative DevOps best practices."
-    - '**Solution & Results:** We first conducted a discovery process to
-      identify the pain points of the customer. We detected that artifact
-      delivery and deployment were performed by the "Gmail share folder." Due to
-      that, customer errors and some deployment errors were affecting the
-      availability of those products. To solve this issue, we created a
-      corporate CI/CD based on Jenkins and Gitlab – all connected to our
-      development teams to automate the CI part. We also built over 100
-      pipelines to deploy microservices, properties, and all the components for
-      the platform for three different environments.'
-    - Regarding quality for those products, we assembled a squad to improve it,
-      and then we created a regression + smoke + sanity test. We integrated them
-      into the pipelines. By doing that, we saw potential failures in the early
-      stages in the SDLC that may impact an incorrect deployment due to code
-      errors.
-    - For this, we relied on the StageView and Blue Ocean plugins. And now, to
-      continue our DevOps innovation, we are constantly seeking new plugins. :)
-    - "Our work was put to the test in short order. Due to a security issue, our
-      customer did a significant platform update which included more than 30
-      microservices. They did it in only one hour. We estimate that update
-      probably would have taken up to 2 weeks before our upgrades. Other results
-      included:"
-    - >-
+    - '**Background:** We were challenged in many ways, but, first and foremost, we needed to change the old IT mindset within our bank''s architecture. That meant revisiting the vendors and support tools we had used in the past to focus on accelerating product delivery. We also wanted to improve quality on SDLC due to adding testing and quality gates on the pipelines that assure products are ready to upload to the running platform. Our biggest challenge was to demonstrate the power of "automation" to plant the seed so that we could begin to fix and improve other business processes by using DevOps.'
+    - '**Goals:** Prove to IT teams that we can: improve quality and provide shorter Dev cycles; accelerate and improve product deployment, delivery, and pollination; and embrace innovative DevOps best practices.'
+    - '**Solution & Results:** We first conducted a discovery process to identify the pain points of the customer. We detected that artifact delivery and deployment were performed by the "Gmail share folder." Due to that, customer errors and some deployment errors were affecting the availability of those products. To solve this issue, we created a corporate CI/CD based on Jenkins and Gitlab – all connected to our development teams to automate the CI part. We also built over 100 pipelines to deploy microservices, properties, and all the components for the platform for three different environments.'
+    - Regarding quality for those products, we assembled a squad to improve it, and then we created a regression + smoke + sanity test. We integrated them into the pipelines. By doing that, we saw potential failures in the early stages in the SDLC that may impact an incorrect deployment due to code errors.
+    - For this, we relied on the StageView and Blue Ocean plugins. And now, to continue our DevOps innovation, we are constantly seeking new plugins. :)
+    - 'Our work was put to the test in short order. Due to a security issue, our customer did a significant platform update which included more than 30 microservices. They did it in only one hour. We estimate that update probably would have taken up to 2 weeks before our upgrades. Other results included:'
+    - |-
       *   reducing deployment from 2 hours to 20 minutes
-
       *   fully automated CI + CD with Testing + Quality Gates + Artifacts Auto promotion
 title: Jenkins is the way to speed up the world!
 date: 2021-06-07T15:09:17.000Z
@@ -74,9 +43,7 @@ authored_by: Pablo Del Giudice
 post_name: to-speed-up-the-world
 quotes:
   - from: Pablo Del Giudice, Tech Director
-    content: Jenkins provided the cost-effective tools we needed to allow us to
-      implement DevOps in an easy, fast way. Doing so enables us to increase
-      business value.
+    content: Jenkins provided the cost-effective tools we needed to allow us to implement DevOps in an easy, fast way. Doing so enables us to increase business value.
     image: ./quote.png
 image: noun_bank-to-bank_3412465.png
 tag_line: DevOps Acceleration Despite An Old IT Mindset
