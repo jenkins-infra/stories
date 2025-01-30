@@ -34,7 +34,7 @@ function readFilesRecursively(dir) {
                 delete data.map.latitude;
                 delete data.map.longitude;
 
-                fs.writeFileSync(filePath, yaml.dump(data, { lineWidth: -1 }));
+                fs.writeFileSync(filePath, yaml.dump(data, {lineWidth: -1}));
             }
         }
     });
