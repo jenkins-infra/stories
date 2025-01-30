@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Daksh Jain
   location: India
   industries:
     - Information Technology
@@ -95,8 +96,7 @@ body_content:
       *   testing is incorporated within the pipeline - basically, shift left
 title: Jenkins is the way to revolutionize the world of automation
 date: 2021-08-14T13:26:07.000Z
-authored_by: Daksh Jain, Devops Enthusiast, SRM Institute of Science & Technology |
-  Linux World
+authored_by: Daksh Jain
 post_name: to-revolutionize-the-world-of-automation
 quotes:
   - from: Daksh Jain, Devops Enthusiast, SRM Institute of Science & Technology |

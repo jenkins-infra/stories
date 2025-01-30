@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Alexis Couvreur
   location: France
   industries:
     - Information Technology
@@ -91,7 +92,7 @@ body_content:
       *   automated semantic versioning based on commit messages
 title: Jenkins is the way to build robust and specific pipelines
 date: 2021-02-28T13:41:20.000Z
-authored_by: Alexandre Hiltcher
+authored_by: Alexis Couvreur
 post_name: jenkins-is-the-way-to-build-robust-and-specific-pipelines
 quotes:
   - from: Alexis Couvreur, Software Engineer and DevOps Evangelist
