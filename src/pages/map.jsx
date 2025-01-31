@@ -28,7 +28,6 @@ const MapPage = () => {
         edges {
           node {
             map {
-              authored_by
               latitude
               longitude
               industries
@@ -86,49 +85,73 @@ const MapPage = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
-              {stories.edges.map(({ node: story }) => (
-                <Marker
-                  key={story.slug}
-                  position={[story.map.latitude, story.map.longitude]}
-                  icon={icon}
-                >
-                  <Popup>
-                    <table className="table">
-                      <tbody>
-                        <tr>
-                          <td colSpan="2"></td>
-                        </tr>
-                        <tr>
-                          <td width="150">
-                            <center>
-                              <StaticImage
-                                src="../images/jenkins_map_pin-180x180-1.png"
-                                alt="map pin"
-                              />
-                            </center>
-                          </td>
-                          <td>
-                            <dt>{story.map.authored_by}</dt>
-                            <dt>{story.map.location}</dt>
-                            <dt>
-                              {(
-                                story.map.industries ||
-                                story.metadata.industries ||
-                                []
-                              ).join(', ')}
-                            </dt>
-                            <dt>
-                              <Link to={`/user-story/${story.slug}`}>
-                                Read user story
-                              </Link>
-                            </dt>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </Popup>
-                </Marker>
-              ))}
+              {stories.edges
+                .filter(
+                  ({ node: story }) =>
+                    story.map.latitude || story.map.longitude,
+                )
+                .map(({ node: story }) => (
+                  <Marker
+                    key={story.slug}
+                    position={[story.map.latitude, story.map.longitude]}
+                    icon={icon}
+                  >
+                    <Popup>
+                      <table className="table">
+                        <tbody>
+                          <tr
+                            style={{
+                              border: '0px hidden',
+                              padding: '5px',
+                            }}
+                          >
+                            <td
+                              style={{
+                                border: '0px hidden',
+                              }}
+                              colSpan="2"
+                            ></td>
+                          </tr>
+                          <tr>
+                            <td
+                              style={{
+                                border: '0px hidden',
+                              }}
+                              width="150"
+                            >
+                              <center>
+                                <StaticImage
+                                  src="../images/jenkins_map_pin-180x180-1.png"
+                                  alt="map pin"
+                                />
+                              </center>
+                            </td>
+                            <td
+                              style={{
+                                border: '0px hidden',
+                                padding: '5px',
+                              }}
+                            >
+                              <dt>{story.map.location}</dt>
+                              <dt>
+                                {(
+                                  story.map.industries ||
+                                  story.metadata.industries ||
+                                  []
+                                ).join(', ')}
+                              </dt>
+                              <dt>
+                                <Link to={`/user-story/${story.slug}`}>
+                                  Read user story
+                                </Link>
+                              </dt>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </Popup>
+                  </Marker>
+                ))}
             </MapContainer>
           </div>
         </div>
