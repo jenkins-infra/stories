@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Erik Woitschig
   location: Germany
   industries:
     - Advertising & Marketing
@@ -69,7 +70,7 @@ body_content:
       *   shared knowledge across a happy team
 title: Jenkins is the way to add spicy flavors to Muzkat's processes
 date: 2020-09-10T15:41:18.000Z
-authored_by: Erik Woitschig, Founder / Developer, Muzkat
+authored_by: Erik Woitschig
 post_name: to-add-spicy-flavors-to-muzkats-processes
 quotes:
   - from: Erik Woitschig, Founder / Developer, Muzkat

@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Francisco De Lucas
   location: Spain
   industries:
     - Financial Services
@@ -87,7 +88,7 @@ body_content:
       >](https://jenkinsistheway.io/case-studies/tymit/)"
 title: Jenkins is the way to scale from the ground up
 date: 2020-05-21T01:18:13.000Z
-authored_by: Nicolas Magnone
+authored_by: Francisco De Lucas
 post_name: to-scale-from-the-ground-up
 quotes:
   - from: Francisco De Lucas. Principal Software Engineer, Tymit
