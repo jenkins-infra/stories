@@ -1,6 +1,6 @@
 ---
 map:
-  authored_by: Arman Chand, Software Engineer
+  authored_by: Arman Chand
   location: India
   industries:
     - Financial Services - Mortgage
@@ -65,7 +65,7 @@ body_content:
       *   Automated CMS code and configuration backups to source control
 title: Jenkins is the way to a streamlined mortgage industry
 date: 2021-05-25T00:08:22.000Z
-authored_by: Arman Chand, Software Engineer
+authored_by: Arman Chand
 post_name: to-a-streamlined-mortgage-industry
 quotes:
   - from: Arman Chand, Software Engineer

@@ -50,7 +50,7 @@ body_content:
       *   we have the ability to have the status for each step in the pipeline
 title: Jenkins is the way to build and test multiple environments
 date: 2021-06-22T20:28:28.000Z
-authored_by: Emmanouil Katefidis, Cloud Platform Engineer
+authored_by: Emmanouil Katefidis
 post_name: to-build-and-test-multiple-environments
 quotes:
   - from: Emmanouil Katefidis, Cloud Platform Engineer
