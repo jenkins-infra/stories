@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Anti Asko
   location: France
   industries:
     - Research
@@ -73,7 +74,7 @@ body_content:
       *   faster delivery of hotfixes
 title: Jenkins is the way to facilitate day-to-day work
 date: 2020-04-23T16:09:41.000Z
-authored_by: Anti Asko, Software Engineer, CERN
+authored_by: Anti Asko
 post_name: to-facilitate-day-to-day-work
 quotes:
   - from: Anti Asko, Software Engineer, CERN

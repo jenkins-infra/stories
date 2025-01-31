@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Gregory Jacobs
   location: Wisconsin, USA
   industries:
     - Healthcare
@@ -54,7 +55,7 @@ body_content:
       *   improved application security
 title: Jenkins is the way to build for the future
 date: 2020-08-10T17:16:42.000Z
-authored_by: Gregory Jacobs, Software Architect
+authored_by: Gregory Jacobs
 post_name: to-build-for-the-future
 quotes:
   - from: Gregory Jacobs, Software Architect

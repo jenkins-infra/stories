@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Ahmed AbouZaid
   location: Germany
   industries:
     - Business Process Modeling (BPM)
@@ -139,7 +140,7 @@ body_content:
       *   A colossal knowledge gain about topics that helps it to perform better, like Kubernetes and infrastructure as code
 title: Jenkins is the way to build CI/CD that fits advanced and unique use cases
 date: 2021-08-19T13:04:06.000Z
-authored_by: Ahmed AbouZaid, DevOps Engineer, Camunda
+authored_by: Ahmed AbouZaid
 post_name: to-build-ci-cd-that-fits-advanced-and-unique-use-cases
 quotes:
   - from: Ahmed AbouZaid, DevOps Engineer, Camunda
