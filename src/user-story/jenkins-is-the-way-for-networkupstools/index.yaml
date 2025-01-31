@@ -1,3 +1,4 @@
+---
 title: Jenkins is the way to build multi-platform NUT
 post_name: jenkins-is-the-way-for-networkupstools
 date: 2022-10-02T19:59:30.309+02:00
@@ -26,14 +27,15 @@ metadata:
     - Make
     - GCC/CLANG
   community_supports:
-    - 'Yes'
+    - Yes
 quotes: []
 map:
   authored_by: Jim Klimov
   location: Prague, CZ
   geojson: '{"type":"Point","coordinates":[14.4378,50.0755]}'
 body_content:
-  title: Jenkins is the way to build multi-platform NUT, and jenkinsfile-dynamatrix is the way to find what can be built today
+  title: Jenkins is the way to build multi-platform NUT, and
+    jenkinsfile-dynamatrix is the way to find what can be built today
   paragraphs:
     - |-
       The [Network UPS Tools](https://networkupstools.org)

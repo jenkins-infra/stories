@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Mitchell Slotboom
   location: Netherlands
@@ -5,14 +6,15 @@ map:
     - Semiconductors
   geojson: '{"type":"Point","coordinates":[5.033362500000001,52.13537729999999]}'
 metadata:
-  title: Family-owned company based in the Netherlands looks to Jenkins to speed development and expand pipelines.
+  title: Family-owned company based in the Netherlands looks to Jenkins to speed
+    development and expand pipelines.
   organization: TOPIC, [www.Topic.nl](http://www.topic.nl)
   industries:
     - Semiconductor
   programming_languages:
     - Python
   platforms:
-    - ': Linux'
+    - ": Linux"
   version_control_systems:
     - Bitbucket Server
   build_tools:
@@ -23,9 +25,19 @@ metadata:
 body_content:
   title: Better visibility and bigger, badder pipelines.
   paragraphs:
-    - '**Background:** TOPIC develops digital hardware, FPGA and software for customers. From board design, low-level driver development to application development for desktop, web and mobile. We support as a consultant, but also provide in-house projects and healthcare solutions. Unfortunately, pipeline limitations slowed us down.'
-    - '**Goals:** Create a large pipeline to automate the qualification process.'
-    - '**Solution & Results:** Using JENKINS pipelines enabled us to execute our complete qualification process during the night. Manual steps are removed/solved to make this happen. This automated the process, with some parts executed in parallel and in different nodes. Both the release cycle and the visualization increased tremendously. All results are visible in Jenkins, and everybody has access to those results. We use pipelines with Jenkins files in a Git repo. Also, Blue Ocean is rocking!'
+    - "**Background:** TOPIC develops digital hardware, FPGA and software for
+      customers. From board design, low-level driver development to application
+      development for desktop, web and mobile. We support as a consultant, but
+      also provide in-house projects and healthcare solutions. Unfortunately,
+      pipeline limitations slowed us down."
+    - "**Goals:** Create a large pipeline to automate the qualification process."
+    - "**Solution & Results:** Using JENKINS pipelines enabled us to execute our
+      complete qualification process during the night. Manual steps are
+      removed/solved to make this happen. This automated the process, with some
+      parts executed in parallel and in different nodes. Both the release cycle
+      and the visualization increased tremendously. All results are visible in
+      Jenkins, and everybody has access to those results. We use pipelines with
+      Jenkins files in a Git repo. Also, Blue Ocean is rocking!"
     - Result?
     - |-
       *   Release cycle from days to one night

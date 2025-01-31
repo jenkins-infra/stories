@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Surendra Reddy
   location: India
@@ -5,7 +6,8 @@ map:
     - Education
   geojson: '{"type":"Point","coordinates":[77.5970997,12.9842136]}'
 metadata:
-  title: Bangalore-based blog promotes tech-based books and uses Jenkins to make feature deployment and use case testing easy and manageable.
+  title: Bangalore-based blog promotes tech-based books and uses Jenkins to make
+    feature deployment and use case testing easy and manageable.
   organization: UPSLearn2020, <https://learnups2020.wordpress.com/>
   industries:
     - Tech Education
@@ -13,7 +15,7 @@ metadata:
     - Node.js
     - Python
   platforms:
-    - ': MkDocs'
+    - ": MkDocs"
     - Docker or Kubernetes
     - Windows
   version_control_systems:
@@ -25,16 +27,30 @@ metadata:
   community_supports:
     - Jenkins.io websites & blogs
 body_content:
-  title: Automation allows product owner to execute more tests faster, and to analyze/mitigate failures in no time.
+  title: Automation allows product owner to execute more tests faster, and to
+    analyze/mitigate failures in no time.
   paragraphs:
-    - '**Background:** We were looking to run functional test cases automatically as they were taking much too long to execute as a manual process. We also wanted a solution that would allow us to monitor things like the time it takes to run a rest execution and amplify issues that we came across when performing a test.'
-    - '**Goals:** To promote awareness of digital books on the usage of the latest technologies.'
-    - '**Solution & Results:**'
-    - Manual tests are converted into automated test programs using Selenium with Python using a Robot framework. We were then able to execute the automated test using Jenkins. We were also able to monitor the tests, evaluate the test execution time, and create consolidated reports that highlighted improvements and issues found.
-    - 'It''s been a great help to us as functional tests are now fully automated and executed. It''s now possible to execute multiple runs of the tests and to run parallel tests in multiple machines. Overall, Jenkins allowed us:'
-    - |-
+    - "**Background:** We were looking to run functional test cases
+      automatically as they were taking much too long to execute as a manual
+      process. We also wanted a solution that would allow us to monitor things
+      like the time it takes to run a rest execution and amplify issues that we
+      came across when performing a test."
+    - "**Goals:** To promote awareness of digital books on the usage of the
+      latest technologies."
+    - "**Solution & Results:**"
+    - Manual tests are converted into automated test programs using Selenium
+      with Python using a Robot framework. We were then able to execute the
+      automated test using Jenkins. We were also able to monitor the tests,
+      evaluate the test execution time, and create consolidated reports that
+      highlighted improvements and issues found.
+    - "It's been a great help to us as functional tests are now fully automated
+      and executed. It's now possible to execute multiple runs of the tests and
+      to run parallel tests in multiple machines. Overall, Jenkins allowed us:"
+    - >-
       *   seamless implementation of pipelines
+
       *   consolidated reports are easier to prepare
+
       *   ability to capture test logs takes no time and allows us to quickly analyze and mitigate the failures
 title: Jenkins is the way to drive software releases from manual to autopilot mode
 date: 2021-04-09T15:28:02.000Z

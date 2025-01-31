@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Emmanouil Katefidis
   location: Greece
@@ -5,7 +6,8 @@ map:
     - Cloud Computing
   geojson: '{"type":"Point","coordinates":[21.734574,38.2466395]}'
 metadata:
-  title: A cloud platform engineer in Greece needed to develop a reliable and maintenance-free cloud development pipeline. He got there with Jenkins.
+  title: A cloud platform engineer in Greece needed to develop a reliable and
+    maintenance-free cloud development pipeline. He got there with Jenkins.
   industries:
     - Cloud Operations
   programming_languages:
@@ -13,7 +15,7 @@ metadata:
     - Terraform HCL
     - and Go
   platforms:
-    - ': Docker or Kubernetes'
+    - ": Docker or Kubernetes"
     - Linux
   version_control_systems:
     - Bitbucket Server
@@ -23,14 +25,24 @@ metadata:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
 body_content:
-  title: Empowering people to do their very best work means making sure cloud pipelines are running smoothly.
+  title: Empowering people to do their very best work means making sure cloud
+    pipelines are running smoothly.
   paragraphs:
-    - '**Background:** I work for an American multinational software company that provides server, application and desktop virtualization, networking, software as a service (SaaS), and cloud computing technologies. Our services and products are used by over 400,000 clients worldwide, including 99% of the Fortune 100, and 98% of the Fortune 500.'
-    - To keep things running smoothly for new deployments, I needed to develop an easy-to-maintain and reliable cloud development pipeline to allow for the constant building of production environment configurations.
-    - '**Goals:** Automate cloud deployments.'
-    - '**Solution & Results:**'
-    - Jenkins pipelines allowed us to automate our cloud development process and combine them all within one source of truth. We were able to build multiple environments at the same time which, eventually, allowed us to build, deploy and test without much manual intervention.
-    - 'The results are typical of many other successful Jenkins installations:'
+    - "**Background:** I work for an American multinational software company
+      that provides server, application and desktop virtualization, networking,
+      software as a service (SaaS), and cloud computing technologies. Our
+      services and products are used by over 400,000 clients worldwide,
+      including 99% of the Fortune 100, and 98% of the Fortune 500."
+    - To keep things running smoothly for new deployments, I needed to develop
+      an easy-to-maintain and reliable cloud development pipeline to allow for
+      the constant building of production environment configurations.
+    - "**Goals:** Automate cloud deployments."
+    - "**Solution & Results:**"
+    - Jenkins pipelines allowed us to automate our cloud development process and
+      combine them all within one source of truth. We were able to build
+      multiple environments at the same time which, eventually, allowed us to
+      build, deploy and test without much manual intervention.
+    - "The results are typical of many other successful Jenkins installations:"
     - |-
       *   build times are 3x faster
       *   we can test our code as we build it
@@ -41,7 +53,8 @@ authored_by: Emmanouil Katefidis
 post_name: to-build-and-test-multiple-environments
 quotes:
   - from: Emmanouil Katefidis, Cloud Platform Engineer
-    content: With Jenkins, software builds are 200% faster after automating the cloud development and practices.
+    content: With Jenkins, software builds are 200% faster after automating the
+      cloud development and practices.
     image: ./quote.png
 image: noun_Cloud-Computing_3948010.png
 tag_line: Release Pipeline with Jenkins

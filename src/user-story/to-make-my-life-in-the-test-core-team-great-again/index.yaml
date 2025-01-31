@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Martin Pokorny
   location: Austria
@@ -5,13 +6,14 @@ map:
     - Software Development
   geojson: '{"type":"Point","coordinates":[16.52796,47.84637]}'
 metadata:
-  title: Shorter release cycles and easier roll-out of new projects in safer environments made easier with the help of Jenkins.
+  title: Shorter release cycles and easier roll-out of new projects in safer
+    environments made easier with the help of Jenkins.
   organization: Germany-based software and automation
   industries:
     - HMI / Scada
   programming_languages: []
   platforms:
-    - ': Android'
+    - ": Android"
     - Docker or Kubernetes
     - Linux
     - Windows
@@ -22,13 +24,42 @@ metadata:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
 body_content:
-  title: WinCC OA project continues integration with Jenkins and WinCC OA Test Framework.
+  title: WinCC OA project continues integration with Jenkins and WinCC OA Test
+    Framework.
   paragraphs:
-    - '**Background:** We are a software house developing and selling automation software. Our product, a SCADA system (SCADA / HMI), is called SIMATIC WinCC Open Architecture and controls, among other things, the New York subway, tunnels in Hong Kong, pipelines in Russia, CERN in Geneva, and many thousands of different technical processes. Our solutions are mainly suited for traffic, water, energy, oil & gas, building automation industry, and research.'
-    - To create and execute a test of WinCC OA projects, we have developed our own Test framework. Now we have more than 100,000 test cases, and the execution time takes over 40 hours on a developer machine. We looked at Jenkins integrations to help us speed up the testing of changes in feature branches. We also wanted to inform the developers about side effects as soon as possible and quickly get our QA department an overview of the current quality of the product. This would make it possible to decrease release cycles and safely roll out new projects.**Goals:** Make static and dynamic tests of any WinCC OA projects on all currently supported platforms. Run tests on SW changes and verify the project quality before changes are merged in the production branch. Add metrics and code coverage for our QAs to be fit for security and safety audits. Use lockable resources to eliminate the amount of HW (PLCs) and stabilize tests.
-    - '**Solution & Results:** We use Jenkins in 2 instances. The first one builds the application, and after a successful build and unit test, it sends a trigger to the second Jenkins instance, which deploys WinCC to many test nodes (~250 in use) and starts all necessary tests. We then run primitive unit, application, and integration tests in a few hours.'
-    - Docker integration decreases this time rapidly. To stabilize our driver test, we use lockable resources. The Jenkins integration of multi-branch Pipelines allows testing of developer changes in just a few minutes and before they are merged in the production branch. Jenkins plugins like Git or JUnit eliminate programming time and maintenance. But the highlight is Groovy integration. In the scripted pipeline, there are no limitations for us.
-    - 'Results are as follows:'
+    - "**Background:** We are a software house developing and selling automation
+      software. Our product, a SCADA system (SCADA / HMI), is called SIMATIC
+      WinCC Open Architecture and controls, among other things, the New York
+      subway, tunnels in Hong Kong, pipelines in Russia, CERN in Geneva, and
+      many thousands of different technical processes. Our solutions are mainly
+      suited for traffic, water, energy, oil & gas, building automation
+      industry, and research."
+    - To create and execute a test of WinCC OA projects, we have developed our
+      own Test framework. Now we have more than 100,000 test cases, and the
+      execution time takes over 40 hours on a developer machine. We looked at
+      Jenkins integrations to help us speed up the testing of changes in feature
+      branches. We also wanted to inform the developers about side effects as
+      soon as possible and quickly get our QA department an overview of the
+      current quality of the product. This would make it possible to decrease
+      release cycles and safely roll out new projects.**Goals:** Make static and
+      dynamic tests of any WinCC OA projects on all currently supported
+      platforms. Run tests on SW changes and verify the project quality before
+      changes are merged in the production branch. Add metrics and code coverage
+      for our QAs to be fit for security and safety audits. Use lockable
+      resources to eliminate the amount of HW (PLCs) and stabilize tests.
+    - "**Solution & Results:** We use Jenkins in 2 instances. The first one
+      builds the application, and after a successful build and unit test, it
+      sends a trigger to the second Jenkins instance, which deploys WinCC to
+      many test nodes (~250 in use) and starts all necessary tests. We then run
+      primitive unit, application, and integration tests in a few hours."
+    - Docker integration decreases this time rapidly. To stabilize our driver
+      test, we use lockable resources. The Jenkins integration of multi-branch
+      Pipelines allows testing of developer changes in just a few minutes and
+      before they are merged in the production branch. Jenkins plugins like Git
+      or JUnit eliminate programming time and maintenance. But the highlight is
+      Groovy integration. In the scripted pipeline, there are no limitations for
+      us.
+    - "Results are as follows:"
     - |-
       *   Improve product quality and Spare time for patch releases
       *   Run complex test with manual execution takes over days in few hours
@@ -41,7 +72,8 @@ authored_by: Martin Pokorny
 post_name: to-make-my-life-in-the-test-core-team-great-again
 quotes:
   - from: Martin Pokorny, Senior Software Developer and Key Software Tester
-    content: I doubt there is a tool as helpful as Jenkins for CI/CD integration in complex environments. Many thanks to the Jenkins community.
+    content: I doubt there is a tool as helpful as Jenkins for CI/CD integration in
+      complex environments. Many thanks to the Jenkins community.
     image: ./quote.png
 image: noun_automation-testing_3538848.png
 tag_line: Run Tests and Verify Project Quality Before Merging in Production

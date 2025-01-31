@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Shyam Thadichetti
   location: India
@@ -5,7 +6,9 @@ map:
     - Healthcare
   geojson: '{"type":"Point","coordinates":[79.1288412,18.4385553]}'
 metadata:
-  title: Roche uses Jenkins to help design apps that enable more informed treatment decisions and improve patient care through near real-time access to data.
+  title: Roche uses Jenkins to help design apps that enable more informed
+    treatment decisions and improve patient care through near real-time access
+    to data.
   organization: Roche, <https://www.roche.com> and <https://www.navify.com/tumorboard/>
   industries:
     - Healthcare
@@ -13,7 +16,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ': Docker or Kubernetes'
+    - ": Docker or Kubernetes"
     - Linux
     - MacOS
     - Windows
@@ -25,12 +28,26 @@ metadata:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
 body_content:
-  title: From common challenge to clear solution, Jenkins helped Roche standardize multidisciplinary team procedures.
+  title: From common challenge to clear solution, Jenkins helped Roche standardize
+    multidisciplinary team procedures.
   paragraphs:
-    - '**Background:** Many cancer care teams face challenges in preparing and conducting tumor boards. Without the support of a digital platform, tumor boards can be labor intensive and add additional administrative burden. Navigating among multiple systems, meeting participants can lose time and focus from achieving consensus on patient treatments. We were looking for a solution that would help us build and deploy, with infrastructure and testing automation.'
-    - '**Goals:** We were looking to build an application that augments relevant medical data into a 360° record to support treatment decisions.'
-    - '**Solution & Results:** Once collected, data is curated and hosted on an intuitive dashboard designed to promote collaboration during tumor boards. NAVIFY Tumor Board is now a cloud-based workflow product that securely integrates and displays relevant aggregated data into a single, holistic patient dashboard.'
-    - 'Jenkins - and various plugins like Build Pipeline, Cobertura, Email Extension, Performance, and NodeLabel Parameter - helped us facilitate and automate a system that now effectively provides:'
+    - "**Background:** Many cancer care teams face challenges in preparing and
+      conducting tumor boards. Without the support of a digital platform, tumor
+      boards can be labor intensive and add additional administrative burden.
+      Navigating among multiple systems, meeting participants can lose time and
+      focus from achieving consensus on patient treatments. We were looking for
+      a solution that would help us build and deploy, with infrastructure and
+      testing automation."
+    - "**Goals:** We were looking to build an application that augments relevant
+      medical data into a 360° record to support treatment decisions."
+    - "**Solution & Results:** Once collected, data is curated and hosted on an
+      intuitive dashboard designed to promote collaboration during tumor boards.
+      NAVIFY Tumor Board is now a cloud-based workflow product that securely
+      integrates and displays relevant aggregated data into a single, holistic
+      patient dashboard."
+    - "Jenkins - and various plugins like Build Pipeline, Cobertura, Email
+      Extension, Performance, and NodeLabel Parameter - helped us facilitate and
+      automate a system that now effectively provides:"
     - |-
       *   the introduction of a patient case
       *   input by each specialist using preselected images and reports
@@ -38,7 +55,7 @@ body_content:
       *   review the latest treatment best practices and record patient pathways
       *   document decisions in the patient record
       *   send decisions to EMR
-    - 'Our results include:'
+    - "Our results include:"
     - |-
       *   customer satisfaction
       *   more product usage
@@ -49,7 +66,8 @@ authored_by: Shyam Thadichetti
 post_name: to-transformation
 quotes:
   - from: Shyam Thadichetti, DevOps Engineer, Roche
-    content: Jenkins helps Roche help physicians collect all patient data in one place so that they can make informed decisions.
+    content: Jenkins helps Roche help physicians collect all patient data in one
+      place so that they can make informed decisions.
     image: ./quote.png
 image: roche.png
 tag_line: Roche Navify Tumour Board

@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Vishal VR Gowda
   location: India
@@ -5,14 +6,15 @@ map:
     - Healthcare
   geojson: '{"type":"Point","coordinates":[77.117325,13.3378762]}'
 metadata:
-  title: Making the world healthier, cleaner and safer starts with automated processes in software development.
+  title: Making the world healthier, cleaner and safer starts with automated
+    processes in software development.
   industries:
     - Healthcare
   programming_languages:
     - Java
     - Python
   platforms:
-    - ': Embedded'
+    - ": Embedded"
     - Android
     - MacOS
   version_control_systems:
@@ -20,13 +22,37 @@ metadata:
   build_tools:
     - Gradle
 body_content:
-  title: Speeding warning notifications and improving release time productivity by 50X.
+  title: Speeding warning notifications and improving release time productivity by
+    50X.
   paragraphs:
-    - '**Background:** The work we''re doing is for a global company that provides scientific instrumentation, software and services to healthcare, life science, and other laboratories in academia, government, and biotech and pharmaceutical industries. We had many technical challenges in our project, including building artifact distribution, identifying all warnings in code, automating build release workflow, headless testing, and data collection software which needs to be automated in its workflow. Because we have nearly 20 jobs in our enterprise Jenkins, we settled with Jenkins for all of our automation needs.'
-    - '**Goals:** To develop software that can help simplify DNA sequencing analysis on the fly.'
-    - '**Solution & Results:** With the help of Jenkins, we have nearly 20 successful builds. Each resolves the requirements for that particular job. For example, one Jenkins job helps us identify all the critical warnings present in code whenever we push new code using the SpotBugs plugin -- is a program that uses static analysis to look for bugs in Java code. This is very crucial for developers. Another Jenkins job was to automate build image distribution. This used to be very messy due to a lack of version tracking, especially with so many duplicate copies of builds. Jenkins helped us streamline this process with single deployment, track all versions, and allow wide distribution of builds among the team for testing, verifications, etc.'
-    - The key capabilities we relied on included creating local Jenkins jobs and using the Android plugin for SDK management and GitHub plugin to streamline copy cloning. We also love knowing that the SpotBugs plugin integration can read an XML file and show results on the dashboard when the build is over. That part is awesome.
-    - 'Our top 5 results are as follows:'
+    - "**Background:** The work we're doing is for a global company that
+      provides scientific instrumentation, software and services to healthcare,
+      life science, and other laboratories in academia, government, and biotech
+      and pharmaceutical industries. We had many technical challenges in our
+      project, including building artifact distribution, identifying all
+      warnings in code, automating build release workflow, headless testing, and
+      data collection software which needs to be automated in its workflow.
+      Because we have nearly 20 jobs in our enterprise Jenkins, we settled with
+      Jenkins for all of our automation needs."
+    - "**Goals:** To develop software that can help simplify DNA sequencing
+      analysis on the fly."
+    - "**Solution & Results:** With the help of Jenkins, we have nearly 20
+      successful builds. Each resolves the requirements for that particular job.
+      For example, one Jenkins job helps us identify all the critical warnings
+      present in code whenever we push new code using the SpotBugs plugin -- is
+      a program that uses static analysis to look for bugs in Java code. This is
+      very crucial for developers. Another Jenkins job was to automate build
+      image distribution. This used to be very messy due to a lack of version
+      tracking, especially with so many duplicate copies of builds. Jenkins
+      helped us streamline this process with single deployment, track all
+      versions, and allow wide distribution of builds among the team for
+      testing, verifications, etc."
+    - The key capabilities we relied on included creating local Jenkins jobs and
+      using the Android plugin for SDK management and GitHub plugin to
+      streamline copy cloning. We also love knowing that the SpotBugs plugin
+      integration can read an XML file and show results on the dashboard when
+      the build is over. That part is awesome.
+    - "Our top 5 results are as follows:"
     - |-
       *   warnings identification is faster than ever
       *   build releases to teams is streamlined
@@ -39,7 +65,9 @@ authored_by: Vishal VR Gowda
 post_name: to-automate-anything-in-healthcare
 quotes:
   - from: Vishal VR Gowda, Software Engineer
-    content: Jenkins offers a simple and seamless automation solution that is easy to understand and easy to configure. Even a person who knows nothing can get started in hours and create an automated job for his/her problem.
+    content: Jenkins offers a simple and seamless automation solution that is easy
+      to understand and easy to configure. Even a person who knows nothing can
+      get started in hours and create an automated job for his/her problem.
     image: ./quote.png
 image: noun_DNA_3236084.png
 tag_line: Simpliflying DNA Sequencing Analysis Through Streamlined DevOps

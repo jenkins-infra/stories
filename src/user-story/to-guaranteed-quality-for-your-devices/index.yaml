@@ -1,3 +1,4 @@
+---
 map:
   authored_by: François Mockers
   location: France
@@ -5,7 +6,8 @@ map:
     - Internet of Things (IoT)
   geojson: '{"type":"Point","coordinates":[1.809326,48.991435]}'
 metadata:
-  title: This consumer electronics leader needed a way to increase the quality of deployed IoT software internationally.
+  title: This consumer electronics leader needed a way to increase the quality of
+    deployed IoT software internationally.
   industries:
     - IoT industry and new technologies
   programming_languages:
@@ -16,7 +18,7 @@ metadata:
     - Swift
     - Kotlin
   platforms:
-    - ': Android'
+    - ": Android"
     - iOS
     - Embedded
     - Docker or Kubernetes
@@ -32,13 +34,31 @@ metadata:
 body_content:
   title: Increasing quality and ensuring IoT software passes all tests pre-deployment.
   paragraphs:
-    - '**Background:** As a QA lead at this multinational company, we needed an all-encompassing solution for consumers to connect all devices, no matter which protocol they used, and create viable interactions between them. This was a massive team effort as developers for different factions are spread out internationally.'
-    - '**Goals:** We started with Jenkins to run our full test suites on the test environment each morning to have a complete status at the start of the day.'
-    - '**Solution & Results:** Once we got our full test suites running every morning, they allowed us to quickly identify issues and flaky tests. Once tests were stable enough, we started on-demand deployments through Jenkins, which also runs related tests after the deployment, allowing us to verify changes quickly.'
-    - The next step was to also run tests on the staging environment. It ensured that anything deployed to production was working.
-    - Finally, we started running a subset of our tests in production every hour, with Jenkins notifying us of any failure. Once confident in our solution using Jenkins, we added jobs, computing reports from analytics, and logs to drive us to increase our test coverage.
-    - In the end, Jenkins allowed us to have a clear vision on what to do to improve our quality and to ensure everything released was passing our tests.
-    - We looked for capabilities and notifications plugins that allowed for job parameterization, scheduling, and notifications. We found all of that and more.
+    - "**Background:** As a QA lead at this multinational company, we needed an
+      all-encompassing solution for consumers to connect all devices, no matter
+      which protocol they used, and create viable interactions between them.
+      This was a massive team effort as developers for different factions are
+      spread out internationally."
+    - "**Goals:** We started with Jenkins to run our full test suites on the
+      test environment each morning to have a complete status at the start of
+      the day."
+    - "**Solution & Results:** Once we got our full test suites running every
+      morning, they allowed us to quickly identify issues and flaky tests. Once
+      tests were stable enough, we started on-demand deployments through
+      Jenkins, which also runs related tests after the deployment, allowing us
+      to verify changes quickly."
+    - The next step was to also run tests on the staging environment. It ensured
+      that anything deployed to production was working.
+    - Finally, we started running a subset of our tests in production every
+      hour, with Jenkins notifying us of any failure. Once confident in our
+      solution using Jenkins, we added jobs, computing reports from analytics,
+      and logs to drive us to increase our test coverage.
+    - In the end, Jenkins allowed us to have a clear vision on what to do to
+      improve our quality and to ensure everything released was passing our
+      tests.
+    - We looked for capabilities and notifications plugins that allowed for job
+      parameterization, scheduling, and notifications. We found all of that and
+      more.
     - What results are we seeing?
     - |-
       *   safer deployments
@@ -51,7 +71,8 @@ authored_by: François Mockers
 post_name: to-guaranteed-quality-for-your-devices
 quotes:
   - from: François Mockers, QA Lead
-    content: Jenkins allows us to run the jobs we need when we need. Be it on a schedule, on a trigger, or on-demand, Jenkins is always there.
+    content: Jenkins allows us to run the jobs we need when we need. Be it on a
+      schedule, on a trigger, or on-demand, Jenkins is always there.
     image: ./quote.png
 image: noun_IoT_2297886.png
 tag_line: IoT Cloud

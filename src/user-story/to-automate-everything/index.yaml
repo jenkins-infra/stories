@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Yazeed AL-Smadi
   location: Jordan
@@ -5,19 +6,22 @@ map:
     - Healthcare
   geojson: '{"type":"Point","coordinates":[35.910635,31.9539494]}'
 metadata:
-  title: Jordan-based healthcare organization seeks a faster way to help citizens get treatment without physically entering a hospital, especially during the COVID-19 pandemic.
+  title: Jordan-based healthcare organization seeks a faster way to help citizens
+    get treatment without physically entering a hospital, especially during the
+    COVID-19 pandemic.
   organization: Electronic Health Solutions, <https://ehs.com.jo/>
   industries:
     - Healthcare
   team_members:
     - Zubaida Masalha, Senior DevOps Engineer
     - Ayoub Bourine, Intermediate DevOps Engineer
-    - Mohammad Sharf, IT director, and Yazeed AL-Smadi, DevOps Team Lead, Electronic Health Solutions
+    - Mohammad Sharf, IT director, and Yazeed AL-Smadi, DevOps Team Lead,
+      Electronic Health Solutions
   project_website: <http://emed.hakeem.jo/>
   programming_languages:
     - PHP
   platforms:
-    - ': Docker or Kubernetes'
+    - ": Docker or Kubernetes"
     - Linux
   version_control_systems:
     - GitLab
@@ -26,12 +30,35 @@ metadata:
 body_content:
   title: Reducing DevOps problem tickets by over 90% by using Jenkins.
   paragraphs:
-    - '**Background:** At Electronic Health Solutions, we like to say that we are are using technology for better healthcare in Jordan. But, since we are working with multiple government bureaus, they frequently have new requirements that we must abide by. It can typically take an entire day to catch up between new fixes from the developer and UAT (user acceptance testing). At the beginning of the COVID-19 pandemic, this delay was too long as we were trying to find faster ways to get healthcare and safety information to Jordanian citizens.'
-    - '**Goal:** With the rise of the coronavirus, it was imperative to find a way to help the citizens of Jordan get medicines without having to physically enter a care facility.'
-    - '**Solution & Results:** We have three software development stages at Electronic Health Solutions: QC, UAT, and Staging. During each step, it was necessary to deploy the PHP code manually. This took around 30 minutes to achieve. We searched for the best technology to automate the deployment steps, such as connection strings and implemented database schema. Eventually, we came upon Jenkins.'
-    - Using Jenkins, we build a parametrized project that can be used by variant teams. They specify the version of the application they want to develop, and Jenkins takes responsibility to create the PHP code and does the necessary configurations automatically. Jenkins deploys the new PHP version directly to the UAT environment when the developer commits it. The customer receives a notification when the new fix has been released and can provide testing without human interaction.
-    - Prior to using Jenkins, we were averaging 66 tickets received per day. After incorporating Jenkins, we now deal with fewer than five tickets per day -- and most of these are for Jenkins maintenance from the software teams.
-    - 'Overall, we saw the following results:'
+    - "**Background:** At Electronic Health Solutions, we like to say that we
+      are are using technology for better healthcare in Jordan. But, since we
+      are working with multiple government bureaus, they frequently have new
+      requirements that we must abide by. It can typically take an entire day to
+      catch up between new fixes from the developer and UAT (user acceptance
+      testing). At the beginning of the COVID-19 pandemic, this delay was too
+      long as we were trying to find faster ways to get healthcare and safety
+      information to Jordanian citizens."
+    - "**Goal:** With the rise of the coronavirus, it was imperative to find a
+      way to help the citizens of Jordan get medicines without having to
+      physically enter a care facility."
+    - "**Solution & Results:** We have three software development stages at
+      Electronic Health Solutions: QC, UAT, and Staging. During each step, it
+      was necessary to deploy the PHP code manually. This took around 30 minutes
+      to achieve. We searched for the best technology to automate the deployment
+      steps, such as connection strings and implemented database schema.
+      Eventually, we came upon Jenkins."
+    - Using Jenkins, we build a parametrized project that can be used by variant
+      teams. They specify the version of the application they want to develop,
+      and Jenkins takes responsibility to create the PHP code and does the
+      necessary configurations automatically. Jenkins deploys the new PHP
+      version directly to the UAT environment when the developer commits it. The
+      customer receives a notification when the new fix has been released and
+      can provide testing without human interaction.
+    - Prior to using Jenkins, we were averaging 66 tickets received per day.
+      After incorporating Jenkins, we now deal with fewer than five tickets per
+      day -- and most of these are for Jenkins maintenance from the software
+      teams.
+    - "Overall, we saw the following results:"
     - |-
       *   time efficiency
       *   easy to trace the build issue and debug code issues
@@ -42,7 +69,8 @@ authored_by: Yazeed AL-Smadi
 post_name: to-automate-everything
 quotes:
   - from: Yazeed AL-Smadi, DevOps Team Lead, Electronic Health Solutions
-    content: Jenkins has the ability to be integrated with the other solutions we already had and can be easily used in all automation projects.
+    content: Jenkins has the ability to be integrated with the other solutions we
+      already had and can be easily used in all automation projects.
     image: ./quote.png
 image: 1_6.jpg
 tag_line: EHS Automation Project

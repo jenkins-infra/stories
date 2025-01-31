@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Jayant Sikarwar
   location: India
@@ -5,14 +6,15 @@ map:
     - Financial Services
   geojson: '{"type":"Point","coordinates":[75.7885163,23.1764665]}'
 metadata:
-  title: Wipro engineers help Citibank ease into CI/CD to shorten development cycles and automate builds.
+  title: Wipro engineers help Citibank ease into CI/CD to shorten development
+    cycles and automate builds.
   organization: '**Wipro, http://www.wipro.com "** Citibank, <http://www.citibank.com>'
   industries:
     - Banking
   programming_languages:
     - Python
   platforms:
-    - ': Linux'
+    - ": Linux"
   version_control_systems:
     - Bitbucket Server
   build_tools:
@@ -26,13 +28,25 @@ metadata:
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
 body_content:
-  title: Reducing time needed for code fixes helps developers work more efficiently when bugs are present and then spend more time innovating.
+  title: Reducing time needed for code fixes helps developers work more
+    efficiently when bugs are present and then spend more time innovating.
   paragraphs:
-    - '**Background:** We use Jenkins for CI/CD so developers and testers can work parallelly. Every night an automated system pulls the code added to the shared repository throughout the day and builds that code. The idea is quite similar to continuous integration, but since the code that was built at night was quite large, locating and fixing bugs was a real pain.'
-    - '**Goals:** Creating a data warehousing solution for business users to analyze data and report creation purposes.'
-    - '**Solution & Results:**'
-    - Due to the issues highlighted above, Citibank adopted continuous integration (CI). As a result, every commit made to the source code in the repository was built. If the build result shows that there is a bug in the code, then the developers only need to check that particular commit. This significantly reduced the time required to release new software.
-    - The key capabilities we relied on were GIT Jenkins Plugin for automated build creation from GIT. We also used the TestProject plugin for automated orchestration of test cases.
+    - "**Background:** We use Jenkins for CI/CD so developers and testers can
+      work parallelly. Every night an automated system pulls the code added to
+      the shared repository throughout the day and builds that code. The idea is
+      quite similar to continuous integration, but since the code that was built
+      at night was quite large, locating and fixing bugs was a real pain."
+    - "**Goals:** Creating a data warehousing solution for business users to
+      analyze data and report creation purposes."
+    - "**Solution & Results:**"
+    - Due to the issues highlighted above, Citibank adopted continuous
+      integration (CI). As a result, every commit made to the source code in the
+      repository was built. If the build result shows that there is a bug in the
+      code, then the developers only need to check that particular commit. This
+      significantly reduced the time required to release new software.
+    - The key capabilities we relied on were GIT Jenkins Plugin for automated
+      build creation from GIT. We also used the TestProject plugin for automated
+      orchestration of test cases.
     - What happened?
     - |-
       *   Faster code fixes

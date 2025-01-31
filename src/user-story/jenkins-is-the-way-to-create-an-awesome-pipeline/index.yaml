@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Amandep Singh
   location: India
@@ -5,14 +6,15 @@ map:
     - Telecomunications
   geojson: '{"type":"Point","coordinates":[76.825458,30.7311236]}'
 metadata:
-  title: This India-based IT services organization stepped up to help a leading telecom company expand their Jenkins pipeline.
+  title: This India-based IT services organization stepped up to help a leading
+    telecom company expand their Jenkins pipeline.
   organization: Information technology services and business process outsourcing company
   industries:
     - Telecommunication
   programming_languages:
     - Java
   platforms:
-    - ': Linux'
+    - ": Linux"
     - Docker or Kubernetes
   version_control_systems:
     - Bitbucket Server
@@ -22,12 +24,24 @@ metadata:
     - Jenkins.io websites & blogs
     - spoke with colleagues and peers
 body_content:
-  title: Building, testing, and deploying a Jenkins pipeline for a leading telecommunications company.
+  title: Building, testing, and deploying a Jenkins pipeline for a leading
+    telecommunications company.
   paragraphs:
-    - '**Background:** When a large telecom company needed help enhancing their Jenkins pipeline, they turned to one of India''s leading IT services companies for support. Using Jenkins, the team was tasked with building out their clients'' open source and continuous integration services to include continuous deployment.'
-    - '**Goals:** Expand Jenkins CI pipeline to include CD.'
-    - '**Solution & Results:** We set out to create a tool for deployment by first creating diagrams for both static and dynamic pipelines as a basis of the core Jenkins installation. Plus, there was a need for a number of customizable plugins. Since Jenkins is open source, the implementation was easy and straightforward, whereas other tools tend to be quite challenging to use.'
-    - 'We were able to build, test, and deploy the Jenkins pipeline with ease. We also continue to provide managed services for this international company. With the use of Jenkins, we discovered:'
+    - "**Background:** When a large telecom company needed help enhancing their
+      Jenkins pipeline, they turned to one of India's leading IT services
+      companies for support. Using Jenkins, the team was tasked with building
+      out their clients' open source and continuous integration services to
+      include continuous deployment."
+    - "**Goals:** Expand Jenkins CI pipeline to include CD."
+    - "**Solution & Results:** We set out to create a tool for deployment by
+      first creating diagrams for both static and dynamic pipelines as a basis
+      of the core Jenkins installation. Plus, there was a need for a number of
+      customizable plugins. Since Jenkins is open source, the implementation was
+      easy and straightforward, whereas other tools tend to be quite challenging
+      to use."
+    - "We were able to build, test, and deploy the Jenkins pipeline with ease.
+      We also continue to provide managed services for this international
+      company. With the use of Jenkins, we discovered:"
     - |-
       *   a fast way to deploy: 4 minutes maximum for microservices
       *   development cycles exceed expectations
@@ -38,7 +52,8 @@ authored_by: Amandep Singh
 post_name: jenkins-is-the-way-to-create-an-awesome-pipeline
 quotes:
   - from: Amandep Singh, Senior Engineer
-    content: Since Jenkins is open source, the implementation was easy whereas, other tools tend to be quite difficult to use.
+    content: Since Jenkins is open source, the implementation was easy whereas,
+      other tools tend to be quite difficult to use.
     image: ./quote.png
 image: noun_Telephone_2627962-300x300.png
 tag_line: Enabling microservices for a large telecom

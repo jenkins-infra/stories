@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Gábor Barna
   location: Hungary
@@ -5,7 +6,8 @@ map:
     - Telecomunications
   geojson: '{"type":"Point","coordinates":[19.040235,47.497912]}'
 metadata:
-  title: A modernized CI/CD enables developers to move faster and implement smarter CI executions.
+  title: A modernized CI/CD enables developers to move faster and implement
+    smarter CI executions.
   industries:
     - Telecom
   programming_languages:
@@ -16,7 +18,7 @@ metadata:
     - Bash
     - Groovy
   platforms:
-    - ': Docker or Kubernetes'
+    - ": Docker or Kubernetes"
     - Linux
     - Custom Unix
   build_tools:
@@ -27,12 +29,28 @@ metadata:
 body_content:
   title: Multimedia telephony application server supported with powerful CI/CD.
   paragraphs:
-    - '**Background:** To support a carrier-class application server for voice and multimedia, we wanted to achieve a more reliable CI/CD system. We needed a stable platform that would allow any developer to contribute to a 400-machine-worthy distributed system.'
-    - '**Goals:** Simplify and modernize CI/CD architecture for the product.'
-    - '**Solution & Results:** We used Jenkins Job Builder and Pipeline to build up a "Job-as-a-Code" deployment process and a lightweight framework of pipeline building blocks to support our requirements. This enables individuals with varying skill sets to contribute or build their own jobs to meet their project needs.'
-    - With these building blocks, we could reach feature parity with the new implementation much faster, with less code. Best of all, we could distribute our solution to other parts of the organization, reducing overall fragmentation and parallel efforts.
-    - To make this happen, we used Jenkins Pipeline plugins for the foundation of the solution. We also used the Lockable Resources plugin for custom test channels and Jenkins Job Builder for job deployment.
-    - 'Jenkins provides the base infrastructure for our CI/CD pipeline. It is easy to reuse the building blocks and customize them for our specific needs. It means less boilerplate code and more focus on actually getting things done. This new architecture has delivered excellent results, including:'
+    - "**Background:** To support a carrier-class application server for voice
+      and multimedia, we wanted to achieve a more reliable CI/CD system. We
+      needed a stable platform that would allow any developer to contribute to a
+      400-machine-worthy distributed system."
+    - "**Goals:** Simplify and modernize CI/CD architecture for the product."
+    - '**Solution & Results:** We used Jenkins Job Builder and Pipeline to build
+      up a "Job-as-a-Code" deployment process and a lightweight framework of
+      pipeline building blocks to support our requirements. This enables
+      individuals with varying skill sets to contribute or build their own jobs
+      to meet their project needs.'
+    - With these building blocks, we could reach feature parity with the new
+      implementation much faster, with less code. Best of all, we could
+      distribute our solution to other parts of the organization, reducing
+      overall fragmentation and parallel efforts.
+    - To make this happen, we used Jenkins Pipeline plugins for the foundation
+      of the solution. We also used the Lockable Resources plugin for custom
+      test channels and Jenkins Job Builder for job deployment.
+    - "Jenkins provides the base infrastructure for our CI/CD pipeline. It is
+      easy to reuse the building blocks and customize them for our specific
+      needs. It means less boilerplate code and more focus on actually getting
+      things done. This new architecture has delivered excellent results,
+      including:"
     - |-
       *   faster development
       *   less coding required
@@ -44,7 +62,10 @@ authored_by: Gábor Barna
 post_name: to-automate-test-execution-and-manage-distributed-systems
 quotes:
   - from: Gábor Barna, Scrum Master
-    content: Jenkins provides the base infrastructure for our CI/CD pipeline. It is easy to reuse the building blocks and customize them for our specific needs. It means less boilerplate code, and more focus on actually getting things done.
+    content: Jenkins provides the base infrastructure for our CI/CD pipeline. It is
+      easy to reuse the building blocks and customize them for our specific
+      needs. It means less boilerplate code, and more focus on actually getting
+      things done.
     image: ./quote.png
 image: noun_Download_3466871.png
 tag_line: Job-As-Code Building Blocks

@@ -1,3 +1,4 @@
+---
 map:
   authored_by: Buvanesh Kumar
   location: India
@@ -5,8 +6,11 @@ map:
     - Technology
   geojson: '{"type":"Point","coordinates":[77.3410656,11.1085242]}'
 metadata:
-  title: Open-source software development uses Jenkins to automate mundane tasks so developers can focus on more important things.
-  organization: Red Hat is a multinational software company providing open-source software products to enterprises. View this project at <https://github.com/release-engineering>.
+  title: Open-source software development uses Jenkins to automate mundane tasks
+    so developers can focus on more important things.
+  organization: Red Hat is a multinational software company providing open-source
+    software products to enterprises. View this project at
+    <https://github.com/release-engineering>.
   industries:
     - Technology
   team_members:
@@ -15,7 +19,7 @@ metadata:
     - C++
     - Python
   platforms:
-    - ': Docker or Kubernetes'
+    - ": Docker or Kubernetes"
     - Linux
   version_control_systems:
     - GitHub
@@ -29,14 +33,27 @@ metadata:
 body_content:
   title: Automating the boring stuff made releases 5X faster.
   paragraphs:
-    - '**Background:** Our software developers'' main challenge is the slowdown that comes with quality checks and getting stakeholder approvals without coming to a full halt. We wanted to automatically run the software development process at a specific time. At various intervals in the process, we have the work go through QE and the SMEs'' approval.'
-    - '**Goals:** Quicker and higher-quality delivery of enterprise software to enterprise customers and the open-source community.'
-    - '**Solution & Results:** Jenkins offered excellent support with its considerable number of plugins and the ease of building and developing pipelines. We have solved many of the problems and overcame many of the challenges by understanding the platform. We were able to customize as required using libraries that we have written using Groovy.'
-    - To make things easier for this particular project, we relied on a few choice plugins. These include the Gerrit plugin, the AWS EC2 plugin, the Openshift plugin, and the Thin backup plugin.
-    - 'We were pleased to see the following results:'
-    - |-
+    - "**Background:** Our software developers' main challenge is the slowdown
+      that comes with quality checks and getting stakeholder approvals without
+      coming to a full halt. We wanted to automatically run the software
+      development process at a specific time. At various intervals in the
+      process, we have the work go through QE and the SMEs' approval."
+    - "**Goals:** Quicker and higher-quality delivery of enterprise software to
+      enterprise customers and the open-source community."
+    - "**Solution & Results:** Jenkins offered excellent support with its
+      considerable number of plugins and the ease of building and developing
+      pipelines. We have solved many of the problems and overcame many of the
+      challenges by understanding the platform. We were able to customize as
+      required using libraries that we have written using Groovy."
+    - To make things easier for this particular project, we relied on a few
+      choice plugins. These include the Gerrit plugin, the AWS EC2 plugin, the
+      Openshift plugin, and the Thin backup plugin.
+    - "We were pleased to see the following results:"
+    - >-
       *   releases were 5x faster
+
       *   automated error reporting and customization helped us save time with each release
+
       *   ability to focus on important things because we were able to automate the boring stuff by almost 99%
 title: Jenkins is the way to build and release faster
 date: 2021-01-11T18:27:21.000Z
