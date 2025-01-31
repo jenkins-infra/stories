@@ -76,14 +76,12 @@ const UserStory = ({
           {fields.some(field => metadata[field]) && (
             <div className="container pt-2 pb-2">
               <div className="jumbotron">
-                <div className="media">
+                <div className="media d-block d-md-flex gap-3 align-items-center">
                   {image && (
                     <ImageWrapper
                       image={image}
                       alt="Logo"
-                      className="mr-3"
-                      height="300"
-                      width="300"
+                      className={`${styles.mediaImage}`}
                     />
                   )}
                   <div className="media-body">

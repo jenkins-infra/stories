@@ -29,7 +29,6 @@ metadata:
     - 'Yes'
 quotes: []
 map:
-  authored_by: Konstantin Averkiev
   location: Prague, CZ
   geojson: '{"type":"Point","coordinates":[14.4378,50.0755]}'
 body_content:

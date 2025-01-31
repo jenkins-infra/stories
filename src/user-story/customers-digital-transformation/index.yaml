@@ -25,7 +25,6 @@ metadata:
     - 'Yes'
 quotes: []
 map:
-  authored_by: Alauda
   location: Beijing, China
   geojson: '{"type":"Point","coordinates":[116.4074,39.9042]}'
 body_content:
