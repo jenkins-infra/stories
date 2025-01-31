@@ -1,4 +1,5 @@
 map:
+  authored_by: Jorge Uztariz
   location: Colombia
   industries:
     - Software Developement
@@ -51,7 +52,7 @@ body_content:
       *   no worries about database backups
 title: Jenkins is the way to faster and safer shipping to clients
 date: 2021-08-15T16:10:25.000Z
-authored_by: Jorge Uztariz, Devops Lead, Consis Internacional
+authored_by: Jorge Uztariz
 post_name: to-faster-and-safer-shipping-to-clients
 quotes:
   - from: Jorge Uztariz, Devops Lead, Consis Internacional

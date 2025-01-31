@@ -1,4 +1,5 @@
 map:
+  authored_by: Tidhar Klein Orbach
   location: Israel
   industries:
     - Advertising & Marketing
@@ -59,7 +60,7 @@ body_content:
       *   we're able to deploy higher amount of servers in the same or even less time, due to the Jenkins Pipeline flow
 title: Jenkins is the way to make better recommendations
 date: 2020-12-27T13:51:13.000Z
-authored_by: Tidhar Klein Orbach, DevOps / Release Engineer, Taboola
+authored_by: Tidhar Klein Orbach
 post_name: to-make-better-recommendations
 quotes:
   - from: Tidhar Klein Orbach, DevOps / Release Engineer, Taboola

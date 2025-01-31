@@ -1,4 +1,5 @@
 map:
+  authored_by: Luís Felipe Teixeira
   location: Brazil
   industries:
     - Logistics
@@ -42,7 +43,7 @@ body_content:
       *   build parallelization and version management of the images created
 title: Jenkins is the way to bring Brazil's freight workers to the 21st century
 date: 2021-04-29T15:12:26.000Z
-author: Diogo Almeida
+authored_by: Luís Felipe Teixeira
 post_name: to-bring-brazils-freight-workers-to-the-21st-century
 quotes:
   - from: Luís Felipe Teixeira, Senior Automation Engineer, Sincrovia

@@ -1,4 +1,5 @@
 map:
+  authored_by: Gabriel Poret
   location: France
   industries:
     - Energy
@@ -41,7 +42,7 @@ body_content:
       *   Piloting and metrics facilities
 title: Jenkins is the way to link deliverability and quality
 date: 2021-06-27T19:30:54.000Z
-authored_by: Aurelien Dorey
+authored_by: Gabriel Poret
 post_name: to-link-deliverability-and-quality
 quotes:
   - from: Gabriel Poret, Chief Technology Officer, Consoneo

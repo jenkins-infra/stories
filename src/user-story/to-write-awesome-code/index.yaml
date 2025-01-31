@@ -1,4 +1,5 @@
 map:
+  authored_by: Johannes Mayer
   location: Germany
   industries:
     - Binary Translation

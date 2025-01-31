@@ -1,4 +1,5 @@
 map:
+  authored_by: Mary Jane Buenaventura
   location: Malaysia
   industries:
     - Information Technology
@@ -40,6 +41,7 @@ body_content:
       *   concurrent builds help a lot on our productivity
 title: Jenkins is the way to automate and accelerate application deployment
 date: 2021-05-31T14:19:58.000Z
+authored_by: Mary Jane Buenaventura
 post_name: to-automate-and-accelerate-application-deployment
 quotes:
   - from: Mary Jane Buenaventura, Solution Architect

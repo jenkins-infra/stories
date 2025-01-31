@@ -1,4 +1,5 @@
 map:
+  authored_by: Alejandro Alvarez Vazquez
   location: Portugal
   industries:
     - Travel
@@ -50,7 +51,7 @@ body_content:
     - '### [Read the full case study to learn more.](https://jenkinsistheway.io/case-studies/jenkins-case-study-avoris-travel/)'
 title: Jenkins is the way to do things quickly, simply and in a powerful way
 date: 2020-05-26T23:09:24.000Z
-authored_by: Gabriel Ramis, Operation-Infrastructure and Communications Director
+authored_by: Alejandro Alvarez Vazquez
 post_name: to-do-things-quickly-simply-and-in-a-powerful-way
 quotes:
   - from: Alejandro Alvarez Vazquez, Sysadmin, Avoris Travel

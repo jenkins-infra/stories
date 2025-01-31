@@ -1,4 +1,5 @@
 map:
+  authored_by: Carlos Rodriguez Lopez
   location: Spain
   industries:
     - DevOps & Human Resources
@@ -63,7 +64,7 @@ body_content:
       *   A particular Jenkins troubleshooting lab can be built and pushed in matter of 1-2 minutes
 title: Jenkins is the way to run technical simulations for developer/engineer interviews
 date: 2021-02-15T17:25:36.000Z
-authored_by: Carlos Rodriguez Lopez, Lead Support Engineer, CloudBees
+authored_by: Carlos Rodriguez Lopez
 post_name: to-run-technical-simulations-for-developer-engineer-interviews
 quotes:
   - from: Carlos Rodriguez Lopez, Lead Support Engineer, CloudBees

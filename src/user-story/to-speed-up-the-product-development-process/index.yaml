@@ -1,4 +1,5 @@
 map:
+  authored_by: Erana Chandran
   location: India
   industries:
     - Information Technology
@@ -71,7 +72,7 @@ body_content:
       *   Getting Jenkins build results in Microsoft Teams
 title: Jenkins is the way to speed up the product development process
 date: 2021-04-21T14:50:12.000Z
-authored_by: Erana Chandran, DevOps Engineer in Information Technology
+authored_by: Erana Chandran
 post_name: to-speed-up-the-product-development-process
 quotes:
   - from: Erana Chandran, DevOps Engineer in Information Technology

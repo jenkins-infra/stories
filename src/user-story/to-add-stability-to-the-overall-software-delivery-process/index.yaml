@@ -1,4 +1,5 @@
 map:
+  authored_by: Ajit Gunge
   location: India
   industries:
     - Telecomunications
@@ -27,7 +28,7 @@ body_content:
       *   End-users report overall quality of the software has increased and is more bug free\*\*
 title: Jenkins is the way to add stability to the overall software delivery process
 date: 2020-08-08T19:29:18.000Z
-authored_by: Ajit Gunge, Lead Consultant, Virtusa
+authored_by: Ajit Gunge
 post_name: to-add-stability-to-the-overall-software-delivery-process
 quotes:
   - from: Ajit Gunge, Lead Consultant, Virtusa
