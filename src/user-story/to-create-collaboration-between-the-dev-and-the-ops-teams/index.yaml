@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Kuldeep Sharma
   location: India
   industries:
     - Financial Services
@@ -80,7 +81,7 @@ body_content:
       changes for automation in existing processes.
 title: Jenkins is the way to create collaboration between the Dev and the Ops teams
 date: 2020-10-15T14:06:36.000Z
-authored_by: Kuldeep Sharma, DevOps Lead
+authored_by: Kuldeep Sharma
 post_name: to-create-collaboration-between-the-dev-and-the-ops-teams
 quotes:
   - from: Kuldeep Sharma, DevOps Lead

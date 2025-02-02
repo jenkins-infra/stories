@@ -1,5 +1,6 @@
 ---
 map:
+  authored_by: Alexander Leibzon
   location: Israel
   industries:
     - Advertising & Marketing
@@ -78,7 +79,7 @@ body_content:
       *   Being pipeline compatible
 title: Jenkins is the way to automate NOC operations
 date: 2020-05-14T02:02:39.000Z
-authored_by: Alexander Leibzon, Software Developer/Architect
+authored_by: Alexander Leibzon
 post_name: to-automate-noc-operations
 quotes:
   - from: Alexander Leibzon, Software Developer/Architect

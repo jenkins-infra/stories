@@ -28,6 +28,7 @@ const MapPage = () => {
         edges {
           node {
             map {
+              authored_by
               latitude
               longitude
               industries
@@ -132,6 +133,7 @@ const MapPage = () => {
                                 padding: '5px',
                               }}
                             >
+                              <dt>{story.map.authored_by}</dt>
                               <dt>{story.map.location}</dt>
                               <dt>
                                 {(

@@ -88,8 +88,8 @@ body_content:
 title: Jenkins is the way to achieve simple, effective, code-driven CI/CD and
   other automation pipelines
 date: 2021-09-11T14:19:05.000Z
-authored_by: Timothy Go
-post_name: jenkins-is-the-way-to-achieve-simple-effective-code-driven-ci-cd-and-other-automation-pipelines
+authored_by: Joshua Zangari
+post_name: to-achieve-simple-effective-code-driven-ci-cd-and-other-automation-pipelines
 quotes:
   - from: Joshua Zangari, Devops Lead, Moogsoft
     content: Honestly, Jenkins made it simple to do what other tools like Spinnaker
