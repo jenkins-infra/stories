@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import { Calendar } from 'lucide-react';
 
 // markup
 const AllPage = () => {
@@ -57,9 +58,12 @@ const AllPage = () => {
         </div>
         <div className="row">
           <div className="col">
-            <h2>Jenkins User Stories</h2>
+            <h2 className="pb-2">Jenkins User Stories</h2>
             {stories.edges.map(({ node: story }) => (
-              <div key={story.slug} className="pb-2">
+              <div
+                key={story.slug}
+                className="mb-4 border border-slate-700 rounded-4 px-4"
+              >
                 <div className="d-flex justify-content-right align-items-center">
                   {story.image && (
                     <div>
@@ -67,22 +71,23 @@ const AllPage = () => {
                         <GatsbyImage
                           image={getImage(story.image)}
                           alt="Logo"
-                          className="mr-3"
+                          className="h-[150px] w-[150px] rounded-2"
                         />
                       </Link>
                     </div>
                   )}
-                  <div>
-                    <div>
+                  <div className="m-4">
+                    <div className="text-xl fw-semibold fs-4">
                       <Link to={`/user-story/${story.slug}`}>
-                        <strong>{story.title}</strong>
+                        {story.title}
                       </Link>
                     </div>
                     <div>
-                      <small>{story.date}</small>
+                      <Calendar size={15} className="inline-block" />
+                      <small className="p-2 text-secondary">{story.date}</small>
                     </div>
-                    <div>{story.tag_line}</div>
-                    <div>
+                    <div className="mt-3">{story.tag_line}</div>
+                    <div className="mt-2">
                       <Link to={`/user-story/${story.slug}`}>Read More »</Link>
                     </div>
                   </div>
