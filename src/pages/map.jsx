@@ -6,8 +6,8 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import './MapPage.css';
 
-// markup
 const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
   const { stories, mapPin } = useStaticQuery(graphql`
@@ -32,6 +32,7 @@ const MapPage = () => {
               latitude
               longitude
               industries
+              location
             }
             metadata {
               industries
@@ -63,10 +64,9 @@ const MapPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
-
       <div className="container">
-        <div className="row body">
-          <div className="col text-center">
+        <div className="row text-center">
+          <div className="col">
             <h1>Jenkins Is The Way</h1>
             <h2>Latest Jenkins User Stories</h2>
             <h3>
@@ -75,12 +75,12 @@ const MapPage = () => {
             </h3>
           </div>
         </div>
-        <div className="row body">
-          <div className="col" style={{ height: '800px' }}>
+        <div className="row map-container">
+          <div className="col">
             <MapContainer
               center={[43.5890452, 0]}
               zoom={2}
-              style={{ height: '100vh', width: '100wh' }}
+              className="leaflet-map"
             >
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
