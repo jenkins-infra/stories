@@ -4,8 +4,7 @@ map:
   location: United Kingdom
   industries:
     - Logistics
-  latitude: "51.55818799999999"
-  longitude: "0.06976349999999999"
+  geojson: '{"type":"Point","coordinates":[0.06976349999999999,51.55818799999999]}'
 metadata:
   title: This logistics company wanted to seamlessly enable DevOps within the
     organization. That's when they decided to move Jenkins to the cloud and

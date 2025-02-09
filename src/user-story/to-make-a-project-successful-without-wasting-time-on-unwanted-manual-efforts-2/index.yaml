@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Telecomunications
-  latitude: "30.3738609"
-  longitude: "78.4324809"
+  geojson: '{"type":"Point","coordinates":[78.4324809,30.3738609]}'
 metadata:
   title: India-based development teams for a global telecommunications company
     find build and deploy efficiencies thanks to Jenkins CI/CD.

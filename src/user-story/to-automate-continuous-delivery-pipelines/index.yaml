@@ -4,8 +4,7 @@ map:
   location: Denmark
   industries:
     - Insurance
-  latitude: "55.7957329"
-  longitude: "12.1592079"
+  geojson: '{"type":"Point","coordinates":[12.1592079,55.7957329]}'
 metadata:
   title: Leading Danish insurer chooses Jenkins as the "de facto" product to build
     their CI/CD.

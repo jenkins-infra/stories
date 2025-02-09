@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Healthcare
-  latitude: "18.4385553"
-  longitude: "79.1288412"
+  geojson: '{"type":"Point","coordinates":[79.1288412,18.4385553]}'
 metadata:
   title: Roche uses Jenkins to help design apps that enable more informed
     treatment decisions and improve patient care through near real-time access

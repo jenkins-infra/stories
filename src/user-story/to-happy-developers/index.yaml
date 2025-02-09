@@ -4,8 +4,7 @@ map:
   location: Pennsylvania, USA
   industries:
     - Robotics
-  latitude: "40.44062479999999"
-  longitude: "-79.9958864"
+  geojson: '{"type":"Point","coordinates":[-79.9958864,40.44062479999999]}'
 metadata:
   title: The team at IAM Robotics used Jenkins to improve testing efficiency. This
     resulted in a deployment process that is 8 times faster and development

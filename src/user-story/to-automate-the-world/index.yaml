@@ -4,8 +4,7 @@ map:
   location: Belgium
   industries:
     - Transport
-  latitude: "50.5606"
-  longitude: "4.1724"
+  geojson: '{"type":"Point","coordinates":[4.1724,50.5606]}'
 metadata:
   title: Using Jenkins to bring new app-based features to residents, commuters,
     and tourists relying on public transport in Brussels.

@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Financial Services
-  latitude: "43.405825"
-  longitude: "5.527921999999999"
+  geojson: '{"type":"Point","coordinates":[5.527921999999999,43.405825]}'
 metadata:
   title: DevOps engineer drives DevOps with a Jenkins assist.
   industries:

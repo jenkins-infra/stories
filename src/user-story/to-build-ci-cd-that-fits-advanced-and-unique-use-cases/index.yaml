@@ -4,8 +4,7 @@ map:
   location: Germany
   industries:
     - Business Process Modeling (BPM)
-  latitude: "52.52000659999999"
-  longitude: "13.404954"
+  geojson: '{"type":"Point","coordinates":[13.404954,52.52000659999999]}'
 metadata:
   title: The engineers operating within a division of Camunda revamp their CI
     platform to meet their unique and evolving requirements.

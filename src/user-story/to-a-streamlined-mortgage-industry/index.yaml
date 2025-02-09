@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Financial Services - Mortgage
-  latitude: "26.8466937"
-  longitude: "80.94616599999999"
+  geojson: '{"type":"Point","coordinates":[80.94616599999999,26.8466937]}'
 metadata:
   title: To make end-user onboarding of a mortgage management software program
     more efficient, this software engineer turned to Jenkins to accelerate CI/CD

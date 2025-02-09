@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Information Technology
-  latitude: "26.9124336"
-  longitude: "75.7872709"
+  geojson: '{"type":"Point","coordinates":[75.7872709,26.9124336]}'
 metadata:
   title: India's first mobile healthcare communication and delivery platform
     wanted a software deployment process that was faster with a single-click

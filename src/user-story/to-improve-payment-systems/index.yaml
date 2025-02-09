@@ -4,8 +4,7 @@ map:
   location: Hungary
   industries:
     - Financial Services
-  latitude: "47.5002356"
-  longitude: "19.1000054"
+  geojson: '{"type":"Point","coordinates":[19.1000054,47.5002356]}'
 metadata:
   title: For one of Hungary's most prominent banks, the instant payment process
     needed to be well tested before rollout. This Budapest-based software

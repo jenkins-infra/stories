@@ -4,8 +4,7 @@ map:
   location: Israel
   industries:
     - Advertising & Marketing
-  latitude: "31.9730015"
-  longitude: "34.7925012"
+  geojson: '{"type":"Point","coordinates":[34.7925012,31.9730015]}'
 metadata:
   title: When a recommendation engine has to respond to hundreds of thousands of
     requests per second, there is no room for development downtime.

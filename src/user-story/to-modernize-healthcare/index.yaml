@@ -4,8 +4,7 @@ map:
   location: Brazil
   industries:
     - Healthcare
-  latitude: "-25.4372382"
-  longitude: "-49.2699727"
+  geojson: '{"type":"Point","coordinates":[-49.2699727,-25.4372382]}'
 metadata:
   title: Carta Healthcare looked to Jenkins automation when they wanted as many
     parallel software builds as possible, cost-effectively.

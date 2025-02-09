@@ -4,8 +4,7 @@ map:
   location: Portugal
   industries:
     - Fashion
-  latitude: "40.5170209"
-  longitude: "-8.498208"
+  geojson: '{"type":"Point","coordinates":[-8.498208,40.5170209]}'
 metadata:
   title: Jenkins was a "surprising game-changer" for this fashion company's DevOps
     pipelines and processes.

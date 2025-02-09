@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Telecomunications
-  latitude: "22.34601"
-  longitude: "87.2319753"
+  geojson: '{"type":"Point","coordinates":[87.2319753,22.34601]}'
 metadata:
   title: IBM helped Vodafone transform telecom applications from on-premise to the
     IBM and shaved expenses off the budget by automating continuous integration

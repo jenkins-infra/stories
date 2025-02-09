@@ -4,8 +4,7 @@ map:
   location: Germany
   industries:
     - Advertising & Marketing
-  latitude: "52.5020327"
-  longitude: "13.4315013"
+  geojson: '{"type":"Point","coordinates":[13.4315013,52.5020327]}'
 metadata:
   title: Muzkat, a small creative agency, wanted to simplify the build, test and
     deploy process. They did so using Jenkins.

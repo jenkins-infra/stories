@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Testing
-  latitude: "18.5204303"
-  longitude: "73.8567437"
+  geojson: '{"type":"Point","coordinates":[73.8567437,18.5204303]}'
 metadata:
   title: Moving from manual testing to automated testing provided faster
     executions, staged output, and improved test results.

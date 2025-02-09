@@ -4,8 +4,7 @@ map:
   location: California, USA
   industries:
     - Information Technology
-  latitude: "32.715738"
-  longitude: "-117.1610838"
+  geojson: '{"type":"Point","coordinates":[-117.1610838,32.715738]}'
 metadata:
   title: Automate everything from product builds to deployment by relying on the
     many plugins available with Jenkins.

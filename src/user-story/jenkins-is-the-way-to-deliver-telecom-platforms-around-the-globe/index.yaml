@@ -4,8 +4,7 @@ map:
   location: Portugal
   industries:
     - Telecomunications
-  latitude: "38.7222524"
-  longitude: "-9.1393366"
+  geojson: '{"type":"Point","coordinates":[-9.1393366,38.7222524]}'
 metadata:
   title: This software development team turned to Jenkins to automate processes.
     In turn, they were able to focus on innovation.

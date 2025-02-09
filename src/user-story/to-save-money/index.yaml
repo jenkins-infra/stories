@@ -4,8 +4,7 @@ map:
   location: Germany
   industries:
     - E-commerce & Retail
-  latitude: "48.7904472"
-  longitude: "11.4978895"
+  geojson: '{"type":"Point","coordinates":[11.4978895,48.7904472]}'
 metadata:
   title: When these technology consultants sought to reduce infrastructure costs
     and speed up time to delivery for an online retailer, they turned to

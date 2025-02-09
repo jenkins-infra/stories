@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - DevOps & Machine Learning
-  latitude: "26.7605545"
-  longitude: "83.3731675"
+  geojson: '{"type":"Point","coordinates":[83.3731675,26.7605545]}'
 metadata:
   title: MLOps & DevOps intern designs a system that can train machine learning &
     deep learning models to achieve the desired accuracy

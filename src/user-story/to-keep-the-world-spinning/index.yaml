@@ -4,8 +4,7 @@ map:
   location: Mexico
   industries:
     - Cloud Computing
-  latitude: "20.6719563"
-  longitude: "-103.416501"
+  geojson: '{"type":"Point","coordinates":[-103.416501,20.6719563]}'
 metadata:
   title: An IBM DevOps team looked to Jenkins to simplify and reduce time spent in
     the build process.

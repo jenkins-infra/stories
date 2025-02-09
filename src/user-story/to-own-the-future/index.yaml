@@ -4,8 +4,7 @@ map:
   location: United Kingdom
   industries:
     - Financial Services
-  latitude: "51.5132537"
-  longitude: "-0.3043136"
+  geojson: '{"type":"Point","coordinates":[-0.3043136,51.5132537]}'
 metadata:
   title: Lead software developer in financial services tired of having releases
     held up by an expensive 3rd-party GUI system and looked to Jenkins to

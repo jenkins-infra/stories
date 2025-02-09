@@ -4,8 +4,7 @@ map:
   location: Brazil
   industries:
     - Logistics
-  latitude: "-23.4209995"
-  longitude: "-51.9330558"
+  geojson: '{"type":"Point","coordinates":[-51.9330558,-23.4209995]}'
 metadata:
   title: Jenkins is the backbone for the development of an innovative freight
     management app.

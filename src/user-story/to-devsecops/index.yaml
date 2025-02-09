@@ -4,8 +4,7 @@ map:
   location: China
   industries:
     - Network Security
-  latitude: "31.259822"
-  longitude: "121.525727"
+  geojson: '{"type":"Point","coordinates":[121.525727,31.259822]}'
 metadata:
   title: A cumbersome legacy process for building, testing and releasing software
     is a huge challenge for a global cybersecurity company that has to stay

@@ -4,8 +4,7 @@ map:
   location: Spain
   industries:
     - Software Development
-  latitude: "37.2596578"
-  longitude: "-6.516975299999999"
+  geojson: '{"type":"Point","coordinates":[-6.516975299999999,37.2596578]}'
 metadata:
   title: For the search division of a leading open source community, Jenkins was
     the obvious choice to standardize its pipelines across all of their software

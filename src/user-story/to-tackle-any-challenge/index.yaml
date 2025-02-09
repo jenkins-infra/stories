@@ -4,8 +4,7 @@ map:
   location: Germany
   industries:
     - Software Development
-  latitude: "49.19888599999999"
-  longitude: "8.1185622"
+  geojson: '{"type":"Point","coordinates":[8.1185622,49.19888599999999]}'
 metadata:
   title: With each project team creating its own workflows and toolchain, a
     company-wide off-the-shelf solution was needed.

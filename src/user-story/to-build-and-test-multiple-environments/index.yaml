@@ -4,8 +4,7 @@ map:
   location: Greece
   industries:
     - Cloud Computing
-  latitude: "38.2466395"
-  longitude: "21.734574"
+  geojson: '{"type":"Point","coordinates":[21.734574,38.2466395]}'
 metadata:
   title: A cloud platform engineer in Greece needed to develop a reliable and
     maintenance-free cloud development pipeline. He got there with Jenkins.

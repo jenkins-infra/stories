@@ -4,8 +4,7 @@ map:
   location: Massachusetts, USA
   industries:
     - Medical Research
-  latitude: "42.4153925"
-  longitude: "-71.1564729"
+  geojson: '{"type":"Point","coordinates":[-71.1564729,42.4153925]}'
 metadata:
   title: Novartis found that rapid prototyping with Jenkins provides guidance and
     requirements for building successful research enterprise apps in a fraction

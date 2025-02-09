@@ -4,8 +4,7 @@ map:
   location: Greece
   industries:
     - Government
-  latitude: "40.5885408"
-  longitude: "23.0279289"
+  geojson: '{"type":"Point","coordinates":[23.0279289,40.5885408]}'
 metadata:
   title: A developer in Greece needed to deploy a robust solution covering current
     and future needs, while adapting to the changing requirements of social

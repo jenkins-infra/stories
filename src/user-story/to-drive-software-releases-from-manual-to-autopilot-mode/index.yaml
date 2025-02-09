@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Education
-  latitude: "12.9842136"
-  longitude: "77.5970997"
+  geojson: '{"type":"Point","coordinates":[77.5970997,12.9842136]}'
 metadata:
   title: Bangalore-based blog promotes tech-based books and uses Jenkins to make
     feature deployment and use case testing easy and manageable.
