@@ -4,8 +4,7 @@ map:
   location: Mexico
   industries:
     - Electronics Manufacturing
-  latitude: "20.6243088"
-  longitude: "-103.3212248"
+  geojson: '{"type":"Point","coordinates":[-103.3212248,20.6243088]}'
 metadata:
   title: A small team in a big corporate organization boosts their productivity
     with Jenkins and becomes Jenkins evangelists throughout the company.

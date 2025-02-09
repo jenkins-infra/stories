@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Internet of Things (IoT)
-  latitude: "48.991435"
-  longitude: "1.809326"
+  geojson: '{"type":"Point","coordinates":[1.809326,48.991435]}'
 metadata:
   title: This consumer electronics leader needed a way to increase the quality of
     deployed IoT software internationally.

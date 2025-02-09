@@ -4,8 +4,7 @@ map:
   location: United Kingdom
   industries:
     - Government
-  latitude: "53.4446363"
-  longitude: "-2.3214633"
+  geojson: '{"type":"Point","coordinates":[-2.3214633,53.4446363]}'
 metadata:
   title: This UK government project involved migrating a legacy system to the
     cloud. And, of course, it needed to be done at an accelerated pace.

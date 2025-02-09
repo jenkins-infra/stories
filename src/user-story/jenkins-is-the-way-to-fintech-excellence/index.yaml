@@ -4,8 +4,7 @@ map:
   location: Russia
   industries:
     - Financial Services
-  latitude: "55.755826"
-  longitude: "37.6173"
+  geojson: '{"type":"Point","coordinates":[37.6173,55.755826]}'
 metadata:
   title: After integrating Jenkins, this FinTech's financial transaction product
     quality is improved and 3X simpler.

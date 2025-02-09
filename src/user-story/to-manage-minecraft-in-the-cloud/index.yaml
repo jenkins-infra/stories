@@ -4,8 +4,7 @@ map:
   location: Illinois, USA
   industries:
     - Gaming
-  latitude: "42.21324990000001"
-  longitude: "-88.24768499999999"
+  geojson: '{"type":"Point","coordinates":[-88.24768499999999,42.21324990000001]}'
 metadata:
   title: Cutting costs by providing the kids with a way to play Minecraft in the
     cloud without getting a huge cloud bill from Google. All thanks to Jenkins.

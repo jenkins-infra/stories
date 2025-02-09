@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Information Technology
-  latitude: "26.2389469"
-  longitude: "73.02430939999999"
+  geojson: '{"type":"Point","coordinates":[73.02430939999999,26.2389469]}'
 metadata:
   title: Jenkins plugins are credited with making this developer's CI/CD easy to
     build.

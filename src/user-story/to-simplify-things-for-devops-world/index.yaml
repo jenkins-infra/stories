@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Software Developement
-  latitude: "17.385044"
-  longitude: "78.486671"
+  geojson: '{"type":"Point","coordinates":[78.486671,17.385044]}'
 metadata:
   title: Helping customer success management teams manage customer lifecycle and
     identify and proactively respond to risks requires a faster, better DevOps

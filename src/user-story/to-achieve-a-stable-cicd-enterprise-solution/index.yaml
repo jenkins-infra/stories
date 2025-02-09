@@ -4,8 +4,7 @@ map:
   location: Bulgaria
   industries:
     - Financial Services
-  latitude: "42.6977082"
-  longitude: "23.3218675"
+  geojson: '{"type":"Point","coordinates":[23.3218675,42.6977082]}'
 metadata:
   title: This Bulgarian financial institution wanted to automate the
     build-and-deploy processes across the entire company. Despite some internal

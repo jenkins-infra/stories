@@ -4,8 +4,7 @@ map:
   location: Ukraine
   industries:
     - Consulting
-  latitude: "50.45314740000001"
-  longitude: "30.5179502"
+  geojson: '{"type":"Point","coordinates":[30.5179502,50.45314740000001]}'
 metadata:
   title: Cloudologia's, a cloud consulting firm, boosted their software
     development cycle by creating a unified CI/CD system powered by Jenkins.

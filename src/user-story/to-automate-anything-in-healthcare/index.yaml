@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Healthcare
-  latitude: "13.3378762"
-  longitude: "77.117325"
+  geojson: '{"type":"Point","coordinates":[77.117325,13.3378762]}'
 metadata:
   title: Making the world healthier, cleaner and safer starts with automated
     processes in software development.

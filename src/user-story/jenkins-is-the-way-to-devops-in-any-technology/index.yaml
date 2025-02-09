@@ -4,8 +4,7 @@ map:
   location: Spain
   industries:
     - Cloud Computing
-  latitude: "36.721261"
-  longitude: "-4.4212655"
+  geojson: '{"type":"Point","coordinates":[-4.4212655,36.721261]}'
 metadata:
   title: This senior engineer at an enterprise consultancy sets out to provide
     better DevOps environments for clients.

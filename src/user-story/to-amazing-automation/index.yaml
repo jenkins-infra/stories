@@ -4,8 +4,7 @@ map:
   location: Netherlands
   industries:
     - Semiconductors
-  latitude: "52.1319071"
-  longitude: "5.0171019"
+  geojson: '{"type":"Point","coordinates":[5.0171019,52.1319071]}'
 metadata:
   title: Managing the integration, transformation and process automatization of
     semiconductor software development for a team of 100+ developers.

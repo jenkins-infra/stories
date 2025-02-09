@@ -4,8 +4,7 @@ map:
   location: Belarus
   industries:
     - Information Technology
-  latitude: "53.9006011"
-  longitude: "27.558972"
+  geojson: '{"type":"Point","coordinates":[27.558972,53.9006011]}'
 metadata:
   title: Dealflow is a platform that runs IT competitions to pair innovative
     startups looking for help building their businesses with investors looking

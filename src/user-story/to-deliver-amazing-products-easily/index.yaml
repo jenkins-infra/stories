@@ -4,8 +4,7 @@ map:
   location: Texas, USA
   industries:
     - Semiconductors
-  latitude: "30.267153"
-  longitude: "-97.7430608"
+  geojson: '{"type":"Point","coordinates":[-97.7430608,30.267153]}'
 metadata:
   title: The most efficient way to deliver more complex and higher quality
     products is to incorporate Continuous Delivery across engineering teams.

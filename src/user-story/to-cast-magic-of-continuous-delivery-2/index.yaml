@@ -4,8 +4,7 @@ map:
   location: Israel
   industries:
     - Internet of Things (IoT)
-  latitude: "32.015833"
-  longitude: "34.787384"
+  geojson: '{"type":"Point","coordinates":[34.787384,32.015833]}'
 metadata:
   title: Delivering code changes more frequently and reliably through a unified
     continuous integration and continuous delivery pipeline allows DevOps teams

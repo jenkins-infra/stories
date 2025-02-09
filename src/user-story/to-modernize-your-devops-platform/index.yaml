@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Financial Services / Payments
-  latitude: "23.6362593"
-  longitude: "85.5124209"
+  geojson: '{"type":"Point","coordinates":[85.5124209,23.6362593]}'
 metadata:
   title: DLT Labs Company needed a way to keep builds and deploys running smoothly
     while also giving QA teams adequate time to manage software checks without

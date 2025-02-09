@@ -4,8 +4,7 @@ map:
   location: Indonesia
   industries:
     - Defense Technology
-  latitude: "-6.9174639"
-  longitude: "107.6191228"
+  geojson: '{"type":"Point","coordinates":[107.6191228,-6.9174639]}'
 metadata:
   title: Indonesian electricity tech leader finds that Jenkins and DevOps provide
     smarter automation and happier developers.

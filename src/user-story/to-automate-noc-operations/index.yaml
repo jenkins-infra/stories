@@ -4,8 +4,7 @@ map:
   location: Israel
   industries:
     - Advertising & Marketing
-  latitude: "32.084041"
-  longitude: "34.887762"
+  geojson: '{"type":"Point","coordinates":[34.887762,32.084041]}'
 metadata:
   title: A mobile performance marketing platform was struggling with a network
     operations center that was receiving trigger alerts for failed builds or

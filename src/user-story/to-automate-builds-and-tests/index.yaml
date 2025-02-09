@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Financial Services
-  latitude: "23.1764665"
-  longitude: "75.7885163"
+  geojson: '{"type":"Point","coordinates":[75.7885163,23.1764665]}'
 metadata:
   title: Wipro engineers help Citibank ease into CI/CD to shorten development
     cycles and automate builds.

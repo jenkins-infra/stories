@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Digital Technology Provider
-  latitude: "43.42519"
-  longitude: "6.76837"
+  geojson: '{"type":"Point","coordinates":[6.76837,43.42519]}'
 metadata:
   title: Dell Technologies brought together a disparate group of developers who
     became a cohesive team by using Jenkins.

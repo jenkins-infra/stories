@@ -4,8 +4,7 @@ map:
   location: Spain
   industries:
     - DevOps & Human Resources
-  latitude: "37.3890924"
-  longitude: "-5.9844589"
+  geojson: '{"type":"Point","coordinates":[-5.9844589,37.3890924]}'
 metadata:
   title: An innovative technical simulation for a new HR approach to assess and
     interview potential developers for CloudBees.

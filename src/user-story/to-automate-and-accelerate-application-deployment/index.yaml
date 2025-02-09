@@ -4,8 +4,7 @@ map:
   location: Malaysia
   industries:
     - Information Technology
-  latitude: "3.139003"
-  longitude: "101.686855"
+  geojson: '{"type":"Point","coordinates":[101.686855,3.139003]}'
 metadata:
   title: Deployments reduced from from 30 mins to 4.4 seconds for this IT company.
   industries:

@@ -4,8 +4,7 @@ map:
   location: Spain
   industries:
     - Consulting
-  latitude: "39.4699075"
-  longitude: "-0.3762881"
+  geojson: '{"type":"Point","coordinates":[-0.3762881,39.4699075]}'
 metadata:
   title: Global independent technology consulting firm makes what otherwise could
     have been a daunting task, a very nimble job.

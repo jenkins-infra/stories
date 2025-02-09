@@ -4,8 +4,7 @@ map:
   location: Peru
   industries:
     - Information Technology
-  latitude: "-12.0463731"
-  longitude: "-77.042754"
+  geojson: '{"type":"Point","coordinates":[-77.042754,-12.0463731]}'
 metadata:
   title: DevOps team working for a Peru-based digital services company that
     provides disruptive solutions for business, needed to reimagine their

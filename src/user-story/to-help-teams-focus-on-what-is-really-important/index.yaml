@@ -4,8 +4,7 @@ map:
   location: Chile
   industries:
     - Financial Services
-  latitude: "-33.4488897"
-  longitude: "-70.6692655"
+  geojson: '{"type":"Point","coordinates":[-70.6692655,-33.4488897]}'
 metadata:
   title: Improving the time to market of all microservices and websites for this
     Chilean digital solutions company in support of a fintech client.

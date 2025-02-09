@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Semiconductors
-  latitude: "12.9715987"
-  longitude: "77.5945626"
+  geojson: '{"type":"Point","coordinates":[77.5945626,12.9715987]}'
 metadata:
   title: After incorporating Jenkins, this head of automation has a centralized
     place to trigger, test, and monitor results in no time.

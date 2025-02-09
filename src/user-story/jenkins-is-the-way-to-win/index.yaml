@@ -4,8 +4,7 @@ map:
   location: Ohio, USA
   industries:
     - Financial Services
-  latitude: "39.9611755"
-  longitude: "-82.99879419999991"
+  geojson: '{"type":"Point","coordinates":[-82.9987941999999,39.9611755]}'
 metadata:
   title: Consumer bank modernized their legacy system to event-driven architecture
     with help from Jenkins pipelines and plugins.

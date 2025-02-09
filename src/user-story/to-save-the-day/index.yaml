@@ -4,8 +4,7 @@ map:
   location: California, USA
   industries:
     - Information Technology
-  latitude: "38.6857367"
-  longitude: "-121.082167"
+  geojson: '{"type":"Point","coordinates":[-121.082167,38.6857367]}'
 metadata:
   title: Corporate environments in financial services can be rigid and slow to
     change. This solution architect introduced Jenkins to speed things up.
