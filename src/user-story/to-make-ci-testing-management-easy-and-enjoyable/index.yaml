@@ -4,8 +4,7 @@ map:
   location: Belarus
   industries:
     - E-commerce & Retail
-  latitude: "53.926182"
-  longitude: "27.4520951"
+  geojson: '{"type":"Point","coordinates":[27.4520951,53.926182]}'
 metadata:
   title: Using Jenkins helped the ISsoft technology team configure and manage CI
     testing, making their working processes a whole lot better.

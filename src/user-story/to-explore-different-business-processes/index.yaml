@@ -4,8 +4,7 @@ map:
   location: California, USA
   industries:
     - Financial Services
-  latitude: "37.4418834"
-  longitude: "-122.1430194"
+  geojson: '{"type":"Point","coordinates":[-122.1430194,37.4418834]}'
 metadata:
   title: Embracing continuous integration and delivery increased auto-testing by
     30% and shortened build times by 50%.

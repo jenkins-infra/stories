@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Telecomunications
-  latitude: "30.7311236"
-  longitude: "76.825458"
+  geojson: '{"type":"Point","coordinates":[76.825458,30.7311236]}'
 metadata:
   title: This India-based IT services organization stepped up to help a leading
     telecom company expand their Jenkins pipeline.

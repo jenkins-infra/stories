@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Financial Services
-  latitude: "16.3066525"
-  longitude: "80.4365402"
+  geojson: '{"type":"Point","coordinates":[80.4365402,16.3066525]}'
 metadata:
   title: A leading European bank's IT department supports a wide range of critical
     apps, projects and technologies for multiple teams of developers and

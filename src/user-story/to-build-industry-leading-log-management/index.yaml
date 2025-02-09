@@ -4,8 +4,7 @@ map:
   location: Arkansas, USA
   industries:
     - Software Development
-  latitude: "36.3728538"
-  longitude: "-94.2088172"
+  geojson: '{"type":"Point","coordinates":[-94.2088172,36.3728538]}'
 metadata:
   title: This build and release manager set out to upgrade the company's Jenkins
     installation adding more flexibility and power to their DevOps platform.

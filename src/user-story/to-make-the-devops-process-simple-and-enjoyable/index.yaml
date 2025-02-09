@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Automotive
-  latitude: "28.9844618"
-  longitude: "77.7064137"
+  geojson: '{"type":"Point","coordinates":[77.7064137,28.9844618]}'
 metadata:
   title: A leading electric vehicle charging station needed to speed up its
     software deployment process. They skipped the manual effort and went

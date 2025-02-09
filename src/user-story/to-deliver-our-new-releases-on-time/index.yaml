@@ -4,8 +4,7 @@ map:
   location: Canada
   industries:
     - Software Development
-  latitude: "44.05918700000001"
-  longitude: "-79.46125599999999"
+  geojson: '{"type":"Point","coordinates":[-79.46125599999999,44.05918700000001]}'
 metadata:
   title: Jason's company delivers software through an analytics engine that
     continuously makes resourcing decisions based on real-time application

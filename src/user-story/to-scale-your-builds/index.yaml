@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Software Development
-  latitude: "47.218371"
-  longitude: "-1.553621"
+  geojson: '{"type":"Point","coordinates":[-1.553621,47.218371]}'
 metadata:
   title: When it was time to build a large CI platform to support rapid app
     development, the engineers at this software company turned to Jenkins.

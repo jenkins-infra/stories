@@ -4,8 +4,7 @@ map:
   location: Belarus
   industries:
     - Legal
-  latitude: "52.4313388"
-  longitude: "30.99367"
+  geojson: '{"type":"Point","coordinates":[30.99367,52.4313388]}'
 metadata:
   title: A Belarus-based startup supporting the legal industry found that
     automating test runs allowed even non-experienced staff to operate the CI/CD

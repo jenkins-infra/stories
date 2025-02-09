@@ -4,8 +4,7 @@ map:
   location: Virginia, USA
   industries:
     - Financial Services
-  latitude: "36.70983349999999"
-  longitude: "-81.9773482"
+  geojson: '{"type":"Point","coordinates":[-81.9773482,36.70983349999999]}'
 metadata:
   title: A serious and all too common challenge for enterprise organizations is
     that as more teams onboard onto the pipeline, scalability creates delivery

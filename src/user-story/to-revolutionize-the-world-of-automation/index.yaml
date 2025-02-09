@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Information Technology
-  latitude: "28.4594965"
-  longitude: "77.0266383"
+  geojson: '{"type":"Point","coordinates":[77.0266383,28.4594965]}'
 metadata:
   title: Here is another student sharing his LinuxWorld India project leveraging
     Jenkins. This time with the focus on automation to eliminate human error.

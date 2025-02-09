@@ -4,8 +4,7 @@ map:
   location: Illinois, USA
   industries:
     - Manufacturing
-  latitude: "41.4914236"
-  longitude: "-87.6744891"
+  geojson: '{"type":"Point","coordinates":[-87.6744891,41.4914236]}'
 metadata:
   title: Jenkins community thanked for supporting this developer's task.
   industries:

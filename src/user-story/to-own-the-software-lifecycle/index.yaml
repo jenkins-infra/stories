@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Network Communications
-  latitude: "12.9158691"
-  longitude: "80.17338339999999"
+  geojson: '{"type":"Point","coordinates":[80.17338339999999,12.9158691]}'
 metadata:
   title: Faster deployments and reliable DevOps insight for this leading
     communications company.

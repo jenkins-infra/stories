@@ -4,8 +4,7 @@ map:
   location: Malaysia
   industries:
     - DevOps as a Service
-  latitude: "3.053886000000001"
-  longitude: "101.6702413"
+  geojson: '{"type":"Point","coordinates":[101.6702413,3.053886000000001]}'
 metadata:
   title: Accelerating testing for this Malaysian DevOps-as-a-Service company.
   industries:

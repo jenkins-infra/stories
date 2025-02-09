@@ -4,8 +4,7 @@ map:
   location: Brazil
   industries:
     - Logistics
-  latitude: "-23.4412149"
-  longitude: "-51.8851039"
+  geojson: '{"type":"Point","coordinates":[-51.8851039,-23.4412149]}'
 metadata:
   title: A Brazilian logistics problem easily solved by Jenkins and CI/CD,
     speeding builds and shortening development cycles\\.\\

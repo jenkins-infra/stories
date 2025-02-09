@@ -4,8 +4,7 @@ map:
   location: Canada
   industries:
     - Artificial Intelligence (AI)
-  latitude: "43.379898"
-  longitude: "-79.78732289999999"
+  geojson: '{"type":"Point","coordinates":[-79.78732289999999,43.379898]}'
 metadata:
   title: Using AI to help insurers transform from reactively paying for people's
     health to actively helping people manage their health.

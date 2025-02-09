@@ -4,8 +4,7 @@ map:
   location: India
   industries:
     - Consulting
-  latitude: "22.572646"
-  longitude: "88.36389500000001"
+  geojson: '{"type":"Point","coordinates":[88.36389500000001,22.572646]}'
 metadata:
   title: This DevOps consultant set out to streamline and automate DevOps
     processes from development through production, with a Jenkins assist.

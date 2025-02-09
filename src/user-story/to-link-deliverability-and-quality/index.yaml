@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Energy
-  latitude: "44.769478"
-  longitude: "-0.311523"
+  geojson: '{"type":"Point","coordinates":[-0.311523,44.769478]}'
 metadata:
   title: The division of French energy leader Consoneo that focuses on subsidy and
     facility management needed to transition to a CICD solution that improved

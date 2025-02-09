@@ -4,8 +4,7 @@ map:
   location: North Carolina, USA
   industries:
     - Infrastructure
-  latitude: "36.0974515"
-  longitude: "-79.26933919999999"
+  geojson: '{"type":"Point","coordinates":[-79.26933919999999,36.0974515]}'
 metadata:
   title: When it was time to transition from Chef cookbooks to Ansible playbooks,
     IBM used Jenkins to stay consistent across the board.

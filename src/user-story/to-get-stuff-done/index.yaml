@@ -4,8 +4,7 @@ map:
   location: Sofia, Bulgaria
   industries:
     - Financial Services
-  latitude: "42.66410909999999"
-  longitude: "23.2885213"
+  geojson: '{"type":"Point","coordinates":[23.2885213,42.66410909999999]}'
 metadata:
   title: This Bulgarian bank wanted a secure, agile platform to service the entire
     company. Their goal was to accelerate core software development and they did

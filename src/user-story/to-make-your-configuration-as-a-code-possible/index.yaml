@@ -4,8 +4,7 @@ map:
   location: Ukraine
   industries:
     - Education
-  latitude: "48.379433"
-  longitude: "31.16558"
+  geojson: '{"type":"Point","coordinates":[31.16558,48.379433]}'
 metadata:
   title: Preply's engineering team set out to create a fully automated CI/CD
     process for all projects inside its global online education company. They

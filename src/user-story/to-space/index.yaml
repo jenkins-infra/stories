@@ -4,8 +4,7 @@ map:
   location: Poland
   industries:
     - Aerospace
-  latitude: "50.29449229999999"
-  longitude: "18.6713802"
+  geojson: '{"type":"Point","coordinates":[18.6713802,50.29449229999999]}'
 metadata:
   title: A satellite's onboard computer is one of the core components directly
     responsible for mission success. It's necessary to include hardware-based

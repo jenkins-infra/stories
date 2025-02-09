@@ -4,8 +4,7 @@ map:
   location: Florida, USA
   industries:
     - Technology
-  latitude: "27.8661364"
-  longitude: "-82.32648089999999"
+  geojson: '{"type":"Point","coordinates":[-82.32648089999999,27.8661364]}'
 metadata:
   title: The DevOps Life turns to Jenkins to automate its blogging website.
   organization: The DevOps Life, <https://thedevopslife.com/>

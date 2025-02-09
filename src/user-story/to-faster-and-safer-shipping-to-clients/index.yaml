@@ -4,8 +4,7 @@ map:
   location: Colombia
   industries:
     - Software Developement
-  latitude: "4.619519299999999"
-  longitude: "-74.17200989999999"
+  geojson: '{"type":"Point","coordinates":[-74.17200989999999,4.619519299999999]}'
 metadata:
   title: Colombia-based DevOps team leans on Jenkins automation for speed and safe
     delivery of client artifacts.

@@ -4,8 +4,7 @@ map:
   location: France
   industries:
     - Automotive
-  latitude: "49.025453"
-  longitude: "3.026478"
+  geojson: '{"type":"Point","coordinates":[3.026478,49.025453]}'
 metadata:
   title: For the creation of this online automotive marketplace, a dynamic, stable
     infrastructure was a key driver.

@@ -4,8 +4,7 @@ map:
   location: Spain
   industries:
     - Digital Products
-  latitude: "41.652251"
-  longitude: "-4.724532099999999"
+  geojson: '{"type":"Point","coordinates":[-4.724532099999999,41.652251]}'
 metadata:
   title: Challenged to develop a common job that can be used by all of our
     departments, this European marketing team chose Jenkins.

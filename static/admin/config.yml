@@ -91,24 +91,17 @@ collections:
         widget: "object"
         collapsed: true
         fields:
-        - label: Author
-          name: name
-          widget: string
-        - label: Location
-          name: location
-          widget: string
-        - label: Latitude
-          name: latitude
-          widget: number
-          value_type: float
-          min: -90
-          max: 90
-        - label: Longitude
-          name: longitude
-          widget: number
-          value_type: float
-          min: -180
-          max: 180
+          - label: Author
+            name: authored_by
+            widget: string
+          - label: Location
+            name: location
+            widget: string
+          - label: GeoJSON
+            name: geojson
+            widget: map
+            type: Point
+            decimals: 7
       - label: Body
         name: body_content
         widget: "object"

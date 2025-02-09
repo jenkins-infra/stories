@@ -4,8 +4,7 @@ map:
   location: United Kingdom
   industries:
     - E-commerce & Retail
-  latitude: "52.370878"
-  longitude: "-1.265032"
+  geojson: '{"type":"Point","coordinates":[-1.265032,52.370878]}'
 metadata:
   title: This UK-based grocery retailer wanted to put automation first and
     foremost, ensure that they respected bespoke systems, and kept the learning
