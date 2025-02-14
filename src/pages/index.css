@@ -22,6 +22,7 @@
     --card-background: #778DA9;
     --button-bg: #415A77;
     --button-hover-bg: #E0E1DD;
+    --button-text-color: #ffffff;
   }
   .hero-section {
     background: var(--background-gradient);
@@ -156,7 +157,7 @@
 .btn-primary {
   display: inline-block;
   background: var(--button-bg);
-  color: #121212;
+  color: var(--button-text-color);
   padding: 10px 20px;
   border-radius: 25px;
   text-decoration: none;
