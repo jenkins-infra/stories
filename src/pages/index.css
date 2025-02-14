@@ -1,3 +1,4 @@
+/* hero section */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -60,6 +61,7 @@
   margin-top: 20px;
 }
 
+/* story section */
 .story-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -100,6 +102,7 @@
   color: #b0b0b0;
 }
 
+/* map section */
 .map-section {
   padding: 40px 20px;
   text-align: center;
@@ -118,6 +121,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+
+/* button section */
 .btn-primary {
   display: inline-block;
   background: #00a5e6;
