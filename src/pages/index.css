@@ -16,17 +16,17 @@
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   :root {
-    --background-gradient: linear-gradient(
-      145deg,
-      #D5BDAF,
-      #E3D5CA,
-      #F5EBE0
-    );
+    --background-gradient: linear-gradient(145deg, #d5bdaf, #e3d5ca, #f5ebe0);
     --hero-text-color: #0d1b2aff;
     --subtitle-color: #1b263bff;
-    --card-background: #D6CCC2;
-    --button-bg: #D5BDAF;
-    --button-hover-bg: #EDEDE9;
+    --card-background: #d6ccc2;
+    --button-bg: #d5bdaf;
+    --button-hover-bg: #edede9;
+  }
+  .hero-section {
+    background: var(--background-gradient);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
   }
 }
 
