@@ -1,3 +1,1 @@
-documentation:
-  - README.md
-  - src/user-story/**/*.yaml
+documentation: ["README.md", "src/user-story/**/*.yaml"]
