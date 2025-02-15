@@ -1,0 +1,171 @@
+/* Default (Dark Mode) */
+:root {
+  --background-gradient: linear-gradient(
+    145deg,
+    #0d1b2aff,
+    #1b263bff,
+    #415a77ff
+  );
+  --hero-text-color: #e0e1ddff;
+  --subtitle-color: #b0b0b0;
+  --card-background: #1b263bff;
+  --button-bg: #778da9ff;
+  --button-hover-bg: #415a77ff;
+  --button-text-color: #121212;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-gradient: linear-gradient(145deg, #415A77, #778DA9, #E0E1DD);
+    --hero-text-color: #0D1B2A;
+    --subtitle-color: #1B263B;
+    --card-background: #778DA9;
+    --button-bg: #415A77;
+    --button-hover-bg: #E0E1DD;
+    --button-text-color: #ffffff;
+  }
+  .hero-section {
+    background: var(--background-gradient);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--hero-text-color);
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--subtitle-color);
+}
+
+.hero-image {
+  width: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Stories Section */
+.stories-section {
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--hero-text-color);
+  margin-bottom: 30px;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.story-card {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-title {
+  font-size: 1.2rem;
+  color: var(--hero-text-color);
+  margin-bottom: 10px;
+}
+
+.story-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.story-author {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: var(--subtitle-color);
+}
+
+/* Map Section */
+.map-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-image {
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Section */
+.btn-primary {
+  display: inline-block;
+  background: var(--button-bg);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--button-hover-bg);
+}
