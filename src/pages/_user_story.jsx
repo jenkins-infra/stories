@@ -1,59 +1,88 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
-import truncate from 'truncate';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStory from '../components/UserStory';
 
 const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
   const title = page.title;
+
+  const StoryLink = ({ direction, story }) => (
+    <Link
+      className={`nav-link text-secondary fw-medium d-flex align-items-center gap-1 h-100`}
+      to={`/user-story/${story.slug}`}
+      style={{
+        minHeight: '3.5rem',
+        padding: '0.25rem',
+      }}
+    >
+      {direction === 'prev' && (
+        <ion-icon
+          name="arrow-back-outline"
+          class="fs-5 flex-shrink-0"
+        ></ion-icon>
+      )}
+      <span
+        className="small"
+        style={{
+          display: '-webkit-box',
+          WebkitLineClamp: '3',
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          textAlign: direction === 'prev' ? 'left' : 'right',
+          flex: 1,
+        }}
+      >
+        {story.title.replace(/^jenkins is the way to/i, '')}
+      </span>
+      {direction === 'next' && (
+        <ion-icon
+          name="arrow-forward-outline"
+          class="fs-5 flex-shrink-0"
+        ></ion-icon>
+      )}
+    </Link>
+  );
+
   return (
     <Layout
       title={title}
       sourcePath={`src/user-story/${page.parent.relativePath}`}
     >
       <Seo title={title} pathname={`/user-story/${page.slug}`} />
-      <div className="navbar navbar-expand navbar-light bg-light">
-        <ul className="navbar-nav mr-auto w-100 d-flex justify-content-between">
-          <li className="nav-item">
-            {pageContext.previous && (
+      <nav className="navbar navbar-expand bg-dark py-1">
+        <div className="container-fluid px-1">
+          <div className="row w-100 align-items-center mx-0">
+            {/* Previous Story */}
+            <div className="col-5">
+              {pageContext.previous && (
+                <StoryLink direction="prev" story={pageContext.previous} />
+              )}
+            </div>
+
+            {/* Home Button */}
+            <div className="col-2 text-center">
               <Link
-                className="nav-link"
-                to={`/user-story/${pageContext.previous.slug}`}
+                to="/"
+                className="nav-link text-light fw-normal d-inline-block"
               >
-                &lt;&lt;{' '}
-                {truncate(
-                  pageContext.previous.title.replace(
-                    /^jenkins is the way to/i,
-                    '',
-                  ),
-                  40,
-                )}
+                <span className="fs-6">
+                  <ion-icon name="home-outline" class="fs-5"></ion-icon>
+                </span>
               </Link>
-            )}
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            {pageContext.next && (
-              <Link
-                className="nav-link"
-                to={`/user-story/${pageContext.next.slug}`}
-              >
-                {truncate(
-                  pageContext.next.title.replace(/^jenkins is the way to/i, ''),
-                  40,
-                )}{' '}
-                &gt;&gt;
-              </Link>
-            )}
-          </li>
-        </ul>
-      </div>
+            </div>
+
+            {/* Next Story */}
+            <div className="col-5">
+              {pageContext.next && (
+                <StoryLink direction="next" story={pageContext.next} />
+              )}
+            </div>
+          </div>
+        </div>
+      </nav>
+
       <UserStory {...page} />
     </Layout>
   );
