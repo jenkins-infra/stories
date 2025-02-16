@@ -9,16 +9,21 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
   const title = page.title;
 
   const StoryLink = ({ direction, story }) => (
-    <Link 
+    <Link
       className={`nav-link text-secondary fw-medium d-flex align-items-center gap-1 h-100`}
       to={`/user-story/${story.slug}`}
       style={{
         minHeight: '3.5rem',
-        padding: '0.25rem'
+        padding: '0.25rem',
       }}
     >
-      {direction === 'prev' && <ion-icon name="arrow-back-outline" class="fs-5 flex-shrink-0"></ion-icon>}
-      <span 
+      {direction === 'prev' && (
+        <ion-icon
+          name="arrow-back-outline"
+          class="fs-5 flex-shrink-0"
+        ></ion-icon>
+      )}
+      <span
         className="small"
         style={{
           display: '-webkit-box',
@@ -26,12 +31,17 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
           textAlign: direction === 'prev' ? 'left' : 'right',
-          flex: 1
+          flex: 1,
         }}
       >
         {story.title.replace(/^jenkins is the way to/i, '')}
       </span>
-      {direction === 'next' && <ion-icon name="arrow-forward-outline" class="fs-5 flex-shrink-0"></ion-icon>}
+      {direction === 'next' && (
+        <ion-icon
+          name="arrow-forward-outline"
+          class="fs-5 flex-shrink-0"
+        ></ion-icon>
+      )}
     </Link>
   );
 
@@ -53,8 +63,8 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
 
             {/* Home Button */}
             <div className="col-2 text-center">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="nav-link text-light fw-normal d-inline-block"
               >
                 <span className="fs-6">

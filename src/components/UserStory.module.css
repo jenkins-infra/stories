@@ -1,7 +1,10 @@
 .userstory {
   hyphens: manual;
   overflow-x: hidden;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .userstory .titlewrapper {
@@ -10,7 +13,7 @@
   background-color: #212128;
   line-height: 1.6;
   border-radius: 8px;
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.05),
     0 10px 15px rgba(0, 0, 0, 0.03);
   margin: 1.5rem auto 2.5rem auto;
@@ -19,7 +22,7 @@
 }
 
 .userstory .titlewrapper:hover {
-  box-shadow: 
+  box-shadow:
     0 6px 8px rgba(0, 0, 0, 0.06),
     0 12px 18px rgba(0, 0, 0, 0.04);
   transform: translateY(-2px);
@@ -57,7 +60,7 @@
   font-size: 1.125rem;
   line-height: 1.6;
   max-width: 600px;
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.04),
     0 10px 15px rgba(0, 0, 0, 0.02);
   transition: all 0.3s ease;
@@ -65,7 +68,7 @@
 
 .speechBubble:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 6px 8px rgba(0, 0, 0, 0.05),
     0 12px 18px rgba(0, 0, 0, 0.03);
 }
