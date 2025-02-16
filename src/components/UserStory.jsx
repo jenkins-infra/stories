@@ -68,7 +68,7 @@ const UserStory = ({
           </div>
 
           <div className="container pt-2 pb-2">
-            <strong>Authored By Jenkins User {authored_by}</strong>
+            Authored By Jenkins User <strong>{authored_by}</strong>
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>

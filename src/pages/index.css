@@ -17,12 +17,12 @@
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   :root {
-    --background-gradient: linear-gradient(145deg, #415A77, #778DA9, #E0E1DD);
-    --hero-text-color: #0D1B2A;
-    --subtitle-color: #1B263B;
-    --card-background: #778DA9;
-    --button-bg: #415A77;
-    --button-hover-bg: #E0E1DD;
+    --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
+    --hero-text-color: #0d1b2a;
+    --subtitle-color: #1b263b;
+    --card-background: #778da9;
+    --button-bg: #415a77;
+    --button-hover-bg: #e0e1dd;
     --button-text-color: #ffffff;
   }
   .hero-section {
