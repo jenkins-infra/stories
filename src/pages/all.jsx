@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStoryCard from '../components/UserStoryCard';
