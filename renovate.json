@@ -23,6 +23,9 @@
             "versioningTemplate": "docker"
         }
     ],
+    "enabledManagers": [
+        "npm"
+    ],
     "packageRules": [
         {
             "matchPackageNames": [
@@ -38,6 +41,12 @@
                 "digest"
             ],
             "automerge": true
+        },
+        {
+            "managers": ["npm"],
+            "groupName": "npm dependencies",
+            "schedule": ["monthly"],
+            "matchDepTypes": ["dependencies", "devDependencies"]
         }
     ]
 }
