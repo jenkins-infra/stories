@@ -7,7 +7,7 @@
         "dependencies"
     ],
     "npm": {
-        "stabilityDays": 1
+        "minimumReleaseAge": "1 day"
     },
     "regexManagers": [
         {
@@ -19,7 +19,7 @@
                 "image '(?<depName>[a-z/-]+):(?<currentValue>[a-z0-9.-]+)@(?<currentDigest>sha256:[a-f0-9]+)'",
                 "image: \"(?<depName>[a-z/-]+):(?<currentValue>[a-z0-9.-]+)@(?<currentDigest>sha256:[a-f0-9]+)\""
             ],
-            "datasourceTemplate": "npm",
+            "datasourceTemplate": "npm"
         },
         {
             "fileMatch": [
@@ -56,6 +56,10 @@
             "groupName": "npm dependencies",
             "schedule": ["monthly"],
             "matchDepTypes": ["dependencies", "devDependencies"]
+        },
+        {
+            "matchDatasources": ["npm"],
+            "minimumReleaseAge": "3 days"
         }
     ],
     "rebaseWhen": "conflicted"
