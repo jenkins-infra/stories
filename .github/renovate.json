@@ -7,7 +7,7 @@
         "dependencies"
     ],
     "npm": {
-        "minimumReleaseAge": "1 day"
+        "minimumReleaseAge": "3 days"
     },
     "regexManagers": [
         {
