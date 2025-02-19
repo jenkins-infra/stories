@@ -6,6 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import StatsCard from '../components/StatsCard';
 import './MapPage.css';
 
 const MapPage = () => {
@@ -39,6 +40,16 @@ const MapPage = () => {
 
   const isBrowser = typeof window !== 'undefined';
 
+  // Calculate stats
+  const totalStories = stories.edges.length;
+  const uniqueLocations = new Set(
+    stories.edges.map(({ node }) => node.map.location),
+  ).size;
+  const allIndustries = stories.edges.flatMap(
+    ({ node }) => node.map.industries || node.metadata.industries || [],
+  );
+  const uniqueIndustries = new Set(allIndustries).size;
+
   if (!isBrowser) {
     return (
       <Layout title={title}>
@@ -62,12 +73,19 @@ const MapPage = () => {
           <div className="col">
             <h1>Jenkins Is The Way</h1>
             <h2>Latest Jenkins User Stories</h2>
+            {/* Stats Section */}
+            <StatsCard
+              totalStories={totalStories}
+              uniqueLocations={uniqueLocations}
+              uniqueIndustries={uniqueIndustries}
+            />
             <h3>
-              Zoom into the map below to discover just where in the world you’ll
+              Zoom into the map below to discover just where in the world you'll
               find Jenkins users and Jenkins solutions.
             </h3>
           </div>
         </div>
+
         <div className="row map-container">
           <div className="col">
             <MapContainer
@@ -95,25 +113,15 @@ const MapPage = () => {
                         <table className="table">
                           <tbody>
                             <tr
-                              style={{
-                                border: '0px hidden',
-                                padding: '5px',
-                              }}
+                              style={{ border: '0px hidden', padding: '5px' }}
                             >
                               <td
-                                style={{
-                                  border: '0px hidden',
-                                }}
+                                style={{ border: '0px hidden' }}
                                 colSpan="2"
                               ></td>
                             </tr>
                             <tr>
-                              <td
-                                style={{
-                                  border: '0px hidden',
-                                }}
-                                width="150"
-                              >
+                              <td style={{ border: '0px hidden' }} width="150">
                                 <center>
                                   <StaticImage
                                     src="../images/jenkins_map_pin-180x180-1.png"
@@ -122,10 +130,7 @@ const MapPage = () => {
                                 </center>
                               </td>
                               <td
-                                style={{
-                                  border: '0px hidden',
-                                  padding: '5px',
-                                }}
+                                style={{ border: '0px hidden', padding: '5px' }}
                               >
                                 <dt>{story.map.authored_by}</dt>
                                 <dt>{story.map.location}</dt>
