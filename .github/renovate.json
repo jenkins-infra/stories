@@ -56,5 +56,6 @@
             "schedule": ["monthly"],
             "matchDepTypes": ["dependencies", "devDependencies"]
         }
-    ]
+    ],
+    "rebaseWhen": "conflicted"
 }
