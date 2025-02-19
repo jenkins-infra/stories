@@ -51,7 +51,7 @@
   background-color: #2a3a52;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .statsContainer {
     flex-direction: column;
     gap: 20px;
