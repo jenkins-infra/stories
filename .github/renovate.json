@@ -4,7 +4,7 @@
         "schedule:monthly"
     ],
     "labels": [
-        "dependencies",
+        "dependencies"
     ],
     "npm": {
         "stabilityDays": 1
