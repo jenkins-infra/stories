@@ -32,7 +32,8 @@
         }
     ],
     "enabledManagers": [
-        "npm","github-actions"
+        "npm",
+        "github-actions"
     ],
     "packageRules": [
         {
