@@ -6,9 +6,6 @@
     "labels": [
         "dependencies"
     ],
-    "npm": {
-        "minimumReleaseAge": "3 days"
-    },
     "regexManagers": [
         {
             "fileMatch": [
@@ -40,7 +37,7 @@
             "matchPackageNames": [
                 "jenkinsciinfra/builder"
             ],
-            "automerge": true
+            "automerge": false
         },
         {
             "matchUpdateTypes": [
@@ -49,7 +46,7 @@
                 "pin",
                 "digest"
             ],
-            "automerge": true
+            "automerge": false
         },
         {
             "managers": ["npm"],
