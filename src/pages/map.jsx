@@ -109,12 +109,14 @@ const MapPage = () => {
           </div>
         </div>
 
-        <Link 
-          to={`/user-story/${story.slug}`}
-          className="story-popup-button"
-        >
-          Read Story
-        </Link>
+        <div className='story-btn-container'>
+          <Link 
+            to={`/user-story/${story.slug}`}
+            className="story-popup-button"
+          >
+            Read Story
+          </Link>
+        </div>
       </div>
     </div>
   );

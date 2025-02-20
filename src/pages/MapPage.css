@@ -195,6 +195,15 @@ h3 {
   flex-grow: 1;
 }
 
+.story-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 0.75rem;
+  margin-bottom: -0.5rem;
+  align-items: center;
+}
+
 .story-popup-button {
   display: inline-block;
   background-color: #2a3a52;
@@ -204,6 +213,7 @@ h3 {
   border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
+  width: fit-content;
   transition: background-color 0.2s ease-in-out;
 }
 
