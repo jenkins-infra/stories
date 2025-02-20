@@ -218,7 +218,8 @@ h3 {
 }
 
 .story-popup-button:hover {
-  background-color: #3a4a62;
+  transform: translateY(-3px);
+  color: white !important;
 }
 
 /* Override Leaflet default popup styles */
