@@ -80,6 +80,7 @@ const MapPage = () => {
             <GatsbyImage
               image={getImage(story.image)}
               alt={story.title}
+              className='story-img'
             />
           </Link>
         </div>
