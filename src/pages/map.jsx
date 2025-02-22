@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -22,11 +23,17 @@ const MapPage = () => {
       ) {
         edges {
           node {
+            title
             map {
               authored_by
               geojson
               industries
               location
+            }
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED, width: 150)
+              }
             }
             metadata {
               industries
@@ -64,6 +71,56 @@ const MapPage = () => {
     iconAnchor: [29, 59],
     iconSize: [59, 59],
   });
+
+  const StoryPopup = ({ story }) => (
+    <div className="story-popup">
+      {story.image && (
+        <div className="story-popup-image">
+          <Link to={`/user-story/${story.slug}`}>
+            <GatsbyImage
+              image={getImage(story.image)}
+              alt={story.title}
+              className='story-img'
+            />
+          </Link>
+        </div>
+      )}
+      
+      <div className="story-popup-content">
+        <h4 className="story-popup-title">
+          {story.title}
+        </h4>
+        
+        <div className="story-popup-details">
+          <div className="story-popup-row">
+            <span className="story-popup-label">Author:</span>
+            <span className="story-popup-value">{story.map.authored_by}</span>
+          </div>
+          
+          <div className="story-popup-row">
+            <span className="story-popup-label">Location:</span>
+            <span className="story-popup-value">{story.map.location}</span>
+          </div>
+          
+          <div className="story-popup-row">
+            <span className="story-popup-label">Industries:</span>
+            <span className="story-popup-value">
+              {(story.map.industries || story.metadata.industries || []).join(', ')}
+            </span>
+          </div>
+        </div>
+
+        <div className='story-btn-container'>
+          <Link 
+            to={`/user-story/${story.slug}`}
+            className="story-popup-button"
+          >
+            Read Story
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <Layout title={title}>
@@ -110,46 +167,7 @@ const MapPage = () => {
                       icon={icon}
                     >
                       <Popup>
-                        <table className="table">
-                          <tbody>
-                            <tr
-                              style={{ border: '0px hidden', padding: '5px' }}
-                            >
-                              <td
-                                style={{ border: '0px hidden' }}
-                                colSpan="2"
-                              ></td>
-                            </tr>
-                            <tr>
-                              <td style={{ border: '0px hidden' }} width="150">
-                                <center>
-                                  <StaticImage
-                                    src="../images/jenkins_map_pin-180x180-1.png"
-                                    alt="map pin"
-                                  />
-                                </center>
-                              </td>
-                              <td
-                                style={{ border: '0px hidden', padding: '5px' }}
-                              >
-                                <dt>{story.map.authored_by}</dt>
-                                <dt>{story.map.location}</dt>
-                                <dt>
-                                  {(
-                                    story.map.industries ||
-                                    story.metadata.industries ||
-                                    []
-                                  ).join(', ')}
-                                </dt>
-                                <dt>
-                                  <Link to={`/user-story/${story.slug}`}>
-                                    Read user story
-                                  </Link>
-                                </dt>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <StoryPopup story={story} />
                       </Popup>
                     </Marker>
                   );
