@@ -1,20 +1,28 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // styles
 const pageStyles = {
-  color: '#232129',
+  color: '#ffffff',
   padding: '96px',
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '100vh',
+  textAlign: 'center',
 };
+
 const headingStyles = {
   marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  marginBottom: 32,
 };
 
 const paragraphStyles = {
-  marginBottom: 48,
+  marginBottom: 32,
+  maxWidth: '600px',
 };
 const codeStyles = {
   color: '#8A6534',
@@ -23,12 +31,27 @@ const codeStyles = {
   fontSize: '1.25rem',
   borderRadius: 4,
 };
+const imageStyles = {
+  width: '300px',
+  height: 'auto',
+  marginBottom: 32,
+  borderRadius: '8px',
+};
+const linkStyles = {
+  color: '#ffffff',
+  textDecoration: 'underline',
+};
 
 // markup
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
       <title>Not found</title>
+      <StaticImage
+            src="../images/fire-jenkins.svg"
+            alt="Jenkins is the way logo"
+            className={imageStyles}
+          />
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry{' '}
@@ -46,7 +69,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" style={linkStyles}>Go home</Link>.
       </p>
     </main>
   );
