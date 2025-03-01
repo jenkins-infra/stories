@@ -127,7 +127,7 @@ const MapPage = () => {
       <Seo title={title} pathname="/" />
       <div className="container">
         <div className="row text-center">
-          <div className="col ">
+          <div className="col">
             <h1 className='textcolor'>Jenkins Is The Way</h1>
             <h2 className='textcolor'>Latest Jenkins User Stories</h2>
             {/* Stats Section */}
