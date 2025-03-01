@@ -49,7 +49,7 @@ const NotFoundPage = () => {
       <title>Not found</title>
       <StaticImage
             src="../images/fire-jenkins.svg"
-            alt="Jenkins is the way logo"
+            alt="Jenkins on fire logo"
             className={imageStyles}
           />
       <h1 style={headingStyles}>Page not found</h1>
