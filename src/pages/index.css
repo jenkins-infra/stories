@@ -169,3 +169,35 @@
 .btn-primary:hover {
   background: var(--button-hover-bg);
 }
+
+/* 404 Page */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--background-gradient); /* Uses system theme */
+}
+
+.not-found-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--hero-text-color);
+  margin-bottom: 20px;
+}
+
+.not-found-text {
+  font-size: 1.2rem;
+  color: var(--subtitle-color);
+  margin-bottom: 20px;
+}
+
+.not-found-code {
+  background: var(--card-background);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--hero-text-color);
+}
