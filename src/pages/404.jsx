@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // styles
 const pageStyles = {
+  backgroundColor:"#121212",
   color: '#ffffff',
   padding: '96px',
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
