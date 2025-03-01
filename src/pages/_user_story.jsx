@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStory from '../components/UserStory';
+import Breadcrumb from '../components/BreadCrumb';
 
 const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
   const title = page.title;
-
+  const currentPath = `/user-story/${page.slug}`;
   const StoryLink = ({ direction, story }) => (
     <Link
       className={`nav-link text-secondary fw-medium d-flex align-items-center gap-1 h-100`}
@@ -52,37 +53,26 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
     >
       <Seo title={title} pathname={`/user-story/${page.slug}`} />
       <nav className="navbar navbar-expand bg-dark py-1">
-        <div className="container-fluid px-1">
-          <div className="row w-100 align-items-center mx-0">
-            {/* Previous Story */}
-            <div className="col-5">
-              {pageContext.previous && (
-                <StoryLink direction="prev" story={pageContext.previous} />
-              )}
-            </div>
-
-            {/* Home Button */}
-            <div className="col-2 text-center">
-              <Link
-                to="/"
-                className="nav-link text-light fw-normal d-inline-block"
-              >
-                <span className="fs-6">
-                  <ion-icon name="home-outline" class="fs-5"></ion-icon>
-                </span>
-              </Link>
-            </div>
-
-            {/* Next Story */}
-            <div className="col-5">
-              {pageContext.next && (
-                <StoryLink direction="next" story={pageContext.next} />
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
-
+  <div className="container-fluid px-1">
+    <div className="row w-100 justify-content-between align-items-center mx-0">
+      {/* Previous Story */}
+      <div className="col-5">
+        {pageContext.previous && (
+          <StoryLink direction="prev" story={pageContext.previous} />
+        )}
+      </div>
+      
+      {/* Next Story */}
+      <div className="col-5 ms-auto text-end">
+        {pageContext.next && (
+          <StoryLink direction="next" story={pageContext.next} />
+        )}
+      </div>
+    </div>
+  </div>
+</nav>
+      <Breadcrumb currentPath={currentPath} currentTitle={title} />
+      
       <UserStory {...page} />
     </Layout>
   );
