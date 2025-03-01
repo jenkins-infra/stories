@@ -10,7 +10,7 @@ const StatBox = ({ value, label }) => (
 
 const StatsCard = ({ totalStories, uniqueLocations, uniqueIndustries }) => {
   return (
-    <div className={`${styles.statsCard} bg-dark`}>
+    <div className={`${styles.statsCard}`}>
       <div className={styles.statsContainer}>
         <StatBox value={totalStories} label="Stories" />
         <StatBox value={uniqueLocations} label="Locations" />
