@@ -1,0 +1,55 @@
+.page {
+    color: #ffffff;
+    padding: 96px;
+    font-family: -apple-system, Roboto, sans-serif, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  @media (prefers-color-scheme: light) {
+    .page {
+      color: black;
+    }
+  } 
+  .heading {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+   @media (prefers-color-scheme: light) {
+    .heading {
+      color: black !important;
+    }
+  } 
+  .paragraph {
+    margin-bottom: 32px;
+    max-width: 600px;
+  }
+  
+  .code {
+    color: #8A6534;
+    padding: 4px;
+    background-color: #FFF4DB;
+    font-size: 1.25rem;
+    border-radius: 4px;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 32px;
+    border-radius: 8px;
+  }
+  
+  .link {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  @media (prefers-color-scheme: light) {
+    .link {
+      color: black;
+    }
+  } 
