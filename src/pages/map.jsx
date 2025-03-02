@@ -148,6 +148,7 @@ const MapPage = () => {
             <MapContainer
               center={[43.5890452, 0]}
               zoom={2}
+              minZoom={2}
               className="leaflet-map"
             >
               <TileLayer
