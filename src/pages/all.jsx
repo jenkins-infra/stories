@@ -34,12 +34,12 @@ const AllPage = () => {
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h1>Jenkins Is The Way</h1>
+            <h1 className='textcolor'>Jenkins Is The Way</h1>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <div className="tell-your-story bg-dark">
+            <div className="tell-your-story textcolor">
               <h2>Tell Your Story</h2>
               <p>
                 "Jenkins Is The Way" is a global showcase of how

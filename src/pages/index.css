@@ -1,4 +1,23 @@
 /* Default (Dark Mode) */
+body, html {
+  background-color: #121212;
+}
+
+@media (prefers-color-scheme: light) {
+  body, html {
+    background-color: white;
+  }
+} 
+.textcolor {
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  .textcolor {
+    color: black;
+  }
+} 
+
 :root {
   --background-gradient: linear-gradient(
     145deg,
