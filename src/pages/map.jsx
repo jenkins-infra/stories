@@ -147,7 +147,10 @@ const MapPage = () => {
           <div className="col">
             <MapContainer
               center={[43.5890452, 0]}
-              zoom={2}
+              zoom={2}     
+              minZoom={2}
+              maxBounds={[[-90, -180], [90, 180]]}
+              maxBoundsViscosity={1.0}
               className="leaflet-map"
             >
               <TileLayer
