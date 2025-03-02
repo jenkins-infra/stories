@@ -128,8 +128,8 @@ const MapPage = () => {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <h1>Jenkins Is The Way</h1>
-            <h2>Latest Jenkins User Stories</h2>
+            <h1 className='textcolor'>Jenkins Is The Way</h1>
+            <h2 className='textcolor'>Latest Jenkins User Stories</h2>
             {/* Stats Section */}
             <StatsCard
               totalStories={totalStories}
