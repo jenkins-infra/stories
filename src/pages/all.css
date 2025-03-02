@@ -73,6 +73,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #22282e;
   }
   
   .tell-your-story::before {
