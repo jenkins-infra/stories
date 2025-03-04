@@ -128,17 +128,19 @@ h3 {
   background-color: #1a1a1a;
   border-radius: 8px;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
 }
 @media (prefers-color-scheme: light) {
-  .story-popup  {
+  .story-popup {
     background-color: #ffffff;
     color: black;
   }
-} 
+}
 
 .story-img {
-  width: 120px !important; 
+  width: 120px !important;
   height: 120px !important;
 }
 
@@ -174,7 +176,7 @@ h3 {
   .story-popup-title {
     color: black;
   }
-} 
+}
 
 .story-popup-details {
   margin-bottom: 0.5rem;
@@ -199,7 +201,7 @@ h3 {
   .story-popup-label {
     color: black;
   }
-} 
+}
 
 .story-popup-value {
   color: #e0e0e0;
@@ -210,7 +212,7 @@ h3 {
   .story-popup-value {
     color: rgb(39, 39, 39);
   }
-} 
+}
 
 .story-btn-container {
   display: flex;
@@ -234,21 +236,21 @@ h3 {
   transition: background-color 0.2s ease-in-out;
 }
 @media (prefers-color-scheme: light) {
-  .story-popup-button{
+  .story-popup-button {
     background-color: #e0e0e0;
     color: black;
   }
-} 
+}
 
 .story-popup-button:hover {
   transform: translateY(-3px);
   color: white !important;
 }
 @media (prefers-color-scheme: light) {
-  .story-popup-button:hover{
+  .story-popup-button:hover {
     color: black !important;
   }
-} 
+}
 
 /* Override Leaflet default popup styles */
 .leaflet-popup-content-wrapper {

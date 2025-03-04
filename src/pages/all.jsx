@@ -33,12 +33,12 @@ const AllPage = () => {
       <div className="container">
         <div className="row body">
           <div className="col text-center">
-            <h1 className='textcolor'>Jenkins Is The Way</h1>
+            <h1 className="textcolor">Jenkins Is The Way</h1>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <h2 className='textcolor'>Tell Your Story</h2>
+            <h2 className="textcolor">Tell Your Story</h2>
             <p>
               &quot;Jenkins Is The Way&quot; is a global showcase of how
               developers and engineers are building, deploying, and automating

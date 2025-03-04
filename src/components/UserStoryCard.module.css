@@ -14,7 +14,7 @@
     border: 1px solid #7e7e7e;
     background-color: white;
   }
-} 
+}
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -60,9 +60,9 @@
 }
 @media (prefers-color-scheme: light) {
   .title {
-     color: black;
+    color: black;
   }
-} 
+}
 .date {
   color: #888;
   font-size: 0.875rem;
@@ -92,9 +92,9 @@
 @media (prefers-color-scheme: light) {
   .readMore {
     border: 1px solid black;
-     color: black;
+    color: black;
   }
-} 
+}
 
 .readMore:hover {
   color: #60a5fa;
