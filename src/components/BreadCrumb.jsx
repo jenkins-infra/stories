@@ -17,7 +17,8 @@ const Breadcrumb = ({ currentPath, currentTitle }) => {
           {pathSegments.length > 0 && (
             <li className={styles.item}>
               <Link to="/all" className={styles.link}>
-                {pathSegments[0].charAt(0).toUpperCase() + pathSegments[0].slice(1).replace(/-/g, ' ')}
+                {pathSegments[0].charAt(0).toUpperCase() +
+                  pathSegments[0].slice(1).replace(/-/g, ' ')}
               </Link>
             </li>
           )}
@@ -34,7 +35,7 @@ const Breadcrumb = ({ currentPath, currentTitle }) => {
 
 Breadcrumb.propTypes = {
   currentPath: PropTypes.string.isRequired,
-  currentTitle: PropTypes.string
+  currentTitle: PropTypes.string,
 };
 
 export default Breadcrumb;
