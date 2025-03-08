@@ -18,6 +18,7 @@
     "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\""
   },
   "dependencies": {
+    "axios": "^1.8.2",
     "cheerio": "^1.0.0-rc.10",
     "eslint": "^8.12.0",
     "eslint-config-react-app": "^7.0.0",
@@ -35,6 +36,7 @@
     "gatsby-source-filesystem": "^4.10.1",
     "gatsby-transformer-remark": "^5.11.1",
     "gatsby-transformer-sharp": "^4.10.0",
+    "js-search": "^2.0.1",
     "leaflet": "^1.7.1",
     "netlify-cms-app": "^2.15.72",
     "react": "^17.0.1",

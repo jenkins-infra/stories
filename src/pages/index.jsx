@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -41,6 +42,15 @@ const IndexPage = () => {
         </div>
       </div>
 
+      <div>
+        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
+        Search data using JS Search
+        </h1>
+        <div>
+        <Search />
+        </div>
+      </div>
+
       <div className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <div className="story-cards">
@@ -65,7 +75,7 @@ const IndexPage = () => {
       <div className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
-          <Link to='/map'>
+          <Link to="/map">
             <StaticImage
               src="../images/map_screenshot.png"
               alt="Screenshot of pins on a map"
