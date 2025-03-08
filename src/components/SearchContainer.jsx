@@ -98,7 +98,7 @@ class Search extends Component {
                   className="form-control form-control-lg"
                   value={searchQuery}
                   onChange={this.searchData}
-                  placeholder="Search user stories by title, tag line, author, or content..."
+                  placeholder="Search user stories..."
                 />
                 <span className="input-group-text">
                   <ion-icon name="search-outline"></ion-icon>
