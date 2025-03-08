@@ -2,10 +2,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
+    padding: 1rem;
 }
   
 .story-card {
     transition: transform 0.2s ease-in-out;
+    color: inherit;
 }
   
 .story-card:hover {
@@ -13,16 +15,78 @@
 }
   
 .story-card .card {
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: var(--bs-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
   
 .story-card:hover .card {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
 }
-  
+
+.story-card .card-title {
+    color: var(--bs-light);
+}
+
+.story-card .card-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.story-card .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
 .industries {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+}
+
+.industries .badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-container input {
+    background-color: var(--bs-dark);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--bs-light);
+}
+
+.search-container input:focus {
+    background-color: var(--bs-dark);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--bs-light);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-container .input-group-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.results-count {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.no-results {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.loading-state,
+.error-state {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-state {
+    color: var(--bs-danger);
 }

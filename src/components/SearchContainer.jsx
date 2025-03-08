@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import '../cms/SearchContainer.css';
 import * as JsSearch from 'js-search';
 
 class Search extends Component {
@@ -39,7 +40,6 @@ class Search extends Component {
     dataToSearch.sanitizer = new JsSearch.LowerCaseSanitizer();
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex('title');
 
-    // Add fields to search through
     dataToSearch.addIndex('title');
     dataToSearch.addIndex('tag_line');
     dataToSearch.addIndex('authored_by');
@@ -88,7 +88,7 @@ class Search extends Component {
     }
 
     return (
-      <div className="container py-4">
+      <div className="container py-4 search-container">
         <form onSubmit={this.handleSubmit} className="mb-4">
           <div className="row justify-content-center">
             <div className="col-md-8">
@@ -158,7 +158,6 @@ class Search extends Component {
   }
 }
 
-// Wrapper component to handle the static query
 const SearchContainer = () => {
   const data = useStaticQuery(graphql`
     query {
