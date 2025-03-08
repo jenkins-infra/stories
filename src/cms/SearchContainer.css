@@ -1,0 +1,28 @@
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+  
+.story-card {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.story-card:hover {
+    transform: translateY(-4px);
+}
+  
+.story-card .card {
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+  
+.story-card:hover .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+  
+.industries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

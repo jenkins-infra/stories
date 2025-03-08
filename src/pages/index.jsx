@@ -44,7 +44,7 @@ const IndexPage = () => {
 
       <div>
         <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
-        Search data using JS Search
+        Search Jenkins Stories
         </h1>
         <div>
         <Search />
