@@ -110,9 +110,9 @@ class Search extends Component {
 
         {searchQuery && (
           <div>
-            <p className="text-muted mb-4">
+            <p className="text-bold mb-4">
               Found {searchResults.length} {searchResults.length === 1 ? 'story' : 'stories'} 
-              for "{searchQuery}"
+              &nbsp;for "{searchQuery}"
             </p>
 
             {searchResults.length > 0 ? (
