@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import * as JsSearch from 'js-search';
 
 class Search extends Component {
@@ -11,26 +10,7 @@ class Search extends Component {
     isError: false,
     searchQuery: '',
   };
-  /**
-   * React lifecycle method to fetch the data
-   */
-//   async componentDidMount() {
-//     axios
-//       .get('https://bvaughn.github.io/js-search/books.json')
-//       .then(result => {
-//         const bookData = result.data;
-//         this.setState({ bookList: bookData.books });
-//         this.rebuildIndex();
-//         return null;
-//       })
-//       .catch(err => {
-//         this.setState({ isError: true });
-//       });
-//   }
 
-  /**
-   * rebuilds the overall index based on the options
-   */
   rebuildIndex = () => {
     const { bookList } = this.state;
     const dataToSearch = new JsSearch.Search('isbn');

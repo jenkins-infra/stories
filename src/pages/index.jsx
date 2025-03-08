@@ -75,7 +75,7 @@ const IndexPage = () => {
       <div className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
-          <Link to="/map">
+          <Link to='/map'>
             <StaticImage
               src="../images/map_screenshot.png"
               alt="Screenshot of pins on a map"
