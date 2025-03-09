@@ -1,16 +1,45 @@
 /* Jenkins User Story Library - Minimalist Dark Theme */
 
 :root {
-    --bg-primary: #121212;
-    --bg-secondary: #1e1e1e;
-    --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
-    --accent: #4f9fee;
-    --accent-hover: #3182ce;
-    --border: #333333;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
+  /* Dark theme default variables */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #4f9fee;
+  --accent-hover: #3182ce;
+  --border: #333333;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --story-bg: #22282e;
+  --story-gradient: linear-gradient(45deg, rgba(79, 159, 238, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  --tshirt-bg: rgba(255, 255, 255, 0.05);
+  --btn-text: #121212;
+  --btn-hover-bg: white;
+}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent: #2c7cd1;
+    --accent-hover: #1d5fa0;
+    --border: #e0e0e0;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --story-bg: #f8f9fa;
+    --story-gradient: linear-gradient(45deg, rgba(44, 124, 209, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    --tshirt-bg: rgba(0, 0, 0, 0.05);
+    --btn-text: white;
+    --btn-hover-bg: #1d5fa0;
+  }
+}
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -72,8 +101,8 @@
     margin-bottom: 1.5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #22282e;
+    box-shadow: var(--card-shadow);
+    background-color: var(--story-bg);
   }
   
   .tell-your-story::before {
@@ -83,13 +112,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(79, 159, 238, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+    background: var(--story-gradient);
     z-index: 0;
   }
   
   .tell-your-story h2 {
     position: relative;
-    color: white;
+    color: var(--text-primary);
     font-size: 1.75rem;
     margin-bottom: 1rem;
     font-weight: 500;
@@ -107,7 +136,7 @@
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: var(--accent);
-    color: #121212;
+    color: var(--btn-text);
     border-radius: 4px;
     font-weight: 500;
     text-transform: uppercase;
@@ -118,7 +147,7 @@
   }
   
   .share-story-btn:hover {
-    background-color: white;
+    background-color: var(--btn-hover-bg);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-decoration: none;
@@ -128,7 +157,7 @@
     display: flex;
     align-items: center;
     padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--tshirt-bg);
     border-radius: 6px;
   }
   
