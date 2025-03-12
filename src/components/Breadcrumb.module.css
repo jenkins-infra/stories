@@ -22,6 +22,7 @@
   color: #adb5bd;
   transition: color 0.2s ease;
 }
+
 @media (prefers-color-scheme: light) {
   .link {
     color: rgb(54, 54, 54);
