@@ -81,7 +81,7 @@
   a {
     color: var(--accent);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
   }
   
   a:hover {
@@ -151,6 +151,7 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-decoration: none;
+    color: var(--btn-text);
   }
   
   .tshirt-promo {
