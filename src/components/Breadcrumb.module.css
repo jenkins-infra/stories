@@ -47,6 +47,7 @@
   font-weight: 500;
   color: #ededed;
 }
+
 @media (prefers-color-scheme: light) {
   .current {
     color: black;
