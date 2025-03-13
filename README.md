@@ -49,7 +49,7 @@ npm run develop
 
 ```
 
-Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
+Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
 ## Code Quality Tools
 
