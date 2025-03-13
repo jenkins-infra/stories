@@ -2,7 +2,6 @@
     --background-color: #2b3035;
     --text-color: rgba(255, 255, 255, 0.9);
     --muted-text-color: rgba(255, 255, 255, 0.6);
-    --card-bg-color: #2b3035;
     --card-border-color: rgba(255, 255, 255, 0.1);
     --card-hover-border-color: rgba(255, 255, 255, 0.2);
     --card-shadow-color: rgba(0, 0, 0, 0.2);
@@ -22,9 +21,7 @@
         --background-color: #ffffff;
         --text-color: #2d3436;
         --muted-text-color: rgba(0, 0, 0, 0.6);
-        --card-bg-color: #f8f9fa;
-        --card-border-color: #e9ecef;
-        --card-hover-border-color: #d1d3d4;
+        --card-hover-border-color: white;
         --card-shadow-color: rgba(0, 0, 0, 0.05);
         --card-hover-shadow-color: rgba(0, 0, 0, 0.1);
         --badge-bg-color: #f1f3f5;
