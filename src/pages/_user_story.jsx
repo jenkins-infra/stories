@@ -53,26 +53,26 @@ const UserStoryPage = ({ data: { userStory: page }, pageContext }) => {
     >
       <Seo title={title} pathname={`/user-story/${page.slug}`} />
       <nav className="navbar navbar-expand bg-dark py-1">
-  <div className="container-fluid px-1">
-    <div className="row w-100 justify-content-between align-items-center mx-0">
-      {/* Previous Story */}
-      <div className="col-5">
-        {pageContext.previous && (
-          <StoryLink direction="prev" story={pageContext.previous} />
-        )}
-      </div>
-      
-      {/* Next Story */}
-      <div className="col-5 ms-auto text-end">
-        {pageContext.next && (
-          <StoryLink direction="next" story={pageContext.next} />
-        )}
-      </div>
-    </div>
-  </div>
-</nav>
+        <div className="container-fluid px-1">
+          <div className="row w-100 justify-content-between align-items-center mx-0">
+            {/* Previous Story */}
+            <div className="col-5">
+              {pageContext.previous && (
+                <StoryLink direction="prev" story={pageContext.previous} />
+              )}
+            </div>
+
+            {/* Next Story */}
+            <div className="col-5 ms-auto text-end">
+              {pageContext.next && (
+                <StoryLink direction="next" story={pageContext.next} />
+              )}
+            </div>
+          </div>
+        </div>
+      </nav>
       <Breadcrumb currentPath={currentPath} currentTitle={title} />
-      
+
       <UserStory {...page} />
     </Layout>
   );
