@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -23,7 +24,20 @@ const IndexPage = () => {
     }
   `);
 
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
   const sectionsRef = React.useRef([]);
+
+  // Detect System Dark Mode
+  React.useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setIsDarkMode(darkModeMediaQuery.matches);
+    };
+    checkDarkMode();
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addEventListener('change', checkDarkMode);
+    return () => darkModeMediaQuery.removeEventListener('change', checkDarkMode);
+  }, []);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,7 +46,7 @@ const IndexPage = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("section-visible");
           } else {
-            entry.target.classList.remove("section-visible"); // Remove class when out of view
+            entry.target.classList.remove("section-visible"); 
           }
         });
       },
@@ -59,8 +73,14 @@ const IndexPage = () => {
         </div>
       </div>
 
+      {/* Search Section */}
+      <div ref={(el) => (sectionsRef.current[1] = el)}>
+        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>Search Jenkins Stories</h1>
+        <div><Search /></div>
+      </div>
+
       {/* Stories Section */}
-      <div ref={(el) => (sectionsRef.current[1] = el)} className="stories-section">
+      <div ref={(el) => (sectionsRef.current[2] = el)} className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <div className="story-cards">
           {stories.edges.map(({ node: story }) => (
@@ -80,11 +100,15 @@ const IndexPage = () => {
       </div>
 
       {/* Map Section */}
-      <div ref={(el) => (sectionsRef.current[2] = el)} className="map-section">
+      <div ref={(el) => (sectionsRef.current[3] = el)} className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
-          <Link to='/map'>
-            <StaticImage src="../images/map_screenshot.png" alt="Screenshot of pins on a map" className="map-image" />
+          <Link to="/map">
+            {isDarkMode ? (
+              <StaticImage src="../images/map_screenshot.png" alt="Screenshot of pins on a map" className="map-image" />
+            ) : (
+              <StaticImage src="../images/map_screenshot_light.png" alt="Screenshot of pins on a map" className="map-image" />
+            )}
           </Link>
           <Link className="btn-primary" to="/map">Visit the Map</Link>
         </div>
