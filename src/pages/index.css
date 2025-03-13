@@ -42,10 +42,11 @@ html {
     --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
     --hero-text-color: #0d1b2a;
     --subtitle-color: #1b263b;
-    --card-background: #778da9;
+    --card-background: #ededed;
     --button-bg: #415a77;
     --button-hover-bg: #e0e1dd;
     --button-text-color: #ffffff;
+    --card-border-color: rgb(199, 199, 199);
   }
   .hero-section {
     background: var(--background-gradient);
@@ -163,7 +164,7 @@ html {
   padding: 10px 15px;
   margin: 0;
   font-size: 1rem;
-  color: white;
+  color: var(--hero-text-color);
   font-weight: 500;
   flex-grow: 1;
 }
