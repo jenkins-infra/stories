@@ -1,6 +1,6 @@
 # Jenkins User Stories
 
-Previously known as Jenkins is the way. This project showcases real-world Jenkins implementations and user experiences.
+Previously known as Jenkins is the way. This project showcases real-world Jenkins user stories.
 
 ## Deployment
 
