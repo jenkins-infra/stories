@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import '../cms/SearchContainer.css';
+import './SearchContainer.css';
 import * as JsSearch from 'js-search';
 
 class Search extends Component {
@@ -148,7 +148,7 @@ class Search extends Component {
               </div>
             ) : (
               <div className="text-center text-muted">
-                <p>No stories found matching your search.</p>
+                <p>No stories found matching your search</p>
               </div>
             )}
           </div>
