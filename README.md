@@ -7,7 +7,6 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 ### Deployment Workflow (to be done by Infra or a maintainer)
 
 * Builds are done on `ci.infra.jenkins.io` (VPN needed)
-
 > A VPN connection is mandatory to access the build infrastructure.
 
 
