@@ -4,7 +4,7 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 
 ## Deployment
 
-### Build Environment
+### Deployment Workflow (to be done by Infra or a maintainer)
 
 - Builds are conducted on `ci.infra.jenkins.io`
 - **VPN Access Required**
