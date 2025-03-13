@@ -109,7 +109,12 @@ body, html {
   color: var(--hero-text-color);
   margin-bottom: 30px;
 }
-
+.section-subtitle {
+  text-align: center;
+  color: var(--subtitle-color);
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
 .section-cta {
   text-align: center;
   margin-top: 20px;
@@ -117,41 +122,61 @@ body, html {
 
 .story-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .story-card {
-  background: var(--card-background);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .story-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.story-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .story-title {
-  font-size: 1.2rem;
-  color: var(--hero-text-color);
-  margin-bottom: 10px;
-}
-
-.story-title a {
-  text-decoration: none;
-  color: inherit;
+  padding: 15px 15px 5px 15px;
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
 }
 
 .story-author {
+  padding: 0 15px;
+  margin: 5px 0;
   font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: var(--subtitle-color);
+  color: #aaa;
+}
+
+.story-date {
+  padding: 0 15px 15px 15px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #888;
 }
 
 /* Map Section */
@@ -187,4 +212,15 @@ body, html {
 
 .btn-primary:hover {
   background: var(--button-hover-bg);
+}
+
+@media (max-width: 768px) {
+  .story-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .story-cards {
+    grid-template-columns: 1fr;
+  }
 }
