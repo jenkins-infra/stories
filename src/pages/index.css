@@ -203,9 +203,3 @@ body, html {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Optional: Add smooth scrolling for better effect */
-html {
-  scroll-behavior: smooth;
-}
-
