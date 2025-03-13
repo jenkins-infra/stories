@@ -27,7 +27,7 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 First, fork the repository and clone it.
 
 ```bash
-git clone https://github.com/<username>/stories.git
+git clone <url-from-github>
 ```
 
 Change Directory
