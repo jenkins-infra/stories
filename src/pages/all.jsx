@@ -5,8 +5,33 @@ import Seo from '../components/Seo';
 import UserStoryCard from '../components/UserStoryCard';
 import './all.css';
 
+// Modal Component
+const Modal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <h2>Contribute Your Story</h2>
+        <p>
+          To share your Jenkins story, submit a Pull Request to the following GitHub repository:
+        </p>
+        <a
+          href="https://github.com/joshua-jinu/TrueFact/compare/main...user-story?expand=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+        >
+          Jenkins Stories GitHub Repo
+        </a>
+        <button onClick={onClose} className="close-btn">✖</button>
+      </div>
+    </div>
+  );
+};
+
 // markup
 const AllPage = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
   const title = 'Jenkins - User Story Library - All';
   const { stories } = useStaticQuery(graphql`
     query AllStories {
@@ -55,9 +80,9 @@ const AllPage = () => {
                 T-shirt.
                   </span>
               </div>
-              <a href="/admin/#/collections/user-story" className="share-story-btn">
+              <button onClick={() => setIsModalOpen(true)} className="share-story-btn">
                 Share Your Story
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -77,6 +102,9 @@ const AllPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </Layout>
   );
 };
