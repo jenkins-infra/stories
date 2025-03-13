@@ -14,6 +14,8 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 - Automatic deployment to Netlify for main branch builds
 - Fastly provides frontend caching and performance optimization
 
+For historical record, the admin portal can be reached via https://stories.jenkins.io/admin/
+
 ## Development Setup
 
 ### System Requirements
