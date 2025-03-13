@@ -44,10 +44,10 @@ const IndexPage = () => {
 
       <div>
         <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
-        Search Jenkins Stories
+          Search Jenkins Stories
         </h1>
         <div>
-        <Search />
+          <Search />
         </div>
       </div>
 
