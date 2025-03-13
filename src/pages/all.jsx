@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose }) => {
           To share your Jenkins story, submit a Pull Request to the following GitHub repository:
         </p>
         <a
-          href="https://github.com/joshua-jinu/TrueFact/compare/main...user-story?expand=1"
+          href="https://github.com/jenkins-infra/stories/compare/main...user-story?expand=1"
           target="_blank"
           rel="noopener noreferrer"
           className="github-link"
