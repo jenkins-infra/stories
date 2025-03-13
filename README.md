@@ -11,7 +11,6 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 
 > A VPN connection is mandatory to access the build infrastructure.
 
-### Deployment Workflow
 
 - Automatic deployment to Netlify for main branch builds
 - Fastly provides frontend caching and performance optimization
