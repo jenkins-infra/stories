@@ -24,6 +24,26 @@ const IndexPage = () => {
     }
   `);
 
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeMediaQuery = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      );
+      setIsDarkMode(darkModeMediaQuery.matches);
+    };
+    // Check initial state
+    checkDarkMode();
+    const darkModeMediaQuery = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    );
+    darkModeMediaQuery.addEventListener('change', checkDarkMode);
+    return () => {
+      darkModeMediaQuery.removeEventListener('change', checkDarkMode);
+    };
+  }, []);
+
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
@@ -76,11 +96,20 @@ const IndexPage = () => {
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">
-            <StaticImage
-              src="../images/map_screenshot.png"
-              alt="Screenshot of pins on a map"
-              className="map-image"
-            />
+
+            {isDarkMode ? (
+              <StaticImage
+                src="../images/map_screenshot.png"
+                alt="Screenshot of pins on a map"
+                className="map-image"
+              />
+            ) : (
+              <StaticImage
+                src="../images/map_screenshot_light.png"
+                alt="Screenshot of pins on a map"
+                className="map-image"
+              />
+            )}
           </Link>
           <Link className="btn-primary" to="/map">
             Visit the Map
