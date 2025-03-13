@@ -46,25 +46,26 @@ const IndexPage = () => {
       </div>
       <div className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
-        <p className="section-subtitle">Stories from all around the world by Jenkins User</p>
-      
+        <p className="section-subtitle">
+          Stories from all around the world by Jenkins User
+        </p>
+
         <div className="story-cards">
           {stories.edges.map(({ node: story }) => (
-             
             <div key={story.slug} className="story-card">
               {story.image && story.image.childImageSharp && (
                 <div className="story-image-container">
-                  <GatsbyImage 
-                    image={getImage(story.image)} 
-                    alt={story.title} 
+                  <GatsbyImage
+                    image={getImage(story.image)}
+                    alt={story.title}
                     className="story-image"
                   />
                 </div>
               )}
               <h3 className="story-title">
-              <Link to={`/user-story/${story.slug}`}>
-                {story.tag_line || story.title}
-              </Link>
+                <Link to={`/user-story/${story.slug}`}>
+                  {story.tag_line || story.title}
+                </Link>
               </h3>
               <p className="story-author">
                 Authored By Jenkins User <strong>{story.authored_by}</strong>
@@ -73,7 +74,7 @@ const IndexPage = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="section-cta">
           <Link className="btn-primary" to="/all">
             Read More Stories
@@ -83,7 +84,7 @@ const IndexPage = () => {
       <div className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
-          <Link to='/map'>
+          <Link to="/map">
             <StaticImage
               src="../images/map_screenshot.png"
               alt="Screenshot of pins on a map"

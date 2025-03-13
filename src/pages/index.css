@@ -1,13 +1,15 @@
 /* Default (Dark Mode) */
-body, html {
+body,
+html {
   background-color: #121212;
 }
 
 @media (prefers-color-scheme: light) {
-  body, html {
+  body,
+  html {
     background-color: white;
   }
-} 
+}
 .textcolor {
   color: white;
 }
@@ -16,7 +18,7 @@ body, html {
   .textcolor {
     color: black;
   }
-} 
+}
 
 :root {
   --background-gradient: linear-gradient(
@@ -171,8 +173,8 @@ body, html {
   color: inherit;
 }
 
-
-.story-author, .story-date {
+.story-author,
+.story-date {
   padding: 0 15px;
   margin: 0;
 }
