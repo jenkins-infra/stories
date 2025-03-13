@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -23,6 +24,26 @@ const IndexPage = () => {
     }
   `);
 
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeMediaQuery = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      );
+      setIsDarkMode(darkModeMediaQuery.matches);
+    };
+    // Check initial state
+    checkDarkMode();
+    const darkModeMediaQuery = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    );
+    darkModeMediaQuery.addEventListener('change', checkDarkMode);
+    return () => {
+      darkModeMediaQuery.removeEventListener('change', checkDarkMode);
+    };
+  }, []);
+
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
@@ -38,6 +59,15 @@ const IndexPage = () => {
             alt="Jenkins is the way logo"
             className="hero-image"
           />
+        </div>
+      </div>
+
+      <div>
+        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
+        Search Jenkins Stories
+        </h1>
+        <div>
+        <Search />
         </div>
       </div>
 
@@ -65,12 +95,20 @@ const IndexPage = () => {
       <div className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
-          <Link to='/map'>
-            <StaticImage
-              src="../images/map_screenshot.png"
-              alt="Screenshot of pins on a map"
-              className="map-image"
-            />
+          <Link to="/map">
+            {isDarkMode ? (
+              <StaticImage
+                src="../images/map_screenshot.png"
+                alt="Screenshot of pins on a map"
+                className="map-image"
+              />
+            ) : (
+              <StaticImage
+                src="../images/map_screenshot_light.png"
+                alt="Screenshot of pins on a map"
+                className="map-image"
+              />
+            )}
           </Link>
           <Link className="btn-primary" to="/map">
             Visit the Map
