@@ -71,7 +71,8 @@ npm run format
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Run formatters
+4. Run prettier formatting
+5. Add your changes to staging area and commit your changes
 6. Submit a pull request
 
 ## Additional Resources
