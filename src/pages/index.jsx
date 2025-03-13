@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Search from '../components/SearchContainer';
+
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -44,6 +47,16 @@ const IndexPage = () => {
           />
         </div>
       </div>
+
+      <div>
+        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
+        Search Jenkins Stories
+        </h1>
+        <div>
+        <Search />
+        </div>
+      </div>
+
       <div className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <p className="section-subtitle">
