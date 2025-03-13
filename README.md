@@ -72,7 +72,7 @@ npm run format
 2. Create a feature branch
 3. Make your changes
 4. Run formatters
-5. Submit a pull request
+6. Submit a pull request
 
 ## Additional Resources
 
