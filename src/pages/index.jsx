@@ -9,7 +9,7 @@ const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
   const { stories } = useStaticQuery(graphql`
     query FrontPageStories {
-      stories: allUserStory(sort: { fields: date, order: DESC }, limit: 5) {
+      stories: allUserStory(sort: { fields: date, order: DESC }, limit: 4) {
         edges {
           node {
             title
@@ -47,8 +47,10 @@ const IndexPage = () => {
       <div className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <p className="section-subtitle">Stories from all around the world by Jenkins User</p>
+      
         <div className="story-cards">
           {stories.edges.map(({ node: story }) => (
+             
             <div key={story.slug} className="story-card">
               {story.image && story.image.childImageSharp && (
                 <div className="story-image-container">
@@ -60,7 +62,9 @@ const IndexPage = () => {
                 </div>
               )}
               <h3 className="story-title">
+              <Link to={`/user-story/${story.slug}`}>
                 {story.tag_line || story.title}
+              </Link>
               </h3>
               <p className="story-author">
                 Authored By Jenkins User <strong>{story.authored_by}</strong>
@@ -69,6 +73,7 @@ const IndexPage = () => {
             </div>
           ))}
         </div>
+        
         <div className="section-cta">
           <Link className="btn-primary" to="/all">
             Read More Stories
