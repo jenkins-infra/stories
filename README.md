@@ -19,7 +19,7 @@ For historical record, the admin portal can be reached via https://stories.jenki
 ### System Requirements
 
 * Node.js (Recommended: Match version in `.tool-versions`)
-- npm (Node Package Manager)
+* npm (Node Package Manager)
 
 ## Getting Started
 
