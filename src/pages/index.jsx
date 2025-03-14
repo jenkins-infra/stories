@@ -27,7 +27,7 @@ const IndexPage = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(false);
   const sectionsRef = React.useRef([]);
 
-  // Detect System Dark Mode
+  // Dark Mode Detection
   React.useEffect(() => {
     const checkDarkMode = () => {
       const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -39,6 +39,7 @@ const IndexPage = () => {
     return () => darkModeMediaQuery.removeEventListener('change', checkDarkMode);
   }, []);
 
+  // Scroll-triggered Animation
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -46,7 +47,7 @@ const IndexPage = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("section-visible");
           } else {
-            entry.target.classList.remove("section-visible"); 
+            entry.target.classList.remove("section-visible");
           }
         });
       },
@@ -75,7 +76,9 @@ const IndexPage = () => {
 
       {/* Search Section */}
       <div ref={(el) => (sectionsRef.current[1] = el)}>
-        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>Search Jenkins Stories</h1>
+        <h1 style={{ marginTop: `3em`, textAlign: `center`, fontWeight: 700, color: `var(--text-color)` }}>
+          Search Jenkins Stories
+        </h1>
         <div><Search /></div>
       </div>
 
