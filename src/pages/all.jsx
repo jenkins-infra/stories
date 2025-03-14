@@ -26,7 +26,6 @@ Also, include any related images in the same directory._`;
   return `https://github.com/jenkins-infra/stories/issues/new?${queryParams.toString()}`;
 }
 
-
 // Modal Component
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
