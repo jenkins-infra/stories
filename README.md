@@ -76,4 +76,3 @@ npm run format
 7. Submit a pull request
 
 
-- [Jenkins Official Website](https://www.jenkins.io/)
