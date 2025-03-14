@@ -45,7 +45,6 @@
 .story-card {
     transition: transform 0.2s ease-in-out;
     color: var(--text-color);
-
 }
 
 .story-card:hover {
