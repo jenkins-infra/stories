@@ -35,7 +35,7 @@ const Modal = ({ isOpen, onClose }) => {
       <div className="modal-content">
         <h2>Contribute Your Story</h2>
         <p>
-          To share your Jenkins story, create an issue and follow up with a Pull Request to the following GitHub repository:
+          To share your Jenkins story, create an Issue and follow up with a Pull Request to the following GitHub repository:
         </p>
         <a
           href={generateUserStoryIssueURL()}
