@@ -63,7 +63,13 @@ const IndexPage = () => {
       </div>
 
       <div>
-        <h1 style={{ marginTop: `3em`, textAlign: `center` }}>
+        <h1 
+          style={{ marginTop: `3em`, 
+            textAlign: `center`,
+            fontWeight: 700,
+            color: `var(--text-color)`
+          }}
+        >
           Search Jenkins Stories
         </h1>
         <div>
