@@ -74,7 +74,7 @@ npm run format
 4. Run prettier formatting
 5. Add your changes to staging area and commit your changes
 6. Push your changes to GitHub
-6. Submit a pull request
+7. Submit a pull request
 
 ## Additional Resources
 
