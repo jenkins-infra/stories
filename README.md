@@ -75,6 +75,5 @@ npm run format
 6. Push your changes to GitHub
 7. Submit a pull request
 
-## Additional Resources
 
 - [Jenkins Official Website](https://www.jenkins.io/)
