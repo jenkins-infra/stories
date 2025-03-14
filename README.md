@@ -45,7 +45,6 @@ Run the development server:
 
 ```bash
 npm run develop
-
 ```
 
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
