@@ -11,7 +11,6 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 * Netlify site is fronted by fastly
 
 
-
 For historical record, the admin portal can be reached via https://stories.jenkins.io/admin/
 
 ## Development Setup
