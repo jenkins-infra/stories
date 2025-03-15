@@ -69,6 +69,9 @@ html {
   border-radius: 20px;
   margin: 20px;
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
 }
 
 @keyframes gradientAnimation {
@@ -100,11 +103,21 @@ html {
   max-width: 350px;
   margin: 20px auto;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Stories Section */
 .stories-section {
   padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
 }
 
 .section-title {
@@ -199,6 +212,9 @@ html {
 .map-section {
   padding: 40px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
 }
 
 .map-content {
@@ -212,6 +228,12 @@ html {
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.map-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Button Section */
@@ -223,11 +245,34 @@ html {
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
   background: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+/* Scroll-triggered Animation */
+.section-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Search Bar Animation */
+.search-section {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.search-section input {
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover/Focus Effect */
+.search-section input:focus,
+.search-section input:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
