@@ -107,6 +107,7 @@ const IndexPage = () => {
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">
+
             {isDarkMode ? (
               <StaticImage src="../images/map_screenshot.png" alt="Screenshot of pins on a map" className="map-image" />
             ) : (
