@@ -6,7 +6,7 @@ import './notFound.css';
 
 const NotFoundPage = () => {
   const title = 'Page not found';
-  
+
   return (
     <Layout title={title}>
       <main className="page">
@@ -22,18 +22,21 @@ const NotFoundPage = () => {
           <span role="img" aria-label="Pensive emoji">
             😔
           </span>{' '}
-        we couldn’t find what you were looking for.
+          we couldn’t find what you were looking for.
           <br />
           {process.env.NODE_ENV === 'development' ? (
             <>
               <br />
-            Try creating a page in <code className="code">src/pages/</code>
-            .
+              Try creating a page in <code className="code">src/pages/</code>
+              .
               <br />
             </>
           ) : null}
           <br />
-          <Link to="/" className="link">Go home</Link>.
+          <Link to="/" className="link">
+            Go home
+          </Link>
+          .
         </p>
       </main>
     </Layout>

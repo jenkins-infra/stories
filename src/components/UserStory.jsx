@@ -64,7 +64,7 @@ const UserStory = ({
       <div className="row">
         <div className="col">
           <div className="container pb-2">
-            <h1 className='textcolor'>{tag_line}</h1>
+            <h1 className="textcolor">{tag_line}</h1>
           </div>
 
           <div className="container pt-2 pb-2">

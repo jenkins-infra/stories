@@ -80,41 +80,38 @@ const MapPage = () => {
             <GatsbyImage
               image={getImage(story.image)}
               alt={story.title}
-              className='story-img'
+              className="story-img"
             />
           </Link>
         </div>
       )}
-      
+
       <div className="story-popup-content">
-        <h4 className="story-popup-title">
-          {story.title}
-        </h4>
-        
+        <h4 className="story-popup-title">{story.title}</h4>
+
         <div className="story-popup-details">
           <div className="story-popup-row">
             <span className="story-popup-label">Author:</span>
             <span className="story-popup-value">{story.map.authored_by}</span>
           </div>
-          
+
           <div className="story-popup-row">
             <span className="story-popup-label">Location:</span>
             <span className="story-popup-value">{story.map.location}</span>
           </div>
-          
+
           <div className="story-popup-row">
             <span className="story-popup-label">Industries:</span>
             <span className="story-popup-value">
-              {(story.map.industries || story.metadata.industries || []).join(', ')}
+              {(story.map.industries || story.metadata.industries || []).join(
+                ', ',
+              )}
             </span>
           </div>
         </div>
 
-        <div className='story-btn-container'>
-          <Link 
-            to={`/user-story/${story.slug}`}
-            className="story-popup-button"
-          >
+        <div className="story-btn-container">
+          <Link to={`/user-story/${story.slug}`} className="story-popup-button">
             Read Story
           </Link>
         </div>
@@ -128,8 +125,8 @@ const MapPage = () => {
       <div className="container">
         <div className="row text-center">
           <div className="col">
-            <h1 className='textcolor'>Jenkins Is The Way</h1>
-            <h2 className='textcolor'>Latest Jenkins User Stories</h2>
+            <h1 className="textcolor">Jenkins Is The Way</h1>
+            <h2 className="textcolor">Latest Jenkins User Stories</h2>
             {/* Stats Section */}
             <StatsCard
               totalStories={totalStories}
@@ -147,9 +144,12 @@ const MapPage = () => {
           <div className="col">
             <MapContainer
               center={[43.5890452, 0]}
-              zoom={2}     
+              zoom={2}
               minZoom={2}
-              maxBounds={[[-90, -180], [90, 180]]}
+              maxBounds={[
+                [-90, -180],
+                [90, 180],
+              ]}
               maxBoundsViscosity={1.0}
               className="leaflet-map"
             >

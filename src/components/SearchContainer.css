@@ -36,10 +36,10 @@
 }
 
 .stories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .story-card {
@@ -48,7 +48,7 @@
 }
 
 .story-card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .story-card .card {
@@ -75,9 +75,9 @@
 }
 
 .industries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .industries .badge {

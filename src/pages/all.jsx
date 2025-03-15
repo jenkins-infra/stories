@@ -85,6 +85,7 @@ const AllPage = () => {
         </div>
         <div className="row">
           <div className="col">
+
             <div className="tell-your-story textcolor">
               <h2>Tell Your Story</h2>
               <p>
