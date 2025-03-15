@@ -114,6 +114,7 @@ html {
   color: var(--hero-text-color);
   margin-bottom: 2px;
 }
+
 .section-subtitle {
   text-align: center;
   color: var(--subtitle-color);
