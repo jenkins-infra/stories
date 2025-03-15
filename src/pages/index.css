@@ -234,6 +234,7 @@ html {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 @media (max-width: 480px) {
   .story-cards {
     grid-template-columns: 1fr;
