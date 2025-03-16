@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
 
