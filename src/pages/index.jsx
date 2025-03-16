@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
-
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
