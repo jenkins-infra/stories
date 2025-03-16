@@ -282,7 +282,7 @@ html {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .story-cards {
     grid-template-columns: 1fr;
   }
