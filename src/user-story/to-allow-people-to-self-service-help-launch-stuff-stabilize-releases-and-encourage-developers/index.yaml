@@ -2,7 +2,7 @@
 metadata:
   title: A digital agency in Munich finds a better way to serve clients through
     faster and more accurate builds using Jenkins.
-  organization: German Digital Agency
+  organization: Bestbytes
   industries:
     - Webshop / Webstore
   programming_languages:
@@ -91,4 +91,4 @@ quotes:
       providing us the tools needed to rock releases and automated tasks!
     image: ./quote.png
 image: noun_Digital-Agency_1275969.png
-tag_line: Globus Automation Magic
+tag_line: Morning Automation Magic
