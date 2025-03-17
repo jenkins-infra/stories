@@ -7,7 +7,7 @@ class Search extends Component {
   state = {
     stories: [],
     search: null,
-    searchResults: [], 
+    searchResults: [],
     isLoading: true,
     isError: false,
     searchQuery: '',
@@ -25,7 +25,7 @@ class Search extends Component {
         metadata: story.metadata,
         body_content: story.body_content,
       }));
-      
+
       this.initializeSearch(stories);
     } catch (err) {
       this.setState({ isError: true });
@@ -33,7 +33,7 @@ class Search extends Component {
     }
   }
 
-  initializeSearch = (stories) => {
+  initializeSearch = stories => {
     const dataToSearch = new JsSearch.Search('title');
 
     dataToSearch.indexStrategy = new JsSearch.PrefixIndexStrategy();
@@ -49,10 +49,10 @@ class Search extends Component {
     dataToSearch.addIndex(['body_content', 'paragraphs']);
 
     dataToSearch.addDocuments(stories);
-    this.setState({ 
+    this.setState({
       stories,
-      search: dataToSearch, 
-      isLoading: false 
+      search: dataToSearch,
+      isLoading: false,
     });
   };
 
@@ -60,14 +60,14 @@ class Search extends Component {
     const searchQuery = e.target.value;
     if (searchQuery) {
       const queryResult = this.state.search.search(searchQuery);
-      this.setState({ 
+      this.setState({
         searchQuery,
-        searchResults: queryResult 
+        searchResults: queryResult,
       });
     } else {
-      this.setState({ 
+      this.setState({
         searchQuery: '',
-        searchResults: [] 
+        searchResults: [],
       });
     }
   };
@@ -78,13 +78,15 @@ class Search extends Component {
 
   render() {
     const { searchResults, searchQuery, isLoading, isError } = this.state;
-    
+
     if (isLoading) {
       return <div className="text-center p-4">Loading search...</div>;
     }
 
     if (isError) {
-      return <div className="text-center p-4 text-danger">Error loading search</div>;
+      return (
+        <div className="text-center p-4 text-danger">Error loading search</div>
+      );
     }
 
     return (
@@ -109,17 +111,18 @@ class Search extends Component {
         </form>
 
         {searchQuery && (
-          <div>
+          <div className="result-container">
             <p className="text-bold mb-4">
-              Found {searchResults.length} {searchResults.length === 1 ? 'story' : 'stories'} 
+              Found {searchResults.length}{' '}
+              {searchResults.length === 1 ? 'story' : 'stories'}
               &nbsp;for "{searchQuery}"
             </p>
 
             {searchResults.length > 0 ? (
               <div className="stories-grid">
                 {searchResults.map((item, index) => (
-                  <Link 
-                    to={`/user-story/${item.slug}`} 
+                  <Link
+                    to={`/user-story/${item.slug}`}
                     key={`story_${index}`}
                     className="story-card text-decoration-none"
                   >
@@ -129,13 +132,17 @@ class Search extends Component {
                         <p className="card-text text-muted">{item.tag_line}</p>
                         <div className="story-meta mb-2">
                           <small className="text-muted">
-                            By {item.authored_by} • {new Date(item.date).toLocaleDateString()}
+                            By {item.authored_by} •{' '}
+                            {new Date(item.date).toLocaleDateString()}
                           </small>
                         </div>
                         {item.metadata?.industries && (
                           <div className="industries">
                             {item.metadata.industries.map((industry, i) => (
-                              <span key={i} className="badge bg-light text-dark me-1">
+                              <span
+                                key={i}
+                                className="badge bg-light text-dark me-1"
+                              >
                                 {industry}
                               </span>
                             ))}

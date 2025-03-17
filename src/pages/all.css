@@ -11,7 +11,11 @@
   --border: #333333;
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   --story-bg: #22282e;
-  --story-gradient: linear-gradient(45deg, rgba(79, 159, 238, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  --story-gradient: linear-gradient(
+    45deg,
+    rgba(79, 159, 238, 0.05) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   --tshirt-bg: rgba(255, 255, 255, 0.05);
   --btn-text: #121212;
   --btn-hover-bg: white;
@@ -28,249 +32,318 @@
     --border: #e0e0e0;
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --story-bg: #f8f9fa;
-    --story-gradient: linear-gradient(45deg, rgba(44, 124, 209, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    --story-gradient: linear-gradient(
+      45deg,
+      rgba(44, 124, 209, 0.05) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
     --tshirt-bg: rgba(0, 0, 0, 0.05);
     --btn-text: white;
     --btn-hover-bg: #1d5fa0;
   }
 }
 
-  body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-  }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px 1rem;
-  }
-  
-  .col {
-    flex: 1 0 100%;
-    padding: 0 15px;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  h1 {
-    color: var(--text-primary);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-  }
-  
-  .userstories-heading {
-    color: var(--text-primary);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    color: var(--text-secondary);
-  }
-  
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.2s ease, background-color 0.2s ease;
-  }
-  
-  a:hover {
-    color: var(--accent-hover);
-    text-decoration: none;
-  }
-  
-  .cardsWrapper {
-    width: 100%;
-    padding: 0 15px;
-  }
-  
-  /* Enhanced Tell Your Story Section */
-  .tell-your-story {
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
-    background-color: var(--story-bg);
-  }
-  
-  .tell-your-story::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--story-gradient);
-    z-index: 0;
-  }
-  
-  .tell-your-story h2 {
-    position: relative;
-    color: var(--text-primary);
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-  
-  .tell-your-story p {
-    position: relative;
-    font-size: 1.1rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .share-story-btn {
-    position: relative;
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--accent);
-    color: var(--btn-text);
-    border-radius: 4px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .share-story-btn:hover {
-    background-color: var(--btn-hover-bg);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    color: var(--btn-text);
-  }
-  
-  .tshirt-promo {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: var(--tshirt-bg);
-    border-radius: 6px;
-  }
-  
-  .tshirt-icon {
-    margin-right: 1rem;
-    color: var(--accent);
-    font-size: 1.5rem;
-  }
-  
-  .tshirt-text {
-    font-weight: 500;
-    color: var(--text-primary);
-  }
-  
-  /* Dark theme specific */
-  hr, .divider {
-    border: none;
-    height: 1px;
-    background-color: var(--border);
-    margin: 2rem 0;
-  }
-  
-  /* Subtle transitions */
-  * {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* Jenkins stories title styling */
-  .stories-title {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .stories-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent);
-  }
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
 
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px 1rem;
+}
+
+.col {
+  flex: 1 0 100%;
+  padding: 0 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.userstories-heading {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+.cardsWrapper {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Enhanced Tell Your Story Section */
+.tell-your-story {
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background-color: var(--story-bg);
+}
+
+.tell-your-story::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--story-gradient);
+  z-index: 0;
+}
+
+.tell-your-story h2 {
+  position: relative;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.tell-your-story p {
+  position: relative;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.share-story-btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: var(--btn-text);
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.share-story-btn:hover {
+  background-color: var(--btn-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: var(--btn-text);
+}
+
+.tshirt-promo {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--tshirt-bg);
+  border-radius: 6px;
+}
+
+.tshirt-icon {
+  margin-right: 1rem;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.tshirt-text {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Dark theme specific */
+hr,
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: 2rem 0;
+}
+
+/* Subtle transitions */
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Jenkins stories title styling */
+.stories-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.stories-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+  max-width: 90%;
+  width: 1000px;
+  max-height: 80vh;
+  overflow: auto;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: var(--accent-hover);
+  text-decoration: none;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-btn {
+  background-color: var(--accent);
+  color: var(--btn-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+.search-btn::before {
+  content: '🔍';
+  margin-right: 8px;
+}
+
+.search-modal-container {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.search-modal-container .search-results {
+  max-height: 60vh;
+  overflow-y: auto;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.search-modal-container input {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+@media (max-width: 640px) {
+  .stories-header {
+    flex-direction: column;
   }
-  
-  .modal-content {
-    background: var(--bg-secondary);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 450px;
-    box-shadow: var(--card-shadow);
-    color: var(--text-primary);
-    position: relative;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;    
-  }
-  
-  .close-btn:hover {
-    color: var(--text-primary);
-    transform: scale(1.1);
-  }
-  
-  .modal-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-  }
-  
-  .modal-content p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-  }
-  
-  .github-link {
-    display: inline-block;
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(79, 159, 238, 0.1);
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .github-link:hover {
-    background: var(--accent);
-    color: var(--btn-text);
-    text-decoration: none;
-  } 
+}
