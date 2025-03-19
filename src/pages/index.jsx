@@ -6,6 +6,10 @@ import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
 
+import heroImage1 from '../images/Jenkins-is-the-Way-768x911.png';
+import heroImage2 from '../images/Jenkins-is-the-Way-768x911 copy.png';
+import heroImage3 from '../images/Jenkins-is-the-Way-768x911 copy 2.png';
+
 const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
   const { stories } = useStaticQuery(graphql`
@@ -26,6 +30,20 @@ const IndexPage = () => {
 
   const [isDarkMode, setIsDarkMode] = React.useState(false);
   const sectionsRef = React.useRef([]);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const heroImages = [
+    { src: heroImage1, alt: 'Jenkins is the way logo' },
+    { src: heroImage2, alt: 'Hero image 2' },
+    { src: heroImage3, alt: 'Hero image 3' },
+  ];
+
+  // Autoplay logic
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   // Dark Mode Detection
   React.useEffect(() => {
@@ -61,6 +79,18 @@ const IndexPage = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Function to get slide class based on index
+  const getSlideClass = (index) => {
+    if (index === currentSlide) return 'active-slide';
+    
+    // Calculate position relative to current slide
+    const total = heroImages.length;
+    const position = (index - currentSlide + total) % total;
+    
+    if (position === 1 || (currentSlide === total - 1 && index === 0)) return 'next-slide';
+    return 'prev-slide';
+  };
+
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
@@ -70,7 +100,23 @@ const IndexPage = () => {
         <div className="hero-content">
           <h1 className="hero-title">Jenkins Is The Way</h1>
           <p className="hero-subtitle">Explore the latest Jenkins user stories.</p>
-          <StaticImage src="../images/Jenkins-is-the-Way-768x911.png" alt="Jenkins is the way logo" className="hero-image" />
+        </div>
+        
+        <div className="carousel-container">
+          <div className="carousel">
+            {heroImages.map((image, index) => (
+              <div 
+                key={index} 
+                className={`carousel-slide ${getSlideClass(index)}`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="hero-image"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -107,7 +153,6 @@ const IndexPage = () => {
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">
-
             {isDarkMode ? (
               <StaticImage src="../images/map_screenshot.png" alt="Screenshot of pins on a map" className="map-image" />
             ) : (
