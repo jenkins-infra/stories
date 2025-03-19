@@ -32,16 +32,16 @@ const IndexPage = () => {
   const sectionsRef = React.useRef([]);
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const heroImages = [
-    { src: heroImage1, alt: 'Jenkins is the way logo' },
-    { src: heroImage2, alt: 'Hero image 2' },
-    { src: heroImage3, alt: 'Hero image 3' },
+    { src: heroImage1, alt: 'Jenkins is the way logo 1' },
+    { src: heroImage2, alt: 'Jenkins is the way logo 2' },
+    { src: heroImage3, alt: 'Jenkins is the way logo 3' },
   ];
 
   // Autoplay logic
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 3000);
+    }, 4500);
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
