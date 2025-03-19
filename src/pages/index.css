@@ -9,7 +9,7 @@ html {
   html {
     background-color: white;
   }
-} 
+}
 
 .textcolor {
   color: white;
@@ -30,10 +30,11 @@ html {
   );
   --hero-text-color: #e0e1ddff;
   --subtitle-color: #b0b0b0;
-  --card-background: #1b263bff;
+  --card-background: #1b1b1b;
   --button-bg: #778da9ff;
   --button-hover-bg: #415a77ff;
   --button-text-color: #121212;
+  --card-border-color: rgb(51, 51, 51);
 }
 
 /* Light Mode */
@@ -42,10 +43,11 @@ html {
     --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
     --hero-text-color: #0d1b2a;
     --subtitle-color: #1b263b;
-    --card-background: #778da9;
+    --card-background: #ededed;
     --button-bg: #415a77;
     --button-hover-bg: #e0e1dd;
     --button-text-color: #ffffff;
+    --card-border-color: rgb(199, 199, 199);
   }
   .hero-section {
     background: var(--background-gradient);
@@ -172,10 +174,18 @@ html {
 }
 
 .section-title {
+  font-weight: bold;
   font-size: 2rem;
   text-align: center;
   color: var(--hero-text-color);
+  margin-bottom: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--subtitle-color);
   margin-bottom: 30px;
+  font-size: 1rem;
 }
 
 .section-cta {
@@ -185,28 +195,47 @@ html {
 
 .story-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .story-card {
-  background: var(--card-background);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--card-border-color);
+  background-color: var(--card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  position: relative;
+  height: 350px;
 }
 
 .story-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.story-image-container {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .story-title {
-  font-size: 1.2rem;
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 1rem;
   color: var(--hero-text-color);
-  margin-bottom: 10px;
+  font-weight: 500;
+  flex-grow: 1;
 }
 
 .story-title a {
@@ -214,10 +243,23 @@ html {
   color: inherit;
 }
 
+.story-author,
+.story-date {
+  padding: 0 15px;
+  margin: 0;
+}
+
 .story-author {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: var(--subtitle-color);
+  padding-bottom: 5px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.story-date {
+  padding-bottom: 15px;
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #888;
 }
 
 /* Map Section */
@@ -323,5 +365,17 @@ html {
   .carousel-slide.next-slide .hero-image,
   .carousel-slide.prev-slide .hero-image {
     max-width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .story-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 479px) {
+  .story-cards {
+    grid-template-columns: 1fr;
   }
 }
