@@ -13,6 +13,8 @@ function UserStoryCard({ slug, image, title, date, tag_line }) {
               image={getImage(image)}
               alt={title}
               className={styles.image}
+              loading="lazy"  // ✅ Ensures lazy loading
+              placeholder="blurred"  // ✅ Blurred placeholder effect while loading
             />
           </Link>
         )}

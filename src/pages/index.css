@@ -252,6 +252,7 @@ html {
 .btn-primary:hover {
   background: var(--button-hover-bg);
   transform: scale(1.05);
+  color: white;
 }
 
 /* Scroll-triggered Animation */
