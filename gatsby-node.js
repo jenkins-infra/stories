@@ -4,7 +4,7 @@ const path = require('path');
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
     const result = await graphql(`{
-      stories: allUserStory {
+      stories: allUserStory (sort: { fields: [date], order: DESC }) {
         edges {
           node {
             id
