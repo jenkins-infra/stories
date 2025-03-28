@@ -107,7 +107,7 @@ pipeline {
         GATSBY_MATOMO_SITE_URL = "https://jenkins-matomo.do.g4v.dev"
       }
       steps {
-        sh 'npm run ci:build'
+        sh 'npm run build'
       }
     }
 
