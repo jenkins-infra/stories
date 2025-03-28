@@ -6,9 +6,9 @@ import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
 
-import heroImage1 from '../images/Jenkins-is-the-Way-768x911.png';
-import heroImage2 from '../images/Jenkins-is-the-Way-768x911 copy.png';
-import heroImage3 from '../images/Jenkins-is-the-Way-768x911 copy 2.png';
+import heroImage1 from '../images/Jenkins-is-the-Way-768x911-1.png';
+import heroImage2 from '../images/Jenkins-is-the-Way-768x911-2.png';
+import heroImage3 from '../images/Jenkins-is-the-Way-768x911-3.png';
 
 const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
