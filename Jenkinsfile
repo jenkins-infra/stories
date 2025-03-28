@@ -18,6 +18,7 @@ pipeline {
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
     GATSBY_CPU_COUNT = "4"
     GATSBY_CACHE_DIR = "${WORKSPACE}/.gatsby-cache"
+    GATSBY_INTERNAL_CACHE_DIR = "${WORKSPACE}/.cache"
     GATSBY_TELEMETRY_DISABLED = "1"
     NODE_OPTIONS = "--no-warnings"
   }

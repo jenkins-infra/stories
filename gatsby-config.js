@@ -1,6 +1,3 @@
-process.env.GATSBY_CACHE_DIR = process.env.GATSBY_CACHE_DIR || './.gatsby-cache';
-process.env.GATSBY_INTERNAL_CACHE_DIR = './.cache';
-
 module.exports = {
     flags: {
         PRESERVE_WEBPACK_CACHE: true,

@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "GATSBY_CACHE_DIR=./.gatsby-cache gatsby build --verbose",
+    "build": "GATSBY_CACHE_DIR=./.gatsby-cache GATSBY_INTERNAL_CACHE_DIR=./.cache gatsby build",
     "ci:build": "mkdir -p .gatsby-cache && npm run build",
     "serve": "gatsby serve",
     "clean": "gatsby clean && rm -rf ./.gatsby-cache",
