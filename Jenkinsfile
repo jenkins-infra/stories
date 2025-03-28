@@ -17,6 +17,7 @@ pipeline {
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
     GATSBY_CPU_COUNT = "4"
+    GATSBY_CACHE_DIR = "${WORKSPACE}/.gatsby-cache"
   }
 
   stages {
@@ -41,7 +42,7 @@ pipeline {
       }
       steps {
         sh 'asdf install'
-        sh 'npm install'
+        sh 'npm ci'
       }
     }
 
@@ -65,7 +66,7 @@ pipeline {
         NODE_ENV = 'development'
       }
       steps {
-        sh 'npm run build'
+        sh 'npm run ci:build'
       }
     }
 
@@ -102,7 +103,7 @@ pipeline {
         GATSBY_MATOMO_SITE_URL = "https://jenkins-matomo.do.g4v.dev"
       }
       steps {
-        sh 'npm run build'
+        sh 'npm run ci:build'
       }
     }
 

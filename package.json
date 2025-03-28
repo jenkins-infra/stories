@@ -10,9 +10,10 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "GATSBY_CACHE_DIR=./.gatsby-cache gatsby build",
+    "ci:build": "mkdir -p .gatsby-cache && npm run build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "clean": "gatsby clean && rm -rf ./.gatsby-cache",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{css,js,jsx,json}\"",
     "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\""
