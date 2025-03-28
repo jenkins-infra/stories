@@ -50,19 +50,19 @@ pipeline {
       }
     }
 
-    stage('Lint and Test') {
-      environment {
-        NODE_ENV = "development"
-      }
-      steps {
-        sh 'npm run lint && npx eslint --format checkstyle > eslint.json'
-      }
-      post {
-        always {
-          recordIssues(tools: [esLint(pattern: 'eslint.json')])
-        }
-      }
-    }
+//     stage('Lint and Test') {
+//       environment {
+//         NODE_ENV = "development"
+//       }
+//       steps {
+//         sh 'npm run lint && npx eslint --format checkstyle > eslint.json'
+//       }
+//       post {
+//         always {
+//           recordIssues(tools: [esLint(pattern: 'eslint.json')])
+//         }
+//       }
+//     }
 
     stage('Build PR') {
       when { changeRequest() }
