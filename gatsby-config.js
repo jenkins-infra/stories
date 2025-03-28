@@ -25,7 +25,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-decap-cms',
             options: {
-                modulePath: `${__dirname}/src/cms/index.jsx`, // Path to your CMS configuration
+                modulePath: `${__dirname}/src/cms/cms.js`, // Path to your CMS configuration
             },
         },
         {
