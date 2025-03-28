@@ -55,8 +55,7 @@ pipeline {
         NODE_ENV = "development"
       }
       steps {
-        sh 'npm run build'
-        sh 'npm run lint && npx eslint --format checkstyle > eslint.json'
+        sh 'npm run build && npm run lint && npx eslint --format checkstyle > eslint.json'
       }
       post {
         always {
