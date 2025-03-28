@@ -17,6 +17,7 @@ pipeline {
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
     GATSBY_CPU_COUNT = "4"
+    // Added the below to fix permissions issue with the cache
     GATSBY_CACHE_DIR = "${WORKSPACE}/.gatsby-cache"
     GATSBY_INTERNAL_CACHE_DIR = "${WORKSPACE}/.cache"
     GATSBY_TELEMETRY_DISABLED = "1"
@@ -104,6 +105,11 @@ pipeline {
       environment {
         GATSBY_MATOMO_SITE_ID = "2"
         GATSBY_MATOMO_SITE_URL = "https://jenkins-matomo.do.g4v.dev"
+        // Added the below to fix permissions issue with the cache
+        GATSBY_CACHE_DIR = "${WORKSPACE}/.gatsby-cache"
+        GATSBY_INTERNAL_CACHE_DIR = "${WORKSPACE}/.cache"
+        GATSBY_TELEMETRY_DISABLED = "1"
+        NODE_OPTIONS = "--no-warnings"
       }
       steps {
         sh 'npm run ci:build'
