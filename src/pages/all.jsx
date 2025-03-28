@@ -10,7 +10,7 @@ function generateUserStoryIssueURL() {
   const queryParams = new URLSearchParams();
   queryParams.append('title', 'User Success Story');
   queryParams.append('labels', 'success-story');
-
+  
   const bodyContent = `### Title  
 _enter the title for your success story_
 
