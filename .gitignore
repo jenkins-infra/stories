@@ -4,9 +4,12 @@ public
 
 src/layout.jsx
 src/layout.css
+src/.DS_Store
 static/site.webmanifest
 
 # Local Netlify folder
 .netlify
 
 schema.graphql
+.idea/
+.vscode/

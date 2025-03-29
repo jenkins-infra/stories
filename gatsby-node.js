@@ -1,6 +1,7 @@
 const YAML = require('yaml');
 const path = require('path');
 
+<<<<<<< HEAD
 async function createUserStoryPages({ graphql, createPage, createRedirect }) {
   const userStory = path.resolve('src/pages/_user_story.jsx');
   const result = await graphql(`
@@ -21,9 +22,36 @@ async function createUserStoryPages({ graphql, createPage, createRedirect }) {
           }
         }
       }
+=======
+async function createUserStoryPages({graphql, createPage, createRedirect}) {
+    const userStory = path.resolve('src/pages/_user_story.jsx');
+    const result = await graphql(`{
+        stories: allUserStory {
+            edges {
+                node {
+                    id
+                    slug
+                }
+                next {
+                    title
+                    slug
+                }
+                previous {
+                    title
+                    slug
+                }
+            }
+        }
+    }`);
+
+    if (result.errors) {
+        console.error(result.errors);
+        throw result.errors;
+>>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
     }
   `);
 
+<<<<<<< HEAD
   if (result.errors) {
     console.error(result.errors);
     throw result.errors;
@@ -45,6 +73,25 @@ async function createUserStoryPages({ graphql, createPage, createRedirect }) {
         next: edge.next,
         previous: edge.previous,
       },
+=======
+    result.data.stories.edges.forEach(edge => {
+        if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
+            createRedirect({
+                fromPath: `/user-story/jenkins-is-the-way-${edge.node.slug}/`,
+                toPath: `/user-story/${edge.node.slug}/`,
+                isPermanent: true,
+            });
+        }
+        createPage({
+            path: `/user-story/${edge.node.slug}/`,
+            component: userStory,
+            context: {
+                id: edge.node.id,
+                next: edge.next,
+                previous: edge.previous,
+            },
+        });
+>>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
     });
   });
 }
@@ -71,6 +118,7 @@ exports.onCreateNode = async ({
       const obj = YAML.parse(content);
       obj.slug = path.basename(node.dir);
 
+<<<<<<< HEAD
       const yamlNode = {
         ...obj,
         id: createNodeId(`${obj.slug} >>> UserStory`),
@@ -86,6 +134,23 @@ exports.onCreateNode = async ({
         createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`),
       );
       yamlNode.internal.contentDigest = createContentDigest(yamlNode);
+=======
+            const yamlNode = {
+                ...obj,
+                id: createNodeId(`${obj.slug} >>> UserStory`),
+                children: [],
+                parent: node.id,
+                internal: {
+                    type: 'UserStory',
+                },
+            };
+
+            const paragraphs = obj.body_content.paragraphs;
+            yamlNode.body_content.paragraphs = paragraphs.map((_, idx) =>
+                createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`)
+            );
+            yamlNode.internal.contentDigest = createContentDigest(yamlNode);
+>>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
 
       createNode(yamlNode);
       createParentChildLink({ parent: node, child: yamlNode });
@@ -113,9 +178,15 @@ exports.onCreateNode = async ({
   }
 };
 
+<<<<<<< HEAD
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   createTypes(`
+=======
+exports.createSchemaCustomization = ({actions}) => {
+    const {createTypes} = actions;
+    createTypes(`
+>>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
         scalar CustomDate
 
         type UserStoryMetadata {
