@@ -13,7 +13,6 @@ pipeline {
   environment {
     NODE_ENV = 'production'
     TZ = "UTC"
-    NETLIFY = "true"
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
     GATSBY_CPU_COUNT = "4"
