@@ -13,10 +13,14 @@ pipeline {
   environment {
     NODE_ENV = 'production'
     TZ = "UTC"
-    NETLIFY = "true"
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
     GATSBY_CPU_COUNT = "4"
+    // Added the below to fix permissions issue with the cache
+    GATSBY_CACHE_DIR = "${env.WORKSPACE}/.gatsby-cache"
+    GATSBY_INTERNAL_CACHE_DIR = "${env.WORKSPACE}/.cache"
+    GATSBY_TELEMETRY_DISABLED = "1"
+    NODE_OPTIONS = "--no-warnings"
   }
 
   stages {
@@ -41,7 +45,7 @@ pipeline {
       }
       steps {
         sh 'asdf install'
-        sh 'npm install'
+        sh 'npm ci'
       }
     }
 
