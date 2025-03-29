@@ -2,6 +2,7 @@ const YAML = require('yaml');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 async function createUserStoryPages({ graphql, createPage, createRedirect }) {
   const userStory = path.resolve('src/pages/_user_story.jsx');
   const result = await graphql(`
@@ -74,6 +75,34 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
         previous: edge.previous,
       },
 =======
+=======
+async function createUserStoryPages({graphql, createPage, createRedirect}) {
+    const userStory = path.resolve('src/pages/_user_story.jsx');
+    const result = await graphql(`{
+        stories: allUserStory (sort: { fields: [date], order: DESC }) {
+            edges {
+                node {
+                    id
+                    slug
+                }
+                next {
+                    title
+                    slug
+                }
+                previous {
+                    title
+                    slug
+                }
+            }
+        }
+    }`);
+
+    if (result.errors) {
+        console.error(result.errors);
+        throw result.errors;
+    }
+
+>>>>>>> 32dd01f (resolved conflicts)
     result.data.stories.edges.forEach(edge => {
         if (!edge.node.slug.startsWith('jenkins-is-the-way-')) {
             createRedirect({
@@ -91,33 +120,27 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
                 previous: edge.previous,
             },
         });
+<<<<<<< HEAD
 >>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
+=======
+>>>>>>> 32dd01f (resolved conflicts)
     });
-  });
 }
 
-exports.createPages = async ({
-  graphql,
-  actions: { createPage, createRedirect },
-}) => {
-  await createUserStoryPages({ graphql, createPage, createRedirect });
+exports.createPages = async ({graphql, actions: {createPage, createRedirect}}) => {
+    await createUserStoryPages({graphql, createPage, createRedirect});
 };
 
-exports.onCreateNode = async ({
-  node,
-  actions,
-  loadNodeContent,
-  createNodeId,
-  createContentDigest,
-}) => {
-  const { createNode, createParentChildLink } = actions;
+exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
+    const {createNode, createParentChildLink} = actions;
 
-  if (node.internal.type === 'File') {
-    if (node.base === 'index.yaml') {
-      const content = await loadNodeContent(node);
-      const obj = YAML.parse(content);
-      obj.slug = path.basename(node.dir);
+    if (node.internal.type === 'File') {
+        if (node.base === 'index.yaml') {
+            const content = await loadNodeContent(node);
+            const obj = YAML.parse(content);
+            obj.slug = path.basename(node.dir);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       const yamlNode = {
         ...obj,
@@ -145,39 +168,55 @@ exports.onCreateNode = async ({
                 },
             };
 
+=======
+            const yamlNode = {
+                ...obj,
+                id: createNodeId(`${obj.slug} >>> UserStory`),
+                children: [],
+                parent: node.id,
+                internal: {
+                    type: 'UserStory',
+                },
+            };
+
+>>>>>>> 32dd01f (resolved conflicts)
             const paragraphs = obj.body_content.paragraphs;
             yamlNode.body_content.paragraphs = paragraphs.map((_, idx) =>
                 createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`)
             );
             yamlNode.internal.contentDigest = createContentDigest(yamlNode);
+<<<<<<< HEAD
 >>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
+=======
+>>>>>>> 32dd01f (resolved conflicts)
 
-      createNode(yamlNode);
-      createParentChildLink({ parent: node, child: yamlNode });
+            createNode(yamlNode);
+            createParentChildLink({parent: node, child: yamlNode});
 
-      for (let i = 0; i < paragraphs.length; i++) {
-        const markdownNode = {
-          id: yamlNode.body_content.paragraphs[i],
-          frontmatter: {},
-          excerpt: '',
-          rawMarkdownBody: paragraphs[i],
-          fileAbsolutePath: node.absolutePath,
-          children: [],
-          parent: yamlNode.id,
-          internal: {
-            content: paragraphs[i],
-            type: 'MarkdownRemark',
-          },
-        };
-        markdownNode.internal.contentDigest = createContentDigest(markdownNode);
-        createNode(markdownNode);
-        createParentChildLink({ parent: yamlNode, child: markdownNode });
-        createParentChildLink({ parent: node, child: markdownNode });
-      }
+            for (let i = 0; i < paragraphs.length; i++) {
+                const markdownNode = {
+                    id: yamlNode.body_content.paragraphs[i],
+                    frontmatter: {},
+                    excerpt: '',
+                    rawMarkdownBody: paragraphs[i],
+                    fileAbsolutePath: node.absolutePath,
+                    children: [],
+                    parent: yamlNode.id,
+                    internal: {
+                        content: paragraphs[i],
+                        type: 'MarkdownRemark',
+                    },
+                };
+                markdownNode.internal.contentDigest = createContentDigest(markdownNode);
+                createNode(markdownNode);
+                createParentChildLink({parent: yamlNode, child: markdownNode});
+                createParentChildLink({parent: node, child: markdownNode});
+            }
+        }
     }
-  }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -187,6 +226,11 @@ exports.createSchemaCustomization = ({actions}) => {
     const {createTypes} = actions;
     createTypes(`
 >>>>>>> 8793ee3 (feat: migrate from Netlify CMS to Decap CMS and update dependencies (#79))
+=======
+exports.createSchemaCustomization = ({actions}) => {
+    const {createTypes} = actions;
+    createTypes(`
+>>>>>>> 32dd01f (resolved conflicts)
         scalar CustomDate
 
         type UserStoryMetadata {
@@ -213,17 +257,17 @@ exports.createSchemaCustomization = ({actions}) => {
     `);
 };
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === 'build-html') {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /leaflet/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    });
-  }
+exports.onCreateWebpackConfig = ({stage, loaders, actions}) => {
+    if (stage === 'build-html') {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /leaflet/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        });
+    }
 };
