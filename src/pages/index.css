@@ -249,11 +249,23 @@ html {
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+/* Dark Mode Hover (default) */
 .btn-primary:hover {
   background: var(--button-hover-bg);
   transform: scale(1.05);
   color: white;
 }
+
+/* Light Mode Hover */
+@media (prefers-color-scheme: light) {
+  .btn-primary:hover {
+    background: var(--button-hover-bg);
+    transform: scale(1.05);
+    color: #000000 /* Keeps the original #3182ce from light mode variables */
+  }
+}
+
+
 
 /* Scroll-triggered Animation */
 .section-visible {
