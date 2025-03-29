@@ -5,6 +5,18 @@ import babelParser from '@babel/eslint-parser';
 
 export default [
     {
+        ignores: [
+            'node_modules/',
+            '.cache/',
+            'public/',
+            'src/layout.css',
+            'src/layout.jsx',
+            'src/images/',
+            'src/user-story/',
+            'src/cms/',
+        ],
+    },
+    {
         languageOptions: {
             parser: babelParser,
             parserOptions: {
@@ -78,19 +90,9 @@ export default [
             'strict': [2, 'global'],
         },
         settings: {
-            'import/extensions': ['.js', '.jsx', '.cjs'],
-            'import/resolver': {node: {extensions: ['.js', '.jsx', '.cjs']}},
+            'import/extensions': ['.js', '.jsx'],
+            'import/resolver': {node: {extensions: ['.js', '.jsx']}},
             'react': {version: 'detect'},
         },
-        ignores: [
-            'node_modules/',
-            '.cache/',
-            'public',
-            'src/layout.css',
-            'src/layout.jsx',
-            'src/images/user-story/',
-            'src/user-story/',
-            'src/pages/images/',
-        ],
     },
 ];
