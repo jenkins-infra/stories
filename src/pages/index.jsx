@@ -14,7 +14,7 @@ const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
   const { stories } = useStaticQuery(graphql`
     query FrontPageStories {
-      stories: allUserStory(sort: { fields: date, order: DESC }, limit: 4) {
+      stories: allUserStory(sort: {date: DESC}, limit: 4) {
         edges {
           node {
             title

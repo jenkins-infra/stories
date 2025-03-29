@@ -56,7 +56,7 @@ const AllPage = () => {
   const title = 'Jenkins - User Story Library - All';
   const { stories } = useStaticQuery(graphql`
     query AllStories {
-      stories: allUserStory(sort: { fields: [date], order: DESC }) {
+      stories: allUserStory(sort: {date: DESC}) {
         edges {
           node {
             title
