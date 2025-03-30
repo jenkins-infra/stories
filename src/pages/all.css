@@ -274,3 +274,33 @@
     color: var(--btn-text);
     text-decoration: none;
   } 
+  .load-more-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Light mode styles */
+  body:not(.dark-mode) .load-more-btn {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body:not(.dark-mode) .load-more-btn:hover {
+    background-color: #555;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .load-more-btn {
+    background-color: #ddd;
+    color: #222;
+  }
+  
+  body.dark-mode .load-more-btn:hover {
+    background-color: #bbb;
+  }
+  

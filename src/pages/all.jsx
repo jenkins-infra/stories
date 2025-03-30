@@ -53,6 +53,9 @@ const Modal = ({ isOpen, onClose }) => {
 // Main page component
 const AllPage = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [displayCount, setDisplayCount] = React.useState(10); // Initial number of stories to display
+  const storiesPerLoad = 10; // Number of stories to load each time
+
   const title = 'Jenkins - User Story Library - All';
   const { stories } = useStaticQuery(graphql`
     query AllStories {
@@ -74,6 +77,14 @@ const AllPage = () => {
     }
   `);
 
+  const allStories = stories.edges;
+  const totalStories = allStories.length;
+  const displayedStories = allStories.slice(0, displayCount);
+
+  const handleLoadMore = () => {
+    setDisplayCount(prevCount => prevCount + storiesPerLoad);
+  };
+
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/all" />
@@ -85,7 +96,6 @@ const AllPage = () => {
         </div>
         <div className="row">
           <div className="col">
-
             <div className="tell-your-story textcolor">
               <h2>Tell Your Story</h2>
               <p>
@@ -109,7 +119,7 @@ const AllPage = () => {
         <div className="row">
           <h2 className="userstories-heading">Jenkins User Stories</h2>
           <div className="col cardsWrapper">
-            {stories.edges.map(({ node: story }) => (
+            {displayedStories.map(({ node: story }) => (
               <UserStoryCard
                 key={story.slug}
                 slug={story.slug}
@@ -121,6 +131,15 @@ const AllPage = () => {
             ))}
           </div>
         </div>
+        {displayCount < totalStories && (
+          <div className="row">
+            <div className="col text-center">
+              <button onClick={handleLoadMore} className="load-more-btn">
+                Load More
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Modal */}
