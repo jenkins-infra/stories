@@ -104,7 +104,9 @@ html {
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .hero-image:hover {
@@ -229,7 +231,9 @@ html {
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .map-image:hover {
@@ -246,7 +250,9 @@ html {
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 /* Dark Mode Hover (default) */
@@ -273,11 +279,15 @@ html {
 
 /* Search Bar Animation */
 .search-section {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .search-section input {
-  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 /* Hover/Focus Effect */
