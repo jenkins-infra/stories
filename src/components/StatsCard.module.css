@@ -22,10 +22,11 @@
   position: relative;
 }
 @media (prefers-color-scheme: light) {
-  .statBox{
+  .statBox {
     background-color: white;
   }
-} 
+}
+
 .statBox:hover {
   transform: translateY(-4px);
 }
@@ -37,10 +38,11 @@
   margin-bottom: 8px;
 }
 @media (prefers-color-scheme: light) {
-  .statValue{
+  .statValue {
     color: black;
   }
-} 
+}
+
 .statLabel {
   font-size: 14px;
   font-weight: 400;
