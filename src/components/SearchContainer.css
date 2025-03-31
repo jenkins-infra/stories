@@ -1,38 +1,38 @@
 :root {
-    --background-color: #2b3035;
-    --text-color: rgba(255, 255, 255, 0.9);
-    --muted-text-color: rgba(255, 255, 255, 0.6);
-    --card-border-color: rgba(255, 255, 255, 0.1);
-    --card-hover-border-color: rgba(255, 255, 255, 0.2);
-    --card-shadow-color: rgba(0, 0, 0, 0.2);
-    --card-hover-shadow-color: rgba(0, 0, 0, 0.3);
-    --badge-bg-color: rgba(255, 255, 255, 0.1);
-    --badge-text-color: rgba(255, 255, 255, 0.9);
-    --input-bg-color: #2b3035;
-    --input-border-color: rgba(255, 255, 255, 0.2);
-    --input-focus-border-color: rgba(255, 255, 255, 0.4);
-    --input-focus-shadow-color: rgba(255, 255, 255, 0.1);
-    --input-placeholder-color: rgba(255, 255, 255, 0.5);
-    --error-color: var(--bs-danger);
+  --background-color: #2b3035;
+  --text-color: rgba(255, 255, 255, 0.9);
+  --muted-text-color: rgba(255, 255, 255, 0.6);
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --card-hover-border-color: rgba(255, 255, 255, 0.2);
+  --card-shadow-color: rgba(0, 0, 0, 0.2);
+  --card-hover-shadow-color: rgba(0, 0, 0, 0.3);
+  --badge-bg-color: rgba(255, 255, 255, 0.1);
+  --badge-text-color: rgba(255, 255, 255, 0.9);
+  --input-bg-color: #2b3035;
+  --input-border-color: rgba(255, 255, 255, 0.2);
+  --input-focus-border-color: rgba(255, 255, 255, 0.4);
+  --input-focus-shadow-color: rgba(255, 255, 255, 0.1);
+  --input-placeholder-color: rgba(255, 255, 255, 0.5);
+  --error-color: var(--bs-danger);
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #ffffff;
-        --text-color: #2d3436;
-        --muted-text-color: rgba(0, 0, 0, 0.6);
-        --card-hover-border-color: white;
-        --card-shadow-color: rgba(0, 0, 0, 0.05);
-        --card-hover-shadow-color: rgba(0, 0, 0, 0.1);
-        --badge-bg-color: #f1f3f5;
-        --badge-text-color: #495057;
-        --input-bg-color: #f8f9fa;
-        --input-border-color: #e9ecef;
-        --input-focus-border-color: #ced4da;
-        --input-focus-shadow-color: rgba(0, 0, 0, 0.05);
-        --input-placeholder-color: rgba(0, 0, 0, 0.4);
-        --error-color: #e74c3c;
-    }
+  :root {
+    --background-color: #ffffff;
+    --text-color: #2d3436;
+    --muted-text-color: rgba(0, 0, 0, 0.6);
+    --card-hover-border-color: white;
+    --card-shadow-color: rgba(0, 0, 0, 0.05);
+    --card-hover-shadow-color: rgba(0, 0, 0, 0.1);
+    --badge-bg-color: #f1f3f5;
+    --badge-text-color: #495057;
+    --input-bg-color: #f8f9fa;
+    --input-border-color: #e9ecef;
+    --input-focus-border-color: #ced4da;
+    --input-focus-shadow-color: rgba(0, 0, 0, 0.05);
+    --input-placeholder-color: rgba(0, 0, 0, 0.4);
+    --error-color: #e74c3c;
+  }
 }
 
 .stories-grid {
@@ -43,8 +43,8 @@
 }
 
 .story-card {
-    transition: transform 0.2s ease-in-out;
-    color: var(--text-color);
+  transition: transform 0.2s ease-in-out;
+  color: var(--text-color);
 }
 
 .story-card:hover {
@@ -52,26 +52,26 @@
 }
 
 .story-card .card {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--card-border-color);
-    box-shadow: 0 2px 4px var(--card-shadow-color);
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  box-shadow: 0 2px 4px var(--card-shadow-color);
 }
 
 .story-card:hover .card {
-    box-shadow: 0 4px 12px var(--card-hover-shadow-color);
-    border-color: var(--card-hover-border-color);
+  box-shadow: 0 4px 12px var(--card-hover-shadow-color);
+  border-color: var(--card-hover-border-color);
 }
 
 .story-card .card-title {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .story-card .card-text {
-    color: var(--muted-text-color);
+  color: var(--muted-text-color);
 }
 
 .story-card .text-muted {
-    color: var(--muted-text-color) !important;
+  color: var(--muted-text-color) !important;
 }
 
 .industries {
@@ -81,60 +81,60 @@
 }
 
 .industries .badge {
-    background-color: var(--badge-bg-color);
-    color: var(--badge-text-color);
-    border: 1px solid var(--card-border-color);
+  background-color: var(--badge-bg-color);
+  color: var(--badge-text-color);
+  border: 1px solid var(--card-border-color);
 }
 
 .search-container input {
-    background-color: var(--input-bg-color);
-    border-color: var(--input-border-color);
-    color: var(--text-color);
+  background-color: var(--input-bg-color);
+  border-color: var(--input-border-color);
+  color: var(--text-color);
 }
 
 .search-container input:focus {
-    background-color: var(--input-bg-color);
-    border-color: var(--input-focus-border-color);
-    color: var(--text-color);
-    box-shadow: 0 0 0 0.25rem var(--input-focus-shadow-color);
+  background-color: var(--input-bg-color);
+  border-color: var(--input-focus-border-color);
+  color: var(--text-color);
+  box-shadow: 0 0 0 0.25rem var(--input-focus-shadow-color);
 }
 
 .search-container input::placeholder {
-    color: var(--input-placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .search-container .input-group-text {
-    background-color: var(--input-bg-color);
-    border-color: var(--input-border-color);
-    color: var(--muted-text-color);
+  background-color: var(--input-bg-color);
+  border-color: var(--input-border-color);
+  color: var(--muted-text-color);
 }
 
 .results-count,
 .no-results,
 .error-state {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .error-state {
-    color: var(--error-color);
+  color: var(--error-color);
 }
 
 .industries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  overflow: hidden;
 }
 
 .industries .badge {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 150px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.35rem 0.6rem;
-    font-size: 0.75rem;
-    border-radius: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.35rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
 }
