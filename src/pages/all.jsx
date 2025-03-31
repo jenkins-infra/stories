@@ -10,7 +10,7 @@ function generateUserStoryIssueURL() {
   const queryParams = new URLSearchParams();
   queryParams.append('title', 'User Success Story');
   queryParams.append('labels', 'success-story');
-  
+
   const bodyContent = `### Title  
 _enter the title for your success story_
 
@@ -34,7 +34,8 @@ const Modal = ({ isOpen, onClose }) => {
       <div className="modal-content">
         <h2>Contribute Your Story</h2>
         <p>
-          To share your Jenkins story, create an Issue and follow up with a Pull Request to the following GitHub repository:
+          To share your Jenkins story, create an Issue and follow up with a Pull
+          Request to the following GitHub repository:
         </p>
         <a
           href={generateUserStoryIssueURL()}
@@ -44,7 +45,9 @@ const Modal = ({ isOpen, onClose }) => {
         >
           Share Your Story Now
         </a>
-        <button onClick={onClose} className="close-btn">✖</button>
+        <button onClick={onClose} className="close-btn">
+          ✖
+        </button>
       </div>
     </div>
   );
@@ -85,13 +88,14 @@ const AllPage = () => {
         </div>
         <div className="row">
           <div className="col">
-
             <div className="tell-your-story textcolor">
               <h2>Tell Your Story</h2>
               <p>
-                "Jenkins Is The Way" is a global showcase of how
-                developers and engineers are building, deploying, and automating
-                great stuff with Jenkins. Share the story of your project's goals, technical challenges, and the unique solutions you encountered with Jenkins.
+                "Jenkins Is The Way" is a global showcase of how developers and
+                engineers are building, deploying, and automating great stuff
+                with Jenkins. Share the story of your project's goals, technical
+                challenges, and the unique solutions you encountered with
+                Jenkins.
               </p>
               <div className="tshirt-promo">
                 <span className="tshirt-icon">👕</span>
@@ -100,7 +104,10 @@ const AllPage = () => {
                   T-shirt.
                 </span>
               </div>
-              <button onClick={() => setIsModalOpen(true)} className="share-story-btn">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="share-story-btn"
+              >
                 Share Your Story
               </button>
             </div>
