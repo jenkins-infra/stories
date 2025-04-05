@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FaMoon, FaSun } from 'react-icons/fa'; // Import icons
 import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
@@ -10,7 +11,7 @@ const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
   const { stories } = useStaticQuery(graphql`
     query FrontPageStories {
-      stories: allUserStory(sort: {date: DESC}, limit: 4) {
+      stories: allUserStory(sort: { date: DESC }, limit: 4) {
         edges {
           node {
             title
@@ -49,6 +50,20 @@ const IndexPage = () => {
       darkModeMediaQuery.removeEventListener('change', checkDarkMode);
   }, []);
 
+  // Apply dark mode class to body
+  React.useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  // Toggle Dark Mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
   // Scroll-triggered Animation
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -74,6 +89,15 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
+
+      {/* Dark Mode Toggle Button */}
+      <button
+        className="dark-mode-toggle"
+        onClick={toggleDarkMode}
+        aria-label="Toggle Dark Mode"
+      >
+        {isDarkMode ? <FaSun className="icon" /> : <FaMoon className="icon" />}
+      </button>
 
       {/* Hero Section */}
       <div ref={el => (sectionsRef.current[0] = el)} className="hero-section">
