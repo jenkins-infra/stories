@@ -18,18 +18,16 @@ class Search extends Component {
     try {
       const stories = allUserStory.nodes.map(story => ({
         title: story.title,
-        tag_line: story.tag_line,
         authored_by: story.authored_by,
         slug: story.slug,
         date: story.date,
-        metadata: story.metadata,
-        body_content: story.body_content,
+        image: story.image?.publicURL || null, // Use the public URL of the image
       }));
 
       this.initializeSearch(stories);
     } catch (err) {
       this.setState({ isError: true });
-      console.log(`Error processing story data\n${err}`);
+      console.error(`Error processing story data\n${err}`);
     }
   }
 
@@ -41,12 +39,7 @@ class Search extends Component {
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex('title');
 
     dataToSearch.addIndex('title');
-    dataToSearch.addIndex('tag_line');
     dataToSearch.addIndex('authored_by');
-    dataToSearch.addIndex(['metadata', 'title']);
-    dataToSearch.addIndex(['metadata', 'industries']);
-    dataToSearch.addIndex(['metadata', 'programming_languages']);
-    dataToSearch.addIndex(['body_content', 'paragraphs']);
 
     dataToSearch.addDocuments(stories);
     this.setState({
@@ -74,6 +67,16 @@ class Search extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+  };
+
+  formatDate = dateString => {
+    const options = {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+    };
+    return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
   render() {
@@ -122,32 +125,28 @@ class Search extends Component {
               <div className="stories-grid">
                 {searchResults.map((item, index) => (
                   <Link
-                    to={`/user-story/${item.slug}`}
+                    to={`/user-story/${item.slug}`} // ✅ Navigate to the specific story
                     key={`story_${index}`}
                     className="story-card text-decoration-none"
                   >
                     <div className="card h-100">
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="card-img-top"
+                        />
+                      )}
                       <div className="card-body">
                         <h3 className="h5 card-title">{item.title}</h3>
-                        <p className="card-text text-muted">{item.tag_line}</p>
-                        <div className="story-meta mb-2">
-                          <small className="text-muted">
-                            By {item.authored_by} •{' '}
-                            {new Date(item.date).toLocaleDateString()}
-                          </small>
+                        <div className="story-meta">
+                          <p className="card-text text-muted">
+                            Authored By <strong>{item.authored_by}</strong>
+                          </p>
+                          <time className="text-muted">
+                            {this.formatDate(item.date)}
+                          </time>
                         </div>
-                        {item.metadata?.industries && (
-                          <div className="industries">
-                            {item.metadata.industries.map((industry, i) => (
-                              <span
-                                key={i}
-                                className="badge bg-light text-dark me-1"
-                              >
-                                {industry}
-                              </span>
-                            ))}
-                          </div>
-                        )}
                       </div>
                     </div>
                   </Link>
@@ -171,27 +170,16 @@ const SearchContainer = () => {
       allUserStory {
         nodes {
           title
-          tag_line
           authored_by
           slug
           date
-          metadata {
-            title
-            industries
-            programming_languages
-            platforms
-          }
-          body_content {
-            title
-            paragraphs {
-              html
-            }
+          image {
+            publicURL # Fetch the public URL of the image
           }
         }
       }
     }
   `);
-
   return <Search allUserStory={data.allUserStory} />;
 };
 
