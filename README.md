@@ -54,15 +54,9 @@ Open [http://localhost:8000](http://localhost:8000) on your browser to see the r
 
 Ensure consistent code style:
 
-1. Install Prettier (version `3.4.2`):
-   ```bash
-   npm install --save-dev prettier@3.4.2
-   ```
-
-2. Run the formatter:
-   ```bash
-   npm run format
-   ```
+```bash
+npm run format
+```
 
 ## Contributing Guidelines
 
@@ -79,4 +73,3 @@ Ensure consistent code style:
 5. Add your changes to staging area and commit your changes
 6. Push your changes to GitHub
 7. Submit a pull request
-
