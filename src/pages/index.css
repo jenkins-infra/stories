@@ -49,11 +49,64 @@ html {
     --button-text-color: #ffffff;
     --card-border-color: rgb(199, 199, 199);
   }
+
   .hero-section {
     background: var(--background-gradient);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
   }
+}
+
+/* Default Light Mode Styles */
+body {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  /* Ensures the button stays fixed in the viewport */
+  bottom: 1rem;
+  /* Position it 1rem from the bottom */
+  right: 1rem;
+  /* Position it 1rem from the right */
+  background: var(--background-color);
+  /* Matches the current mode's background */
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  /* Ensures the button is above all other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.dark-mode-toggle .icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  /* Matches the current mode's text color */
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  /* Slightly enlarges the button on hover */
 }
 
 /* Hero Section */
@@ -78,9 +131,11 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -267,7 +322,8 @@ html {
   .btn-primary:hover {
     background: var(--button-hover-bg);
     transform: scale(1.05);
-    color: #000000 /* Keeps the original #3182ce from light mode variables */
+    color: #000000;
+    /* Keeps the original #3182ce from light mode variables */
   }
 }
 
