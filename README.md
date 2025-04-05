@@ -54,9 +54,15 @@ Open [http://localhost:8000](http://localhost:8000) on your browser to see the r
 
 Ensure consistent code style:
 
-```bash
-npm run format
-```
+1. Install Prettier (if not already installed):
+   ```bash
+   npm install --save-dev prettier
+   ```
+
+2. Run the formatter:
+   ```bash
+   npm run format
+   ```
 
 ## Contributing Guidelines
 
