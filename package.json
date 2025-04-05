@@ -56,7 +56,8 @@
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-react": "^7.37.2"
+    "eslint-plugin-react": "^7.37.2",
+    "prettier": "^3.4.2"
   },
   "resolutions": {
     "graphql": "16.10.0"
@@ -64,8 +65,7 @@
   "overrides": {
     "graphql": "16.10.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.5.0",
-    "prettier": "^3.4.2"
+    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.5.0"
   },
   "optionalDependencies": {
     "@parcel/watcher": "^2.5.1"
