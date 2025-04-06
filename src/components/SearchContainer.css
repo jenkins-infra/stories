@@ -84,10 +84,6 @@
   min-height: 150px;
   object-fit: cover; 
   background-color: var(--card-border-color);
-  overflow: hidden;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border: none !important;
 }
 
 .story-card .card-body {
@@ -98,9 +94,6 @@
   justify-content: center; 
   align-items: center; 
   height: 100%; 
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border: none !important;
 }
 
 .story-card *,
