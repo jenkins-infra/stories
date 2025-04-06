@@ -209,7 +209,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .stories-grid {
     grid-template-columns: repeat(2, 1fr); 
   }
