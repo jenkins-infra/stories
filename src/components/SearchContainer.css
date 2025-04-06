@@ -215,7 +215,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .stories-grid {
     grid-template-columns: 1fr;
   }
