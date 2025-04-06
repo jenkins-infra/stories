@@ -203,7 +203,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .stories-grid {
     grid-template-columns: repeat(3, 1fr); 
   }
