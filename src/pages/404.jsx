@@ -2,9 +2,11 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../layout';
+import { ThemeContext } from '../components/ThemeContext';
 import './notFound.css';
 
 const NotFoundPage = () => {
+  const { theme } = React.useContext(ThemeContext);
   const title = 'Page not found';
 
   return (
@@ -22,7 +24,7 @@ const NotFoundPage = () => {
           <span role="img" aria-label="Pensive emoji">
             😔
           </span>{' '}
-          we couldn’t find what you were looking for.
+          we couldn't find what you were looking for.
           <br />
           {process.env.NODE_ENV === 'development' ? (
             <>

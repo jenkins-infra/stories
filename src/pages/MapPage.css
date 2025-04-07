@@ -1,10 +1,11 @@
-/* Base styles */
+/* Base styles - Dark Mode by default */
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
+  transition: color 0.3s ease;
 }
 
 h2 {
@@ -12,6 +13,7 @@ h2 {
   font-weight: 400;
   margin-bottom: 1rem;
   color: #ffffff;
+  transition: color 0.3s ease;
 }
 
 h3 {
@@ -20,6 +22,17 @@ h3 {
   color: #8c8c8c;
   margin-bottom: 2rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Light mode styles */
+[data-theme="light"] h1,
+[data-theme="light"] h2 {
+  color: #202020;
+}
+
+[data-theme="light"] h3 {
+  color: #505050;
 }
 
 /* Container width control */
@@ -131,12 +144,12 @@ h3 {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-@media (prefers-color-scheme: light) {
-  .story-popup {
-    background-color: #ffffff;
-    color: black;
-  }
+
+[data-theme="light"] .story-popup {
+  background-color: #ffffff;
+  color: black;
 }
 
 .story-img {
@@ -171,11 +184,11 @@ h3 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: color 0.3s ease;
 }
-@media (prefers-color-scheme: light) {
-  .story-popup-title {
-    color: black;
-  }
+
+[data-theme="light"] .story-popup-title {
+  color: black;
 }
 
 .story-popup-details {
@@ -196,11 +209,11 @@ h3 {
   width: 80px;
   flex-shrink: 0;
   font-size: 14px;
+  transition: color 0.3s ease;
 }
-@media (prefers-color-scheme: light) {
-  .story-popup-label {
-    color: black;
-  }
+
+[data-theme="light"] .story-popup-label {
+  color: #505050;
 }
 
 .story-popup-value {
@@ -270,4 +283,29 @@ h3 {
 
 .leaflet-container a {
   color: inherit;
+}
+
+/* Support for prefers-color-scheme as fallback */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) h1,
+  :root:not([data-theme]) h2 {
+    color: #202020;
+  }
+  
+  :root:not([data-theme]) h3 {
+    color: #505050;
+  }
+  
+  :root:not([data-theme]) .story-popup {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  :root:not([data-theme]) .story-popup-title {
+    color: black;
+  }
+  
+  :root:not([data-theme]) .story-popup-label {
+    color: #505050;
+  }
 }

@@ -4,13 +4,14 @@ import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import { ThemeContext } from '../components/ThemeContext';
 import './index.css';
 
 const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
   const { stories } = useStaticQuery(graphql`
     query FrontPageStories {
-      stories: allUserStory(sort: {date: DESC}, limit: 4) {
+      stories: allUserStory(sort: { date: DESC }, limit: 4) {
         edges {
           node {
             title
@@ -29,25 +30,9 @@ const IndexPage = () => {
     }
   `);
 
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const { theme } = React.useContext(ThemeContext);
+  const isDarkMode = theme === 'dark';
   const sectionsRef = React.useRef([]);
-
-  // Dark Mode Detection
-  React.useEffect(() => {
-    const checkDarkMode = () => {
-      const darkModeMediaQuery = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      );
-      setIsDarkMode(darkModeMediaQuery.matches);
-    };
-    checkDarkMode();
-    const darkModeMediaQuery = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    );
-    darkModeMediaQuery.addEventListener('change', checkDarkMode);
-    return () =>
-      darkModeMediaQuery.removeEventListener('change', checkDarkMode);
-  }, []);
 
   // Scroll-triggered Animation
   React.useEffect(() => {

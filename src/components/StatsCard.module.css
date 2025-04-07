@@ -10,6 +10,12 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border: 1px solid #2a3a52;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="light"] .statsContainer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1d5db;
 }
 
 .statBox {
@@ -18,13 +24,12 @@
   padding: 16px;
   background: #181818;
   border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
   position: relative;
 }
-@media (prefers-color-scheme: light) {
-  .statBox {
-    background-color: white;
-  }
+
+[data-theme="light"] .statBox {
+  background-color: white;
 }
 
 .statBox:hover {
@@ -36,11 +41,11 @@
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
-@media (prefers-color-scheme: light) {
-  .statValue {
-    color: black;
-  }
+
+[data-theme="light"] .statValue {
+  color: black;
 }
 
 .statLabel {
@@ -49,6 +54,11 @@
   color: #a0a0a0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .statLabel {
+  color: #6b7280;
 }
 
 .statBox:not(:last-child)::after {
@@ -59,6 +69,11 @@
   height: 60%;
   width: 1px;
   background-color: #2a3a52;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="light"] .statBox:not(:last-child)::after {
+  background-color: #d1d5db;
 }
 
 @media (max-width: 767px) {
@@ -74,9 +89,42 @@
   .statBox:not(:last-child) {
     border-bottom: 1px solid #2a3a52;
     padding-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  
+  [data-theme="light"] .statBox:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
   }
 
   .statValue {
     font-size: 28px;
+  }
+}
+
+/* Support for prefers-color-scheme as fallback */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .statBox {
+    background-color: white;
+  }
+  
+  :root:not([data-theme]) .statValue {
+    color: black;
+  }
+  
+  :root:not([data-theme]) .statLabel {
+    color: #6b7280;
+  }
+  
+  :root:not([data-theme]) .statBox:not(:last-child)::after {
+    background-color: #d1d5db;
+  }
+  
+  :root:not([data-theme]) .statsContainer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d5db;
+  }
+  
+  :root:not([data-theme]) .statBox:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
   }
 }

@@ -1,24 +1,22 @@
-/* Default (Dark Mode) */
+/* Base styles */
 body,
 html {
   background-color: #121212;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  body,
-  html {
-    background-color: white;
-  }
+[data-theme="light"] body,
+[data-theme="light"] html {
+  background-color: white;
 }
 
 .textcolor {
   color: white;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .textcolor {
-    color: black;
-  }
+[data-theme="light"] .textcolor {
+  color: black;
 }
 
 :root {
@@ -30,16 +28,34 @@ html {
   );
   --hero-text-color: #e0e1ddff;
   --subtitle-color: #b0b0b0;
-  --card-background: #1b1b1b;
+  --card-background: #1e1e1e;
   --button-bg: #778da9ff;
   --button-hover-bg: #415a77ff;
-  --button-text-color: #121212;
-  --card-border-color: rgb(51, 51, 51);
+  --button-text-color: #ffffff;
+  --card-border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Light Mode */
+[data-theme="light"] {
+  --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
+  --hero-text-color: #0d1b2a;
+  --subtitle-color: #1b263b;
+  --card-background: #ededed;
+  --button-bg: #415a77;
+  --button-hover-bg: #e0e1dd;
+  --button-text-color: #ffffff;
+  --card-border-color: rgb(199, 199, 199);
+}
+
+[data-theme="light"] .hero-section {
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
     --hero-text-color: #0d1b2a;
     --subtitle-color: #1b263b;
@@ -49,7 +65,17 @@ html {
     --button-text-color: #ffffff;
     --card-border-color: rgb(199, 199, 199);
   }
-  .hero-section {
+  
+  html:not([data-theme]) body,
+  html:not([data-theme]) {
+    background-color: white;
+  }
+  
+  :not([data-theme]) .textcolor {
+    color: black;
+  }
+  
+  :not([data-theme]) .hero-section {
     background: var(--background-gradient);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
@@ -192,6 +218,15 @@ html {
   color: inherit;
 }
 
+[data-theme="dark"] .story-title a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .story-title a:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
 .story-author,
 .story-date {
   padding: 0 15px;
@@ -241,6 +276,101 @@ html {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Map section specific dark mode styles */
+[data-theme="dark"] .map-section {
+  background-color: #121212;
+}
+
+[data-theme="dark"] .leaflet-container {
+  background-color: #121212 !important;
+}
+
+[data-theme="dark"] .map-image {
+  filter: brightness(0.85) contrast(1.1);
+}
+
+/* Override any default card link colors in dark mode */
+[data-theme="dark"] .card a,
+[data-theme="dark"] .story-card a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="dark"] .card a:hover,
+[data-theme="dark"] .story-card a:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Fix for blue links in dark mode */
+[data-theme="dark"] a.card-title,
+[data-theme="dark"] .card-title a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Share Story Button in dark mode */
+[data-theme="dark"] .share-story-btn,
+[data-theme="dark"] .btn-primary {
+  background-color: #4f9fee !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .share-story-btn:hover,
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #3182ce !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Read More Stories button in dark mode - match second/third image */
+[data-theme="dark"] .btn-primary, 
+[data-theme="dark"] a.btn-primary {
+  background-color: #6c8eb9 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 30px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .btn-primary:hover, 
+[data-theme="dark"] a.btn-primary:hover {
+  background-color: #2b5789 !important;
+  color: #ffffff !important;
+  border: none !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Tell Your Story section dark mode styling - match fourth image */
+[data-theme="dark"] .tell-your-story {
+  background-color: #1e2330 !important;
+  border-radius: 8px !important;
+  padding: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme="dark"] .share-story-btn,
+[data-theme="dark"] .share-your-story-btn {
+  background-color: #4a90e2 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .share-story-btn:hover,
+[data-theme="dark"] .share-your-story-btn:hover {
+  background-color: #3a80d2 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
 /* Button Section */
 .btn-primary {
   display: inline-block;
@@ -257,17 +387,25 @@ html {
 
 /* Dark Mode Hover (default) */
 .btn-primary:hover {
-  background: var(--button-hover-bg);
-  transform: scale(1.05);
-  color: white;
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--button-text-color);
 }
 
 /* Light Mode Hover */
+[data-theme="light"] .btn-primary:hover {
+  background-color: var(--button-hover-bg);
+  color: #1b263b;
+  border: 1px solid #1b263b;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  .btn-primary:hover {
-    background: var(--button-hover-bg);
-    transform: scale(1.05);
-    color: #000000 /* Keeps the original #3182ce from light mode variables */
+  :not([data-theme]) .btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    color: #1b263b;
+    border: 1px solid #1b263b;
   }
 }
 

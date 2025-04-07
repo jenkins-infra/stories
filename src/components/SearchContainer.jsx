@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { ThemeContext } from './ThemeContext';
 import './SearchContainer.css';
 import * as JsSearch from 'js-search';
+
+// ThemeContext consumer component
+const SearchWithTheme = props => {
+  return (
+    <ThemeContext.Consumer>
+      {themeContext => <Search {...props} themeContext={themeContext} />}
+    </ThemeContext.Consumer>
+  );
+};
 
 class Search extends Component {
   state = {
@@ -81,6 +91,8 @@ class Search extends Component {
 
   render() {
     const { searchResults, searchQuery, isLoading, isError } = this.state;
+    const { themeContext } = this.props;
+    const isDarkMode = themeContext && themeContext.theme === 'dark';
 
     if (isLoading) {
       return <div className="text-center p-4">Loading search...</div>;
@@ -147,6 +159,22 @@ class Search extends Component {
                             {this.formatDate(item.date)}
                           </time>
                         </div>
+                        {item.metadata?.industries && (
+                          <div className="industries">
+                            {item.metadata.industries.map((industry, i) => (
+                              <span
+                                key={i}
+                                className={`badge ${
+                                  isDarkMode
+                                    ? 'bg-dark text-light'
+                                    : 'bg-light text-dark'
+                                } me-1`}
+                              >
+                                {industry}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </Link>
@@ -180,7 +208,8 @@ const SearchContainer = () => {
       }
     }
   `);
-  return <Search allUserStory={data.allUserStory} />;
+
+  return <SearchWithTheme allUserStory={data.allUserStory} />;
 };
 
 export default SearchContainer;
