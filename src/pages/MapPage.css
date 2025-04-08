@@ -180,7 +180,6 @@ h3 {
   font-weight: 600;
   margin: 0 0 0.5rem 0;
   line-height: 1.4;
-  display: -webkit-box;
   overflow: hidden;
   transition: color 0.3s ease;
 }

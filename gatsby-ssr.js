@@ -3,17 +3,17 @@ import AppWrapper from './src/components/AppWrapper';
 import './src/components/GlobalOverrides.css';
 
 // Wraps every page in a ThemeProvider
-export const wrapRootElement = ({ element }) => {
-  return <AppWrapper>{element}</AppWrapper>;
+export const wrapRootElement = ({element}) => {
+    return <AppWrapper>{element}</AppWrapper>;
 };
 
 // Add a script to prevent theme flashing during page load
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
-    <script
-      key="theme-script"
-      dangerouslySetInnerHTML={{
-        __html: `
+export const onRenderBody = ({setPreBodyComponents}) => {
+    setPreBodyComponents([
+        <script
+            key="theme-script"
+            dangerouslySetInnerHTML={{
+                __html: `
           (function() {
             try {
               const theme = localStorage.getItem('theme') || 
@@ -22,7 +22,7 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
             } catch (e) {}
           })();
         `,
-      }}
-    />,
-  ]);
+            }}
+        />,
+    ]);
 };
