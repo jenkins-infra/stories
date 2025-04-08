@@ -1,11 +1,40 @@
 :root {
-  --background-color: #2b3035;
+  --card-bg-color: #ffffff;
+  --background-color: #ffffff;
+  --text-color: #2d3436;
+  --title-color: #000000;
+  --muted-text-color: rgba(0, 0, 0, 0.95);
+  --card-border-color: rgba(0, 0, 0, 0.1);
+  --card-hover-border-color: white;
+  --card-shadow-color: rgba(0, 0, 0, 0.05);
+  --card-hover-shadow-color: rgba(0, 0, 0, 0.1);
+  --badge-bg-color: #f1f3f5;
+  --badge-text-color: #495057;
+  --input-bg-color: #f8f9fa;
+  --input-border-color: #e9ecef;
+  --input-focus-border-color: #ced4da;
+  --input-focus-shadow-color: rgba(0, 0, 0, 0.05);
+  --input-placeholder-color: rgba(0, 0, 0, 0.4);
+  --error-color: #e74c3c;
+  --search-bg-color: #ffffff;
+  --search-text-color: #000000;
+  --suggestions-bg-color: #ffffff;
+  --suggestions-hover-bg-color: #f8f9fa;
+  --suggestions-text-color: #000000;
+  --card-body-bg-color: #e9ecef;
+  --separator-color: #e9ecef;
+}
+
+[data-theme="dark"] {
+  --card-bg-color: #1e1e1e;
+  --background-color: #121212;
   --text-color: rgba(255, 255, 255, 0.9);
-  --muted-text-color: rgba(255, 255, 255, 0.6);
+  --title-color: #ffffff;
+  --muted-text-color: rgba(255, 255, 255, 0.7);
   --card-border-color: rgba(255, 255, 255, 0.1);
   --card-hover-border-color: rgba(255, 255, 255, 0.2);
-  --card-shadow-color: rgba(0, 0, 0, 0.2);
-  --card-hover-shadow-color: rgba(0, 0, 0, 0.3);
+  --card-shadow-color: rgba(0, 0, 0, 0.3);
+  --card-hover-shadow-color: rgba(0, 0, 0, 0.4);
   --badge-bg-color: rgba(255, 255, 255, 0.1);
   --badge-text-color: rgba(255, 255, 255, 0.9);
   --input-bg-color: #2b3035;
@@ -13,42 +42,21 @@
   --input-focus-border-color: rgba(255, 255, 255, 0.4);
   --input-focus-shadow-color: rgba(255, 255, 255, 0.1);
   --input-placeholder-color: rgba(255, 255, 255, 0.5);
-  --error-color: var(--bs-danger);
+  --error-color: #e74c3c;
+  --search-bg-color: #121212;
+  --search-text-color: #ffffff;
+  --suggestions-bg-color: #2b3035;
+  --suggestions-hover-bg-color: #3a3f45;
+  --suggestions-text-color: #ffffff;
+  --card-body-bg-color: #1e1e1e;
+  --separator-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: #ffffff;
-    --text-color: #2d3436;
-    --muted-text-color: rgba(0, 0, 0, 0.6);
-    --card-border-color: #f0f0f0;
-    --card-hover-border-color: #e8e8e8;
-    --card-shadow-color: rgba(0, 0, 0, 0.05);
-    --card-hover-shadow-color: rgba(0, 0, 0, 0.1);
-    --badge-bg-color: #f1f3f5;
-    --badge-text-color: #495057;
-    --input-bg-color: #f8f9fa;
-    --input-border-color: #e9ecef;
-    --input-focus-border-color: #ced4da;
-    --input-focus-shadow-color: rgba(0, 0, 0, 0.05);
-    --input-placeholder-color: rgba(0, 0, 0, 0.4);
-    --error-color: #e74c3c;
-  }
-  
-  .story-card {
-    border: 1px solid rgba(0, 0, 0, 0.09) !important;
-    background-color: #f5f5f5;
-  }
-  
-  .story-card:hover {
-    border: 1px solid rgba(0, 0, 0, 0.12) !important;
-  }
-  
-  .story-card *,
-  .story-card *::before,
-  .story-card *::after {
-    border-color: inherit;
-  }
+/* Apply background color to body and html elements */
+html, body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .stories-grid {
@@ -63,8 +71,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f5f5f5; 
-  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color) !important;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -76,19 +84,32 @@
 .story-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px var(--card-hover-shadow-color);
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid var(--card-hover-border-color) !important;
 }
 
 .story-card .card-img-top {
   width: 100%;
   min-height: 150px;
   object-fit: cover; 
-  background-color: var(--card-border-color);
+  background-color: var(--card-bg-color);
+}
+
+.story-card .card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  box-shadow: 0 2px 4px var(--card-shadow-color);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  color: var(--text-color);
+}
+
+.story-card:hover .card {
+  box-shadow: 0 4px 12px var(--card-hover-shadow-color);
+  border-color: var(--card-hover-border-color);
 }
 
 .story-card .card-body {
   padding: 16px;
-  background-color: #e0e0e0; 
+  background-color: var(--card-body-bg-color) !important;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -102,11 +123,29 @@
   border: none !important;
 }
 
-.story-card .card-title {
+.story-card .card-title,
+.story-card h3.card-title,
+.story-card .h5.card-title,
+.story-card h3,
+.card h3.card-title,
+.card-body h3,
+.card-body .card-title,
+h3.card-title,
+.h5.card-title {
   font-size: 1rem;
   margin-bottom: 8px;
-  color: var(--text-color);
+  color: #000000 !important;
   text-align: center;
+  font-weight: 600 !important;
+}
+
+/* Override any other styles for links in card titles */
+.story-card a .card-title,
+.story-card .card-title a,
+a.card-title,
+.story-card a h3,
+.card-body a {
+  color: #000000 !important;
 }
 
 .story-card .card-text {
@@ -123,10 +162,30 @@
   margin-top: 8px;
 }
 
+.search-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: var(--search-bg-color);
+}
+
+.search-container form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-container .form-control-lg {
+  height: 47px;
+  font-size: 1.1rem;
+}
+
 .search-container input {
   background-color: var(--input-bg-color) !important;
   border-color: var(--input-border-color) !important;
   color: var(--text-color) !important;
+  border-right: 1px solid var(--separator-color) !important;
+  padding-left: 1rem;
 }
 
 .search-container input:focus {
@@ -138,12 +197,49 @@
 
 .search-container input::placeholder {
   color: var(--input-placeholder-color) !important;
+  font-size: 1.15rem;
 }
 
 .search-container .input-group-text {
   background-color: var(--input-bg-color) !important;
   border-color: var(--input-border-color) !important;
   color: var(--muted-text-color) !important;
+  padding-right: 1rem;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container .input-group {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.badge {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+  background-color: var(--badge-bg-color) !important;
+  color: var(--badge-text-color) !important;
+  border: 1px solid var(--card-border-color) !important;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+p.text-bold {
+  font-weight: 600;
+  color: var(--title-color) !important;
+  font-size: 1.1rem;
 }
 
 .results-count,
@@ -156,43 +252,59 @@
   color: var(--error-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --card-border-color: rgba(40, 40, 40, 0.8);
-    --card-hover-border-color: rgba(50, 50, 50, 0.9);
-  }
-  
-  .story-card {
-    background-color: #1a1a1a;
-    border: 1px solid var(--card-border-color) !important;
-  }
-  
-  .story-card:hover {
-    border: 1px solid var(--card-hover-border-color) !important;
-  }
-  
-  .story-card .card-img-top {
-    background-color: #1a1a1a;
-  }
-  
-  .story-card .card-body {
-    background-color: #1a1a1a; 
-  }
+[data-theme="dark"] .text-muted {
+  color: var(--muted-text-color) !important;
+}
 
-  .story-card .card-body,
-  .story-card .story-title {
-    color: #ffffff !important;
-  }
-  .story-card .story-meta,  
-  .story-card .text-muted {
-    color: #d5d5d5 !important;
-  }
-  
-  .story-card *,
-  .story-card *::before,
-  .story-card *::after {
-    border-color: transparent !important;
-  }
+/* Story card link styling for dark mode */
+[data-theme="dark"] .story-card a,
+[data-theme="dark"] .card-title a,
+[data-theme="dark"] a.card-title,
+[data-theme="dark"] .story-card .card-title {
+  color: var(--title-color) !important;
+}
+
+[data-theme="dark"] .story-card a:hover,
+[data-theme="dark"] .card-title a:hover,
+[data-theme="dark"] a.card-title:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Ensure author and date styling in dark mode */
+[data-theme="dark"] .story-meta,
+[data-theme="dark"] .story-author,
+[data-theme="dark"] .story-date,
+[data-theme="dark"] .story-card .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Dark mode specific overrides */
+[data-theme="dark"] .story-card .card-title,
+[data-theme="dark"] .story-card h3.card-title,
+[data-theme="dark"] .story-card .h5.card-title,
+[data-theme="dark"] .story-card h3,
+[data-theme="dark"] .card h3.card-title,
+[data-theme="dark"] .card-body h3,
+[data-theme="dark"] .card-body .card-title,
+[data-theme="dark"] h3.card-title,
+[data-theme="dark"] .h5.card-title,
+[data-theme="dark"] .story-card a .card-title,
+[data-theme="dark"] .story-card .card-title a,
+[data-theme="dark"] a.card-title,
+[data-theme="dark"] .story-card a h3,
+[data-theme="dark"] .card-body a {
+  color: #ffffff !important;
+}
+
+/* Style the tagline and date with specific selectors to make them darker in light mode */
+.story-card .story-meta,
+.story-card .card-text,
+.story-card .text-muted,
+.story-card time,
+.story-card .text-muted strong,
+.story-card p.card-text.text-muted {
+  color: rgba(0, 0, 0, 0.65);
 }
 
 /* Responsive Design */
@@ -212,4 +324,115 @@
   .stories-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Dark mode exception for tagline and date */
+[data-theme="dark"] .story-card .story-meta,
+[data-theme="dark"] .story-card .card-text,
+[data-theme="dark"] .story-card .text-muted,
+[data-theme="dark"] .story-card time,
+[data-theme="dark"] .story-card .text-muted strong,
+[data-theme="dark"] .story-card p.card-text.text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Button styling */
+.btn, 
+.btn-primary,
+.read-more-btn,
+.visit-map-btn,
+a.btn,
+button.btn {
+  background-color: #415a77 !important; /* Updated blue button background */
+  color: #ffffff !important; /* White text */
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 30px !important;
+  font-weight: 700 !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+.btn:hover, 
+.btn-primary:hover,
+.read-more-btn:hover,
+.visit-map-btn:hover,
+a.btn:hover,
+button.btn:hover {
+  background-color: #afafaf !important; /* Light gray on hover */
+  color: #000000 !important; /* Black text on hover */
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+  top: -1px !important;
+}
+
+/* Dark mode button styling with maximum specificity */
+html body [data-theme="dark"] .btn,
+html body [data-theme="dark"] .btn-primary,
+html body [data-theme="dark"] .read-more-btn,
+html body [data-theme="dark"] .visit-map-btn,
+html body [data-theme="dark"] a.btn,
+html body [data-theme="dark"] button.btn,
+html[data-theme="dark"] body .btn,
+html[data-theme="dark"] body .btn-primary,
+html[data-theme="dark"] body .read-more-btn,
+html[data-theme="dark"] body .visit-map-btn,
+html[data-theme="dark"] body a.btn,
+html[data-theme="dark"] body button.btn,
+body[data-theme="dark"] .container .btn,
+body[data-theme="dark"] .container .btn-primary,
+body[data-theme="dark"] .container .read-more-btn,
+body[data-theme="dark"] .container .visit-map-btn,
+body[data-theme="dark"] .container a.btn,
+body[data-theme="dark"] .container button.btn,
+[data-theme="dark"] .search-container .btn,
+[data-theme="dark"] .search-container .btn-primary,
+[data-theme="dark"] .search-container .read-more-btn,
+[data-theme="dark"] .search-container .visit-map-btn,
+[data-theme="dark"] .search-container a.btn,
+[data-theme="dark"] .search-container button.btn {
+  background-color: #778da9 !important; /* Updated button background */
+  color: #000000 !important; /* Black text */
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px 30px !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Hover state for dark mode buttons with maximum specificity */
+html body [data-theme="dark"] .btn:hover,
+html body [data-theme="dark"] .btn-primary:hover,
+html body [data-theme="dark"] .read-more-btn:hover,
+html body [data-theme="dark"] .visit-map-btn:hover,
+html body [data-theme="dark"] a.btn:hover,
+html body [data-theme="dark"] button.btn:hover,
+html[data-theme="dark"] body .btn:hover,
+html[data-theme="dark"] body .btn-primary:hover,
+html[data-theme="dark"] body .read-more-btn:hover,
+html[data-theme="dark"] body .visit-map-btn:hover,
+html[data-theme="dark"] body a.btn:hover,
+html[data-theme="dark"] body button.btn:hover,
+body[data-theme="dark"] .container .btn:hover,
+body[data-theme="dark"] .container .btn-primary:hover,
+body[data-theme="dark"] .container .read-more-btn:hover,
+body[data-theme="dark"] .container .visit-map-btn:hover,
+body[data-theme="dark"] .container a.btn:hover,
+body[data-theme="dark"] .container button.btn:hover,
+[data-theme="dark"] .search-container .btn:hover,
+[data-theme="dark"] .search-container .btn-primary:hover,
+[data-theme="dark"] .search-container .read-more-btn:hover,
+[data-theme="dark"] .search-container .visit-map-btn:hover,
+[data-theme="dark"] .search-container a.btn:hover,
+[data-theme="dark"] .search-container button.btn:hover {
+  background-color: #5e7396 !important; /* Darker blue on hover */
+  color: #ffffff !important; /* White text on hover */
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+  top: -1px !important;
 }

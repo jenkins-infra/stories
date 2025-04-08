@@ -221,6 +221,11 @@ h3 {
   font-size: 14px;
   flex-grow: 1;
 }
+
+[data-theme="dark"] .story-popup-value {
+  color: #e0e0e0;
+}
+
 @media (prefers-color-scheme: light) {
   .story-popup-value {
     color: rgb(39, 39, 39);
@@ -248,6 +253,17 @@ h3 {
   width: fit-content;
   transition: background-color 0.2s ease-in-out;
 }
+
+[data-theme="dark"] .story-popup-button {
+  background-color: #2a3a52;
+  color: #ececec !important;
+}
+
+[data-theme="dark"] .story-popup-button:hover {
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
 @media (prefers-color-scheme: light) {
   .story-popup-button {
     background-color: #e0e0e0;

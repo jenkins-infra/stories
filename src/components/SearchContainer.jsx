@@ -137,7 +137,7 @@ class Search extends Component {
               <div className="stories-grid">
                 {searchResults.map((item, index) => (
                   <Link
-                    to={`/user-story/${item.slug}`} // ✅ Navigate to the specific story
+                    to={`/user-story/${item.slug}`}
                     key={`story_${index}`}
                     className="story-card text-decoration-none"
                   >

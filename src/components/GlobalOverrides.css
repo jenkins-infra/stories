@@ -99,7 +99,7 @@
 /* Links in dark mode */
 [data-theme="dark"] a,
 [data-theme="dark"] .jenkins-layout a {
-  color: #4f9fee !important;
+  color: #909090 !important;
 }
 
 /* Override for card and story links specifically */
@@ -122,6 +122,17 @@
 [data-theme="dark"] .jenkins-layout a:hover {
   color: #3182ce !important;
   text-decoration: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .container-fluid a{
+    color: #c9cacb !important;
+    text-decoration: none;
+}
+  .container-fluid a:hover{
+    color: #3182ce !important;
+    text-decoration: none;
+}
 }
 
 /* Header and footer styling */
