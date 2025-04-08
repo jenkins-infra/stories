@@ -267,7 +267,7 @@ html {
   .btn-primary:hover {
     background: var(--button-hover-bg);
     transform: scale(1.05);
-    color: #000000 /* Keeps the original #3182ce from light mode variables */
+    color: #000000; /* Keeps the original #3182ce from light mode variables */
   }
 }
 

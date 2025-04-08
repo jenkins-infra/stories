@@ -14,12 +14,12 @@ const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
   const { stories, mapPin } = useStaticQuery(graphql`
     query MapPageQueries {
-      mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
+      mapPin: file(name: { eq: "jenkins_map_pin2-e1634173081372" }) {
         publicURL
       }
       stories: allUserStory(
-        sort: {date: DESC}
-        filter: {map: {geojson: {ne: null}, location: {ne: null}}}
+        sort: { date: DESC }
+        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
         edges {
           node {
