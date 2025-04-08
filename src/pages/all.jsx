@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStoryCard from '../components/UserStoryCard';
+import { ThemeContext } from '../components/ThemeContext';
 import './all.css';
 
 // Function to generate the GitHub issue URL
@@ -28,6 +29,8 @@ Also, include any related images in the same directory._`;
 
 // Modal Component
 const Modal = ({ isOpen, onClose }) => {
+  const { theme } = React.useContext(ThemeContext);
+
   if (!isOpen) return null;
   return (
     <div className="modal-overlay">
@@ -58,10 +61,11 @@ const AllPage = () => {
   const [displayCount, setDisplayCount] = React.useState(10); // Initial number of stories to display
   const storiesPerLoad = 10; // Number of stories to load each time
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const { theme } = React.useContext(ThemeContext);
   const title = 'Jenkins - User Story Library - All';
   const { stories } = useStaticQuery(graphql`
     query AllStories {
-      stories: allUserStory(sort: {date: DESC}) {
+      stories: allUserStory(sort: { date: DESC }) {
         edges {
           node {
             title

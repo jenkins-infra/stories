@@ -8,18 +8,22 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import StatsCard from '../components/StatsCard';
+import { ThemeContext } from '../components/ThemeContext';
 import './MapPage.css';
 
 const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
+  const { theme } = React.useContext(ThemeContext);
+  const isDarkMode = theme === 'dark';
+
   const { stories, mapPin } = useStaticQuery(graphql`
     query MapPageQueries {
-      mapPin: file(name: {eq: "jenkins_map_pin2-e1634173081372"}) {
+      mapPin: file(name: { eq: "jenkins_map_pin2-e1634173081372" }) {
         publicURL
       }
       stories: allUserStory(
-        sort: {date: DESC}
-        filter: {map: {geojson: {ne: null}, location: {ne: null}}}
+        sort: { date: DESC }
+        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
         edges {
           node {
@@ -71,6 +75,15 @@ const MapPage = () => {
     iconAnchor: [29, 59],
     iconSize: [59, 59],
   });
+
+  // Define map tile based on theme
+  const mapTileUrl = isDarkMode
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+  const mapAttribution = isDarkMode
+    ? '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    : '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
 
   const StoryPopup = ({ story }) => (
     <div className="story-popup">
@@ -153,10 +166,7 @@ const MapPage = () => {
               maxBoundsViscosity={1.0}
               className="leaflet-map"
             >
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              />
+              <TileLayer url={mapTileUrl} attribution={mapAttribution} />
               {stories.edges
                 .filter(({ node: story }) => story.map.geojson)
                 .map(({ node: story }) => {

@@ -8,24 +8,22 @@
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .page {
-    color: black;
-  }
+[data-theme="light"] .page {
+  color: black;
 }
 
 .heading {
   color: white;
   margin-top: 0;
   margin-bottom: 32px;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .heading {
-    color: black !important;
-  }
+[data-theme="light"] .heading {
+  color: black !important;
 }
 
 .paragraph {
@@ -51,10 +49,24 @@
 .link {
   color: #ffffff;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
+[data-theme="light"] .link {
+  color: black;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  .link {
+  :root:not([data-theme]) .page {
+    color: black;
+  }
+  
+  :root:not([data-theme]) .heading {
+    color: black !important;
+  }
+  
+  :root:not([data-theme]) .link {
     color: black;
   }
 }

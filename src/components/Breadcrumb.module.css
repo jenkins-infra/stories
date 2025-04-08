@@ -50,6 +50,10 @@
 
 @media (prefers-color-scheme: light) {
   .current {
-    color: black;
+    color: rgb(0, 0, 0);
   }
+}
+
+[data-theme="dark"] .current{
+  color: white;
 }

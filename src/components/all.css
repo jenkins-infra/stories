@@ -1,0 +1,230 @@
+/* Common CSS for all components */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color, #2d3436);
+}
+
+/* Apply dark mode to root elements */
+:root {
+  --background-color: #ffffff;
+  --text-color: #2d3436;
+  --card-bg-color: #ffffff;
+  --card-border-color: rgba(0, 0, 0, 0.1);
+  --muted-text-color: rgba(0, 0, 0, 0.6);
+  --nav-bg-color: #ffffff;
+  --nav-text-color: #2d3436;
+  --nav-hover-bg-color: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --button-primary-bg: #007bff;
+  --button-primary-text: #ffffff;
+  --button-primary-hover-bg: #0069d9;
+  --footer-bg-color: #f8f9fa;
+  --footer-text-color: #6c757d;
+  --hero-bg-start: #f8f9fa;
+  --hero-bg-end: #e9ecef;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: rgba(255, 255, 255, 0.9);
+  --card-bg-color: #1e1e1e;
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --muted-text-color: rgba(255, 255, 255, 0.7);
+  --nav-bg-color: #1e1e1e;
+  --nav-text-color: rgba(255, 255, 255, 0.9);
+  --nav-hover-bg-color: #2b3035;
+  --link-color: #4dabf7;
+  --link-hover-color: #74c0fc;
+  --button-primary-bg: #4dabf7;
+  --button-primary-text: #212529;
+  --button-primary-hover-bg: #74c0fc;
+  --footer-bg-color: #1e1e1e;
+  --footer-text-color: rgba(255, 255, 255, 0.7);
+  --hero-bg-start: #121212;
+  --hero-bg-end: #1e1e1e;
+}
+
+/* Support for prefers-color-scheme as fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: #121212;
+    --text-color: rgba(255, 255, 255, 0.9);
+    --card-bg-color: #1e1e1e;
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --muted-text-color: rgba(255, 255, 255, 0.7);
+    --nav-bg-color: #1e1e1e;
+    --nav-text-color: rgba(255, 255, 255, 0.9);
+    --nav-hover-bg-color: #2b3035;
+    --link-color: #4dabf7;
+    --link-hover-color: #74c0fc;
+    --button-primary-bg: #4dabf7;
+    --button-primary-text: #212529;
+    --button-primary-hover-bg: #74c0fc;
+    --footer-bg-color: #1e1e1e;
+    --footer-text-color: rgba(255, 255, 255, 0.7);
+    --hero-bg-start: #121212;
+    --hero-bg-end: #1e1e1e;
+  }
+}
+
+/* Apply to common elements */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-primary-hover-bg);
+  border-color: var(--button-primary-hover-bg);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--nav-bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand, .nav-link {
+  color: var(--nav-text-color) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-hover-bg-color);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 2rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(to bottom, var(--hero-bg-start), var(--hero-bg-end));
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Fix for Bootstrap components */
+.bg-light {
+  background-color: var(--nav-bg-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--nav-bg-color) !important;
+}
+
+/* Map specific styling for dark mode */
+[data-theme="dark"] .leaflet-container {
+  background-color: #121212 !important;
+  filter: brightness(0.9) contrast(1.2);
+}
+
+[data-theme="dark"] .leaflet-tile {
+  filter: brightness(0.6) contrast(1.4) saturate(0.8);
+}
+
+/* Fix for OpenStreetMap attribution */
+[data-theme="dark"] .leaflet-control-attribution {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="dark"] .leaflet-control-attribution a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Fix story card text and links in dark mode */
+[data-theme="dark"] .story-card .story-title a,
+[data-theme="dark"] .card-title a,
+[data-theme="dark"] a.card-title {
+  color: rgba(255, 255, 255, 0.9) !important; 
+}
+
+[data-theme="dark"] .story-author,
+[data-theme="dark"] .story-date {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Override button styles for dark mode */
+[data-theme="dark"] .btn-primary {
+  background-color: #6c8eb9 !important;
+  color: #ffffff !important;
+  border-color: #6c8eb9 !important;
+  border-radius: 25px !important;
+  padding: 10px 30px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: #2b5789 !important;
+  border-color: #2b5789 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Share your story button */
+[data-theme="dark"] .share-story-btn,
+[data-theme="dark"] .share-your-story-btn {
+  background-color: #4a90e2 !important;
+  color: #ffffff !important;
+  border-color: #4a90e2 !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .share-story-btn:hover,
+[data-theme="dark"] .share-your-story-btn:hover {
+  background-color: #3a80d2 !important;
+  border-color: #3a80d2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Tell Your Story container styling */
+[data-theme="dark"] .tell-your-story {
+  background-color: #1e2330 !important;
+  border-radius: 8px !important;
+  padding: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+} 
