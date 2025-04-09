@@ -10,39 +10,39 @@ import remarkHtml from 'remark-html';
 
 import UserStory from '../components/UserStory';
 
-const UserStoryPreview = ({entry, widgetsFor, getAsset}) => {
-    const data = entry.toJS().data;
-    const paragraphs = widgetsFor('body_content').getIn(['data', 'paragraphs']);
-    
-    for (let i = 0; i < data.body_content.paragraphs.length; i++) {
-        data.body_content.paragraphs[i] = {
-            html: remark().use(remarkHtml).processSync(paragraphs.get(i)).toString(),
-        };
-    }
+const UserStoryPreview = ({ entry, widgetsFor, getAsset }) => {
+  const data = entry.toJS().data;
+  const paragraphs = widgetsFor('body_content').getIn(['data', 'paragraphs']);
 
-    data.quotes = data.quotes.map((quote, idx) => {
-        const quoteData = entry.getIn(['data', 'quotes', idx]).toJS();
-        return {
-            ...quote,
-            image: getAsset(quoteData.image).url,
-        };
-    });
-
-    const props = {
-        ...data,
-        image: getAsset(entry.getIn(['data', 'image'])).url,
+  for (let i = 0; i < data.body_content.paragraphs.length; i++) {
+    data.body_content.paragraphs[i] = {
+      html: remark().use(remarkHtml).processSync(paragraphs.get(i)).toString(),
     };
-    return (
-        <Layout title={'foo'}>
-            <UserStory {...props} />
-        </Layout>
-    );
+  }
+
+  data.quotes = data.quotes.map((quote, idx) => {
+    const quoteData = entry.getIn(['data', 'quotes', idx]).toJS();
+    return {
+      ...quote,
+      image: getAsset(quoteData.image).url,
+    };
+  });
+
+  const props = {
+    ...data,
+    image: getAsset(entry.getIn(['data', 'image'])).url,
+  };
+  return (
+    <Layout title={'foo'}>
+      <UserStory {...props} />
+    </Layout>
+  );
 };
 
 UserStoryPreview.propTypes = {
-    entry: ImmutablePropTypes.map.isRequired,
-    widgetsFor: PropTypes.func.isRequired,
-    getAsset: PropTypes.func.isRequired,
+  entry: ImmutablePropTypes.map.isRequired,
+  widgetsFor: PropTypes.func.isRequired,
+  getAsset: PropTypes.func.isRequired,
 };
 
 // Register the template with Decap CMS
