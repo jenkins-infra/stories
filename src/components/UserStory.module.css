@@ -9,8 +9,8 @@
 
 .userstory .titlewrapper {
   width: 98%;
-  max-width: 1176px;
-  background-color: #2a3a52 !important;
+  max-width: 1176px; /* Retaining the value from frHimanshu-DarkModeToggle */
+  background-color: #2a3a52 !important; /* Retaining the background color from frHimanshu-DarkModeToggle */
   line-height: 1.6;
   border-radius: 8px;
   box-shadow:

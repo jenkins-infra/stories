@@ -80,6 +80,13 @@ html {
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
   }
+
+  :not([data-theme]) .btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    color: #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    border: 1px solid #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    transform: scale(1.05); /* Added from main for hover effect */
+  }
 }
 
 /* Hero Section */
@@ -309,8 +316,9 @@ html {
 @media (prefers-color-scheme: light) {
   :not([data-theme]) .btn-primary:hover {
     background-color: var(--button-hover-bg);
-    color: #1b263b;
-    border: 1px solid #1b263b;
+    color: #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    border: 1px solid #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    transform: scale(1.05); /* Added from main for hover effect */
   }
 }
 
