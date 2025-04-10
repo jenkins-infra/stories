@@ -10,19 +10,49 @@
   --accent-hover: #3182ce;
   --border: #333333;
   --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  --story-bg: #22282e;
+  --story-bg: #2b3035;
   --story-gradient: linear-gradient(
     45deg,
     rgba(79, 159, 238, 0.05) 0%,
     rgba(0, 0, 0, 0) 70%
   );
   --tshirt-bg: rgba(255, 255, 255, 0.05);
-  --btn-text: #121212;
-  --btn-hover-bg: white;
+  --btn-text: #ffffff;
+  --btn-hover-bg: #3182ce;
 }
 
+/* Ensure transparent backgrounds for dark mode in certain containers */
+[data-theme='dark'] .row,
+[data-theme='dark'] .container,
+[data-theme='dark'] .tell-your-story,
+[data-theme='dark'] .cardsWrapper,
+[data-theme='dark'] .user-stories-heading {
+  background-color: var(--bg-primary);
+}
+
+[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent: #2c7cd1;
+  --accent-hover: #1d5fa0;
+  --border: #e0e0e0;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --story-bg: #f8f9fa;
+  --story-gradient: linear-gradient(
+    45deg,
+    rgba(44, 124, 209, 0.05) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  --tshirt-bg: rgba(0, 0, 0, 0.05);
+  --btn-text: #ffffff;
+  --btn-hover-bg: #1d5fa0;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
     --text-primary: #333333;
@@ -38,7 +68,7 @@
       rgba(255, 255, 255, 0) 70%
     );
     --tshirt-bg: rgba(0, 0, 0, 0.05);
-    --btn-text: white;
+    --btn-text: #ffffff;
     --btn-hover-bg: #1d5fa0;
   }
 }
@@ -46,6 +76,9 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .row {
@@ -196,7 +229,9 @@ hr,
 * {
   transition:
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Jenkins stories title styling */
@@ -289,6 +324,7 @@ hr,
   color: var(--btn-text);
   text-decoration: none;
 }
+
 .load-more-btn {
   padding: 10px 20px;
   font-size: 16px;

@@ -1,0 +1,169 @@
+/* Global styles for body and html */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body {
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color, #2d3436);
+}
+
+/* Theme variables for light and dark modes */
+:root {
+  --background-color: #ffffff;
+  --text-color: #2d3436;
+  --card-bg-color: #ffffff;
+  --card-border-color: rgba(0, 0, 0, 0.1);
+  --muted-text-color: rgba(0, 0, 0, 0.6);
+  --nav-bg-color: #ffffff;
+  --nav-text-color: #2d3436;
+  --nav-hover-bg-color: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --button-primary-bg: #007bff;
+  --button-primary-text: #ffffff;
+  --button-primary-hover-bg: #0069d9;
+  --footer-bg-color: #f8f9fa;
+  --footer-text-color: #6c757d;
+  --hero-bg-start: #f8f9fa;
+  --hero-bg-end: #e9ecef;
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: rgba(255, 255, 255, 0.9);
+  --card-bg-color: #1e1e1e;
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --muted-text-color: rgba(255, 255, 255, 0.7);
+  --nav-bg-color: #1e1e1e;
+  --nav-text-color: rgba(255, 255, 255, 0.9);
+  --nav-hover-bg-color: #2b3035;
+  --link-color: #4dabf7;
+  --link-hover-color: #74c0fc;
+  --button-primary-bg: #4dabf7;
+  --button-primary-text: #212529;
+  --button-primary-hover-bg: #74c0fc;
+  --footer-bg-color: #1e1e1e;
+  --footer-text-color: rgba(255, 255, 255, 0.7);
+  --hero-bg-start: #121212;
+  --hero-bg-end: #1e1e1e;
+}
+
+/* Support for prefers-color-scheme as fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: #121212;
+    --text-color: rgba(255, 255, 255, 0.9);
+    --card-bg-color: #1e1e1e;
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --muted-text-color: rgba(255, 255, 255, 0.7);
+    --nav-bg-color: #1e1e1e;
+    --nav-text-color: rgba(255, 255, 255, 0.9);
+    --nav-hover-bg-color: #2b3035;
+    --link-color: #4dabf7;
+    --link-hover-color: #74c0fc;
+    --button-primary-bg: #4dabf7;
+    --button-primary-text: #212529;
+    --button-primary-hover-bg: #74c0fc;
+    --footer-bg-color: #1e1e1e;
+    --footer-text-color: rgba(255, 255, 255, 0.7);
+    --hero-bg-start: #121212;
+    --hero-bg-end: #1e1e1e;
+  }
+}
+
+/* Common styles for links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Common button styles */
+.btn-primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-bg);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-primary-hover-bg);
+  border-color: var(--button-primary-hover-bg);
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: var(--nav-bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--nav-text-color) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-hover-bg-color);
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 2rem 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Hero section styles */
+.hero-section {
+  background: linear-gradient(
+    to bottom,
+    var(--hero-bg-start),
+    var(--hero-bg-end)
+  );
+  color: var(--text-color);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}

@@ -55,9 +55,7 @@ const UserStory = ({
     <div className={styles.userstory}>
       <div className={`row ${styles.titlewrapper}`}>
         <div className={`col ${styles.title}`}>
-          <div className="container">
-            <h2>{title}</h2>
-          </div>
+          <h2 style={{ color: 'white' }}>{title}</h2>
         </div>
       </div>
 

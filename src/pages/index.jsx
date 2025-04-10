@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaMoon, FaSun } from 'react-icons/fa'; // Import icons
 import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import { TripThemeContext } from '../components/infotheme'; // Updated to use TripThemeContext
 import './index.css';
 
 const IndexPage = () => {
@@ -30,39 +30,9 @@ const IndexPage = () => {
     }
   `);
 
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const { theme } = React.useContext(TripThemeContext); // Updated to use TripThemeContext
+  const isDarkMode = theme === 'dark';
   const sectionsRef = React.useRef([]);
-
-  // Dark Mode Detection
-  React.useEffect(() => {
-    const checkDarkMode = () => {
-      const darkModeMediaQuery = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      );
-      setIsDarkMode(darkModeMediaQuery.matches);
-    };
-    checkDarkMode();
-    const darkModeMediaQuery = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    );
-    darkModeMediaQuery.addEventListener('change', checkDarkMode);
-    return () =>
-      darkModeMediaQuery.removeEventListener('change', checkDarkMode);
-  }, []);
-
-  // Apply dark mode class to body
-  React.useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
-
-  // Toggle Dark Mode
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevMode => !prevMode);
-  };
 
   // Scroll-triggered Animation
   React.useEffect(() => {
@@ -89,15 +59,6 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
-
-      {/* Dark Mode Toggle Button */}
-      <button
-        className="dark-mode-toggle"
-        onClick={toggleDarkMode}
-        aria-label="Toggle Dark Mode"
-      >
-        {isDarkMode ? <FaSun className="icon" /> : <FaMoon className="icon" />}
-      </button>
 
       {/* Hero Section */}
       <div ref={el => (sectionsRef.current[0] = el)} className="hero-section">

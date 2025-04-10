@@ -1,24 +1,22 @@
-/* Default (Dark Mode) */
+/* Base styles */
 body,
 html {
   background-color: #121212;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  body,
-  html {
-    background-color: white;
-  }
+[data-theme='light'] body,
+[data-theme='light'] html {
+  background-color: white;
 }
 
 .textcolor {
   color: white;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .textcolor {
-    color: black;
-  }
+[data-theme='light'] .textcolor {
+  color: black;
 }
 
 :root {
@@ -30,16 +28,34 @@ html {
   );
   --hero-text-color: #e0e1ddff;
   --subtitle-color: #b0b0b0;
-  --card-background: #1b1b1b;
+  --card-background: #1e1e1e;
   --button-bg: #778da9ff;
   --button-hover-bg: #415a77ff;
-  --button-text-color: #121212;
-  --card-border-color: rgb(51, 51, 51);
+  --button-text-color: #ffffff;
+  --card-border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Light Mode */
+[data-theme='light'] {
+  --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
+  --hero-text-color: #0d1b2a;
+  --subtitle-color: #1b263b;
+  --card-background: #ededed;
+  --button-bg: #415a77;
+  --button-hover-bg: #e0e1dd;
+  --button-text-color: #ffffff;
+  --card-border-color: rgb(199, 199, 199);
+}
+
+[data-theme='light'] .hero-section {
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
     --hero-text-color: #0d1b2a;
     --subtitle-color: #1b263b;
@@ -50,63 +66,20 @@ html {
     --card-border-color: rgb(199, 199, 199);
   }
 
-  .hero-section {
+  html:not([data-theme]) body,
+  html:not([data-theme]) {
+    background-color: white;
+  }
+
+  :not([data-theme]) .textcolor {
+    color: black;
+  }
+
+  :not([data-theme]) .hero-section {
     background: var(--background-gradient);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
   }
-}
-
-/* Default Light Mode Styles */
-body {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  --background-color: #121212;
-  --text-color: #ffffff;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-  position: fixed;
-  /* Ensures the button stays fixed in the viewport */
-  bottom: 1rem;
-  /* Position it 1rem from the bottom */
-  right: 1rem;
-  /* Position it 1rem from the right */
-  background: var(--background-color);
-  /* Matches the current mode's background */
-  border: none;
-  border-radius: 50%;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 1000;
-  /* Ensures the button is above all other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease;
-}
-
-.dark-mode-toggle .icon {
-  font-size: 1.5rem;
-  color: var(--text-color);
-  /* Matches the current mode's text color */
-}
-
-.dark-mode-toggle:hover {
-  transform: scale(1.1);
-  /* Slightly enlarges the button on hover */
 }
 
 /* Hero Section */
@@ -131,11 +104,9 @@ body.dark-mode {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -247,6 +218,15 @@ body.dark-mode {
   color: inherit;
 }
 
+[data-theme='dark'] .story-title a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .story-title a:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
 .story-author,
 .story-date {
   padding: 0 15px;
@@ -312,18 +292,25 @@ body.dark-mode {
 
 /* Dark Mode Hover (default) */
 .btn-primary:hover {
-  background: var(--button-hover-bg);
-  transform: scale(1.05);
-  color: white;
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--button-text-color);
 }
 
 /* Light Mode Hover */
+[data-theme='light'] .btn-primary:hover {
+  background-color: var(--button-hover-bg);
+  color: #1b263b;
+  border: 1px solid #1b263b;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  .btn-primary:hover {
-    background: var(--button-hover-bg);
-    transform: scale(1.05);
-    color: #000000;
-    /* Keeps the original #3182ce from light mode variables */
+  :not([data-theme]) .btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    color: #1b263b;
+    border: 1px solid #1b263b;
   }
 }
 
