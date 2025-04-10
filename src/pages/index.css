@@ -1,24 +1,22 @@
-/* Default (Dark Mode) */
+/* Base styles */
 body,
 html {
   background-color: #121212;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  body,
-  html {
-    background-color: white;
-  }
+[data-theme='light'] body,
+[data-theme='light'] html {
+  background-color: white;
 }
 
 .textcolor {
   color: white;
+  transition: color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  .textcolor {
-    color: black;
-  }
+[data-theme='light'] .textcolor {
+  color: black;
 }
 
 :root {
@@ -30,16 +28,34 @@ html {
   );
   --hero-text-color: #e0e1ddff;
   --subtitle-color: #b0b0b0;
-  --card-background: #1b1b1b;
+  --card-background: #1e1e1e;
   --button-bg: #778da9ff;
   --button-hover-bg: #415a77ff;
-  --button-text-color: #121212;
-  --card-border-color: rgb(51, 51, 51);
+  --button-text-color: #ffffff;
+  --card-border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Light Mode */
+[data-theme='light'] {
+  --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
+  --hero-text-color: #0d1b2a;
+  --subtitle-color: #1b263b;
+  --card-background: #ededed;
+  --button-bg: #415a77;
+  --button-hover-bg: #e0e1dd;
+  --button-text-color: #ffffff;
+  --card-border-color: rgb(199, 199, 199);
+}
+
+[data-theme='light'] .hero-section {
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --background-gradient: linear-gradient(145deg, #415a77, #778da9, #e0e1dd);
     --hero-text-color: #0d1b2a;
     --subtitle-color: #1b263b;
@@ -49,10 +65,27 @@ html {
     --button-text-color: #ffffff;
     --card-border-color: rgb(199, 199, 199);
   }
-  .hero-section {
+
+  html:not([data-theme]) body,
+  html:not([data-theme]) {
+    background-color: white;
+  }
+
+  :not([data-theme]) .textcolor {
+    color: black;
+  }
+
+  :not([data-theme]) .hero-section {
     background: var(--background-gradient);
     background-size: 400% 400%;
     animation: gradientAnimation 8s ease infinite;
+  }
+
+  :not([data-theme]) .btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    color: #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    border: 1px solid #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    transform: scale(1.05); /* Added from main for hover effect */
   }
 }
 
@@ -192,6 +225,15 @@ html {
   color: inherit;
 }
 
+[data-theme='dark'] .story-title a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .story-title a:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
 .story-author,
 .story-date {
   padding: 0 15px;
@@ -257,17 +299,26 @@ html {
 
 /* Dark Mode Hover (default) */
 .btn-primary:hover {
-  background: var(--button-hover-bg);
-  transform: scale(1.05);
-  color: white;
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: var(--button-text-color);
 }
 
 /* Light Mode Hover */
+[data-theme='light'] .btn-primary:hover {
+  background-color: var(--button-hover-bg);
+  color: #1b263b;
+  border: 1px solid #1b263b;
+}
+
+/* Support for prefers-color-scheme as fallback */
 @media (prefers-color-scheme: light) {
-  .btn-primary:hover {
-    background: var(--button-hover-bg);
-    transform: scale(1.05);
-    color: #000000; /* Keeps the original #3182ce from light mode variables */
+  :not([data-theme]) .btn-primary:hover {
+    background-color: var(--button-hover-bg);
+    color: #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    border: 1px solid #1b263b; /* Retained from frHimanshu-DarkModeToggle */
+    transform: scale(1.05); /* Added from main for hover effect */
   }
 }
 
