@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -9,6 +10,67 @@ import Layout from '../layout';
 import Seo from '../components/Seo';
 import StatsCard from '../components/StatsCard';
 import './MapPage.css';
+
+// Filter sidebar component
+const FilterSidebar = React.memo(({ 
+  selectedLocation, 
+  onLocationChange, 
+  selectedIndustry, 
+  onIndustryChange, 
+  resetFilters, 
+  filteredCount, 
+  totalCount,
+  locations,
+  industries
+}) => (
+  <div className="filters">
+    <h3>Filters</h3>
+    
+    <div className="filter-group">
+      <label htmlFor="location-filter">Location:</label>
+      <select 
+        id="location-filter"
+        value={selectedLocation} 
+        onChange={onLocationChange}
+        className="filter-select"
+      >
+        <option value="">All Locations</option>
+        {locations.map(location => (
+          <option key={location} value={location}>{location}</option>
+        ))}
+      </select>
+    </div>
+    
+    <div className="filter-group">
+      <label htmlFor="industry-filter">Industry:</label>
+      <select 
+        id="industry-filter"
+        value={selectedIndustry} 
+        onChange={onIndustryChange}
+        className="filter-select"
+      >
+        <option value="">All Industries</option>
+        {industries.map(industry => (
+          <option key={industry} value={industry}>{industry}</option>
+        ))}
+      </select>
+    </div>
+    
+    <div className="filter-actions">
+      <button
+        onClick={resetFilters}
+        className="reset-filters"
+      >
+        Reset Filters
+      </button>
+    </div>
+    
+    <div className="filtered-results">
+      <h4>Filtered Results</h4>
+      <p>{filteredCount} stories matching your criteria</p>
+    </div>
+  </div>
+));
 
 const MapPage = () => {
   const title = 'Jenkins - User Story Library - Map';
@@ -46,6 +108,59 @@ const MapPage = () => {
   `);
 
   const isBrowser = typeof window !== 'undefined';
+  
+  // State for filters
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('');
+  const [filteredStories, setFilteredStories] = useState([]);
+
+  // Extract unique locations and industries
+  const locations = useMemo(() => {
+    const locSet = new Set(
+      stories.edges.map(({ node }) => node.map.location)
+    );
+    return [...locSet].sort();
+  }, [stories]);
+
+  const industries = useMemo(() => {
+    const indSet = new Set(
+      stories.edges.flatMap(
+        ({ node }) => node.map.industries || node.metadata.industries || []
+      )
+    );
+    return [...indSet].sort();
+  }, [stories]);
+
+  // Filter handlers
+  const handleLocationChange = useCallback((e) => {
+    setSelectedLocation(e.target.value);
+  }, []);
+
+  const handleIndustryChange = useCallback((e) => {
+    setSelectedIndustry(e.target.value);
+  }, []);
+
+  // Reset filters function
+  const resetFilters = useCallback(() => {
+    setSelectedLocation('');
+    setSelectedIndustry('');
+  }, []);
+
+  // Filter stories when filter criteria change
+  useEffect(() => {
+    const newFilteredStories = stories.edges.filter(({ node }) => {
+      const locationMatch = !selectedLocation || 
+        node.map.location === selectedLocation;
+      
+      const storyIndustries = node.map.industries || node.metadata.industries || [];
+      const industryMatch = !selectedIndustry || 
+        storyIndustries.includes(selectedIndustry);
+      
+      return locationMatch && industryMatch;
+    });
+    
+    setFilteredStories(newFilteredStories);
+  }, [stories.edges, selectedLocation, selectedIndustry]);
 
   // Calculate stats
   const totalStories = stories.edges.length;
@@ -140,8 +255,22 @@ const MapPage = () => {
           </div>
         </div>
 
-        <div className="row map-container">
-          <div className="col">
+        <div className="row">
+          <div className="col-3 filter-sidebar">
+            <FilterSidebar 
+              selectedLocation={selectedLocation}
+              onLocationChange={handleLocationChange}
+              selectedIndustry={selectedIndustry}
+              onIndustryChange={handleIndustryChange}
+              resetFilters={resetFilters}
+              filteredCount={filteredStories.length}
+              totalCount={stories.edges.length}
+              locations={locations}
+              industries={industries}
+            />
+          </div>
+          
+          <div className="col-9 map-container">
             <MapContainer
               center={[43.5890452, 0]}
               zoom={2}
@@ -157,7 +286,7 @@ const MapPage = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
-              {stories.edges
+              {filteredStories
                 .filter(({ node: story }) => story.map.geojson)
                 .map(({ node: story }) => {
                   const geojson = JSON.parse(story.map.geojson);
