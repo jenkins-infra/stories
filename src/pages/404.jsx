@@ -2,14 +2,16 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../layout';
+import { TripThemeContext } from '../components/infotheme'; // Updated to use TripThemeContext
 import './notFound.css';
 
 const NotFoundPage = () => {
+  const { theme } = React.useContext(TripThemeContext); // Use TripThemeContext
   const title = 'Page not found';
 
   return (
     <Layout title={title}>
-      <main className="page">
+      <main className={`page ${theme === 'dark' ? 'dark-mode' : 'light-mode'}`}>
         <title>{title}</title>
         <StaticImage
           src="../images/fire-jenkins.svg"
@@ -22,13 +24,12 @@ const NotFoundPage = () => {
           <span role="img" aria-label="Pensive emoji">
             😔
           </span>{' '}
-          we couldn’t find what you were looking for.
+          we couldn't find what you were looking for.
           <br />
           {process.env.NODE_ENV === 'development' ? (
             <>
               <br />
-              Try creating a page in <code className="code">src/pages/</code>
-              .
+              Try creating a page in <code className="code">src/pages/</code>.
               <br />
             </>
           ) : null}

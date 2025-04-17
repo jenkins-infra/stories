@@ -1,0 +1,194 @@
+/* Global CSS overrides for Jenkins layout plugin */
+
+/* Override for light/dark mode in the Jenkins layout components */
+[data-theme='dark'] .container-fluid,
+[data-theme='dark'] .container,
+[data-theme='dark'] main,
+[data-theme='dark'] section,
+[data-theme='dark'] article,
+[data-theme='dark'] .jenkins-layout,
+[data-theme='dark'] body,
+[data-theme='dark'] html {
+  background-color: #121212 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Fix for hero section in dark mode */
+[data-theme='dark'] .hero-section {
+  background: linear-gradient(
+    145deg,
+    #0d1b2aff,
+    #1b263bff,
+    #415a77ff
+  ) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Card backgrounds in dark mode */
+[data-theme='dark'] .card,
+[data-theme='dark'] .jenkins-layout .card,
+[data-theme='dark'] .jenkins-layout .card-body,
+[data-theme='dark'] .stories-grid .card,
+[data-theme='dark'] .story-cards .story-card {
+  background-color: #1e1e1e !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Content area backgrounds - cards in dark mode */
+[data-theme='dark'] .story-container,
+[data-theme='dark'] .card-container {
+  background-color: #1e1e1e !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Button styling in dark mode */
+[data-theme='dark'] .btn-primary,
+[data-theme='dark'] .jenkins-layout .btn-primary {
+  background-color: #6c8eb9 !important;
+  border-color: #6c8eb9 !important;
+  color: #ffffff !important;
+  border-radius: 25px !important;
+  padding: 10px 30px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for buttons in dark mode */
+[data-theme='dark'] .btn-primary:hover,
+[data-theme='dark'] .jenkins-layout .btn-primary:hover {
+  background-color: #2b5789 !important;
+  border-color: #2b5789 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Share Story button styling in dark mode */
+[data-theme='dark'] .share-story-btn {
+  background-color: #4a90e2 !important;
+  border-color: #4a90e2 !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .share-story-btn:hover {
+  background-color: #3a80d2 !important;
+  border-color: #3a80d2 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Text colors in dark mode */
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6,
+[data-theme='dark'] .jenkins-layout .text-dark,
+[data-theme='dark'] .textcolor {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Secondary text in dark mode */
+[data-theme='dark'] p,
+[data-theme='dark'] .jenkins-layout .text-muted,
+[data-theme='dark'] .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Links in dark mode */
+[data-theme='dark'] a,
+[data-theme='dark'] .jenkins-layout a {
+  color: #909090 !important;
+}
+
+/* Override for card and story links specifically */
+[data-theme='dark'] .card a,
+[data-theme='dark'] .story-card a,
+[data-theme='dark'] .card-title a,
+[data-theme='dark'] a.card-title {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme='dark'] .card a:hover,
+[data-theme='dark'] .story-card a:hover,
+[data-theme='dark'] .card-title a:hover,
+[data-theme='dark'] a.card-title:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  text-decoration: none;
+}
+
+[data-theme='dark'] a:hover,
+[data-theme='dark'] .jenkins-layout a:hover {
+  color: #3182ce !important;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .container-fluid a {
+    color: #c9cacb !important;
+    text-decoration: none;
+  }
+  .container-fluid a:hover {
+    color: #3182ce !important;
+    text-decoration: none;
+  }
+}
+
+/* Header and footer styling */
+[data-theme='dark'] .jenkins-layout .navbar {
+  background-color: #121212 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme='dark'] .jenkins-layout footer {
+  background-color: #121212 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Search inputs in dark mode */
+[data-theme='dark'] input[type='text'],
+[data-theme='dark'] input[type='search'],
+[data-theme='dark'] .form-control {
+  background-color: #2b3035 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-theme='dark'] input[type='text']::placeholder,
+[data-theme='dark'] input[type='search']::placeholder,
+[data-theme='dark'] .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Support for prefers-color-scheme as fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .container-fluid,
+  :root:not([data-theme]) .container,
+  :root:not([data-theme]) main,
+  :root:not([data-theme]) section,
+  :root:not([data-theme]) article,
+  :root:not([data-theme]) .jenkins-layout,
+  :root:not([data-theme]) body,
+  :root:not([data-theme]) html {
+    background-color: #121212 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* Card backgrounds in dark mode */
+  :root:not([data-theme]) .card,
+  :root:not([data-theme]) .jenkins-layout .card,
+  :root:not([data-theme]) .jenkins-layout .card-body,
+  :root:not([data-theme]) .stories-grid .card,
+  :root:not([data-theme]) .story-cards .story-card {
+    background-color: #1e1e1e !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}

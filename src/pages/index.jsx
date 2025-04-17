@@ -4,6 +4,7 @@ import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
 import Layout from '../layout';
 import Seo from '../components/Seo';
+import { TripThemeContext } from '../components/infotheme'; // Updated to use TripThemeContext
 import './index.css';
 
 const IndexPage = () => {
@@ -29,25 +30,9 @@ const IndexPage = () => {
     }
   `);
 
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const { theme } = React.useContext(TripThemeContext); // Updated to use TripThemeContext
+  const isDarkMode = theme === 'dark';
   const sectionsRef = React.useRef([]);
-
-  // Dark Mode Detection
-  React.useEffect(() => {
-    const checkDarkMode = () => {
-      const darkModeMediaQuery = window.matchMedia(
-        '(prefers-color-scheme: dark)',
-      );
-      setIsDarkMode(darkModeMediaQuery.matches);
-    };
-    checkDarkMode();
-    const darkModeMediaQuery = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    );
-    darkModeMediaQuery.addEventListener('change', checkDarkMode);
-    return () =>
-      darkModeMediaQuery.removeEventListener('change', checkDarkMode);
-  }, []);
 
   // Scroll-triggered Animation
   React.useEffect(() => {

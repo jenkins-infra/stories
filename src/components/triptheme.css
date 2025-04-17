@@ -1,0 +1,68 @@
+.trip-theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .trip-theme-toggle {
+  background: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.trip-theme-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .trip-theme-toggle:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.trip-theme-toggle:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(66, 153, 225, 0.5),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .trip-theme-toggle:focus {
+  box-shadow:
+    0 0 0 3px rgba(66, 153, 225, 0.5),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.trip-theme-toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Show sun icon in light mode and moon icon in dark mode */
+.sun-icon {
+  display: block;
+}
+
+.moon-icon {
+  display: none;
+}
+
+[data-theme='dark'] .sun-icon {
+  display: none;
+}
+
+[data-theme='dark'] .moon-icon {
+  display: block;
+}
