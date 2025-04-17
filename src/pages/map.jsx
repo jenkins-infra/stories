@@ -113,6 +113,8 @@ const MapPage = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('');
   const [filteredStories, setFilteredStories] = useState([]);
+  // State to toggle filter visibility on mobile
+  const [showFilters, setShowFilters] = useState(false);
 
   // Extract unique locations and industries
   const locations = useMemo(() => {
@@ -144,6 +146,11 @@ const MapPage = () => {
   const resetFilters = useCallback(() => {
     setSelectedLocation('');
     setSelectedIndustry('');
+  }, []);
+
+  // Toggle filters visibility for mobile
+  const toggleFilters = useCallback(() => {
+    setShowFilters(prev => !prev);
   }, []);
 
   // Filter stories when filter criteria change
@@ -255,8 +262,19 @@ const MapPage = () => {
           </div>
         </div>
 
+        {/* Mobile toggle button for filters */}
+        <div className="d-md-none mb-3">
+          <button 
+            className="filter-toggle-btn"
+            onClick={toggleFilters}
+          >
+            {showFilters ? 'Hide Filters' : 'Show Filters'} 
+          </button>
+        </div>
+
         <div className="row">
-          <div className="col-3 filter-sidebar">
+          {/* Responsive filter sidebar - changes from column to expandable panel on mobile */}
+          <div className={`col-md-3 filter-sidebar ${showFilters ? 'filter-sidebar-visible' : 'filter-sidebar-hidden'}`}>
             <FilterSidebar 
               selectedLocation={selectedLocation}
               onLocationChange={handleLocationChange}
@@ -270,7 +288,7 @@ const MapPage = () => {
             />
           </div>
           
-          <div className="col-9 map-container">
+          <div className="col-md-9 map-container">
             <MapContainer
               center={[43.5890452, 0]}
               zoom={2}
