@@ -29,6 +29,29 @@ h3 {
   padding: 1rem 1rem;
 }
 
+/* Row with proper spacing */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row > [class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* For filter sidebar specifically - add a bit more padding on the right */
+.row > .col-md-3.filter-sidebar {
+  padding-right: 20px;
+}
+
+/* For map container - add a bit more padding on the left */
+.row > .col-md-9.map-container {
+  padding-left: 20px;
+}
+
 /* Map Container */
 .map-container {
   height: calc(100vh - 150px);
@@ -276,8 +299,9 @@ h3 {
 .filter-sidebar {
   padding: 20px;
   background-color: #1a1a1a;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a3a52;
   overflow-y: auto;
   height: calc(100vh - 150px);
   margin-bottom: 20px;
@@ -446,6 +470,11 @@ h3 {
 
 /* Responsive adjustments for map */
 @media (max-width: 768px) {
+  /* Allow wrapping on mobile */
+  .row {
+    flex-wrap: wrap;
+  }
+  
   .filter-sidebar {
     height: auto;
     margin-bottom: 20px;
