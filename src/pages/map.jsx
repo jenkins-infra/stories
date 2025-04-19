@@ -1,138 +1,94 @@
-import * as React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Icon } from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/Seo';
-import StatsCard from '../components/StatsCard';
+import StoriesMap from '../components/StoriesMap';
 import './MapPage.css';
 
 const MapPage = () => {
-  const title = 'Jenkins - User Story Library - Map';
-  const { stories, mapPin } = useStaticQuery(graphql`
-    query MapPageQueries {
-      mapPin: file(name: { eq: "jenkins_map_pin2-e1634173081372" }) {
-        publicURL
-      }
-      stories: allUserStory(
-        sort: { date: DESC }
+  const title = 'Jenkins Is The Way';
+  const { allUserStory, allStoriesForStats } = useStaticQuery(graphql`
+    query {
+      allUserStory(
         filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
+        totalCount
         edges {
           node {
-            title
             map {
-              authored_by
-              geojson
-              industries
               location
-            }
-            image {
-              childImageSharp {
-                gatsbyImageData(layout: FIXED, width: 150)
-              }
+              geojson
             }
             metadata {
               industries
             }
-            slug
+          }
+        }
+      }
+      allStoriesForStats: allUserStory {
+        edges {
+          node {
+            metadata {
+              industries
+            }
           }
         }
       }
     }
   `);
 
-  const isBrowser = typeof window !== 'undefined';
-
-  // Calculate stats
-  const totalStories = stories.edges.length;
+  // Calculate stats dynamically
+  const totalStories = allUserStory.totalCount;
   const uniqueLocations = new Set(
-    stories.edges.map(({ node }) => node.map.location),
+    allUserStory.edges
+      .map(({ node }) => {
+        const location = node.map?.location;
+        if (!location) return null;
+        const parts = location.split(',');
+        return parts.length > 1
+          ? parts[parts.length - 1].trim()
+          : location.trim();
+      })
+      .filter(Boolean),
   ).size;
-  const allIndustries = stories.edges.flatMap(
-    ({ node }) => node.map.industries || node.metadata.industries || [],
-  );
-  const uniqueIndustries = new Set(allIndustries).size;
 
-  if (!isBrowser) {
-    return (
-      <Layout title={title}>
-        <Seo title={title} pathname="/" />
-        This page needs javascript
-      </Layout>
-    );
-  }
+  // Calculate total unique industries from ALL stories
+  const uniqueIndustries = new Set(
+    allStoriesForStats.edges
+      .flatMap(({ node }) => node.metadata?.industries || [])
+      .filter(Boolean),
+  ).size;
 
-  const icon = new Icon({
-    iconUrl: mapPin.publicURL,
-    iconAnchor: [29, 59],
-    iconSize: [59, 59],
-  });
-
-  const StoryPopup = ({ story }) => (
-    <div className="story-popup">
-      {story.image && (
-        <div className="story-popup-image">
-          <Link to={`/user-story/${story.slug}`}>
-            <GatsbyImage
-              image={getImage(story.image)}
-              alt={story.title}
-              className="story-img"
-            />
-          </Link>
-        </div>
-      )}
-
-      <div className="story-popup-content">
-        <h4 className="story-popup-title">{story.title}</h4>
-
-        <div className="story-popup-details">
-          <div className="story-popup-row">
-            <span className="story-popup-label">Author:</span>
-            <span className="story-popup-value">{story.map.authored_by}</span>
-          </div>
-
-          <div className="story-popup-row">
-            <span className="story-popup-label">Location:</span>
-            <span className="story-popup-value">{story.map.location}</span>
-          </div>
-
-          <div className="story-popup-row">
-            <span className="story-popup-label">Industries:</span>
-            <span className="story-popup-value">
-              {(story.map.industries || story.metadata.industries || []).join(
-                ', ',
-              )}
-            </span>
-          </div>
-        </div>
-
-        <div className="story-btn-container">
-          <Link to={`/user-story/${story.slug}`} className="story-popup-button">
-            Read Story
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+  const stats = [
+    { value: totalStories, label: 'STORIES' },
+    { value: uniqueLocations, label: 'LOCATIONS' },
+    { value: uniqueIndustries, label: 'INDUSTRIES' },
+  ];
 
   return (
     <Layout title={title}>
-      <Seo title={title} pathname="/" />
+      <Seo title={title} pathname="/map" />
+
       <div className="container">
-        <div className="row text-center">
+        <div className="row body">
+          <div className="col text-center">
+            <h1>Jenkins Is The Way</h1>
+            <h2>Latest Jenkins User Stories</h2>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="stats-container">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="stat-box">
+              <div className="stat-value">{value}</div>
+              <div className="stat-label">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="row">
           <div className="col">
-            <h1 className="textcolor">Jenkins Is The Way</h1>
-            <h2 className="textcolor">Latest Jenkins User Stories</h2>
-            {/* Stats Section */}
-            <StatsCard
-              totalStories={totalStories}
-              uniqueLocations={uniqueLocations}
-              uniqueIndustries={uniqueIndustries}
-            />
             <h3>
               Zoom into the map below to discover just where in the world you'll
               find Jenkins users and Jenkins solutions.
@@ -140,43 +96,8 @@ const MapPage = () => {
           </div>
         </div>
 
-        <div className="row map-container">
-          <div className="col">
-            <MapContainer
-              center={[43.5890452, 0]}
-              zoom={2}
-              minZoom={2}
-              maxBounds={[
-                [-90, -180],
-                [90, 180],
-              ]}
-              maxBoundsViscosity={1.0}
-              className="leaflet-map"
-            >
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              />
-              {stories.edges
-                .filter(({ node: story }) => story.map.geojson)
-                .map(({ node: story }) => {
-                  const geojson = JSON.parse(story.map.geojson);
-                  const [longitude, latitude] = geojson.coordinates;
-
-                  return (
-                    <Marker
-                      key={story.slug}
-                      position={[latitude, longitude]}
-                      icon={icon}
-                    >
-                      <Popup>
-                        <StoryPopup story={story} />
-                      </Popup>
-                    </Marker>
-                  );
-                })}
-            </MapContainer>
-          </div>
+        <div className="map-container">
+          <StoriesMap stories={allUserStory.edges} />
         </div>
       </div>
     </Layout>

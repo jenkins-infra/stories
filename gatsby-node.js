@@ -3,24 +3,26 @@ const path = require('path');
 
 async function createUserStoryPages({graphql, createPage, createRedirect}) {
     const userStory = path.resolve('src/pages/_user_story.jsx');
-    const result = await graphql(`{
-        stories: allUserStory (sort: {date: DESC}) {
-            edges {
-                node {
-                    id
-                    slug
-                }
-                next {
-                    title
-                    slug
-                }
-                previous {
-                    title
-                    slug
-                }
-            }
+    const result = await graphql(`
+    {
+      stories: allUserStory(sort: { date: DESC }) {
+        edges {
+          node {
+            id
+            slug
+          }
+          next {
+            title
+            slug
+          }
+          previous {
+            title
+            slug
+          }
         }
-    }`);
+      }
+    }
+  `);
 
     if (result.errors) {
         console.error(result.errors);
@@ -47,11 +49,20 @@ async function createUserStoryPages({graphql, createPage, createRedirect}) {
     });
 }
 
-exports.createPages = async ({graphql, actions: {createPage, createRedirect}}) => {
+exports.createPages = async ({
+    graphql,
+    actions: {createPage, createRedirect},
+}) => {
     await createUserStoryPages({graphql, createPage, createRedirect});
 };
 
-exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
+exports.onCreateNode = async ({
+    node,
+    actions,
+    loadNodeContent,
+    createNodeId,
+    createContentDigest,
+}) => {
     const {createNode, createParentChildLink} = actions;
 
     if (node.internal.type === 'File') {
@@ -72,7 +83,7 @@ exports.onCreateNode = async ({node, actions, loadNodeContent, createNodeId, cre
 
             const paragraphs = obj.body_content.paragraphs;
             yamlNode.body_content.paragraphs = paragraphs.map((_, idx) =>
-                createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`)
+                createNodeId(`${yamlNode.id} >>> ${idx} >>> MarkdownRemark`),
             );
             yamlNode.internal.contentDigest = createContentDigest(yamlNode);
 
