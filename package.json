@@ -16,10 +16,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"src/**/*.{css,js,jsx,json}\"",
-    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\"",
-    "geocode": "node scripts/geocode-stories.js",
-    "test-map": "node scripts/test-map.js",
-    "dev": "nodemon"
+    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\""
   },
   "dependencies": {
     "cheerio": "^1.0.0",

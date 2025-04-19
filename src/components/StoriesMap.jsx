@@ -1,16 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Icon, DivIcon } from 'leaflet';
 import { TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import LeafletMap from './LeafletMap';
 import StoryPopup from './StoryPopup';
-import './LeafletMap.css';
+import './StoriesMap.css';
 import * as styles from './StoriesMap.module.css';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
-import 'leaflet/dist/leaflet.css';
 
 // Component to handle map view changes
 const ChangeView = ({ center, zoom }) => {
@@ -38,7 +36,7 @@ const createCustomMarker = (story, mapPin) => {
     <div class="${styles.customMarker}">
       <div class="${styles.markerPin}"></div>
       <div class="${styles.markerAvatar}">
-        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="" />
+        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="${story.title}" />
       </div>
     </div>
   `;
