@@ -16,7 +16,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"src/**/*.{css,js,jsx,json}\"",
-    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\""
+    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\"",
+    "geocode": "node scripts/geocode-stories.js",
+    "test-map": "node scripts/test-map.js",
+    "dev": "nodemon"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
@@ -38,6 +41,7 @@
     "hash-wasm": "^4.12.0",
     "js-search": "^2.0.1",
     "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.5.3",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
