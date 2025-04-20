@@ -4,7 +4,7 @@ import { Icon, DivIcon } from 'leaflet';
 import { TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import LeafletMap from './LeafletMap';
 import StoryPopup from './StoryPopup';
-import './StoriesMap.css';
+import './Leaflet-global.css';
 import * as styles from './StoriesMap.module.css';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';

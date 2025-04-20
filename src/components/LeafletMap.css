@@ -1,4 +1,0 @@
-/* Fix marker icon paths */
-.leaflet-default-icon-path {
-  background-image: url('~leaflet/dist/images/marker-icon.png');
-} 
