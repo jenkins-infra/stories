@@ -6,9 +6,10 @@ Previously known as Jenkins is the way. This project showcases real-world Jenkin
 
 ### Deployment Workflow (to be done by Infra or a maintainer)
 
-- Builds are done on `ci.infra.jenkins.io` (VPN needed)
-- Successful builds on main branch deploy to netlify
-- Netlify site is fronted by fastly
+* Builds are done on `ci.infra.jenkins.io` (VPN needed)
+* Successful builds on main branch deploy to netlify
+* Netlify site is fronted by fastly
+
 
 For historical record, the admin portal can be reached via https://stories.jenkins.io/admin/
 
@@ -16,8 +17,8 @@ For historical record, the admin portal can be reached via https://stories.jenki
 
 ### System Requirements
 
-- Node.js (Recommended: Match version in `.tool-versions`)
-- npm (Node Package Manager)
+* Node.js (Recommended: Match version in `.tool-versions`)
+* npm (Node Package Manager)
 
 ## Getting Started
 
@@ -72,3 +73,4 @@ npm run format
 5. Add your changes to staging area and commit your changes
 6. Push your changes to GitHub
 7. Submit a pull request
+
