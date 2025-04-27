@@ -108,6 +108,14 @@ React.useEffect(() => {
           <p className="hero-subtitle">
             Explore the latest Jenkins user stories.
           </p>
+          <div className="hero-buttons">
+            <Link to="/all" className="hero-button">
+              View All Stories
+            </Link>
+            <Link to="/map" className="hero-button hero-button-secondary">
+              Explore Map
+            </Link>
+          </div>
           <StaticImage
             src="../images/Jenkins-is-the-Way-768x911.png"
             alt="Jenkins is the way logo"
