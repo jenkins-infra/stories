@@ -74,7 +74,7 @@ html {
   transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out; 
 }
 
-/* @keyframes gradientAnimation {
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
@@ -84,32 +84,8 @@ html {
   100% {
     background-position: 0% 50%;
   }
-} */
-
-/* Scroll-triggered Animation */
-.section-visible {
-  opacity: 1; 
-  transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Fade-out */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section-final {
-  opacity: 1;
-  transform: translateY(0);
-  transition: none;
-}
-
-/* Prevent flicker: when the section is fading out */
-.fading-out {
-  pointer-events: none; /* Optional: Disable interactions during fade-out */
-}
 
 .hero-title {
   font-size: 2.5rem;
@@ -296,6 +272,31 @@ html {
   }
 }
 
+
+/* Scroll-triggered Animation */
+.section-visible {
+  opacity: 1; 
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade-out */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-final {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+/* Prevent flicker: when the section is fading out */
+.fading-out {
+  pointer-events: none; /* Optional: Disable interactions during fade-out */
+}
 
 /* Search Bar Animation */
 .search-section {
