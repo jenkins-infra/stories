@@ -1,0 +1,18 @@
+.search-section {
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.search-section input {
+  transition:
+    box-shadow 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+/* Hover/Focus Effect */
+.search-section input:focus,
+.search-section input:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
