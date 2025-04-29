@@ -113,3 +113,15 @@
   transform: scale(1.05);
   color: white;
 }
+
+/* .fadeVisible {
+  opacity: 1;
+}
+
+.fadeHidden {
+  opacity: 0;
+}
+
+.fadeTransition {
+  transition: opacity 1s;
+} */

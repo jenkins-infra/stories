@@ -99,3 +99,28 @@
     color: #58a6ff;
   }
 }
+
+.fadeVisible {
+  opacity: 1;
+}
+
+.fadeHidden {
+  opacity: 0;
+}
+
+.fadeTransition {
+  transition: opacity 1s;
+}
+
+/* .fadeVisible {
+  opacity: 1;
+  transform: translateY(0); 
+
+.fadeHidden {
+  opacity: 0;
+  transform: translateY(50px); 
+}
+
+.fadeTransition {
+  transition: opacity 3s, transform 3s; 
+} */

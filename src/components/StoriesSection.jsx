@@ -2,10 +2,55 @@ import React from 'react';
 import { Link } from 'gatsby';
 import './StoriesSection.css';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useEffect, useRef, useState } from 'react';
 
 function StoriesSection({ stories }) {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [direction, setDirection] = useState('down');
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const newDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+      setDirection(newDirection);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const getClasses = () => {
+    if (direction === 'up') {
+      return isVisible ? 'fadeVisible' : 'fadeHidden';
+    }
+    return isVisible
+      ? 'fadeVisible fadeTransition'
+      : 'fadeHidden fadeTransition';
+  };
   return (
-    <div>
+    <div  className={`${getClasses()}`} ref={sectionRef}>
       <div>
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <p className="section-subtitle">

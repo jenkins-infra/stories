@@ -16,3 +16,15 @@
   transform: scale(1.02);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* .fadeVisible {
+  opacity: 1;
+}
+
+.fadeHidden {
+  opacity: 0;
+}
+
+.fadeTransition {
+  transition: opacity 1s;
+} */
