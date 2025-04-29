@@ -1,10 +1,10 @@
 import React from 'react';
 import Search from '../components/SearchContainer';
-import './SearchSection.css'; 
+import './SearchSection.css';
 
 function SearchSection() {
   return (
-    <div className='search-section section-visible'>
+    <div>
       <h1
         style={{
           marginTop: `3em`,

@@ -56,7 +56,6 @@ html {
   }
 }
 
-
 /* Button Section */
 .btn-primary {
   display: inline-block;
@@ -97,4 +96,9 @@ html {
   .story-cards {
     grid-template-columns: 1fr;
   }
+}
+
+.section-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }

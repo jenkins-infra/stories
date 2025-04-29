@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useStaticQuery, graphql} from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -30,7 +30,7 @@ const IndexPage = () => {
       }
     }
   `);
-  console.log((stories.edges));
+  console.log(stories.edges);
 
   const [isDarkMode, setIsDarkMode] = React.useState(false);
 
@@ -54,10 +54,18 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
-      <HeroSection></HeroSection>
-      <SearchSection></SearchSection>
-      <StoriesSection stories={stories}></StoriesSection>
-      <MapSection isDarkMode={isDarkMode}></MapSection>
+      <div className="hero-section section-visible">
+        <HeroSection></HeroSection>
+      </div>
+      <div>
+        <SearchSection className="search-section section-visible"></SearchSection>
+      </div>
+      <div className="stories-section section-visible">
+        <StoriesSection stories={stories}></StoriesSection>
+      </div>
+      <div className='map-section section-visible'>
+        <MapSection isDarkMode={isDarkMode}></MapSection>
+      </div>
     </Layout>
   );
 };

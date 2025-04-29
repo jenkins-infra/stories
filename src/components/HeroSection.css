@@ -8,6 +8,7 @@
   animation: gradientAnimation 8s ease infinite;
   padding: 50px 20px;
   border-radius: 20px;
+  opacity: 0;
   margin: 20px;
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
   transform: translateY(50px);

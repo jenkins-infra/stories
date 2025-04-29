@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 function StoriesSection({ stories }) {
   return (
     <div>
-      <div className="stories-section">
+      <div>
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <p className="section-subtitle">
           Stories from all around the world by Jenkins User

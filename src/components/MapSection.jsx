@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import './MapSection.css'; // Import your CSS file
 
-function MapSection({isDarkMode}) {
+function MapSection({ isDarkMode }) {
   return (
     <div>
       <h2 className="section-title">Discover More</h2>
@@ -23,9 +23,9 @@ function MapSection({isDarkMode}) {
             />
           )}
         </Link>
-        <Link className="btn-primary" to="/map">
-          Visit the Map
-        </Link>
+          <Link className="btn-primary" to="/map">
+            Visit the Map
+          </Link>
       </div>
     </div>
   );
