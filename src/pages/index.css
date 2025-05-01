@@ -71,7 +71,7 @@ html {
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
 @keyframes gradientAnimation {
@@ -318,10 +318,30 @@ html {
   }
 }
 
+
 /* Scroll-triggered Animation */
 .section-visible {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  opacity: 1; 
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade-out */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-final {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+/* Prevent flicker: when the section is fading out */
+.fading-out {
+  pointer-events: none; /* Optional: Disable interactions during fade-out */
 }
 
 /* Search Bar Animation */
