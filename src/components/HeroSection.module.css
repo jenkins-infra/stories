@@ -100,6 +100,7 @@
   }
 }
 
+/*Fade-in effect*/
 .fadeVisible {
   opacity: 1;
   transform: translateY(0); 
@@ -111,5 +112,5 @@
 }
 
 .fadeTransition {
-  transition: opacity 1.5s, transform 1.5s; 
+  transition: opacity 1.25s, transform 1.25s ease-in-out; 
 }

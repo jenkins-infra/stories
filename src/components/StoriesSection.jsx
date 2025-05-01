@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
-import * as styles from './StoriesSection.module.css'; // Correct import
+import * as styles from './StoriesSection.module.css';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 function StoriesSection({ stories }) {
@@ -26,7 +26,7 @@ function StoriesSection({ stories }) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -50,7 +50,10 @@ function StoriesSection({ stories }) {
   };
 
   return (
-    <div className={`${styles.storiesSection} ${getClasses()}`} ref={sectionRef}>
+    <div
+      className={`${styles.storiesSection} ${getClasses()}`}
+      ref={sectionRef}
+    >
       <div>
         <h2 className={styles.sectionTitle}>Latest Jenkins User Stories</h2>
         <p className={styles.sectionSubtitle}>
@@ -93,4 +96,3 @@ function StoriesSection({ stories }) {
 }
 
 export default StoriesSection;
-  

@@ -17,6 +17,7 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/*fade-effect*/
 .fadeVisible {
   opacity: 1;
   transform: translateY(0); 
@@ -28,5 +29,5 @@
 }
 
 .fadeTransition {
-  transition: opacity 1.5s, transform 1.5s; 
+  transition: opacity 1.5s, transform 1.5s ease-in-out; 
 }

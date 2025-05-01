@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Search from '../components/SearchContainer';
-import * as styles from './SearchSection.module.css'; // Correct CSS Module import
+import * as styles from './SearchSection.module.css';
 
 function SearchSection() {
   const sectionRef = useRef(null);
@@ -15,7 +15,6 @@ function SearchSection() {
       setDirection(newDirection);
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);

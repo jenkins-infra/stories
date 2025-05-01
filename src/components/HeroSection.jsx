@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import * as styles from './HeroSection.module.css'; // using CSS modules
+import * as styles from './HeroSection.module.css';
 
 function HeroSection() {
   const sectionRef = useRef(null);
@@ -26,7 +26,7 @@ function HeroSection() {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1, rootMargin: '0px 0px -300px 0px' },
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
