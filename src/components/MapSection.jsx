@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import './MapSection.css'; // Import your CSS file
-import { useEffect, useRef, useState } from 'react';
+import * as styles from './MapSection.module.css';
 
 function MapSection({ isDarkMode }) {
   const sectionRef = useRef(null);
@@ -27,7 +26,7 @@ function MapSection({ isDarkMode }) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -43,32 +42,33 @@ function MapSection({ isDarkMode }) {
 
   const getClasses = () => {
     if (direction === 'up') {
-      return isVisible ? 'fadeVisible' : 'fadeHidden';
+      return isVisible ? styles.fadeVisible : styles.fadeHidden;
     }
     return isVisible
-      ? 'fadeVisible fadeTransition'
-      : 'fadeHidden fadeTransition';
+      ? `${styles.fadeVisible} ${styles.fadeTransition}`
+      : `${styles.fadeHidden} ${styles.fadeTransition}`;
   };
+
   return (
-    <div className={`${getClasses()}`} ref={sectionRef}>
-      <h2 className="section-title">Discover More</h2>
-      <div className="map-content">
+    <div className={`${styles.mapSection} ${getClasses()}`} ref={sectionRef}>
+      <h2 className={styles.sectionTitle}>Discover More</h2>
+      <div className={styles.mapContent}>
         <Link to="/map">
           {isDarkMode ? (
             <StaticImage
               src="../images/map_screenshot.png"
               alt="Screenshot of pins on a map"
-              className="map-image"
+              className={styles.mapImage}
             />
           ) : (
             <StaticImage
               src="../images/map_screenshot_light.png"
               alt="Screenshot of pins on a map"
-              className="map-image"
+              className={styles.mapImage}
             />
           )}
         </Link>
-        <Link className="btn-primary" to="/map">
+        <Link className={styles.btnPrimary} to="/map">
           Visit the Map
         </Link>
       </div>

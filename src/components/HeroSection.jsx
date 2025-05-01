@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import './HeroSection.css'; // Import your CSS file
-import { useEffect, useRef, useState } from 'react';
+import * as styles from './HeroSection.module.css'; // using CSS modules
 
 function HeroSection() {
   const sectionRef = useRef(null);
@@ -27,7 +26,7 @@ function HeroSection() {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 },
+      { threshold: 0.1, rootMargin: '0px 0px -300px 0px' },
     );
 
     if (sectionRef.current) {
@@ -43,29 +42,37 @@ function HeroSection() {
 
   const getClasses = () => {
     if (direction === 'up') {
-      return isVisible ? 'fadeVisible' : 'fadeHidden';
+      return isVisible ? styles.fadeVisible : styles.fadeHidden;
     }
     return isVisible
-      ? 'fadeVisible fadeTransition'
-      : 'fadeHidden fadeTransition';
+      ? `${styles.fadeVisible} ${styles.fadeTransition}`
+      : `${styles.fadeHidden} ${styles.fadeTransition}`;
   };
+
   return (
-    <div className={`hero-content ${getClasses()}`} ref={sectionRef}>
-      <h1 className="hero-title">Jenkins Is The Way</h1>
-      <p className="hero-subtitle">Explore the latest Jenkins user stories.</p>
-      <div className="hero-buttons">
-        <Link to="/all" className="hero-button">
-          View All Stories
-        </Link>
-        <Link to="/map" className="hero-button hero-button-secondary">
-          Explore Map
-        </Link>
+    <div className={`${styles.heroSection} ${getClasses()}`} ref={sectionRef}>
+      <div className={`${styles.heroContent}`}>
+        <h1 className={styles.heroTitle}>Jenkins Is The Way</h1>
+        <p className={styles.heroSubtitle}>
+          Explore the latest Jenkins user stories.
+        </p>
+        <div className={styles.heroButtons}>
+          <Link to="/all" className={styles.heroButton}>
+            View All Stories
+          </Link>
+          <Link
+            to="/map"
+            className={`${styles.heroButton} ${styles.heroButtonSecondary}`}
+          >
+            Explore Map
+          </Link>
+        </div>
+        <StaticImage
+          src="../images/Jenkins-is-the-Way-768x911.png"
+          alt="Jenkins is the way logo"
+          className={styles.heroImage}
+        />
       </div>
-      <StaticImage
-        src="../images/Jenkins-is-the-Way-768x911.png"
-        alt="Jenkins is the way logo"
-        className="hero-image"
-      />
     </div>
   );
 }

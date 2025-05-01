@@ -54,16 +54,16 @@ const IndexPage = () => {
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
-      <div className="hero-section section-visible">
+      <div className="section-visible">
         <HeroSection></HeroSection>
       </div>
-      <div>
-        <SearchSection className="search-section section-visible"></SearchSection>
+      <div className="section-visible">
+        <SearchSection></SearchSection>
       </div>
-      <div className="stories-section section-visible">
+      <div className="section-visible">
         <StoriesSection stories={stories}></StoriesSection>
       </div>
-      <div className='map-section section-visible'>
+      <div className="section-visible">
         <MapSection isDarkMode={isDarkMode}></MapSection>
       </div>
     </Layout>

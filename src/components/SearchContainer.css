@@ -218,12 +218,14 @@
 
 .fadeVisible {
   opacity: 1;
+  transform: translateY(0); 
 }
 
 .fadeHidden {
   opacity: 0;
+  transform: translateY(50px); 
 }
 
 .fadeTransition {
-  transition: opacity 1s;
+  transition: opacity 2s, transform 2s; 
 }

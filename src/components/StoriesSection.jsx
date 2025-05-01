@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
-import './StoriesSection.css';
+import * as styles from './StoriesSection.module.css'; // Correct import
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { useEffect, useRef, useState } from 'react';
 
 function StoriesSection({ stories }) {
   const sectionRef = useRef(null);
@@ -27,7 +26,7 @@ function StoriesSection({ stories }) {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -43,47 +42,48 @@ function StoriesSection({ stories }) {
 
   const getClasses = () => {
     if (direction === 'up') {
-      return isVisible ? 'fadeVisible' : 'fadeHidden';
+      return isVisible ? styles.fadeVisible : styles.fadeHidden;
     }
     return isVisible
-      ? 'fadeVisible fadeTransition'
-      : 'fadeHidden fadeTransition';
+      ? `${styles.fadeVisible} ${styles.fadeTransition}`
+      : `${styles.fadeHidden} ${styles.fadeTransition}`;
   };
+
   return (
-    <div  className={`${getClasses()}`} ref={sectionRef}>
+    <div className={`${styles.storiesSection} ${getClasses()}`} ref={sectionRef}>
       <div>
-        <h2 className="section-title">Latest Jenkins User Stories</h2>
-        <p className="section-subtitle">
+        <h2 className={styles.sectionTitle}>Latest Jenkins User Stories</h2>
+        <p className={styles.sectionSubtitle}>
           Stories from all around the world by Jenkins User
         </p>
 
-        <div className="story-cards">
+        <div className={styles.storyCards}>
           {stories.edges.map(({ node: story }) => (
-            <div key={story.slug} className="story-card">
+            <div key={story.slug} className={styles.storyCard}>
               {story.image && story.image.childImageSharp && (
-                <div className="story-image-container">
+                <div className={styles.storyImageContainer}>
                   <GatsbyImage
                     image={getImage(story.image)}
                     alt={story.title}
-                    className="story-image"
+                    className={styles.storyImage}
                   />
                 </div>
               )}
-              <h3 className="story-title">
+              <h3 className={styles.storyTitle}>
                 <Link to={`/user-story/${story.slug}`}>
                   {story.tag_line || story.title}
                 </Link>
               </h3>
-              <p className="story-author">
+              <p className={styles.storyAuthor}>
                 Authored By Jenkins User <strong>{story.authored_by}</strong>
               </p>
-              <p className="story-date">{story.date}</p>
+              <p className={styles.storyDate}>{story.date}</p>
             </div>
           ))}
         </div>
 
-        <div className="section-cta">
-          <Link className="btn-primary" to="/all">
+        <div className={styles.sectionCta}>
+          <Link className={styles.btnPrimary} to="/all">
             Read More Stories
           </Link>
         </div>
@@ -93,3 +93,4 @@ function StoriesSection({ stories }) {
 }
 
 export default StoriesSection;
+  

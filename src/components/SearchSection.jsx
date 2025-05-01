@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Search from '../components/SearchContainer';
-import './SearchSection.css';
-import { useEffect, useRef, useState } from 'react';
+import * as styles from './SearchSection.module.css'; // Correct CSS Module import
 
 function SearchSection() {
   const sectionRef = useRef(null);
@@ -42,14 +41,15 @@ function SearchSection() {
 
   const getClasses = () => {
     if (direction === 'up') {
-      return isVisible ? 'fadeVisible' : 'fadeHidden';
+      return isVisible ? styles.fadeVisible : styles.fadeHidden;
     }
     return isVisible
-      ? 'fadeVisible fadeTransition'
-      : 'fadeHidden fadeTransition';
+      ? `${styles.fadeVisible} ${styles.fadeTransition}`
+      : `${styles.fadeHidden} ${styles.fadeTransition}`;
   };
+
   return (
-    <div className={`${getClasses()}`} ref={sectionRef}>
+    <div className={`${styles.searchSection} ${getClasses()}`} ref={sectionRef}>
       <h1
         style={{
           marginTop: `3em`,

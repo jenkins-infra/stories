@@ -17,14 +17,16 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* .fadeVisible {
+.fadeVisible {
   opacity: 1;
+  transform: translateY(0); 
 }
 
 .fadeHidden {
   opacity: 0;
+  transform: translateY(50px); 
 }
 
 .fadeTransition {
-  transition: opacity 1s;
-} */
+  transition: opacity 1.5s, transform 1.5s; 
+}
