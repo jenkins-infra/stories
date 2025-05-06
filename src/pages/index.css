@@ -56,191 +56,6 @@ html {
   }
 }
 
-/* Hero Section */
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: var(--background-gradient);
-  background-size: 400% 400%;
-  animation: gradientAnimation 8s ease infinite;
-  padding: 50px 20px;
-  border-radius: 20px;
-  margin: 20px;
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--hero-text-color);
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: var(--subtitle-color);
-}
-
-.hero-image {
-  max-width: 350px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
-
-.hero-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Stories Section */
-.stories-section {
-  padding: 40px 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
-}
-
-.section-title {
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  color: var(--hero-text-color);
-  margin-bottom: 2px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--subtitle-color);
-  margin-bottom: 30px;
-  font-size: 1rem;
-}
-
-.section-cta {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.story-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.story-card {
-  border: 1px solid var(--card-border-color);
-  background-color: var(--card-background);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s;
-  position: relative;
-  height: 350px;
-}
-
-.story-card:hover {
-  transform: translateY(-5px);
-}
-
-.story-image-container {
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
-}
-
-.story-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.story-title {
-  padding: 10px 15px;
-  margin: 0;
-  font-size: 1rem;
-  color: var(--hero-text-color);
-  font-weight: 500;
-  flex-grow: 1;
-}
-
-.story-title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.story-author,
-.story-date {
-  padding: 0 15px;
-  margin: 0;
-}
-
-.story-author {
-  padding-bottom: 5px;
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.story-date {
-  padding-bottom: 15px;
-  margin-top: auto;
-  font-size: 0.75rem;
-  color: #888;
-}
-
-/* Map Section */
-.map-section {
-  padding: 40px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-in-out;
-}
-
-.map-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.map-image {
-  max-width: 900px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
-
-.map-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
 /* Button Section */
 .btn-primary {
   display: inline-block;
@@ -262,53 +77,6 @@ html {
   color: white;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #168bb9;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
-.hero-button:hover {
-  background-color: #0d6e94;
-  color: white;
-  text-decoration: none;
-}
-
-.hero-button-secondary {
-  background-color: #f8f9fa;
-  color: #168bb9;
-  border: 1px solid #168bb9;
-}
-
-.hero-button-secondary:hover {
-  background-color: #e9ecef;
-  color: #0d6e94;
-}
-
-@media (prefers-color-scheme: dark) {
-  .hero-button-secondary {
-    background-color: #2d333b;
-    color: #58a6ff;
-    border-color: #58a6ff;
-  }
-  
-  .hero-button-secondary:hover {
-    background-color: #373e47;
-    color: #58a6ff;
-  }
-}
-
 /* Light Mode Hover */
 @media (prefers-color-scheme: light) {
   .btn-primary:hover {
@@ -316,52 +84,6 @@ html {
     transform: scale(1.05);
     color: #000000; /* Keeps the original #3182ce from light mode variables */
   }
-}
-
-
-/* Scroll-triggered Animation */
-.section-visible {
-  opacity: 1; 
-  transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Fade-out */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section-final {
-  opacity: 1;
-  transform: translateY(0);
-  transition: none;
-}
-
-/* Prevent flicker: when the section is fading out */
-.fading-out {
-  pointer-events: none; /* Optional: Disable interactions during fade-out */
-}
-
-/* Search Bar Animation */
-.search-section {
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
-
-.search-section input {
-  transition:
-    box-shadow 0.3s ease-in-out,
-    transform 0.2s ease-in-out;
-}
-
-/* Hover/Focus Effect */
-.search-section input:focus,
-.search-section input:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 767px) {
@@ -374,4 +96,9 @@ html {
   .story-cards {
     grid-template-columns: 1fr;
   }
+}
+
+.section-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
