@@ -28,13 +28,12 @@ pipeline {
       steps {
         sh '''
           curl -qsL https://github.com/crate-ci/typos/releases/download/v1.5.0/typos-v1.5.0-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
-          curl -qsL https://github.com/halkeye/typos-json-to-checkstyle/releases/download/v0.1.1/typos-checkstyle-v0.1.1-x86_64 > typos-checkstyle && chmod 0755 typos-checkstyle
-          ./typos --format json | ./typos-checkstyle - > checkstyle.xml || true
+          ./typos --format sarif > typos.sarif || true
         '''
       }
       post {
         always {
-          recordIssues(tools: [checkStyle(id: 'typos', name: 'Typos', pattern: 'checkstyle.xml')])
+          recordIssues(tools: [sarif(id: 'typos', name: 'Typos', pattern: 'typos.sarif')])
         }
       }
     }
