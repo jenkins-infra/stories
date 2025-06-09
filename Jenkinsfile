@@ -27,7 +27,7 @@ pipeline {
     stage('Check for typos') {
       steps {
         sh '''
-          curl -qsL https://github.com/crate-ci/typos/releases/download/v1.5.0/typos-v1.5.0-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
+          curl -qsL https://github.com/crate-ci/typos/releases/download/v1.33.1/typos-v1.33.1-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
           ./typos --format sarif > typos.sarif || true
         '''
       }
