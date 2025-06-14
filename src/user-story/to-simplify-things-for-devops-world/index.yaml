@@ -3,7 +3,7 @@ map:
   authored_by: Prudviraj Pentakota
   location: India
   industries:
-    - Software Developement
+    - Software Development
   geojson: '{"type":"Point","coordinates":[78.486671,17.385044]}'
 metadata:
   title: Helping customer success management teams manage customer lifecycle and
