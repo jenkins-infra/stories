@@ -3,7 +3,7 @@ map:
   authored_by: Gaurav Nanda
   location: India
   industries:
-    - Software Developement
+    - Software Development
   geojson: '{"type":"Point","coordinates":[77.2217831,28.6862738]}'
 metadata:
   title: India-based consultancy uses a single platform to build extraordinary

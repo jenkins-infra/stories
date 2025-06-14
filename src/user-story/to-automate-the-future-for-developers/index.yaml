@@ -65,7 +65,7 @@ body_content:
       Continuous Integration Pipelines using the Jenkins syntax which was very
       helpful for me. The pipeline once implemented pulls all the commits and
       tests it with the server. The code is built and test as soon as the
-      developer commits the code. Jenkin will build and test code many times
+      developer commits the code. Jenkins will build and test code many times
       during the day. If the build is successful, then Jenkins will deploy the
       source into the test server and notify the deployment team. If the build
       fails, Jenkins will notify the developer of the errors."

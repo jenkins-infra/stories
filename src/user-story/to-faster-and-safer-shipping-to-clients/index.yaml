@@ -3,12 +3,12 @@ map:
   authored_by: Jorge Uztariz
   location: Colombia
   industries:
-    - Software Developement
+    - Software Development
   geojson: '{"type":"Point","coordinates":[-74.17200989999999,4.619519299999999]}'
 metadata:
   title: Colombia-based DevOps team leans on Jenkins automation for speed and safe
     delivery of client artifacts.
-  organization: Consis Internacional, <https://www.consisint.com/>
+  organization: Consis International, <https://www.consisint.com/>
   industries:
     - All development services
   programming_languages:
@@ -28,14 +28,14 @@ metadata:
   team_members:
     - Derwin Oropeza, DBA & DevOps Manager
     - Juan Conde / DevOps Analyst
-    - Orlenis Nieres / DevOps Analyst, Consis Internacional
+    - Orlenis Nieres / DevOps Analyst, Consis International
   community_supports:
     - Jenkins.io websites & blogs
 body_content:
   title: Less time and more safety when shipping artifacts to the customer, with
     no worries about database backups.
   paragraphs:
-    - "**Background:** Consis Internacional helps insurance carriers around the
+    - "**Background:** Consis International helps insurance carriers around the
       world achieve strategic results through IT. We design intelligent core
       business systems, robust front-end web tools, component solutions, and
       innovative frameworks by combining cutting-edge tech with the best
@@ -90,7 +90,7 @@ date: 2021-08-15T16:10:25.000Z
 authored_by: Jorge Uztariz
 post_name: to-faster-and-safer-shipping-to-clients
 quotes:
-  - from: Jorge Uztariz, Devops Lead, Consis Internacional
+  - from: Jorge Uztariz, Devops Lead, Consis International
     content: Jenkins made everything easier and faster. It gave me the free time to
       study new technologies.
     image: ./quote.png
