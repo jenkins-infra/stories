@@ -38,3 +38,5 @@ Explain why this change is necessary or what problem it solves.
 ## Related Issues
 
 Link to any related GitHub issues, Jira tickets, or upstream PRs if applicable.
+
+Closes #[issue_number]
