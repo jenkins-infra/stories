@@ -3,7 +3,7 @@ map:
   authored_by: Prudviraj Pentakota
   location: India
   industries:
-    - Software Developement
+    - Software Development
   geojson: '{"type":"Point","coordinates":[78.486671,17.385044]}'
 metadata:
   title: Helping customer success management teams manage customer lifecycle and
@@ -72,7 +72,7 @@ body_content:
       *   faster release cycles
       *   improved quality of releases
     - Read the full [Gainsight DevSecOps Case
-      Study](https://jenkinsistheway.io/case-studies/jenkins-case-study-gainsight/)
+      Study](https://stories.jenkins.io/case-studies/jenkins-case-study-gainsight/)
       here.
 title: Jenkins is the way to simplify things for DevOps world
 date: 2020-07-21T15:50:41.000Z
