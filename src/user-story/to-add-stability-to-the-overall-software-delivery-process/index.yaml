@@ -53,7 +53,7 @@ body_content:
       more orders to our client's end customers.Plugins that we found useful to
       meet our goal of building a workflow management system with Jenkins
       include: Continuous integration and code pipelines, Build Name setter,
-      Build PipelIne, Cobertura, Delivery Pipeline, Email Extension, Git,
+      Build Pipeline, Cobertura, Delivery Pipeline, Email Extension, Git,
       Jacoco, Parameterized Trigger, Rebuilder Plugin, Workspace Cleanup, HTML
       publisher, and Amazon EC2.Our results?\\*   build times are 10x faster"
     - >-
