@@ -5,6 +5,10 @@ extend-exclude = ["package.json", "package-lock.json"]
 "HashiStack" = "HashiStack"
 "TietoEVRY" = "TietoEVRY"
 "UE4" = "UE4"
+"CAF" = "CAF"
+"MENA" = "MENA"
 
 [default.extend-words]
 "AKS" = "AKS"
+"Abou" = "Abou"
+"Hach" = "Hach"

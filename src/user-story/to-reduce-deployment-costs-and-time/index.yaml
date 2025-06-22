@@ -76,7 +76,7 @@ body_content:
 
       *   Integrate: Once the code is built and tested locally using Nebula, it is ready to be pushed and for continuous integration and continuous deployment. The code is pushed to the central git repository and once the change is committed, a Jenkins job is triggered. It'll pull the code and continuous integration takes place.
 
-      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and to generate AMIs, they created the "Bakery" that enables the AMI creation globally. When the Jenkin job is complete successfully, then Jenkins triggers the Spinnaker pipeline.
+      *   Bake: begins with the creation of AWS AMI or Amazon Machine Image and to generate AMIs, they created the "Bakery" that enables the AMI creation globally. When the Jenkins job is complete successfully, then Jenkins triggers the Spinnaker pipeline.
 
       *   Deploy: Once the bake is complete, Spinnaker makes the built AMI available for deployments to thousands of instances. Successful bake triggers the next stage of the Spinnaker pipeline and deploys to the test environment. Automated tests will be exercised and after these teams use customized deployment strategies like red/black, canary, or multi-region deployments.
 title: Jenkins is the way to reduce deployment costs and time
