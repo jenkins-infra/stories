@@ -87,7 +87,7 @@ body_content:
 
       *   depending on the size of the base image, we've reduced the final image generation time by 10-30 seconds
     - "### [Read the full case study to learn
-      more.](https://jenkinsistheway.io/case-studies/jenkins-case-study-avoris-\
+      more.](https://stories.jenkins.io/case-studies/jenkins-case-study-avoris-\
       travel/)"
 title: Jenkins is the way to do things quickly, simply and in a powerful way
 date: 2020-05-26T23:09:24.000Z

@@ -3,7 +3,7 @@ map:
   authored_by: Bhargav Murarisetty
   location: India
   industries:
-    - Software Developement
+    - Software Development
   geojson: '{"type":"Point","coordinates":[73.785494,18.4654154]}'
 metadata:
   title: Amdocs found a way to save money and time, and unify two disparate teams,
