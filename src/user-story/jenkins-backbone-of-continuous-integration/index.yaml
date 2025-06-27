@@ -1,0 +1,129 @@
+---
+map:
+  authored_by: Michael Trimarchi
+  location: Italy
+  industries:
+    - Consultancies
+  geojson: '{"type":"Point","coordinates":[10.881719510945876,44.77740226749345]}'
+metadata:
+  title: Jenkins - The Backbone of Continuous Integration. Amarula Solutions is a company that heavily leverages Continuous Delivery.
+  organization: Amarula Solutions, <https://www.amarulasolutions.com> and <https://wiki.amarulasolutions.com>
+  industries:
+    - Consultancies
+  programming_languages:
+    - C/C++
+    - Kotlin/Java/Swift/ObjectC
+    - Python/Php
+  platforms:
+    - Docker
+    - Linux
+    - Windows
+  version_control_systems:
+    - Gerrit Server
+  build_tools:
+    - Kas
+    - Gradle
+    - Ninja
+    - Cmake
+    - Make
+  community_supports:
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
+body_content:
+  title: Jenkins - The Backbone of Continuous Integration.
+  paragraphs:
+    - "**Background:** Amarula Solutions places a strong emphasis on Continuous
+      Delivery to enhance their development process and foster improved team
+      cooperation. Their fundamental approach involves integrating various software
+      tools to achieve greater efficiency in development and build processes,
+      alongside the rapid identification of potential issues."
+    - "**Goals:** Involve seamlessly integrating diverse software tools to significantly
+      boost efficiency in development and build processes, while simultaneously enabling
+      the rapid identification and resolution of potential issues."
+    - "**Solution & Results:**
+      Primary solution was to strong embrace of Continuous Delivery, which involves the
+      strategic integration of multiple software tools. This concerted effort yields
+      significant results, including a demonstrably enhanced development process,
+      improved cooperation among their teams, and a notable increase in efficiency
+      across their development and build operations. Furthermore, this approach enables
+      them to swiftly identify and address potential issues, leading to a more robust
+      and streamlined workflow."
+    - "Here's how Jenkins is an integral part of Amarula Solutions' story:"
+    - |-
+      *   **Automated Verification:** Whenever a developer submits a commit to Gerrit,
+          Jenkins springs into action. It automatically fetches the commit and runs a
+          verification build. This crucial step ensures that the new changes haven't broken
+          the existing codebase. If a build fails, Jenkins automatically notifies the team (via Mattermost)
+          and retains logs for troubleshooting.
+      *   **Development Flow and Quality Gates:** Jenkins is deeply integrated into Amarula's
+          development flow:
+          - New changes or patchsets in Gerrit automatically trigger Jenkins verification jobs.
+          - These jobs can build the product, run tests, and perform static code analysis
+            (using tools like Sonarqube and Codechecker).
+          - Jenkins posts verification scores back to Gerrit, ensuring that changes are merged
+            only after meeting specific quality standards (e.g., +2 review score and +1 verification score).
+          - Static code analysis results, including new violations, are provided directly to Gerrit,
+            allowing developers to address issues proactively.
+      *   **Flexible Build Triggers:** Beyond automatic triggers from Gerrit, builds can also be initiated
+          manually by users through the Jenkins UI or scheduled to run at specific times.
+      *   **Distributed Builds with Slave Nodes:** Amarula Solutions utilizes Jenkins slave nodes, which can be
+          configured with specific operating systems or hardware to handle different types of jobs.
+          This allows for powerful machines to build Android OS, while basic nodes can handle Android
+          app builds, and dedicated nodes with connected test devices run automated tests.
+          This distributed architecture enhances efficiency and scalability.
+      *   **Optimized Downloads with Proxy Cache:** To reduce the time spent downloading dependencies for builds,
+          Jenkins uses a dedicated Docker container that acts as a proxy cache. This container caches all
+          artifacts that have been requested at least once, significantly speeding up subsequent builds.
+      *   **Shared Libraries for Reusability:** Amarula Solutions extracts common pipeline code into shared
+          Jenkins libraries. This approach reduces redundancy, keeps code clean, and ensures consistency
+          across various projects. These libraries handle tasks like checking out source code, running builds
+          in specific Docker environments, and providing build results to communication channels.
+      *   **Release Automation:** Jenkins pipelines are used to automate the entire release process for
+          Android applications, including building and uploading app bundles to the Google Play Store.
+          This includes signing the bundles with secure keys and persisting uploaded bundles and
+          configurations for tracking.
+      *   **Multi-Repository Projects:** For complex projects composed of multiple Git repositories (like AOSP),
+          Jenkins can handle cross-dependent code changes. It can check out all related changes across all
+          repositories under the same Gerrit topic, ensuring that verification builds are performed on a
+          consistent and complete codebase.
+      *   **Security Integration (Mend):** Jenkins pipelines are extended to automatically run Mend scans, which
+          detect and remediate security and compliance issues in open-source components. The results are sent
+          to communication channels, tagging project owners to ensure timely action on vulnerabilities.
+      *   **Parametrized Builds:** Jenkins allows users to configure builds conveniently via a graphical interface
+          using parameters. This enables setting options such as specific software flavors, build types
+          (production vs. debug), source code revisions, and deployment targets.
+      *   **Changelog Generation:** A dedicated Jenkins changelog library is used to automatically generate changelogs
+          between specified start and end references, providing clear documentation of changes for each build.
+      *   **Beyond Software Development:** Jenkins' capabilities extend beyond traditional software development at Amarula Solutions.
+          They utilize Jenkins jobs and graphical interfaces to automate processes not directly related to software,
+          such as generating employee reports by accessing APIs from YouTrack and Gerrit, filtering data, and producing XML reports
+          for invoicing. This demonstrates Jenkins' versatility as an automation platform.
+
+    - "Our results include:"
+    - |-
+      *   Enhanced Development Process
+      *   Improved Cooperation Among Teams
+      *   Better Efficiency in Development and Build Process
+      *   Quicker Identification of Potential Issues
+      *   Automated User Account Commissioning and Decommissioning
+      *   Automatic Onboarding Process (including welcome emails and documentation)
+      *   Full Overview of Task Completion and Commits (via Gerrit and YouTrack integration)
+      *   Automatic Testing Execution on Each YouTrack Task
+      *   Automatic Verification Builds for Each Patch
+      *   Ability to Quickly Run Builds on Any Commit
+      *   Detection and Remediation of Security and Compliance Issues (via Mend)
+      *   Generation of Vulnerability Reports (PDF and tabled)
+      *   Automated Changelog Generation
+      *   Automation of Non-SW Development Processes (e.g., employee reports, user account creation)
+title: Jenkins is the backbone of continuous integration in Amarula Solutions
+date: 2025-06-27T07:26:13.000Z
+authored_by: Michael Trimarchi
+post_name: jenkins-backbone-of-continuous-integration
+quotes:
+  - from: Michael Trimarchi, CEO & Software Engineer, Amarula Solutions
+    content: Jenkins helps Amarula Solutions integrate all the building/verification/code review
+      processes, automate all the internal activities, including the on-boarding process, and
+      release process to cloud or Mobile Store.
+    image: ./quote.png
+image: amarulasolutions.png
+tag_line: Amarula Solutions is a premier provider of innovative software solutions for businesses seeking to stay ahead of the curve
