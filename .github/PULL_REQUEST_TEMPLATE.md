@@ -1,42 +1,19 @@
-## Summary
+### Description
 
-Briefly describe the purpose of this pull request and the changes introduced.
+Please describe the purpose of this pull request and what changes are being made.
 
----
+### Testing Done
 
-## Motivation
+Briefly explain how this change was tested (e.g. local testing, CI validation).
 
-Explain why this change is necessary or what problem it solves.
+### Submitter checklist
 
----
-
-## Changes
-
-- List key updates or files modified
-- Mention configuration or workflow changes if applicable
-
----
-
-## Testing Done
-
-- Describe how this was tested
-- Note any CI validation or local checks performed
-
----
-
-## Checklist
-
-- [ ] Branch is up to date with `main`
-- [ ] Descriptive PR title and summary
+- [ ] Descriptive PR title and meaningful summary
 - [ ] Changes align with project conventions
-- [ ] Tests added or updated (if applicable)
-- [ ] Verified against existing CI workflows
+- [ ] Code or configuration changes tested
+- [ ] No unrelated changes included
 - [ ] Documentation updated (if needed)
 
----
+### Relevant issue(s)
 
-## Related Issues
-
-Link to any related GitHub issues, Jira tickets, or upstream PRs if applicable.
-
-Closes #[issue_number]
+Link any related GitHub issues or pull requests (e.g. `Closes #1234`).
