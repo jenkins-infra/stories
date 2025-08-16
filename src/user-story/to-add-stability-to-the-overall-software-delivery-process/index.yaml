@@ -3,28 +3,33 @@ map:
   authored_by: Ajit Gunge
   location: India
   industries:
-    - Telecomunications
+    - Telecommunications
   geojson: '{"type":"Point","coordinates":[73.87424659999999,18.5292922]}'
 metadata:
   title: With the task to improve workflow efficiencies for a telco provider, the
     team at Virtusa used Jenkins to do just that. Now build times are 10x faster
     and development cycles shortened from 20 days to a week.
+  industries:
+    - Telecommunications
   programming_languages:
-    - "&#x9"
     - Java
   platforms:
-    - |-
-      : Linux
-      Version Control System:\*\* GitLab **Build Tool:** Maven
+    - Linux
+  version_control_systems:
+    - GitLab
+  build_tools:
+    - Maven
+  community_supports:
+    - Jenkins.io websites & blogs
 body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:
-    - \*\**Organization:* \*\*Virtusa, IT consultant for a UK-based
-      telecommunications company
-    - \*\**Team:* \*\*Abhijit MIsal, Software Engineer, and Nirmiti Pawar,
-      Software Engineer, both of Virtusa
-    - \*\**Community Support:* \*\*Spoke with colleagues and peers, Networking
-      at Jenkins event, and relied on Jenkins.io websites & blogs
+    - "**Organization:** Virtusa, IT consultant for a UK-based
+      telecommunications company"
+    - "**Team:** Abhijit MIsal, Software Engineer, and Nirmiti Pawar,
+      Software Engineer, both of Virtusa"
+    - "**Community Support:** Spoke with colleagues and peers, Networking
+      at Jenkins event, and relied on Jenkins.io websites & blogs"
     - "**Background:** Virtusa is a global provider of innovative products and
       services that create operational efficiency for their clients using
       digital labor, future-proof operational and IT platforms, and
@@ -66,9 +71,9 @@ authored_by: Ajit Gunge
 post_name: to-add-stability-to-the-overall-software-delivery-process
 quotes:
   - from: Ajit Gunge, Lead Consultant, Virtusa
-    content: '*"Jenkins allowed us to deliver more orders to our end customers by
+    content: 'Jenkins allowed us to deliver more orders to our end customers by
       increasing our workflow application and enabling operations to be more
-      efficient and productive."'
+      efficient and productive.'
     image: ./quote.png
 image: virtusa-300x300.jpg
 tag_line: Building a Workflow Management System for a Telecom Giant
