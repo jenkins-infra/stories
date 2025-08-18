@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0",
-    "decap-cms": "^3.4.0",
-    "decap-cms-app": "^3.4.0",
+    "decap-cms": "3.4.0",
+    "decap-cms-app": "3.4.0",
     "eslint-config-react-app": "^7.0.1",
     "gatsby": "^5.14.0",
     "gatsby-plugin-decap-cms": "^4.0.4",
@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
-    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.5.0",
+    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.7.0",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
@@ -64,8 +64,7 @@
   },
   "overrides": {
     "graphql": "16.11.0",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.5.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "optionalDependencies": {
     "@parcel/watcher": "^2.5.1"
