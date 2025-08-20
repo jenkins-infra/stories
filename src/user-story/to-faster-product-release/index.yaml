@@ -6,39 +6,49 @@ map:
     - Information Technology
   geojson: '{"type":"Point","coordinates":[77.5945627,12.9715987]}'
 metadata:
-  title: This developer from India's IBM Software Labs set out to lock down
-    security in the cloud with Jenkins.
-  organization: "IBM, www.ibm.com **Industry:** Information
-    Technology**Programming Language:** Java, Node.js, Python, Golang
-    **Platform** : Docker or Kubernetes, Linux, MacOS**Version Control System:**
-    GitHub, GitLab**Build Tool:** Ant, Maven**Community Support:** Jenkins.io
-    websites & blogs, Spoke with colleagues and peers"
+  title: "This developer from India's IBM Software Labs set out to lock down security in the cloud with Jenkins."
+  organization: 
+    - "IBM, www.ibm.com"
+  industries: 
+    - "Information Technology"
+  programming_languages: 
+    - Java
+    - Node.js
+    - Python
+    - Golang
+  platforms: 
+    - Docker
+    - Kubernetes
+    - Linux
+    - MacOS
+  version_control_systems: 
+    - GitHub
+    - GitLab
+  build_tools: 
+    - Ant
+    - Maven
+  community_support: 
+    - "Jenkins.io websites & blogs"
+    - "Spoke with colleagues and peers"
+
 body_content:
-  title: Securing the enterprise cloud with Jenkins.
+  title: "Securing the enterprise cloud with Jenkins."
   paragraphs:
-    - "**Background:** As a developer dedicated to ensuring security &
-      compliance in the cloud, we needed to create a complete CI/CD pipeline
-      that was ultra-secure and auditable during every stage of our development
-      process. **Goals:** Build a security framework for IBM Cloud **Solution &
-      Results:** Using Jenkins, we could quickly build and deploy our framework
-      from staging to production and complete a CI/CD pipeline. Jenkins made it
-      simple for us to deploy multiple servers at a time. It was also
-      straightforward and relatively effortless to integrate with the help of
-      Ansible. The key capability we relied on was Jenkinsfile. Without the
-      Jenkins containerized version, it would be extremely difficult to manage
-      the build and deployment. With Jenkins, we got great results, including
-      the ability to:"
-    - |-
-      *   Deploy multiple server patches 30x faster than normal processes
-      *   Reduce release time from 7 to 4 days
-      *   Decrease build server costs with a containerised Jenkins build
-title: Jenkins is the way to faster product release
+    - "**Background:** As a developer dedicated to ensuring security & compliance in the cloud, we needed to create a complete CI/CD pipeline that was ultra-secure and auditable during every stage of our development process.  
+      **Goals:** Build a security framework for IBM Cloud  
+      **Solution & Results:** Using Jenkins, we could quickly build and deploy our framework from staging to production and complete a CI/CD pipeline. Jenkins made it simple for us to deploy multiple servers at a time. It was also straightforward and relatively effortless to integrate with the help of Ansible. The key capability we relied on was Jenkinsfile. Without the Jenkins containerized version, it would be extremely difficult to manage the build and deployment. With Jenkins, we got great results, including the ability to:"
+    - |
+      * Deploy multiple server patches 30x faster than normal processes  
+      * Reduce release time from 7 to 4 days  
+      * Decrease build server costs with a containerised Jenkins build
+
+title: "Jenkins is the way to faster product release"
 date: 2021-06-11T11:30:08.000Z
 authored_by: Swaraj Dutta
 post_name: to-faster-product-release
 quotes:
-  - from: Swaraj Dutta, Cloud Security & Compliance Developer,  IBM
-    content: Without Jenkins, it is very difficult to manage build and deployment.
+  - from: "Swaraj Dutta, Cloud Security & Compliance Developer, IBM"
+    content: "Without Jenkins, it is very difficult to manage build and deployment."
     image: ./quote.png
 image: ibm-logo-vector-download.jpg
-tag_line: IBM Cloud
+tag_line: "IBM Cloud"
