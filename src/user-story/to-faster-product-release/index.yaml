@@ -17,8 +17,7 @@ metadata:
     - Python
     - Golang
   platforms: 
-    - Docker
-    - Kubernetes
+    - Docker or Kubernetes
     - Linux
     - MacOS
   version_control_systems: 
