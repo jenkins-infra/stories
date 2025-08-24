@@ -44,7 +44,8 @@ body_content:
       4.  Future-proof: What gives us confidence that we can achieve this?
 
       5.  Faster and regular deployments: Go faster...but how?
-    - "**Goals:** Our main goal was to provide a consistent platform for internal shared services at Sainsburys. **Solution & Results:** We dealt with our objectives/challenges thus;"
+    - "**Goals:** Our main goal was to provide a consistent platform for internal shared services at Sainsburys."
+    - "**Solution & Results:** We dealt with our objectives/challenges thus;"
     - >-
       *   **Automation First:** We are already heavy users of GitHub, thus
       integration with that was a given need. Jenkins hooks into GitHub, meaning
