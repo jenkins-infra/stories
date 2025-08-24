@@ -6,50 +6,53 @@ map:
     - Logistics
   geojson: '{"type":"Point","coordinates":[-51.8851039,-23.4412149]}'
 metadata:
-  title: A Brazilian logistics problem easily solved by Jenkins and CI/CD,
-    speeding builds and shortening development cycles\\.\\
-  organization: "Sincrovia Soluções Tecnológicas, <https://sincrovia.com.br/>
-    **Industry:** Logistics**Programming Language:** Java, Node.js **Platform**
-    : Android, iOS, Docker or Kubernetes, Linux**Version Control System:**
-    GitHub**Build Tool:** Maven**Teammates:** Luís Felipe Costa, Software
-    Engineer and Guimarães Teixeira, CEO, Sincrovia Soluções Tecnológicas"
+  title: "A Brazilian logistics problem easily solved by Jenkins and CI/CD, speeding builds and shortening development cycles."
+  organization: "Sincrovia Soluções Tecnológicas"
+  company_website: "https://sincrovia.com.br/"
+  industries: 
+    - Logistics
+  programming_languages: 
+    - Java
+    - Node.js
+  platforms: 
+    - Android
+    - IOS
+    - Docker
+    - Kubernetes
+    - Linux
+  version_control_systems: 
+    - GitHub
+  build_tools: 
+    - Maven
+  teammates: 
+    - Luís Felipe Costa, Software Engineer
+    - Guimarães Teixeira, CEO, Sincrovia Soluções Tecnológicas
+
 body_content:
-  title: Jenkins mapped out trucking logistics, plus management of drivers, travel
-    itineraries, and expenses.
+  title: "Jenkins mapped out trucking logistics, plus management of drivers, travel itineraries, and expenses."
   paragraphs:
-    - '**Background:** We needed a continuous integration solution that would
-      quickly and easily deploy our versions. Because our customers who need
-      this agility are located throughout Brazil, we could not be "of the air"
-      and delayed with a time-consuming deployment. **Goals:** Control of fleet
-      of trucks, drivers, travel, expenses, all through an integrated system to
-      an application and a web system. **Solution & Results:** Our maturity as a
-      developer unit was acquired with Jenkins and the continuous integration it
-      supports to solve our difficulty in generating automatic builds. With
-      Jenkins, our implementation process is very fast. We learned to use
-      continuous integration, generating builds, and deploying software in a
-      single, fully automated place. Our team has gained a lot of maturity with
-      this process. These plugins were essential to our success with the
-      platform and the quality of our product:'
+    - "**Background:** We needed a continuous integration solution that would quickly and easily deploy our versions. Because our customers who need this agility are located throughout Brazil, we could not be 'off the air' and delayed with a time-consuming deployment."
+    - "**Goals:** Control of fleet of trucks, drivers, travel, expenses, all through an integrated system to an application and a web system."
+    - "**Solution & Results:** Our maturity as a developer unit was acquired with Jenkins and the continuous integration it supports to solve our difficulty in generating automatic builds. With Jenkins, our implementation process is very fast. We learned to use continuous integration, generating builds, and deploying software in a single, fully automated place. Our team has gained a lot of maturity with this process. These plugins were essential to our success with the platform and the quality of our product:"
     - |-
-      *   Maven Plugin
-      *   Amazon EC2 Plugin
-      *   Pipeline Plugin
-      *   Docker Plugin for Jenkins
-      *   JUnit Plugin
+      * Maven Plugin  
+      * Amazon EC2 Plugin  
+      * Pipeline Plugin  
+      * Docker Plugin for Jenkins  
+      * JUnit Plugin
     - "Three things that were quickly resolved:"
     - |-
-      *   Faster builds saved us time for what really matters: development.
-      *   Development cycles shortened from 1 week to 1 day
-      *   Improved customer confidence in solving the problem immediately
-title: Jenkins is the way to automate the lives of all programmers who want a
-  quality product
+      * Faster builds saved us time for what really matters: development.  
+      * Development cycles shortened from 1 week to 1 day  
+      * Improved customer confidence in solving the problem immediately
+
+title: "Jenkins is the way to automate the lives of all programmers who want a quality product"
 date: 2021-05-18T23:46:25.000Z
 authored_by: Diogo Alves de Almeida
 post_name: to-automate-the-lives-of-all-programmers-who-want-a-quality-product
 quotes:
-  - from: Diogo Alves de Almeida, Student, Sincrovia Soluções Tecnológicas
-    content: Jenkins is the present and the future of automation for software
-      developers.
+  - from: "Diogo Alves de Almeida, Student, Sincrovia Soluções Tecnológicas"
+    content: "Jenkins is the present and the future of automation for software developers."
     image: ./quote.png
 image: Screen-Shot-2021-04-28-at-11.24.43-AM.png
-tag_line: Sincrovia fleet management system
+tag_line: "Sincrovia fleet management system"
