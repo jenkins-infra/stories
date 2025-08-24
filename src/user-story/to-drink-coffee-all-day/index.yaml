@@ -7,23 +7,23 @@ map:
   geojson: '{"type":"Point","coordinates":[34.7925013,31.9730015]}'
 metadata:
   title: Saving time and fixing an Azure bug with Jenkins pipeline.
-  company: "CET, <https://home.cet.ac.il/>; **Project** **website** :
-    https://ebag.cet.ac.il/"
+  organization: "CET, <https://home.cet.ac.il/>"
+  project_website: "https://ebag.cet.ac.il/"
   industries:
     - Education
   programming_languages:
     - Python
-    - Power-shell
+    - PowerShell
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
   version_control_systems:
     - GitHub
   build_tools:
     - Maven
   team_members:
-    - Dennis, Team Lead
-    - Robert, DevOps
+    - Dennis (Team Lead)
+    - Robert (DevOps)
   community_supports:
     - Spoke with colleagues and peers
 body_content:
@@ -45,8 +45,8 @@ body_content:
       change the basic password to a token because of security measures. For
       this, we had two solutions for change:"
     - |-
-      1.  To do it manually, which would take about 8 hours, or
-      2.  Write a script with an Azure API to automate password change
+      1. To do it manually, which would take about 8 hours, or
+      2. Write a script with an Azure API to automate password change
     - "Knowing that a token can live one year, I started to work on an API
       solution. However, I found a bug in Azure API after the 'changed password
       to token hooks' didn't work and opened a Microsoft support ticket. After
@@ -57,9 +57,9 @@ body_content:
     - "I hope this helps someone avoid what I went through. I was happy that
       using Jenkins pipeline:"
     - |-
-      *   offered a solution for fix Bug on Azure Dev
-      *   helped me change all parameters in settings Azure hooks
-      *   saved me a full day of work!
+      * offered a solution for fixing a bug on Azure Dev
+      * helped me change all parameters in settings Azure hooks
+      * saved me a full day of work!
 title: Jenkins is the way to drink coffee all day
 date: 2021-03-10T17:21:19.000Z
 authored_by: Alex Kondrashov
