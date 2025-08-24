@@ -25,10 +25,10 @@ metadata:
 body_content:
   title: "Jenkins & CI/CD keeping project information and code safe while in a private dev environment."
   paragraphs:
-    - "**Background:** Before this solution, the DevOps team at IBM in Mexico had to build our packager manually. This took too much time: more than six hours for each phase of the compilation process. Additionally, an expert developer had to constantly monitor the process in case of failure. We created a job for each build phase in Jenkins, and it simplified and saved us a lot of time in the build process. It also helped us detect failures we weren't aware of.  
-      **Goals:** Save developer time by creating a better CI/CD process.  
-      **Solution & Results:** Jenkins helped us split our challenge into phases and separate jobs. We had jobs for new releases and daily builds for CI/CD. This way, developers could work faster and more effectively. By creating a job for each build in Jenkins, the whole process was simplified. It saved us a lot of time in the build process and helped us detect failures earlier. Since this project is in a private environment, security plugins have been the most important capabilities we used to keep our info and code safe. Results we saw from integrating Jenkins include:"
-    - |
+    - "**Background:** Before this solution, the DevOps team at IBM in Mexico had to build our packager manually. This took too much time: more than six hours for each phase of the compilation process. Additionally, an expert developer had to constantly monitor the process in case of failure. We created a job for each build phase in Jenkins, and it simplified and saved us a lot of time in the build process. It also helped us detect failures we weren't aware of."
+    - "**Goals:** Save developer time by creating a better CI/CD process."
+    - "**Solution & Results:** Jenkins helped us split our challenge into phases and separate jobs. We had jobs for new releases and daily builds for CI/CD. This way, developers could work faster and more effectively. By creating a job for each build in Jenkins, the whole process was simplified. It saved us a lot of time in the build process and helped us detect failures earlier. Since this project is in a private environment, security plugins have been the most important capabilities we used to keep our info and code safe. Results we saw from integrating Jenkins include:"
+    - |-
       * Build time is 200% faster  
       * Improved product performance  
       * Test cycles are 100% faster  
