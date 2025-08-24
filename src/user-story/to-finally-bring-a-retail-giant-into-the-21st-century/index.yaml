@@ -5,18 +5,31 @@ map:
   industries:
     - E-commerce & Retail
   geojson: '{"type":"Point","coordinates":[-1.265032,52.370878]}'
+
 metadata:
   title: This UK-based grocery retailer wanted to put automation first and
     foremost, ensure that they respected bespoke systems, and kept the learning
     curve to a minimum. They did it all with Jenkins.
-  organization: "Sainsburys Supermarkets Ltd., <https://www.sainsburys.co.uk>
-    **Industry:** Retail**Programming Language:** Java, Golang **Platform** :
-    Docker or Kubernetes**Version Control System:** GitHub**Build Tool:**
-    Maven**Community Support:** Jenkins.io websites & blogs, Spoke with
-    colleagues and peers"
+  organization: "Sainsburys Supermarkets Ltd."
+  company_website: "https://www.sainsburys.co.uk"
+  industries: 
+    - Retail
+  programming_languages: 
+    - Java
+    - Golang
+  platforms: 
+    - Docker
+    - Kubernetes
+  version_control_systems: 
+    - GitHub
+  build_tools: 
+    - Maven
+  community_supports: 
+    - "Jenkins.io websites & blogs"
+    - "Spoke with colleagues and peers"
+
 body_content:
-  title: The flexibility for Jenkins was -- and is -- critical to a large
-    established retail organization.
+  title: "The flexibility for Jenkins was and is critical to a large established retail organization."
   paragraphs:
     - "**Background:** Our main challenges were as follows;"
     - >-
@@ -31,9 +44,8 @@ body_content:
       4.  Future-proof: What gives us confidence that we can achieve this?
 
       5.  Faster and regular deployments: Go faster...but how?
-    - "**Goals:** Our main goal was to provide a consistent platform for
-      internal shared services at Sainsburys. **Solution & Results:** We dealt
-      with our objectives/challenges thus;"
+    - "**Goals:** Our main goal was to provide a consistent platform for internal shared services at Sainsburys."
+    - "**Solution & Results:** We dealt with our objectives/challenges thus;"
     - >-
       *   **Automation First:** We are already heavy users of GitHub, thus
       integration with that was a given need. Jenkins hooks into GitHub, meaning
@@ -49,29 +61,30 @@ body_content:
 
       *   **Go faster:** With Jenkins? YES, OF COURSE, GO FASTER!!
     - "We used the following capabilities:"
-    - |-
-      *   Shared libraries
-      *   Kubernetes plugin
-      *   OAuth plugin (for SSO integration)
-      *   AWS plugins (S3, Credentials, Lambda, Secrets Mgr)
-      *   Emailer plugin
-      *   MS Teams plugin
-      *   Cucumber reporting plugin
+    - |
+      * Shared libraries  
+      * Kubernetes plugin  
+      * OAuth plugin (for SSO integration)  
+      * AWS plugins (S3, Credentials, Lambda, Secrets Mgr)  
+      * Emailer plugin  
+      * MS Teams plugin  
+      * Cucumber reporting plugin
     - "The results were overwhelmingly positive:"
-    - |-
-      *   100% confidence in a consistent and repeatable pipeline
-      *   Faster deployment times - from 5 days to several minutes
-      *   Easy onboarding for new applications
-      *   Easy integration with bespoke systems
-title: Jenkins is the way to finally bring a retail giant into the 21st Century
+    - |
+      * 100% confidence in a consistent and repeatable pipeline  
+      * Faster deployment times - from 5 days to several minutes  
+      * Easy onboarding for new applications  
+      * Easy integration with bespoke systems
+
+title: "Jenkins is the way to finally bring a retail giant into the 21st Century"
 date: 2021-06-20T10:38:43.000Z
 authored_by: John Pope
 post_name: to-finally-bring-a-retail-giant-into-the-21st-century
+
 quotes:
-  - from: John Pope, Cloud Engineer, Sainsburys
-    content: Shared libraries were a huge benefit to us. Jenkins provides all
-      capabilities to integrate easily with numerous mainstream and bespoke
-      systems.
+  - from: "John Pope, Cloud Engineer, Sainsburys"
+    content: "Shared libraries were a huge benefit to us. Jenkins provides all capabilities to integrate easily with numerous mainstream and bespoke systems."
     image: ./quote.png
+
 image: sainsburys-logo.jpeg
-tag_line: Faster Integration Delivery
+tag_line: "Faster Integration Delivery"
