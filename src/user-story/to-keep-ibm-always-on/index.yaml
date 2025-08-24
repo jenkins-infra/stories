@@ -44,10 +44,10 @@ body_content:
       repeatable \"playbooks,\" simplifying matters greatly and speeding up
       production. \"We have 500+ cookbooks and will have as many or more Ansible
       playbooks,\" says Rieger. \"We use Jenkins to simplify our testing, build,
-      and deploy process. It helps us stay consistent across the board.\"  
-      **Goals:** Simplifying the build and testing pipeline for our SREs and
-      developers.  
-      **Solution & Results:** According to Rieger, \"We are currently running
+      and deploy process. It helps us stay consistent across the board.\""
+    - "**Goals:** Simplifying the build and testing pipeline for our SREs and
+      developers."
+    - "**Solution & Results:** According to Rieger, \"We are currently running
       four Jenkins masters in different regions to keep them redundant. And we
       have eight agents per master because we are still running on virtual
       machines. We haven't made the switch to containers yet, so we can spin up
@@ -63,7 +63,7 @@ body_content:
       pipelines for each of our builds,\" adds Rieger. \"The plugin community
       gives us a lot of flexibility and countless features that we can use to
       improve our processes.\" And it has yielded great results, including:"
-    - |
+    - |-
       * consistent testing  
       * consistent builds  
       * insight into builds  
