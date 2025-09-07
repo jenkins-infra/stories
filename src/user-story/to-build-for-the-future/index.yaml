@@ -8,20 +8,25 @@ map:
 metadata:
   title: Jenkins gave this IT team the tools they needed to revamp their client's
     healthcare platform.
+  organization: "Development project for a healthcare company"
+  programming_languages:
+    - Java
+  platforms:
+    - Docker
+    - Kubernetes
+    - Linux
   version_control_systems:
     - GitHub
     - Subversion
   build_tools:
     - Ant
     - Maven
+  community_supports: 
+    - Jenkins.io websites & blogs
 body_content:
   title: Transition off an old, slow and manual build system to something built
     for the future.
   paragraphs:
-    - \*\**Organization:* \*\*Development project for a healthcare company
-    - \*\**Programming Language:* \*\*Java
-    - "***Platform***\\*:\\* Docker or Kubernetes, Linux"
-    - \*\**Community Support:* \*\*Jenkins.io websites & blogs
     - "**Background:** A healthcare company reached out to this IT group because
       they needed to have a faster way to build, test, and deploy applications,
       while automating as much of the testing and quality checks as possible.
