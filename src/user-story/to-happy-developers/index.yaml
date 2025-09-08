@@ -59,7 +59,7 @@ body_content:
       Cumulatively, these improvements have allowed us to develop aggressively
       with fewer errors. The capabilities we relied on most include Jenkins
       pipelines, Jenkins webhooks, Bitbucket webhooks, CloudBees stable plugin
-      manager, and Jenkins Node and Agent networking."
+      manager, and Jenkins Node and Agent networking. Overall, we're thrilled with the results."
     - "**Results:**"
     - |-
       * deployment process 8 times faster  
