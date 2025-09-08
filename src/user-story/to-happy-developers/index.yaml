@@ -9,23 +9,28 @@ metadata:
   title: The team at IAM Robotics used Jenkins to improve testing efficiency. This
     resulted in a deployment process that is 8 times faster and development
     release cycles shortened by 80%.
+  organization: "IAM Robotics, https://www.iamrobotics.com/"
+  team_members:
+    - Tom Galluzzo (CEO and Founder)
+    - John Cameron (Chief Systems Engineer)
+    - Gary Giger (CIT Lead)
+  platforms:
+    - Robotic embedded hardware
+    - Linux
+  version_control_systems:
+    - Bitbucket Server
+  build_tools:
+    - Make
+    - CMake
   programming_languages:
     - C/C++
     - Python
-  platforms:
-    - ": Robotic embedded hardware"
-    - |-
-      Linux
-      Version Control System:\*\* Bitbucket Server **Build Tool:** Make
-    - CMake
+  community_supports:
+    - Spoke with colleagues and peers
+    - Jenkins.io websites & blogs
 body_content:
   title: Testing improvements allow for aggressive development with fewer errors.
   paragraphs:
-    - \*\**Organization:* \*\*IAM Robotics, <https://www.iamrobotics.com/>
-    - \*\**IAM Robotics Team:* \*\*Tom Galluzzo / CEO and Founder; John Cameron
-      / Chief Systems Engineer; Gary Giger / CIT Lead
-    - \*\**Community Support:* \*\*Spoke with Colleagues and peers, Used
-      Jenkins.io websites & blogs
     - "**Background:** IAM Robotics is a team of world-class engineers focused
       on delivering innovation and operational value that is transforming the
       material handling industry. Originally, we had cumbersome testing
@@ -41,7 +46,7 @@ body_content:
       pipeline for building and validating our codebase. This allowed us to have
       release packages available for robots at the click of a button. It also
       eliminated the need for a developer to manually create release packages,
-      which was a time consuming and error-prone process.Instead of using a
+      which was a time-consuming and error-prone process. Instead of using a
       large server configuration, what makes our Jenkins instance unique is that
       we deploy this process across multiple pieces of robotic hardware. Jenkins
       accesses the robotic hardware directly to allow the build process to be
@@ -49,26 +54,27 @@ body_content:
       simplifying and speeding up the deployment process. Jenkins easily
       integrates with other development tools we use to evaluate our code, and
       it helps to identify bugs and potential issues before they impact
-      deployment.Further, it automatically provides feedback to developers so
+      deployment. Further, it automatically provides feedback to developers so
       they can quickly debug and improve the robustness of the codebase.
       Cumulatively, these improvements have allowed us to develop aggressively
-      with fewer errors.The capabilities we relied on most include Jenkins
-      pipelines, Jenkins webhooks, Bitbucket webhooks, Cloudbees stable plugin
-      manager, and Jenkins Node and Agent networking.Overall, we're thrilled
-      with the results, including:\\*   a deployment process that is 8 times
-      faster"
+      with fewer errors. The capabilities we relied on most include Jenkins
+      pipelines, Jenkins webhooks, Bitbucket webhooks, CloudBees stable plugin
+      manager, and Jenkins Node and Agent networking."
+    - "**Results:**"
     - |-
-      *   development release cycles shortened by 80%
-      *   improved robot software quality
-      *   happier developers\*\*
+      * deployment process 8 times faster  
+      * development release cycles shortened by 80%  
+      * improved robot software quality  
+      * happier developers
 title: Jenkins is the way to happy developers
 date: 2020-08-06T17:58:36.000Z
 authored_by: Alan Waite
 post_name: to-happy-developers
 quotes:
   - from: Alan Waite, Test Engineer, IAM Robotics
-    content: '*"Jenkins helped us simplify and speed up the deployment process for
-      our autonomous mobile manipulation robots."'
+    content: |-
+      Jenkins helped us simplify and speed up the deployment process for
+      our autonomous mobile manipulation robots.
     image: ./quote.png
 image: iamrobitcs.png
 tag_line: Robotic Continuous Integration and Testing through Jenkins
