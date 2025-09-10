@@ -5,28 +5,26 @@ map:
   industries:
     - Travel
   geojson: '{"type":"Point","coordinates":[76.3869289,10.1926394]}'
+
 metadata:
   title: With the charge to reduce the manual effort needed to test each new
     feature across nearly a dozen environments, Jenkins helped simplify and
     maintain the process resulting in a streamlined and complete end-to-end
     CI/CD pipeline.
-  organization: >-
-    A leading global provider of next-gen IT solutions to the travel,
-    transportation & logistics industries.
-
-    **Industry:** Travel, Transportation and Logistics
-  programming_languages:
-    - |-
-      Java
-      **Platform** : Linux
+  organization: "A leading global provider of next-gen IT solutions to the travel, transportation & logistics industries."
+  platforms: 
+    - Linux
     - Windows
   version_control_systems:
     - Bitbucket Server
   build_tools:
     - Ant
     - Maven
+  programming_languages:
+    - Java
   community_supports:
     - Tapped into Jenkins.io websites & blogs
+
 body_content:
   title: Increasing build frequency while reducing manual effort by 95%.
   paragraphs:
@@ -53,27 +51,29 @@ body_content:
       pipeline. Jenkins helped us immensely in reducing human efforts, which
       previously required doing all this manually."
     - "We relied on the following to power our processes:"
-    - >-
-      *   We used the Jenkins pipeline to create a deployment pipeline
-
-      *   We used editable email to send notifications to teams at different stages of deployment
-
-      *   We used remote SSH to handle different operations on our servers, including starting servers, stopping servers, copying new files, etc.
+    - |-
+      * We used the Jenkins pipeline to create a deployment pipeline  
+      * We used editable email to send notifications to teams at different stages of deployment  
+      * We used remote SSH to handle different operations on our servers, including starting servers, stopping servers, copying new files, etc.
     - "We now have an excellent dashboard to track build and deployment
       activities. Jenkins helped us achieve the following results:"
     - |-
-      *   Reduced manual tasks that go into having and deploying a build by 95%
-      *   Frequency of build increased
-      *   Reduced waiting time of testers and of preparing test environments
-      *   Ability to deliver updates to customers more frequently
+      * Reduced manual tasks that go into having and deploying a build by 95%  
+      * Frequency of build increased  
+      * Reduced waiting time of testers and of preparing test environments  
+      * Ability to deliver updates to customers more frequently  
+
 title: Jenkins is the way to give nitro to builds and deployments
 date: 2020-06-25T01:20:28.000Z
 authored_by: Githin Joseph
 post_name: to-give-nitro-to-builds-and-deployments
+
 quotes:
   - from: Githin Joseph, Jenkins User
-    content: Jenkins transformed our build and deployment process from a mountain of
+    content: |-
+      Jenkins transformed our build and deployment process from a mountain of
       activities to a single click.
     image: ./quote.png
+
 image: Travel-300x300.png
 tag_line: Automating build and deployment processes in airline passenger services
