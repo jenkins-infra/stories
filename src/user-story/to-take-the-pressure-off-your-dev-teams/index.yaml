@@ -8,22 +8,31 @@ map:
 metadata:
   title: For a large healthcare insurer, this technology team knew they needed to
     move beyond their legacy system to deliver better software, confidently.
+  organization: "Regional division of a US-based health insurance provider"
+  team_members:
+    - James Dean (Manager)
+    - Dawn Cox (Team Lead)
+    - Louis Kinnick (DevOps Specialist)
+    - Peter Carenza (DevOps Specialist)
+  platforms:
+    - Windows
+  programming_languages:
+    - Java
+    - C/C++
+    - Node.js
+    - COBOL
+    - Groovy
   build_tools:
     - Ant
     - Maven
     - npm
     - MSBuild
+  community_supports:
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
 body_content:
   title: Building a better software delivery lifecycle for healthcare insurance.
   paragraphs:
-    - \*\**Organization:* \*\*A regional division of a US-based health insurance
-      provider
-    - "***Team Members:*** James Dean, Manager; Dawn Cox, Team Lead; Louis
-      Kinnick, DevOps Specialist; Peter Carenza, DevOps Specialist"
-    - "***Platform***\\*:\\* Windows"
-    - \*\**Programming Language:* \*\*Java, C/C++, Node.js, COBOL, Groovy
-    - \*\**Community Support:* \*\*Jenkins.io websites & blogs, Spoke with
-      colleagues and peers
     - "**Background:** Peter Carenza is part of a regional team of a well-known
       health insurer that included manager James Dean, team lead Dawn Cox, and
       DevOps specialist, Louis Kinnick. Together, they had to migrate from a
@@ -58,26 +67,21 @@ body_content:
       the progress of their build. Though we have migrated from Jazz Builds to
       Jenkins, we still use Jazz Source Control, and the Team Concert plugin
       offers an amazing bridge to the rest of our pipeline."
-    - Our results?
-    - >-
-      *   shortened release cycles from months to days.
-
-      *   reduced our service call frequency by half with the use of Build Failure Analysis
-
-      *   widespread patch testing has been automated, reducing the need to have a rep from every development team on a patch validation
-
-      *   by incorporating an open-source Jenkins solution over Jazz build engine, we saved thousands of dollars on licenses
-
-      *   nearly elimination of custom build scripts in favor of standardized wide scope solutions
+    - "Our results?"
+    - |-
+      * shortened release cycles from months to days  
+      * reduced service call frequency by half with Build Failure Analysis  
+      * widespread patch testing has been automated, reducing the need to have a rep from every development team on a patch validation
+      * by incorporating an open-source Jenkins solution over Jazz build engine, we saved thousands of dollars on licenses  
+      * nearly elimination of custom build scripts in favor of standardized wide scope solutions
 title: Jenkins is the way to take the pressure off your dev teams
 date: 2020-08-07T19:02:49.000Z
 authored_by: Peter Carenza
 post_name: to-take-the-pressure-off-your-dev-teams
 quotes:
   - from: Peter Carenza, DevOps Specialist
-    content: |-
-      *"Jenkins is fast, versatile, and easy to enhance and upgrade. 
-      It can make the most complex automation tasks "breathable."*
+    content: "Jenkins is fast, versatile, and easy to enhance and upgrade. 
+      It can make the most complex automation tasks breathable."
     image: ./quote.png
 image: noun_diagnosis_2590488-300x300.png
 tag_line: Accelerating and Enhancing Customer Care
