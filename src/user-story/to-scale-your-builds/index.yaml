@@ -5,18 +5,19 @@ map:
   industries:
     - Software Development
   geojson: '{"type":"Point","coordinates":[-1.553621,47.218371]}'
+
 metadata:
   title: When it was time to build a large CI platform to support rapid app
     development, the engineers at this software company turned to Jenkins.
-  organization: |-
-    Global note taking app solution, based in France.
-    **Industry:** Software Apps
+  organization: "Global note taking app solution, based in France."
+  industry:
+    - Software Apps
   programming_languages:
     - C/C++Java
     - Swift Objective-C
-    - |-
-      C#
-      **Platform** : Android
+    - C#
+  platforms:
+    - Android
     - iOS
     - Linux
     - MacOS
@@ -30,6 +31,7 @@ metadata:
     - Jenkins.io websites & blogs
     - networking at Jenkins event
     - and spoke with colleagues and peers
+
 body_content:
   title: Building a large CI platform to support app development.
   paragraphs:
@@ -51,13 +53,16 @@ body_content:
       *   quicker builds
       *   better node management
       *   pipelines
+
 title: Jenkins is the way to scale your builds
 date: 2020-06-19T04:51:29.000Z
 authored_by: Thibaut Le Levier
 post_name: to-scale-your-builds
+
 quotes:
   - from: Thibaut Le Levier, CI Engineer
     content: Jenkins helps us to manage many nodes at a large scale.
     image: ./quote.png
+
 image: Notes-300x300.png
 tag_line: Note Taking App
