@@ -9,7 +9,8 @@ metadata:
   title: With the mission to simplify and innovate credit card processing, Tymit's
     development team sought to make their CI/CD more powerful with the help of
     Jenkins.
-  organization: Tymit,[www.tymit.com](https://tymit.com/)
+  organization: tymit
+  company_website: https://tymit.com/
   team_members:
     - "All members work for Tymit: Nicolas Magnone"
     - CTO " Francisco De Lucas
@@ -23,9 +24,9 @@ metadata:
     - Kotlin
     - Groovy
     - Terraform
-    - |-
-      Ansible
-      **Platform** : Android
+    - Ansible
+  platforms :
+    - Android
     - iOS
     - Docker
     - Kubernetes
