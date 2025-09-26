@@ -17,9 +17,9 @@ metadata:
     - Node.js
     - Python
     - Typescript
-    - |-
-      Javascript
-      **Platform** : Docker & Kubernetes
+    - Javascript
+  platforms: 
+    - Docker & Kubernetes
   version_control_systems:
     - BitBucket
   build_tools:
@@ -34,16 +34,16 @@ metadata:
 body_content:
   title: Managing a wide range of banking products with an enterprise-ready pipeline.
   paragraphs:
-    - "**Background: In support of one of Europe's leading banks, it was
+    - "**Background**: In support of one of Europe's leading banks, it was
       imperative for the IT team to have a stable platform. Team leaders set out
       to ensure their Jenkins CI/CD platform was capable of building a wide
       range of projects, using varying technologies. The platform had to support
       a considerable number of teams and individual users, so the configuration
       of masters and agents -- by unique team and unique requirement -- was
-      challenging** ."
-    - "**Goals: By making CI/CD \"as a service,\" we'd be better suited to help
+      challenging"
+    - "**Goals**: By making CI/CD \"as a service,\" we'd be better suited to help
       other teams reap the benefits of the advantages CI/CD gives: stability,
-      flexibility, and reliability.**"
+      flexibility, and reliability."
     - "**Solution & Results:** To achieve the goal stated above, we started
       using the enterprise version of CloudBees Jenkins running on Apache Mesos
       and Kubernetes. This solution – running Jenkins using container
