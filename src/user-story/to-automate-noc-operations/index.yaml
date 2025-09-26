@@ -12,11 +12,10 @@ metadata:
     they were able to significantly reduce communication cycles and keep builds
     on track.
   organization: A leading provider of mobile performance and advertising technology.
-  project_website: ""
   programming_languages:
-    - |-
-      Java
-      **Platform** : Docker
+    - Java
+  platforms:
+    - Docker
     - Kubernetes
     - Linux
   version_control_systems:
@@ -44,8 +43,8 @@ body_content:
       delay can significantly affect builds and pipelines. It took me by
       surprise that there was no PagerDuty plugin for Jenkins yet, so I decided
       to develop and open-source it.
-    - "**Goals: Build a new Jenkins plugin to alert developers of issues and
-      accelerate response and resolution times.**"
+    - "**Goals**: Build a new Jenkins plugin to alert developers of issues and
+      accelerate response and resolution times."
     - "**Solution & Results:** We took inspiration from PagerDuty, an incident
       management platform that provides reliable notifications, automatic
       escalations, on-call scheduling, and other functionality to help teams
