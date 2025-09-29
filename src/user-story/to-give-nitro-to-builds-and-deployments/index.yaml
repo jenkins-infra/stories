@@ -12,6 +12,8 @@ metadata:
     maintain the process resulting in a streamlined and complete end-to-end
     CI/CD pipeline.
   organization: "A leading global provider of next-gen IT solutions to the travel, transportation & logistics industries."
+  industries:
+    - Travel, Transportation and Logistics
   platforms: 
     - Linux
     - Windows
