@@ -44,7 +44,7 @@ pipeline {
       }
       steps {
         sh 'asdf install'
-        sh 'npm ci'
+        sh 'npm install'
       }
     }
 
