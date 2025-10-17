@@ -10,15 +10,15 @@ metadata:
     at this company transitioned to a new CI/CD pipeline which provided a single
     source of record and the ability to sync their daily build process across
     multiple teams.
-  organization: |-
-    Global technology company
-    **Industry:** Aerospace & Defense
+  organization: Global technology company
+  industries: 
+    - Aerospace & Defense
   programming_languages:
     - Java
     - Node.js
-    - |-
-      Python
-      **Platform** : Docker or Kubernetes
+    - Python
+  platforms: 
+    - Docker or Kubernetes
     - Linux
     - Windows
   version_control_systems:
@@ -30,13 +30,13 @@ metadata:
 body_content:
   title: Developing a consistent, near-effortless build process for multiple teams.
   paragraphs:
-    - "**Background: This company provides expertise and technology in support
+    - "**Background**: This company provides expertise and technology in support
       of national security missions and government transformation for defense,
       intelligence, and civilian customers. The technology team maintains a
       baseline on multiple networks and has numerous repositories to release.
       Because of this, they transitioned to a new Continuous Integration and
       Delivery pipeline that provides a single source of record while allowing
-      them cross-network sync of day-to-day build processes.**"
+      them cross-network sync of day-to-day build processes."
     - "**Goals:** Shorten integration and minimize the effort required at each
       release and on each network."
     - "**Solution & Results:** To build this new CI/CD platform, we chose to use
