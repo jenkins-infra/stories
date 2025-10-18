@@ -17,9 +17,9 @@ metadata:
     - Lyubomir Stanev, Team Lead
     - Kalin Dimtrov, Java Team Lead
   programming_languages:
-    - |-
-      Java
-      **Platform** : Linux
+    - Java
+  platforms: 
+    - Linux
     - Windows
   version_control_systems:
     - Bitbucket Server
@@ -31,13 +31,13 @@ metadata:
 body_content:
   title: Accelerating core software development.
   paragraphs:
-    - "**Background: A solid and secure technology platform is a critical
+    - "**Background:** A solid and secure technology platform is a critical
       foundation for any bank. But for this development team, there was a need
       to enable rapid innovation while simultaneously reducing manual
       intervention. They needed a complete CI/CD solution for fast, agile, and
       simplified development as well as a more streamlined deployment process
-      for the entire company.**"
-    - "**Goals: To accelerate core software development.**"
+      for the entire company."
+    - "**Goals:** To accelerate core software development."
     - "**Solution & Results:** We implemented a sturdy solution using Jenkins,
       BitBucket and Maven. And we wrote a number of custom scripts to enable our
       solution. Based on the nature of our products, we had to get creative, as
