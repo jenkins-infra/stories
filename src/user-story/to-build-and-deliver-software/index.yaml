@@ -10,9 +10,9 @@ metadata:
     multilingual technology organization that needed a platform that would
     provide better visibility, flexibility, and stability for their software
     development initiatives.
-  organization: |-
-    Global defense technology company
-    **Industry:** Defense
+  organization: Global defense technology company
+  industries:
+    - Defense
   team_members:
     - Alon Ma-Yafit
     - Software Architect and Amit Dar
@@ -20,9 +20,9 @@ metadata:
   programming_languages:
     - C/C++Java
     - Node.js
-    - |-
-      C#
-      **Platform** : Embedded
+    - C#
+  platforms:
+    - Embedded
     - Linux
     - Windows
   version_control_systems:
