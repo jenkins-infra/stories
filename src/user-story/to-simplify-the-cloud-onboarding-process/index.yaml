@@ -13,9 +13,9 @@ metadata:
     - Government
   programming_languages:
     - PHP
-    - |-
-      Bash
-      **Platform** : Docker or Kubernetes
+    - Bash
+  platforms: 
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - GitHub
@@ -39,7 +39,7 @@ body_content:
       firm deadlines to adhere to, the work needed to be completed swiftly.
       There was also a need for future enhancements to migrate these singular
       jobs into an improved pipeline."
-    - "**Goals: Bring old systems to new platforms.**"
+    - "**Goals:** Bring old systems to new platforms."
     - "**Solution & Results:** To migrate to the cloud, a new Jenkins install
       was quickly stood up -- in a container no less. This was done with a basic
       Jenkins install via docker. It all went quite smoothly as we imported
