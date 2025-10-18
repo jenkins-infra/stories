@@ -9,9 +9,9 @@ metadata:
   title: For the search division of a leading open source community, Jenkins was
     the obvious choice to standardize its pipelines across all of their software
     projects.
-  organization: |-
-    Open source technology company
-    **Industry:** Software
+  organization: Open source technology company
+  industries: 
+     - Software
   team_members:
     - Victor Martinez
     - Software Engineer and Ivan Fernandez
@@ -23,9 +23,9 @@ metadata:
     - Python
     - Ruby
     - Go
-    - |-
-      JavaScript
-      **Platform** : Docker or Kubernetes
+    - JavaScript
+  platforms:
+    - Docker or Kubernetes
     - Linux
     - MacOS
     - Windows
@@ -46,12 +46,12 @@ metadata:
 body_content:
   title: Building unified visibility across entire ecosystems.
   paragraphs:
-    - "**Background: Tasked with creating software that provides unified
+    - "**Background**: Tasked with creating software that provides unified
       visibility across entire ecosystems, the technology division of an
       open-source community knew they needed to develop a common platform for
       all projects, including logs, metrics, and APM data. That, coupled with
       the need to support different operating systems, programming languages and
-      architectures proved quite challenging for this team.**"
+      architectures proved quite challenging for this team."
     - "**Goals:** To standardize pipelines across all projects."
     - "**Solution & Results:** First, we created a system that provided the
       ability to grab log metrics and APM data from user applications and
