@@ -9,7 +9,8 @@ metadata:
   title: The tech team at Avoris Travel sought to minimize their delivery cycle
     times. Tapping into Jenkins' vast number of plugins available, the team was
     able to speed up their CI/CD and reduce build times over 50%.
-  organization: Avoris Travel "[www.avoristravel.com](http://www.avoristravel.com)
+  organization: Avoris Travel
+  company_website: http://www.avoristravel.com
   industries:
     - Travel
   team_members:
@@ -22,9 +23,9 @@ metadata:
     - Node.js
     - PHP
     - Python
-    - |-
-      Go
-      **Platform** : Docker
+    - Go
+  platforms:
+    - Docker
     - Kubernetes
     - Buildah
   version_control_systems:
@@ -99,5 +100,5 @@ quotes:
       and plugins available, as well as the huge community and resources
       available.
     image: ./quote.png
-image: code-768x785.png
+image: avoris-travel.jpg
 tag_line: Speeding up CI/CD with shared volumes and more!​
