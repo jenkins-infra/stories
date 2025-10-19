@@ -12,8 +12,18 @@ metadata:
     performance, accelerate time to market, and reduce the change failure rate.
   organization: |-
     Fortune 500 Automotive Organization
-    **Programming Language:** C/C++, Java, Node.js, Python, Golang, Scala
-    **Platform** : Docker, Kubernetes, Linux, Windows
+  programming_languages:
+    - C/C++ 
+    - Java
+    - Node.js
+    - Python
+    - Golang
+    - Scala
+  platforms: 
+    - Docker
+    - Kubernetes
+    - Linux
+    - Windows
   version_control_systems:
     - Bitbucket Server
     - GitHub
