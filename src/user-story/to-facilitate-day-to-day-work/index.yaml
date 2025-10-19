@@ -14,10 +14,16 @@ metadata:
   programming_languages:
     - Java
     - Node.js
-    - "Python **Platform** : Docker/Kubernetes"
+    - Python
+  platforms: 
+    - Docker/Kubernetes
     - Linux
     - MacOS
-    - Windows**Version Control System:** GitLab**Build Tool:** Gradle
+    - Windows 
+  version_control_systems: 
+    - GitLab
+  build_tools:
+    - Gradle
   company_website: https://home.cern/
   project_website: https://be-dep-co.web.cern.ch/applications-and-services-aps
   community_supports:
