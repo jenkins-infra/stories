@@ -21,7 +21,7 @@
   "dependencies": {
     "cheerio": "^1.1.2",
     "decap-cms": "3.9.0",
-    "decap-cms-app": "3.6.4",
+    "decap-cms-app": "3.9.0",
     "eslint-config-react-app": "^7.0.1",
     "gatsby": "^5.15.0",
     "gatsby-plugin-decap-cms": "^4.0.4",
