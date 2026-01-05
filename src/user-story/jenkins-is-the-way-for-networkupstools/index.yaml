@@ -11,6 +11,10 @@ metadata:
     - Open Source Power Hardware Monitoring and Management
   programming_languages:
     - C
+    - C++
+    - Shell
+    - Python
+    - Perl
   platforms:
     - Linux
     - BSD
@@ -41,14 +45,15 @@ body_content:
       The [Network UPS Tools](https://networkupstools.org)
       [project](https://github.com/networkupstools/nut) will soon be a quarter of a century
       old and, being the first open multi-vendor power hardware monitoring
-      solution for UPS, ePDU, Solar and such, it became the de facto standard in
-      this area (de jure with RFC 9271 recently published). Over the years it
-      was embedded in all sorts of server and desktop operating systems, from
+      solution for UPS, ePDU, Solar and such, it became the de-facto standard in
+      this area (de-jure with [RFC 9271](https://www.rfc-editor.org/info/rfc9271)
+      recently published). Over the years it was integrated and included in
+      all sorts of server and desktop operating systems, from
       embedded to mainframe and NAS, and built with a wide array of toolkits and
       third-party dependencies. As evolution marches on, warnings are eradicated
       and features are added, the codebase is still expected to run on any
       platform released over the past couple of decades. If the machines and
-      their OSes still run, modern NUT should too.
+      their OSes still run, modern NUT should work there too.
     - |-
       With one of my first goals as an active community member and eventually
       project maintainer, I set out to address the hundreds of compiler warnings
@@ -59,13 +64,13 @@ body_content:
       because nobody including authors had a good grasp on their reliability.
       This "fightwarn" effort took a couple of years with an in-house Jenkins
       farm for a project using NUT, and Travis CI (free for FOSS at that time)
-      as well as one team members' BuildBot instance handling several versions
+      as well as one team member's BuildBot instance handling several versions
       of Linux for a few CPU architectures to cover different bitness and
       endianness, as well as a mix of GCC and LLVM CLANG. Quite a few issues
       were only relevant to certain generations of toolkits, C standard
       revisions, Make or Shell implementations, Autotools versions... and some
       fixes for one platform caused bugs for another. So to keep NUT working
-      everywhere its iterations had to be regularly built everywhere.
+      everywhere, its iterations had to be regularly built everywhere.
     - |-
       Eventually the reign of free Travis CI ended, and NUT got VMs for a CI
       farm sponsored by [Fosshost.org](https://fosshost.org/) and later by
@@ -104,7 +109,7 @@ body_content:
       that common free CI platforms do not offer. It is possible to find ways to
       build FOSS on recent Linux, MacOS and Windows, and sometimes even on
       non-x86 CPUs. It is nearly impossible to find builders for FreeBSD,
-      OpenBSD or Solaris/illumos, to name a few, or on Linux distributions older
+      OpenBSD or Solaris/illumos, to name a few, or for Linux distributions older
       than half a dozen years.
     - |-
       Every iteration of NUT is now tested with GNU, BSD and Sun Make
@@ -114,11 +119,13 @@ body_content:
       in QEMU), and several revisions of C/C++ standard with and without GNU
       extensions. All in all, with recently regularly connected builders about
       250 stages are prepared (some running several build scenarios as scripted
-      inside, so roughly a thousand builds happen). Sometimes a nuance warning
-      causes one of these scenarios to complain during PR builds -- on this or
-      that OS, this or that compiler. It keeps us confident both that such
-      mechanism remains useful, and that any OS the community cares about enough
-      to contribute a builder for remains fully supported.
+      inside, so roughly a thousand builds happen) for each code iteration.
+      Sometimes a nuance warning causes one of these scenarios to complain
+      during PR builds -- on this or that OS, this or that compiler.
+      It keeps us confident both that such mechanism remains useful, and that
+      any OS the community cares about enough to contribute a builder for
+      remains fully supported (or in the worst case, that limitations are
+      known, documented, and perhaps worked or fenced around).
     - |-
       With the hundreds of builds succeeding without warnings -- reliably,
       repeatably, every time -- the floodgates for ingestion of long-standing
@@ -136,4 +143,8 @@ body_content:
       querying Jenkins server status via IRC servers, lockable-resources plugin
       for many itches scratched here and there, and pipeline-groovy-lib-plugin
       for easier use of test library versions along with test pipeline branches.
-      And very many lessons learned and friends made :)
+      The inadvertent stress tests of a Jenkins controller and/or its remote
+      agents caused by juggling several simultaneous builds each with hundreds
+      of parallel stages, casually with a thousand items in the build queue,
+      have also exposed certain deficiencies and led to fixes elsewhere in the
+      Jenkins ecosystem. And very many lessons learned and friends made :)
