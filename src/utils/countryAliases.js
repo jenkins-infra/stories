@@ -4,27 +4,13 @@ const countryAliases = {
     'united arab emirates': ['uae', 'ae'],
 };
 
-/**
- * Extract the actual country from a location string
- * e.g., "United Arab Emirates" -> "United Arab Emirates" , "UAE", "AE"
- * e.g., "USA" -> "USA", "united states", "us", "america"
- * @param {string} location - The full location string
- * @returns {string} The extracted country name
- */
 export const extractCountryFromLocation = (location) => {
     if (!location) return '';
-
     const parts = location.split(',');
     // The country is typically the last part after splitting by comma
     return parts[parts.length - 1].trim();
 };
 
-/**
- * Check if a search term matches a country name (supporting aliases)
- * @param {string} location - The full location string
- * @param {string} searchTerm - The search term (country name or alias)
- * @returns {boolean} True if location's country matches the search term
- */
 export const matchesCountry = (location, searchTerm) => {
     if (!location || !searchTerm) return false;
 
