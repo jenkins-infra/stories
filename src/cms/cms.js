@@ -5,7 +5,7 @@ import Layout from '../layout';
 import PropTypes from 'prop-types';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
-import {remark} from 'remark';
+import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 
 import UserStory from '../components/UserStory';
