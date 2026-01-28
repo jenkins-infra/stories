@@ -53,11 +53,11 @@ pipeline {
         NODE_ENV = "development"
       }
       steps {
-        sh 'npm run lint && npx eslint --format checkstyle > eslint.json'
+        sh 'npm run lint && npx eslint --format checkstyle > eslint.xml'
       }
       post {
         always {
-          recordIssues(tools: [esLint(pattern: 'eslint.json')])
+          recordIssues(tools: [checkStyle(pattern: 'eslint.xml')])
         }
       }
     }
