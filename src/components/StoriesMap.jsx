@@ -6,6 +6,7 @@ import LeafletMap from './LeafletMap';
 import StoryPopup from './StoryPopup';
 import './Leaflet-global.css';
 import * as styles from './StoriesMap.module.css';
+import { matchesCountry, extractCountryFromLocation } from '../utils/countryAliases';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
@@ -145,7 +146,7 @@ const StoriesMap = ({ mapPin }) => {
   const filteredStories = useMemo(() => {
     return storiesWithLocation.filter(story => {
       // Filter by country if selected
-      if (selectedCountry && !story.map.location.includes(selectedCountry)) {
+      if (selectedCountry && !matchesCountry(story.map.location, selectedCountry)) {
         return false;
       }
 
@@ -164,9 +165,8 @@ const StoriesMap = ({ mapPin }) => {
         return (
           story.title.toLowerCase().includes(query) ||
           story.tag_line.toLowerCase().includes(query) ||
-          story.map.location.toLowerCase().includes(query) ||
-          (story.metadata?.organization &&
-            story.metadata.organization.toLowerCase().includes(query))
+          matchesCountry(story.map.location, searchQuery) ||
+          extractCountryFromLocation(story.map.location).toLowerCase().includes(query)
         );
       }
 

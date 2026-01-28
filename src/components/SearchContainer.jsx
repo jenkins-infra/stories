@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import './SearchContainer.css';
 import * as JsSearch from 'js-search';
+import { matchesCountry } from '../utils/countryAliases';
 
 class Search extends Component {
   state = {
@@ -22,6 +23,7 @@ class Search extends Component {
         slug: story.slug,
         date: story.date,
         image: story.image?.publicURL || null, // Use the public URL of the image
+        location: story.map?.location || '', // Include location for country matching
       }));
 
       this.initializeSearch(stories);
@@ -52,7 +54,17 @@ class Search extends Component {
   searchData = e => {
     const searchQuery = e.target.value;
     if (searchQuery) {
-      const queryResult = this.state.search.search(searchQuery);
+      const queryLower = searchQuery.toLowerCase();
+      
+      // Perform manual search to avoid false positives from js-search
+      const queryResult = this.state.stories.filter(story => {
+        return (
+          story.title.toLowerCase().includes(queryLower) ||
+          story.authored_by.toLowerCase().includes(queryLower) ||
+          matchesCountry(story.location, searchQuery)
+        );
+      });
+      
       this.setState({
         searchQuery,
         searchResults: queryResult,
@@ -173,6 +185,9 @@ const SearchContainer = () => {
           authored_by
           slug
           date
+          map {
+            location
+          }
           image {
             publicURL # Fetch the public URL of the image
           }
