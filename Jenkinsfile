@@ -100,10 +100,6 @@ pipeline {
       when {
         branch "main"
       }
-      environment {
-        GATSBY_MATOMO_SITE_ID = "2"
-        GATSBY_MATOMO_SITE_URL = "https://jenkins-matomo.do.g4v.dev"
-      }
       steps {
         sh 'npm run build'
       }

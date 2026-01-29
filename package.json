@@ -27,7 +27,6 @@
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-extract-schema": "^0.2.2",
     "gatsby-plugin-image": "^3.15.0",
-    "gatsby-plugin-matomo": "^0.17.0",
     "gatsby-plugin-sharp": "^5.15.0",
     "gatsby-plugin-sitemap": "^6.15.0",
     "gatsby-remark-images": "^7.15.0",
