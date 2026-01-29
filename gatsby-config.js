@@ -28,14 +28,6 @@ module.exports = {
                 modulePath: `${__dirname}/src/cms/cms.js`, // Path to your CMS configuration
             },
         },
-        {
-            resolve: 'gatsby-plugin-matomo',
-            options: {
-                matomoUrl: 'https://jenkins-matomo.do.g4v.dev',
-                siteId: '2',
-                siteUrl: 'https://stories.jenkins.io'
-            }
-        },
         'gatsby-plugin-sitemap',
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
