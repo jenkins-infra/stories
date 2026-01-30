@@ -1,1 +1,3 @@
 documentation: ["README.md"]
+chore: [".github", "Jenkinsfile", "package.json", "package-lock.json"]
+dependencies: ["package.json", "package-lock.json"]
