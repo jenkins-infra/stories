@@ -16,7 +16,6 @@
     rgba(79, 159, 238, 0.05) 0%,
     rgba(0, 0, 0, 0) 70%
   );
-  --tshirt-bg: rgba(255, 255, 255, 0.05);
   --btn-text: #121212;
   --btn-hover-bg: white;
 }
@@ -37,7 +36,6 @@
       rgba(44, 124, 209, 0.05) 0%,
       rgba(255, 255, 255, 0) 70%
     );
-    --tshirt-bg: rgba(0, 0, 0, 0.05);
     --btn-text: white;
     --btn-hover-bg: #1d5fa0;
   }
@@ -162,25 +160,6 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   color: var(--btn-text);
-}
-
-.tshirt-promo {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: var(--tshirt-bg);
-  border-radius: 6px;
-}
-
-.tshirt-icon {
-  margin-right: 1rem;
-  color: var(--accent);
-  font-size: 1.5rem;
-}
-
-.tshirt-text {
-  font-weight: 500;
-  color: var(--text-primary);
 }
 
 /* Dark theme specific */
