@@ -106,13 +106,6 @@ const AllPage = () => {
                 challenges, and the unique solutions you encountered with
                 Jenkins.
               </p>
-              <div className="tshirt-promo">
-                <span className="tshirt-icon">👕</span>
-                <span className="tshirt-text">
-                  Share your story and we'll send you a free Jenkins Is The Way
-                  T-shirt.
-                </span>
-              </div>
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="share-story-btn"
