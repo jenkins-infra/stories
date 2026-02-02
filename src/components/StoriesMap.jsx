@@ -31,7 +31,7 @@ const createCustomMarker = (story, mapPin) => {
     });
   }
 
-  // Create a div for the marker with the user's avatar
+    // Create a div for the marker with the user's avatar
   const markerHtml = `
     <div class="${styles.customMarker}">
       <div class="${styles.markerPin}"></div>
@@ -88,7 +88,16 @@ const StoriesMap = ({ mapPin }) => {
     story => story.map && story.map.geojson && story.map.location,
   );
 
-  // Extract all unique countries and industries for filtering
+  // Helper function to extract country from location string
+  function extractCountry(location) {
+    if (!location) return 'Unknown';
+    const parts = location.split(',');
+    if (parts.length > 1) {
+      return parts[parts.length - 1].trim();
+    }
+    return location.trim();
+  }
+
   const allCountries = useMemo(() => {
     const countries = storiesWithLocation.map(story =>
       extractCountry(story.map.location),
@@ -123,17 +132,6 @@ const StoriesMap = ({ mapPin }) => {
     }, {});
   }, [storiesWithLocation]);
 
-  // Helper function to extract country from location string
-  function extractCountry(location) {
-    if (!location) return 'Unknown';
-    const parts = location.split(',');
-    if (parts.length > 1) {
-      return parts[parts.length - 1].trim();
-    }
-    return location.trim();
-  }
-
-  // State for filtering and map view
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -158,16 +156,11 @@ const StoriesMap = ({ mapPin }) => {
         return false;
       }
 
-      // Filter by search query if provided
+      // prefix-based country search
       if (searchQuery) {
-        const query = searchQuery.toLowerCase();
-        return (
-          story.title.toLowerCase().includes(query) ||
-          story.tag_line.toLowerCase().includes(query) ||
-          story.map.location.toLowerCase().includes(query) ||
-          (story.metadata?.organization &&
-            story.metadata.organization.toLowerCase().includes(query))
-        );
+        const query = searchQuery.toLowerCase().trim();
+        const country = extractCountry(story.map.location).toLowerCase();
+        return country.startsWith(query);
       }
 
       return true;
