@@ -31,7 +31,7 @@ const createCustomMarker = (story, mapPin) => {
     });
   }
 
-    // Create a div for the marker with the user's avatar
+  // Create a div for the marker with the user's avatar
   const markerHtml = `
     <div class="${styles.customMarker}">
       <div class="${styles.markerPin}"></div>
