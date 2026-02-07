@@ -138,7 +138,13 @@ const StoriesMap = ({ mapPin }) => {
   const [mapCenter, setMapCenter] = useState([20, 0]); // Default center
   const [mapZoom, setMapZoom] = useState(2); // Default zoom
   const [showFilters, setShowFilters] = useState(false);
-
+ 
+  // Avoid hydration mismatch
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+    
   // Filter stories based on selected criteria
   const filteredStories = useMemo(() => {
     return storiesWithLocation.filter(story => {
@@ -347,7 +353,9 @@ const StoriesMap = ({ mapPin }) => {
       </div>
 
       <div className={styles.map}>
-        {typeof window !== 'undefined' && (
+        {!isClient ? (
+          <div className={styles.leafletContainer} aria-hidden="true" />
+        ) : (
           <LeafletMap
             center={mapCenter}
             zoom={mapZoom}
