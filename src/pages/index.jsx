@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
+import StorySpotlight from '../components/StorySpotlight';
 import Layout from '../layout';
 import Seo from '../components/Seo';
 import './index.css';
@@ -124,11 +125,29 @@ React.useEffect(() => {
         </div>
       </div>
 
+      <h1
+        style={{
+          marginTop: `2em`,
+          textAlign: `center`,
+          fontWeight: 700,
+          color: `var(--text-color)`,
+        }}
+      >
+        Community Stories Spotlight
+      </h1>
+
+      <div
+        ref={el => (sectionsRef.current[1] = el)}
+        className="stories-section spotlight-section"
+      >
+        <StorySpotlight />
+      </div>
+
       {/* Search Section */}
-      <div ref={el => (sectionsRef.current[1] = el)}>
+      <div ref={el => (sectionsRef.current[2] = el)}>
         <h1
           style={{
-            marginTop: `3em`,
+            marginTop: `0.5em`,
             textAlign: `center`,
             fontWeight: 700,
             color: `var(--text-color)`,
@@ -143,7 +162,7 @@ React.useEffect(() => {
 
       {/* Stories Section */}
       <div
-        ref={el => (sectionsRef.current[2] = el)}
+        ref={el => (sectionsRef.current[3] = el)}
         className="stories-section"
       >
         <h2 className="section-title">Latest Jenkins User Stories</h2>
@@ -184,7 +203,7 @@ React.useEffect(() => {
       </div>
 
       {/* Map Section */}
-      <div ref={el => (sectionsRef.current[3] = el)} className="map-section">
+      <div ref={el => (sectionsRef.current[4] = el)} className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">

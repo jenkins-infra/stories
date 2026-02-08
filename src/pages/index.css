@@ -122,6 +122,11 @@ html {
   transition: all 0.5s ease-in-out;
 }
 
+.stories-section.spotlight-section {
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
 .section-title {
   font-weight: bold;
   font-size: 2rem;
