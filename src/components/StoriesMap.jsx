@@ -55,8 +55,8 @@ const StoriesMap = ({ mapPin }) => {
   const { allUserStory } = useStaticQuery(graphql`
     query StoriesMapQuery {
       allUserStory(
-        sort: { fields: date, order: DESC }
-        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
+        sort: {date: DESC}
+        filter: {map: {geojson: {ne: null}, location: {ne: null}}}
       ) {
         nodes {
           id
