@@ -45,11 +45,14 @@ export default function StorySpotlight() {
     <section className="story-spotlight">
       <div className="story-spotlight__outer">
         <div className="story-spotlight__mascot">
-          <StaticImage
-            src=""
-            alt="Jenkins Mascot"
-            placeholder="none"
-          />
+         <StaticImage
+          src="../images/jenkins-original.png"
+          alt="Jenkins Mascot"
+          width={166}
+          height={240}
+          placeholder="none"
+          loading="lazy"
+        />
         </div>
 
         <div className="story-spotlight__card">
