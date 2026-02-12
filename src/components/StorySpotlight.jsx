@@ -48,8 +48,8 @@ export default function StorySpotlight() {
          <StaticImage
           src="../images/jenkins-original.png"
           alt="Jenkins Mascot"
-          width={166}
-          height={240}
+          width={180}
+          height={250}
           placeholder="none"
           loading="lazy"
         />
