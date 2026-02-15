@@ -52,6 +52,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
     "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.7.0",
+    "baseline-browser-mapping": "^2.9.19",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
