@@ -1,4 +1,4 @@
-import { extractCountry, filterStories } from './mapUtils';
+import {extractCountry, filterStories} from './mapUtils';
 
 describe('extractCountry', () => {
   it('should return "Unknown" for null or undefined location', () => {
@@ -27,20 +27,20 @@ describe('filterStories', () => {
     {
       id: '1',
       title: 'Story 1',
-      map: { location: 'Tokyo, Japan' },
-      metadata: { industries: ['Tech', 'Finance'] },
+      map: {location: 'Tokyo, Japan'},
+      metadata: {industries: ['Tech', 'Finance']},
     },
     {
       id: '2',
       title: 'Story 2',
-      map: { location: 'Paris, France' },
-      metadata: { industries: ['Retail'] },
+      map: {location: 'Paris, France'},
+      metadata: {industries: ['Retail']},
     },
     {
       id: '3',
       title: 'Story 3',
-      map: { location: 'New York, USA' },
-      metadata: { industries: ['Tech'] },
+      map: {location: 'New York, USA'},
+      metadata: {industries: ['Tech']},
     },
   ];
 
@@ -55,25 +55,25 @@ describe('filterStories', () => {
   });
 
   it('should filter by selectedCountry', () => {
-    const result = filterStories(mockStories, { selectedCountry: 'Japan' });
+    const result = filterStories(mockStories, {selectedCountry: 'Japan'});
     expect(result).toHaveLength(1);
     expect(result[0].title).toBe('Story 1');
   });
 
   it('should filter by selectedIndustry', () => {
-    const result = filterStories(mockStories, { selectedIndustry: 'Tech' });
+    const result = filterStories(mockStories, {selectedIndustry: 'Tech'});
     expect(result).toHaveLength(2);
     expect(result.map(s => s.title)).toEqual(['Story 1', 'Story 3']);
   });
 
   it('should filter by searchQuery (prefix of country)', () => {
     // "Ja" -> matches "Japan"
-    const resultJapan = filterStories(mockStories, { searchQuery: 'Ja' });
+    const resultJapan = filterStories(mockStories, {searchQuery: 'Ja'});
     expect(resultJapan).toHaveLength(1);
     expect(resultJapan[0].title).toBe('Story 1');
 
     // "f" -> matches "France"
-    const resultFrance = filterStories(mockStories, { searchQuery: 'f' });
+    const resultFrance = filterStories(mockStories, {searchQuery: 'f'});
     expect(resultFrance).toHaveLength(1);
     expect(resultFrance[0].title).toBe('Story 2');
   });
