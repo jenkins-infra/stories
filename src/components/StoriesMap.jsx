@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import { extractCountry, filterStories } from '../utils/mapUtils';
 import { Icon, DivIcon } from 'leaflet';
 import { TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import LeafletMap from './LeafletMap';
@@ -88,15 +89,7 @@ const StoriesMap = ({ mapPin }) => {
     story => story.map && story.map.geojson && story.map.location,
   );
 
-  // Helper function to extract country from location string
-  function extractCountry(location) {
-    if (!location) return 'Unknown';
-    const parts = location.split(',');
-    if (parts.length > 1) {
-      return parts[parts.length - 1].trim();
-    }
-    return location.trim();
-  }
+
 
   const allCountries = useMemo(() => {
     const countries = storiesWithLocation.map(story =>
@@ -147,29 +140,10 @@ const StoriesMap = ({ mapPin }) => {
 
   // Filter stories based on selected criteria
   const filteredStories = useMemo(() => {
-    return storiesWithLocation.filter(story => {
-      // Filter by country if selected
-      if (selectedCountry && !story.map.location.includes(selectedCountry)) {
-        return false;
-      }
-
-      // Filter by industry if selected
-      if (
-        selectedIndustry &&
-        (!story.metadata?.industries ||
-          !story.metadata.industries.includes(selectedIndustry))
-      ) {
-        return false;
-      }
-
-      // prefix-based country search
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase().trim();
-        const country = extractCountry(story.map.location).toLowerCase();
-        return country.startsWith(query);
-      }
-
-      return true;
+    return filterStories(storiesWithLocation, {
+      selectedCountry,
+      selectedIndustry,
+      searchQuery,
     });
   }, [storiesWithLocation, selectedCountry, selectedIndustry, searchQuery]);
 
