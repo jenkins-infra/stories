@@ -238,7 +238,7 @@ const StoriesMap = ({ mapPin }) => {
           <div className={styles.searchBox}>
             <input
               type="text"
-              placeholder="Search stories..."
+              placeholder="Search stories by country ..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className={styles.searchInput}
@@ -291,9 +291,9 @@ const StoriesMap = ({ mapPin }) => {
         <button
           className={styles.resetButton}
           onClick={resetFilters}
-          aria-label="Reset all filters and map view"
+          aria-label={selectedIndustry ? "Remove filter" : "View all countries"}
         >
-          View All Countries
+          {selectedIndustry ? 'Remove Filter' : 'View All Countries'}
         </button>
 
         <div className={styles.countryList}>
