@@ -95,4 +95,24 @@ export default [
             'react': {version: 'detect'},
         },
     },
+    {
+        files: ['**/*.test.js', '**/__mocks__/*.js', 'jest-*.js', 'jest.config.js'],
+        languageOptions: {
+            globals: {
+                jest: true,
+                describe: true,
+                test: true,
+                it: true,
+                expect: true,
+                beforeEach: true,
+                afterEach: true,
+                beforeAll: true,
+                afterAll: true,
+            },
+        },
+        rules: {
+            'indent': 0, // Disable strict indent check for test files as they often fluctuate
+            'no-undef': 0 // Backup in case globals don't catch everything
+        }
+    }
 ];

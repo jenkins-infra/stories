@@ -4,12 +4,12 @@
  * @returns {string} - The extracted country name or "Unknown"
  */
 export function extractCountry(location) {
-  if (!location) return 'Unknown';
-  const parts = location.split(',');
-  if (parts.length > 1) {
-    return parts[parts.length - 1].trim();
-  }
-  return location.trim();
+    if (!location) return 'Unknown';
+    const parts = location.split(',');
+    if (parts.length > 1) {
+        return parts[parts.length - 1].trim();
+    }
+    return location.trim();
 }
 
 /**
@@ -22,30 +22,30 @@ export function extractCountry(location) {
  * @returns {Array} - Filtered list of stories
  */
 export function filterStories(
-  stories,
-  { selectedCountry, selectedIndustry, searchQuery },
+    stories,
+    {selectedCountry, selectedIndustry, searchQuery},
 ) {
-  if (!stories) return [];
+    if (!stories) return [];
 
-  return stories.filter(story => {
-    if (selectedCountry && !story.map.location.includes(selectedCountry)) {
-      return false;
-    }
+    return stories.filter(story => {
+        if (selectedCountry && !story.map.location.includes(selectedCountry)) {
+            return false;
+        }
 
-    if (
-      selectedIndustry &&
+        if (
+            selectedIndustry &&
       (!story.metadata?.industries ||
         !story.metadata.industries.includes(selectedIndustry))
-    ) {
-      return false;
-    }
+        ) {
+            return false;
+        }
 
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase().trim();
-      const country = extractCountry(story.map.location).toLowerCase();
-      return country.startsWith(query);
-    }
+        if (searchQuery) {
+            const query = searchQuery.toLowerCase().trim();
+            const country = extractCountry(story.map.location).toLowerCase();
+            return country.startsWith(query);
+        }
 
-    return true;
-  });
+        return true;
+    });
 }
