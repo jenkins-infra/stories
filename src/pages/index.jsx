@@ -31,10 +31,17 @@ const IndexPage = () => {
   `);
 
   const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const [isClient, setIsClient] = React.useState(false);
   const sectionsRef = React.useRef([]);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Dark Mode Detection
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const checkDarkMode = () => {
       const darkModeMediaQuery = window.matchMedia(
         '(prefers-color-scheme: dark)',
@@ -51,59 +58,76 @@ const IndexPage = () => {
   }, []);
 
   // Scroll-triggered Animation
-React.useEffect(() => {
-  const appeared = new WeakSet();
-  const disappeared = new WeakSet();
-  const isFadingOut = new WeakMap();  
-  const observer = new IntersectionObserver(
+  React.useEffect(() => {
+    if (!isClient || typeof window === 'undefined') return;
+    
+    const appeared = new WeakSet();
+    const disappeared = new WeakSet();
+    const isFadingOut = new WeakMap();  
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const target = entry.target;
 
-    entries => {
-      entries.forEach(entry => {
-        const target = entry.target;
+          if (entry.isIntersecting) {
+            if (!appeared.has(target) && !isFadingOut.get(target)) {
+              target.classList.add('section-visible');
+              appeared.add(target);
+            }
+          } else {
+            if (appeared.has(target) && !disappeared.has(target) && !isFadingOut.get(target)) {
+              target.classList.remove('section-visible');
+              target.classList.add('section-hidden');
+              disappeared.add(target);
 
-        if (entry.isIntersecting) {
-          if (!appeared.has(target) && !isFadingOut.get(target)) {
-            target.classList.add('section-visible');
-            appeared.add(target);
+              // Mark target as fading out
+              isFadingOut.set(target, true);
+
+              // Handle fade out transition till end
+              const handleTransitionEnd = () => {
+                target.classList.remove('section-hidden');
+                target.classList.add('section-final');
+                isFadingOut.delete(target); // Reset the fading-out state
+                target.removeEventListener('transitionend', handleTransitionEnd);
+              };
+
+              target.addEventListener('transitionend', handleTransitionEnd);
+            }
           }
-        } else {
-          if (appeared.has(target) && !disappeared.has(target) && !isFadingOut.get(target)) {
-            target.classList.remove('section-visible');
-            target.classList.add('section-hidden');
-            disappeared.add(target);
+        });
+      },
+      { threshold: 0.2 },
+    );
 
-            // Mark target as fading out
-            isFadingOut.set(target, true);
+    sectionsRef.current.forEach(section => {
+      if (section) observer.observe(section);
+    });
 
-            // Handle fade out transition till end
-            const handleTransitionEnd = () => {
-              target.classList.remove('section-hidden');
-              target.classList.add('section-final');
-              isFadingOut.delete(target); // Reset the fading-out state
-              target.removeEventListener('transitionend', handleTransitionEnd);
-            };
+    return () => observer.disconnect();
+  }, [isClient]);
 
-            target.addEventListener('transitionend', handleTransitionEnd);
-          }
-        }
-      });
-    },
-    { threshold: 0.2 },
-  );
-
-  sectionsRef.current.forEach(section => {
-    if (section) observer.observe(section);
-  });
-
-  return () => observer.disconnect();
-}, []);
+  const setSection0Ref = React.useCallback(el => {
+    sectionsRef.current[0] = el;
+  }, []);
+  const setSection1Ref = React.useCallback(el => {
+    sectionsRef.current[1] = el;
+  }, []);
+  const setSection2Ref = React.useCallback(el => {
+    sectionsRef.current[2] = el;
+  }, []);
+  const setSection3Ref = React.useCallback(el => {
+    sectionsRef.current[3] = el;
+  }, []);
+  const setSection4Ref = React.useCallback(el => {
+    sectionsRef.current[4] = el;
+  }, []);
 
   return (
     <Layout title={title}>
       <Seo title={title} pathname="/" />
 
       {/* Hero Section */}
-      <div ref={el => (sectionsRef.current[0] = el)} className="hero-section">
+      <div ref={setSection0Ref} className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">Jenkins Is The Way</h1>
           <p className="hero-subtitle">
@@ -137,14 +161,14 @@ React.useEffect(() => {
       </h1>
 
       <div
-        ref={el => (sectionsRef.current[1] = el)}
+        ref={setSection1Ref}
         className="stories-section spotlight-section"
       >
         <StorySpotlight />
       </div>
 
       {/* Search Section */}
-      <div ref={el => (sectionsRef.current[2] = el)}>
+      <div ref={setSection2Ref}>
         <h1
           style={{
             marginTop: `0.5em`,
@@ -162,7 +186,7 @@ React.useEffect(() => {
 
       {/* Stories Section */}
       <div
-        ref={el => (sectionsRef.current[3] = el)}
+        ref={setSection3Ref}
         className="stories-section"
       >
         <h2 className="section-title">Latest Jenkins User Stories</h2>
@@ -203,7 +227,7 @@ React.useEffect(() => {
       </div>
 
       {/* Map Section */}
-      <div ref={el => (sectionsRef.current[4] = el)} className="map-section">
+      <div ref={setSection4Ref} className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">

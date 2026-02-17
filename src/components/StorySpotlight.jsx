@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import "./StorySpotlight.css";
@@ -30,12 +30,17 @@ export default function StorySpotlight() {
   `);
 
   const stories = data.allUserStory.nodes;
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const story = useMemo(() => {
-    if (!stories.length) return null;
+    if (!stories.length || !isClient) return null;
     const index = Math.floor(Date.now() / ONE_DAY);
     return stories[index % stories.length];
-  }, [stories]);
+  }, [stories, isClient]);
 
   if (!story) return null;
 
