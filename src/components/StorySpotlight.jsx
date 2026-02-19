@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import "./StorySpotlight.css";
+import React, { useMemo } from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import './StorySpotlight.css';
 
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
@@ -45,14 +45,14 @@ export default function StorySpotlight() {
     <section className="story-spotlight">
       <div className="story-spotlight__outer">
         <div className="story-spotlight__mascot">
-         <StaticImage
-          src="../images/jenkins-original.png"
-          alt="Jenkins Mascot"
-          width={181}
-          height={250}
-          placeholder="none"
-          loading="lazy"
-        />
+          <StaticImage
+            src="../images/jenkins-original.png"
+            alt="Jenkins Mascot"
+            width={181}
+            height={250}
+            placeholder="none"
+            loading="lazy"
+          />
         </div>
 
         <div className="story-spotlight__card">
@@ -65,13 +65,9 @@ export default function StorySpotlight() {
           <div className="story-spotlight__content">
             <h3>{story.title}</h3>
 
-            <p className="story-spotlight__date">
-              {story.date}
-            </p>
+            <p className="story-spotlight__date">{story.date}</p>
 
-            <p className="story-spotlight__excerpt">
-              {story.tag_line}
-            </p>
+            <p className="story-spotlight__excerpt">{story.tag_line}</p>
 
             <Link
               to={`/user-story/${story.slug}`}
