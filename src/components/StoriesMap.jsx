@@ -56,8 +56,8 @@ const StoriesMap = ({ mapPin }) => {
   const { allUserStory } = useStaticQuery(graphql`
     query StoriesMapQuery {
       allUserStory(
-        sort: {date: DESC}
-        filter: {map: {geojson: {ne: null}, location: {ne: null}}}
+        sort: { date: DESC }
+        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
         nodes {
           id
@@ -131,13 +131,13 @@ const StoriesMap = ({ mapPin }) => {
   const [mapCenter, setMapCenter] = useState([20, 0]); // Default center
   const [mapZoom, setMapZoom] = useState(2); // Default zoom
   const [showFilters, setShowFilters] = useState(false);
- 
+
   // Avoid hydration mismatch
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
     setIsClient(true);
   }, []);
-    
+
   // Filter stories based on selected criteria
   const filteredStories = useMemo(() => {
     return filterStories(storiesWithLocation, {
@@ -265,7 +265,7 @@ const StoriesMap = ({ mapPin }) => {
         <button
           className={styles.resetButton}
           onClick={resetFilters}
-          aria-label={selectedIndustry ? "Remove filter" : "View all countries"}
+          aria-label={selectedIndustry ? 'Remove filter' : 'View all countries'}
         >
           {selectedIndustry ? 'Remove Filter' : 'View All Countries'}
         </button>
