@@ -31,10 +31,17 @@ const IndexPage = () => {
   `);
 
   const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const [isClient, setIsClient] = React.useState(false);
   const sectionsRef = React.useRef([]);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Dark Mode Detection
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const checkDarkMode = () => {
       const darkModeMediaQuery = window.matchMedia(
         '(prefers-color-scheme: dark)',
@@ -52,6 +59,8 @@ const IndexPage = () => {
 
   // Scroll-triggered Animation
   React.useEffect(() => {
+    if (!isClient || typeof window === 'undefined') return;
+    
     const appeared = new WeakSet();
     const disappeared = new WeakSet();
     const isFadingOut = new WeakMap();
@@ -102,6 +111,22 @@ const IndexPage = () => {
     });
 
     return () => observer.disconnect();
+  }, [isClient]);
+
+  const setSection0Ref = React.useCallback(el => {
+    sectionsRef.current[0] = el;
+  }, []);
+  const setSection1Ref = React.useCallback(el => {
+    sectionsRef.current[1] = el;
+  }, []);
+  const setSection2Ref = React.useCallback(el => {
+    sectionsRef.current[2] = el;
+  }, []);
+  const setSection3Ref = React.useCallback(el => {
+    sectionsRef.current[3] = el;
+  }, []);
+  const setSection4Ref = React.useCallback(el => {
+    sectionsRef.current[4] = el;
   }, []);
 
   return (
@@ -109,7 +134,7 @@ const IndexPage = () => {
       <Seo title={title} pathname="/" />
 
       {/* Hero Section */}
-      <div ref={el => (sectionsRef.current[0] = el)} className="hero-section">
+      <div ref={setSection0Ref} className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">Jenkins Is The Way</h1>
           <p className="hero-subtitle">
@@ -143,14 +168,14 @@ const IndexPage = () => {
       </h1>
 
       <div
-        ref={el => (sectionsRef.current[1] = el)}
+        ref={setSection1Ref}
         className="stories-section spotlight-section"
       >
         <StorySpotlight />
       </div>
 
       {/* Search Section */}
-      <div ref={el => (sectionsRef.current[2] = el)}>
+      <div ref={setSection2Ref}>
         <h1
           style={{
             marginTop: `0.5em`,
@@ -168,7 +193,7 @@ const IndexPage = () => {
 
       {/* Stories Section */}
       <div
-        ref={el => (sectionsRef.current[3] = el)}
+        ref={setSection3Ref}
         className="stories-section"
       >
         <h2 className="section-title">Latest Jenkins User Stories</h2>
@@ -209,7 +234,7 @@ const IndexPage = () => {
       </div>
 
       {/* Map Section */}
-      <div ref={el => (sectionsRef.current[4] = el)} className="map-section">
+      <div ref={setSection4Ref} className="map-section">
         <h2 className="section-title">Discover More</h2>
         <div className="map-content">
           <Link to="/map">
