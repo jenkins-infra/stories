@@ -14,8 +14,6 @@
 - [ ] No unrelated changes included
 - [ ] Documentation updated (if needed)
 
-### Relevant issue(s)
-<!-- Link any related GitHub issues or pull requests e.g. `Closes #1234`) -->
 
 ### Additional Context
 <!-- Any extra information reviewers should know -->
