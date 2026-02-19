@@ -71,7 +71,9 @@ html {
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0);
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 1.5s ease-in-out;
 }
 
 @keyframes gradientAnimation {
@@ -302,7 +304,7 @@ html {
     color: #58a6ff;
     border-color: #58a6ff;
   }
-  
+
   .hero-button-secondary:hover {
     background-color: #373e47;
     color: #58a6ff;
@@ -318,19 +320,22 @@ html {
   }
 }
 
-
 /* Scroll-triggered Animation */
 .section-visible {
-  opacity: 1; 
+  opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 /* Fade-out */
 .section-hidden {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .section-final {

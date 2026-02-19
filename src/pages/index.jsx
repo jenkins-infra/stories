@@ -50,52 +50,58 @@ const IndexPage = () => {
   }, []);
 
   // Scroll-triggered Animation
-React.useEffect(() => {
-  const appeared = new WeakSet();
-  const disappeared = new WeakSet();
-  const isFadingOut = new WeakMap();  
-  const observer = new IntersectionObserver(
+  React.useEffect(() => {
+    const appeared = new WeakSet();
+    const disappeared = new WeakSet();
+    const isFadingOut = new WeakMap();
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const target = entry.target;
 
-    entries => {
-      entries.forEach(entry => {
-        const target = entry.target;
+          if (entry.isIntersecting) {
+            if (!appeared.has(target) && !isFadingOut.get(target)) {
+              target.classList.add('section-visible');
+              appeared.add(target);
+            }
+          } else {
+            if (
+              appeared.has(target) &&
+              !disappeared.has(target) &&
+              !isFadingOut.get(target)
+            ) {
+              target.classList.remove('section-visible');
+              target.classList.add('section-hidden');
+              disappeared.add(target);
 
-        if (entry.isIntersecting) {
-          if (!appeared.has(target) && !isFadingOut.get(target)) {
-            target.classList.add('section-visible');
-            appeared.add(target);
+              // Mark target as fading out
+              isFadingOut.set(target, true);
+
+              // Handle fade out transition till end
+              const handleTransitionEnd = () => {
+                target.classList.remove('section-hidden');
+                target.classList.add('section-final');
+                isFadingOut.delete(target); // Reset the fading-out state
+                target.removeEventListener(
+                  'transitionend',
+                  handleTransitionEnd,
+                );
+              };
+
+              target.addEventListener('transitionend', handleTransitionEnd);
+            }
           }
-        } else {
-          if (appeared.has(target) && !disappeared.has(target) && !isFadingOut.get(target)) {
-            target.classList.remove('section-visible');
-            target.classList.add('section-hidden');
-            disappeared.add(target);
+        });
+      },
+      { threshold: 0.2 },
+    );
 
-            // Mark target as fading out
-            isFadingOut.set(target, true);
+    sectionsRef.current.forEach(section => {
+      if (section) observer.observe(section);
+    });
 
-            // Handle fade out transition till end
-            const handleTransitionEnd = () => {
-              target.classList.remove('section-hidden');
-              target.classList.add('section-final');
-              isFadingOut.delete(target); // Reset the fading-out state
-              target.removeEventListener('transitionend', handleTransitionEnd);
-            };
-
-            target.addEventListener('transitionend', handleTransitionEnd);
-          }
-        }
-      });
-    },
-    { threshold: 0.2 },
-  );
-
-  sectionsRef.current.forEach(section => {
-    if (section) observer.observe(section);
-  });
-
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <Layout title={title}>
