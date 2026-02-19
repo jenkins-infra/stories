@@ -63,7 +63,7 @@ const IndexPage = () => {
     
     const appeared = new WeakSet();
     const disappeared = new WeakSet();
-    const isFadingOut = new WeakMap();  
+    const isFadingOut = new WeakMap();
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
