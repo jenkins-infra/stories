@@ -75,7 +75,11 @@ const IndexPage = () => {
               appeared.add(target);
             }
           } else {
-            if (appeared.has(target) && !disappeared.has(target) && !isFadingOut.get(target)) {
+            if (
+              appeared.has(target) &&
+              !disappeared.has(target) &&
+              !isFadingOut.get(target)
+            ) {
               target.classList.remove('section-visible');
               target.classList.add('section-hidden');
               disappeared.add(target);
@@ -88,7 +92,10 @@ const IndexPage = () => {
                 target.classList.remove('section-hidden');
                 target.classList.add('section-final');
                 isFadingOut.delete(target); // Reset the fading-out state
-                target.removeEventListener('transitionend', handleTransitionEnd);
+                target.removeEventListener(
+                  'transitionend',
+                  handleTransitionEnd,
+                );
               };
 
               target.addEventListener('transitionend', handleTransitionEnd);
