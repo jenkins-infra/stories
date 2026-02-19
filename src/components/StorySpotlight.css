@@ -73,7 +73,7 @@
 .story-spotlight__logo img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
 
