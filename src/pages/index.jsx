@@ -210,6 +210,8 @@ const IndexPage = () => {
                     image={getImage(story.image)}
                     alt={story.title}
                     className="story-image"
+                    loading="lazy"
+                    placeholder="blurred"
                   />
                 </div>
               )}

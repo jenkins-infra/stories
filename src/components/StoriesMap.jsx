@@ -36,7 +36,7 @@ const createCustomMarker = (story, mapPin) => {
     <div class="${styles.customMarker}">
       <div class="${styles.markerPin}"></div>
       <div class="${styles.markerAvatar}">
-        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="${story.title}" />
+        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="${story.title}" loading="lazy" />
       </div>
     </div>
   `;
