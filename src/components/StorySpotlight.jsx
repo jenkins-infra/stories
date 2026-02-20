@@ -63,7 +63,7 @@ export default function StorySpotlight() {
         <div className="story-spotlight__card">
           {logo && (
             <div className="story-spotlight__logo">
-              <GatsbyImage image={logo} alt={story.title} />
+              <GatsbyImage image={logo} alt={story.title} loading="lazy" placeholder="blurred" />
             </div>
           )}
 
