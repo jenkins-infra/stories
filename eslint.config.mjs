@@ -9,6 +9,7 @@ export default [
             'node_modules/',
             '.cache/',
             'public/',
+            'scripts/',
             'src/layout.css',
             'src/layout.jsx',
             'src/images/',

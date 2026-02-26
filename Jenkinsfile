@@ -53,6 +53,7 @@ pipeline {
         NODE_ENV = "development"
       }
       steps {
+        sh 'npm run lint:yaml'
         sh 'npm run lint && npx eslint --format checkstyle > eslint.xml'
       }
       post {
