@@ -158,3 +158,43 @@
     max-width: 200px;
   }
 }
+
+.readTime {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .readTime {
+    color: #6b7280;
+  }
+}
+
+.metaInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.separator {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .separator {
+    color: #ccc;
+  }
+}
+
+.authoredByWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.authoredByWrapper .readTime {
+  margin-right: 0;
+  white-space: nowrap;
+}

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Search from '../components/SearchContainer';
+import estimateReadTime from '../utils/estimateReadTime';
 import StorySpotlight from '../components/StorySpotlight';
 import Layout from '../layout';
 import Seo from '../components/Seo';
@@ -19,6 +20,11 @@ const IndexPage = () => {
             tag_line
             authored_by
             slug
+            body_content {
+              paragraphs {
+                html
+              }
+            }
             image {
               childImageSharp {
                 gatsbyImageData(width: 400, height: 200)
@@ -223,7 +229,17 @@ const IndexPage = () => {
               <p className="story-author">
                 Authored By Jenkins User <strong>{story.authored_by}</strong>
               </p>
-              <p className="story-date">{story.date}</p>
+              <div className="story-meta">
+                <p className="story-date">{story.date}</p>
+                {story.body_content && story.body_content.paragraphs && (
+                  <>
+                    <span className="story-separator">|</span>
+                    <p className="story-readtime">
+                      {estimateReadTime(story.body_content.paragraphs)} min read
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           ))}
         </div>

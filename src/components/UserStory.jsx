@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
 import * as styles from './UserStory.module.css';
+import estimateReadTime from '../utils/estimateReadTime';
 
 const titles = {
   build_tools: 'Build Tools',
@@ -65,10 +66,19 @@ const UserStory = ({
         <div className="col">
           <div className="container pb-2">
             <h1 className="textcolor">{tag_line}</h1>
+
           </div>
 
-          <div className="container pt-2 pb-2">
-            Authored By Jenkins User <strong>{authored_by}</strong>
+          <div className={`container pt-2 pb-2 ${styles.metaInfo}`}>
+            <span>Authored By Jenkins User <strong>{authored_by}</strong></span>
+            {body_content && body_content.paragraphs && (
+              <>
+                <span className={styles.separator}>|</span>
+                <small className={styles.readTime}>
+                  {estimateReadTime(body_content.paragraphs)} min read
+                </small>
+              </>
+            )}
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>

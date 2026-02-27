@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as styles from './UserStoryCard.module.css';
+import estimateReadTime from '../utils/estimateReadTime';
+function UserStoryCard({ slug, image, title, date, tag_line, body_content }) {
+  
+const minutes = body_content && body_content.paragraphs ? estimateReadTime(body_content.paragraphs) : null;
 
-function UserStoryCard({ slug, image, title, date, tag_line }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardInner}>
@@ -20,7 +23,15 @@ function UserStoryCard({ slug, image, title, date, tag_line }) {
         )}
         <div className={styles.content}>
           <h2 className={styles.title}>{title}</h2>
-          <time className={styles.date}>{date}</time>
+          <div className={styles.metaInfo}>
+            <time className={styles.date}>{date}</time>
+            {minutes && (
+              <>
+                <span className={styles.separator}>|</span>
+                <span className={styles.readTime}>{minutes} min read</span>
+              </>
+            )}
+          </div>
           <p className={styles.tagline}>{tag_line}</p>
           <Link to={`/user-story/${slug}`} className={styles.readMore}>
             Read More

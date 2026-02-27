@@ -199,23 +199,50 @@ html {
   color: inherit;
 }
 
-.story-author,
-.story-date {
+.story-author {
   padding: 0 15px;
   margin: 0;
-}
-
-.story-author {
   padding-bottom: 5px;
   font-size: 0.85rem;
   color: #aaa;
 }
 
 .story-date {
-  padding-bottom: 15px;
-  margin-top: auto;
+  margin: 0;
   font-size: 0.75rem;
   color: #888;
+}
+
+.story-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px 15px;
+}
+
+.story-meta .story-date {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.story-readtime {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+
+.story-separator {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 479px) {
+  .story-meta {
+    gap: 0.5rem;
+  }
 }
 
 /* Map Section */
