@@ -13,4 +13,7 @@ static/site.webmanifest
 schema.graphql
 .idea/
 .vscode/
-.swp
+
+# Ignore temporary files
+.Dockerfile.swp
+.dockerignore.swp
