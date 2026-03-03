@@ -10,7 +10,7 @@ ENV NODE_OPTIONS="--max-old-space-size=2048" \
     CI=true
 
 COPY package.json package-lock.json ./
-RUN npm install 
+RUN npm install
 
 COPY . .
 
@@ -35,9 +35,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /app/public /usr/share/nginx/html
 
 # Add non-root user for security and set permissions
-
 RUN adduser -D appuser \
-    && mkdir -p /var/cache/nginx /var/run /var/log/nginx \ 
+    && mkdir -p /var/cache/nginx /var/run /var/log/nginx \
     && chown -R appuser:appuser /var/cache/nginx /var/run /var/log/nginx
 
 USER appuser
