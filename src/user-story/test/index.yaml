@@ -1,0 +1,16 @@
+---
+title: title
+post_name: test
+authored_by: test
+date: 2026-03-06T23:48.000-05:00
+tag_line: test
+image: simple_professional_favicon.svg
+metadata:
+  organization: test
+map:
+  authored_by: test
+  location: toronto
+  geojson: '{"type":"Point","coordinates":[-78.8859558,45.0133603]}'
+body_content:
+  title: test
+---
