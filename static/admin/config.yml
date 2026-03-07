@@ -2,7 +2,6 @@ backend:
   name: github
   repo: jenkins-infra/stories
   branch: main
-  use_graphql: true
   site_domain: stories.jenkins.io
   open_authoring: true
 
