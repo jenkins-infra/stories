@@ -9,6 +9,14 @@ import * as styles from './StoriesMap.module.css';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+import {
+  extractCountry,
+  filterStories,
+  groupStoriesByCountry,
+  getCenterForCountry,
+  DEFAULT_MAP_CENTER,
+  DEFAULT_MAP_ZOOM,
+} from '../utils/storiesMap.mjs';
 
 // Component to handle map view changes
 const ChangeView = ({ center, zoom }) => {
@@ -88,16 +96,6 @@ const StoriesMap = ({ mapPin }) => {
     story => story.map && story.map.geojson && story.map.location,
   );
 
-  // Helper function to extract country from location string
-  function extractCountry(location) {
-    if (!location) return 'Unknown';
-    const parts = location.split(',');
-    if (parts.length > 1) {
-      return parts[parts.length - 1].trim();
-    }
-    return location.trim();
-  }
-
   const allCountries = useMemo(() => {
     const countries = storiesWithLocation.map(story =>
       extractCountry(story.map.location),
@@ -120,23 +118,16 @@ const StoriesMap = ({ mapPin }) => {
   }, [storiesWithLocation]);
 
   // Group stories by country
-  const storiesByCountry = useMemo(() => {
-    return storiesWithLocation.reduce((acc, story) => {
-      const country = extractCountry(story.map.location);
-
-      if (!acc[country]) {
-        acc[country] = [];
-      }
-      acc[country].push(story);
-      return acc;
-    }, {});
-  }, [storiesWithLocation]);
+  const storiesByCountry = useMemo(
+    () => groupStoriesByCountry(storiesWithLocation),
+    [storiesWithLocation],
+  );
 
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [mapCenter, setMapCenter] = useState([20, 0]); // Default center
-  const [mapZoom, setMapZoom] = useState(2); // Default zoom
+  const [mapCenter, setMapCenter] = useState(DEFAULT_MAP_CENTER);
+  const [mapZoom, setMapZoom] = useState(DEFAULT_MAP_ZOOM);
   const [showFilters, setShowFilters] = useState(false);
 
   // Avoid hydration mismatch
@@ -146,70 +137,31 @@ const StoriesMap = ({ mapPin }) => {
   }, []);
 
   // Filter stories based on selected criteria
-  const filteredStories = useMemo(() => {
-    return storiesWithLocation.filter(story => {
-      // Filter by country if selected
-      if (selectedCountry && !story.map.location.includes(selectedCountry)) {
-        return false;
-      }
-
-      // Filter by industry if selected
-      if (
-        selectedIndustry &&
-        (!story.metadata?.industries ||
-          !story.metadata.industries.includes(selectedIndustry))
-      ) {
-        return false;
-      }
-
-      // prefix-based country search
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase().trim();
-        const country = extractCountry(story.map.location).toLowerCase();
-        return country.startsWith(query);
-      }
-
-      return true;
-    });
-  }, [storiesWithLocation, selectedCountry, selectedIndustry, searchQuery]);
+  const filteredStories = useMemo(
+    () =>
+      filterStories(storiesWithLocation, {
+        selectedCountry,
+        selectedIndustry,
+        searchQuery,
+      }),
+    [storiesWithLocation, selectedCountry, selectedIndustry, searchQuery],
+  );
 
   // Handle country selection
   const handleCountrySelect = country => {
     if (selectedCountry === country) {
       // If clicking the same country, deselect it
       setSelectedCountry(null);
-      setMapCenter([20, 0]);
-      setMapZoom(2);
+      setMapCenter(DEFAULT_MAP_CENTER);
+      setMapZoom(DEFAULT_MAP_ZOOM);
     } else {
       setSelectedCountry(country);
 
-      // Calculate average lat/lng for the country to center the map
       const stories = storiesByCountry[country];
       if (stories && stories.length > 0) {
-        let totalLat = 0;
-        let totalLng = 0;
-        let validCoords = 0;
-
-        stories.forEach(story => {
-          try {
-            const geojson = JSON.parse(story.map.geojson);
-            if (
-              geojson &&
-              geojson.coordinates &&
-              geojson.coordinates.length >= 2
-            ) {
-              const [longitude, latitude] = geojson.coordinates;
-              totalLat += latitude;
-              totalLng += longitude;
-              validCoords++;
-            }
-          } catch (e) {
-            console.error('Error parsing geojson:', e);
-          }
-        });
-
-        if (validCoords > 0) {
-          setMapCenter([totalLat / validCoords, totalLng / validCoords]);
+        const center = getCenterForCountry(stories);
+        if (center) {
+          setMapCenter(center);
           setMapZoom(5); // Zoom in when a country is selected
         }
       }
@@ -221,8 +173,8 @@ const StoriesMap = ({ mapPin }) => {
     setSelectedCountry(null);
     setSelectedIndustry(null);
     setSearchQuery('');
-    setMapCenter([20, 0]);
-    setMapZoom(2);
+    setMapCenter(DEFAULT_MAP_CENTER);
+    setMapZoom(DEFAULT_MAP_ZOOM);
   };
 
   return (
