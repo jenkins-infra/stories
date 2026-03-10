@@ -48,6 +48,17 @@ npm run develop
 
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
+## Docker Development (optional)
+
+To run the project with a consistent local environment:
+
+```bash
+docker build -t jenkins-stories-dev .
+docker run --rm -it -p 8000:8000 jenkins-stories-dev
+```
+
+Then open [http://localhost:8000](http://localhost:8000).
+
 ## Code Quality Tools
 
 ### Formatting

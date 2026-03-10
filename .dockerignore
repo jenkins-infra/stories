@@ -1,0 +1,6 @@
+node_modules
+.git
+.cache
+public
+npm-debug.log*
+.DS_Store
