@@ -89,8 +89,6 @@ const StoriesMap = ({ mapPin }) => {
     story => story.map && story.map.geojson && story.map.location,
   );
 
-
-
   const allCountries = useMemo(() => {
     const countries = storiesWithLocation.map(story =>
       extractCountry(story.map.location),
