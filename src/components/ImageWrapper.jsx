@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 const ImageWrapper = ({ image, alt, ...rest }) => {
   if (typeof image === 'string') {
     // this is an image coming from Netlify CMS
-    return <img src={image} {...rest} alt={alt} />;
+    return <img src={image} {...rest} alt={alt} loading="lazy" />;
   } else {
     // this should be an image processed by gatsby-plugin-image
     const imageRef = getImage(image);
