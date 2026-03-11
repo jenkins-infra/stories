@@ -49,12 +49,8 @@ npm run develop
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
 ### Run app using Docker (development with hot reload)
-You can skip `Install Dependencies` and run the app in an isolated environment. The Docker image runs the Gatsby dev server (`gatsby develop`) and supports hot reload. Mount `src` as volumes so file changes on your host are reflected in the container.
+You can skip `Install Dependencies` and run the app in an isolated environment. The Docker image runs the Gatsby dev server (`gatsby develop`) and supports hot reload. Mount the whole project directory as a volume so file changes on your host are reflected in the container.
 
-```bash
-docker build -t stories-app .
-# Mount `src` as a volume so file changes on your host are reflected in the container.
-docker run --rm -p 8000:8000 -v $(pwd)/src:/app/src --name success-stories stories-app
 # add -d if you prefer to run the container in the background
 # if use -d and want to see log file run this command
 docker logs -f success-stories
