@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import "./StorySpotlight.css";
@@ -30,12 +30,17 @@ export default function StorySpotlight() {
   `);
 
   const stories = data.allUserStory.nodes;
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const story = useMemo(() => {
-    if (!stories.length) return null;
+    if (!stories.length || !isClient) return null;
     const index = Math.floor(Date.now() / ONE_DAY);
     return stories[index % stories.length];
-  }, [stories]);
+  }, [stories, isClient]);
 
   if (!story) return null;
 
@@ -45,33 +50,29 @@ export default function StorySpotlight() {
     <section className="story-spotlight">
       <div className="story-spotlight__outer">
         <div className="story-spotlight__mascot">
-         <StaticImage
-          src="../images/jenkins-original.png"
-          alt="Jenkins Mascot"
-          width={181}
-          height={250}
-          placeholder="none"
-          loading="lazy"
-        />
+          <StaticImage
+            src="../images/jenkins-original.png"
+            alt="Jenkins Mascot"
+            width={181}
+            height={250}
+            placeholder="none"
+            loading="lazy"
+          />
         </div>
 
         <div className="story-spotlight__card">
           {logo && (
             <div className="story-spotlight__logo">
-              <GatsbyImage image={logo} alt={story.title} />
+              <GatsbyImage image={logo} alt={story.title} loading="lazy" placeholder="blurred" />
             </div>
           )}
 
           <div className="story-spotlight__content">
             <h3>{story.title}</h3>
 
-            <p className="story-spotlight__date">
-              {story.date}
-            </p>
+            <p className="story-spotlight__date">{story.date}</p>
 
-            <p className="story-spotlight__excerpt">
-              {story.tag_line}
-            </p>
+            <p className="story-spotlight__excerpt">{story.tag_line}</p>
 
             <Link
               to={`/user-story/${story.slug}`}

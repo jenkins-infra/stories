@@ -27,7 +27,8 @@ h3 {
 }
 
 @media (prefers-color-scheme: light) {
-  h1, h2 {
+  h1,
+  h2 {
     color: #2a3a52;
   }
 }
@@ -50,14 +51,18 @@ h3 {
   margin: 1.5rem auto;
   max-width: 1168px;
   width: 98%;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 4px 8px rgba(0, 0, 0, 0.2);
   gap: 2rem;
 }
 
 @media (prefers-color-scheme: light) {
   .stats-container {
     background-color: #ffffff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -94,7 +99,7 @@ h3 {
   .stat-value {
     color: #2a3a52;
   }
-  
+
   .stat-label {
     color: #666666;
   }
@@ -130,7 +135,9 @@ h3 {
   background-color: #1a1a1a;
   border-radius: 8px;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -348,7 +355,7 @@ h3 {
 
 .filter-select {
   appearance: none;
-  background-image: url("../images/dropdown-arrow.svg");
+  background-image: url('../images/dropdown-arrow.svg');
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 30px;

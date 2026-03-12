@@ -4,7 +4,7 @@ import Layout from '../layout';
 import Seo from '../components/Seo';
 import UserStoryCard from '../components/UserStoryCard';
 import './all.css';
-
+import SearchContainer from '../components/SearchContainer.jsx';
 // Function to generate the GitHub issue URL
 function generateUserStoryIssueURL() {
   const queryParams = new URLSearchParams();
@@ -113,6 +113,22 @@ const AllPage = () => {
                 Share Your Story
               </button>
             </div>
+          </div>
+        </div>
+        {/* Search bar */}
+        <div className="row">
+          <h1
+            style={{
+              marginTop: `0.5em`,
+              textAlign: `center`,
+              fontWeight: 700,
+              color: `var(--text-color)`,
+            }}
+          >
+            Search Jenkins Stories
+          </h1>
+          <div>
+            <SearchContainer />
           </div>
         </div>
         <div className="row">

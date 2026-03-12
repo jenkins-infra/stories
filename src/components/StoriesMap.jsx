@@ -37,7 +37,7 @@ const createCustomMarker = (story, mapPin) => {
     <div class="${styles.customMarker}">
       <div class="${styles.markerPin}"></div>
       <div class="${styles.markerAvatar}">
-        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="${story.title}" />
+        <img src="${story.image.childImageSharp.gatsbyImageData.images.fallback.src}" alt="${story.title}" loading="lazy" />
       </div>
     </div>
   `;
@@ -56,8 +56,8 @@ const StoriesMap = ({ mapPin }) => {
   const { allUserStory } = useStaticQuery(graphql`
     query StoriesMapQuery {
       allUserStory(
-        sort: {date: DESC}
-        filter: {map: {geojson: {ne: null}, location: {ne: null}}}
+        sort: { date: DESC }
+        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
       ) {
         nodes {
           id
@@ -263,7 +263,7 @@ const StoriesMap = ({ mapPin }) => {
         <button
           className={styles.resetButton}
           onClick={resetFilters}
-          aria-label={selectedIndustry ? "Remove filter" : "View all countries"}
+          aria-label={selectedIndustry ? 'Remove filter' : 'View all countries'}
         >
           {selectedIndustry ? 'Remove Filter' : 'View All Countries'}
         </button>

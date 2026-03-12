@@ -4,6 +4,7 @@ import './SearchContainer.css';
 import * as JsSearch from 'js-search';
 
 class Search extends Component {
+  searchRef = React.createRef();
   state = {
     stories: [],
     search: null,
@@ -14,6 +15,7 @@ class Search extends Component {
   };
 
   componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyDown);
     const { allUserStory } = this.props;
     try {
       const stories = allUserStory.nodes.map(story => ({
@@ -30,6 +32,17 @@ class Search extends Component {
       console.error(`Error processing story data\n${err}`);
     }
   }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = e => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      this.searchRef.current?.focus();
+    }
+  };
 
   initializeSearch = stories => {
     const dataToSearch = new JsSearch.Search('title');
@@ -103,7 +116,8 @@ class Search extends Component {
                   className="form-control form-control-lg"
                   value={searchQuery}
                   onChange={this.searchData}
-                  placeholder="Search user stories..."
+                  placeholder="[Ctrl+k] Search user stories..."
+                  ref={this.searchRef}
                 />
                 <span className="input-group-text">
                   <ion-icon name="search-outline"></ion-icon>

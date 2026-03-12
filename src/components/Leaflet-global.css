@@ -51,23 +51,24 @@
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .leaflet-tile {
-    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg)
+      saturate(0.3) brightness(0.7);
   }
-  
+
   .leaflet-container {
     background: #303030;
   }
-  
+
   .leaflet-popup-content-wrapper,
   .leaflet-popup-tip {
     background-color: #22272e;
     color: #e6edf3;
   }
-  
+
   .leaflet-popup-close-button {
     color: #8b949e;
   }
-  
+
   .leaflet-popup-close-button:hover {
     color: #e6edf3;
   }
