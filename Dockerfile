@@ -1,17 +1,20 @@
-# Development: Node only (gatsby develop with hot reload)
-FROM node:24.0.0-alpine
+# Use ARG to pass Node version from .tool-versions
+ARG NODE_VERSION=${NODE_VERSION:-24.13.0}
+
+FROM node:${NODE_VERSION}-alpine
 
 WORKDIR /app
 
-ENV NODE_OPTIONS="--max-old-space-size=2048" \
-    GATSBY_CPU_COUNT=2 \
-    GATSBY_TELEMETRY_DISABLED=1
-
+# Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
 
+# Copy source
 COPY . .
 
-# Bind to 0.0.0.0 so the dev server is reachable from the host
+# Build Gatsby site
+RUN npm run build
+
 EXPOSE 8000
-CMD ["npm", "run", "develop", "--", "-H", "0.0.0.0"]
+
+CMD ["npm", "run", "start"]
