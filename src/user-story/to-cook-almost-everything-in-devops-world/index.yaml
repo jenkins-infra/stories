@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Product Lifecycle Management (PLM)
-  geojson: '{"type":"Point","coordinates":[73.8567437,18.5204303]}'
+  coordinates: [73.8567437, 18.5204303]
 metadata:
   title: Jenkins makes it possible to accelerate application delivery on AWS Cloud
     FARGATE containers.

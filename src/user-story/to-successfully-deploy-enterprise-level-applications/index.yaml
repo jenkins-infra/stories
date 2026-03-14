@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Financial Services
-  geojson: '{"type":"Point","coordinates":[77.5671423,13.0218597]}'
+  coordinates: [77.5671423, 13.0218597]
 metadata:
   title: Integrating Jenkins with Azure pipelines to create a high performing
     CI/CD for an international bank.

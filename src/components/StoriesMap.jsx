@@ -56,7 +56,7 @@ const StoriesMap = ({ mapPin }) => {
     query StoriesMapQuery {
       allUserStory(
         sort: { date: DESC }
-        filter: { map: { geojson: { ne: null }, location: { ne: null } } }
+        filter: { map: { coordinates: { ne: null }, location: { ne: null } } }
       ) {
         nodes {
           id
@@ -66,7 +66,7 @@ const StoriesMap = ({ mapPin }) => {
           authored_by
           map {
             authored_by
-            geojson
+            coordinates
             location
           }
           image {
@@ -85,7 +85,7 @@ const StoriesMap = ({ mapPin }) => {
 
   // Filter out stories without location data
   const storiesWithLocation = allUserStory.nodes.filter(
-    story => story.map && story.map.geojson && story.map.location,
+    story => story.map && story.map.coordinates && story.map.location,
   );
 
   // Helper function to extract country from location string
@@ -192,19 +192,18 @@ const StoriesMap = ({ mapPin }) => {
 
         stories.forEach(story => {
           try {
-            const geojson = JSON.parse(story.map.geojson);
+            const coordinates = story.map.coordinates;
             if (
-              geojson &&
-              geojson.coordinates &&
-              geojson.coordinates.length >= 2
+              coordinates &&
+              coordinates.length >= 2
             ) {
-              const [longitude, latitude] = geojson.coordinates;
+              const [longitude, latitude] = coordinates;
               totalLat += latitude;
               totalLng += longitude;
               validCoords++;
             }
           } catch (e) {
-            console.error('Error parsing geojson:', e);
+            console.error('Error reading coordinates:', e);
           }
         });
 
@@ -377,7 +376,7 @@ const StoriesMap = ({ mapPin }) => {
             {filteredStories
               .map(story => {
                 try {
-                  const geojson = JSON.parse(story.map.geojson);
+                  
                   const [longitude, latitude] = geojson.coordinates;
 
                   // Use custom marker with avatar if available

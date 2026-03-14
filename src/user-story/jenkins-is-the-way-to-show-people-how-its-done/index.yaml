@@ -4,7 +4,7 @@ map:
   location: Portugal
   industries:
     - Information Technology
-  geojson: '{"type":"Point","coordinates":[-8.1971968,41.3664104]}'
+  coordinates: [-8.1971968, 41.3664104]
 metadata:
   title: Assigned with designing the optimal automation and testing pipeline for
     CI/CD, this intern chose to use Jenkins.

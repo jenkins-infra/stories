@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Technology
-  geojson: '{"type":"Point","coordinates":[76.3560109,26.012373]}'
+  coordinates: [76.3560109, 26.012373]
 metadata:
   title: Student shares his Linux World India project leveraging Jenkins with a
     focus on automation of web page load time.

@@ -4,7 +4,7 @@ map:
   location: Argentina
   industries:
     - Financial Services
-  geojson: '{"type":"Point","coordinates":[-58.3815591,-34.6036844]}'
+  coordinates: [-58.3815591, -34.6036844]
 metadata:
   title: This developer was focused on transforming DevOps architecture for a
     leading Argentinian bank.

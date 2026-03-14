@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Healthcare
-  geojson: '{"type":"Point","coordinates":[77.117325,13.3378762]}'
+  coordinates: [77.117325, 13.3378762]
 metadata:
   title: Making the world healthier, cleaner and safer starts with automated
     processes in software development.

@@ -4,7 +4,7 @@ map:
   location: Oklahoma, USA
   industries:
     - Energy
-  geojson: '{"type":"Point","coordinates":[-97.5164276,35.4675602]}'
+  coordinates: [-97.5164276, 35.4675602]
 metadata:
   title: Designing a CI/CD pipeline that supports automated version control and
     team collaboration was made easier using Jenkins.

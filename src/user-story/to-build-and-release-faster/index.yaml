@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Technology
-  geojson: '{"type":"Point","coordinates":[77.3410656,11.1085242]}'
+  coordinates: [77.3410656, 11.1085242]
 metadata:
   title: Open-source software development uses Jenkins to automate mundane tasks
     so developers can focus on more important things.

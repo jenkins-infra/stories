@@ -4,7 +4,7 @@ map:
   location: Netherlands
   industries:
     - Consulting
-  geojson: '{"type":"Point","coordinates":[4.9382385,51.62870969999999]}'
+  coordinates: [4.9382385, 51.62870969999999]
 metadata:
   title: With over 50 Java repositories, this Netherlands-based DevOps consultant
     dealt with over 300 simultaneous Jenkins jobs and lots of duplication

@@ -4,7 +4,7 @@ map:
   location: Portugal
   industries:
     - Travel
-  geojson: '{"type":"Point","coordinates":[2.6456729,39.5762112]}'
+  coordinates: [2.6456729, 39.5762112]
 metadata:
   title: The tech team at Avoris Travel sought to minimize their delivery cycle
     times. Tapping into Jenkins' vast number of plugins available, the team was

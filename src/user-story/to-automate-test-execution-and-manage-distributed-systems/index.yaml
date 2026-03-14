@@ -4,7 +4,7 @@ map:
   location: Hungary
   industries:
     - Telecomunications
-  geojson: '{"type":"Point","coordinates":[19.040235,47.497912]}'
+  coordinates: [19.040235, 47.497912]
 metadata:
   title: A modernized CI/CD enables developers to move faster and implement
     smarter CI executions.

@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Engineering
-  geojson: '{"type":"Point","coordinates":[84.5798623,22.190196]}'
+  coordinates: [84.5798623, 22.190196]
 metadata:
   title: A student taps into an online enthusiast community and a ton of research
     to determine how to best automate the web development process and embrace

@@ -4,7 +4,7 @@ map:
   location: France
   industries:
     - Software Development
-  geojson: '{"type":"Point","coordinates":[-1.553621,47.218371]}'
+  coordinates: [-1.553621, 47.218371]
 
 metadata:
   title: When it was time to build a large CI platform to support rapid app

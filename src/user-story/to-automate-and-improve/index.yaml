@@ -4,7 +4,7 @@ map:
   location: Germany
   industries:
     - Automotive
-  geojson: '{"type":"Point","coordinates":[10.1012701,48.2253313]}'
+  coordinates: [10.1012701, 48.2253313]
 metadata:
   title: This consultant opted to build a unique Jenkins instance to support the
     creation of an in-vehicle infotainment system.

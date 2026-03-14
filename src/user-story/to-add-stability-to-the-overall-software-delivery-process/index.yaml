@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Telecommunications
-  geojson: '{"type":"Point","coordinates":[73.87424659999999,18.5292922]}'
+  coordinates: [73.87424659999999, 18.5292922]
 metadata:
   title: With the task to improve workflow efficiencies for a telco provider, the
     team at Virtusa used Jenkins to do just that. Now build times are 10x faster

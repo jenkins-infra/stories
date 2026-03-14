@@ -4,7 +4,7 @@ map:
   location: Hungary
   industries:
     - Financial Services
-  geojson: '{"type":"Point","coordinates":[19.1000054,47.5002356]}'
+  coordinates: [19.1000054, 47.5002356]
 metadata:
   title: For one of Hungary's most prominent banks, the instant payment process
     needed to be well tested before rollout. This Budapest-based software

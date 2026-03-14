@@ -4,7 +4,7 @@ map:
   location: China
   industries:
     - E-commerce & Retail
-  geojson: '{"type":"Point","coordinates":[116.443107,39.921469]}'
+  coordinates: [116.443107, 39.921469]
 metadata:
   title: "When you are one of the leading internet companies in China, it's
     critical to have a solid DevOps platform to ensure flawless delivery. And
