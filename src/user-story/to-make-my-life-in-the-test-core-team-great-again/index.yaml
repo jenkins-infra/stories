@@ -4,7 +4,7 @@ map:
   location: Austria
   industries:
     - Software Development
-  geojson: '{"type":"Point","coordinates":[16.52796,47.84637]}'
+  coordinates: [16.52796, 47.84637]
 metadata:
   title: Shorter release cycles and easier roll-out of new projects in safer
     environments made easier with the help of Jenkins.

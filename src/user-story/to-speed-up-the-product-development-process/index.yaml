@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Information Technology
-  geojson: '{"type":"Point","coordinates":[80.2707184,13.0826802]}'
+  coordinates: [80.2707184, 13.0826802]
 metadata:
   title: A cloud governance agency reduces DevOps workload and cuts software
     deployments from hours to minutes.

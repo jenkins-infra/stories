@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Healthcare
-  geojson: '{"type":"Point","coordinates":[73.9124674,18.5577446]}'
+  coordinates: [73.9124674, 18.5577446]
 metadata:
   title: Timely, fast and reliable software delivery comes to the healthcare
     division of a global firm.

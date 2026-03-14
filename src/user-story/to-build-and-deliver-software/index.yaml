@@ -4,7 +4,7 @@ map:
   location: Israel
   industries:
     - Defense Technology
-  geojson: '{"type":"Point","coordinates":[34.824785,32.068424]}'
+  coordinates: [34.824785, 32.068424]
 metadata:
   title: The C4isr development project was conceived to support a multi-location,
     multilingual technology organization that needed a platform that would

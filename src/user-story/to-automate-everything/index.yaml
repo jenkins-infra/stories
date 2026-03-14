@@ -4,7 +4,7 @@ map:
   location: Jordan
   industries:
     - Healthcare
-  geojson: '{"type":"Point","coordinates":[35.910635,31.9539494]}'
+  coordinates: [35.910635, 31.9539494]
 metadata:
   title: Jordan-based healthcare organization seeks a faster way to help citizens
     get treatment without physically entering a hospital, especially during the

@@ -4,7 +4,7 @@ map:
   location: Texas, USA
   industries:
     - Automotive
-  geojson: '{"type":"Point","coordinates":[-96.6988856,33.0198431]}'
+  coordinates: [-96.6988856, 33.0198431]
 metadata:
   title: The technology team fueling a global automotive company was struggling
     with builds and processes due to an antiquated legacy system. They turned to

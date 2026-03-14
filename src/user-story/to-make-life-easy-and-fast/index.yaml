@@ -4,7 +4,7 @@ map:
   location: Netherlands
   industries:
     - Semiconductors
-  geojson: '{"type":"Point","coordinates":[5.033362500000001,52.13537729999999]}'
+  coordinates: [5.033362500000001, 52.13537729999999]
 metadata:
   title: Family-owned company based in the Netherlands looks to Jenkins to speed
     development and expand pipelines.

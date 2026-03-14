@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Information Technology
-  geojson: '{"type":"Point","coordinates":[77.5945627,12.9715987]}'
+  coordinates: [77.5945627, 12.9715987]
 metadata:
   title: This developer from India's IBM Software Labs set out to lock down security in the cloud with Jenkins.
   organization: "IBM"

@@ -4,7 +4,7 @@ map:
   location: France
   industries:
     - Research
-  geojson: '{"type":"Point","coordinates":[6.0231707,46.2447613]}'
+  coordinates: [6.0231707, 46.2447613]
 metadata:
   title: CERN's Application and Services division (APS) is responsible for a
     leading role in all technical matters, including collaborating with users,

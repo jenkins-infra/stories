@@ -4,7 +4,7 @@ map:
   location: Colorado, USA
   industries:
     - Information Technology
-  geojson: '{"type":"Point","coordinates":[-104.8560902,39.3722121]}'
+  coordinates: [-104.8560902, 39.3722121]
 metadata:
   title: Software builds are 400% faster after automating the software production
     and the string creation process flow.

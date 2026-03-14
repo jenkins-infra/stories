@@ -4,7 +4,7 @@ map:
   location: Spain
   industries:
     - Education
-  geojson: '{"type":"Point","coordinates":[-8.255737600000002,43.3555238]}'
+  coordinates: [-8.255737600000002, 43.3555238]
 metadata:
   title: Improving the development of learning technologies, applications, and
     service-based-solutions to deliver digital learning in companies and

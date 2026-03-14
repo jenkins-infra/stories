@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Telecomunications
-  geojson: '{"type":"Point","coordinates":[88.36389500000001,22.572646]}'
+  coordinates: [88.36389500000001, 22.572646]
 metadata:
   title: Reduce the time spent per developer on each project by creating a modern
     CI/CD pipeline for over 100 telecommunication microservices.

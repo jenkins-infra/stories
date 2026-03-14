@@ -4,7 +4,7 @@ map:
   location: Chattanooga, Tennessee, USA
   industries:
     - Healthcare
-  geojson: '{"type":"Point","coordinates":[-85.3096802,35.0456297]}'
+  coordinates: [-85.3096802, 35.0456297]
 metadata:
   title: For a large healthcare insurer, this technology team knew they needed to
     move beyond their legacy system to deliver better software, confidently.

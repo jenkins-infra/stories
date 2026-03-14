@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Automotive
-  geojson: '{"type":"Point","coordinates":[77.5945627,12.9715987]}'
+  coordinates: [77.5945627, 12.9715987]
 metadata:
   title: The India-based R\&D unit of a well-known luxury car brand leaned on
     Jenkins to get them from point A to point B faster and with more accuracy.

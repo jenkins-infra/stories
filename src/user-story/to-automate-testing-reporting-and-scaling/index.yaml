@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Artificial Intelligence (AI)
-  geojson: '{"type":"Point","coordinates":[73.8567437,18.5204303]}'
+  coordinates: [73.8567437, 18.5204303]
 metadata:
   title: Using Jenkins, this AI-software company learned how to automate load
     testing and functional testing as part of their continuous integration and

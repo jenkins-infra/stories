@@ -4,7 +4,7 @@ map:
   location: Wisconsin, USA
   industries:
     - Healthcare
-  geojson: '{"type":"Point","coordinates":[-88.0603806,44.4488805]}'
+  coordinates: [-88.0603806, 44.4488805]
 metadata:
   title: Jenkins gave this IT team the tools they needed to revamp their client's
     healthcare platform.

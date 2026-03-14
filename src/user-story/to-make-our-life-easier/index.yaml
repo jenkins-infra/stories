@@ -4,7 +4,7 @@ map:
   location: Ukraine
   industries:
     - Information Technology
-  geojson: '{"type":"Point","coordinates":[24.029717,49.839683]}'
+  coordinates: [24.029717, 49.839683]
 metadata:
   title: This systems engineer sought to automate DevOps to support everyone
     across the entire toolchain -- from software developers to the QA team.

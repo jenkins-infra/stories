@@ -4,7 +4,7 @@ map:
   location: Florida, USA
   industries:
     - Financial Services
-  geojson: '{"type":"Point","coordinates":[-80.1917901,25.7616798]}'
+  coordinates: [-80.1917901, 25.7616798]
 metadata:
   title: Rethinking the world's best loyalty programs requires testing everything
     to increase overall product quality and deploying as many times as you'd

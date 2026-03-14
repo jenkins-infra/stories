@@ -4,7 +4,7 @@ map:
   location: Illinois, USA
   industries:
     - Manufacturing
-  geojson: '{"type":"Point","coordinates":[-87.6744891,41.4914236]}'
+  coordinates: [-87.6744891, 41.4914236]
 metadata:
   title: Jenkins community thanked for supporting this developer's task.
   industries:

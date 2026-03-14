@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Education
-  geojson: '{"type":"Point","coordinates":[77.5569265,29.9617848]}'
+  coordinates: [77.5569265, 29.9617848]
 metadata:
   title: Not only is Jenkins a go-to source for enterprise companies worldwide,
     but emerging engineers have also discovered its use to be a great teaching

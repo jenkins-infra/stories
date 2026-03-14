@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - Consumer Electronics
-  geojson: '{"type":"Point","coordinates":[77.5945627,12.9715987]}'
+  coordinates: [77.5945627, 12.9715987]
 metadata:
   title: The DevOps team at Apple had to cope with a high frequency of
     simultaneous builds which affected resources and testing.

@@ -4,7 +4,7 @@ map:
   location: Italy
   industries:
     - Consultancies
-  geojson: '{"type":"Point","coordinates":[10.881719510945876,44.77740226749345]}'
+  coordinates: [10.881719510945876, 44.77740226749345]
 metadata:
   title: Jenkins - The Backbone of Continuous Integration. Amarula Solutions is a company that heavily leverages Continuous Delivery.
   organization: Amarula Solutions, <https://www.amarulasolutions.com> and <https://wiki.amarulasolutions.com>

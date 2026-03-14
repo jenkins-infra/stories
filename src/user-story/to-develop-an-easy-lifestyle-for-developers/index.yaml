@@ -4,7 +4,7 @@ map:
   location: India
   industries:
     - DevOps Automation
-  geojson: '{"type":"Point","coordinates":[75.6522066,32.2733352]}'
+  coordinates: [75.6522066, 32.2733352]
 metadata:
   title: This DevOps intern set out to learn how to use Jenkins and all that it
     has to offer.
