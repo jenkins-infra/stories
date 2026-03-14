@@ -1,0 +1,20 @@
+services:
+  stories:
+    container_name: success-stories-website
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app:rw
+      - stories-node-modules:/app/node_modules:rw
+    command: npm run develop -- --host 0.0.0.0
+    networks:
+      - stories-network
+
+networks:
+  stories-network:
+    driver: bridge
+
+volumes:
+  stories-node-modules:
+  
