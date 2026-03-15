@@ -302,6 +302,7 @@ html {
   background-color: #2A3037;
   color: #8AC1FF;
 }
+
 @media (prefers-color-scheme: dark) {
   .hero-button-secondary {
     background-color: #1D1E25;
