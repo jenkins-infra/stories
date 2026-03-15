@@ -1,0 +1,32 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: ${NODE_VERSION:-24.13.0}
+    container_name: gatsby-web
+    ports:
+      - "8000:8000"
+    environment:
+      ENABLE_GATSBY_REFRESH_ENDPOINT: "true"
+      NODE_ENV: "development"
+      GATSBY_CPU_COUNT: 2
+      GATSBY_CACHE_DIR: /app/.gatsby-cache
+      GATSBY_INTERNAL_CACHE_DIR: /app/.cache
+      GATSBY_TELEMETRY_DISABLED: "1"
+      NODE_OPTIONS: "--no-warnings"
+    volumes:
+      - ./src:/app/src
+      - gatsby_cache:/app/.gatsby-cache
+      - gatsby_internal_cache:/app/.cache
+    command: ["npm", "run", "develop", "--", "-H", "0.0.0.0", "-p", "8000"]
+    networks:
+      - gatsby-network
+
+networks:
+  gatsby-network:
+  
+volumes:
+  gatsby_cache:
+  gatsby_internal_cache:
