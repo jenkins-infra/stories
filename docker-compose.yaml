@@ -9,6 +9,8 @@ services:
     ports:
       - "8000:8000"
     environment:
+      ENABLE_GATSBY_REFRESH_ENDPOINT: "true"
+      NODE_ENV: "development"
       GATSBY_CPU_COUNT: 2
       GATSBY_CACHE_DIR: /app/.gatsby-cache
       GATSBY_INTERNAL_CACHE_DIR: /app/.cache
@@ -22,6 +24,9 @@ services:
     networks:
       - gatsby-network
 
+networks:
+  gatsby-network:
+  
 volumes:
   gatsby_cache:
   gatsby_internal_cache:
