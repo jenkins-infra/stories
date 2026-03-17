@@ -42,6 +42,90 @@ const fields = [
   'community_supports',
 ];
 
+const formatField = value => {
+  if (typeof value !== 'string') return value;
+
+  const makeLink = (url, text) => (
+    <a
+      href={url.startsWith('http') ? url : `http://${url}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {text || url}
+    </a>
+  );
+
+  const markdownMatch = value.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/);
+  if (markdownMatch) {
+    const text = value
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/, '')
+      .replace(/,?\s*$/, '')
+      .trim();
+    return (
+      <>
+        {text && `${text} `}
+        {makeLink(markdownMatch[2], markdownMatch[1])}
+      </>
+    );
+  }
+
+  const angleRegex = /<(https?:\/\/[^>]+)>/g;
+  const angleUrls = [...value.matchAll(angleRegex)];
+  if (angleUrls.length > 0) {
+    const text = value
+      .replace(/,?\s*(and\s*)?<https?:\/\/[^>]+>;?/g, '')
+      .trim();
+    return (
+      <>
+        {text && `${text} `}
+        {angleUrls.map((match, i) => (
+          <span key={i}>
+            {makeLink(match[1])}
+            {i < angleUrls.length - 1 && ' and '}
+          </span>
+        ))}
+      </>
+    );
+  }
+
+  const quoteSepMatch = value.match(
+    /^(.+?)\s*["""]\s*((?:https?:\/\/|www\.)\S+)$/,
+  );
+  if (quoteSepMatch) {
+    return (
+      <>
+        {quoteSepMatch[1].trim()} {makeLink(quoteSepMatch[2])}
+      </>
+    );
+  }
+
+  const plainHttpMatch = value.match(/^(.*?),?\s*(https?:\/\/\S+?)\/?$/);
+  if (plainHttpMatch && plainHttpMatch[2]) {
+    const text = plainHttpMatch[1].trim();
+    return (
+      <>
+        {text && `${text} `}
+        {makeLink(plainHttpMatch[2])}
+      </>
+    );
+  }
+
+  const domainMatch = value.match(
+    /^(.*?),?\s*((?:www\.)?[\w-]+\.(?:com|org|net|io|nl|pl|id|br|ps|jo|dk|au|fr|de|ch|uk)\/?\S*)$/i,
+  );
+  if (domainMatch && domainMatch[2]) {
+    const text = domainMatch[1].trim();
+    return (
+      <>
+        {text && `${text} `}
+        {makeLink(domainMatch[2])}
+      </>
+    );
+  }
+
+  return value;
+};
+
 const UserStory = ({
   image,
   title,
@@ -92,7 +176,7 @@ const UserStory = ({
                           <strong>{titles[field]}: </strong>
                           {Array.isArray(metadata[field])
                             ? metadata[field].join(', ')
-                            : metadata[field]}
+                            : formatField(String(metadata[field]))}
                         </div>
                       ))}
                   </div>
