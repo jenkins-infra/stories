@@ -48,17 +48,22 @@ npm run develop
 
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
-### Run app using Docker (development with hot reload)
-You can skip `Install Dependencies` and run the app in an isolated environment. The Docker image runs the Gatsby dev server (`gatsby develop`) and supports hot reload. Mount the whole project directory as a volume so file changes on your host are reflected in the container.
-You can skip `Install Dependencies` and run the app in an isolated environment. The Docker image runs the Gatsby dev server (`gatsby develop`) and supports hot reload. Mount the whole project directory as a volume so file changes on your host are reflected in the container.
-```bash
-docker build -t stories-app .
-# Mount the project directory as a volume so file changes on your host are reflected in the container.
-docker run --rm -p 8000:8000 -v $(pwd):/app --name success-stories stories-app
-# add -d if you prefer to run the container in the background
-# if use -d and want to see log file run this command
-docker logs -f success-stories
-```
+## Alternative Development Setup: Docker Compose
+
+You can also use Docker Compose for local development. This is especially useful if you want to avoid installing Node.js and dependencies directly on your machine, or to ensure your environment matches production more closely.
+
+### How to Use
+
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.
+2. Manual update **NODE_VERSION** in `docker-compose.yaml` to match version in `.tool-versions`
+3. In the project **root**, run:
+
+	```bash
+	docker compose up --build
+	```
+4. Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+
 ## Code Quality Tools
 
 ### Formatting
@@ -84,5 +89,4 @@ npm run format
 5. Add your changes to staging area and commit your changes
 6. Push your changes to GitHub
 7. Submit a pull request
-
 
