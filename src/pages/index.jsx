@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Layout from '../layout';
+import './index.css';
+import Seo from '../components/Seo';
 import Search from '../components/SearchContainer';
 import StorySpotlight from '../components/StorySpotlight';
-import Layout from '../layout';
-import Seo from '../components/Seo';
-import './index.css';
 
 const IndexPage = () => {
   const title = 'Jenkins - User Story Library';
