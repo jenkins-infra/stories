@@ -15,7 +15,9 @@ class Search extends Component {
   };
 
   componentDidMount() {
+      if (typeof window !== 'undefined') {
     document.addEventListener('keydown', this.handleKeyDown);
+  }
     const { allUserStory } = this.props;
     try {
       const stories = allUserStory.nodes.map(story => ({
@@ -92,8 +94,29 @@ class Search extends Component {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
+getShortcutHint = () => {
+  if (typeof navigator === 'undefined') return '';
+
+  const userAgent = navigator.userAgent;
+
+  // Detect mobile (ALL devices)
+  if (/Android|iPhone|iPad|iPod/i.test(userAgent)) {
+    return '';
+  }
+
+  // Mac
+  if (/Mac/i.test(userAgent)) {
+    return '⌘ + K';
+  }
+
+  // Windows/Linux
+  return 'Ctrl + K';
+};
+
+
   render() {
     const { searchResults, searchQuery, isLoading, isError } = this.state;
+    const shortcut = this.getShortcutHint();
 
     if (isLoading) {
       return <div className="text-center p-4">Loading search...</div>;
@@ -116,7 +139,11 @@ class Search extends Component {
                   className="form-control form-control-lg"
                   value={searchQuery}
                   onChange={this.searchData}
-                  placeholder="[Ctrl+k] Search user stories..."
+                  placeholder={
+                 shortcut
+                 ? `[${shortcut}] Search user stories...`
+                 : 'Search user stories...'
+                }
                   ref={this.searchRef}
                 />
                 <span className="input-group-text">
