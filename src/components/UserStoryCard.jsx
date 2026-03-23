@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as styles from './UserStoryCard.module.css';
@@ -30,5 +31,16 @@ function UserStoryCard({ slug, image, title, date, tag_line }) {
     </div>
   );
 }
+
+UserStoryCard.displayName = 'UserStoryCard';
+UserStoryCard.propTypes = {
+  slug: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    childImageSharp: PropTypes.object,
+  }),
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  tag_line: PropTypes.string,
+};
 
 export default UserStoryCard;
