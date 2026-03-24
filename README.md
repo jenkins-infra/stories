@@ -54,14 +54,12 @@ You can also use Docker Compose for local development. This is especially useful
 
 ### How to Use
 
-1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.
-2. Manual update **NODE_VERSION** in `docker-compose.yaml` to match version in `.tool-versions`
-3. In the project **root**, run:
-
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.`
+2. In the project **root**, run:
 	```bash
 	docker compose up --build
 	```
-4. Open [http://localhost:8000](http://localhost:8000) in your browser.
+3. Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 
 ## Code Quality Tools
