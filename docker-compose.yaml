@@ -12,7 +12,8 @@ services:
     environment:
       CHOKIDAR_USEPOLLING: "true"
       NODE_ENV: "development"
-      GATSBY_CPU_COUNT: "1"
+      TZ: "UTC"
+      GATSBY_CPU_COUNT: "4"
       GATSBY_CACHE_DIR: "/app/.gatsby-cache"
       GATSBY_INTERNAL_CACHE_DIR: "/app/.cache"
       GATSBY_TELEMETRY_DISABLED: "1"
