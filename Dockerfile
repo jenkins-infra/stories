@@ -5,7 +5,7 @@ ARG asdf_version=0.15.0
 
 USER root
 
-# Install asdf and make (using dnf for RHEL)
+# Install asdf (using dnf for RHEL)
 RUN git clone https://github.com/asdf-vm/asdf.git /tmp/asdf --branch v${asdf_version} \
     && chmod +x /tmp/asdf/bin/asdf
 
