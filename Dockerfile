@@ -2,10 +2,10 @@
 FROM jenkins/agent:latest-rhel-ubi9-jdk21 
 # Same as Jenkins packer-image 
 ARG asdf_version=0.15.0
-
+ENV TZ=UTC
 USER root
 
-# Install asdf (using dnf for RHEL)
+# Install asdf
 RUN git clone https://github.com/asdf-vm/asdf.git /tmp/asdf --branch v${asdf_version} \
     && chmod +x /tmp/asdf/bin/asdf
 
@@ -18,15 +18,12 @@ USER jenkins
 WORKDIR /app
 
 # Copy .tool-versions to container and convert to Unix line endings
-COPY .tool-versions ./
-RUN sed -i 's/\r$//' .tool-versions
+COPY .tool-versions package.json package-lock.json ./
 
-# Install and update asdf-nodejs plugin, then install Node.js version from .tool-versions
-RUN asdf plugin add nodejs && asdf plugin update nodejs && asdf install
-
-COPY package.json package-lock.json ./
-
-RUN npm install
+# Normalize .tool-versions, install Node.js via asdf, then install npm dependencies
+RUN sed -i 's/\r$//' .tool-versions \
+    && asdf plugin add nodejs && asdf plugin update nodejs && asdf install \
+    && npm install
 
 COPY . .
 # Convert .tool-versions to Unix line endings again in case it was modified during COPY
