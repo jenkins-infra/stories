@@ -28,7 +28,7 @@ services:
 
     command: ["npm", "run", "develop", "--", "-H", "0.0.0.0", "-p", "8000"]
 
-    user: "1000:1000"
+    user: "${UID:-1000}:${GID:-1000}"
 
     networks:
       - stories-network
