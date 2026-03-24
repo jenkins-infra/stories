@@ -4,8 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
       
-    container_name: stories-web
-
     ports:
       - "8000:8000"
 
