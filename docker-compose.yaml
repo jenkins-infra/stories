@@ -20,6 +20,7 @@ services:
 
     volumes:
       - ./src:/app/src
+      - ./public:/app/public
       - stories_node_modules:/app/node_modules
       - stories_cache:/app/.gatsby-cache
       - stories_internal_cache:/app/.cache
