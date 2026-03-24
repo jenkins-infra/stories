@@ -50,7 +50,7 @@ Open [http://localhost:8000](http://localhost:8000) on your browser to see the r
 
 ## Alternative Development Setup: Docker Compose
 
-You can also use Docker Compose for local development. This is especially useful if you want to avoid installing Node.js and dependencies directly on your machine, or to ensure your environment matches production more closely.
+You can also use Docker Compose for local development. This is especially useful if you want to avoid installing Node.js and dependencies directly on your machine.
 
 ### How to Use
 
