@@ -51,9 +51,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background-gradient);
-  background-size: 400% 400%;
-  animation: gradientAnimation 8s ease infinite;
   padding: 60px 20px;
   
   margin: 10px;
@@ -76,7 +73,7 @@ html {
 
 .hero-left {
   flex: 0.4;
-  display: flex;
+display: flex;
  
 }
 
@@ -88,7 +85,7 @@ html {
 .hero-title {
   font-size: 5.0rem;
   font-weight: bold;
-  color: var(--hero-text-color);
+  
   margin-bottom: 10px;
   color: #ffffff;
 }
@@ -96,7 +93,7 @@ html {
 .hero-description {
   font-size: 1.3rem;
   color: var(--subtitle-color);
-  margin-bottom: 0px;
+  
   
   line-height: 1.5;
  
@@ -178,18 +175,6 @@ html {
 
   .hero-right {
     text-align: center;
-  }
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
@@ -312,7 +297,7 @@ html {
 
 .map-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  
 }
 
 .btn-primary {
