@@ -135,26 +135,42 @@ const IndexPage = () => {
 
       {/* Hero Section */}
       <div ref={setSection0Ref} className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">Jenkins Is The Way</h1>
-          <p className="hero-subtitle">
-            Explore the latest Jenkins user stories.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/all" className="hero-button">
-              View All Stories
-            </Link>
-            <Link to="/map" className="hero-button hero-button-secondary">
-              Explore Map
-            </Link>
-          </div>
-          <StaticImage
-            src="../images/Jenkins-is-the-Way-768x911.png"
-            alt="Jenkins is the way logo"
-            className="hero-image"
-          />
-        </div>
+  <div className="hero-container">
+
+    {/* LEFT */}
+    <div className="hero-left">
+      <StaticImage
+        src="../images/Jenkins-is-the-Way-768x911.png"
+        alt="Jenkins is the way logo"
+        className="hero-image"
+      />
+    </div>
+
+    {/* RIGHT */}
+    <div className="hero-right">
+      <h1 className="hero-title">Jenkins Is The Way</h1>
+      <p className="hero-description">
+        “Jenkins Is The Way” is a global showcase of how developers and engineers
+        are building, deploying, and automating great stuff with Jenkins.
+        Jenkins user stories highlight project goals, technical challenges,
+        and the unique solutions implemented using Jenkins.
+      </p>
+       <p className="hero-subtitle">
+        Explore the latest Jenkins user stories.
+      </p>
+
+      <div className="hero-buttons">
+        <Link to="/all" className="hero-button">
+          View All Stories
+        </Link>
+        <Link to="/map" className="hero-button hero-button-secondary">
+          Explore Map
+        </Link>
       </div>
+    </div>
+
+  </div>
+</div>
 
       <h1
         style={{
