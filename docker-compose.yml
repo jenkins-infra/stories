@@ -31,8 +31,3 @@ services:
 networks:
   stories_network:
     driver: bridge
-
-volumes:
-  stories_node_modules:
-  stories_cache:
-  stories_internal_cache:
