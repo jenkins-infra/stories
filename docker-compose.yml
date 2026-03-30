@@ -1,0 +1,38 @@
+services:
+  stories_webapp:
+    # TODO: track version with updatecli - ref. https://github.com/jenkins-infra/jenkins-infra/blob/efe90908529525bb3c9e61c2eb920ada3b968f1a/updatecli/updatecli.d/jenkinscontroller-tools-maven.yaml#L17-L22
+    image: jenkinsciinfra/jenkins-agent-ubuntu-22.04:2.91.1
+
+    ports:
+      - "8000:8000"
+
+    # Load environment variables 
+    env_file:
+      - .env
+    # Add docker-compose-specific env vars
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      PATH: /home/jenkins/.asdf/shims:/home/jenkins/.asdf/bin:$PATH
+      NODE_ENV: development
+  
+    volumes:
+      - .:${WORKSPACE_}/stories
+
+    working_dir: "${WORKSPACE_}/stories"
+    
+    user: jenkins
+
+    entrypoint: []
+    command: bash -c "asdf install && asdf current && npm -v && node -v && npm install && npm run dev"
+
+    networks:
+      - stories_network
+
+networks:
+  stories_network:
+    driver: bridge
+
+volumes:
+  stories_node_modules:
+  stories_cache:
+  stories_internal_cache:

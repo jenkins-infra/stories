@@ -48,6 +48,19 @@ npm run develop
 
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
+## Alternative Development Setup: Docker Compose
+
+You can also use Docker Compose for local development.
+
+### How to Use
+
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.
+2. In the project **root**, run:
+	```bash
+	docker compose up
+	```
+3. Open [http://localhost:8000](http://localhost:8000) in your browser.
+
 ## Code Quality Tools
 
 ### Formatting
