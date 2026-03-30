@@ -16,9 +16,9 @@ services:
       NODE_ENV: development
   
     volumes:
-      - .:${WORKSPACE_}/stories
+      - .:${WORKSPACE_}
 
-    working_dir: "${WORKSPACE_}/stories"
+    working_dir: ${WORKSPACE_}
     
     user: jenkins
 
