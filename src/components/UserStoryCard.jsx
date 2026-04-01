@@ -38,7 +38,6 @@ function UserStoryCard({ slug, image, title, date, tag_line, body_content }) {
             <jio-read-time-estimation
               ref={readTimeRef}
               class={styles.readTime}
-              words-per-minute="200"
             />
           </div>
 
