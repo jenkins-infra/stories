@@ -78,7 +78,6 @@ const UserStory = ({
           </div>
 
           <div className="container pt-2 pb-2">
-            <div className={styles.authoredReadTime}>
               <span>
                 Authored By Jenkins User <strong>{authored_by}</strong>
               </span>
@@ -86,7 +85,6 @@ const UserStory = ({
               <jio-read-time-estimation
                 ref={readTimeRef}
               />
-            </div>
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>
