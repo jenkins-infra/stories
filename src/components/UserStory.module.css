@@ -110,6 +110,22 @@
   transform: scale(1.02);
 }
 
+.authoredReadTime {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.readTimeSeparator {
+  color: #9aa6bb;
+  margin: 0 0.35rem;
+}
+
+.authoredReadTime strong {
+  color: #ffffff;
+}
+
 /* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
   .userstory .titlewrapper {

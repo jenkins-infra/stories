@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
@@ -51,9 +51,19 @@ const UserStory = ({
   metadata,
   body_content,
 }) => {
+
+  const readTimeRef = useRef(null);
+  const readTimeSourceRef = useRef(null);
+
+  useEffect(() => {
+    if (readTimeRef.current && readTimeSourceRef.current) {
+      readTimeRef.current.content = readTimeSourceRef.current;
+    }
+  }, [body_content?.paragraphs]);
+
   return (
     <div className={styles.userstory}>
-      <div className={`row ${styles.titlewrapper}`}>
+            <div className={`row ${styles.titlewrapper}`}>
         <div className={`col ${styles.title}`}>
           <div className="container">
             <h2>{title}</h2>
@@ -68,7 +78,16 @@ const UserStory = ({
           </div>
 
           <div className="container pt-2 pb-2">
-            Authored By Jenkins User <strong>{authored_by}</strong>
+            <div className={styles.authoredReadTime}>
+              <span>
+                Authored By Jenkins User <strong>{authored_by}</strong>
+              </span>
+              <span className={styles.readTimeSeparator}>|</span>
+              <jio-read-time-estimation
+                ref={readTimeRef}
+                words-per-minute="200"
+              />
+            </div>
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>
@@ -103,40 +122,46 @@ const UserStory = ({
 
           <div className="container pt-2 pb-2">
             <h3>{body_content.title}</h3>
-            {body_content.paragraphs &&
-              body_content.paragraphs.reduce((content, p, idx) => {
-                content.push(
-                  <div
-                    key={idx}
+
+            {/* This is now the read-time source */}
+            <div ref={readTimeSourceRef}>
+              {body_content.paragraphs &&
+                body_content.paragraphs.reduce((content, p, idx) => {
+
+                  content.push(
+                    <div
+                      key={idx}
                     dangerouslySetInnerHTML={{
                       __html: p.html,
                     }}
                   />,
-                );
-                if (idx !== 0 && idx % 3 === 0) {
-                  const quoteIdx = idx / 3 - 1;
-                  if (quotes[quoteIdx]) {
-                    content.push(
-                      <div
-                        key={`quote_container_${quoteIdx}`}
-                        className={styles.speechBubbleWrapper}
-                      >
-                        <Testimonal
-                          key={`quote_${quoteIdx}`}
-                          from={quotes[quoteIdx].from}
-                          image={quotes[quoteIdx].image}
+                  );
+                  if (idx !== 0 && idx % 3 === 0) {
+                    const quoteIdx = idx / 3 - 1;
+                    if (quotes[quoteIdx]) {
+                      content.push(
+                        <div
+                          key={`quote_container_${quoteIdx}`}
+                          className={styles.speechBubbleWrapper}
                         >
-                          <div className={styles.speechBubble}>
-                            {quotes[quoteIdx].content}
-                          </div>
-                        </Testimonal>
+                          <Testimonal
+                            key={`quote_${quoteIdx}`}
+                            from={quotes[quoteIdx].from}
+                            image={quotes[quoteIdx].image}
+                          >
+                            <div className={styles.speechBubble}>
+                              {quotes[quoteIdx].content}
+                            </div>
+                          </Testimonal>
                       </div>,
-                    );
+                      );
+                    }
                   }
-                }
-                return content;
-              }, [])}
+                  return content;
+                }, [])}
+            </div>
           </div>
+
         </div>
       </div>
     </div>

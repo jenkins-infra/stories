@@ -68,7 +68,26 @@
 .date {
   color: #888;
   font-size: 0.875rem;
-  display: block;
+  display: inline;
+}
+
+.metaInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.5rem 0;
+}
+
+.separator {
+  color: #8e8e8e;
+  margin: 0 0.25rem;
+}
+
+jio-read-time-estimation {
+  color: #e0e0e0;
+  opacity: 0.72;
+  font-size: 0.875rem;
+  margin-left: 0.2rem;
 }
 
 .tagline {

@@ -73,6 +73,11 @@ const AllPage = () => {
               }
             }
             slug
+            body_content {
+              paragraphs {
+                html
+              }
+            }
           }
         }
       }
@@ -142,6 +147,7 @@ const AllPage = () => {
                 title={story.title}
                 date={story.date}
                 tag_line={story.tag_line}
+                body_content={story.body_content}
               />
             ))}
           </div>
