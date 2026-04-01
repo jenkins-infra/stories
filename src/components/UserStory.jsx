@@ -85,7 +85,6 @@ const UserStory = ({
               <span className={styles.readTimeSeparator}>|</span>
               <jio-read-time-estimation
                 ref={readTimeRef}
-                words-per-minute="200"
               />
             </div>
           </div>
