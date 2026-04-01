@@ -63,7 +63,7 @@ const UserStory = ({
 
   return (
     <div className={styles.userstory}>
-            <div className={`row ${styles.titlewrapper}`}>
+      <div className={`row ${styles.titlewrapper}`}>
         <div className={`col ${styles.title}`}>
           <div className="container">
             <h2>{title}</h2>
@@ -122,46 +122,42 @@ const UserStory = ({
 
           <div className="container pt-2 pb-2">
             <h3>{body_content.title}</h3>
-
-            {/* This is now the read-time source */}
             <div ref={readTimeSourceRef}>
-              {body_content.paragraphs &&
-                body_content.paragraphs.reduce((content, p, idx) => {
-
-                  content.push(
-                    <div
-                      key={idx}
+            {body_content.paragraphs &&
+              body_content.paragraphs.reduce((content, p, idx) => {
+                content.push(
+                  <div
+                    key={idx}
                     dangerouslySetInnerHTML={{
                       __html: p.html,
                     }}
                   />,
-                  );
-                  if (idx !== 0 && idx % 3 === 0) {
-                    const quoteIdx = idx / 3 - 1;
-                    if (quotes[quoteIdx]) {
-                      content.push(
-                        <div
-                          key={`quote_container_${quoteIdx}`}
-                          className={styles.speechBubbleWrapper}
+                );
+                if (idx !== 0 && idx % 3 === 0) {
+                  const quoteIdx = idx / 3 - 1;
+                  if (quotes[quoteIdx]) {
+                    content.push(
+                      <div
+                        key={`quote_container_${quoteIdx}`}
+                        className={styles.speechBubbleWrapper}
+                      >
+                        <Testimonal
+                          key={`quote_${quoteIdx}`}
+                          from={quotes[quoteIdx].from}
+                          image={quotes[quoteIdx].image}
                         >
-                          <Testimonal
-                            key={`quote_${quoteIdx}`}
-                            from={quotes[quoteIdx].from}
-                            image={quotes[quoteIdx].image}
-                          >
-                            <div className={styles.speechBubble}>
-                              {quotes[quoteIdx].content}
-                            </div>
-                          </Testimonal>
+                          <div className={styles.speechBubble}>
+                            {quotes[quoteIdx].content}
+                          </div>
+                        </Testimonal>
                       </div>,
-                      );
-                    }
+                    );
                   }
-                  return content;
-                }, [])}
+                }
+                return content;
+              }, [])}
             </div>
           </div>
-
         </div>
       </div>
     </div>
