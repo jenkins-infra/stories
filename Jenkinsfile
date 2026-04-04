@@ -5,20 +5,23 @@ pipeline {
     disableConcurrentBuilds(abortPrevious: true)
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
   }
+  
   agent {
     label 'linux-arm64-docker || arm64linux'
   }
+  
   stages {
     stage('load env file') {
       steps {
         // Load environment variables from .env file.
         sh '''
-         set -a
-         source ./.env
-         set +a
-         '''
+          set -a
+          source ./.env
+          set +a
+        '''
       }
     }
+    
     stage('Parallel Stage') {
       parallel {
         stage('Branch A') {
@@ -26,8 +29,8 @@ pipeline {
             stage('Check for typos') {
               steps {
                sh '''
-                  curl - qsL https: //github.com/crate-ci/typos/releases/download/v1.33.1/typos-v1.33.1-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
-                  . / typos--format sarif > typos.sarif || true 
+                 curl - qsL https: //github.com/crate-ci/typos/releases/download/v1.33.1/typos-v1.33.1-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
+                 . / typos--format sarif > typos.sarif || true 
                '''
               }
               post {
@@ -36,6 +39,7 @@ pipeline {
                 }
               }
             }
+            
             stage('Install Dependencies') {
               environment {
                 NODE_ENV = 'development'
@@ -45,6 +49,7 @@ pipeline {
                 sh 'npm install'
               }
             }
+            
             stage('Lint and Test') {
               environment {
                 NODE_ENV = "development"
@@ -58,6 +63,7 @@ pipeline {
                 }
               }
             }
+            
             stage('Build PR') {
               when {
                 changeRequest()
@@ -71,6 +77,7 @@ pipeline {
             }
           }
         }
+        
         stage('Branch B') {
           agent {
             label 'linux-arm64-docker || arm64linux'
@@ -89,14 +96,13 @@ pipeline {
         }
       }
     }
+    
     stage('Deploy PR to preview site') {
       when {
         allOf {
           changeRequest target: 'main'
           // Only deploy to production from infra.ci.jenkins.io
-          expression {
-            infra.isInfra()
-          }
+          expression { infra.isInfra() }
         }
       }
       environment {
@@ -114,6 +120,7 @@ pipeline {
         }
       }
     }
+    
     stage('Build Production') {
       when {
         branch "main"
@@ -122,14 +129,13 @@ pipeline {
         sh 'npm run build'
       }
     }
+    
     stage('Deploy Production') {
       when {
         allOf {
           branch "main"
           // Only deploy to production from infra.ci.jenkins.io
-          expression {
-            infra.isInfra()
-          }
+          expression { infra.isInfra() }
         }
       }
       environment {
