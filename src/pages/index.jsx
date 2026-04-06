@@ -41,7 +41,7 @@ const IndexPage = () => {
   // Dark Mode Detection
   React.useEffect(() => {
     if (typeof window === 'undefined') return;
-    
+
     const checkDarkMode = () => {
       const darkModeMediaQuery = window.matchMedia(
         '(prefers-color-scheme: dark)',
@@ -60,7 +60,7 @@ const IndexPage = () => {
   // Scroll-triggered Animation
   React.useEffect(() => {
     if (!isClient || typeof window === 'undefined') return;
-    
+
     const appeared = new WeakSet();
     const disappeared = new WeakSet();
     const isFadingOut = new WeakMap();
@@ -138,7 +138,12 @@ const IndexPage = () => {
         <div className="hero-content">
           <h1 className="hero-title">Jenkins Is The Way</h1>
           <p className="hero-subtitle">
-            Explore the latest Jenkins user stories.
+            Discover how teams scale, automate, and deliver faster with Jenkins
+            through real-world success stories.
+          </p>
+          <p className="hero-description">
+            From startups to enterprises, see how teams streamline CI/CD, reduce
+            deployment time, and build reliable pipelines with Jenkins.
           </p>
           <div className="hero-buttons">
             <Link to="/all" className="hero-button">
@@ -148,29 +153,25 @@ const IndexPage = () => {
               Explore Map
             </Link>
           </div>
-          <StaticImage
-            src="../images/Jenkins-is-the-Way-768x911.png"
-            alt="Jenkins is the way logo"
-            className="hero-image"
-          />
         </div>
+        <StaticImage
+          src="../images/Jenkins-is-the-Way-768x911.png"
+          alt="Jenkins is the way logo"
+          className="hero-image"
+        />
       </div>
 
-      <h1
+      <h2
         style={{
           marginTop: `2em`,
-          textAlign: `center`,
+          marginLeft: `6em`,
           fontWeight: 700,
-          color: `var(--text-color)`,
         }}
       >
-        Community Stories Spotlight
-      </h1>
+        Featured Story
+      </h2>
 
-      <div
-        ref={setSection1Ref}
-        className="stories-section spotlight-section"
-      >
+      <div ref={setSection1Ref} className="stories-section spotlight-section">
         <StorySpotlight />
       </div>
 
@@ -192,10 +193,7 @@ const IndexPage = () => {
       </div>
 
       {/* Stories Section */}
-      <div
-        ref={setSection3Ref}
-        className="stories-section"
-      >
+      <div ref={setSection3Ref} className="stories-section">
         <h2 className="section-title">Latest Jenkins User Stories</h2>
         <p className="section-subtitle">
           Stories from all around the world by Jenkins User
@@ -215,15 +213,20 @@ const IndexPage = () => {
                   />
                 </div>
               )}
-              <h3 className="story-title">
-                <Link to={`/user-story/${story.slug}`}>
-                  {story.tag_line || story.title}
-                </Link>
+              <h3 className="story-title" style={{ textAlign: `left` }}>
+                {story.tag_line || story.title}
               </h3>
-              <p className="story-author">
-                Authored By Jenkins User <strong>{story.authored_by}</strong>
-              </p>
-              <p className="story-date">{story.date}</p>
+              <div className="story-footer">
+                <div>
+                  <p className="story-author">
+                    <strong>{story.authored_by}</strong>
+                  </p>
+                  <p className="story-date">{story.date}</p>
+                </div>
+                <div className="story-read-more hero-button-secondary">
+                  <Link to={`/user-story/${story.slug}`}>Read More</Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
-import React, { useMemo, useState, useEffect } from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import "./StorySpotlight.css";
+import React, { useMemo, useState, useEffect } from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import './StorySpotlight.css';
 
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
@@ -48,39 +48,31 @@ export default function StorySpotlight() {
 
   return (
     <section className="story-spotlight">
-      <div className="story-spotlight__outer">
-        <div className="story-spotlight__mascot">
-          <StaticImage
-            src="../images/jenkins-original.png"
-            alt="Jenkins Mascot"
-            width={181}
-            height={250}
-            placeholder="none"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="story-spotlight__card">
-          {logo && (
-            <div className="story-spotlight__logo">
-              <GatsbyImage image={logo} alt={story.title} loading="lazy" placeholder="blurred" />
-            </div>
-          )}
-
-          <div className="story-spotlight__content">
-            <h3>{story.title}</h3>
-
-            <p className="story-spotlight__date">{story.date}</p>
-
-            <p className="story-spotlight__excerpt">{story.tag_line}</p>
-
-            <Link
-              to={`/user-story/${story.slug}`}
-              className="story-spotlight__button"
-            >
-              Read More
-            </Link>
+      <div className="story-spotlight__card">
+        {logo && (
+          <div className="story-spotlight__logo">
+            <GatsbyImage
+              image={logo}
+              alt={story.title}
+              loading="lazy"
+              placeholder="blurred"
+            />
           </div>
+        )}
+
+        <div className="story-spotlight__content">
+          <h3>{story.title}</h3>
+
+          <p className="story-spotlight__excerpt">{story.tag_line}</p>
+
+          <p className="story-spotlight__date">{story.date}</p>
+
+          <Link
+            to={`/user-story/${story.slug}`}
+            className="story-spotlight__button"
+          >
+            Read More
+          </Link>
         </div>
       </div>
     </section>
