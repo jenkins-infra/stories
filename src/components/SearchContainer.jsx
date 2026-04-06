@@ -105,6 +105,24 @@ class Search extends Component {
       );
     }
 
+    const platform = navigator.platform.toUpperCase();
+    const useCmdKey =
+      platform.indexOf('MAC') >= 0 ||
+      platform === 'IPHONE' ||
+      platform === 'IPAD';
+    const isMobile =
+      platform === 'IPHONE' ||
+      platform === 'IPAD' ||
+      /Android/i.test(navigator.userAgent);
+
+    let placeholder;
+    if (isMobile) {
+      placeholder = 'Search user stories...';
+    } else {
+      const shortcut = useCmdKey ? '⌘ + K' : 'Ctrl + K';
+      placeholder = `[${shortcut}] Search user stories...`;
+    }
+
     return (
       <div className="container py-4 search-container">
         <form onSubmit={this.handleSubmit} className="mb-4">
@@ -116,7 +134,7 @@ class Search extends Component {
                   className="form-control form-control-lg"
                   value={searchQuery}
                   onChange={this.searchData}
-                  placeholder="[Ctrl+k] Search user stories..."
+                  placeholder={placeholder}
                   ref={this.searchRef}
                 />
                 <span className="input-group-text">
