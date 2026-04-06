@@ -218,6 +218,16 @@ html {
   color: #888;
 }
 
+@media (prefers-color-scheme: light) {
+  .story-author {
+    color: #495057;
+  }
+
+  .story-date {
+    color: #5a5a5a;
+  }
+}
+
 /* Map Section */
 .map-section {
   padding: 40px 20px;

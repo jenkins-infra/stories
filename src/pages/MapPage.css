@@ -27,9 +27,9 @@ h3 {
 }
 
 @media (prefers-color-scheme: light) {
-  h1,
-  h2 {
-    color: #2a3a52;
+  h2,
+  h3 {
+    color: #343434;
   }
 }
 
@@ -97,11 +97,11 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   .stat-value {
-    color: #2a3a52;
+    color: #1f2937;
   }
 
   .stat-label {
-    color: #666666;
+    color: #334155;
   }
 }
 
@@ -209,7 +209,7 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   .story-popup-label {
-    color: black;
+    color: #334155;
   }
 }
 
@@ -221,7 +221,7 @@ h3 {
 
 @media (prefers-color-scheme: light) {
   .story-popup-value {
-    color: rgb(39, 39, 39);
+    color: #1f2937;
   }
 }
 
