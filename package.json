@@ -16,7 +16,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"src/**/*.{css,js,jsx,json}\"",
-    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\""
+    "format-check": "prettier --check \"src/**/*.{css,js,jsx,json}\"", 
+    "serve-static": "http-server public -p 8888 --silent",
+    "blc": "blc -r --base http://localhost:8888 --filter-level 2",
+    "check-links": "npm-run-all2 --parallel --race serve-static blc"
   },
   "dependencies": {
     "cheerio": "^1.1.2",
@@ -53,10 +56,13 @@
     "@babel/eslint-parser": "^7.25.9",
     "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.7.0",
     "baseline-browser-mapping": "^2.9.19",
+    "broken-link-checker": "^0.7.8",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "^7.37.2",
+    "http-server": "^14.1.1",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.4.2"
   },
   "resolutions": {
