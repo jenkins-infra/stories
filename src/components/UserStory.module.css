@@ -110,6 +110,11 @@
   transform: scale(1.02);
 }
 
+.readTimeSeparator {
+  color: #9aa6bb;
+  margin: 0 0.35rem;
+}
+
 /* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
   .userstory .titlewrapper {
