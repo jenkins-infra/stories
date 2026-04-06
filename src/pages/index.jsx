@@ -134,27 +134,54 @@ const IndexPage = () => {
       <Seo title={title} pathname="/" />
 
       {/* Hero Section */}
-      <div ref={setSection0Ref} className="hero-section">
+      <section ref={setSection0Ref} className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Jenkins Is The Way</h1>
-          <p className="hero-subtitle">
-            Explore the latest Jenkins user stories.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/all" className="hero-button">
-              View All Stories
-            </Link>
-            <Link to="/map" className="hero-button hero-button-secondary">
-              Explore Map
-            </Link>
+          <div className="hero-layout">
+            <div className="hero-copy">
+              <p className="hero-kicker">Jenkins Community Stories</p>
+              <h1 className="hero-title">See How Teams Build Better With Jenkins</h1>
+              <p className="hero-subtitle">
+                Real stories from practitioners worldwide. Browse practical wins,
+                challenges, and lessons learned from Jenkins users.
+              </p>
+
+              <div className="hero-buttons">
+                <Link to="/all" className="hero-button">
+                  Browse Stories
+                </Link>
+                <Link to="/map" className="hero-button hero-button-secondary">
+                  Explore Map
+                </Link>
+              </div>
+
+              <ul className="hero-highlights" aria-label="Story highlights">
+                <li className="hero-highlight">
+                  <strong>Global</strong>
+                  <span>Community reach</span>
+                </li>
+                <li className="hero-highlight">
+                  <strong>Fresh</strong>
+                  <span>New stories weekly</span>
+                </li>
+                <li className="hero-highlight">
+                  <strong>Open</strong>
+                  <span>Share your journey</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="hero-media">
+              <div className="hero-media-shell">
+                <StaticImage
+                  src="../images/Jenkins-is-the-Way-768x911.png"
+                  alt="Jenkins mascot illustration"
+                  className="hero-image"
+                />
+              </div>
+            </div>
           </div>
-          <StaticImage
-            src="../images/Jenkins-is-the-Way-768x911.png"
-            alt="Jenkins is the way logo"
-            className="hero-image"
-          />
         </div>
-      </div>
+      </section>
 
       <h1
         style={{
