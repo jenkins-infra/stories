@@ -163,3 +163,24 @@
     max-width: 200px;
   }
 }
+
+.tagline {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  transition: font-size 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 1.5rem;
+  }
+}
