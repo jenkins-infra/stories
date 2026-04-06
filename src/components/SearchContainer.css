@@ -20,7 +20,7 @@
   :root {
     --background-color: #ffffff;
     --text-color: #2d3436;
-    --muted-text-color: rgba(0, 0, 0, 0.6);
+    --muted-text-color: #495057;
     --card-border-color: #f0f0f0;
     --card-hover-border-color: #e8e8e8;
     --card-shadow-color: rgba(0, 0, 0, 0.05);
@@ -31,7 +31,7 @@
     --input-border-color: #e9ecef;
     --input-focus-border-color: #ced4da;
     --input-focus-shadow-color: rgba(0, 0, 0, 0.05);
-    --input-placeholder-color: rgba(0, 0, 0, 0.4);
+    --input-placeholder-color: rgba(0, 0, 0, 0.6);
     --error-color: #e74c3c;
   }
 

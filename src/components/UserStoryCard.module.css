@@ -98,7 +98,7 @@ jio-read-time-estimation {
 }
 
 .tagline {
-  color: #bbb;
+  color: #c5c5c5;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
@@ -122,6 +122,20 @@ jio-read-time-estimation {
     border: 1px solid black;
     color: black;
   }
+  
+  .tagline {
+    color: #4c4c4c;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .date {
+    color: #414141;
+    font-size: 0.875rem;
+    display: inline;
+  }
+  
 }
 
 .readMore:hover {
