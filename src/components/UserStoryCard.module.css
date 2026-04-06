@@ -59,6 +59,7 @@
   margin: 0;
   line-height: 1.4;
 }
+
 @media (prefers-color-scheme: light) {
   .title {
     color: black;
