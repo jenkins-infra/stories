@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Testimonal from '../components/Testimonal';
 import ImageWrapper from '../components/ImageWrapper';
@@ -51,6 +51,16 @@ const UserStory = ({
   metadata,
   body_content,
 }) => {
+
+  const readTimeRef = useRef(null);
+  const readTimeSourceRef = useRef(null);
+
+  useEffect(() => {
+    if (readTimeRef.current && readTimeSourceRef.current) {
+      readTimeRef.current.content = readTimeSourceRef.current;
+    }
+  }, [body_content?.paragraphs]);
+
   return (
     <div className={styles.userstory}>
       <div className={`row ${styles.titlewrapper}`}>
@@ -64,11 +74,17 @@ const UserStory = ({
       <div className="row">
         <div className="col">
           <div className="container pb-2">
-            <h1 className="textcolor">{tag_line}</h1>
+            <h1 className={`textcolor ${styles.tagline}`}>{tag_line}</h1>
           </div>
 
           <div className="container pt-2 pb-2">
-            Authored By Jenkins User <strong>{authored_by}</strong>
+              <span>
+                Authored By Jenkins User <strong>{authored_by}</strong>
+              </span>
+              <span className={styles.readTimeSeparator}>|</span>
+              <jio-read-time-estimation
+                ref={readTimeRef}
+              />
           </div>
 
           <div className="container pt-2 pb-2">{metadata.title}</div>
@@ -103,6 +119,7 @@ const UserStory = ({
 
           <div className="container pt-2 pb-2">
             <h3>{body_content.title}</h3>
+            <div ref={readTimeSourceRef}>
             {body_content.paragraphs &&
               body_content.paragraphs.reduce((content, p, idx) => {
                 content.push(
@@ -136,6 +153,7 @@ const UserStory = ({
                 }
                 return content;
               }, [])}
+            </div>
           </div>
         </div>
       </div>
