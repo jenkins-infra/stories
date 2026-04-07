@@ -79,19 +79,11 @@ pipeline {
         }
         
         stage('Branch B') {
-          agent {
-            label 'linux-arm64-docker || arm64linux'
-          }
           steps {
             echo 'Test Docker Compose'
             sh 'docker compose up --detach --wait'
             sh 'docker compose run --rm stories_webapp env'
             sh 'docker compose down'
-          }
-          post {
-            always {
-              sh 'docker compose down || true'
-            }
           }
         }
       }

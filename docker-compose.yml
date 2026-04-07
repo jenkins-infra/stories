@@ -25,9 +25,3 @@ services:
     entrypoint: []
     command: bash -c "asdf install && asdf current && npm install && npm run develop"
 
-    networks:
-      - stories_network
-
-networks:
-  stories_network:
-    driver: bridge
