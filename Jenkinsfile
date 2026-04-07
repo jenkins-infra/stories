@@ -5,26 +5,30 @@ pipeline {
     disableConcurrentBuilds(abortPrevious: true)
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
   }
-  
+
   agent {
     label 'linux-arm64-docker || arm64linux'
   }
-  
+
   stages {
     stage('load env file') {
       steps {
         // Load environment variables from .env file.
-        sh '''
-          set -a
-          source ./.env
-          set +a
-        '''
+        script {
+          def envFile = readFile('.env')
+          envFile.readLines()
+              .findAll { it.trim() && !it.startsWith('#') && it.contains('=') }
+              .each { line ->
+                  def (key, value) = line.trim().split('=', 2)
+                  env."${key}" = value
+              }
+        }
       }
     }
-    
-    stage('Parallel Stage') {
+
+    stage('Test and build') {
       parallel {
-        stage('Branch A') {
+        stage('Main CI') {
           stages {
             stage('Check for typos') {
               steps {
@@ -39,7 +43,7 @@ pipeline {
                 }
               }
             }
-            
+
             stage('Install Dependencies') {
               environment {
                 NODE_ENV = 'development'
@@ -49,7 +53,7 @@ pipeline {
                 sh 'npm install'
               }
             }
-            
+
             stage('Lint and Test') {
               environment {
                 NODE_ENV = "development"
@@ -63,7 +67,7 @@ pipeline {
                 }
               }
             }
-            
+
             stage('Build PR') {
               when {
                 changeRequest()
@@ -75,52 +79,50 @@ pipeline {
                 sh 'npm run build'
               }
             }
+
+            stage('Deploy PR to preview site') {
+              when {
+                allOf {
+                  changeRequest target: 'main'
+                  // Only deploy to production from infra.ci.jenkins.io
+                  expression { infra.isInfra() }
+                }
+              }
+              environment {
+                NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
+              }
+              steps {
+                sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
+              }
+              post {
+                success {
+                  recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
+                }
+                failure {
+                  recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
+                }
+              }
+            }
           }
         }
-        
-        stage('Branch B') {
-          agent {
-            label 'linux-arm64-docker || arm64linux'
+
+        stage('Test Docker Compose') {
+          when {
+            allOf {
+              changeRequest ()
+              // Only deploy to production from infra.ci.jenkins.io
+              expression { infra.isInfra() }
+            }
           }
           steps {
-            echo 'Test Docker Compose'
             sh 'docker compose up --detach --wait'
             sh 'docker compose run --rm stories_webapp env'
             sh 'docker compose down'
           }
-          post {
-            always {
-              sh 'docker compose down || true'
-            }
-          }
         }
       }
     }
-    
-    stage('Deploy PR to preview site') {
-      when {
-        allOf {
-          changeRequest target: 'main'
-          // Only deploy to production from infra.ci.jenkins.io
-          expression { infra.isInfra() }
-        }
-      }
-      environment {
-        NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
-      }
-      steps {
-        sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
-      }
-      post {
-        success {
-          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
-        }
-        failure {
-          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
-        }
-      }
-    }
-    
+
     stage('Build Production') {
       when {
         branch "main"
@@ -129,7 +131,7 @@ pipeline {
         sh 'npm run build'
       }
     }
-    
+
     stage('Deploy Production') {
       when {
         allOf {

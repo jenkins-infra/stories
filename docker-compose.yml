@@ -6,28 +6,25 @@ services:
     ports:
       - "8000:8000"
 
-    # Load environment variables 
-    env_file:
-      - .env
-    # Add docker-compose-specific env vars
     environment:
+      # Set the GATSBY_CPU_COUNT:"2" or more whilst running the "gatsby build" command to increase performance using SMT.
+      GATSBY_CPU_COUNT: "1"
       CHOKIDAR_USEPOLLING: "true"
       PATH: /home/jenkins/.asdf/shims:/home/jenkins/.asdf/bin:$PATH
       NODE_ENV: development
+      APP_WORKING_DIR: $APP_WORKING_DIR
   
     volumes:
-      - .:${WORKSPACE_}
+      - .:$APP_WORKING_DIR
 
-    working_dir: ${WORKSPACE_}
+    working_dir: $APP_WORKING_DIR
     
     user: jenkins
 
     entrypoint: []
-    command: bash -c "asdf install && asdf current && npm install && npm run develop"
-
-    networks:
-      - stories_network
-
-networks:
-  stories_network:
-    driver: bridge
+    command: >
+      sh -c "
+        asdf install && asdf current &&
+        npm install &&
+        npm run develop -- -H 0.0.0.0 -p 8000
+      "
