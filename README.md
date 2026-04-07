@@ -55,11 +55,12 @@ You can also use Docker Compose for local development.
 ### How to Use
 
 1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.
-2. In the project **root**, run:
+2. Make sure the current user ID is **1001** to avoid errors related to access permission 
+3. In the project **root**, run:
 	```bash
 	docker compose up
 	```
-3. Open [http://localhost:8000](http://localhost:8000) in your browser.
+4. Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Code Quality Tools
 
