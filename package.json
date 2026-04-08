@@ -13,6 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write \"src/**/*.{css,js,jsx,json}\"",
@@ -52,11 +53,18 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",
     "@jenkinsci/gatsby-plugin-jenkins-layout": "^1.7.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "babel-jest": "^30.2.0",
+    "babel-preset-gatsby": "^3.16.0",
     "baseline-browser-mapping": "^2.9.19",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "^7.37.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "prettier": "^3.4.2"
   },
   "resolutions": {
