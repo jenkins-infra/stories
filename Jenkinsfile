@@ -11,21 +11,6 @@ pipeline {
   }
 
   stages {
-    stage('load env file') {
-      steps {
-        // Load environment variables from .env file.
-        script {
-          def envFile = readFile('.env')
-          envFile.readLines()
-              .findAll { it.trim() && !it.startsWith('#') && it.contains('=') }
-              .each { line ->
-                  def (key, value) = line.trim().split('=', 2)
-                  env."${key}" = value
-              }
-        }
-      }
-    }
-
     stage('Test and build') {
       parallel {
         stage('Main CI') {
@@ -76,7 +61,10 @@ pipeline {
                 NODE_ENV = 'development'
               }
               steps {
-                sh 'npm run build'
+                sh '''
+                  source ./.env
+                  npm run build
+                '''
               }
             }
 
@@ -109,15 +97,18 @@ pipeline {
         stage('Test Docker Compose') {
           when {
             allOf {
-              changeRequest ()
-              // Only deploy to production from infra.ci.jenkins.io
-              expression { infra.isInfra() }
+              changeRequest()
+              // Only run docker tests on non-infra.ci.jenkins.io
+              expression { !infra.isInfra() }
             }
           }
           steps {
-            sh 'docker compose up --detach --wait'
-            sh 'docker compose run --rm stories_webapp env'
-            sh 'docker compose down'
+            sh '''
+              source ./.env
+              docker compose up --detach --wait
+              docker compose run --rm stories_webapp env
+              docker compose down
+            '''
           }
         }
       }
@@ -128,7 +119,10 @@ pipeline {
         branch "main"
       }
       steps {
-        sh 'npm run build'
+        sh '''
+          source ./.env
+          npm run build
+        '''
       }
     }
 

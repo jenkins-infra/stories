@@ -55,12 +55,15 @@ You can also use Docker Compose for local development.
 ### How to Use
 
 1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/) installed.
-2. Make sure the current user ID is **1001** to avoid errors related to access permission 
-3. In the project **root**, run:
+2. In the project **root**, run:
 	```bash
 	docker compose up
 	```
-4. Open [http://localhost:8000](http://localhost:8000) in your browser.
+3. Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+> Note: You can override the number of CPUs used by Gatsby by setting the `GATSBY_CPU_COUNT` environment variable.
+
+> Running service `fix-permissions` to avoid `Error: EACCES: Permission denied`
 
 ## Code Quality Tools
 

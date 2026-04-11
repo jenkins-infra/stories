@@ -1,30 +1,52 @@
 services:
+  fix-permissions:
+    image: busybox
+    user: root
+    working_dir: /app
+    volumes:
+      - .:/app
+
+    command: >
+      sh -c "
+        if ! [ -d /app/public ]; then
+          mkdir -p /app/public
+        fi
+        if ! [ -d /app/.cache ]; then
+          mkdir -p /app/.cache
+        fi
+        if ! id -u jenkins > /dev/null 2>&1; then
+          adduser -u 1001 -D jenkins
+        fi
+        chown -R jenkins:jenkins /app/public /app/.cache /app/node_modules
+      "
   stories_webapp:
     # TODO: track version with updatecli - ref. https://github.com/jenkins-infra/jenkins-infra/blob/efe90908529525bb3c9e61c2eb920ada3b968f1a/updatecli/updatecli.d/jenkinscontroller-tools-maven.yaml#L17-L22
     image: jenkinsciinfra/jenkins-agent-ubuntu-22.04:2.91.1
-
     ports:
       - "8000:8000"
 
     environment:
-      # Set the GATSBY_CPU_COUNT:"2" or more whilst running the "gatsby build" command to increase performance using SMT.
-      GATSBY_CPU_COUNT: "1"
+      # Can pass the "GATSBY_CPU_COUNT" from your shell straight through to your containers,if it is set and not empty, otherwise the default value="2" will be used to avoid OOM issues 
+      GATSBY_CPU_COUNT: ${GATSBY_CPU_COUNT:-2}
       CHOKIDAR_USEPOLLING: "true"
       PATH: /home/jenkins/.asdf/shims:/home/jenkins/.asdf/bin:$PATH
       NODE_ENV: development
       APP_WORKING_DIR: $APP_WORKING_DIR
-  
+
     volumes:
       - .:$APP_WORKING_DIR
+      - asdf_cache:/home/jenkins/.asdf
 
     working_dir: $APP_WORKING_DIR
-    
     user: jenkins
-
     entrypoint: []
     command: >
       sh -c "
-        asdf install && asdf current &&
+        asdf plugin add nodejs &&
+        asdf install &&
         npm install &&
         npm run develop -- -H 0.0.0.0 -p 8000
       "
+
+volumes:
+  asdf_cache:
