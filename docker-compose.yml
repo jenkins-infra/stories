@@ -8,16 +8,11 @@ services:
 
     command: >
       sh -c "
-        if ! [ -d /app/public ]; then
-          mkdir -p /app/public
-        fi
-        if ! [ -d /app/.cache ]; then
-          mkdir -p /app/.cache
-        fi
-        if ! id -u jenkins > /dev/null 2>&1; then
-          adduser -u 1001 -D jenkins
-        fi
-        chown -R jenkins:jenkins /app/public /app/.cache /app/node_modules
+        dirs='public .cache'
+        for d in $$dirs; do
+          mkdir -p $$d
+          chmod -R 777 $$d
+        done
       "
   stories_webapp:
     # TODO: track version with updatecli - ref. https://github.com/jenkins-infra/jenkins-infra/blob/efe90908529525bb3c9e61c2eb920ada3b968f1a/updatecli/updatecli.d/jenkinscontroller-tools-maven.yaml#L17-L22
@@ -35,6 +30,7 @@ services:
 
     volumes:
       - .:$APP_WORKING_DIR
+      - stories_node_modules:/home/jenkins/node_modules
       - asdf_cache:/home/jenkins/.asdf
 
     working_dir: $APP_WORKING_DIR
@@ -49,4 +45,5 @@ services:
       "
 
 volumes:
+  stories_node_modules:
   asdf_cache:
