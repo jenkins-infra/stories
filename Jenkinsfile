@@ -10,88 +10,106 @@ pipeline {
     label 'linux-arm64-docker || arm64linux'
   }
 
-  environment {
-    NODE_ENV = 'production'
-    TZ = "UTC"
-    // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
-    // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
-    GATSBY_CPU_COUNT = "4"
-    // Added the below to fix permissions issue with the cache
-    GATSBY_CACHE_DIR = "${env.WORKSPACE}/.gatsby-cache"
-    GATSBY_INTERNAL_CACHE_DIR = "${env.WORKSPACE}/.cache"
-    GATSBY_TELEMETRY_DISABLED = "1"
-    NODE_OPTIONS = "--no-warnings"
-  }
-
   stages {
-    stage('Check for typos') {
-      steps {
-        sh '''
-          curl -qsL https://github.com/crate-ci/typos/releases/download/v1.33.1/typos-v1.33.1-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
-          ./typos --format sarif > typos.sarif || true
-        '''
-      }
-      post {
-        always {
-          recordIssues(tools: [sarif(id: 'typos', name: 'Typos', pattern: 'typos.sarif')])
-        }
-      }
-    }
+    stage('Test and build') {
+      parallel {
+        stage('Main CI') {
+          stages {
+            stage('Check for typos') {
+              steps {
+               sh '''
+                 curl - qsL https: //github.com/crate-ci/typos/releases/download/v1.33.1/typos-v1.33.1-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
+                 . / typos--format sarif > typos.sarif || true 
+               '''
+              }
+              post {
+                always {
+                  recordIssues(tools: [sarif(id: 'typos', name: 'Typos', pattern: 'typos.sarif')])
+                }
+              }
+            }
 
-    stage('Install Dependencies') {
-      environment {
-        NODE_ENV = 'development'
-      }
-      steps {
-        sh 'asdf install'
-        sh 'npm install'
-      }
-    }
+            stage('Install Dependencies') {
+              environment {
+                NODE_ENV = 'development'
+              }
+              steps {
+                sh 'asdf install'
+                sh 'npm install'
+              }
+            }
 
-    stage('Lint and Test') {
-      environment {
-        NODE_ENV = "development"
-      }
-      steps {
-        sh 'npm run lint && npx eslint --format checkstyle > eslint.xml'
-      }
-      post {
-        always {
-          recordIssues(tools: [checkStyle(pattern: 'eslint.xml')])
-        }
-      }
-    }
+            stage('Lint and Test') {
+              environment {
+                NODE_ENV = "development"
+              }
+              steps {
+                sh 'npm run lint && npx eslint --format checkstyle > eslint.xml'
+              }
+              post {
+                always {
+                  recordIssues(tools: [checkStyle(pattern: 'eslint.xml')])
+                }
+              }
+            }
 
-    stage('Build PR') {
-      when { changeRequest() }
-      environment {
-        NODE_ENV = 'development'
-      }
-      steps {
-        sh 'npm run build'
-      }
-    }
+            stage('Build PR') {
+              when {
+                changeRequest()
+              }
+              environment {
+                NODE_ENV = 'development'
+              }
+              steps {
+                sh '''
+                  source ./.env
+                  npm run build
+                '''
+              }
+            }
 
-    stage('Deploy PR to preview site') {
-      when {
-        allOf{
-          changeRequest target: 'main'
-          // Only deploy to production from infra.ci.jenkins.io
-          expression { infra.isInfra() }
+            stage('Deploy PR to preview site') {
+              when {
+                allOf {
+                  changeRequest target: 'main'
+                  // Only deploy to production from infra.ci.jenkins.io
+                  expression { infra.isInfra() }
+                }
+              }
+              environment {
+                NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
+              }
+              steps {
+                sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
+              }
+              post {
+                success {
+                  recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
+                }
+                failure {
+                  recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
+                }
+              }
+            }
+          }
         }
-      }
-      environment {
-        NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
-      }
-      steps {
-        sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
-      }
-      post {
-        success {
-          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'success', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
-        }
-        failure {
-          recordDeployment('jenkins-infra', 'stories', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--jenkins-is-the-way.netlify.app")
+
+        stage('Test Docker Compose') {
+          when {
+            allOf {
+              changeRequest()
+              // Only run docker tests on non-infra.ci.jenkins.io
+              expression { !infra.isInfra() }
+            }
+          }
+          steps {
+            sh '''
+              source ./.env
+              docker compose up --detach --wait
+              docker compose run --rm stories_webapp env
+              docker compose down
+            '''
+          }
         }
       }
     }
@@ -101,7 +119,10 @@ pipeline {
         branch "main"
       }
       steps {
-        sh 'npm run build'
+        sh '''
+          source ./.env
+          npm run build
+        '''
       }
     }
 
