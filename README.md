@@ -61,9 +61,7 @@ You can also use Docker Compose for local development.
 	```
 3. Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-> Note: You can override the number of CPUs used by Gatsby by setting the `GATSBY_CPU_COUNT` environment variable.
-
-> Running service `fix-permissions` to avoid `Error: EACCES: Permission denied`
+> Note: You can override the number of CPUs used by Gatsby by setting the `GATSBY_CPU_COUNT` environment variable to avoid OOM.
 
 ## Code Quality Tools
 
