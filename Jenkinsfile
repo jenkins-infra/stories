@@ -38,12 +38,20 @@ pipeline {
       }
     }
 
+    stage('Check Tooling') {
+      steps {
+        sh '''
+        node --version
+        npm --version
+        '''
+      }
+    }
+
     stage('Install Dependencies') {
       environment {
         NODE_ENV = 'development'
       }
       steps {
-        sh 'asdf install'
         sh 'npm install'
       }
     }
