@@ -52,7 +52,7 @@ pipeline {
         NODE_ENV = 'development'
       }
       steps {
-        sh 'npm install'
+        sh 'npm ci'
       }
     }
 
