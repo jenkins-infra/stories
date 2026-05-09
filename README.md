@@ -17,7 +17,7 @@ For historical record, the admin portal can be reached via https://stories.jenki
 
 ### System Requirements
 
-* Node.js (Recommended: Match version in `.tool-versions`)
+* Node.js 24.15 (CI uses the version provided by packer-images agents)
 * npm (Node Package Manager)
 
 ## Getting Started
