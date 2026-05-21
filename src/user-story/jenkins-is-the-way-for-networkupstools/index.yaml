@@ -1,0 +1,150 @@
+---
+title: Jenkins is the way to build multi-platform NUT
+post_name: jenkins-is-the-way-for-networkupstools
+date: 2022-10-02T19:59:30.309+02:00
+authored_by: Jim Klimov
+tag_line: Jenkins is the way to build multi-platform NUT, and jenkinsfile-dynamatrix is the way to find what can be built today
+image: jenkins-nut-large-squared.png
+metadata:
+  organization: The Network UPS Tools Project (NUT)
+  industries:
+    - Open Source Power Hardware Monitoring and Management
+  programming_languages:
+    - C
+    - C++
+    - Shell
+    - Python
+    - Perl
+  platforms:
+    - Linux
+    - BSD
+    - Solaris
+    - illumos
+    - HP-UX
+    - AIX
+    - MacOS
+    - Windows
+  version_control_systems:
+    - GitHub
+  build_tools:
+    - Autotools
+    - Make
+    - GCC/CLANG
+  community_supports:
+    - Yes
+quotes: []
+map:
+  authored_by: Jim Klimov
+  location: Prague, CZ
+  geojson: '{"type":"Point","coordinates":[14.4378,50.0755]}'
+body_content:
+  title: Jenkins is the way to build multi-platform NUT, and
+    jenkinsfile-dynamatrix is the way to find what can be built today
+  paragraphs:
+    - |-
+      The [Network UPS Tools](https://networkupstools.org)
+      [project](https://github.com/networkupstools/nut) will soon be a quarter of a century
+      old and, being the first open multi-vendor power hardware monitoring
+      solution for UPS, ePDU, Solar and such, it became the de-facto standard in
+      this area (de-jure with [RFC 9271](https://www.rfc-editor.org/info/rfc9271)
+      recently published). Over the years it was integrated and included in
+      all sorts of server and desktop operating systems, from
+      embedded to mainframe and NAS, and built with a wide array of toolkits and
+      third-party dependencies. As evolution marches on, warnings are eradicated
+      and features are added, the codebase is still expected to run on any
+      platform released over the past couple of decades. If the machines and
+      their OSes still run, modern NUT should work there too.
+    - |-
+      With one of my first goals as an active community member and eventually
+      project maintainer, I set out to address the hundreds of compiler warnings
+      emitted by different implementations and versions of toolkits during
+      builds -- since they did raise valid concerns, and presence of those
+      reports obscured visibility of new bugs introduced by contributions. In
+      fact, several large and useful changes sat in the PR queue for years
+      because nobody including authors had a good grasp on their reliability.
+      This "fightwarn" effort took a couple of years with an in-house Jenkins
+      farm for a project using NUT, and Travis CI (free for FOSS at that time)
+      as well as one team member's BuildBot instance handling several versions
+      of Linux for a few CPU architectures to cover different bitness and
+      endianness, as well as a mix of GCC and LLVM CLANG. Quite a few issues
+      were only relevant to certain generations of toolkits, C standard
+      revisions, Make or Shell implementations, Autotools versions... and some
+      fixes for one platform caused bugs for another. So to keep NUT working
+      everywhere, its iterations had to be regularly built everywhere.
+    - |-
+      Eventually the reign of free Travis CI ended, and NUT got VMs for a CI
+      farm sponsored by [Fosshost.org](https://fosshost.org/) and later by
+      [DigitalOcean](https://www.digitalocean.com/?refcode=d2fbf2b9e082&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+      to proceed with the multi-platform testing.
+    - |-
+      Using a custom Jenkins instance to take care of the project's codebase
+      builds and make use of numerous operating systems in other VMs (as SSH
+      Build Agents), as well as build agents contributed by community (e.g.
+      Swarm agents), was a natural choice: by that time work had started on the
+      [https://github.com/networkupstools/jenkins-dynamatrix](https://github.com/networkupstools/jenkins-dynamatrix)
+      project. It is a Jenkins shared
+      library which constructs a huge Map of parallel stages similar to a
+      standard matrix build.
+    - |-
+      However in this case, it is not the static matrix definition fully dictating
+      what should be built, but rather the build agents are expected to report
+      capabilities with their labels -- such as which platform they run and what
+      versions and implementations of toolkits are available to test with, and
+      whether "everything" can be built or just certain profiles (not all OS
+      distributions offer all of the dependencies that NUT can build against).
+      The library also helps determine which C or C++ language revisions can be
+      built according to GCC or CLANG version installed. Whenever a build
+      starts, the NUT Jenkinsfile (consumer of jenkins-dynamatrix library) can
+      evaluate what it can build today -- based on currently known population of
+      build agents, and so constructs the matrix for testing.
+    - |-
+      A sibling [https://github.com/networkupstools/jenkins-swarm-nutci](https://github.com/networkupstools/jenkins-swarm-nutci)
+      project is used on many of the build agents which can dial in to the NUT CI
+      farm and provide their services and capabilities (conveyed by the labels
+      which are part of their configuration), and includes some scripting for a
+      common configuration approach as well as for automated start-up on numerous
+      platforms. It might be usable "as is" or easily adapted by other projects.
+    - |-
+      This arrangement allows NUT to be built on a multitude of platforms such
+      that common free CI platforms do not offer. It is possible to find ways to
+      build FOSS on recent Linux, MacOS and Windows, and sometimes even on
+      non-x86 CPUs. It is nearly impossible to find builders for FreeBSD,
+      OpenBSD or Solaris/illumos, to name a few, or for Linux distributions older
+      than half a dozen years.
+    - |-
+      Every iteration of NUT is now tested with GNU, BSD and Sun Make
+      implementations, with Shell helpers tested by Bash, Dash, Ksh, Busybox and
+      others, with GCC starting from early 4.x releases and Clang from 3.x up to
+      the dozenth releases out recently, across a dozen hardware platforms (some
+      in QEMU), and several revisions of C/C++ standard with and without GNU
+      extensions. All in all, with recently regularly connected builders about
+      250 stages are prepared (some running several build scenarios as scripted
+      inside, so roughly a thousand builds happen) for each code iteration.
+      Sometimes a nuance warning causes one of these scenarios to complain
+      during PR builds -- on this or that OS, this or that compiler.
+      It keeps us confident both that such mechanism remains useful, and that
+      any OS the community cares about enough to contribute a builder for
+      remains fully supported (or in the worst case, that limitations are
+      known, documented, and perhaps worked or fenced around).
+    - |-
+      With the hundreds of builds succeeding without warnings -- reliably,
+      repeatably, every time -- the floodgates for ingestion of long-standing
+      PRs were open. Largest beasts included the dual-citizenship with
+      libusb-0.1 and libusb-1.x support (queued for 5 years) and revival of the
+      NUT for Windows effort (queued for 9 years), confidently merged without
+      introducing warnings and regressions. The overwhelming majority of these
+      builds happen on the custom "NUT CI" farm with Jenkins driving them. A few
+      scenarios run on CircleCI and Appveyor to take advantage of some free FOSS
+      builds on MacOS and Windows respectively.
+    - |-
+      Of notable interactions with the Jenkins community, this and related
+      efforts led to improvements in the git-client-plugin to extend the use of
+      reference repositories, instant-messaging-plugin and ircbot-plugin for
+      querying Jenkins server status via IRC servers, lockable-resources plugin
+      for many itches scratched here and there, and pipeline-groovy-lib-plugin
+      for easier use of test library versions along with test pipeline branches.
+      The inadvertent stress tests of a Jenkins controller and/or its remote
+      agents caused by juggling several simultaneous builds each with hundreds
+      of parallel stages, casually with a thousand items in the build queue,
+      have also exposed certain deficiencies and led to fixes elsewhere in the
+      Jenkins ecosystem. And very many lessons learned and friends made :)
