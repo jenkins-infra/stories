@@ -37,7 +37,7 @@ cd stories
 Install Dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
 Run the development server:
