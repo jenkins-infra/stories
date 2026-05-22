@@ -1,9 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { ViteReactSSG } from 'vite-react-ssg'
+import routes from './routes'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Create an app factory usable by the SSG CLI and the browser.
+const createRoot = ViteReactSSG({
+  routes
+}, async (context) => {
+  // You can hook into `context` here to do app-level setup during SSG.
+})
+
+export { createRoot }
+export default createRoot

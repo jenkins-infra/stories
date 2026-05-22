@@ -1,11 +1,13 @@
 {
-  "name": "stories",
+  "name": "ssg-stories",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "ssg:dev": "vite-react-ssg dev",
+    "ssg:build": "vite-react-ssg build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier . --write",
@@ -15,18 +17,21 @@
   "dependencies": {
     "@jenkinsci/jenkins-io-components": "^1.41.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "js-yaml": "^4.1.0",
+    "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-react": "^5.0.0",
     "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
-    "vite": "^8.0.12"
+    "vite": "^7.0.0",
+    "vite-react-ssg": "^0.9.1-beta.1"
   }
 }
