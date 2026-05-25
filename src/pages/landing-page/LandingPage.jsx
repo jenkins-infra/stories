@@ -1,7 +1,6 @@
-import { useEffect } from 'react'
-import './Home.css'
+import './LandingPage.css'
 
-function Home() {
+function LandingPage() {
   return (
     <>
       <jio-navbar></jio-navbar>
@@ -11,4 +10,4 @@ function Home() {
   )
 }
 
-export default Home
+export default LandingPage

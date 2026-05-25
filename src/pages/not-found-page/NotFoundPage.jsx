@@ -1,6 +1,5 @@
-import React from 'react';
 import './NotFoundPage.css';
-import FireImage from '../assets/images/fire-jenkins.svg'
+import FireImage from '../../assets/images/fire-jenkins.svg'
 
 const NotFoundPage = () => {
   const title = 'Page not found';

@@ -1,15 +1,15 @@
-import Home from './Home.jsx'
-import NotFoundPage from './pages/NotFoundPage.jsx'
+import LandingPage from './pages/landing-page/LandingPage.jsx'
+import NotFound from './pages/not-found-page/NotFoundPage.jsx'
 
 const routes = [
   {
     path: '/',
-    element: <Home />,
+    element: <LandingPage />
   },
   {
     path: '*',
-    element: <NotFoundPage />
-  },
+    element: <NotFound />
+  }
 ]
 
 export default routes
