@@ -33,7 +33,10 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1",
     "vite": "^7.0.0",
+    "vite-plugin-image-optimizer": "^2.0.3",
     "vite-react-ssg": "^0.9.1-beta.1"
   }
 }
