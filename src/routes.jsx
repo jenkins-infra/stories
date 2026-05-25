@@ -1,9 +1,14 @@
-import App from './App.jsx'
+import Home from './Home.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
 
 const routes = [
   {
     path: '/',
-    element: <App />,
+    element: <Home />,
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
   },
 ]
 
