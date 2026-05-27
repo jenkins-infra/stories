@@ -1,0 +1,112 @@
+.story-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #212529;
+}
+
+.story-link {
+  color: #c2c2c2;
+  text-decoration: none;
+}
+
+.next-link {
+  margin-left: auto;
+}
+
+.story-container {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-family: system-ui, sans-serif;
+}
+
+.story-header {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.story-title {
+  margin: 100 0 12px;
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
+.story-tagline {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.story-author {
+  margin: 15px 0 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.metadata-title-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f3f6fb;
+  border-radius: 14px;
+}
+
+.metadata-grid {
+  margin-bottom: 32px;
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e8eaee;
+  border-radius: 14px;
+}
+
+.story-content {
+  margin-bottom: 32px;
+}
+
+.story-content-title {
+  margin-bottom: 16px;
+}
+
+.story-paragraph {
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.quotes-section {
+  margin-bottom: 32px;
+}
+
+.quotes-title {
+  margin-bottom: 16px;
+}
+
+.quotes-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.quote-card {
+  margin: 0;
+  padding: 20px 24px;
+  background: #f7f9ff;
+  border-left: 4px solid #4f46e5;
+  border-radius: 12px;
+  color: #333;
+}
+
+.quote-content {
+  margin: 0;
+  font-style: italic;
+}
+
+.quote-author {
+  margin-top: 12px;
+  font-weight: 600;
+}

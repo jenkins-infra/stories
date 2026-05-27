@@ -1,5 +1,5 @@
 import './NotFoundPage.css';
-import FireImage from '../../assets/images/fire-jenkins.svg'
+import FireImage from '../../assets/images/fire-jenkins.svg';
 
 const NotFoundPage = () => {
   const title = 'Page not found';
@@ -11,11 +11,7 @@ const NotFoundPage = () => {
       <jio-navbar />
 
       <main className="page">
-        <img
-          src={FireImage}
-          alt="Jenkins on fire logo"
-          className="image"
-        />
+        <img src={FireImage} alt="Jenkins on fire logo" className="image" />
 
         <h1 className="heading">Page not found</h1>
 
@@ -26,7 +22,6 @@ const NotFoundPage = () => {
           </span>{' '}
           we couldn’t find what you were looking for.
           <br />
-
           {import.meta.env.DEV ? (
             <>
               <br />
@@ -34,9 +29,7 @@ const NotFoundPage = () => {
               <br />
             </>
           ) : null}
-
           <br />
-
           <a href="/" className="link">
             Go home
           </a>

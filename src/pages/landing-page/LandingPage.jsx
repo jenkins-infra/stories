@@ -1,4 +1,4 @@
-import './LandingPage.css'
+import './LandingPage.css';
 
 function LandingPage() {
   return (
@@ -7,7 +7,7 @@ function LandingPage() {
       <h1>SSG TEST</h1>
       <jio-footer></jio-footer>
     </>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;

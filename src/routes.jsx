@@ -1,23 +1,26 @@
-import { getStoryStaticPaths, loadUserStoryRouteData } from './utils/storyload.js'
-import LandingPage from './pages/landing-page/LandingPage.jsx'
-import UserStory from './pages/user-story-page/UserStory.jsx'
-import NotFound from './pages/not-found-page/NotFoundPage.jsx'
+import {
+  getStoryStaticPaths,
+  loadUserStoryRouteData,
+} from './utils/storyload.js';
+import LandingPage from './pages/landing-page/LandingPage.jsx';
+import UserStory from './pages/user-story-page/UserStory.jsx';
+import NotFound from './pages/not-found-page/NotFoundPage.jsx';
 
 const routes = [
   {
     path: '/',
-    element: <LandingPage />
+    element: <LandingPage />,
   },
   {
     path: '/user-story/:slug',
     element: <UserStory />,
     getStaticPaths: getStoryStaticPaths,
-    loader: loadUserStoryRouteData
+    loader: loadUserStoryRouteData,
   },
   {
     path: '*',
-    element: <NotFound />
-  }
-]
+    element: <NotFound />,
+  },
+];
 
-export default routes
+export default routes;

@@ -11,10 +11,18 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <!-- to polyfill things needed by older browsers -->
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.6.0/webcomponents-loader.js"></script>
-  <script src="https://unpkg.com/lit@2.4.0/polyfill-support.js"></script>
-  <!-- load the components (module for modern, cjs for legacy) -->
-  <script data="jio" src="https://unpkg.com/@jenkinsci/jenkins-io-components?module" type="module"></script>
-  <script data="jio" nomodule="" src="https://unpkg.com/@jenkinsci/jenkins-io-components"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.6.0/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/lit@2.4.0/polyfill-support.js"></script>
+    <!-- load the components (module for modern, cjs for legacy) -->
+    <script
+      data="jio"
+      src="https://unpkg.com/@jenkinsci/jenkins-io-components?module"
+      type="module"
+    ></script>
+    <script
+      data="jio"
+      nomodule=""
+      src="https://unpkg.com/@jenkinsci/jenkins-io-components"
+    ></script>
   </body>
 </html>
