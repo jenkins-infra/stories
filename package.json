@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "ssg:dev": "vite-react-ssg dev",
-    "ssg:build": "vite-react-ssg build",
+    "dev": "vite-react-ssg dev",
+    "build": "vite-react-ssg build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier . --write",
