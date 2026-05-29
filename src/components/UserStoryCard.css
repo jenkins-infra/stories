@@ -2,8 +2,8 @@
   background-color: #1a1a1a;
   border-radius: 0.5rem;
   transition:
-  transform 0.3s ease-in-out,
-  box-shadow 0.3s ease-in-out;
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   border: 1px solid #333;
   overflow: hidden;
   margin: 1.5rem;
@@ -92,7 +92,7 @@ jio-read-time-estimation {
 
 @media (prefers-color-scheme: light) {
   jio-read-time-estimation {
-    color: #4a5568; 
+    color: #4a5568;
     opacity: 1;
   }
 }

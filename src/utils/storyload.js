@@ -7,7 +7,22 @@ const slugFromPath = path =>
   path.replace('../user-story/', '').replace('/index.yaml', '');
 
 export const getStorySlugs = async () => {
-  return Object.keys(storyFiles).map(slugFromPath).sort();
+  const stories = await Promise.all(
+    Object.keys(storyFiles).map(async path => {
+      const slug = slugFromPath(path);
+      const raw = await storyFiles[path]();
+      const yaml = await import('js-yaml');
+      const data = yaml.load(raw) ?? {};
+      return {
+        slug,
+        date: data.date,
+      };
+    }),
+  );
+
+  return stories
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .map(story => story.slug);
 };
 
 export const getStoryStaticPaths = async () => {
@@ -48,7 +63,6 @@ export const loadStoryData = async slug => {
 export const loadUserStoryRouteData = async ({ params }) => {
   const slugs = await getStorySlugs();
   const index = slugs.indexOf(params.slug);
-
   const story = await loadStoryData(params.slug);
 
   const prev =

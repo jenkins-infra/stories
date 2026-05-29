@@ -8,17 +8,12 @@ const ONE_DAY = 24 * 60 * 60 * 1000;
   Calculated once when the module loads.
   No impure calls during render.
 */
-const DAY_INDEX = Math.floor(
-  new Date().getTime() / ONE_DAY
-);
+const DAY_INDEX = Math.floor(new Date().getTime() / ONE_DAY);
 
-export default function StorySpotlight({
-  stories = [],
-}) {
+export default function StorySpotlight({ stories = [] }) {
   if (!stories.length) return null;
 
-  const story =
-    stories[DAY_INDEX % stories.length];
+  const story = stories[DAY_INDEX % stories.length];
 
   return (
     <section className="story-spotlight">
@@ -36,24 +31,16 @@ export default function StorySpotlight({
         <div className="story-spotlight__card">
           {story.image && (
             <div className="story-spotlight__logo">
-              <img
-                src={story.image}
-                alt={story.title}
-                loading="lazy"
-              />
+              <img src={story.image} alt={story.title} loading="lazy" />
             </div>
           )}
 
           <div className="story-spotlight__content">
             <h3>{story.title}</h3>
 
-            <p className="story-spotlight__date">
-              {story.date}
-            </p>
+            <p className="story-spotlight__date">{story.date}</p>
 
-            <p className="story-spotlight__excerpt">
-              {story.tag_line}
-            </p>
+            <p className="story-spotlight__excerpt">{story.tag_line}</p>
 
             <Link
               to={`/user-story/${story.slug}`}
