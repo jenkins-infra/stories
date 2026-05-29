@@ -107,7 +107,7 @@ export default function UserStory() {
       <div className="story-navigation">
         {data?.prev ? (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
-            ← {data.prev.title || 'Previous story'}
+            ← { (data.prev.title).replace("Jenkins is the way", "") || 'Previous story'}
           </Link>
         ) : (
           <div />
@@ -118,7 +118,7 @@ export default function UserStory() {
             to={`/user-story/${data.next.slug}`}
             className="story-link next-link"
           >
-            {data.next.title || 'Next story'} →
+            {(data.next.title).replace("Jenkins is the way", "") || 'Next story'} →
           </Link>
         ) : (
           <div />

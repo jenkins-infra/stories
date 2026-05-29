@@ -5,6 +5,8 @@
   flex-wrap: wrap;
   padding: 30px;
   background-color: #212529;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
 }
 
 .story-link {
@@ -109,4 +111,23 @@
 .quote-author {
   margin-top: 12px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .story-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .story-link {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+
+  .next-link {
+    justify-self: end;
+    text-align: right;
+  }
 }
