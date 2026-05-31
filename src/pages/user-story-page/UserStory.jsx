@@ -92,7 +92,7 @@ export default function UserStory() {
 
   return (
     <>
-      <jio-navbar />
+      <jio-navbar property="https://vite-stories-jenkins.netlify.app/" />
 
       <div className="story-navigation">
         {data?.prev ? (
@@ -183,7 +183,7 @@ export default function UserStory() {
         </section>
       </main>
 
-      <jio-footer />
+      <jio-footer property="https://vite-stories-jenkins.netlify.app/" />
     </>
   );
 }
