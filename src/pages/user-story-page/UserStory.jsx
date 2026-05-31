@@ -44,21 +44,13 @@ const fields = [
 
 const formatValue = value => {
   if (value == null) return null;
-
-  if (Array.isArray(value)) {
-    return value.join(', ');
-  }
-
-  if (typeof value === 'object') {
-    return JSON.stringify(value, null, 2);
-  }
-
+  if (Array.isArray(value)) return value.join(', ');
+  if (typeof value === 'object') return JSON.stringify(value, null, 2);
   return String(value);
 };
 
 const mdToHtml = async content => {
   const processed = await remark().use(html).process(content);
-
   return processed.toString();
 };
 
@@ -68,17 +60,15 @@ export default function UserStory() {
   const story = data?.story ?? {};
 
   const authoredBy =
-  story.authored_by ?? story.author ?? data?.authored_by ?? data?.author;
+    story.authored_by ?? story.author ?? data?.authored_by ?? data?.author;
 
   const tagLine = story.tag_line ?? data?.tag_line;
-
   const metadata = story.metadata ?? data?.metadata ?? {};
-
   const body = story.body_content ?? data?.body_content ?? {};
-
-  const quotes = story.quotes ?? data?.quotes ?? [];
+  const storyImageSrc = data?.image ?? null;
 
   const [htmlParagraphs, setHtmlParagraphs] = React.useState([]);
+  const [storyImageErrorSrc, setStoryImageErrorSrc] = React.useState(null);
 
   React.useEffect(() => {
     const parseMarkdown = async () => {
@@ -86,10 +76,7 @@ export default function UserStory() {
 
       const parsed = await Promise.all(
         body.paragraphs.map(async paragraph => {
-          if (typeof paragraph !== 'string') {
-            return paragraph.html ?? '';
-          }
-
+          if (typeof paragraph !== 'string') return paragraph.html ?? '';
           return await mdToHtml(paragraph);
         }),
       );
@@ -100,6 +87,9 @@ export default function UserStory() {
     parseMarkdown();
   }, [body.paragraphs]);
 
+  const hasMetadata = fields.some(field => metadata[field]);
+  const showStoryImage = storyImageSrc && storyImageSrc !== storyImageErrorSrc;
+
   return (
     <>
       <jio-navbar />
@@ -107,7 +97,7 @@ export default function UserStory() {
       <div className="story-navigation">
         {data?.prev ? (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
-            ← { (data.prev.title).replace("Jenkins is the way", "") || 'Previous story'}
+            ← {data.prev.title || 'Previous story'}
           </Link>
         ) : (
           <div />
@@ -118,7 +108,7 @@ export default function UserStory() {
             to={`/user-story/${data.next.slug}`}
             className="story-link next-link"
           >
-            {(data.next.title).replace("Jenkins is the way", "") || 'Next story'} →
+            {data.next.title || 'Next story'} →
           </Link>
         ) : (
           <div />
@@ -144,19 +134,40 @@ export default function UserStory() {
           </section>
         ) : null}
 
-        {fields.some(field => metadata[field]) ? (
-          <section className="metadata-grid">
-            {fields
-              .filter(field => metadata[field])
-              .map(field => (
-                <div key={field}>
-                  <strong>{titles[field] || field}:</strong>{' '}
-                  <span>{formatValue(metadata[field])}</span>
-                </div>
-              ))}
+        {/* Metadata grid + story image side by side */}
+
+        {hasMetadata || showStoryImage ? (
+          <section className="metadata-with-image">
+            {showStoryImage ? (
+              <div className="story-image-wrapper">
+                <img
+                  src={storyImageSrc}
+                  height={250}
+                  width={250}
+                  alt={story.title ?? data?.title ?? 'Story image'}
+                  className="story-image"
+                  onError={() => setStoryImageErrorSrc(storyImageSrc)}
+                  loading="lazy"
+                />
+              </div>
+            ) : null}
+
+            {hasMetadata ? (
+              <div className="metadata-grid">
+                {fields
+                  .filter(field => metadata[field])
+                  .map(field => (
+                    <div key={field} className="metadata-row">
+                      <strong>{titles[field] || field}:</strong>{' '}
+                      <span>{formatValue(metadata[field])}</span>
+                    </div>
+                  ))}
+              </div>
+            ) : null}
           </section>
         ) : null}
 
+        {/* Story body */}
         <section className="story-content">
           {body.title ? (
             <h2 className="story-content-title">{body.title}</h2>
@@ -166,9 +177,7 @@ export default function UserStory() {
             <div
               key={index}
               className="story-paragraph"
-              dangerouslySetInnerHTML={{
-                __html: paragraph,
-              }}
+              dangerouslySetInnerHTML={{ __html: paragraph }}
             />
           ))}
         </section>

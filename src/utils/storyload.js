@@ -3,6 +3,19 @@ const storyFiles = import.meta.glob('../user-story/**/index.yaml', {
   import: 'default',
 });
 
+const allImages = import.meta.glob(
+  '../user-story/**/*.{png,jpg,jpeg,webp,svg}',
+  {
+    eager: true,
+    import: 'default',
+  },
+);
+
+const quoteImages = import.meta.glob('../user-story/**/quote.png', {
+  eager: true,
+  import: 'default',
+});
+
 const slugFromPath = path =>
   path.replace('../user-story/', '').replace('/index.yaml', '');
 
@@ -41,6 +54,19 @@ const getStoryRaw = async slug => {
   return await loader();
 };
 
+const getStoryImage = slug => {
+  const entry = Object.entries(allImages).find(
+    ([path]) =>
+      path.startsWith(`../user-story/${slug}/`) && !path.endsWith('/quote.png'),
+  );
+  return entry ? entry[1] : null;
+};
+
+const getQuoteImage = slug => {
+  const key = `../user-story/${slug}/quote.png`;
+  return quoteImages[key] ?? null;
+};
+
 export const loadStoryData = async slug => {
   const raw = await getStoryRaw(slug);
   const yaml = await import('js-yaml');
@@ -56,7 +82,8 @@ export const loadStoryData = async slug => {
     metadata: data.metadata ?? {},
     body_content: data.body_content ?? {},
     quotes: Array.isArray(data.quotes) ? data.quotes : [],
-    image: data.image ?? null,
+    image: getStoryImage(slug),
+    quoteImage: getQuoteImage(slug),
   };
 };
 
