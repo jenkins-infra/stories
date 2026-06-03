@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { remark } from 'remark';
-import html from 'remark-html';
 import './UserStory.css';
 
 const titles = {
@@ -49,44 +47,16 @@ const formatValue = value => {
   return String(value);
 };
 
-const mdToHtml = async content => {
-  const processed = await remark().use(html).process(content);
-  return processed.toString();
-};
-
 export default function UserStory() {
   const data = useLoaderData();
-
   const story = data?.story ?? {};
-
-  const authoredBy =
-    story.authored_by ?? story.author ?? data?.authored_by ?? data?.author;
-
+  const authoredBy = story.authored_by ?? story.author ?? data?.authored_by ?? data?.author;
   const tagLine = story.tag_line ?? data?.tag_line;
-  const metadata = story.metadata ?? data?.metadata ?? {};
-  const body = story.body_content ?? data?.body_content ?? {};
+  const metadata = data?.metadata ?? {};
+  const body = data?.body_content ?? {};
   const storyImageSrc = data?.image ?? null;
-
-  const [htmlParagraphs, setHtmlParagraphs] = React.useState([]);
+  const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
   const [storyImageErrorSrc, setStoryImageErrorSrc] = React.useState(null);
-
-  React.useEffect(() => {
-    const parseMarkdown = async () => {
-      if (!Array.isArray(body.paragraphs)) return;
-
-      const parsed = await Promise.all(
-        body.paragraphs.map(async paragraph => {
-          if (typeof paragraph !== 'string') return paragraph.html ?? '';
-          return await mdToHtml(paragraph);
-        }),
-      );
-
-      setHtmlParagraphs(parsed);
-    };
-
-    parseMarkdown();
-  }, [body.paragraphs]);
-
   const hasMetadata = fields.some(field => metadata[field]);
   const showStoryImage = storyImageSrc && storyImageSrc !== storyImageErrorSrc;
 
@@ -134,8 +104,6 @@ export default function UserStory() {
           </section>
         ) : null}
 
-        {/* Metadata grid + story image side by side */}
-
         {hasMetadata || showStoryImage ? (
           <section className="metadata-with-image">
             {showStoryImage ? (
@@ -167,7 +135,6 @@ export default function UserStory() {
           </section>
         ) : null}
 
-        {/* Story body */}
         <section className="story-content">
           {body.title ? (
             <h2 className="story-content-title">{body.title}</h2>
