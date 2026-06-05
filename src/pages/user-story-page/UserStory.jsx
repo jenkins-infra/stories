@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import './UserStory.css';
+import Testimonial from '../../components/Testimonial';
 
 const titles = {
   build_tools: 'Build Tools',
@@ -59,6 +60,8 @@ export default function UserStory() {
   const [storyImageErrorSrc, setStoryImageErrorSrc] = React.useState(null);
   const hasMetadata = fields.some(field => metadata[field]);
   const showStoryImage = storyImageSrc && storyImageSrc !== storyImageErrorSrc;
+  const testimonial = data?.quotes?.[0] ?? story?.quotes?.[0] ?? null;
+  const quoteImage = data?.quoteImage ?? null;
 
   return (
     <>
@@ -147,6 +150,15 @@ export default function UserStory() {
               dangerouslySetInnerHTML={{ __html: paragraph }}
             />
           ))}
+
+          {testimonial?.content && testimonial?.from ? (
+            <Testimonial
+              from={testimonial.from}
+              image={quoteImage}
+            >
+              {testimonial.content}
+            </Testimonial>
+          ) : null}
         </section>
       </main>
 

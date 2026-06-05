@@ -1,33 +1,33 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Testimonial.css';
 
 const Testimonial = ({ from, image, children }) => {
-  const [name, ...rest] = from.split(',');
-  const title = rest.join(',').trim();
-
   return (
-    <blockquote className="testimonial">
-      <p className="testimonial-content">{children}</p>
-
-      <footer className="testimonial-footer">
+    <div className="testimonial pb-3">
+      <blockquote>{children}</blockquote>
+      <div className="attribution d-flex justify-content-center align-items-center">
         {image ? (
-          <img
-            src={image}
-            alt={name}
-            className="testimonial-image"
-            loading="lazy"
-            width="60"
-            height="60"
-          />
+          <div>
+            <img
+              src={image}
+              className="mr-3 rounded-circle"
+              height="60"
+              width="60"
+              alt="profile picture"
+              loading="lazy"
+            />
+          </div>
         ) : null}
+        <div className="from mx-3 px-4 py-2">
+          <span className="name">{from.split(',')[0]}</span>
 
-        <div className="testimonial-info">
-          <span className="testimonial-name">{name}</span>
-
-          {title ? <span className="testimonial-title">{title}</span> : null}
+          <span className="title">
+            {from.split(',').slice(1).join(',').trim()}
+          </span>
         </div>
-      </footer>
-    </blockquote>
+      </div>
+    </div>
   );
 };
 
