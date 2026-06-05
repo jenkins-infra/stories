@@ -1,6 +1,9 @@
 import {
   getStoryStaticPaths,
   loadUserStoryRouteData,
+  getStorySlugs,
+  loadStoryData,
+  allStoriesLoader,
 } from './utils/storyload.js';
 import LandingPage from './pages/landing-page/LandingPage.jsx';
 import UserStory from './pages/user-story-page/UserStory.jsx';
@@ -15,11 +18,12 @@ const routes = [
   },
   {
     path: '/all',
-    element: <All />
+    element: <All />,
+    loader: allStoriesLoader,
   },
   {
-    path: '/map', 
-    element: <Map />
+    path: '/map',
+    element: <Map />,
   },
   {
     path: '/user-story/:slug',
