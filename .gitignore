@@ -1,15 +1,27 @@
-node_modules/
-.cache/
-public
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-src/layout.jsx
-src/layout.css
-src/.DS_Store
-static/site.webmanifest
+node_modules
+dist
+dist-ssr
+*.local
 
 # Local Netlify folder
 .netlify
 
-schema.graphql
-.idea/
-.vscode/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

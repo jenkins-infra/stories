@@ -1,62 +1,27 @@
-# Jenkins User Stories
+# Retool Jenkins.io Web Success Stories (GSoC'26)
+This is a platform that showcases real-world success stories from organizations and teams using Jenkins. It highlights how Jenkins is used for CI/CD, automation, scalability, and software delivery across different industries, helping the community learn from practical use cases and engineering experiences.
 
-Previously known as Jenkins is the way. This project showcases real-world Jenkins user stories.
+## Getting Started 
 
-## Deployment
+The current GSoC 2026 revamp work is being actively developed on the `gsoc-2026-revamp` branch.
 
-### Deployment Workflow (to be done by Infra or a maintainer)
-
-* Builds are done on `ci.infra.jenkins.io` (VPN needed)
-* Successful builds on main branch deploy to netlify
-* Netlify site is fronted by fastly
-
-
-For historical record, the admin portal can be reached via https://stories.jenkins.io/admin/
-
-## Development Setup
-
-### System Requirements
-
-* Node.js 24.15 (CI uses the version provided by packer-images agents)
-* npm (Node Package Manager)
-
-## Getting Started
-
-First, fork the repository and clone it.
+### Clone the Repository
 
 ```bash
-git clone <url-from-github>
-```
-
-Change Directory
-
-```bash
+git clone https://github.com/YOUR_USERNAME/stories.git
 cd stories
 ```
 
-Install Dependencies
-
+### Install Dependencies
 ```bash
 npm install
 ```
 
-Run the development server:
-
+### Start the Development Server
 ```bash
-npm run develop
+npm run dev
 ```
-
-Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
-
-## Code Quality Tools
-
-### Formatting
-
-Ensure consistent code style:
-
-```bash
-npm run format
-```
+The application should now be running locally.
 
 ## Contributing Guidelines
 
@@ -73,4 +38,3 @@ npm run format
 5. Add your changes to staging area and commit your changes
 6. Push your changes to GitHub
 7. Submit a pull request
-
