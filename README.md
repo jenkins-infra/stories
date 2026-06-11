@@ -23,6 +23,15 @@ npm run dev
 ```
 The application should now be running locally.
 
+## Code Quality Tools
+
+### Formatting
+
+Ensure consistent code style:
+
+```bash
+npm run format
+```
 ## Contributing Guidelines
 
 1. Create feature branches

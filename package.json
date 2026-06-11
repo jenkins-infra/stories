@@ -7,7 +7,9 @@
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "@jenkinsci/jenkins-io-components": "^1.41.1",
@@ -27,6 +29,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "prettier": "^3.8.4",
     "vite": "^7.1.12"
   }
 }
