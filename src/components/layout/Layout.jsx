@@ -3,11 +3,12 @@ import JioNavbar from './JioNavbar';
 import JioFooter from './JioFooter';
 
 function Layout() {
+  const property = 'https://stories.jenkins.io';
   return (
     <>
-      <JioNavbar property="https://stories.jenkins.io" />
+      <JioNavbar property={property} />
       <Outlet />
-      <JioFooter property="https://stories.jenkins.io" />
+      <JioFooter property={property} />
     </>
   );
 }
