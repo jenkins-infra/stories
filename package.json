@@ -12,7 +12,6 @@
     "format:check": "prettier . --check"
   },
   "dependencies": {
-    "@jenkinsci/jenkins-io-components": "^1.41.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router": "^6.30.1",
