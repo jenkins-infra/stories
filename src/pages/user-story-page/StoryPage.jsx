@@ -76,7 +76,7 @@ export default function StoryPage() {
 
   const body = story.body_content ?? data?.body_content ?? {};
 
-  const quotes = story.quotes ?? data?.quotes ?? [];
+//   const quotes = story.quotes ?? data?.quotes ?? [];
 
   const [htmlParagraphs, setHtmlParagraphs] = React.useState([]);
 
