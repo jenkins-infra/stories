@@ -1,3 +1,6 @@
+import { remark } from 'remark';
+import html from 'remark-html';
+
 const storyFiles = import.meta.glob('../user-story/**/index.yaml', {
   query: '?raw',
   import: 'default',
@@ -5,6 +8,11 @@ const storyFiles = import.meta.glob('../user-story/**/index.yaml', {
 
 const slugFromPath = path =>
   path.replace('../user-story/', '').replace('/index.yaml', '');
+
+const mdToHtml = async content => {
+  const processed = await remark().use(html).process(content);
+  return processed.toString();
+};
 
 export const getStorySlugs = async () => {
   const stories = await Promise.all(
@@ -46,6 +54,18 @@ export const loadStoryData = async slug => {
   const yaml = await import('js-yaml');
   const data = yaml.load(raw) ?? {};
 
+  const bodyContent = data.body_content ?? {};
+
+  const paragraphs = Array.isArray(bodyContent.paragraphs)
+    ? await Promise.all(
+        bodyContent.paragraphs.map(paragraph =>
+          typeof paragraph === 'string'
+            ? mdToHtml(paragraph)
+            : Promise.resolve(paragraph.html ?? ''),
+        ),
+      )
+    : [];
+
   return {
     slug,
     story: data,
@@ -54,7 +74,10 @@ export const loadStoryData = async slug => {
     author: data.authored_by ?? data.author ?? '',
     tag_line: data.tag_line ?? '',
     metadata: data.metadata ?? {},
-    body_content: data.body_content ?? {},
+    body_content: {
+      ...bodyContent,
+      paragraphs,
+    },
     quotes: Array.isArray(data.quotes) ? data.quotes : [],
     image: data.image ?? null,
   };

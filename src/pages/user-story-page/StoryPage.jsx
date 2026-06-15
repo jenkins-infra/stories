@@ -1,7 +1,4 @@
-import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { remark } from 'remark';
-import html from 'remark-html';
 import './StoryPage.css';
 
 const titles = {
@@ -56,12 +53,6 @@ const formatValue = value => {
   return String(value);
 };
 
-const mdToHtml = async content => {
-  const processed = await remark().use(html).process(content);
-
-  return processed.toString();
-};
-
 export default function StoryPage() {
   const data = useLoaderData();
 
@@ -72,33 +63,11 @@ export default function StoryPage() {
 
   const tagLine = story.tag_line ?? data?.tag_line;
 
-  const metadata = story.metadata ?? data?.metadata ?? {};
+  const metadata = data?.metadata ?? {};
 
-  const body = story.body_content ?? data?.body_content ?? {};
+  const body = data?.body_content ?? {};
 
-//   const quotes = story.quotes ?? data?.quotes ?? [];
-
-  const [htmlParagraphs, setHtmlParagraphs] = React.useState([]);
-
-  React.useEffect(() => {
-    const parseMarkdown = async () => {
-      if (!Array.isArray(body.paragraphs)) return;
-
-      const parsed = await Promise.all(
-        body.paragraphs.map(async paragraph => {
-          if (typeof paragraph !== 'string') {
-            return paragraph.html ?? '';
-          }
-
-          return await mdToHtml(paragraph);
-        }),
-      );
-
-      setHtmlParagraphs(parsed);
-    };
-
-    parseMarkdown();
-  }, [body.paragraphs]);
+  const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
 
   return (
     <>
