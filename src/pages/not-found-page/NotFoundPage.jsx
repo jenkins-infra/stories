@@ -20,13 +20,13 @@ const NotFoundPage = () => {
           </span>{' '}
           we couldn’t find what you were looking for.
           <br />
-          {import.meta.env.DEV ? (
+          {import.meta.env.DEV && (
             <>
               <br />
               Try creating a page in <code className="code">src/pages/</code>.
               <br />
             </>
-          ) : null}
+          )}
           <br />
           <a href="/" className="link">
             Go home
