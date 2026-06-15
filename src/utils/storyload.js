@@ -15,23 +15,17 @@ const mdToHtml = async content => {
   return processed.toString();
 };
 
-export const getStorySlugs = async () => {
-  const stories = await Promise.all(
-    Object.keys(storyFiles).map(async path => {
-      const slug = slugFromPath(path);
-      const raw = await storyFiles[path]();
-      const data = jsYaml.load(raw) ?? {};
-      return {
-        slug,
-        date: data.date,
-      };
-    }),
-  );
+const slugsPromise = Promise.all(
+  Object.keys(storyFiles).map(async path => {
+    const raw = await storyFiles[path]();
+    const data = jsYaml.load(raw) ?? {};
+    return { slug: slugFromPath(path), date: data.date };
+  }),
+).then(stories =>
+  stories.sort((a, b) => new Date(b.date) - new Date(a.date)).map(s => s.slug),
+);  
 
-  return stories
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .map(story => story.slug);
-};
+export const getStorySlugs = () => slugsPromise;
 
 export const getStoryStaticPaths = async () => {
   const slugs = await getStorySlugs();
