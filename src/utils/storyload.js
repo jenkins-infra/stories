@@ -1,5 +1,6 @@
 import { remark } from 'remark';
 import html from 'remark-html';
+import jsYaml from 'js-yaml';
 
 const storyFiles = import.meta.glob('../user-story/**/index.yaml', {
   query: '?raw',
@@ -19,8 +20,7 @@ export const getStorySlugs = async () => {
     Object.keys(storyFiles).map(async path => {
       const slug = slugFromPath(path);
       const raw = await storyFiles[path]();
-      const yaml = await import('js-yaml');
-      const data = yaml.load(raw) ?? {};
+      const data = jsYaml.load(raw) ?? {};
       return {
         slug,
         date: data.date,
@@ -51,8 +51,7 @@ const getStoryRaw = async slug => {
 
 export const loadStoryData = async slug => {
   const raw = await getStoryRaw(slug);
-  const yaml = await import('js-yaml');
-  const data = yaml.load(raw) ?? {};
+  const data = jsYaml.load(raw) ?? {};
 
   const bodyContent = data.body_content ?? {};
 
