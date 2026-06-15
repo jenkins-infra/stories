@@ -55,34 +55,26 @@ const formatValue = value => {
 
 export default function StoryPage() {
   const data = useLoaderData();
-
   const story = data?.story ?? {};
-
   const authoredBy =
     story.authored_by ?? story.author ?? data?.authored_by ?? data?.author;
-
   const tagLine = story.tag_line ?? data?.tag_line;
-
   const metadata = data?.metadata ?? {};
-
   const body = data?.body_content ?? {};
-
   const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
 
   return (
     <>
       <div className="story-navigation">
-        {data?.prev ? (
+        {data?.prev && (
           <Link to={`/user-story/${data.prev.slug}`} className="story-link">
             ←{' '}
             {data.prev.title.replace('Jenkins is the way', '') ||
               'Previous story'}
           </Link>
-        ) : (
-          <div />
         )}
 
-        {data?.next ? (
+        {data?.next && (
           <Link
             to={`/user-story/${data.next.slug}`}
             className="story-link next-link"
@@ -90,8 +82,6 @@ export default function StoryPage() {
             {data.next.title.replace('Jenkins is the way', '') || 'Next story'}{' '}
             →
           </Link>
-        ) : (
-          <div />
         )}
       </div>
 
@@ -101,20 +91,20 @@ export default function StoryPage() {
             {story.title ?? data?.title ?? 'Untitled'}
           </h1>
 
-          {tagLine ? <p className="story-tagline">{tagLine}</p> : null}
+          {tagLine && <p className="story-tagline">{tagLine}</p>}
 
           <p className="story-author">
             Authored by <strong>{authoredBy || 'Unknown'}</strong>
           </p>
         </header>
 
-        {metadata.title ? (
+        {metadata.title && (
           <section className="metadata-title-box">
             <strong>{metadata.title}</strong>
           </section>
-        ) : null}
+        )}
 
-        {fields.some(field => metadata[field]) ? (
+        {fields.some(field => metadata[field]) && (
           <section className="metadata-grid">
             {fields
               .filter(field => metadata[field])
@@ -125,12 +115,10 @@ export default function StoryPage() {
                 </div>
               ))}
           </section>
-        ) : null}
+        )}
 
         <section className="story-content">
-          {body.title ? (
-            <h2 className="story-content-title">{body.title}</h2>
-          ) : null}
+          {body.title && <h2 className="story-content-title">{body.title}</h2>}
 
           {htmlParagraphs.map((paragraph, index) => (
             <div
