@@ -1,6 +1,6 @@
 import Layout from './components/layout/Layout.jsx';
 import LandingPage from './pages/landing-page/LandingPage.jsx';
-import NotFound from './pages/not-found-page/NotFoundPage.jsx'
+import NotFound from './pages/not-found-page/NotFoundPage.jsx';
 
 const routes = [
   {
