@@ -19,7 +19,7 @@ metadata:
     - Javascript
     - Bootstrap
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
   version_control_systems:
     - GitLab

@@ -17,7 +17,7 @@ metadata:
     - Python
     - Groovy
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Windows
     - Jenkins

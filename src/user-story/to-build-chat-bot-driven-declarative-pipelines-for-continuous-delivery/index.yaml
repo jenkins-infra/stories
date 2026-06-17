@@ -17,7 +17,7 @@ metadata:
     - PHP
     - Python
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Embedded
     - Docker or Kubernetes

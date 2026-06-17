@@ -10,7 +10,7 @@ metadata:
     - Python
     - Shell Script
   platforms:
-    - ": Linux"
+    - Linux
   build_tools:
     - Python
   community_supports:

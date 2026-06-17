@@ -8,7 +8,7 @@ metadata:
     - Industrial Services
   programming_languages: []
   platforms:
-    - ": Windows"
+    - Windows
   version_control_systems:
     - GitLab
   build_tools:

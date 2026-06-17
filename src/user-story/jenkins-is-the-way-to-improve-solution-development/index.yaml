@@ -15,7 +15,7 @@ metadata:
     - Python
     - Terraform HCL
   platforms:
-    - ": Linux"
+    - Linux
     - AWS Lambda
   version_control_systems:
     - Bitbucket Server

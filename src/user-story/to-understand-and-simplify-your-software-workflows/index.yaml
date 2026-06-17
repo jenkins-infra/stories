@@ -16,7 +16,7 @@ metadata:
     - QML
     - Javascript
   platforms:
-    - ": Embedded"
+    - Embedded
     - Linux
   build_tools:
     - CMake

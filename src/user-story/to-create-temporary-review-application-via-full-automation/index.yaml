@@ -12,7 +12,7 @@ metadata:
     - Ruby
     - Groovy
   platforms:
-    - ": Linux"
+    - Linux
     - Docker or Kubernetes
   version_control_systems:
     - GitHub

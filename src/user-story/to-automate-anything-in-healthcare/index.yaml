@@ -14,7 +14,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Embedded"
+    - Embedded
     - Android
     - MacOS
   version_control_systems:

@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Groovy
   platforms:
-    - ": Linux"
+    - Linux
   version_control_systems:
     - BitBucket Server
   build_tools:

@@ -18,7 +18,7 @@ metadata:
     - PHP
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Windows
   version_control_systems:

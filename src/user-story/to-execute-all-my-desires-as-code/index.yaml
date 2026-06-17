@@ -10,7 +10,7 @@ metadata:
     - C/C++
     - Groovy
   platforms:
-    - ": Azure"
+    - Azure
     - Docker or Kubernetes
     - Linux
     - Octopus

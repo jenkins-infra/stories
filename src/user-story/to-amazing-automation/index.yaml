@@ -14,7 +14,7 @@ metadata:
     - C/C++
     - Python
   platforms:
-    - ": Linux"
+    - Linux
   build_tools:
     - Make
   community_supports:

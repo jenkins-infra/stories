@@ -20,7 +20,7 @@ metadata:
     - .NET
     - Scala
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - MacOS
   version_control_systems:
     - Bitbucket Server

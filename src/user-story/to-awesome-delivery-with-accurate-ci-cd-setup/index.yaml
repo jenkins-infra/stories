@@ -18,7 +18,7 @@ metadata:
     - Python
     - Ruby
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - Bitbucket Server

@@ -16,7 +16,7 @@ metadata:
     - Node.js
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
   version_control_systems:
     - BitBucket Server
   build_tools:

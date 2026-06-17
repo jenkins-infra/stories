@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - GitHub
