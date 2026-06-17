@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "plat:fix": "node scripts/fix-plat"
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "react": "^19.2.6",
