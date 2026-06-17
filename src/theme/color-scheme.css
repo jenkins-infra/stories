@@ -1,0 +1,13 @@
+:root {
+  --color-bg: #1e1e1e;
+  --color-text: #ffffff;
+  --color-code-text: #8a6534;
+  --color-code-bg: #fff4db;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+  }
+}
