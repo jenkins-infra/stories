@@ -136,5 +136,11 @@ pipeline {
         }
       }
     }
+
+    stage('Publish build report') {
+      steps {
+        publishBuildStatusReport()
+      }
+    }
   }
 }
