@@ -4,13 +4,13 @@
   gap: 12px;
   flex-wrap: wrap;
   padding: 30px;
-  background-color: #212529;
+  background-color: var(--color-nav-bg);
   font-family: system-ui, sans-serif;
   font-size: 13px;
 }
 
 .story-link {
-  color: #c2c2c2;
+  color: var(--color-nav-text);
   text-decoration: none;
 }
 
@@ -40,21 +40,21 @@
 .story-tagline {
   margin-top: 20px;
   margin-bottom: 8px;
-  color: #222;
+  color: var(--color-text-tertiary);
   font-size: 1.15rem;
   font-weight: bold;
 }
 
 .story-author {
   margin: 15px 0 0;
-  color: #555;
+  color: var(--color-text-muted);
   font-size: 1rem;
 }
 
 .metadata-title-box {
   margin-bottom: 20px;
   padding: 20px;
-  background: #f3f6fb;
+  background: var(--color-surface);
   border-radius: 14px;
 }
 
@@ -64,7 +64,7 @@
   gap: 14px;
   padding: 20px;
   background: #fff;
-  border: 1px solid #e8eaee;
+  border: 1px solid var(--color-border);
   border-radius: 14px;
 }
 
@@ -78,7 +78,7 @@
 
 .story-paragraph {
   margin-bottom: 18px;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .quotes-section {
@@ -97,10 +97,9 @@
 .quote-card {
   margin: 0;
   padding: 20px 24px;
-  background: #f7f9ff;
-  border-left: 4px solid #4f46e5;
+  background: var(--color-surface-alt);
   border-radius: 12px;
-  color: #333;
+  color: var(--color-text-secondary);
 }
 
 .quote-content {
