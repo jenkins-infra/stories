@@ -16,6 +16,7 @@ const routes = [
       {
         path: '/user-story/:slug',
         element: <StoryPage />,
+        errorElement: <NotFound />,
         getStaticPaths: getStoryStaticPaths,
         loader: loadUserStoryRouteData,
       },
