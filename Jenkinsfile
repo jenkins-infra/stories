@@ -1,3 +1,6 @@
+// Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
+String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
+
 pipeline {
   options {
     timeout(time: 60, unit: 'MINUTES')
