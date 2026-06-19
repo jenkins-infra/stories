@@ -2,7 +2,7 @@
 metadata:
   title: A cloud engineer at Searce using Jenkins to automate review of the build,
     release, deploy processes for his team.
-  company: Searce
+  organization: Searce
   industries:
     - Cloud Engineering
     - Software Development
