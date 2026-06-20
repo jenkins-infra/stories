@@ -19,8 +19,14 @@ metadata:
     - Andre Sousa, Professor
     - Filipe Costa, Technology Intern
   programming_languages:
-    - ".NET Core **Platform** : Docker or Kubernetes"
-    - Windows**Version Control System:** GitLab**Build Tool:** NuGet
+    - .NET Core 
+  platforms: 
+    - Docker or Kubernetes
+    - Windows
+  version_control_systems: 
+    - GitLab
+  Build Tool:
+    - NuGet
     - Nexus
     - Docker
   community_supports:

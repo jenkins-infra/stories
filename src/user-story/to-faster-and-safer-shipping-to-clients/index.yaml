@@ -47,7 +47,8 @@ body_content:
     - Additionally, we expect to run SQL scripts on remote databases and perform
       scheduled backups for both development and test environments where
       artifacts and scripts are tested before being sent to the
-      client.**Goals:** To ship artifacts to the customer faster and safer.
+      client.
+    - "**Goals:** To ship artifacts to the customer faster and safer."
     - "**Solution & Results:** We configured the Git repository that we use with
       BitBucket and set the parameters for Maven compilation. We then set
       schedules for the process to run automatically, scheduling bash scripts

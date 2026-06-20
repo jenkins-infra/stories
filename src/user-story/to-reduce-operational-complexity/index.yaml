@@ -8,8 +8,8 @@ metadata:
   industries:
     - Job Board
   programming_languages:
-    - PHP\*\*
-    - \*\* Python
+    - PHP
+    - Python
   platforms:
     - ": Linux"
   community_supports:

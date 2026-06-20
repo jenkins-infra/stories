@@ -37,7 +37,7 @@ body_content:
       builds and releases for every module. Multiple teams can contribute to
       modules and help one another. We have increased productivity and allowed
       for collaboration within departments. This process is helping us move away
-      from silos.\\*\\*\\*\\*"
+      from silos."
     - "Although we are still in the learning process, having a pipeline is the
       biggest win for us so far! Jenkins helped us visualize our steps and
       identify and respond to broken manual processes. We reduced our build

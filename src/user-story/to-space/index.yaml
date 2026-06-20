@@ -19,9 +19,9 @@ metadata:
     - Team Leader
   programming_languages:
     - C/C++
-    - |-
-      Python
-      **Platform** : Embedded
+    - Python
+  platforms: 
+    - Embedded
     - Windows
   version_control_systems:
     - GitLab
