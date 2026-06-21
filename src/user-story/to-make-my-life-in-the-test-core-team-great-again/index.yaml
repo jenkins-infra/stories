@@ -13,7 +13,7 @@ metadata:
     - HMI / Scada
   programming_languages: []
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
     - Linux
     - Windows

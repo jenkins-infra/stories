@@ -19,7 +19,7 @@ metadata:
   programming_languages:
     - Java
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Windows
   version_control_systems:

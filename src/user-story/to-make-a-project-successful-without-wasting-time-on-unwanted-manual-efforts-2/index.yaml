@@ -24,7 +24,7 @@ metadata:
     - Golang
     - Ansible
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Vagrant
     - Mesos

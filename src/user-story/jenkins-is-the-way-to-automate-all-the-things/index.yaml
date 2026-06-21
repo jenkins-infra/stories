@@ -15,7 +15,7 @@ metadata:
     - Python
     - GO
   platforms:
-    - ": Android"
+    - Android
     - Docker/Kubernetes
     - Windows
   version_control_systems:

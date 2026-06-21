@@ -15,7 +15,7 @@ metadata:
     - Java
     - PHP
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

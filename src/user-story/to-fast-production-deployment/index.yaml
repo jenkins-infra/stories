@@ -8,7 +8,7 @@ metadata:
     - Java
     - Node.js
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
     - Linux
   version_control_systems:

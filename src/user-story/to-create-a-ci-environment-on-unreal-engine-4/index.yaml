@@ -7,7 +7,7 @@ metadata:
     - Human Resources
   programming_languages: []
   platforms:
-    - ": Windows"
+    - Windows
   build_tools:
     - GitHub
   community_supports:

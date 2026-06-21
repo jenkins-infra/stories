@@ -15,7 +15,7 @@ metadata:
     - Terraform HCL
     - and Go
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - Bitbucket Server

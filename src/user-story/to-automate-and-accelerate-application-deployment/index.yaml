@@ -16,7 +16,7 @@ metadata:
   programming_languages:
     - Java
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
   version_control_systems:
     - GitLab

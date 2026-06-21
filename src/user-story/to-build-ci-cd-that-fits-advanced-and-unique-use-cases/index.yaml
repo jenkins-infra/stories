@@ -13,12 +13,12 @@ metadata:
   industries:
     - Workflow and Decision Automation
   team_members:
-    - ": Ahmed AbouZaid (DevOps Engineer)"
+    - Ahmed AbouZaid (DevOps Engineer)
     - Nikola Koevski and Yana Vasileva (Software Engineers).
   programming_languages:
     - Java
   platforms:
-    - ": Docker"
+    - Docker
     - Kubernetes
     - Linux
     - Google Cloud Platform

@@ -10,7 +10,7 @@ metadata:
   title: When it was time to build a large CI platform to support rapid app
     development, the engineers at this software company turned to Jenkins.
   organization: "Global note taking app solution, based in France."
-  industry:
+  industries:
     - Software Apps
   programming_languages:
     - C/C++

@@ -8,7 +8,7 @@ metadata:
     - Python
     - Shell
   platforms:
-    - ": Linux"
+    - Linux
   version_control_systems:
     - GitHub
   build_tools:

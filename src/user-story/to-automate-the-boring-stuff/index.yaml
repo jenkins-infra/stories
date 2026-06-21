@@ -14,7 +14,7 @@ metadata:
     - Python
     - GO
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - GitLab

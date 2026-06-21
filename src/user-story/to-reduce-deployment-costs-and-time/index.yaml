@@ -12,7 +12,7 @@ metadata:
     - Java
     - Dart
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

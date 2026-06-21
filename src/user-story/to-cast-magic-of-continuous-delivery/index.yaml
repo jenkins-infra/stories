@@ -24,7 +24,7 @@ metadata:
     - Python
     - Vue.js
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Linux
   version_control_systems:

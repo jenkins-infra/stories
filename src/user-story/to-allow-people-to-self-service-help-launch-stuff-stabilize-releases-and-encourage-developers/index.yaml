@@ -8,7 +8,7 @@ metadata:
   programming_languages:
     - Go
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

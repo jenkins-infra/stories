@@ -9,7 +9,7 @@ metadata:
     - ​​WordPress
     - HTML/CSS/SCSS
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - MacOS
     - Windows

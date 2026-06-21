@@ -17,7 +17,7 @@ metadata:
     - C#
     - Golang
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
     - Linux
     - MacOS

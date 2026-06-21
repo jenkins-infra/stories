@@ -14,7 +14,7 @@ metadata:
     - Groovy
     - YAML
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Jenkins
     - Groovy

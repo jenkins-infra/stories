@@ -19,7 +19,7 @@ metadata:
     - PHP
     - GO
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Embedded
     - Docker or Kubernetes

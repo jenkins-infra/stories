@@ -9,7 +9,7 @@ metadata:
   programming_languages:
     - ObjectiveC
   platforms:
-    - ": Linux"
+    - Linux
     - MacOS
     - Azure DevOps
   version_control_systems:

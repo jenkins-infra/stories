@@ -17,7 +17,7 @@ metadata:
   programming_languages:
     - HashiCorp Configuration Language (HCL)
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

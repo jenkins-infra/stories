@@ -24,7 +24,7 @@ metadata:
     - Kotlin
     - Scala
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux
