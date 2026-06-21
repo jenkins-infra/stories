@@ -8,7 +8,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Windows
     - TestProject

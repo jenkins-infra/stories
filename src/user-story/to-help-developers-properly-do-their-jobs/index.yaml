@@ -14,7 +14,7 @@ metadata:
     - Kotlin for Android
     - Swift for iOS
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

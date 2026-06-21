@@ -7,7 +7,7 @@ metadata:
   programming_languages:
     - Ansible
   platforms:
-    - ": Linux"
+    - Linux
   version_control_systems:
     - GitLab
   build_tools:

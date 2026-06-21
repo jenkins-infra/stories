@@ -9,7 +9,7 @@ metadata:
   version_control_systems:
     - Subversion
   platforms:
-    - ": Embedded"
+    - Embedded
   build_tools:
     - Maven
   community_supports:

@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
   version_control_systems:
     - Subversion

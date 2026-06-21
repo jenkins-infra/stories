@@ -4,8 +4,7 @@ map:
   location: Belgium
   industries:
     - DevOps & Machine Learning
-  latitude: ""
-  longitude: ""
+  geojson: '{"type":"Point","coordinates": [4.0000,50.5000]}'
 metadata:
   title: When it comes to developing and delivering software, our suite of unit
     tests was only run manually. We looked to Jenkins to change that.
@@ -16,7 +15,7 @@ metadata:
     - QML
     - Javascript
   platforms:
-    - ": Embedded"
+    - Embedded
     - Linux
   build_tools:
     - CMake

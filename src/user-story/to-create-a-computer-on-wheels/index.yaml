@@ -17,7 +17,7 @@ metadata:
     - HTML
     - CSS
   platforms:
-    - ": Windows"
+    - Windows
   version_control_systems:
     - GitHub
   build_tools:

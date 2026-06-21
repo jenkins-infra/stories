@@ -8,7 +8,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": macOS"
+    - macOS
     - Windows
   version_control_systems:
     - GitHub

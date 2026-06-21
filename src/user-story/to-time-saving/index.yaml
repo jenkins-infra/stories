@@ -12,7 +12,7 @@ metadata:
     - Go
     - Vue.js
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

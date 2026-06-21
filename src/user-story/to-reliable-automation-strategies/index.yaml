@@ -11,7 +11,7 @@ metadata:
   version_control_systems:
     - GitLab
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   build_tools:
     - Maven

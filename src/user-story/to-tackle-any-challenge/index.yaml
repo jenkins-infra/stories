@@ -15,7 +15,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Embedded"
+    - Embedded
     - Docker or Kubernetes
     - Linux
     - Windows

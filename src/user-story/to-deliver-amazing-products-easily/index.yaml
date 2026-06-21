@@ -21,7 +21,7 @@ metadata:
     - Tcl
     - Perl
   platforms:
-    - ": Linux"
+    - Linux
   build_tools:
     - Make
     - Custom Tools

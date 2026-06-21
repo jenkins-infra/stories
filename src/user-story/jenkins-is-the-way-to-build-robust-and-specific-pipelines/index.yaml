@@ -13,7 +13,7 @@ metadata:
   programming_languages:
     - Node.js
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Embedded
     - Docker or Kubernetes

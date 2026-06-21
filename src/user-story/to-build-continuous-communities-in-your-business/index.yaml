@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Powershell
   platforms:
-    - ": Windows"
+    - Windows
   version_control_systems:
     - N/A
   build_tools:
