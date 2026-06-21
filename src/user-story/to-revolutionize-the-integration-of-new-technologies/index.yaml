@@ -16,7 +16,7 @@ metadata:
     - Java
     - Node.js
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Windows
   version_control_systems:

@@ -13,7 +13,7 @@ metadata:
   programming_languages:
     - C/C++ Python
   platforms:
-    - ": Embedded"
+    - Embedded
     - Docker or Kubernetes
     - Linux
   version_control_systems:

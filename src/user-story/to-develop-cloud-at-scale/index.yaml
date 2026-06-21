@@ -11,7 +11,7 @@ metadata:
     - Node.js
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Windows
     - AWS

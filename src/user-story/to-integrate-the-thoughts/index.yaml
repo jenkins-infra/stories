@@ -19,7 +19,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Linux"
+    - Linux
   version_control_systems:
     - Bitbucket Server
   build_tools:

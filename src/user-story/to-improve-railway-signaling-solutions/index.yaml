@@ -8,7 +8,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Linux"
+    - Linux
     - Docker or Kubernetes
   version_control_systems:
     - Bitbucket

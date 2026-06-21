@@ -15,7 +15,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Embedded"
+    - Embedded
   version_control_systems:
     - GitLab
   build_tools:

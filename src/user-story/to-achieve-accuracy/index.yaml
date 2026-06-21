@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Shell Scripting
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - macOS
     - Windows

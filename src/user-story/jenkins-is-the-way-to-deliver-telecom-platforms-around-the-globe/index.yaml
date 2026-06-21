@@ -13,7 +13,7 @@ metadata:
   programming_languages:
     - Java
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
     - Solaris
   version_control_systems:

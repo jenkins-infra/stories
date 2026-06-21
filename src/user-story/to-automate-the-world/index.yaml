@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Windows"
+    - Windows
   version_control_systems:
     - Bitbucket Server
   build_tools:

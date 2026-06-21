@@ -7,7 +7,7 @@ metadata:
   programming_languages:
     - GUI-based Tool
   platforms:
-    - ": Windows"
+    - Windows
   version_control_systems:
     - Bitbucket Server
   build_tools:
