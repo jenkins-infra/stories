@@ -3,6 +3,14 @@
   --color-text: #ffffff;
   --color-code-text: #8a6534;
   --color-code-bg: #fff4db;
+  --color-surface: #f3f6fb;
+  --color-surface-alt: #f7f9ff;
+  --color-border: #e8eaee;
+  --color-text-muted: #555;
+  --color-text-secondary: #333;
+  --color-text-tertiary: #222;
+  --color-nav-bg: #212529;
+  --color-nav-text: #c2c2c2;
 }
 
 @media (prefers-color-scheme: light) {
