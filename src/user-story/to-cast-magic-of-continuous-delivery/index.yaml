@@ -12,14 +12,13 @@ metadata:
     availability CD platform that supports thousands of applications."
   organization: JD.com, China's largest online retailer, www.jd.com
   industries:
-    - Internet " e-commerce
+    - Internet & e-commerce
   team_members:
-    - "All work for JD.com: Xuefeng Shi"
-    - Software Engineer " Zheng Gu
-    - Software Engineer " Chuang Zhang
-    - Software Engineer " Jianye Guo
-    - Software Engineer " Ya Shen
-    - Software Engineer
+    - "All work for JD.com: Xuefeng Shi (Software Engineer)"
+    - Zheng Gu (Software Engineer)
+    - Chuang Zhang (Software Engineer)
+    - Jianye Guo (Software Engineer)
+    - Ya Shen (Software Engineer)
   programming_languages:
     - Java
     - Python

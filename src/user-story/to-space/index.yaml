@@ -19,9 +19,9 @@ metadata:
     - Team Leader
   programming_languages:
     - C/C++
-    - |-
-      Python
-      **Platform** : Embedded
+    - Python
+  platforms: 
+    - Embedded
     - Windows
   version_control_systems:
     - GitLab
@@ -65,8 +65,8 @@ body_content:
       Documentation, memory usage, code coverage reports, and test results are
       important results that need to be easily accessible to all members of the
       development team from each CI build.
-    - "**Goals: Develop software for the onboard computer of the 6U CubeSat
-      satellite, a type of miniaturized satellite for space research.**"
+    - "**Goals:** Develop software for the onboard computer of the 6U CubeSat
+      satellite, a type of miniaturized satellite for space research."
     - "**Solution & Results:** In our development process, we are using a
       multibranch pipeline project with 'Jenkinsfile' describing a full build
       pipeline. Thanks to it being versioned, it is easy to test improvements

@@ -38,7 +38,8 @@ body_content:
       then intelligently target preventive care, reward people for health, and
       create more inclusive products. At the core of all this is the software,
       which we needed to automate the build, test, and deployment phases, while
-      ensuring security and auditing.**Goals:** Improving health insurance
+      ensuring security and auditing."
+    - "**Goals:** Improving health insurance
       through better understanding of customers."
     - "**Solution & Results:** When I joined the company, Jenkins was being used
       but it was poorly configured in non-optimal ways. One example is that the

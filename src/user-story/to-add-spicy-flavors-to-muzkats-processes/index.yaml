@@ -44,21 +44,21 @@ body_content:
       distributed architecture, the hardest part of rethinking our build, test
       and deploy process was to figure out how best to sync the deployment of
       all services. We also had to retest builds properly to go live or initiate
-      a rollback.\*\*\*\*
+      a rollback.
     - With Jenkins and some pipelines, it was relatively simple to create a
       local and distributed artifact of our application to quickly share and
-      deploy across the team, locally and globally.\*\*\*\*
+      deploy across the team, locally and globally.
     - Using pipelines -- and the easily accessible deployment plugins available
       with Jenkins -- eased everything. The job hook options, in conjunction,
       along with some scripting, made it easy to create a deployment bus, which
       was primarily used to send out notifications to our team. Luckily, we have
       removed some free external services, which gave us more control over our
       product and associated data; data security is very important to
-      us!\*\*\*\*
+      us!
     - The amazing plugin ecosystem helped us a lot! Specifically, we used FTP
       publisher, SSH publisher, and the Gradle plugin. As far as pipelines go,
       Job DSL as code is a huge win. We also like the internal credential/key
-      management arrangement and the master/slave setup.\*\*\*\*
+      management arrangement and the master/slave setup.
     - "We're pleased with the results, including:"
     - >-
       *   a solution that is central, fast and easy to maintain: especially FOSS
