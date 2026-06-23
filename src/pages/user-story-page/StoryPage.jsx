@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import './StoryPage.css';
 
@@ -107,7 +106,6 @@ export default function StoryPage() {
                   src={storyImageSrc}
                   alt={story.title ?? data?.title ?? 'Story image'}
                   className="story-image"
-                  onError={() => setStoryImageErrorSrc(storyImageSrc)}
                   loading="lazy"
                 />
               </div>
