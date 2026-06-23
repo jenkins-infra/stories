@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import './StoryPage.css';
 
@@ -56,6 +57,7 @@ export default function StoryPage() {
   const metadata = data?.metadata ?? {};
   const body = data?.body_content ?? {};
   const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
+  const storyImageSrc = data?.image ?? null;
 
   return (
     <>
@@ -98,18 +100,33 @@ export default function StoryPage() {
           </section>
         )}
 
-        {fields.some(field => metadata[field]) && (
-          <section className="metadata-grid">
-            {fields
-              .filter(field => metadata[field])
-              .map(field => (
-                <div key={field}>
-                  <strong>{titles[field] || field}:</strong>{' '}
-                  <span>{formatValue(metadata[field])}</span>
-                </div>
-              ))}
+          <section className="metadata-with-image">
+            {storyImageSrc && (
+              <div className="story-image-wrapper">
+                <img
+                  src={storyImageSrc}
+                  alt={story.title ?? data?.title ?? 'Story image'}
+                  className="story-image"
+                  onError={() => setStoryImageErrorSrc(storyImageSrc)}
+                  loading="lazy"
+                />
+              </div>
+            )}
+
+            {fields.some(field => metadata[field]) && (
+              <div className="metadata-grid">
+                {fields
+                  .filter(field => metadata[field])
+                  .map(field => (
+                    <div key={field} className="metadata-row">
+                      <strong>{titles[field] || field}:</strong>{' '}
+                      <span>{formatValue(metadata[field])}</span>
+                    </div>
+                  ))}
+              </div>
+            )}
           </section>
-        )}
+       
 
         <section className="story-content">
           {body.title && <h2 className="story-content-title">{body.title}</h2>}
