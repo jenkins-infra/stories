@@ -27,7 +27,7 @@ metadata:
   build_tools:
     - Gradle
     - Maven
-  Community Support: 
+  community_supports: 
     - Jenkins Users Google Group or IRC Chat
     - Jenkins.io websites & blogs
     - Spoke with colleagues and peers
