@@ -15,7 +15,7 @@ metadata:
     - Node.js
     - .NET Core
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Embedded
     - Docker or Kubernetes

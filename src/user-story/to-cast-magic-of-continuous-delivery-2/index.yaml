@@ -22,6 +22,8 @@ metadata:
     - Docker or Kubernetes
     - Linux
     - Embed OS
+  version_control_systems: 
+    - GitHub
   build_tools:
     - Make
   community_supports:
@@ -30,7 +32,6 @@ metadata:
 body_content:
   title: Improving product quality via a unified CI/CD process for DevOps.
   paragraphs:
-    - "Version Control: GitHub"
     - "**Background:** As one of the world's leading semiconductor IP companies,
       the firm I work for is rapidly advancing IoT technologies by designing and
       developing the integral platforms, sensors, and subsystems that drive IoT

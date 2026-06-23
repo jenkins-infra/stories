@@ -16,7 +16,7 @@ metadata:
     - Swift
     - Kotlin
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Mac
     - Windows

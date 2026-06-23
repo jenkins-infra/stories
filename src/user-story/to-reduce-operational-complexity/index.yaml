@@ -8,10 +8,10 @@ metadata:
   industries:
     - Job Board
   programming_languages:
-    - PHP\*\*
-    - \*\* Python
+    - PHP
+    - Python
   platforms:
-    - ": Linux"
+    - Linux
   community_supports:
     - Jenkins.io websites & blogs
 body_content:

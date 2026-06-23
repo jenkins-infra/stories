@@ -16,7 +16,7 @@ metadata:
     - PHP
     - Angular
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
   version_control_systems:
     - GitLab
   build_tools:

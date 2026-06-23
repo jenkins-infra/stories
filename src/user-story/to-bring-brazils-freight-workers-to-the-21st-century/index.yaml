@@ -14,7 +14,7 @@ metadata:
   programming_languages:
     - Java
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Embedded
     - Docker or Kubernetes

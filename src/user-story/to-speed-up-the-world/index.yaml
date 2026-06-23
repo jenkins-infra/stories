@@ -14,7 +14,7 @@ metadata:
     - Java
     - Angular
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
     - Linux
     - Windows

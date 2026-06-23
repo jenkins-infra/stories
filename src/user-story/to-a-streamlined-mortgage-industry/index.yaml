@@ -15,7 +15,7 @@ metadata:
     - Java
     - PHP
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Windows
   version_control_systems:
     - GitHub

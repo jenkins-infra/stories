@@ -16,7 +16,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - MacOS
     - Windows

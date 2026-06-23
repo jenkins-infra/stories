@@ -15,7 +15,7 @@ metadata:
     - C/C++
     - Python
   platforms:
-    - ": Embedded"
+    - Embedded
     - Windows
   build_tools:
     - Self-created Python-based solution

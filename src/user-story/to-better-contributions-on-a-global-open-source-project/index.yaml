@@ -11,9 +11,10 @@ metadata:
     - CI Engineer
     - both of OpenAirInterface Software Alliance
   programming_languages:
-    - C/C++ Python
+    - C/C++
+    - Python
   platforms:
-    - ": Embedded"
+    - Embedded
     - Docker or Kubernetes
     - Linux
   version_control_systems:

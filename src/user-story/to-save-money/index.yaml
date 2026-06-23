@@ -20,7 +20,7 @@ metadata:
   programming_languages:
     - PHP
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - MacOS
   version_control_systems:

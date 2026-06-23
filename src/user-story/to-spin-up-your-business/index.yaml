@@ -9,7 +9,7 @@ metadata:
   programming_languages:
     - Python
   platforms:
-    - ": Linux"
+    - Linux
   version_control_systems:
     - GitHub
   build_tools:

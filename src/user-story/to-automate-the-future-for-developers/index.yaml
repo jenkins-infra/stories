@@ -19,7 +19,7 @@ metadata:
     - Javascript
     - Bootstrap
   platforms:
-    - ": Linux"
+    - Linux
     - Windows
   version_control_systems:
     - GitLab
@@ -27,12 +27,13 @@ metadata:
   build_tools:
     - Gradle
     - Maven
+  community_supports: 
+    - Jenkins Users Google Group or IRC Chat
+    - Jenkins.io websites & blogs
+    - Spoke with colleagues and peers
 body_content:
-  title: null
+  title: "Automated workflow makes it a whole lot faster"
   paragraphs:
-    - "**Community Support: J** enkins Users Google Group or IRC Chat,
-      Jenkins.io websites & blogs, Spoke with colleagues and peers"
-    - "# Automated workflow makes it a whole lot faster."
     - "**Background:** I belong to a cyber enthusiasts club that mainly focuses
       on spreading awareness related to cybersecurity and promoting the usage of
       open source. We formed in 2018 and are now a group of more than 500

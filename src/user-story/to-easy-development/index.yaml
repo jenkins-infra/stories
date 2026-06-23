@@ -16,7 +16,7 @@ metadata:
     - Java
     - Node.js
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Docker or Kubernetes
     - Linux

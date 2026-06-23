@@ -10,7 +10,7 @@ metadata:
     - Go
     - Groovy
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Mac OS
     - Google Cloud
   version_control_systems:

@@ -14,7 +14,7 @@ metadata:
     - Java
     - Python
   platforms:
-    - ": Android"
+    - Android
     - iOS
     - Linux
     - MacOS

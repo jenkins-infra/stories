@@ -10,7 +10,7 @@ metadata:
     - Java
     - Node.js
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
   version_control_systems:
     - Bitbucket Server

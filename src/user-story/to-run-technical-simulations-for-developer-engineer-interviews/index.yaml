@@ -16,16 +16,15 @@ metadata:
     - Python
     - Linux Bash Script
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
   version_control_systems:
     - GitHub
   build_tools:
     - Docker
   team_members:
-    - Arnaud Héritier
-    - Manager / Support Tooling " Allan Burdajewicz
-    - Systems / Software Engineer
+    - Arnaud Héritier (Manager / Support Tooling) 
+    - Allan Burdajewicz (Systems / Software Engineer)
   community_supports:
     - Jenkins.io websites & blogs
     - Networking at Jenkins event

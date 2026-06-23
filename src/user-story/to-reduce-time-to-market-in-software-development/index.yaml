@@ -12,7 +12,7 @@ metadata:
     - PHP
     - Python
   platforms:
-    - ": Android"
+    - Android
     - Docker or Kubernetes
     - Linux
     - Windows

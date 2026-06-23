@@ -18,7 +18,7 @@ metadata:
     - Bash
     - Groovy
   platforms:
-    - ": Docker or Kubernetes"
+    - Docker or Kubernetes
     - Linux
     - Custom Unix
   build_tools:
