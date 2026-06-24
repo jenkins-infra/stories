@@ -8,8 +8,10 @@ map:
 metadata:
   title: The engineers operating within a division of Camunda revamp their CI
     platform to meet their unique and evolving requirements.
-  organization: Camunda Services GmbH, <https://camunda.com>,
-    <https://camunda.com/products/camunda-platform>
+  organization: "Camunda Services GmbH"
+  company_website: 
+    - "https://camunda.com"
+    - "https://camunda.com/products/camunda-platform"
   industries:
     - Workflow and Decision Automation
   team_members:

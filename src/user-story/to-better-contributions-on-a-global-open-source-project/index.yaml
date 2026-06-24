@@ -2,7 +2,8 @@
 metadata:
   title: This France-based open software community gets a CI lift with a Jenkins
     assist.
-  organization: OpenAirInterface Software Alliance, <https://openairinterface.org>
+  organization: "OpenAirInterface Software Alliance"
+  company_website: "https://openairinterface.org"
   industries:
     - Telecom
   team_members:

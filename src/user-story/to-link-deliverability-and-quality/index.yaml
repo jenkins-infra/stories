@@ -9,7 +9,8 @@ metadata:
   title: The division of French energy leader Consoneo that focuses on subsidy and
     facility management needed to transition to a CICD solution that improved
     product quality and provided faster build times.
-  organization: Consoneo, [www.consoneo.com](http://www.consoneo.com)
+  organization: Consoneo
+  company_website: "http://www.consoneo.com"
   industries:
     - Consumer energy
   programming_languages:

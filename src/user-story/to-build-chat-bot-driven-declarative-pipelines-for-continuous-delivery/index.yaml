@@ -8,7 +8,8 @@ map:
 metadata:
   title: StarzPlay, a Middle East/North African media & entertainment company,
     couldn't imagine deploying CI/CD without Jenkins.
-  organization: STARZPLAY, <https://starzplay.com>
+  organization: STARZPLAY
+  company_website: "https://starzplay.com"
   industries:
     - Media & Entertainment
   programming_languages:

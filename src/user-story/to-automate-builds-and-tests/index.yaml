@@ -8,7 +8,10 @@ map:
 metadata:
   title: Wipro engineers help Citibank ease into CI/CD to shorten development
     cycles and automate builds.
-  organization: '**Wipro, http://www.wipro.com "** Citibank, <http://www.citibank.com>'
+  organization: "Wipro, Citibank"
+  company_website: 
+    - "http://www.wipro.com" 
+    - "http://www.citibank.com"
   industries:
     - Banking
   programming_languages:

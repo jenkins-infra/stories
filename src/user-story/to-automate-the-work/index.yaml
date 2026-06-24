@@ -8,8 +8,9 @@ map:
 metadata:
   title: Student shares his Linux World India project leveraging Jenkins with a
     focus on automation of web page load time.
-  organization: LinuxWorld, <https://www.linuxworldindia.org>
-  project_website: <https://bit.ly/3jy2tR6>
+  organization: LinuxWorld
+  company_website: "https://www.linuxworldindia.org"
+  project_website: "https://bit.ly/3jy2tR6"
   industries:
     - Information Technology
     - Education

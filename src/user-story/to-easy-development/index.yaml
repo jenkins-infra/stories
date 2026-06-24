@@ -9,7 +9,8 @@ metadata:
   title: When it was time to build a more efficient automated platform to support
     rapid app development, the engineers at this Jakarta-based Fintech software
     company turned to Jenkins.
-  organization: Esalaam Web Production, <http://e-salaam.co.id>
+  organization: "Esalaam Web Production"
+  company_website: "http://e-salaam.co.id"
   industries:
     - eCommerce
   programming_languages:

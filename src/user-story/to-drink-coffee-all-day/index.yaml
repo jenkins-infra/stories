@@ -7,7 +7,8 @@ map:
   geojson: '{"type":"Point","coordinates":[34.7925013,31.9730015]}'
 metadata:
   title: Saving time and fixing an Azure bug with Jenkins pipeline.
-  organization: "CET, <https://home.cet.ac.il/>"
+  organization: CET
+  company_website: "https://home.cet.ac.il/"
   project_website: "https://ebag.cet.ac.il/"
   industries:
     - Education

@@ -9,7 +9,8 @@ metadata:
   title: Novartis found that rapid prototyping with Jenkins provides guidance and
     requirements for building successful research enterprise apps in a fraction
     of the time.
-  organization: Novartis, <https://www.novartis.com>
+  organization: Novartis
+  company_website: "https://www.novartis.com"
   industries:
     - Medical Research
   programming_languages:

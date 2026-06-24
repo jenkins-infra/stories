@@ -2,7 +2,8 @@
 metadata:
   title: Malaysia/Indonesia HR firm uses Jenkins to eliminate manual testing,
     shorten testing, and catch bugs early!
-  organization: AJobThing, <https://www.ajobthing.com>
+  organization: AJobThing
+  company_website: "https://www.ajobthing.com"
   industries:
     - Human Resources
   programming_languages:

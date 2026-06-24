@@ -8,7 +8,8 @@ map:
 metadata:
   title: Bangalore-based blog promotes tech-based books and uses Jenkins to make
     feature deployment and use case testing easy and manageable.
-  organization: UPSLearn2020, <https://learnups2020.wordpress.com/>
+  organization: UPSLearn2020
+  company_website: "https://learnups2020.wordpress.com/"
   industries:
     - Tech Education
   programming_languages:

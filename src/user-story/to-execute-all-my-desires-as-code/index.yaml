@@ -3,7 +3,8 @@ metadata:
   title: Just under 4 years old, Brix is one of the fastest-growing mid-sized
     companies in Israel. Now their software development process is just as fast
     thanks to Jenkins.
-  organization: Brix CRB, <https://www.brixsoftwareltd.com>
+  organization: "Brix CRB"
+  company_website: "https://www.brixsoftwareltd.com"
   industries:
     - FinTech
   programming_languages:

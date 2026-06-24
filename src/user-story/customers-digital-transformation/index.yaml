@@ -6,7 +6,8 @@ authored_by: Zhipeng Yu
 tag_line: "Alauda: The AI-Ready Cloud Native Solution"
 image: alauda.png
 metadata:
-  organization: Alauda, [alauda.io](https://www.alauda.io/)
+  organization: Alauda
+  company_website: "https://www.alauda.io/"
   industries:
     - DevOps
   programming_languages:

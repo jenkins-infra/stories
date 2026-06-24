@@ -3,7 +3,8 @@ metadata:
   title: Numocity can't slow down when it comes to supporting easy charging of
     electric vehicles and easy management for charging stations, so they
     welcomed when bi-weekly release cycles were reduced to daily.
-  organization: Numocity Technologies, <https://www.numocity.com>
+  organization: "Numocity Technologies"
+  company_website: "https://www.numocity.com"
   industries:
     - Electric Mobility
   programming_languages:

@@ -2,7 +2,8 @@
 metadata:
   title: This Spain-based company was challenged to implement the creation of a
     Continuous Integration environment to allow dynamic workers in Jenkins.
-  organization: Kairos DS, <https://www.kairosds.com>
+  organization: "Kairos DS"
+  company_website: "https://www.kairosds.com"
   industries:
     - Security
   programming_languages:

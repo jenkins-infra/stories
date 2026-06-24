@@ -8,7 +8,8 @@ map:
 metadata:
   title: Colombia-based DevOps team leans on Jenkins automation for speed and safe
     delivery of client artifacts.
-  organization: Consis International, <https://www.consisint.com/>
+  organization: "Consis International"
+  company_website: "https://www.consisint.com/"
   industries:
     - All development services
   programming_languages:

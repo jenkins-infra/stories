@@ -8,7 +8,8 @@ map:
 metadata:
   title: Leading Danish insurer chooses Jenkins as the "de facto" product to build
     their CI/CD.
-  organization: Topdanmark Forsikring A/S " https://www.topdanmark.dk
+  organization: "Topdanmark Forsikring A/S"
+  company_website: "https://www.topdanmark.dk"
   industries:
     - Software Development
   team_members:

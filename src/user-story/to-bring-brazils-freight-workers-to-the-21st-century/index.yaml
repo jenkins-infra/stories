@@ -8,7 +8,8 @@ map:
 metadata:
   title: Jenkins is the backbone for the development of an innovative freight
     management app.
-  organization: Sincrovia,<https://sincrovia.com.br/>
+  organization: Sincrovia
+  company_website: "https://sincrovia.com.br/"
   industries:
     - Logistics
   programming_languages:

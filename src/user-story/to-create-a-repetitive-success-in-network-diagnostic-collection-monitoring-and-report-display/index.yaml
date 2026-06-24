@@ -2,7 +2,8 @@
 metadata:
   title: Network monitoring reports made easier with[this new Jenkins
     plugin](https://github.com/jasonwee/jwms-mtr-plugin).
-  organization: Opentracker " https://www.opentracker.net
+  organization: "Opentracker"
+  company_website: "https://www.opentracker.net"
   plugins:
     - https://github.com/jasonwee/jwms-mtr-plugin
   team_members:

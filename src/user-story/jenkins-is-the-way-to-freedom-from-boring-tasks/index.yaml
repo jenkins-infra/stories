@@ -2,7 +2,8 @@
 metadata:
   title: Data loss is a catalyst for revenue loss in media sales. A monitoring
     framework was needed to test data delivery daily
-  organization: Xperi, <https://www.xperi.com/>
+  organization: Xperi
+  company_website: "https://www.xperi.com/"
   industries:
     - Advertising
   programming_languages:

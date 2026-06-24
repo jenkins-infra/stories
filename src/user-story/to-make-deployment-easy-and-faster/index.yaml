@@ -1,7 +1,8 @@
 ---
 metadata:
   title: Jenkins fuels the CI/CD of this leading Palestinian telecom.
-  organization: Paltel, <https://www.paltel.ps/en>
+  organization: Paltel
+  company_website: "https://www.paltel.ps/en"
   industries:
     - Software
   programming_languages:
