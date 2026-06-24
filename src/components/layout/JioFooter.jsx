@@ -5,7 +5,6 @@ function JioFooter({ property, sourcePath, githubRepo, githubBranch, reportAProb
       property={property}
       sourcePath={sourcePath}
       githubBranch={githubBranch}
-      reportAProblemTemplate={reportAProblemTemplate}
     ></jio-footer>
   );
 }

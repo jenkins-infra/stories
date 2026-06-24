@@ -19,7 +19,6 @@ function Layout() {
         sourcePath={sourcePath}
         githubRepo={GITHUB_REPO}
         githubBranch={GITHUB_BRANCH}
-        reportAProblemTemplate=""
       />
     </>
   );
