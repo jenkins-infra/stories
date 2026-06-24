@@ -28,13 +28,13 @@ metadata:
 body_content:
   title: Automating image deployment with Jenkins at LinuxWorld.
   paragraphs:
-    - "**Background:** *The LinuxWorld India training program allows students to
+    - "**Background:** The LinuxWorld India training program allows students to
       work on live projects provided by the organization. In this way, they get
       real exposure to the IT industry. LinuxWorld offers training in the city
       of Jaipur, with a team of highly experienced and expert trainers. The
       students can enroll in programs like DevOps, Docker, Splunk, Cloud
       Computing, Big Data Hadoop, RedHat certified programs, Python, Splunk,
-      python during their training program.*"
+      python during their training program."
     - I am an ML engineer intern with Congle India and a student at Jaipur
       Engineering College. I am sharing the DevOps project I tackled at Linux
       World. I was tasked with integrating DevOps, Jenkins, and Docker to

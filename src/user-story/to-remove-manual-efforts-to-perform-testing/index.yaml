@@ -74,7 +74,7 @@ authored_by: Ryan Febriansyah
 post_name: to-remove-manual-efforts-to-perform-testing
 quotes:
   - from: Ryan Febriansyah, Software Engineer, AJobThing
-    content: Jenkins is awe-inspiring."
+    content: Jenkins is awe-inspiring.
     image: ./quote.png
 image: c66be70b511fc11a4ad57f72dbe79975.jpg
 tag_line: Make Testing Easier
