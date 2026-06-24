@@ -1,4 +1,4 @@
-function JioFooter({ property, sourcePath, githubRepo, githubBranch, reportAProblemTemplate }) {
+function JioFooter({ property, sourcePath, githubRepo, githubBranch }) {
   return (
     <jio-footer
       githubRepo={sourcePath ? githubRepo : ''}
