@@ -128,7 +128,7 @@
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: #f5f5f5;
+  background-color: var(--color-surface-block);
   border-radius: 10px;
 }
 
