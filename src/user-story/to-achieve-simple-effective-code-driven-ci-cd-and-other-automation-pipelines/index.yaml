@@ -5,7 +5,7 @@ metadata:
     release quality.
   organization: Moogsoft
   company_website: "http://www.moogsoft.com"
-  project_website: app.moogsoft.ai
+  project_website: "https://app.moogsoft.ai"
   team_members:
     - Timothy Go / DevOps Engineer
     - Jacob Laverty / Sr. Devops Engineer
