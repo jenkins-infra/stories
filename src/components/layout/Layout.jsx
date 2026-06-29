@@ -1,14 +1,25 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useMatches } from 'react-router-dom';
 import JioNavbar from './JioNavbar';
 import JioFooter from './JioFooter';
 
+const SITE_URL = 'https://stories.jenkins.io';
+const GITHUB_REPO = 'jenkins-infra/stories';
+const GITHUB_BRANCH = 'main';
+
 function Layout() {
-  const property = 'https://stories.jenkins.io';
+  const matches = useMatches();
+  const sourcePath = matches.reduce((acc, match) => match.data?.sourcePath ?? acc, null);
+
   return (
     <>
-      <JioNavbar property={property} />
+      <JioNavbar property={SITE_URL} />
       <Outlet />
-      <JioFooter property={property} />
+      <JioFooter
+        property={SITE_URL}
+        sourcePath={sourcePath}
+        githubRepo={GITHUB_REPO}
+        githubBranch={GITHUB_BRANCH}
+      />
     </>
   );
 }
