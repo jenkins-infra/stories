@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "validate:stories": "node src/story-schema/schema-validate.js"
   },
   "dependencies": {
     "ajv": "^8.20.0",

@@ -5,14 +5,12 @@ export default {
     'date',
     'authored_by',
     'body_content',
-    'image',
-    'post_name',
   ],
   additionalProperties: false,
 
   properties: {
     title: { type: 'string' },
-    date: { type: 'string' },
+    date: { type: 'string', format: 'date-time' },
     authored_by: { type: 'string' },
     post_name: { type: 'string' },
     tag_line: { type: 'string' },
