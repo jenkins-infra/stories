@@ -3,7 +3,7 @@ metadata:
   title: University student turns to Jenkins to help boost his engineering skills.
   organization: "Universidad Católica Argentina"
   company_website: "http://uca.edu.ar/"
-  project_website: https://github.com/Floating-Island/ProjectR
+  project_website: "https://github.com/Floating-Island/ProjectR"
   industries:
     - Human Resources
   programming_languages: []

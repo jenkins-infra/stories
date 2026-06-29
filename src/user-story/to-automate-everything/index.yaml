@@ -18,7 +18,7 @@ metadata:
     - Ayoub Bourine, Intermediate DevOps Engineer
     - Mohammad Sharf, IT director, and Yazeed AL-Smadi, DevOps Team Lead,
       Electronic Health Solutions
-  project_website: http://emed.hakeem.jo/
+  project_website: "http://emed.hakeem.jo/"
   programming_languages:
     - PHP
   platforms:
