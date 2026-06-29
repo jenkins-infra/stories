@@ -71,37 +71,6 @@
   color: var(--color-text-secondary);
 }
 
-.quotes-section {
-  margin-bottom: 32px;
-}
-
-.quotes-title {
-  margin-bottom: 16px;
-}
-
-.quotes-grid {
-  display: grid;
-  gap: 18px;
-}
-
-.quote-card {
-  margin: 0;
-  padding: 20px 24px;
-  background: var(--color-surface-alt);
-  border-radius: 12px;
-  color: var(--color-text-secondary);
-}
-
-.quote-content {
-  margin: 0;
-  font-style: italic;
-}
-
-.quote-author {
-  margin-top: 12px;
-  font-weight: 600;
-}
-
 @media (max-width: 768px) {
   .story-navigation {
     display: grid;
@@ -169,4 +138,4 @@
   .story-image-wrapper {
     width: 100%;
   }
-}             
+}
