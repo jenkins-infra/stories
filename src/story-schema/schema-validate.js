@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { load } from 'js-yaml';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
@@ -23,7 +24,8 @@ function getYamlFiles(dir) {
   return files;
 }
 
-const files = getYamlFiles('src/user-story');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const files = getYamlFiles(path.resolve(__dirname, '../../src/user-story'));
 let failed = 0;
 
 for (const file of files) {
