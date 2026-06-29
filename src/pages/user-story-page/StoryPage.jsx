@@ -99,6 +99,7 @@ export default function StoryPage() {
           </section>
         )}
 
+        {(storyImageSrc || fields.some(field => metadata[field])) && (
           <section className="metadata-with-image">
             {storyImageSrc && (
               <div className="story-image-wrapper">
@@ -124,7 +125,7 @@ export default function StoryPage() {
               </div>
             )}
           </section>
-       
+        )}
 
         <section className="story-content">
           {body.title && <h2 className="story-content-title">{body.title}</h2>}
