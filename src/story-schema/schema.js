@@ -5,6 +5,7 @@ export default {
     'date',
     'authored_by',
     'body_content',
+    'metadata'
   ],
   additionalProperties: false,
 
