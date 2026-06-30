@@ -6,7 +6,7 @@ Thank you for contributing a success story! These stories showcase how organizat
 
 Before creating a new story, browse a few existing stories to understand the expected structure and writing style. [reference story](https://stories.jenkins.io/user-story/jenkins-backbone-of-continuous-integration/)
 
-Also, check the YAML file to understand the structure. [reference YAML file](https://github.com/jenkins-infra/stories/edit/main/src/user-story/jenkins-backbone-of-continuous-integration/index.yaml)
+Also, check the YAML file to understand the structure. [reference YAML file](https://github.com/jenkins-infra/stories/blob/main/src/user-story/jenkins-backbone-of-continuous-integration/index.yaml)
 
 ## Required Fields
 
@@ -30,7 +30,6 @@ The following fields are currently supported:
 - team_members
 - project_website
 - project_funding
-- funded_by
 - summary
 - industries
 - programming_languages
