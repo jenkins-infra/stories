@@ -25,11 +25,8 @@ The metadata section provides additional information about the story.
 
 The following fields are currently supported:
 
-- title
 - organization
-- company
 - company_website
-- teams
 - team_members
 - project_website
 - project_funding
