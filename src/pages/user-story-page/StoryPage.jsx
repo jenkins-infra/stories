@@ -56,6 +56,10 @@ export default function StoryPage() {
   const metadata = data?.metadata ?? {};
   const body = data?.body_content ?? {};
   const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
+  const storyImageSrc = data?.image ?? null;
+  const metadataFields = fields.filter(field => metadata[field]);
+  const hasImage = Boolean(storyImageSrc);
+  const hasMetadata = metadataFields.length > 0;
 
   return (
     <>
@@ -98,16 +102,29 @@ export default function StoryPage() {
           </section>
         )}
 
-        {fields.some(field => metadata[field]) && (
-          <section className="metadata-grid">
-            {fields
-              .filter(field => metadata[field])
-              .map(field => (
-                <div key={field}>
-                  <strong>{titles[field] || field}:</strong>{' '}
-                  <span>{formatValue(metadata[field])}</span>
-                </div>
-              ))}
+        {(hasImage || hasMetadata) && (
+          <section className="metadata-with-image">
+            {hasImage && (
+              <div className="story-image-wrapper">
+                <img
+                  src={storyImageSrc}
+                  alt={story.title ?? data?.title ?? 'Story image'}
+                  className="story-image"
+                  loading="lazy"
+                />
+              </div>
+            )}
+
+            {hasMetadata && (
+              <div className="metadata-grid">
+                {metadataFields.map(field => (
+                  <div key={field} className="metadata-row">
+                    <strong>{titles[field] || field}:</strong>{' '}
+                    <span>{formatValue(metadata[field])}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
