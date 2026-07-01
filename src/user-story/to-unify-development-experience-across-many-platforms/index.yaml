@@ -3,7 +3,8 @@ metadata:
   title: A Cloud Development Manager in Wales helps a US-based full-service
     digital consultancy consolidate its development and hosting automation
     globally.
-  organization: Appnovation, <https://www.appnovation.com/>
+  organization: Appnovation
+  company_website: "https://www.appnovation.com/"
   industries:
     - Pharma and Life Science
   programming_languages:

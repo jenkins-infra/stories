@@ -8,8 +8,9 @@ map:
 metadata:
   title: This build and release manager set out to upgrade the company's Jenkins
     installation adding more flexibility and power to their DevOps platform.
-  organization: Graylog, <https://www.graylog.org/>
-  project_website: <https://github.com/Graylog2>
+  organization: Graylog
+  company_website: "https://www.graylog.org/"
+  project_website: "https://github.com/Graylog2"
   team_members:
     - Donald Morton
     - Build and Release Engineer and Bernd Ahlers

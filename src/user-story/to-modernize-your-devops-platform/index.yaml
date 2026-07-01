@@ -9,7 +9,8 @@ metadata:
   title: DLT Labs Company needed a way to keep builds and deploys running smoothly
     while also giving QA teams adequate time to manage software checks without
     running up costs or slowing things down.
-  organization: DLT Labs Company, [www.dltlabs.com](http://www.dltlabs.com)
+  organization: "DLT Labs Company"
+  company_website: "http://www.dltlabs.com"
   team_members:
     - Ajay Singh
     - CIO

@@ -8,7 +8,8 @@ map:
 metadata:
   title: Indonesian electricity tech leader finds that Jenkins and DevOps provide
     smarter automation and happier developers.
-  organization: PT Len Industri, <https://www.len.co.id/>
+  organization: "PT Len Industri"
+  company_website: "https://www.len.co.id/"
   industries:
     - Defence Electronics
   programming_languages:

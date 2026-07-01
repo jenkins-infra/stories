@@ -8,7 +8,8 @@ map:
 metadata:
   title: Reduce the time spent per developer on each project by creating a modern
     CI/CD pipeline for over 100 telecommunication microservices.
-  organization: Telstra Corporation, <https://www.telstra.com.au/>
+  organization: "Telstra Corporation"
+  company_website: "https://www.telstra.com.au/"
   industries:
     - Telecommunications
   project_funding: AT\&T

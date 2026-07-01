@@ -2,7 +2,8 @@
 metadata:
   title: Fintech innovator leans on Jenkins to provide precise build details,
     including all metadata.
-  organization: Finastra, <https://www.finastra.com/>
+  organization: Finastra
+  company_website: "https://www.finastra.com/"
   industries:
     - Financial Services content management
   programming_languages:

@@ -8,8 +8,9 @@ map:
 metadata:
   title: Here is another student sharing his LinuxWorld India project leveraging
     Jenkins. This time with the focus on automation to eliminate human error.
-  organization: Linux World, <https://www.linuxworldindia.org>
-  project_website: <https://bit.ly/3fLiQsg>
+  organization: "Linux World"
+  company_website: "https://www.linuxworldindia.org"
+  project_website: "https://bit.ly/3fLiQsg"
   industries:
     - Information Technology
     - Education

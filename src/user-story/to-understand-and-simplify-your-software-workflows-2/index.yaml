@@ -9,7 +9,8 @@ metadata:
   title: Improving the development of learning technologies, applications, and
     service-based-solutions to deliver digital learning in companies and
     academic institutions.
-  organization: Netex Learning, <https://www.netexlearning.com>
+  organization: "Netex Learning"
+  company_website: "https://www.netexlearning.com"
   industries:
     - Education and training
   programming_languages:

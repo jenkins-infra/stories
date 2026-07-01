@@ -9,7 +9,10 @@ metadata:
   title: Roche uses Jenkins to help design apps that enable more informed
     treatment decisions and improve patient care through near real-time access
     to data.
-  organization: Roche, <https://www.roche.com> and <https://www.navify.com/tumorboard/>
+  organization: Roche
+  company_website: 
+    - "https://www.roche.com"
+    - "https://www.navify.com/tumorboard/"
   industries:
     - Healthcare
   programming_languages:

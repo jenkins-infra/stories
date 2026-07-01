@@ -9,7 +9,8 @@ metadata:
   title: A serious and all too common challenge for enterprise organizations is
     that as more teams onboard onto the pipeline, scalability creates delivery
     bottlenecks. Here's what to do.
-  organization: Liatrio, <https://www.liatrio.com>
+  organization: Liatrio
+  company_website: "https://www.liatrio.com"
   industries:
     - Finance
     - Healthcare

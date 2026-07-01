@@ -9,7 +9,8 @@ metadata:
   title: Dealflow is a platform that runs IT competitions to pair innovative
     startups looking for help building their businesses with investors looking
     to support the next big thing.
-  organization: Mühlemann & Popp, [muehlemann-popp.ch](https://muehlemann-popp.ch/)
+  organization: "Mühlemann & Popp"
+  company_website: "https://muehlemann-popp.ch/"
   industries:
     - Information Technology
   programming_languages:

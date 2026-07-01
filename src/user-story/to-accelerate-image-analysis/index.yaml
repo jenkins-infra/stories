@@ -3,7 +3,8 @@ metadata:
   title: A global leader in engineering consulting and R\&D services uses
     continuous integration and built and test methodology to help the world's
     leading industry players in their digital transformation.
-  organization: AKKA I\&S, <https://www.akka-technologies.com/>
+  organization: "AKKA I\\&S"
+  company_website: "https://www.akka-technologies.com/"
   industries:
     - Industrial Services
   programming_languages: []

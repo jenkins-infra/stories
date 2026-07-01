@@ -8,7 +8,8 @@ map:
 metadata:
   title: Cloudologia's, a cloud consulting firm, boosted their software
     development cycle by creating a unified CI/CD system powered by Jenkins.
-  organization: Cloudologia, <http://cloudologia.com>
+  organization: Cloudologia
+  company_website: "http://cloudologia.com"
   industries:
     - Consulting
   team_members:

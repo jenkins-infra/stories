@@ -8,7 +8,8 @@ map:
 metadata:
   title: When a recommendation engine has to respond to hundreds of thousands of
     requests per second, there is no room for development downtime.
-  organization: Taboola, [www.taboola.com](http://www.taboola.com)
+  organization: Taboola
+  company_website: "http://www.taboola.com"
   industries:
     - Continuous Delivery
   programming_languages:
