@@ -61,6 +61,7 @@ export const loadStoryData = async slug => {
 
   return {
     slug,
+    sourcePath: `src/user-story/${slug}/index.yaml`,
     story: data,
     title: data.title ?? data.metadata?.title ?? slug,
     authored_by: data.authored_by ?? data.author ?? '',
