@@ -8,7 +8,8 @@ map:
 metadata:
   title: Using Jenkins as the backbone of its new platform, these developers were
     able to automate IIS and .Net Deployments for AutoWeb's data center.
-  organization: Autoweb,[https://www.autoweb.com/](http://autoweb.com/)
+  organization: Autoweb
+  company_website: "http://autoweb.com/"
   industries:
     - Automotive
   programming_languages:

@@ -7,7 +7,8 @@ map:
   geojson: '{"type":"Point","coordinates":[-82.32648089999999,27.8661364]}'
 metadata:
   title: The DevOps Life turns to Jenkins to automate its blogging website.
-  organization: The DevOps Life, <https://thedevopslife.com/>
+  organization: "The DevOps Life"
+  company_website: "https://thedevopslife.com/"
   industries:
     - Technology
   programming_languages:

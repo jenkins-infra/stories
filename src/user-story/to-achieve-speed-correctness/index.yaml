@@ -2,7 +2,8 @@
 metadata:
   title: This student lands a great DevOps job by showcasing his skills with a
     Jenkins-based college project.
-  organization: Jawaharlal Nehru Engineering College, <https://jnec.org>
+  organization: "Jawaharlal Nehru Engineering College"
+  company_website: "https://jnec.org"
   team_members:
     - Kamlesh Mugdiya
     - Software developer

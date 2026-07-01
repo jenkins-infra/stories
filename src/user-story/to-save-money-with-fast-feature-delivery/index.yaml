@@ -1,7 +1,8 @@
 ---
 metadata:
   title: Mexico-based DevOps engineer saves time and money for international clients.
-  organization: Tiempo Development, <https://www.tiempodev.com>
+  organization: "Tiempo Development"
+  company_website: "https://www.tiempodev.com"
   industries:
     - Fintech
   programming_languages:

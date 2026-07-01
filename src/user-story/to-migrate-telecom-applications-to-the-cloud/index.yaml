@@ -9,7 +9,8 @@ metadata:
   title: IBM helped Vodafone transform telecom applications from on-premise to the
     IBM and shaved expenses off the budget by automating continuous integration
     and continuous delivery/deployment.
-  organization: IBM andVodafone Ireland, <https://n.vodafone.ie/en.html>
+  organization: "IBM andVodafone Ireland"
+  company_website: "https://n.vodafone.ie/en.html"
   industries:
     - Telecom
   programming_languages:

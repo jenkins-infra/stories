@@ -1,7 +1,8 @@
 ---
 metadata:
   title: Students tackle a DevOps and Machine Learning model.
-  organization: University of Allahabad, <https://www.allduniv.ac.in/>
+  organization: "University of Allahabad"
+  company_website: "https://www.allduniv.ac.in/"
   industries:
     - Education
   project_website: https://github.com/A4ANK/Integrating-DevOps-with-ML

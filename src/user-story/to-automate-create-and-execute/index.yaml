@@ -3,8 +3,9 @@ metadata:
   title: Automate Jenkins inside a docker container with the help of Dockerfile
     and then create and execute different Jenkins jobs running inside a
     container.
-  organization: LinuxWorld informatics Pvt Ltd, <http://www.linuxworldindia.org>
-  project_website: <https://medium.com/geekculture/deploy-jenkins-on-docker-container-aaa710a33572>
+  organization: "LinuxWorld informatics Pvt Ltd"
+  company_website: "http://www.linuxworldindia.org"
+  project_website: "https://medium.com/geekculture/deploy-jenkins-on-docker-container-aaa710a33572"
   industries:
     - Information Technology
   programming_languages:

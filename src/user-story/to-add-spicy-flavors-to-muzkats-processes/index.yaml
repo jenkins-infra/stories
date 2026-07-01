@@ -8,7 +8,8 @@ map:
 metadata:
   title: Muzkat, a small creative agency, wanted to simplify the build, test and
     deploy process. They did so using Jenkins.
-  organization: Muzkat, <https://muzkat.com>
+  organization: Muzkat
+  company_website: "https://muzkat.com"
   industries:
     - Creative agency
   programming_languages:

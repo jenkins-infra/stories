@@ -3,7 +3,8 @@ metadata:
   title: Taiwanese developers use Jenkins in Fraud detection assignments because
     it's easy to deploy and maintain, provides observability and transparency,
     and its great extendability.
-  organization: Athemaster, [athemaster.com](https://athemaster.com/)
+  organization: Athemaster
+  company_website: "https://athemaster.com/"
   industries:
     - Information Technology
   programming_languages:

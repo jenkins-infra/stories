@@ -2,8 +2,9 @@
 metadata:
   title: For this Finnish-based digital company, the installation of Jenkins was
     smooth and painless and really helped to lessen the testing burden.
-  organization: TietoEVRY, <https://www.tietoevry.com>;
-  project_website: Open Infinity, <https://github.com/open-infinity>
+  organization: TietoEVRY
+  company_website: "https://www.tietoevry.com"
+  project_website: "https://github.com/open-infinity"
   industries:
     - Software development
   programming_languages:

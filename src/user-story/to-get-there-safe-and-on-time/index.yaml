@@ -2,9 +2,8 @@
 metadata:
   title: Romania-based railway signaling company used Jenkins to cut release times
     by two-thirds.
-  organization: "[Thales
-    Group](https://www.thalesgroup.com/en/europe/germany/transportation-germany\
-    -safejourney)"
+  organization: "Thales Group"
+  company_website: "https://www.thalesgroup.com/en/europe/germany/transportation-germany-safejourney"
   industries:
     - Railway Signalling / Transportation
   programming_languages:

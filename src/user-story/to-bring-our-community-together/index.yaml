@@ -8,7 +8,8 @@ map:
 metadata:
   title: Dell Technologies brought together a disparate group of developers who
     became a cohesive team by using Jenkins.
-  organization: Dell Technologies, <https://www.delltechnologies.com/>
+  organization: "Dell Technologies"
+  company_website: "https://www.delltechnologies.com/"
   industries:
     - Digital Technology Provider
   programming_languages:

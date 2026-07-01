@@ -9,7 +9,8 @@ metadata:
   title: The team at IAM Robotics used Jenkins to improve testing efficiency. This
     resulted in a deployment process that is 8 times faster and development
     release cycles shortened by 80%.
-  organization: "IAM Robotics, https://www.iamrobotics.com/"
+  organization: "IAM Robotics"
+  company_website: "https://www.iamrobotics.com/"
   team_members:
     - Tom Galluzzo (CEO and Founder)
     - John Cameron (Chief Systems Engineer)

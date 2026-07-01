@@ -10,7 +10,8 @@ metadata:
     responsible for mission success. It's necessary to include hardware-based
     testing in the CI process to catch potential hardware/software
     incompatibilities early.
-  organization: KP Labs,<https://www.kplabs.pl/en/>
+  organization: "KP Labs"
+  company_website: "https://www.kplabs.pl/en/"
   industries:
     - Aerospace
   team_members:

@@ -3,8 +3,9 @@ metadata:
   title: Moogsoft has long used Jenkins, but never optimized it. They needed to
     find a new way that would shorten release turnaround time and improve
     release quality.
-  organization: Moogsoft, [www.moogsoft.com](http://www.moogsoft.com)
-  project_website: app.moogsoft.ai
+  organization: Moogsoft
+  company_website: "http://www.moogsoft.com"
+  project_website: "https://app.moogsoft.ai"
   team_members:
     - Timothy Go / DevOps Engineer
     - Jacob Laverty / Sr. Devops Engineer

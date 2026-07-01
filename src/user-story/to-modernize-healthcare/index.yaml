@@ -8,7 +8,8 @@ map:
 metadata:
   title: Carta Healthcare looked to Jenkins automation when they wanted as many
     parallel software builds as possible, cost-effectively.
-  organization: Carta Healthcare, <https://www.carta.healthcare/>
+  organization: "Carta Healthcare"
+  company_website: "https://www.carta.healthcare/"
   industries:
     - Healthcare
   programming_languages:

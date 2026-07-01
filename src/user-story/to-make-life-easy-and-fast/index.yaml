@@ -8,7 +8,8 @@ map:
 metadata:
   title: Family-owned company based in the Netherlands looks to Jenkins to speed
     development and expand pipelines.
-  organization: TOPIC, [www.Topic.nl](http://www.topic.nl)
+  organization: TOPIC
+  company_website: "http://www.topic.nl"
   industries:
     - Semiconductor
   programming_languages:
