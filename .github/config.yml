@@ -1,17 +1,14 @@
 # Configuration for welcome - https://github.com/behaviorbot/welcome
 # TODO
 
-
 # Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
 # TODO
-
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
   Thanks for opening your first issue for jenkins-stories! We appreciate you taking the time to report this issue.
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
-
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
@@ -23,7 +20,6 @@ newPRWelcomeComment: >
   Meanwhile, you can join the [chats](https://app.gitter.im/#/room/#jenkins-ci:matrix.org) and [community forums](https://community.jenkins.io/) to connect with other Jenkins users, developers, and maintainers.
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
-
 
 # Comment to be posted to on pull requests merged by a first time user
 firstPRMergeComment: >
