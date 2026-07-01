@@ -15,6 +15,11 @@ const allImages = import.meta.glob(
   },
 );
 
+const quoteImage = import.meta.glob('../user-story/**/quote.png', {
+  eager: true,
+  import: 'default',
+});
+
 const slugFromPath = path =>
   path.replace('../user-story/', '').replace('/index.yaml', '');
 
@@ -68,6 +73,11 @@ const getStoryImage = (slug, yamlImageFilename) => {
   return entry.length > 0 ? entry[0][1] : null;
 };
 
+const getQuoteImage = slug => {
+  const key = `../user-story/${slug}/quote.png`;
+  return quoteImage[key] ?? null;  
+};
+
 export const loadStoryData = async slug => {
   const raw = await getStoryRaw(slug);
   const data = jsYaml.load(raw) ?? {};
@@ -97,7 +107,9 @@ export const loadStoryData = async slug => {
       ...bodyContent,
       paragraphs,
     },
+    quotes: data.quotes ?? [],
     image: getStoryImage(slug, data.image ?? null),
+    quoteImage: getQuoteImage(slug),
   };
 };
 
