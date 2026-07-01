@@ -57,6 +57,9 @@ export default function StoryPage() {
   const body = data?.body_content ?? {};
   const htmlParagraphs = Array.isArray(body.paragraphs) ? body.paragraphs : [];
   const storyImageSrc = data?.image ?? null;
+  const metadataFields = fields.filter(field => metadata[field]);
+  const hasImage = Boolean(storyImageSrc);
+  const hasMetadata = metadataFields.length > 0;
 
   return (
     <>
@@ -99,9 +102,9 @@ export default function StoryPage() {
           </section>
         )}
 
-        {(storyImageSrc || fields.some(field => metadata[field])) && (
+        {(hasImage || hasMetadata) && (
           <section className="metadata-with-image">
-            {storyImageSrc && (
+            {hasImage && (
               <div className="story-image-wrapper">
                 <img
                   src={storyImageSrc}
@@ -112,16 +115,14 @@ export default function StoryPage() {
               </div>
             )}
 
-            {fields.some(field => metadata[field]) && (
+            {hasMetadata && (
               <div className="metadata-grid">
-                {fields
-                  .filter(field => metadata[field])
-                  .map(field => (
-                    <div key={field} className="metadata-row">
-                      <strong>{titles[field] || field}:</strong>{' '}
-                      <span>{formatValue(metadata[field])}</span>
-                    </div>
-                  ))}
+                {metadataFields.map(field => (
+                  <div key={field} className="metadata-row">
+                    <strong>{titles[field] || field}:</strong>{' '}
+                    <span>{formatValue(metadata[field])}</span>
+                  </div>
+                ))}
               </div>
             )}
           </section>
