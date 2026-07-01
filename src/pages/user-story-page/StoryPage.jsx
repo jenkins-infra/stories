@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from 'react-router-dom';
+import Testimonial from '../../components/testimonial/Testimonial.jsx';
 import './StoryPage.css';
 
 const titles = {
@@ -60,6 +61,10 @@ export default function StoryPage() {
   const metadataFields = fields.filter(field => metadata[field]);
   const hasImage = Boolean(storyImageSrc);
   const hasMetadata = metadataFields.length > 0;
+  const quotes = Array.isArray(data?.quotes) ? data.quotes : [];
+  const testimonial = quotes[0];
+  const quoteImage = data?.quoteImage ?? null;
+  const hasTestimonial = Boolean(testimonial?.content && testimonial?.from);
 
   return (
     <>
@@ -140,6 +145,12 @@ export default function StoryPage() {
               }}
             />
           ))}
+
+          {hasTestimonial && (
+            <Testimonial from={testimonial.from} image={quoteImage}>
+              {testimonial.content}
+            </Testimonial>
+          )}
         </section>
       </main>
     </>
