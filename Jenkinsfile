@@ -1,4 +1,12 @@
+// Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
+final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
+// infra.ci.jenkins.io defaults to arm64 VM agents (due to Gastby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
+final String agentLabel = infra.isInfra() ? 'linux-arm64-docker' : 'maven-25'
+
 pipeline {
+  triggers {
+    cron(cronPattern)
+  }
   options {
     timeout(time: 60, unit: 'MINUTES')
     ansiColor('xterm')
@@ -7,7 +15,7 @@ pipeline {
   }
 
   agent {
-    label 'linux-arm64-docker || arm64linux'
+    label agentLabel
   }
 
   environment {
@@ -15,7 +23,7 @@ pipeline {
     TZ = "UTC"
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
-    GATSBY_CPU_COUNT = "4"
+    GATSBY_CPU_COUNT = '2'
     // Added the below to fix permissions issue with the cache
     GATSBY_CACHE_DIR = "${env.WORKSPACE}/.gatsby-cache"
     GATSBY_INTERNAL_CACHE_DIR = "${env.WORKSPACE}/.cache"
@@ -134,6 +142,12 @@ pipeline {
         failure {
           recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'failure', 'https://jenkins-is-the-way.netlify.app', [environment: 'production'])
         }
+      }
+    }
+
+    stage('Publish build report') {
+      steps {
+        publishBuildStatusReport()
       }
     }
   }
