@@ -74,7 +74,6 @@ const AllPage = () => {
       ],
       threshold: 0.2,
       ignoreLocation: true,
-      minMatchCharLength: 3,
       includeScore: false,
     });
   }, [stories]);
