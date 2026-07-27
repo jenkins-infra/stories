@@ -22,11 +22,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
 
@@ -113,7 +113,7 @@ jobs:
               --title "$ISSUE_TITLE" \
               --body "Automatically generated from issue #${ISSUE_NUMBER}" \
               --head "$BRANCH" \
-              --base main
+              --base ${{ github.event.repository.default_branch }}
 
             PR_URL=$(gh pr view "$BRANCH" --json url -q .url)
           fi
