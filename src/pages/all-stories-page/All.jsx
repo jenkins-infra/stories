@@ -56,10 +56,10 @@ const AllPage = () => {
     () => (Array.isArray(loaderStories) ? loaderStories : []),
     [loaderStories],
   );
-  const [displayCount, setDisplayCount] = React.useState(10);
+  const storiesPerLoad = 10;
+  const [displayCount, setDisplayCount] = React.useState(storiesPerLoad);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState('');
-  const storiesPerLoad = 10;
 
   const fuse = React.useMemo(() => {
     if (!Array.isArray(stories) || stories.length === 0) {
