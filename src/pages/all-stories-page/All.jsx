@@ -147,11 +147,7 @@ const AllPage = () => {
               aria-label="Search stories"
             />
           </div>
-          <div
-            className="all-page-col all-page-cards-wrapper"
-            role="status"
-            aria-live="polite"
-          >
+          <div className="all-page-col all-page-cards-wrapper">
             {showNoResults ? (
               <div className="all-page-no-results">
                 No stories matched your search.
