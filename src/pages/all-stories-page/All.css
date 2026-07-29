@@ -61,6 +61,34 @@
   width: 100%;
 }
 
+#all-page .all-page-search-wrapper {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+#all-page .all-page-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-story);
+  box-sizing: border-box;
+}
+
+#all-page .all-page-search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+#all-page .all-page-no-results {
+  padding: 1rem 0;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
 #all-page .all-page-tell-your-story {
   border-radius: 8px;
   padding: 2rem;
