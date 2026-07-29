@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import React from 'react';
+import Fuse from 'fuse.js';
 import UserStoryCard from '../../components/user-story-card/UserStoryCard.jsx';
 import './All.css';
 
@@ -50,13 +51,50 @@ const Modal = ({ isOpen, onClose }) => {
 };
 
 const AllPage = () => {
-  const stories = useLoaderData() ?? [];
-  const [displayCount, setDisplayCount] = React.useState(10);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const loaderStories = useLoaderData();
+  const stories = React.useMemo(
+    () => (Array.isArray(loaderStories) ? loaderStories : []),
+    [loaderStories],
+  );
   const storiesPerLoad = 10;
+  const [displayCount, setDisplayCount] = React.useState(storiesPerLoad);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [searchQuery, setSearchQuery] = React.useState('');
 
-  const totalStories = stories.length;
-  const displayedStories = stories.slice(0, displayCount);
+  const fuse = React.useMemo(() => {
+    if (!Array.isArray(stories) || stories.length === 0) {
+      return null;
+    }
+
+    return new Fuse(stories, {
+      keys: [
+        { name: 'title', weight: 0.55 },
+        { name: 'tag_line', weight: 0.25 },
+        { name: 'body_content.paragraphs', weight: 0.2 },
+      ],
+      threshold: 0.2,
+      ignoreLocation: true,
+      includeScore: false,
+    });
+  }, [stories]);
+
+  const trimmedQuery = searchQuery.trim();
+
+  const filteredStories = React.useMemo(() => {
+    if (!trimmedQuery) {
+      return stories;
+    }
+
+    if (!fuse) {
+      return [];
+    }
+
+    return fuse.search(trimmedQuery).map(result => result.item);
+  }, [fuse, trimmedQuery, stories]);
+
+  const totalStories = filteredStories.length;
+  const displayedStories = filteredStories.slice(0, displayCount);
+  const showNoResults = trimmedQuery !== '' && totalStories === 0;
 
   const handleLoadMore = () => {
     setDisplayCount(prev => prev + storiesPerLoad);
@@ -96,18 +134,37 @@ const AllPage = () => {
           <h2 className="all-page-userstories-heading">
             Jenkins User Stories
           </h2>
+          <div className="all-page-col all-page-search-wrapper">
+            <input
+              type="search"
+              className="all-page-search-input"
+              value={searchQuery}
+              onChange={event => {
+                setSearchQuery(event.target.value);
+                setDisplayCount(10);
+              }}
+              placeholder="Search stories by title, tag, or keyword"
+              aria-label="Search stories"
+            />
+          </div>
           <div className="all-page-col all-page-cards-wrapper">
-            {displayedStories.map(story => (
-              <UserStoryCard
-                key={story.slug}
-                slug={story.slug}
-                image={story.image}
-                title={story.title}
-                date={story.date}
-                tag_line={story.tag_line}
-                body_content={story.body_content}
-              />
-            ))}
+            {showNoResults ? (
+              <div className="all-page-no-results">
+                No stories matched your search.
+              </div>
+            ) : (
+              displayedStories.map(story => (
+                <UserStoryCard
+                  key={story.slug}
+                  slug={story.slug}
+                  image={story.image}
+                  title={story.title}
+                  date={story.date}
+                  tag_line={story.tag_line}
+                  body_content={story.body_content}
+                />
+              ))
+            )}
           </div>
         </div>
 
