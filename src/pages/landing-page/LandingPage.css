@@ -10,7 +10,7 @@ body {
   gap: 9rem;
   padding: 3rem 2rem;
   min-height: 80vh;
-  background-image: url('../../assets/images/hero-bg.png');
+  background-image: url('../../assets/Images/hero-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .hero-section {
-    background-image: url('../../assets/images/bg-dark.png');
+    background-image: url('../../assets/Images/bg-dark.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -438,7 +438,7 @@ body {
   gap: 3rem;
   font-family: system-ui, sans-serif;
   overflow: hidden;
-  background-image: url('../../assets/images/world.png');
+  background-image: url('../../assets/Images/world.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

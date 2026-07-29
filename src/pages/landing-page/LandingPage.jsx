@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import './LandingPage.css';
-import mascotImage from '../../assets/images/hero.png';
+import mascotImage from '../../assets/Images/hero.png';
 import mascotWorld from '../../assets/Images/jenkins-world.png';
 
 export default function HeroSection() {
