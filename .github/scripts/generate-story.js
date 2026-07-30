@@ -152,9 +152,6 @@ const paragraphs = form.story
   .map(p => p.trim())
   .filter(Boolean);
 
-const firstHeadingMatch = paragraphs[0]?.match(/^#{1,3}\s+(.+)$/m);
-const bodyTitle = firstHeadingMatch ? firstHeadingMatch[1].trim() : form.title;
-
 const story = clean({
   title: form.title,
   post_name: slug,
@@ -190,7 +187,7 @@ const story = clean({
   }),
 
   body_content: {
-    title: bodyTitle,
+    title: form.title,
     paragraphs,
   },
 
