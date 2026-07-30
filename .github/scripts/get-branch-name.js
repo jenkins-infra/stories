@@ -15,9 +15,20 @@ function slugify(text) {
     .trim()
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
-const slug = slugify(raw.story_title);
+function deriveSlug() {
+  const fromTitle = slugify(raw.story_title);
+  if (fromTitle) return fromTitle;
+
+  const fromOrg = slugify(raw.organization);
+  if (fromOrg) return fromOrg;
+
+  return `story-${Date.now().toString(36)}`;
+}
+
+const slug = deriveSlug();
 
 console.log(`story/${slug}-issue-${event.issue.number}`);
