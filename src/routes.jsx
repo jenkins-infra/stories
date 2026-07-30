@@ -18,6 +18,9 @@ const routes = [
       {
         index: true,
         element: <LandingPage />,
+        loader: async () => ({
+          stories: await loadAllStoriesRouteData(),
+        }),
       },
       {
         path: '/user-story/:slug',
@@ -30,7 +33,7 @@ const routes = [
         path: '/map',
         element: <MapPage />,
       },
-      { 
+      {
         path: '/all',
         element: <All />,
         loader: loadAllStoriesRouteData,
