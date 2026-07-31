@@ -94,14 +94,15 @@ jio-read-time-estimation {
 }
 
 .read-more {
-  color: var(--color-text-secondary);
+  color: var(--color-white);
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
+  background-color: var(--color-story-btn);
+  border: 1px solid var(--color-text-muted);
   transition:
     color 0.2s ease,
     border-color 0.2s ease;
-  border: 1px solid var(--color-text-secondary);
   border-radius: 8px;
   padding: 0.4rem 0.85rem;
   align-self: flex-start;
@@ -109,8 +110,7 @@ jio-read-time-estimation {
 }
 
 .read-more:hover {
-  color: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
+  background-color: var(--color-surface-dark-hover);
 }
 
 @media (max-width: 640px) {
