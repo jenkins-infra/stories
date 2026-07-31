@@ -36,6 +36,7 @@
   --color-neutral: #8a8a92;
   --color-neutral-hover: #75757c;
   --color-world-btn: #343438;
+  --color-story-btn: #3d3d3d;
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,6 +45,7 @@
     --color-bg: #ffffff;
     --color-text: #000000;
     --color-world-btn: #7b7b7f;
+    --color-story-btn: #7b7b7f;
   }
 }
 

@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import React from 'react';
 import Fuse from 'fuse.js';
 import UserStoryCard from '../../components/user-story-card/UserStoryCard.jsx';
+import jenkinsButler from '../../assets/Images/jenkins.svg';
 import './All.css';
 
 function generateUserStoryIssueURL() {
@@ -21,7 +22,7 @@ Also, include any related images in the same directory._`;
 
   queryParams.append('body', bodyContent);
 
-  return `https://github.com/jenkins-infra/stories/issues/new?${queryParams.toString()}`;
+  return `https://github.com/jenkins-infra/stories/issues/new?template=success-story.yml`;
 }
 
 const Modal = ({ isOpen, onClose }) => {
@@ -104,36 +105,37 @@ const AllPage = () => {
     <div id="all-page">
       <div className="all-page-container">
         <div className="all-page-row">
-          <div className="all-page-col all-page-text-center">
-            <h1>Jenkins Is The Way</h1>
-          </div>
-        </div>
-
-        <div className="all-page-row">
           <div className="all-page-col">
             <div className="all-page-tell-your-story">
-              <h2>Tell Your Story</h2>
-              <p>
-                "Jenkins Is The Way" is a global showcase of how developers and
-                engineers are building, deploying, and automating great stuff
-                with Jenkins. Share the story of your project's goals, technical
-                challenges, and the unique solutions you encountered with
-                Jenkins.
-              </p>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="all-page-share-story-btn"
-              >
-                Share Your Story
-              </button>
+              <div className="all-page-tell-your-story-media">
+                <img
+                  src={jenkinsButler}
+                  alt="Jenkins butler mascot"
+                  className="all-page-tell-your-story-image"
+                />
+              </div>
+              <div className="all-page-tell-your-story-content">
+                <h2>Tell Your Story</h2>
+                <p>
+                  "Jenkins Is The Way" is a global showcase of how developers
+                  and engineers are building, deploying, and automating great
+                  stuff with Jenkins. Share the story of your project's goals,
+                  technical challenges, and the unique solutions you encountered
+                  with Jenkins.
+                </p>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="all-page-share-story-btn"
+                >
+                  Share Your Story
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="all-page-row">
-          <h2 className="all-page-userstories-heading">
-            Jenkins User Stories
-          </h2>
+          <h2 className="all-page-userstories-heading">Jenkins User Stories</h2>
           <div className="all-page-col all-page-search-wrapper">
             <input
               type="search"
