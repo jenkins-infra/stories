@@ -1,4 +1,5 @@
 :root {
+  --color-bg-os: #121212;
   --color-bg: #1e1e1e;
   --color-text: #ffffff;
   --color-code-text: #8a6534;
@@ -29,11 +30,61 @@
   --color-surface-dark: #2d333b;
   --color-surface-dark-hover: #373e47;
   --color-border-dark: #444c56;
+  --color-text-heading: #4b4c56;
+  --color-text-primary: #3a3a42;
+  --color-accent-soft-hover: rgba(44, 124, 209, 0.18);
+  --color-neutral: #8a8a92;
+  --color-neutral-hover: #75757c;
+  --color-world-btn: #343438;
+  --color-story-btn: #3d3d3d;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --color-bg-os: #ffffff;
     --color-bg: #ffffff;
     --color-text: #000000;
+    --color-world-btn: #7b7b7f;
+    --color-story-btn: #7b7b7f;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1e1e1e;
+    --color-text: #ffffff;
+    --color-code-text: #e0b872;
+    --color-code-bg: #2a2416;
+    --color-surface: #262a33;
+    --color-surface-alt: #22262e;
+    --color-surface-block: #24272c;
+    --color-border: #3a3f47;
+    --color-text-muted: #a0a0a0;
+    --color-text-secondary: #c8c8c8;
+    --color-text-tertiary: #d8d8d8;
+    --color-nav-bg: #16181b;
+    --color-nav-text: #c2c2c2;
+    --color-accent: #88befc;
+    --color-accent-hover: #6cb0ff;
+    --color-accent-soft: rgba(74, 158, 255, 0.15);
+    --color-border-input: #4a4f57;
+    --color-shadow-soft: rgba(0, 0, 0, 0.3);
+    --color-shadow-strong: rgba(0, 0, 0, 0.5);
+    --color-overlay: rgba(0, 0, 0, 0.65);
+    --color-gradient-accent: rgba(74, 158, 255, 0.08);
+    --color-gradient-transparent: rgba(30, 30, 30, 0);
+    --color-surface-story: #23262b;
+    --color-text-light: #9a9a9a;
+    --color-text-disabled: #6a6a6a;
+    --color-text-strong: #f5f5f5;
+    --color-white: #ffffff;
+    --color-surface-dark: #14171c;
+    --color-surface-dark-hover: #1c1f26;
+    --color-border-dark: #30343b;
+    --color-text-heading: #d5d6e0;
+    --color-text-primary: #e2e2e8;
+    --color-accent-soft-hover: rgba(74, 158, 255, 0.25);
+    --color-neutral: #9a9aa2;
+    --color-neutral-hover: #b0b0b8;
   }
 }
