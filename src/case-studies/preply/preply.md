@@ -4,7 +4,7 @@ By Amet Umerov
 
 **Summary:** To support this online education platform — and over 100,000 students and 25,000 tutors — Preply’s engineering team set out to create a fully automated CI/CD process for its software and development projects.
 
-**Challenege:** Maintain their ‘everything as code’ mantra and enhance their current Jenkins installation. Eliminate manual intervention by using a configuration-as-a-code only solution for all software development.
+**Challenge:** Maintain their ‘everything as code’ mantra and enhance their current Jenkins installation. Eliminate manual intervention by using a configuration-as-a-code only solution for all software development.
 
 **Solution:** A flexible and scalable CI/CD pipeline that enables their team to introduce and accelerate the deployment of new builds without jeopardizing the entire service.
 

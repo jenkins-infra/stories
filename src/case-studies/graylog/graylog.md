@@ -48,9 +48,9 @@ The final objective, one button press, is not yet achieved, but can be done usin
 
 Many of Graylog’s software developers work out of their corporate offices in Hamburg, Germany, and Houston, Texas. But they also have a number of virtual tech employees around the world, making automation and visibility for all, around the clock, an imperative. So how did the team attack this challenge?
 
-First, they created a Terraform module to spin up infrastructure and an Ansible playbook for installing software on the machines. Jenkins itself runs off of a Docker image. The configuration of Jenkins is handled through the JCasC plugin. The freestyle jobs were rewritten in Groovy as declarative pipelines, so they set up the Github Branch Source plugin, allowing Jenkins to auto-create jobs. According to Morton, this reduces even more manual setups.
+First, they created a Terraform module to spin up infrastructure and an Ansible playbook for installing software on the machines. Jenkins itself runs off of a Docker image. The configuration of Jenkins is handled through the JCasC plugin. The freestyle jobs were rewritten in Groovy as declarative pipelines, so they set up the GitHub Branch Source plugin, allowing Jenkins to auto-create jobs. According to Morton, this reduces even more manual setups.
 
-They now store the Groovy for the pipelines in git, which allows them to back out changes to jobs if something goes wrong. They were also able to deprecate a custom daemon used for handling webhooks, which required manual configuration for each job. The Github Branch Source plugin now handles this automatically and gives the developers “a very nice UI” for looking at their build history.
+They now store the Groovy for the pipelines in git, which allows them to back out changes to jobs if something goes wrong. They were also able to deprecate a custom daemon used for handling webhooks, which required manual configuration for each job. The GitHub Branch Source plugin now handles this automatically and gives the developers “a very nice UI” for looking at their build history.
 
 “Having separate jobs for each branch, PR, and tag makes tracking down what was built way easier,” said Morton. “And the fact that Jenkins manages their creation is super nice.”
 
