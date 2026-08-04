@@ -83,20 +83,12 @@ const parseCaseStudyMeta = raw => {
   const bodyLines = lines.slice(bodyStart);
   const bodyRaw = bodyLines.join('\n').replace(/^\s+/, '');
 
-  const sections = bodyRaw
-    .split(/\r?\n\s*\r?\n/)
-    .map(section => section.trim())
-    .filter(Boolean);
-
-  const excerpt =
-    sections.length > 0 ? sections[0].replace(/\r?\n/g, ' ').trim() : '';
-
-  return { title, authored_by, excerpt, bodyRaw };
+  return { title, authored_by, bodyRaw };
 };
 
 const loadCaseStudyDataBySlug = async slug => {
   const { raw, key } = await getCaseStudyRaw(slug);
-  const { title, authored_by, excerpt, bodyRaw } = parseCaseStudyMeta(raw);
+  const { title, authored_by, bodyRaw } = parseCaseStudyMeta(raw);
   const bodyHtml = await mdToHtml(bodyRaw);
 
   return {
@@ -104,7 +96,6 @@ const loadCaseStudyDataBySlug = async slug => {
     sourcePath: key.replace(/^\.\./, 'src'),
     title: title || slug,
     authored_by,
-    excerpt,
     bodyHtml,
     image: getCaseStudyImage(slug),
   };
@@ -112,12 +103,11 @@ const loadCaseStudyDataBySlug = async slug => {
 
 const loadCaseStudySlim = async slug => {
   const { raw, key } = await getCaseStudyRaw(slug);
-  const { title, excerpt } = parseCaseStudyMeta(raw);
+  const { title } = parseCaseStudyMeta(raw);
 
   return {
     slug,
     title: title || slug,
-    excerpt,
     image: getCaseStudyImage(slug),
     sourcePath: key.replace(/^\.\./, 'src'),
   };
