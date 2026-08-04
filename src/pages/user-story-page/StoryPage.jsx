@@ -102,6 +102,30 @@ export default function StoryPage() {
         )}
       </div>
 
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link to="/" className="breadcrumb-link" aria-label="Home">
+          <svg
+            className="breadcrumb-home-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 10.5 12 3l9 7.5" />
+            <path d="M5 9.5V21h14V9.5" />
+          </svg>
+        </Link>
+        <span className="breadcrumb-separator">/</span>
+        <Link to="/all" className="breadcrumb-link">
+          User story
+        </Link>
+        <span className="breadcrumb-separator">/</span>
+        <span className="breadcrumb-current">{pageTitle}</span>
+      </nav>
+
       <main className="story-container">
         <header className="story-header">
           <h1 className="story-title">
