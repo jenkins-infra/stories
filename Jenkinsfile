@@ -91,7 +91,10 @@ pipeline {
     stage('Deploy PR to preview site') {
       when {
         allOf{
-          changeRequest target: 'main'
+          anyOf {
+            changeRequest target: 'main'
+            changeRequest target: 'gsoc-2026-revamp'
+          }
           // Only deploy to production from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
