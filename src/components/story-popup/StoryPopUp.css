@@ -56,7 +56,7 @@
   display: inline-block;
   padding: 0.4rem 1.2rem;
   background-color: var(--color-border);
-  color: var(--color-text-strong);
+  color: var(--color-text);
   text-decoration: none;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -64,8 +64,8 @@
   border: 1px solid var(--color-border-input);
 }
 
-.story-popup-button:hover {
-  background-color: var(--color-white);
+.story-popup-button a{
+  color: var(--color-text);
 }
 
 .leaflet-popup-content-wrapper {
@@ -74,4 +74,16 @@
 
 .leaflet-popup-content {
   margin: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--color-bg) !important;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--color-bg) !important;
+}
+
+.leaflet-container a.story-popup-button {
+  color: var(--color-text);
 }

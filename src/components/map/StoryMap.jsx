@@ -11,6 +11,36 @@ function extractCountry(location) {
   return parts.length > 1 ? parts[parts.length - 1].trim() : location.trim();
 }
 
+function createCustomMarker(L, story, fallbackIconUrl) {
+  const imageUrl = story.image; 
+
+  if (!imageUrl) {
+    return L.icon({
+      iconUrl: fallbackIconUrl,
+      iconSize: [40, 60],
+      iconAnchor: [20, 60],
+      popupAnchor: [0, -60],
+    });
+  }
+
+  const markerHtml = `
+    <div class="tmap-custom-marker">
+      <div class="tmap-marker-pin"></div>
+      <div class="tmap-marker-avatar">
+        <img src="${imageUrl}" alt="${story.title}" loading="lazy" />
+      </div>
+    </div>
+  `;
+
+  return L.divIcon({
+    html: markerHtml,
+    className: 'tmap-custom-marker-icon',
+    iconSize: [40, 60],
+    iconAnchor: [20, 60],
+    popupAnchor: [0, -60],
+  });
+}
+
 const StoryMap = () => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
@@ -40,13 +70,6 @@ const StoryMap = () => {
     if (status !== 'ready' || mapInstanceRef.current) return;
 
     import('leaflet').then(L => {
-      const jenkinsIcon = L.icon({
-        iconUrl: jenkinsMapPin,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40],
-        popupAnchor: [0, -44],
-      });
-
       const map = L.map(mapRef.current, {
         maxBounds: [
           [-90, -180],
@@ -71,8 +94,9 @@ const StoryMap = () => {
           const [lng, lat] = geojson.coordinates;
           if (typeof lat !== 'number' || typeof lng !== 'number') return;
 
+          const markerIcon = createCustomMarker(L, story, jenkinsMapPin);
           const popupHtml = renderToStaticMarkup(<StoryPopup story={story} />);
-          const marker = L.marker([lat, lng], { icon: jenkinsIcon })
+          const marker = L.marker([lat, lng], { icon: markerIcon })
             .addTo(map)
             .bindPopup(popupHtml, { maxWidth: 300 });
 
