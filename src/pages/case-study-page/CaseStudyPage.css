@@ -1,0 +1,67 @@
+.case-study-page {
+  padding: 3rem 1.5rem;
+  font-family: system-ui, sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--color-bg-os);
+  color: var(--color-text);
+}
+
+.case-study-breadcrumb {
+  margin-bottom: 1.5rem;
+}
+
+.case-study-breadcrumb a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.case-study-breadcrumb a:hover {
+  color: var(--color-accent-hover);
+}
+
+.case-study-article {
+  background: var(--color-bg-os);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 3px var(--color-shadow-soft);
+}
+
+.case-study-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--color-text-strong);
+}
+
+.case-study-author {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.case-study-image-wrap {
+  margin: 2rem 0;
+}
+
+.case-study-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.case-study-body {
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+}
+
+.case-study-body h2,
+.case-study-body h3,
+.case-study-body h4 {
+  margin-top: 2rem;
+  color: var(--color-text-heading);
+}
+
+.case-study-body p {
+  margin: 1rem 0;
+}
