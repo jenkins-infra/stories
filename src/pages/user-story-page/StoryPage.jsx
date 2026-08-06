@@ -118,12 +118,12 @@ export default function StoryPage() {
             <path d="M5 9.5V21h14V9.5" />
           </svg>
         </Link>
-        <span className="breadcrumb-separator">/</span>
+        <span className="breadcrumb-separator" aria-hidden="true">/</span>
         <Link to="/all" className="breadcrumb-link">
-          User story
+          User stories
         </Link>
-        <span className="breadcrumb-separator">/</span>
-        <span className="breadcrumb-current">{pageTitle}</span>
+        <span className="breadcrumb-separator" aria-hidden="true">/</span>
+        <span className="breadcrumb-current" aria-current="page">{pageTitle}</span>
       </nav>
 
       <main className="story-container">
