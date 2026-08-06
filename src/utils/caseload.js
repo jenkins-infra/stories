@@ -44,7 +44,9 @@ const getCaseStudyRaw = async slug => {
   }
 
   if (matches.length > 1) {
-    throw new Error(`Multiple case study markdown files found for: ${slug}`);
+    throw new Error(
+      `Multiple case study markdown files found for: ${slug}. Matches: ${matches.join(', ')}`,
+    );
   }
 
   const key = matches[0];
