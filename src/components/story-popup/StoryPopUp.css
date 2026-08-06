@@ -64,9 +64,10 @@
   border: 1px solid var(--color-border-input);
 }
 
-.story-popup-button a{
-  color: var(--color-text);
-}
+.story-popup-button:hover,
+.story-popup-button:focus-visible {
+   background-color: var(--color-bg);
+ }
 
 .leaflet-popup-content-wrapper {
   padding: 0;
