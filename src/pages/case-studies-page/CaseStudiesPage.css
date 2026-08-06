@@ -75,9 +75,3 @@
   font-size: 1rem;
   color: var(--color-text-heading);
 }
-
-.case-study-card-excerpt {
-  color: var(--color-text-muted);
-  line-height: 1.65;
-  margin: 0;
-}
