@@ -12,7 +12,14 @@ function extractCountry(location) {
 }
 
 function createCustomMarker(L, story, fallbackIconUrl) {
-  const imageUrl = story.image; 
+  const imageUrl = story.image;
+
+  const escapeHtmlAttr = value =>
+    String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
 
   if (!imageUrl) {
     return L.icon({
@@ -23,11 +30,14 @@ function createCustomMarker(L, story, fallbackIconUrl) {
     });
   }
 
+  const safeImageUrl = escapeHtmlAttr(imageUrl);
+  const safeTitle = escapeHtmlAttr(story.title);
+
   const markerHtml = `
     <div class="tmap-custom-marker">
       <div class="tmap-marker-pin"></div>
       <div class="tmap-marker-avatar">
-        <img src="${imageUrl}" alt="${story.title}" loading="lazy" />
+        <img src="${safeImageUrl}" alt="${safeTitle}" loading="lazy" />
       </div>
     </div>
   `;
