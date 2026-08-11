@@ -48,6 +48,23 @@ npm run develop
 
 Open [http://localhost:8000](http://localhost:8000) on your browser to see the result
 
+## Alternative Development Setup: Docker Compose
+
+You can also use Docker Compose for local development.
+
+### How to Use
+
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop/) and [Docker Compose](https://docs.docker.com/compose/)  2.22.0 and later installed.
+
+2. In the project **root**, run:
+	```bash
+	docker compose watch
+	```
+
+3. Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+> Note: You can override the number of CPUs used by Gatsby by setting the `GATSBY_CPU_COUNT` environment variable to avoid OOM.
+
 ## Code Quality Tools
 
 ### Formatting

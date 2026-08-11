@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Gatsby
+.cache/
+public/
+
+# github
+.github
+.git
+
+# Build output
+dist/
+build/
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+*.iml

@@ -1,0 +1,28 @@
+services:
+  stories_webapp:
+    build: .
+    ports:
+      - "8000:8000"
+    
+    env_file: "development.env"
+
+    user: jenkins
+    entrypoint: []
+    command: >
+      sh -c "
+        node --version &&
+        npm --version &&
+        npm run develop -- -H 0.0.0.0 -p 8000
+      "
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          initial_sync: true
+          ignore:
+            - node_modules/
+        
+        - action: rebuild
+          path: package.json
+          target: /app/package.json
