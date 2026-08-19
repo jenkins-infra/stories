@@ -84,6 +84,22 @@ collections:
             widget: string
             required: false
 
+          - label: Team Members
+            name: team_members
+            widget: list
+            required: false
+            allow_add: true
+            field: { label: Team Member, name: team_member, widget: string }
+
+          - label: Project Website
+            name: project_website
+            widget: string
+            required: false
+
+          - label: Summary
+            name: summary
+            widget: text
+            required: false
           - label: Industries
             name: industries
             widget: list
