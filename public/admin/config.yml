@@ -36,6 +36,7 @@ collections:
         widget: string
         required: true
         hint: "Folder name used for this story. Use lowercase letters, numbers and hyphens."
+        pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers and hyphens.']
 
       - label: Authored By
         name: authored_by
