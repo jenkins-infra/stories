@@ -73,7 +73,7 @@ collections:
           - label: Title
             name: title
             widget: string
-            required: false
+            required: true
 
           - label: Organization
             name: organization
@@ -95,7 +95,7 @@ collections:
           - label: Project Website
             name: project_website
             widget: string
-            required: false
+            required: true
 
           - label: Summary
             name: summary
@@ -164,9 +164,8 @@ collections:
       - label: Testimonials
         name: quotes
         widget: list
-        required: false
+        required: true
         collapsed: true
-        allow_add: true
 
         fields:
 
@@ -183,13 +182,13 @@ collections:
           - label: Image
             name: image
             widget: image
-            required: false
+            required: true
             choose_url: false
 
       - label: Map Data
         name: map
         widget: object
-        required: false
+        required: true
         collapsed: true
 
         fields:
@@ -197,17 +196,17 @@ collections:
           - label: Author
             name: authored_by
             widget: string
-            required: false
+            required: true
 
           - label: Location
             name: location
             widget: string
-            required: false
+            required: true
 
           - label: Industries
             name: industries
             widget: list
-            required: false
+            required: true
             allow_add: true
             field:
               label: Industry
@@ -219,7 +218,7 @@ collections:
             widget: map
             type: Point
             decimals: 7
-            required: false
+            required: true
 
       - label: Body
         name: body_content
