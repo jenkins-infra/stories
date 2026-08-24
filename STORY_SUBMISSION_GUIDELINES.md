@@ -8,6 +8,37 @@ Before creating a new story, browse a few existing stories to understand the exp
 
 Also, check the YAML file to understand the structure. [reference YAML file](https://github.com/jenkins-infra/stories/blob/main/src/user-story/jenkins-backbone-of-continuous-integration/index.yaml)
 
+## Submitting a Story Through Decap CMS
+
+Stories can be submitted through the Decap CMS interface without manually creating or editing YAML files.
+There are two ways to access the story submission form:
+### Option 1: Navigate to the Admin Page
+Navigate to the /admin route on the Jenkins Stories website.
+https://stories.jenkins.io/admin
+Sign in using your GitHub account when prompted.
+
+### Option 2: Use the Share Your Story Button
+You can also access the submission form directly from the website by clicking the Share Your Story button.
+The button is available on:
+
+- The landing page
+- The All Stories (/all) page
+
+Clicking Share Your Story will take you to the Decap CMS interface.
+
+### 1. Sign in to Decap CMS
+
+After opening the CMS, sign in using your GitHub account.
+Once authenticated, you will be taken to the CMS dashboard.
+
+### 2. Create a New User Story
+
+From the CMS dashboard:
+- Click New User Story.
+- Fill in the story submission form.
+
+The form contains the fields required to generate the story's YAML file.
+
 ## Required Fields
 
 Every story must include the following top-level fields:
@@ -151,3 +182,25 @@ quotes:
 - Confirm images render correctly.
 - Run all validation checks.
 - Ensure your commit contains only the intended changes.
+
+## Submit the Story
+
+Once everything looks correct, submit the story through Decap CMS.
+After submission, a Pull Request (PR) will automatically be created in the Jenkins Stories repository containing your story.
+The story will then go through the normal review and validation process before it is merged.
+You do not need to manually create a YAML file or open a Pull Request yourself.
+
+
+## Making Changes to a Submitted Story
+
+If you need to make changes after submitting your story, you do not need to create a new submission.
+
+- Open Decap CMS.
+- Navigate to your previously submitted story.
+- Open the story and make the required changes.
+- Save/submit the changes through Decap CMS.
+
+The changes will automatically be added as new commits to the existing Pull Request for your story.
+This allows you to correct spelling mistakes, update information, replace images, or make other changes while the Pull Request is being reviewed.
+
+> Note: Make sure you edit the existing submitted story rather than creating a new story. This keeps all changes associated with the same Pull Request.
