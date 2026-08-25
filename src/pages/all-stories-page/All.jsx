@@ -5,26 +5,6 @@ import UserStoryCard from '../../components/user-story-card/UserStoryCard.jsx';
 import jenkinsButler from '../../assets/Images/jenkins.svg';
 import './All.css';
 
-function generateUserStoryIssueURL() {
-  const queryParams = new URLSearchParams();
-  queryParams.append('title', 'User Success Story');
-  queryParams.append('labels', 'success-story');
-
-  const bodyContent = `### Title  
-_enter the title for your success story_
-
-### Story Summary  
-_give a short summary of your success story_
-
-### _Next Steps_  
-_After submitting this issue, please create a PR adding your full success story at:  \`/src/user-story/[story-title]/index.yaml\`  
-Also, include any related images in the same directory._`;
-
-  queryParams.append('body', bodyContent);
-
-  return `https://github.com/jenkins-infra/stories/issues/new?template=success-story.yml`;
-}
-
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   return (
@@ -36,9 +16,7 @@ const Modal = ({ isOpen, onClose }) => {
           Request to the following GitHub repository:
         </p>
         <a
-          href={generateUserStoryIssueURL()}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/admin"
           className="all-page-github-link"
         >
           Share Your Story Now
