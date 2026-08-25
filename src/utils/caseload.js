@@ -22,11 +22,9 @@ const mdToHtml = async content => {
   return processed.toString();
 };
 
-const slugsPromise = Promise.all(
-  Object.keys(caseFiles).map(async path => ({
-    slug: slugFromPath(path),
-  })),
-).then(slugs => slugs.map(s => s.slug).sort((a, b) => a.localeCompare(b)));
+const slugsPromise = Promise.resolve(Object.keys(caseFiles).map(slugFromPath)).then(
+  slugs => [...new Set(slugs)].sort((a, b) => a.localeCompare(b)),
+);
 
 export const getCaseStudySlugs = () => slugsPromise;
 
@@ -37,12 +35,21 @@ export const getCaseStudyStaticPaths = async () => {
 
 const getCaseStudyRaw = async slug => {
   const folderPrefix = `../case-studies/${slug}/`;
-  const key = Object.keys(caseFiles).find(k => k.startsWith(folderPrefix));
+  const matches = Object.keys(caseFiles)
+    .filter(k => k.startsWith(folderPrefix))
+    .sort((a, b) => a.localeCompare(b));
 
-  if (!key) {
+  if (matches.length === 0) {
     throw new Error(`Case study not found: ${slug}`);
   }
 
+  if (matches.length > 1) {
+    throw new Error(
+      `Multiple case study markdown files found for: ${slug}. Matches: ${matches.join(', ')}`,
+    );
+  }
+
+  const key = matches[0];
   const loader = caseFiles[key];
   const raw = await loader();
 
@@ -51,11 +58,11 @@ const getCaseStudyRaw = async slug => {
 
 const getCaseStudyImage = slug => {
   const folderPrefix = `../case-studies/${slug}/`;
-  const entry = Object.entries(allImages).find(([path]) =>
-    path.startsWith(folderPrefix),
-  );
+  const matches = Object.entries(allImages)
+    .filter(([path]) => path.startsWith(folderPrefix))
+    .sort(([a], [b]) => a.localeCompare(b));
 
-  return entry ? entry[1] : null;
+  return matches.length > 0 ? matches[0][1] : null;
 };
 
 const parseCaseStudyMeta = raw => {
@@ -78,20 +85,12 @@ const parseCaseStudyMeta = raw => {
   const bodyLines = lines.slice(bodyStart);
   const bodyRaw = bodyLines.join('\n').replace(/^\s+/, '');
 
-  const sections = bodyRaw
-    .split(/\r?\n\s*\r?\n/)
-    .map(section => section.trim())
-    .filter(Boolean);
-
-  const excerpt =
-    sections.length > 0 ? sections[0].replace(/\r?\n/g, ' ').trim() : '';
-
-  return { title, authored_by, excerpt, bodyRaw };
+  return { title, authored_by, bodyRaw };
 };
 
 const loadCaseStudyDataBySlug = async slug => {
   const { raw, key } = await getCaseStudyRaw(slug);
-  const { title, authored_by, excerpt, bodyRaw } = parseCaseStudyMeta(raw);
+  const { title, authored_by, bodyRaw } = parseCaseStudyMeta(raw);
   const bodyHtml = await mdToHtml(bodyRaw);
 
   return {
@@ -99,7 +98,6 @@ const loadCaseStudyDataBySlug = async slug => {
     sourcePath: key.replace(/^\.\./, 'src'),
     title: title || slug,
     authored_by,
-    excerpt,
     bodyHtml,
     image: getCaseStudyImage(slug),
   };
@@ -107,12 +105,11 @@ const loadCaseStudyDataBySlug = async slug => {
 
 const loadCaseStudySlim = async slug => {
   const { raw, key } = await getCaseStudyRaw(slug);
-  const { title, excerpt } = parseCaseStudyMeta(raw);
+  const { title } = parseCaseStudyMeta(raw);
 
   return {
     slug,
     title: title || slug,
-    excerpt,
     image: getCaseStudyImage(slug),
     sourcePath: key.replace(/^\.\./, 'src'),
   };

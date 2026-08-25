@@ -32,7 +32,7 @@ export default function HeroSection() {
 
           <div className="hero-actions">
             <a
-              href="https://github.com/jenkins-infra/stories/issues/new?template=success-story.yml"
+              href="/admin"
               className="hero-btn"
             >
               Share your story

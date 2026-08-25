@@ -1,0 +1,245 @@
+backend:
+  name: github
+  repo: jenkins-infra/stories
+  branch: main
+  open_authoring: true
+  squash_merges: true
+  use_graphql: true
+
+publish_mode: editorial_workflow
+
+media_folder: "public/media"
+public_folder: "/media"
+
+collections:
+  - name: user-story
+    label: User Stories
+    label_singular: User Story
+
+    folder: src/user-story
+    path: '{{post_name}}/index'
+    slug: 'index'
+
+    extension: yaml
+    format: yaml
+    create: true
+    
+    fields:
+
+      - label: Title
+        name: title
+        widget: string
+        required: true
+
+      - label: Post Name (slug)
+        name: post_name
+        widget: string
+        required: true
+        hint: "Folder name used for this story. Use lowercase letters, numbers and hyphens."
+        pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers and hyphens.']
+
+      - label: Authored By
+        name: authored_by
+        widget: string
+        required: true
+
+      - label: Publish Date
+        name: date
+        widget: datetime
+        required: true
+        date_format: 'YYYY-MM-DD'
+        time_format: 'HH:mm:ss'
+        format: 'YYYY-MM-DDTHH:mm:ss.SSSZ'
+
+      - label: Tag Line
+        name: tag_line
+        widget: text
+        required: true
+
+      - label: Story Image
+        name: image
+        widget: image
+        required: true
+        choose_url: false
+
+      - label: Metadata
+        name: metadata
+        widget: object
+        collapsed: false
+        required: true
+
+        fields:
+
+          - label: Title
+            name: title
+            widget: string
+            required: true
+
+          - label: Organization
+            name: organization
+            widget: string
+            required: true
+
+          - label: Company Website
+            name: company_website
+            widget: string
+            required: false
+
+          - label: Team Members
+            name: team_members
+            widget: list
+            required: false
+            allow_add: true
+            field: { label: Team Member, name: team_member, widget: string }
+
+          - label: Project Website
+            name: project_website
+            widget: string
+            required: true
+
+          - label: Summary
+            name: summary
+            widget: text
+            required: false
+          - label: Industries
+            name: industries
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Industry
+              name: industry
+              widget: string
+
+          - label: Programming Languages
+            name: programming_languages
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Programming Language
+              name: programming_language
+              widget: string
+
+          - label: Platforms
+            name: platforms
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Platform
+              name: platform
+              widget: string
+
+          - label: Version Control Systems
+            name: version_control_systems
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Version Control System
+              name: version_control_system
+              widget: string
+
+          - label: Build Tools
+            name: build_tools
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Build Tool
+              name: build_tool
+              widget: string
+
+          - label: Community Supports
+            name: community_supports
+            widget: list
+            required: false
+            allow_add: true
+            field:
+              label: Community Support
+              name: community_support
+              widget: string
+
+      - label: Testimonials
+        name: quotes
+        widget: list
+        required: true
+        collapsed: true
+
+        fields:
+
+          - label: From
+            name: from
+            widget: string
+            required: true
+
+          - label: Content
+            name: content
+            widget: text
+            required: true
+
+          - label: Image
+            name: image
+            widget: image
+            required: true
+            choose_url: false
+
+      - label: Map Data
+        name: map
+        widget: object
+        required: true
+        collapsed: true
+
+        fields:
+
+          - label: Author
+            name: authored_by
+            widget: string
+            required: true
+
+          - label: Location
+            name: location
+            widget: string
+            required: true
+
+          - label: Industries
+            name: industries
+            widget: list
+            required: true
+            allow_add: true
+            field:
+              label: Industry
+              name: industry
+              widget: string
+
+          - label: GeoJSON
+            name: geojson
+            widget: map
+            type: Point
+            decimals: 7
+            required: true
+
+      - label: Body
+        name: body_content
+        widget: object
+        required: true
+        collapsed: false
+
+        fields:
+
+          - label: Title
+            name: title
+            widget: string
+            required: true
+
+          - label: Paragraphs
+            name: paragraphs
+            widget: list
+            required: true
+            allow_add: true
+
+            field:
+              label: Paragraph
+              name: paragraph
+              widget: markdown

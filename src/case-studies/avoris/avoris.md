@@ -29,7 +29,7 @@ As noted, Avoris engineers have created their own search and booking engines fue
 
 “Our developers are grouped in numerous small teams. Because most of our software is based on a microservices architecture, new deployments are made to the production environment every week,” Alejandro continued. “Thanks to Jenkins we are making these deployments much easier but not more often. The frequency is the same but as in the past but now it is much less problematic and simple.”
 
-“With a focus on building cutting edge technology services, we turned to Jenkins because it is easily customizable and scales with our evolving needs,” Alejandro said. “Internal applications and transversal services developed by the architecture team to support common functionalities to the rest of the applications: logging, cache, app configuration, apis, etc. All Of which are supported by their evolving platform.
+“With a focus on building cutting edge technology services, we turned to Jenkins because it is easily customizable and scales with our evolving needs,” Alejandro said. “Internal applications and transversal services developed by the architecture team to support common functionalities to the rest of the applications: logging, cache, app configuration, APIs, etc. All of which are supported by their evolving platform.”
 
 ### A use case for acceleration while reducing build times by more than half
 
