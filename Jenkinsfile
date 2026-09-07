@@ -1,5 +1,7 @@
+final String currentProductionBranch = 'gsoc-2026-revamp'
+final String webDir = './dist'
 // Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
-final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
+final String cronPattern = env.BRANCH_NAME == currentProductionBranch ? '@daily' : ''
 // infra.ci.jenkins.io defaults to arm64 VM agents (due to Gastby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
 final String agentLabel = infra.isInfra() ? 'linux-arm64-docker' : 'maven-25'
 
@@ -29,6 +31,7 @@ pipeline {
     GATSBY_INTERNAL_CACHE_DIR = "${env.WORKSPACE}/.cache"
     GATSBY_TELEMETRY_DISABLED = "1"
     NODE_OPTIONS = "--no-warnings"
+    WEB_DIR = "${webDir}"
   }
 
   stages {
@@ -91,10 +94,7 @@ pipeline {
     stage('Deploy PR to preview site') {
       when {
         allOf{
-          anyOf {
-            changeRequest target: 'main'
-            changeRequest target: 'gsoc-2026-revamp'
-          }
+          changeRequest target: currentProductionBranch
           // Only deploy to production from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
@@ -103,7 +103,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
+        sh 'netlify-deploy --draft=true --siteName "jenkins-is-the-way" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d "${WEB_DIR}"'
       }
       post {
         success {
@@ -117,17 +117,42 @@ pipeline {
 
     stage('Build Production') {
       when {
-        branch "main"
+          branch currentProductionBranch
       }
       steps {
         sh 'npm run build'
       }
     }
 
+    stage("Deploy staging (custom branch ${currentProductionBranch})") {
+      when {
+        allOf {
+          branch currentProductionBranch
+          // Only deploy to production from infra.ci.jenkins.io
+          expression { infra.isInfra() }
+        }
+      }
+      environment {
+        NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
+        STAGING_BRANCH_NAME = "${gsoc-2026-revamp}"
+      }
+      steps {
+        sh 'netlify-deploy --draft=false --siteName "jenkins-is-the-way" --title "Staging branch ${STAGING_BRANCH_NAME}" --alias "${STAGING_BRANCH_NAME}" -d "${WEB_DIR}"'
+      }
+      post {
+        success {
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'success', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app", [environment: currentProductionBranch])
+        }
+        failure {
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'failure', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app", [environment: currentProductionBranch])
+        }
+      }
+    }
+
     stage('Deploy Production') {
       when {
         allOf {
-          branch "main"
+          branch 'main'
           // Only deploy to production from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
@@ -136,7 +161,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        sh 'netlify-deploy --draft=false --siteName "jenkins-is-the-way" --title "Deploy" -d ./dist'
+        sh 'netlify-deploy --draft=false --siteName "jenkins-is-the-way" --title "Deploy" -d "${WEB_DIR}"'
       }
       post {
         success {
