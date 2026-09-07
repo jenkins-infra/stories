@@ -161,8 +161,6 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        gsoc-2026-revamp
-        staging--mysitename.netlify.app
         sh 'netlify-deploy --draft=false --siteName "jenkins-is-the-way" --title "Deploy" -d "${WEB_DIR}"'
       }
       post {
