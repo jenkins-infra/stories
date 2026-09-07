@@ -141,10 +141,10 @@ pipeline {
       }
       post {
         success {
-          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'success', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app', [environment: currentProductionBranch])
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'success', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app", [environment: currentProductionBranch])
         }
         failure {
-          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'failure', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app', [environment: currentProductionBranch])
+          recordDeployment('jenkins-infra', 'stories', env.GIT_COMMIT, 'failure', "https://${currentProductionBranch}--jenkins-is-the-way.netlify.app", [environment: currentProductionBranch])
         }
       }
     }
