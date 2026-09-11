@@ -1,3 +1,20 @@
+@Library('pipeline-library@pull/1055/head') _
+
+def commonCustomEnvs = [
+  // Added the below to fix permissions issue with the cache
+  'GATSBY_CACHE_DIR=${env.WORKSPACE}/.gatsby-cache',
+  'GATSBY_INTERNAL_CACHE_DIR=${env.WORKSPACE}/.cache',
+  'GATSBY_TELEMETRY_DISABLED=1',
+  'NODE_OPTIONS=--no-warnings',
+]
+
+buildWebsite([
+  publicFolder: 'public',
+  customEnvsDevelopement: commonCustomEnvs,
+  customEnvsProduction: commonCustomEnvs,
+])
+
+/*
 // Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
 final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
 // infra.ci.jenkins.io defaults to arm64 VM agents (due to Gastby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
@@ -152,3 +169,4 @@ pipeline {
     }
   }
 }
+*/
