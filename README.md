@@ -10,19 +10,19 @@ First, fork the repository and clone it.
 git clone <url-from-github>
 ```
 
-Change Directory
+### Change Directory
 
 ```bash
 cd stories
 ```
 
-Install Dependencies
+### Install Dependencies
 
 ```bash
 npm ci
 ```
 
-Run the development server:
+### Run the development server:
 
 ```bash
 npm run dev
