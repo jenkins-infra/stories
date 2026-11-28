@@ -42,9 +42,9 @@ Ensure consistent code style:
 npm run format
 ```
 
-## Lint code with ESLint
+## Linting and Story Validation
 
-Lint your code using ESLint to ensure code quality and consistency.
+Run ESLint, YAML linting, and story-schema validation. These checks must pass in CI.
 
 ```bash
 npm run lint
