@@ -51,7 +51,6 @@ npm run lint
 ```
 
 
-
 ## Contributing Guidelines
 
 1. Create feature branches
