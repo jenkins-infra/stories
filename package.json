@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite-react-ssg dev",
-    "build": "vite-react-ssg build",
+    "build": "NODE_ENV=production vite-react-ssg build",
     "lint": "eslint . && yamllint src/user-story/**/index.yaml && node src/story-schema/schema-validate.js",
     "validate:stories": "node src/story-schema/schema-validate.js",
     "preview": "vite preview",
